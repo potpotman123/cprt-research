@@ -1,0 +1,4 @@
+window,claims_term_pct,tlf_term_pct,industry_pool_pct,copart_measure,copart_pct,residual_pp,notes
+CY2025,-6.26,3.59,-2.9,US ins units exCAT (avg FY25Q2-FY26Q1),-2.35,0.55,CCC all-loss; counterfactual flat-repairable TLF 21.79% (-0.51pp); 0.48pp valuations!=flagged overshoot
+FQ4FY26,-3.4,4.02,0.48,US ins ASSIGNMENTS,-5.0,-5.48,mgmt-cited Fast Track freq (per exposure) and CCC 2Q26 TLF; transcript provenance
+FQ4FY26_ex_account,-3.4,4.02,0.48,US ins ASSIGNMENTS ex 1 account,2.3,1.82,the account = -7.3pp

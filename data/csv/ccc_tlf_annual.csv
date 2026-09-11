@@ -1,0 +1,19 @@
+# CCC National Industry Total Loss Share of Claim Count, CY2013-CY2025
+# Source: Crash Course 2026 report, figure "Total Loss Frequency Remains High as Vehicle Values Trend Up"
+# URL: https://www.cccis.com/reports/crash-course-2026
+# Image: https://cdn.prod.website-files.com/677e7ecbb3dbbe98615cde30/69cad9b5dc2ef6b8040ef95e_Picture17.webp
+# Extraction: printed data labels read off chart at 3200px width (not pixel-estimated)
+year,non_comprehensive_pct,all_loss_categories_pct
+2013,14.8,14.0
+2014,14.7,14.1
+2015,16.2,15.6
+2016,17.3,16.7
+2017,18.3,17.9
+2018,19.0,18.5
+2019,19.9,19.2
+2020,21.7,20.6
+2021,20.6,19.7
+2022,19.7,18.8
+2023,21.2,20.2
+2024,22.9,22.3
+2025,23.9,23.1

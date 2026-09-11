@@ -5,7 +5,7 @@ get published, but the interval between two published dates is the yard's actual
 A yard selling Tue+Thu publishes a 2-day gap regardless of how far ahead the generator looks.
 """
 import sqlite3,collections,datetime,statistics,csv,pathlib
-ROOT=pathlib.Path(__file__).resolve().parent.parent
+ROOT=pathlib.Path(__file__).resolve().parent.parent.parent
 con=sqlite3.connect(ROOT/"data/cprt.db")
 US=set("AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY DC".split())
 def load():

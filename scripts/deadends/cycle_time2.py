@@ -4,7 +4,7 @@ Survival is non-exponential, so implied CT is only comparable at matched dt.
 Fix: compare the SAME sitemap page across consecutive captures (page 1 is always a
 50,000-lot slice), which yields many more pairs incl. 2025-26, then restrict to dt~30d."""
 import re,glob,collections,datetime,math,sqlite3,csv,pathlib,statistics
-ROOT=pathlib.Path(__file__).resolve().parent.parent
+ROOT=pathlib.Path(__file__).resolve().parent.parent.parent
 rx=re.compile(r'/lot/(\d+)')
 def ids(path):
     s=set()

@@ -1,5 +1,5 @@
 import sqlite3,datetime,collections,statistics,pathlib,csv
-ROOT=pathlib.Path(__file__).resolve().parent.parent
+ROOT=pathlib.Path(__file__).resolve().parent.parent.parent
 con=sqlite3.connect(ROOT/"data/cprt.db")
 rows=con.execute("SELECT lot_id,first_seen FROM lot_first_seen").fetchall()
 def dt(ts): return datetime.datetime.strptime(ts,"%Y%m%d%H%M%S")

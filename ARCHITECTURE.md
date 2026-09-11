@@ -54,7 +54,7 @@ transcripts were essential and not a nice-to-have.
 text with `pypdf`.
 
 **These were transcribed BY READING, not by regex.** I wrote a regex parser first
-(`scripts/parse_transcripts.py`); it mis-attributed sentences and produced wrong numbers
+(`scripts/deadends/parse_transcripts.py`); it mis-attributed sentences and produced wrong numbers
 (133 of 176 cells missing, several extracted values matching the wrong metric). It is kept
 in the repo only as a record of a failed approach. The values in `reported_units` come from
 `scripts/reported_series.py`, which is a **hand-transcribed literal table**. Verifying

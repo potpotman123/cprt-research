@@ -1,0 +1,7 @@
+calendar_q,cprt_fq,cprt_us_ins_asrep,cprt_us_ins_excat,tlf_yoy_rel_pct,tlf_source,claims__fasttrack_collision,claims__ccc_all_coverage,claims__ccc_non_comp,pool__fasttrack_collision,pool__ccc_all_coverage,pool__ccc_non_comp,residual__fasttrack_collision,residual__ccc_all_coverage,residual__ccc_non_comp,claims_2026_lo,claims_2026_hi
+2025Q1,FY25Q3,-1.0,-2.0,5.05,CCC actual,-12.0,-7.7,-5.7,-7.56,-3.04,-0.94,5.56,1.04,-1.06,,
+2025Q2,FY25Q4,-2.1,-2.1,4.19,CCC actual,-11.5,-7.7,-5.7,-7.8,-3.84,-1.75,5.7,1.74,-0.35,,
+2025Q3,FY26Q1,-9.5,-7.3,4.11,CCC actual,-10.5,-7.7,-5.7,-6.82,-3.91,-1.82,-0.48,-3.39,-5.48,,
+2025Q4,FY26Q2,-10.7,-4.8,3.25,model spread(3Q25)=+2.27,-11.5,-7.7,-5.7,-8.62,-4.7,-2.63,3.82,-0.1,-2.17,,
+2026Q1,FY26Q3,-4.2,-3.1,3.88,model spread(4Q25)=+3.56 (2/3 mo),-3.5,-3.5,-3.5,0.25,0.25,0.25,-3.35,-3.35,-3.35,-5.0,-2.0
+2026Q2,FY26Q4,-7.5,-7.5,4.02,mgmt-cited CCC 2026-09-10,-4.5,-4.5,-4.5,-0.66,-0.66,-0.66,-6.84,-6.84,-6.84,-6.0,-3.4

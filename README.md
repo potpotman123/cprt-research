@@ -1,43 +1,65 @@
-# CPRT data collection
+# CPRT research — Copart, Inc. (NASDAQ: CPRT)
 
-## Install the daily job (run these in Terminal on the Mac, not in Cowork)
+Equity research pipeline for a **long pitch on Copart** at the HFAC × Citadel Intercollegiate Stock
+Pitch Competition (preliminary submission 2026-10-02). Everything here is built from public,
+robots-compliant sources with a logged provenance trail. **Licensed content (transcripts, sell-side)
+is gitignored and never committed.**
 
-    cp ~/Documents/cprt/com.kendall.cprt-snapshot.plist ~/Library/LaunchAgents/
-    launchctl load ~/Library/LaunchAgents/com.kendall.cprt-snapshot.plist
+## Start here
 
-Runs at 06:15 daily and once immediately on load. Check it worked:
+| Read | For |
+|---|---|
+| **`HANDOFF.md`** | The current state of the project: what is verified, what was retracted, the thesis, the data sources, the failure modes to avoid. Read §0a and §2 first. |
+| `findings.md` | The lab notebook — every result in chronological addenda, **including every retraction**. |
+| `PROVENANCE.md` | Every host touched, its robots.txt status, what was fetched, where it is saved. |
+| `ARCHITECTURE.md` | How the collector and the sitemap data actually work, and the bugs found the hard way. |
+| `scripts/README.md` | One line per script: what it does and whether it is live, analysis, one-off, dead-end, or legacy. |
+| `docs/archive/` | Superseded documents, each with a header saying why. |
 
-    tail -40 ~/Documents/cprt/logs/snapshot.log
-    head -3 ~/Documents/cprt/data/lots.csv
+## The three results that carry the pitch (details and caveats in `HANDOFF.md`)
 
-To stop:
+1. **Total-loss frequency is driven by the totaling spread** (repair CPI − used-car CPI). Calibrated
+   on 27 quarters of CCC industry data, not Copart's: β = 0.083 pp of TLF per pp of spread, one-quarter
+   lag, R² 0.79, out-of-sample MAE 0.16 pp, and a live hit against a management-cited figure.
+   The spread collapsed from +15.7 pp to +2.3 pp through 2025 and has recovered to +8.3 pp.
+2. **Revenue per unit is a fee-and-mix engine, not a price pass-through.** Service-RPU elasticity to
+   ASP = 0.514 (95% CI 0.29–0.73) with a +4.1 pp intercept, n = 17.
+3. **The unit decline is one account, not share erosion.** A six-quarter decomposition of Copart's US
+   insurance units into industry claims × total-loss rate × residual shows no share loss before the
+   account, a discrete step equal to management's disclosed account impact, and at-or-above-industry
+   volume after it, ex-account. Management: *"with the exception of 1 single customer loss, domestic
+   insurance assignments would be up 2.3%."*
 
-    launchctl unload ~/Library/LaunchAgents/com.kendall.cprt-snapshot.plist
+Plus one dataset nobody else has: **IAA's live inventory sitemap**, giving the duopoly's US
+listed-inventory split daily (Copart 57.1% on 2026-09-11).
 
-## Run once by hand
+## Running things
 
-    cd ~/Documents/cprt && python3 copart_snapshot.py --profile
+```bash
+cd /Users/kwu/cprt
+./.venv/bin/python scripts/job1_snapshot.py        # Copart daily sitemap snapshot (Job 1)
+./.venv/bin/python scripts/job1_iaa.py             # IAA daily sitemap snapshot (Job 1b) - once per day only
+./.venv/bin/python scripts/analysis_20260911.py    # rebuilds TLF calibration, elasticity, decomposition CSVs
+./.venv/bin/python scripts/units_decomp_panel.py   # rebuilds the six-quarter units panel
+```
 
-## Why launchd and not cron
+Both collectors run nightly via LaunchAgent `com.cprt.job1` (18:45 local, `scripts/com.cprt.job1.plist`
+→ `scripts/run_job1.sh`). Logs in `logs/`. Database: `data/cprt.db` (gitignored); exported series in
+`data/csv/` (committed).
 
-cron inside the Cowork VM is not writable and the VM does not persist,
-so a cron job there would silently stop running. launchd on macOS proper
-survives reboots. The data folder is a real Mac folder either way.
+## Research-ethics rules (non-negotiable; see `HANDOFF.md` §1)
 
-## What it collects
+robots.txt first on every host, and obey it · ≥2 s between requests to a host · honest identification
+with a contact email on every request · no authentication · no paywall or challenge circumvention ·
+report blockers rather than work around them · every dataset's source, method and date logged.
 
-- data/lots.csv   one row per lot per snapshot, from lot.xml pages 1-3
-                  (SEO subset, ~1,800 lots, ~89% clean-title -- NOT full inventory)
-- data/sales.csv  one row per scheduled auction, from sale-list-results.xml
-                  (~1,144 entries: yard_id, state, city, sale_date)
+## Trust hierarchy
 
-The sales.csv series is the valuable one: sale events per yard per week
-is an operational throughput proxy that requires no gated data.
+| Tier | Source | Reliability |
+|---|---|---|
+| 1 | SEC filings (10-K/10-Q/8-K, XBRL) | very high |
+| 2 | Earnings-call transcripts, hand-transcribed | high — cross-checked 15/15 against a sell-side exhibit |
+| 3 | Copart / IAA sitemaps (scraped) | medium — listed inventory, not yard inventory |
+| 4 | Derived series and regressions | lowest — compounds every upstream error |
 
-Neither file can be backfilled. Every day it does not run is gone.
-
-## Constraints
-
-robots.txt disallows /public/data/, /downloadSalesData, /memberFees,
-/lotSearchResults/. This script touches none of them -- only URLs Copart
-publishes in its own sitemap index. Keep it that way.
+Tiers 1–2 produced every result that survived. Tiers 3–4 produced every claim that was retracted.

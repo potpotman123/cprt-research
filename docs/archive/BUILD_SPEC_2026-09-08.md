@@ -1,3 +1,9 @@
+> **ARCHIVED 2026-09-11 — superseded. Do not build on this document.**
+> The original build spec (2026-09-08). Kept as the record of what was asked. Two of its premises were later disproved: 'cannot be backfilled' (Wayback gave 3.5 years) and the lot-ID clock. **Its fee-schedule figures (~line 167: $95 gate + $15 environmental, flat $1,000 in the $10–15k band, 7.50% + $250 above $15k) have no source** and must not be cited as data — see `HANDOFF.md` §9.
+> Current handoff: `HANDOFF.md`. Results and every retraction: `findings.md`.
+
+---
+
 # Copart (CPRT) research data pipeline — build spec
 
 You are building a local data pipeline for an equity research pitch on **Copart, Inc. (NASDAQ: CPRT)** for the HFAC x Citadel Intercollegiate Stock Pitch Competition. Submission is **October 2, 2026**. Work fast, prefer working code over elegant code, and report what you find rather than what you assume.

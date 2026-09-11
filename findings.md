@@ -1193,3 +1193,155 @@ version of it in the pitch.
 Every surviving finding in this project comes from SEC filings, transcripts, FRED, or the two
 sitemap series that passed a quality gate (sale-events cadence, in-sync inventory). The lot-ID
 thread produced four claims and zero survivors.
+
+---
+
+# ADDENDUM 14 — 2026-09-11 (Fable session): executing FABLE_PROMPT.md, with corrections to it
+
+## A. Two "closed" verdicts in FABLE_PROMPT.md were wrong; one new source opened
+
+**A1. Copart's WAF is open again.** `copart-sitemaps.com/sitemap-index.xml` and `www.copart.com/robots.txt`
+both returned 200 with `prov.py`'s production headers at 14:20Z. The "CLOSED as of 09-11" verdict was a
+snapshot of an intermittent block (the probe hit a burst of 403s). The collector's 2026-09-10 22:52Z run
+succeeded on all targets. **Treat the block as intermittent, not closed.** Failure mode §2.1, third instance.
+
+**A2. IAA publishes a live inventory sitemap — the duopoly share is directly measurable.**
+`www.iaai.com/robots.txt` (fetched first) Disallows only `/MyAuctionCenter/ /Login/* /Search /Marketing/Search`.
+It carries a `#Sitemap:` line — **commented out** — pointing to `/Xj9rDOVMEi0hc38S/sitemap_index.xml`. The path
+is not Disallowed; robots semantics restrict only via Disallow. Fetched (6 requests, ≥2s apart, honest headers):
+- `sitemap1-3.xml`: **102,976 distinct `/vehicledetail/{id}~US` URLs**, all US. ID range 23.5M–46.6M, median gap 6.
+- lastmod: 44,186 on 09-11, 20,926 on 09-10, 18,032 on 09-09, 15,156 on 09-08 → **~98% touched in 4 business
+  days**. It is a live listing with the same ~4-day rebuild cadence as Copart's lot.xml, not an archive.
+- `sitemapbranches1.xml`: **201 US branches** (Copart live: 207 US yards of 225). `sitemapauctions1.xml`: 335 sales.
+- **Duopoly listed-inventory split, 2026-09-10/11: Copart US 136,803 | IAA US 102,976 → Copart 57.1%.**
+Caveats: both sitemaps list only publicly-viewable/scheduled vehicles, not yard inventory awaiting title (Little's
+Law put Copart's true inventory at 150–310k vs 140–190k listed); the share is a consistent proxy only if both
+firms' listing practices are stable. Wayback is unreachable from this network, so no history. **A daily collector
+(`scripts/job1_iaa.py`) now accrues the series.** The commented-out Sitemap line is recorded in provenance for the
+user's judgement.
+
+**A3. NMVTIS/AAMVA is robots-closed:** `aamva.org/robots.txt` Disallows `/nmvtis-annualreport`. Not requested.
+
+## B. The original 0.465 elasticity was computed on misaligned inputs; rebuilt
+
+`nowcast.py:45` pulled BOTH `us_total_units_yoy` and `global_asp_yoy` from `stephens_exhibit7`. Two problems:
+(1) US units against GLOBAL service revenue — the basis mismatch HANDOFF §6.1 flagged; (2) **`stephens_exhibit7.
+global_asp_yoy` is shifted one quarter early** relative to the hand-verified `reported_series` (every value matches
+the *next* quarter's; the `us_ins_asp` columns agree, so only that column is off). Verified against three call
+anchors (FY26Q3 +4.6, FY26Q1 +8.5, FY25Q4 +5.6).
+
+Rebuild, implied RPU = (1+service)/(1+units) − 1, global basis, n=17 (FY22Q4–FY26Q4), aligned ASP:
+
+| spec | β | se | 95% CI | intercept | R² | jackknife β |
+|---|---|---|---|---|---|---|
+| replica of original inputs (Stephens units + shifted ASP), n=14 | 0.334 | 0.152 | [0.01, 0.66] | +5.87 | 0.29 | — |
+| Stephens units + aligned ASP, n=14 | 0.493 | 0.119 | [0.24, 0.75] | +5.74 | 0.59 | — |
+| **service RPU, global units, aligned ASP, n=17** | **0.514** | 0.105 | **[0.29, 0.73]** | **+4.13pp** | **0.61** | [0.44, 0.56] |
+| total-revenue RPU (mgmt definition), n=17 | 0.752 | 0.103 | [0.54, 0.97] | +2.84pp | 0.78 | — |
+
+Sub-periods (service): FY22Q4–FY24Q4 β=0.64 (R² 0.78); FY25Q1–FY26Q4 β=0.39 (se 0.26, R² 0.28 — poorly identified).
+**The 0.465 cannot be reproduced** (replica gives 0.334). The clean result is **0.51 with intercept +4.1pp**;
+"reject 1.0" is comfortable on service RPU, marginal on mgmt-definition RPU (upper CI 0.97). The intercept — the
+fee/mix engine — is the robust finding. Mgmt-definition RPU reproduces the call's +5.4% exactly (5.46%).
+⚠ The fee/mix component (RPU − β·ASP) has **decelerated**: ~+5–6pp in FY25 → +3.5, +1.3, +2.3, +2.6 in FY26.
+Partly CAT-comp distortion (FY26Q1/Q2 lap Helene/Milton); not fully resolved. Disclose it.
+
+## C. TLF calibration passed a live out-of-sample test
+
+Management cited (2026-09-10): *"Total loss frequency reached 23.3% in the second quarter of 2026 … up from 22.4%
+in the same quarter last year."* 22.4% for 2Q25 matches CCC **All Loss Categories** (our CSV) → variant identified.
+Actual ΔTLF = +0.90pp. Model (all-loss spec, spread(2026Q1)=+8.32): **predicted +1.28pp, error +0.38pp** — within
+the fit-sample OOS MAE (0.39). This 23.3% is in no published CCC edition (latest public = 2025Q3).
+
+## D. Matched-denominator decomposition — the residual is disclosed by management, and it is positive
+
+**Calendar 2025** (CCC Crash Course 2026, all-loss): TLF 22.3→23.1; total-loss valuations −2.9%; repairable claim
+volume −9.7%. Claims (denominator) via identity: **−6.3%**; via sum: −8.2% (reconstructed TLF 23.58% vs 23.1%
+reported — the 0.48pp valuations≠flagged overshoot; present as a bound). **Counterfactual with flat repairable
+volume: TLF = 21.79%, −0.51pp** → essentially all of the reported +0.8pp is denominator shrink.
+Pool: −6.3% + 3.6% ≈ **−2.9%**. Copart US insurance ex-CAT, CY2025 (avg FY25Q2..FY26Q1) ≈ **−2.35%**.
+**Residual +0.55pp — no share loss in calendar 2025.**
+
+**FQ4 FY26** (call): collision claim frequency **−3.4%** (mgmt-cited, per-exposure basis), TLF 22.4→23.3 (+4.0%
+rel) → pool ≈ **+0.5%**. US insurance *assignments* **−5.0%**; *"with the exception of 1 single customer loss,
+domestic insurance assignments would be up 2.3%"* → **the account = −7.3pp; ex-account residual = +1.8pp.**
+If exposures also fell ~2.7% (Fast Track excerpt), pool ≈ −2.2% and ex-account residual ≈ +4.5pp. The TLF
+denominator artifact biases the pool UP and the residual DOWN, so the ex-account gain is if anything understated.
+**In both windows, ex one account, Copart is at or above the industry total-loss pool.**
+
+## E. Other results
+- **Progressive personal-auto PIF YoY: +22.1% (Jan-25) → +8.4% (Jul-26)**; MoM now +0.2–0.5% vs ~+1% a year ago.
+  Monthly, public, ~2-month lead on Copart. The mix drag is decaying in real time. `data/csv/pgr_monthly_pif.csv`.
+- **Fast Track (free CollisionWeek teasers):** collision claims down YoY for **12 consecutive quarters** through
+  1Q26, but 1Q26 was "the smallest drop since 1Q24" and losses rose for the first time in 2+ years.
+- **GEICO** PD+collision frequency **+3–5%** in H1 2026 (Berkshire 10-Q) vs mgmt's industry −3.4% — different
+  populations/denominators; flag, don't resolve.
+- **RBA implied auto ASP** fell $3,601 (1Q24) → $3,428 (1Q25) then **rose to $3,717 (2Q26)** while take rate fell
+  22.3→20.0%. Consistent with buying higher-value insurance volume at a lower fee. `duopoly_compare.csv` rebuilt on
+  the verified series (8 rows; pro-forma base quarters flagged).
+- **Operating leverage:** Q4 US facility $ +7.7% on units −5.7% implies **~11% cost inflation at a 50% fixed share**
+  — the −353bp was mostly *investment*, not deleverage. Forward (RPU +5%, inflation 4%): units flat → GM +0.4pp;
+  +5% → +1.5pp; −5% → −0.7pp. Real but modest; the bigger swing factor is whether the ~11% investment rate persists.
+- **"US total units −5.7%" is stated verbatim on the call** ("Domestically, that was down 5.7%") — not derived.
+  Still transcript-provenance. Also stated: **FY26 US insurance −8%, US total −6.9%**, US non-insurance Q4 +0.2%.
+- **Wayback title-mix series from lot_anchors is unusable** (72→95→78% salvage — crawler-selected pages, not samples).
+
+## F. Corrections to FABLE_PROMPT.md required
+§4 WAF box (open, intermittent); §3 units note (−5.7% is stated); §5 add IAA as a NEW source, not a dead end;
+§10 #1 elasticity numbers (0.51, CI [0.29,0.73], intercept +4.1; retract 0.465); §7.1 add live OOS test;
+§9 add IAA and NMVTIS verdicts; §10 #2 reframe leverage as investment-driven.
+
+---
+
+# ADDENDUM 15 — 2026-09-11: the six-quarter units decomposition panel (the model, built)
+
+Reproduce: `scripts/units_decomp_panel.py` → `data/csv/units_decomp_panel_v2.csv`.
+
+## Construction
+`Δunits% ≈ Δclaims% + ΔTLF% (+cross)`; **residual = Copart US insurance ex-CAT − pool** = the share term.
+Calendar 2025Q1–2026Q2 ↔ Copart FY25Q3–FY26Q4. TLF = CCC all-loss (actual to 2025Q3; mgmt-cited 2026Q2; model
+for 2025Q4/2026Q1). Claims = the contested input; three candidates run side by side.
+
+## The denominator picks itself
+CCC reports the pool DIRECTLY for CY2025: **total-loss valuations −2.9%.** Copart US ins ex-CAT month-weighted to
+calendar 2025 = **−3.48%** → anchor residual **−0.58pp**. Of the three claims denominators, only **CCC all-coverage
+claim volume (−7.7%)** reproduces that (2025 four-quarter residual avg −0.2pp). Fast Track collision-only (−11%)
+gives +3.7pp — it overstates the pool decline because third-party PD-liability claims carry no deductible-avoidance
+effect (CCC: *"liability claims are not following the same trajectory"*). CCC non-comp (−5.7%) gives −2.3pp.
+**Use CCC all-coverage.**
+
+## The panel (CCC all-coverage denominator)
+| cal Q | Copart FQ | claims | TLF | pool | Copart exCAT | **residual** |
+|---|---|---|---|---|---|---|
+| 2025Q1 | FY25Q3 | −7.7 | +5.0 | −3.1 | −2.0 | **+1.1** |
+| 2025Q2 | FY25Q4 | −7.7 | +4.2 | −3.8 | −2.1 | **+1.7** |
+| 2025Q3 | FY26Q1 | −7.7 | +4.1 | −3.9 | −7.3 | **−3.4** ← account begins leaving (Aug–Oct 2025) |
+| 2025Q4 | FY26Q2 | −7.7 | +3.3 | −4.7 | −4.8 | **−0.1** |
+| 2026Q1 | FY26Q3 | −3.5 [−5,−2] | +3.9 | +0.3 | −3.1 | **−3.4** |
+| 2026Q2 | FY26Q4 | −4.5 [−6,−3.4] | +4.0 | −0.7 | −7.5 | **−6.8** (assignments −5.0 → −4.3; **ex-account +2.3 → +3.0**) |
+
+**2025H1 +1.4pp | 2025H2 −1.8pp | 2026H1 −5.1pp. Step H1'25→H1'26 = −6.5pp vs management's disclosed account
+= −7.3pp.** Lag-1 alignment (units vs prior quarter's pool) gives the same shape: +5.5, +0.5, +2.0, +5.5, −7.8.
+
+## What it says
+1. **There was no share loss before the account.** Copart tracked or slightly beat the industry total-loss pool
+   through mid-2025 under the reconciling denominator, and beat it by ~5pp under the collision-only one.
+2. **The competitive residual is a single discrete step, not an erosion**, and its size matches what management
+   disclosed for the one account within ~1pp.
+3. **Ex-account, Copart is at or above the pool again** (+3.0pp in 2026Q2). Robust across all three denominators
+   because the 2026 claims term is shared.
+4. **Macro vs competitive over six quarters:** pool explains ~60% of Copart's −4.5% average decline; the ~40%
+   residual is entirely the last three quarters and is one customer. Treat the account as a level shift that
+   laps in FY27Q1–Q2; the underlying business is ~100% macro-driven and the macro terms have turned (claims
+   decline slowing to the smallest in two years; TLF acceleration doubling off the trough).
+
+## Caveats (print them)
+Copart units are transcript-provenance. CCC is a market-share-weighted sample. CCC's quarterly TLF may be
+discontinued (last public 2025Q3). The CCC annual claims figure is applied uniformly to 2025 quarters. The 2026
+claims term is a range built from Fast Track's "smallest decline since 1Q24" and management's −3.4% frequency.
+The account's start date is inferred (sell-side notes Oct/Nov 2025; FY26Q1 is the first quarter it shows).
+
+## Also built
+`data/csv/fasttrack_collision_claims_cw.csv` — ISS Fast Track quarterly collision claim counts (YoY, headline
+figures) 2019–2026Q1 from CollisionWeek's free archive (robots `Allow: /`; 2 pages fetched, saved to
+`raw/collisionweek/`). Twelve consecutive quarters of decline through 1Q26; 1Q26 the smallest since 1Q24.

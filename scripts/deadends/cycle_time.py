@@ -5,7 +5,7 @@ S = exp(-dt/CT)  =>  CT = -dt / ln(S).
 Survival is computed from lot_id set overlap between consecutive lot.xml captures.
 Validated against Copart's disclosed 'cycle times decreased 9%' (FY26 Q1)."""
 import re,glob,collections,datetime,math,sqlite3,csv,pathlib,statistics
-ROOT=pathlib.Path(__file__).resolve().parent.parent
+ROOT=pathlib.Path(__file__).resolve().parent.parent.parent
 rx=re.compile(r'/lot/(\d+)')
 con=sqlite3.connect(ROOT/"data/cprt.db")
 complete={r[0] for r in con.execute("SELECT month FROM inventory_level")}

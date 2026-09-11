@@ -28,3 +28,9 @@ __pycache__/
 *.pyc
 .DS_Store
 logs/
+
+# Python / editor junk
+__pycache__/
+*.pyc
+*.bak
+.DS_Store

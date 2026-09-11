@@ -57,8 +57,11 @@ def headers_for(url):
     return dict(HEADERS)
 
 def _is_challenge(body):
-    b = (body or b"")[:4000].lower()
-    return b"incapsula" in b or b"_incapsula_resource" in b or b"request unsuccessful" in b
+    b = (body or b"")[:6000].lower()
+    # "Pardon Our Interruption" = IAA's (www.iaai.com) bot interstitial, served with HTTP 200 (seen 2026-09-11
+    # on the 6th request after ~15MB). Additive signature only; SEC/BLS/CCC pages never contain these strings.
+    return (b"incapsula" in b or b"_incapsula_resource" in b or b"request unsuccessful" in b
+            or b"pardon our interruption" in b)
 
 def get(url, robots_status, robots_basis, note="", save_to=None, ua=None, timeout=90,
         retries=4, backoff=20):

@@ -1,6 +1,6 @@
 """Extract reported unit / inventory / ASP percentages from earnings-call transcripts."""
 import re,glob,csv,sqlite3,pathlib
-ROOT=pathlib.Path(__file__).resolve().parent.parent
+ROOT=pathlib.Path(__file__).resolve().parent.parent.parent
 def sgn(word,val):
     return -val if re.search(r'declin|decreas|down|fell|lower|contract',word,re.I) else val
 NUM=r'(\d+(?:\.\d+)?)%'

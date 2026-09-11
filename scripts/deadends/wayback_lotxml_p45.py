@@ -1,5 +1,5 @@
 import sys,os,re,time,pathlib,urllib.request
-ROOT=pathlib.Path(__file__).resolve().parent.parent
+ROOT=pathlib.Path(__file__).resolve().parent.parent.parent
 UA=("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36")
 H={"User-Agent":UA,"Accept-Language":"en-US,en;q=0.9","Accept-Encoding":"gzip",

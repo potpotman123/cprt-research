@@ -5,7 +5,7 @@ far ahead any single snapshot looks. |weekday set| = sales per week.
 Controls for the fact that more snapshots in a year discover more weekdays.
 """
 import sqlite3,collections,datetime,statistics,csv,pathlib
-ROOT=pathlib.Path(__file__).resolve().parent.parent
+ROOT=pathlib.Path(__file__).resolve().parent.parent.parent
 con=sqlite3.connect(ROOT/"data/cprt.db")
 US=set("AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY DC".split())
 rows=list(con.execute("SELECT snapshot_ts,yard_id,sale_date,state,location FROM sale_events WHERE sale_date IS NOT NULL"))

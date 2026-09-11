@@ -1,5 +1,5 @@
 import sys,os,re,time,pathlib,urllib.request,urllib.parse,collections
-ROOT=pathlib.Path(__file__).resolve().parent.parent
+ROOT=pathlib.Path(__file__).resolve().parent.parent.parent
 UA="CPRT-Research/1.0 (+academic equity research; contact: kendall_wu@college.harvard.edu)"
 def req(u,t=120):
     r=urllib.request.Request(u,headers={"User-Agent":UA})

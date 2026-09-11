@@ -6,7 +6,7 @@ v2 uses robust high-percentile estimators of the DENSE region, and only in-sync 
 (cross-page overlap <=5%) so pagination artifacts do not contaminate the ID set.
 """
 import re,glob,sqlite3,datetime,statistics,csv,pathlib,math
-ROOT=pathlib.Path(__file__).resolve().parent.parent
+ROOT=pathlib.Path(__file__).resolve().parent.parent.parent
 rx=re.compile(r'/lot/(\d+)')
 con=sqlite3.connect(ROOT/"data/cprt.db")
 ok={m for m,ov,c in con.execute("SELECT month,overlap_pct,complete FROM inventory_v2") if c=='1' and float(ov)<=5.0}

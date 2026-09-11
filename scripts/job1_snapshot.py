@@ -118,11 +118,37 @@ con=_db()
 # inserting. A later failed run (zero rows fetched) therefore DESTROYED the good data
 # from an earlier successful run the same day - which is exactly what happened to the
 # 2026-09-09 snapshot. Only replace when we actually have something to replace it with.
+# BUGFIX 2026-09-10 (third iteration of this guard):
+#   v1 deleted the day's rows unconditionally BEFORE inserting -> a later failed run
+#      destroyed an earlier good one (lost 2026-09-09).
+#   v2 made deletion conditional on having rows -> but a WORSE capture still silently
+#      replaced a better one (tonight's 11.5%-overlap run clobbered the morning's 0.1%).
+#   v3: only replace when the new capture is at least as IN-SYNC as the one already stored.
+#      Cross-page overlap is the quality metric; lower is better.
 _today=SNAP[:10]
-if lot_rows:
+def _overlap_of(rows):
+    if not rows: return 100.0
+    ids={r[1] for r in rows}
+    return (len(rows)-len(ids))/len(rows)*100
+_new_ov=_overlap_of(lot_rows)
+_prev=con.execute("""SELECT snapshot_utc,count(*),count(DISTINCT lot_id) FROM lot_snapshots
+                     WHERE substr(snapshot_utc,1,10)=? GROUP BY 1 ORDER BY 1 DESC LIMIT 1""",
+                  (_today,)).fetchone()
+_replace=True
+if _prev and _prev[1]:
+    _prev_ov=(_prev[1]-_prev[2])/_prev[1]*100
+    if _new_ov > _prev_ov + 0.5:
+        _replace=False
+        print(f"\n  KEEPING existing {_today} capture: stored overlap {_prev_ov:.1f}% "
+              f"beats this run's {_new_ov:.1f}%. New rows discarded.")
+    else:
+        print(f"\n  replacing {_today}: stored {_prev_ov:.1f}% -> new {_new_ov:.1f}% overlap")
+if _replace and lot_rows:
     con.execute("DELETE FROM lot_snapshots  WHERE substr(snapshot_utc,1,10)=?",(_today,))
-if sale_rows:
+if _replace and sale_rows:
     con.execute("DELETE FROM sale_events_live WHERE substr(snapshot_utc,1,10)=?",(_today,))
+if not _replace:
+    lot_rows=[]; sale_rows=[]
 con.executemany("INSERT INTO run_log VALUES(?,?,?,?,?,?)",runlog)
 con.executemany("INSERT INTO lastmod_profile VALUES(?,?,?,?,?,?,?)",lmprof)
 con.executemany("INSERT INTO lot_snapshots VALUES(?,?,?,?,?,?,?,?,?)",lot_rows)

@@ -7,7 +7,7 @@ Reported comparables (from earnings calls / third-party, NOT in EDGAR filings):
 Copart fiscal quarters end Oct 31 / Jan 31 / Apr 30 / Jul 31.
 """
 import sqlite3,csv,datetime,pathlib,statistics
-ROOT=pathlib.Path(__file__).resolve().parent.parent
+ROOT=pathlib.Path(__file__).resolve().parent.parent.parent
 con=sqlite3.connect(ROOT/"data/cprt.db")
 rows=[dict(zip([c[0] for c in con.execute("SELECT * FROM inventory_panel LIMIT 1").description],r))
       for r in con.execute("SELECT * FROM inventory_panel ORDER BY month")]

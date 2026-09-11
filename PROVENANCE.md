@@ -158,3 +158,22 @@ reproduced in any deliverable. Short verifying quotes are retained in
 `scripts/prov.py` enforces ≥2.0 s between requests to the same host, in-process. Archive
 scripts use 5.0 s with exponential backoff on error. Nothing in this project runs
 concurrent requests against a single host.
+
+---
+
+## 5. Sources added 2026-09-11 (all robots.txt fetched first-hand before any other path)
+
+| Host | robots.txt | What was fetched | Saved | Notes |
+|---|---|---|---|---|
+| `www.iaai.com` | 200. Disallow: `/MyAuctionCenter/ /Login/* /Search /Marketing/Search`. **`#Sitemap:` line present but commented out** → path `/Xj9rDOVMEi0hc38S/sitemap_index.xml` | index + `sitemap1-3.xml` (102,976 `/vehicledetail/{id}~US`), `sitemapbranches1.xml` (201), `sitemapauctions1.xml` (335) | `raw/iaai/`, `raw/iaai/daily/<ts>/` | Path is **not** Disallowed; robots restricts only via Disallow. The commented-out directive is recorded here for the user's judgement. Volume-throttles: a "Pardon Our Interruption" interstitial (HTTP 200) after ~15 MB; never parsed as data, never retried past `prov.get`'s backoff. Daily via `scripts/job1_iaa.py`, once per day. |
+| `www.cccis.com` | 200. `Allow: /`; Disallow `/sem/` only | Crash Course 2026 (annual) and 2024/Q4, 2025/Q1–Q4 report pages (HTML text) and the chart images carrying the total-loss-frequency data labels | probe scratchpad; transcribed to `data/csv/ccc_tlf_annual.csv`, `ccc_tlf_quarterly.csv` with provenance headers | The PDF is behind a Pardot form (**not submitted**); irrelevant because the full report body and charts are served ungated. Values are printed data labels read at 2000–3200 px, not pixel estimates. Edition-year ≠ data-year for the annual. Values revise ~+0.1 pp between editions. |
+| `download.bls.gov` | flat files; `api.bls.gov/robots.txt` is `Disallow: /` and was **not used** | `pub/time.series/cu/cu.data.14.USTransportation` → CUUR/CUSR 0000 SETA02 (used cars), SETD (repair), SETE (insurance) | `data/csv/cprt_cpi_three_series.csv` | BLS footnote code X marks the 2025 appropriations-lapse gap: SETD lost Oct-2025; SETE lost Oct **and** Nov 2025; SETA02 has no gap. Left as NaN, never interpolated. |
+| `fred.stlouisfed.org` | 200 | `TRFVOLUSM227NFWA` (FHWA monthly VMT) | probe scratchpad | Used instead of FHWA's own files because `fhwa.dot.gov` **Disallows** `/policyinformation/travel_monitoring/`. Verified identical to the allowed FHWA archive on 12/12 months of 2020. |
+| `collisionweek.com` | 200. Disallow `/wp-admin/` only | `/tag/losses/` archive pages 1–3 (headline + teaser only; article bodies not fetched) | `raw/collisionweek/` | ISS Fast Track quarterly collision-claim-count headlines 2019–2025Q4 → `data/csv/fasttrack_collision_claims_cw.csv`. Headline figures ("Down Over 11%") recorded with qualifier. |
+| `www.sec.gov` / `data.sec.gov` / `efts.sec.gov` | `Allow: /Archives/edgar/data`; `Disallow: /cgi-bin` (**not used**) | Progressive (CIK 0000080661) monthly 8-K EX-99 → personal-auto PIF back to Jan-2003; Berkshire (CIK 0001067983) 10-Q/10-K GEICO frequency sentences; RB Global (CIK 0001046102) 8-K Ex-99.1 lots/GTV/take rate; ACV Auctions (CIK 0001637873) 8-K + merger agreement Ex-2.1 + investor deck Ex-99.2; Copart FQ4 FY26 8-K Ex-99.1 | `data/csv/pgr_monthly_pif.csv`, `geico_frequency_series.csv`, `rba_automotive_series.csv`, `segment_service_rev_8k.csv`; `raw/sec/8k/` | Descriptive UA with contact email on every SEC request. PGR: "Total Personal Lines" changed definition Dec-2024 (property moved inside); personal auto (agency+direct) is continuous. RBA: 5 of 18 quarters are pro forma; the six-quarter table exists in exactly one filing. |
+| `www.aamva.org` | 200. **Disallow `/nmvtis-annualreport`** | nothing beyond robots.txt | — | NMVTIS total-loss reporting statistics are robots-closed. Not requested. |
+| `web.archive.org` | unreachable from this network (TCP 443 refused) | nothing | — | So no IAA sitemap history and no pre-2013 CCC editions. Open lead from a different network. |
+
+Every request above is also in `logs/provenance.jsonl` / `data/cprt.db` `provenance` via `scripts/prov.py`,
+except the CCC/BLS/FRED/CollisionWeek/SEC probe fetches made by the 2026-09-11 feasibility agents, which
+logged URL, status, byte count and retrieval time in their own reports (summarised in `HANDOFF.md` §9).
