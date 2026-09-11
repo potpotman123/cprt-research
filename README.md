@@ -1,7 +1,6 @@
 # CPRT research — Copart, Inc. (NASDAQ: CPRT)
 
-Equity research pipeline for a **long pitch on Copart** at the HFAC × Citadel Intercollegiate Stock
-Pitch Competition (preliminary submission 2026-10-02). Everything here is built from public,
+Equity research pipeline for a **long pitch on Copart** Everything here is built from public,
 robots-compliant sources with a logged provenance trail. **Licensed content (transcripts, sell-side)
 is gitignored and never committed.**
 
