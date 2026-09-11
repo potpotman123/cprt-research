@@ -1,0 +1,355 @@
+<title>Sitemap Nowcast Tracking</title>
+<style>
+.viz-root{color-scheme:light;
+  --surface-0:#f6f6f4;--surface-1:#fcfcfb;--surface-2:#eeeeea;
+  --border:#dcdcd5;--border-strong:#c2c2b8;
+  --text-primary:#0b0b0b;--text-secondary:#52514e;--text-muted:#78776f;
+  --series-1:#2a78d6;--series-2:#eb6834;
+  --grid:#e4e4de;--good:#008300;--warn:#eda100;--crit:#e34948}
+@media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])) .viz-root{
+  color-scheme:dark;--surface-0:#121211;--surface-1:#1a1a19;--surface-2:#242422;
+  --border:#33332f;--border-strong:#4a4a44;
+  --text-primary:#fff;--text-secondary:#c3c2b7;--text-muted:#8f8e84;
+  --series-1:#3987e5;--series-2:#d95926;
+  --grid:#2b2b28;--good:#008300;--warn:#c98500;--crit:#e66767}}
+:root[data-theme="dark"] .viz-root{
+  color-scheme:dark;--surface-0:#121211;--surface-1:#1a1a19;--surface-2:#242422;
+  --border:#33332f;--border-strong:#4a4a44;
+  --text-primary:#fff;--text-secondary:#c3c2b7;--text-muted:#8f8e84;
+  --series-1:#3987e5;--series-2:#d95926;
+  --grid:#2b2b28;--good:#008300;--warn:#c98500;--crit:#e66767}
+*{box-sizing:border-box}
+.viz-root{background:var(--surface-0);color:var(--text-primary);
+  font:14px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  padding:26px 22px 44px;max-width:1120px;margin:0 auto}
+h1{font-size:22px;line-height:1.25;margin:0 0 6px;letter-spacing:-.01em}
+.sub{color:var(--text-secondary);margin:0 0 18px;max-width:76ch}
+h2{font-size:13px;text-transform:uppercase;letter-spacing:.07em;color:var(--text-muted);
+  margin:30px 0 11px;font-weight:600}
+.card{background:var(--surface-1);border:1px solid var(--border);border-radius:10px;padding:18px}
+.fc{background:var(--surface-1);border:1px solid var(--border);border-left:3px solid var(--series-1);
+  border-radius:10px;padding:16px 18px;margin-bottom:18px}
+.fc .hd{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--text-muted);
+  margin-bottom:9px}
+.fc .big{font-size:34px;font-weight:660;letter-spacing:-.025em;font-variant-numeric:tabular-nums;
+  line-height:1.05}
+.fc .meta{font-size:12.5px;color:var(--text-secondary);margin-top:7px}
+.fcrow{display:flex;gap:28px;flex-wrap:wrap;align-items:flex-start}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));gap:10px}
+.tile{background:var(--surface-1);border:1px solid var(--border);border-radius:10px;padding:12px 14px}
+.tile .k{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted)}
+.tile .v{font-size:23px;font-weight:650;letter-spacing:-.02em;margin-top:3px;
+  font-variant-numeric:tabular-nums}
+.tile .n{font-size:11px;color:var(--text-secondary);margin-top:2px}
+.banner{border:1px solid var(--border);border-left:3px solid var(--warn);background:var(--surface-1);
+  border-radius:8px;padding:12px 15px;margin:0 0 18px;font-size:13px;color:var(--text-secondary)}
+.banner b{color:var(--text-primary)}
+.ctl{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:16px 0 14px}
+.ctl .lab{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted)}
+.ctl .sep{width:1px;height:20px;background:var(--border);margin:0 5px}
+button.seg{background:var(--surface-1);border:1px solid var(--border-strong);color:var(--text-secondary);
+  border-radius:7px;padding:6px 12px;font:inherit;font-size:13px;cursor:pointer}
+button.seg[aria-pressed="true"]{background:var(--surface-2);color:var(--text-primary);
+  border-color:var(--text-muted);font-weight:600}
+.legend{display:flex;gap:15px;flex-wrap:wrap;font-size:12.5px;color:var(--text-secondary);margin:2px 0 9px}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:880px){.grid2{grid-template-columns:1fr}}
+svg{display:block;width:100%;height:auto;overflow:visible}
+.gl{stroke:var(--grid);stroke-width:1}.ax{stroke:var(--border-strong);stroke-width:1}
+.tk{fill:var(--text-muted);font-size:10.5px;font-variant-numeric:tabular-nums}
+.al{fill:var(--text-secondary);font-size:11px}
+.dlab{fill:var(--text-secondary);font-size:10.5px;font-variant-numeric:tabular-nums}
+table{width:100%;border-collapse:collapse;font-size:12.5px;font-variant-numeric:tabular-nums}
+th,td{padding:6px 9px;text-align:right;border-bottom:1px solid var(--border)}
+th{color:var(--text-muted);font-weight:600;font-size:10.5px;text-transform:uppercase;
+  letter-spacing:.05em;text-align:right}
+th:first-child,td:first-child,th:nth-child(2),td:nth-child(2),th:nth-child(7),td:nth-child(7){text-align:left}
+tbody tr:hover{background:var(--surface-2)}
+tbody tr.live{background:var(--surface-2);font-weight:600}
+.tt{position:fixed;pointer-events:none;background:var(--surface-1);border:1px solid var(--border-strong);
+  border-radius:7px;padding:8px 10px;font-size:12px;box-shadow:0 4px 14px rgba(0,0,0,.16);
+  opacity:0;transition:opacity .1s;z-index:50;max-width:252px;color:var(--text-primary)}
+.tt .r{display:flex;justify-content:space-between;gap:14px}
+.tt .r span:last-child{font-variant-numeric:tabular-nums;font-weight:600}
+.note{font-size:12.5px;color:var(--text-secondary);margin-top:10px}
+.note ul{margin:6px 0 0 18px;padding:0}.note li{margin:3px 0}
+code{background:var(--surface-2);padding:1px 5px;border-radius:4px;font-size:12px}
+.scroll{overflow-x:auto}
+</style>
+
+<div class="viz-root">
+<h1>Using today&rsquo;s sitemap to call next quarter</h1>
+<p class="sub">Copart&rsquo;s inventory today is the pool that sells over the coming weeks, so a
+reading now should predict the <b>next</b> quarter&rsquo;s units &mdash; Copart says so itself:
+&ldquo;year-over-year changes in inventory levels can be a directional indicator of
+<i>prospective</i> unit sales.&rdquo; The data agrees: on insurance units the one-quarter-lead
+alignment lifts R&sup2; from 0.52 to <b>0.83</b>.</p>
+
+<div class="fc" id="fc"></div>
+
+<div class="banner"><b>Read the effective sample first.</b> 13 historical pairs, but only
+<b>6 distinct reported quarters</b> &mdash; several share an endpoint, so they are not independent.
+Treat n as ~6. The confidence intervals below are wide for that reason and are the honest
+headline, not the point estimate.</div>
+
+<div class="ctl">
+  <span class="lab">Target</span>
+  <button class="seg" data-k="insu" aria-pressed="true">Insurance units</button>
+  <button class="seg" data-k="totu" aria-pressed="false">Total units</button>
+  <button class="seg" data-k="inv" aria-pressed="false">Inventory</button>
+  <span class="sep"></span>
+  <span class="lab">Alignment</span>
+  <button class="seg" data-s="1" aria-pressed="true">Next quarter (lead)</button>
+  <button class="seg" data-s="0" aria-pressed="false">Same quarter</button>
+</div>
+
+<div class="tiles" id="tiles"></div>
+
+<div class="grid2" style="margin-top:14px">
+  <div class="card">
+    <h2 style="margin-top:0">Each pair vs its target quarter</h2>
+    <div class="legend">
+      <span><i style="background:var(--series-1)"></i>Historical pair</span>
+      <span><i style="background:var(--series-2)"></i>Today&rsquo;s reading</span>
+      <span><i style="background:var(--text-muted);height:2px;border-radius:0"></i>OLS fit</span>
+      <span><i style="background:var(--border-strong);height:2px;border-radius:0"></i>1:1</span>
+    </div>
+    <svg id="sc" viewBox="0 0 460 340" role="img" aria-label="Sitemap YoY against reported YoY"></svg>
+    <p class="note">Vertical stacks = several pairs mapping to one reported quarter. Today&rsquo;s
+    reading sits on the fit line at its predicted x &mdash; that <i>is</i> the forecast.</p>
+  </div>
+  <div class="card">
+    <h2 style="margin-top:0">By quarter, calibrated</h2>
+    <div class="legend">
+      <span><i style="background:var(--series-1)"></i>Sitemap, calibrated</span>
+      <span><i style="background:var(--series-2)"></i>Reported</span>
+    </div>
+    <svg id="ts" viewBox="0 0 460 340" role="img" aria-label="Calibrated sitemap against reported by quarter"></svg>
+    <p class="note">In-sample calibration &mdash; this shows fit, not out-of-sample skill. The
+    dashed segment is the forecast quarter, which has no reported value yet.</p>
+  </div>
+</div>
+
+<h2>Underlying level series &mdash; 16 in-sync captures</h2>
+<div class="card">
+  <div class="legend"><span><i style="background:var(--series-1)"></i>Distinct lots in <code>lot.xml</code></span></div>
+  <svg id="lv" viewBox="0 0 940 250" role="img" aria-label="Distinct lots listed over time"></svg>
+</div>
+
+<h2>All pairs</h2>
+<div class="card scroll">
+  <table id="tb"><thead><tr><th>From</th><th>To</th><th>Days</th><th>From lots</th>
+  <th>To lots</th><th>Ours YoY</th><th>Target qtr</th><th>Reported</th><th>Error</th>
+  </tr></thead><tbody></tbody></table>
+</div>
+
+<h2>QA rules</h2>
+<div class="card note">
+<ul>
+<li><b>Cross-page overlap &le; 5%.</b> <code>lot.xml</code> paginates at 50,000 URLs and each page
+rebuilds on its own schedule; when they fall out of sync the boundary shifts and lots appear on two
+pages. Yesterday&rsquo;s capture hit 14.8% overlap and was <b>rejected</b>; today&rsquo;s is 0.1%.</li>
+<li><b>Distinct (union) count, never the sum of pages.</b></li>
+<li><b>Complete page set required</b> &mdash; non-negotiable. Dropping it lifts n from 13 to 40 but
+collapses r from 0.91 to <b>0.17</b>, because truncated subsets get compared against full counts.</li>
+<li><b>YoY window 300&ndash;430 days</b>, matched to the nearest fiscal quarter-end within 45 days,
+so seasonality cancels.</li>
+<li><b>12 of 27 archived captures excluded</b> by these rules.</li>
+</ul>
+<p style="margin-top:11px"><b>Limits.</b> Coverage ratio is unknown &mdash; Little&rsquo;s Law implies
+150&ndash;310k true inventory against ~140&ndash;190k listed, so this is a sample of unpublished size.
+Right-censored at 200,000 (4 pages &times; 50,000). Reported figures are transcribed from 16 earnings
+transcripts and corroborated 15/15 against Stephens Inc. Exhibit 7.</p>
+</div>
+</div>
+<div class="tt" id="tt"></div>
+<script>
+const DATA={"pairs":[{"frm":"202209","to":"202307","days":303,"ours":4.49,"q":"FY2023 Q4","off":30,"frm_lots":154603,"to_lots":161541,"is_live":false,"insu_0":9.0,"q_0":"FY2023 Q4","insu_1":9.7,"q_1":"FY2024 Q1","totu_0":8.0,"totu_1":10.0,"inv_0":8.0,"inv_1":1.0},{"frm":"202209","to":"202308","days":338,"ours":9.92,"q":"FY2023 Q4","off":5,"frm_lots":154603,"to_lots":169936,"is_live":false,"insu_0":9.0,"q_0":"FY2023 Q4","insu_1":9.7,"q_1":"FY2024 Q1","totu_0":8.0,"totu_1":10.0,"inv_0":8.0,"inv_1":1.0},{"frm":"202211","to":"202401","days":426,"ours":5.74,"q":"FY2024 Q2","off":30,"frm_lots":169857,"to_lots":179610,"is_live":false,"insu_0":0.3,"q_0":"FY2024 Q2","insu_1":6.8,"q_1":"FY2024 Q3","totu_0":5.0,"totu_1":9.0,"inv_0":4.0,"inv_1":3.0},{"frm":"202212","to":"202401","days":392,"ours":5.51,"q":"FY2024 Q2","off":30,"frm_lots":170230,"to_lots":179610,"is_live":false,"insu_0":0.3,"q_0":"FY2024 Q2","insu_1":6.8,"q_1":"FY2024 Q3","totu_0":5.0,"totu_1":9.0,"inv_0":4.0,"inv_1":3.0},{"frm":"202301","to":"202401","days":364,"ours":7.05,"q":"FY2024 Q2","off":30,"frm_lots":167787,"to_lots":179610,"is_live":false,"insu_0":0.3,"q_0":"FY2024 Q2","insu_1":6.8,"q_1":"FY2024 Q3","totu_0":5.0,"totu_1":9.0,"inv_0":4.0,"inv_1":3.0},{"frm":"202303","to":"202401","days":301,"ours":-0.56,"q":"FY2024 Q2","off":30,"frm_lots":180626,"to_lots":179610,"is_live":false,"insu_0":0.3,"q_0":"FY2024 Q2","insu_1":6.8,"q_1":"FY2024 Q3","totu_0":5.0,"totu_1":9.0,"inv_0":4.0,"inv_1":3.0},{"frm":"202303","to":"202404","days":392,"ours":5.66,"q":"FY2024 Q3","off":29,"frm_lots":180626,"to_lots":190856,"is_live":false,"insu_0":6.8,"q_0":"FY2024 Q3","insu_1":6.0,"q_1":"FY2024 Q4","totu_0":9.0,"totu_1":6.0,"inv_0":3.0,"inv_1":6.0},{"frm":"202307","to":"202406","days":336,"ours":14.2,"q":"FY2024 Q3","off":32,"frm_lots":161541,"to_lots":184480,"is_live":false,"insu_0":6.8,"q_0":"FY2024 Q3","insu_1":6.0,"q_1":"FY2024 Q4","totu_0":9.0,"totu_1":6.0,"inv_0":3.0,"inv_1":6.0},{"frm":"202308","to":"202406","days":301,"ours":8.56,"q":"FY2024 Q3","off":32,"frm_lots":169936,"to_lots":184480,"is_live":false,"insu_0":6.8,"q_0":"FY2024 Q3","insu_1":6.0,"q_1":"FY2024 Q4","totu_0":9.0,"totu_1":6.0,"inv_0":3.0,"inv_1":6.0},{"frm":"202308","to":"202410","days":425,"ours":12.6,"q":"FY2025 Q1","off":28,"frm_lots":169936,"to_lots":191340,"is_live":false,"insu_0":12.0,"q_0":"FY2025 Q1","insu_1":9.0,"q_1":"FY2025 Q2","totu_0":11.0,"totu_1":8.0,"inv_0":5.0,"inv_1":-4.0},{"frm":"202404","to":"202506","days":426,"ours":-14.33,"q":"FY2025 Q3","off":32,"frm_lots":190856,"to_lots":163513,"is_live":false,"insu_0":-1.0,"q_0":"FY2025 Q3","insu_1":-2.1,"q_1":"FY2025 Q4","totu_0":0.0,"totu_1":-1.8,"inv_0":-11.0,"inv_1":-14.8},{"frm":"202406","to":"202506","days":365,"ours":-11.37,"q":"FY2025 Q3","off":32,"frm_lots":184480,"to_lots":163513,"is_live":false,"insu_0":-1.0,"q_0":"FY2025 Q3","insu_1":-2.1,"q_1":"FY2025 Q4","totu_0":0.0,"totu_1":-1.8,"inv_0":-11.0,"inv_1":-14.8},{"frm":"202410","to":"202509","days":333,"ours":-19.98,"q":"FY2025 Q4","off":32,"frm_lots":191340,"to_lots":153101,"is_live":false,"insu_0":-2.1,"q_0":"FY2025 Q4","insu_1":-9.5,"q_1":"FY2026 Q1","totu_0":-1.8,"totu_1":-7.9,"inv_0":-14.8,"inv_1":-17.0},{"frm":"202509","to":"202609","days":374,"ours":-8.36,"q":"FY2026 Q4","off":41,"frm_lots":153101,"to_lots":140296,"is_live":true,"insu_0":null,"q_0":"FY2026 Q4","insu_1":null,"q_1":"FY2027 Q1","totu_0":null,"totu_1":null,"inv_0":null,"inv_1":null}],"fits":{"insu_0":{"n":13,"eff":6,"r":0.723,"r2":0.5227,"beta":1.607,"alpha":-3.76,"rmse":7.72,"mae":3.76,"ci":9.4,"pred":-2.86,"pred_q":"FY2026 Q4"},"insu_1":{"n":13,"eff":6,"r":0.9094,"r2":0.827,"beta":1.717,"alpha":-5.8,"rmse":4.65,"mae":1.89,"ci":5.3,"pred":-1.49,"pred_q":"FY2027 Q1"},"totu_0":{"n":13,"eff":6,"r":0.9325,"r2":0.8696,"beta":2.48,"alpha":-11.66,"rmse":4.03,"mae":1.34,"ci":3.2,"pred":1.33,"pred_q":"FY2026 Q4"},"totu_1":{"n":13,"eff":6,"r":0.8693,"r2":0.7557,"beta":1.647,"alpha":-6.82,"rmse":5.52,"mae":2.4,"ci":6.6,"pred":-0.94,"pred_q":"FY2027 Q1"},"inv_0":{"n":13,"eff":6,"r":0.9122,"r2":0.8321,"beta":1.279,"alpha":1.21,"rmse":4.58,"mae":2.46,"ci":7.0,"pred":-7.48,"pred_q":"FY2026 Q4"},"inv_1":{"n":13,"eff":6,"r":0.8702,"r2":0.7573,"beta":1.098,"alpha":3.69,"rmse":5.5,"mae":3.31,"ci":9.8,"pred":-10.97,"pred_q":"FY2027 Q1"}},"labels":{"insu":"US insurance units","totu":"US total units","inv":"US inventory"},"levels":[{"date":"2022-09-01","lots":154603},{"date":"2022-11-01","lots":169857},{"date":"2022-12-05","lots":170230},{"date":"2023-01-02","lots":167787},{"date":"2023-03-06","lots":180626},{"date":"2023-07-01","lots":161541},{"date":"2023-08-05","lots":169936},{"date":"2024-01-01","lots":179610},{"date":"2024-04-01","lots":190856},{"date":"2024-06-01","lots":184480},{"date":"2024-10-03","lots":191340},{"date":"2025-06-01","lots":163513},{"date":"2025-09-01","lots":153101},{"date":"2025-12-27","lots":161809},{"date":"2026-01-01","lots":159593},{"date":"2026-09-10","lots":140296}],"live":{"frm":"202509","to":"202609","days":374,"ours":-8.36,"q":"FY2026 Q4","off":41,"frm_lots":153101,"to_lots":140296,"is_live":true,"insu_0":null,"q_0":"FY2026 Q4","insu_1":null,"q_1":"FY2027 Q1","totu_0":null,"totu_1":null,"inv_0":null,"inv_1":null}};
+let K='insu',S=1;
+const tt=document.getElementById('tt');
+const show=(e,h,rows)=>{tt.innerHTML='<div style="font-weight:650;margin-bottom:5px">'+h+'</div>'+
+  rows.map(r=>'<div class="r"><span>'+r[0]+'</span><span>'+r[1]+'</span></div>').join('');
+  tt.style.opacity=1;mv(e)};
+const mv=e=>{const p=12,w=tt.offsetWidth,h=tt.offsetHeight;let x=e.clientX+p,y=e.clientY+p;
+  if(x+w>innerWidth-8)x=e.clientX-w-p;if(y+h>innerHeight-8)y=e.clientY-h-p;
+  tt.style.left=x+'px';tt.style.top=y+'px'};
+const hd=()=>tt.style.opacity=0;
+const NS='http://www.w3.org/2000/svg';
+const el=(t,a)=>{const n=document.createElementNS(NS,t);for(const k in a)n.setAttribute(k,a[k]);return n};
+const fmt=v=>(v>0?'+':'')+v.toFixed(1)+'%';
+const F=()=>DATA.fits[K+'_'+S];
+const TK=()=>K+'_'+S;
+
+function fcast(){
+  const f=F(),L=DATA.labels[K],lv=DATA.live;
+  const col=f.pred<0?'var(--crit)':'var(--good)';
+  document.getElementById('fc').innerHTML=
+    '<div class="fcrow">'+
+    '<div><div class="hd">Forecast &mdash; '+f.pred_q+' '+L+'</div>'+
+    '<div class="big" style="color:'+col+'">'+fmt(f.pred)+'</div>'+
+    '<div class="meta">95% CI &plusmn;'+f.ci.toFixed(1)+'pp &nbsp;&middot;&nbsp; r='+f.r.toFixed(3)+
+    ' &nbsp;&middot;&nbsp; n='+f.n+' (eff. '+f.eff+')</div></div>'+
+    '<div><div class="hd">Built from today&rsquo;s reading</div>'+
+    '<div class="big" style="font-size:26px">'+fmt(lv.ours)+'</div>'+
+    '<div class="meta">'+lv.frm_lots.toLocaleString()+' &rarr; '+lv.to_lots.toLocaleString()+
+    ' lots &nbsp;&middot;&nbsp; '+lv.days+'d apart<br>Sep-01-2025 &rarr; Sep-10-2026, both in-sync</div></div>'+
+    '</div>';
+}
+function tiles(){
+  const f=F();
+  const q=[['Pearson r',f.r.toFixed(3),'vs '+DATA.labels[K]],
+   ['R&sup2;',f.r2.toFixed(3),S==1?'one-quarter lead':'same quarter'],
+   ['Pairs / eff.',f.n+' / '+f.eff,'distinct quarters'],
+   ['Amplitude &beta;','&times;'+f.beta.toFixed(2),'our swing vs reported'],
+   ['MAE',f.mae.toFixed(2)+'pp','calibrated, in-sample']];
+  document.getElementById('tiles').innerHTML=q.map(r=>
+   '<div class="tile"><div class="k">'+r[0]+'</div><div class="v">'+r[1]+'</div><div class="n">'+r[2]+'</div></div>').join('');
+}
+function scatter(){
+  const s=document.getElementById('sc');s.innerHTML='';
+  const k=TK(),f=F();
+  const P=DATA.pairs.filter(p=>p[k]!==null&&p[k]!==undefined&&!p.is_live);
+  const lv=DATA.pairs.find(p=>p.is_live);
+  const L=52,R=14,T=14,B=44,W=460,H=340,iw=W-L-R,ih=H-T-B;
+  const xs=P.map(p=>p[k]).concat([f.pred]),ys=P.map(p=>p.ours).concat([lv.ours]);
+  const lo=Math.min(...xs,...ys)-3,hi=Math.max(...xs,...ys)+3;
+  const X=v=>L+(v-lo)/(hi-lo)*iw,Y=v=>T+ih-(v-lo)/(hi-lo)*ih;
+  const st=(hi-lo)>34?10:5;
+  for(let v=Math.ceil(lo/st)*st;v<=hi;v+=st){
+    s.appendChild(el('line',{x1:L,x2:L+iw,y1:Y(v),y2:Y(v),class:'gl'}));
+    s.appendChild(el('line',{x1:X(v),x2:X(v),y1:T,y2:T+ih,class:'gl'}));
+    const a=el('text',{x:L-7,y:Y(v)+3.5,class:'tk','text-anchor':'end'});a.textContent=v;s.appendChild(a);
+    const b=el('text',{x:X(v),y:T+ih+15,class:'tk','text-anchor':'middle'});b.textContent=v;s.appendChild(b);
+  }
+  s.appendChild(el('line',{x1:X(lo),y1:Y(lo),x2:X(hi),y2:Y(hi),stroke:'var(--border-strong)',
+    'stroke-width':2,'stroke-dasharray':'5 4'}));
+  s.appendChild(el('line',{x1:X(lo),y1:Y(f.alpha+f.beta*lo),x2:X(hi),y2:Y(f.alpha+f.beta*hi),
+    stroke:'var(--text-muted)','stroke-width':2}));
+  P.forEach(p=>{
+    const c=el('circle',{cx:X(p[k]),cy:Y(p.ours),r:5.5,fill:'var(--series-1)',
+      stroke:'var(--surface-1)','stroke-width':2,style:'cursor:pointer'});
+    c.addEventListener('mouseenter',e=>show(e,p.frm+' &rarr; '+p.to,
+      [['Days',p.days],['From',p.frm_lots.toLocaleString()],['To',p.to_lots.toLocaleString()],
+       ['Ours',fmt(p.ours)],['Target',p['q_'+S]],['Reported',fmt(p[k])],['Error',fmt(p.ours-p[k])]]));
+    c.addEventListener('mousemove',mv);c.addEventListener('mouseleave',hd);s.appendChild(c);
+  });
+  // today's reading, projected onto the fit
+  s.appendChild(el('line',{x1:X(f.pred-f.ci),y1:Y(lv.ours),x2:X(f.pred+f.ci),y2:Y(lv.ours),
+    stroke:'var(--series-2)','stroke-width':2,opacity:.45}));
+  const c2=el('circle',{cx:X(f.pred),cy:Y(lv.ours),r:6.5,fill:'var(--series-2)',
+    stroke:'var(--surface-1)','stroke-width':2,style:'cursor:pointer'});
+  c2.addEventListener('mouseenter',e=>show(e,'Today &rarr; '+f.pred_q+' forecast',
+    [['Our YoY',fmt(lv.ours)],['Forecast',fmt(f.pred)],['95% CI','&plusmn;'+f.ci.toFixed(1)+'pp'],
+     ['Reported','not yet']]));
+  c2.addEventListener('mousemove',mv);c2.addEventListener('mouseleave',hd);s.appendChild(c2);
+  const xl=el('text',{x:L+iw/2,y:H-6,class:'al','text-anchor':'middle'});
+  xl.textContent='Reported '+DATA.labels[K]+' YoY (%)';s.appendChild(xl);
+  const yl=el('text',{x:0,y:0,class:'al','text-anchor':'middle',
+    transform:'translate(13,'+(T+ih/2)+') rotate(-90)'});
+  yl.textContent='Sitemap lot-count YoY (%)';s.appendChild(yl);
+  s.appendChild(el('line',{x1:L,y1:T,x2:L,y2:T+ih,class:'ax'}));
+  s.appendChild(el('line',{x1:L,y1:T+ih,x2:L+iw,y2:T+ih,class:'ax'}));
+}
+function tseries(){
+  const s=document.getElementById('ts');s.innerHTML='';
+  const k=TK(),f=F(),byq={};
+  DATA.pairs.forEach(p=>{const q=p['q_'+S];if(!q)return;
+    if(!byq[q])byq[q]={o:[],r:(p[k]===undefined?null:p[k]),live:false};
+    byq[q].o.push((p.ours-f.alpha)/f.beta);
+    if(p.is_live)byq[q].live=true; if(p[k]!==null&&p[k]!==undefined)byq[q].r=p[k];});
+  const qs=Object.keys(byq).sort();
+  const rows=qs.map(q=>({q,ours:byq[q].o.reduce((a,b)=>a+b,0)/byq[q].o.length,
+    rep:byq[q].r,live:byq[q].live,k:byq[q].o.length}));
+  const L=52,R=14,T=14,B=52,W=460,H=340,iw=W-L-R,ih=H-T-B;
+  const all=rows.flatMap(r=>[r.ours].concat(r.rep===null||r.rep===undefined?[]:[r.rep]));
+  const lo=Math.min(...all)-3,hi=Math.max(...all)+3;
+  const X=i=>L+(rows.length<2?iw/2:i/(rows.length-1)*iw),Y=v=>T+ih-(v-lo)/(hi-lo)*ih;
+  for(let v=Math.ceil(lo/5)*5;v<=hi;v+=5){
+    s.appendChild(el('line',{x1:L,x2:L+iw,y1:Y(v),y2:Y(v),class:'gl'}));
+    const a=el('text',{x:L-7,y:Y(v)+3.5,class:'tk','text-anchor':'end'});a.textContent=v;s.appendChild(a);}
+  if(lo<0&&hi>0)s.appendChild(el('line',{x1:L,x2:L+iw,y1:Y(0),y2:Y(0),
+    stroke:'var(--border-strong)','stroke-width':1.5}));
+  const rp=rows.filter(r=>r.rep!==null&&r.rep!==undefined);
+  s.appendChild(el('path',{d:rp.map((r,i)=>(i?'L':'M')+X(rows.indexOf(r))+' '+Y(r.rep)).join(' '),
+    fill:'none',stroke:'var(--series-2)','stroke-width':2,'stroke-linejoin':'round'}));
+  for(let i=0;i<rows.length-1;i++){
+    const dash=(rows[i+1].rep===null||rows[i+1].rep===undefined)?'6 4':null;
+    const ln=el('line',{x1:X(i),y1:Y(rows[i].ours),x2:X(i+1),y2:Y(rows[i+1].ours),
+      stroke:'var(--series-1)','stroke-width':2});
+    if(dash)ln.setAttribute('stroke-dasharray',dash);
+    s.appendChild(ln);
+  }
+  rows.forEach((r,i)=>{
+    if(r.rep!==null&&r.rep!==undefined)
+      s.appendChild(el('circle',{cx:X(i),cy:Y(r.rep),r:4.5,fill:'var(--series-2)',
+        stroke:'var(--surface-1)','stroke-width':2}));
+    s.appendChild(el('circle',{cx:X(i),cy:Y(r.ours),r:r.live?6:4.5,
+      fill:'var(--series-1)',stroke:'var(--surface-1)','stroke-width':2}));
+    const hit=el('rect',{x:X(i)-16,y:T,width:32,height:ih,fill:'transparent',style:'cursor:pointer'});
+    hit.addEventListener('mouseenter',e=>show(e,r.q+(r.live?' (forecast)':''),
+      [['Sitemap, calibrated',fmt(r.ours)],
+       ['Reported',(r.rep===null||r.rep===undefined)?'not yet':fmt(r.rep)],
+       ['Pairs',r.k]]));
+    hit.addEventListener('mousemove',mv);hit.addEventListener('mouseleave',hd);s.appendChild(hit);
+    const t=el('text',{x:X(i),y:T+ih+16,class:'tk','text-anchor':'end',
+      transform:'rotate(-38 '+X(i)+' '+(T+ih+16)+')'});
+    t.textContent=r.q.replace('FY20','FY');s.appendChild(t);
+  });
+  const yl=el('text',{x:0,y:0,class:'al','text-anchor':'middle',
+    transform:'translate(13,'+(T+ih/2)+') rotate(-90)'});
+  yl.textContent='YoY change (%)';s.appendChild(yl);
+  s.appendChild(el('line',{x1:L,y1:T,x2:L,y2:T+ih,class:'ax'}));
+}
+function levels(){
+  const s=document.getElementById('lv');s.innerHTML='';
+  const P=DATA.levels,L=62,R=16,T=16,B=40,W=940,H=250,iw=W-L-R,ih=H-T-B;
+  const t=P.map(p=>new Date(p.date+'T00:00:00Z').getTime());
+  const t0=Math.min(...t),t1=Math.max(...t);
+  const vs=P.map(p=>p.lots),lo=Math.min(...vs)*.94,hi=Math.max(...vs)*1.04;
+  const X=v=>L+(v-t0)/(t1-t0)*iw,Y=v=>T+ih-(v-lo)/(hi-lo)*ih;
+  for(let v=140000;v<=200000;v+=10000){if(v<lo||v>hi)continue;
+    s.appendChild(el('line',{x1:L,x2:L+iw,y1:Y(v),y2:Y(v),class:'gl'}));
+    const a=el('text',{x:L-8,y:Y(v)+3.5,class:'tk','text-anchor':'end'});
+    a.textContent=(v/1000)+'k';s.appendChild(a);}
+  s.appendChild(el('path',{d:P.map((p,i)=>(i?'L':'M')+X(t[i])+' '+Y(p.lots)).join(' '),
+    fill:'none',stroke:'var(--series-1)','stroke-width':2,'stroke-linejoin':'round'}));
+  const mx=P.reduce((a,b)=>b.lots>a.lots?b:a),mn=P.reduce((a,b)=>b.lots<a.lots?b:a);
+  P.forEach((p,i)=>{
+    const last=i===P.length-1;
+    const c=el('circle',{cx:X(t[i]),cy:Y(p.lots),r:last?6:4.5,
+      fill:last?'var(--series-2)':'var(--series-1)',stroke:'var(--surface-1)','stroke-width':2,
+      style:'cursor:pointer'});
+    c.addEventListener('mouseenter',e=>show(e,p.date+(last?' (today)':''),
+      [['Distinct lots',p.lots.toLocaleString()]]));
+    c.addEventListener('mousemove',mv);c.addEventListener('mouseleave',hd);s.appendChild(c);
+    if(p===mx||p===mn||last){
+      const lb=el('text',{x:X(t[i]),y:Y(p.lots)+(p===mx?-11:19),class:'dlab','text-anchor':'middle'});
+      lb.textContent=p.lots.toLocaleString();s.appendChild(lb);}
+    if(i%2===0){const d=el('text',{x:X(t[i]),y:T+ih+15,class:'tk','text-anchor':'end',
+      transform:'rotate(-38 '+X(t[i])+' '+(T+ih+15)+')'});
+      d.textContent=p.date.slice(2,7);s.appendChild(d);}
+  });
+  s.appendChild(el('line',{x1:L,y1:T,x2:L,y2:T+ih,class:'ax'}));
+  s.appendChild(el('line',{x1:L,y1:T+ih,x2:L+iw,y2:T+ih,class:'ax'}));
+}
+function table(){
+  const k=TK();
+  document.querySelector('#tb tbody').innerHTML=DATA.pairs.map(p=>{
+    const r=p[k],e=(r===null||r===undefined)?null:p.ours-r;
+    const col=e===null?'inherit':Math.abs(e)<=2.5?'var(--good)':Math.abs(e)<=6?'var(--warn)':'var(--crit)';
+    return '<tr'+(p.is_live?' class="live"':'')+'><td>'+p.frm+'</td><td>'+p.to+
+      (p.is_live?' &larr; today':'')+'</td><td>'+p.days+'</td><td>'+p.frm_lots.toLocaleString()+
+      '</td><td>'+p.to_lots.toLocaleString()+'</td><td>'+fmt(p.ours)+'</td><td>'+
+      (p['q_'+S]||'&mdash;')+'</td><td>'+((r===null||r===undefined)?'not yet':fmt(r))+
+      '</td><td style="color:'+col+'">'+(e===null?'&mdash;':fmt(e))+'</td></tr>';}).join('');
+}
+function render(){fcast();tiles();scatter();tseries();levels();table();}
+document.querySelectorAll('button.seg').forEach(b=>b.addEventListener('click',()=>{
+  if(b.dataset.k){K=b.dataset.k;document.querySelectorAll('button.seg[data-k]').forEach(x=>
+    x.setAttribute('aria-pressed',x===b));}
+  else{S=+b.dataset.s;document.querySelectorAll('button.seg[data-s]').forEach(x=>
+    x.setAttribute('aria-pressed',x===b));}
+  render();}));
+render();
+</script>

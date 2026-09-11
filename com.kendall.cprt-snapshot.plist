@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.kendall.cprt-snapshot</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/python3</string>
+    <string>/Users/kwu/cprt/copart_snapshot.py</string>
+    <string>--profile</string>
+  </array>
+  <key>WorkingDirectory</key><string>/Users/kwu/cprt</string>
+  <key>StandardOutPath</key><string>/Users/kwu/cprt/logs/snapshot.log</string>
+  <key>StandardErrorPath</key><string>/Users/kwu/cprt/logs/snapshot.err</string>
+  <key>RunAtLoad</key><true/>
+  <key>StartCalendarInterval</key>
+  <dict><key>Hour</key><integer>6</integer><key>Minute</key><integer>15</integer></dict>
+</dict>
+</plist>

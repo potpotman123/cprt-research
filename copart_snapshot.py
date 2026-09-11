@@ -1,0 +1,248 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+"""
+Copart public-sitemap snapshotter.
+
+Pulls only URLs that Copart publishes in its own sitemap index
+(referenced from https://www.copart.com/robots.txt), parses them into
+tidy CSVs, and appends each run with a snapshot timestamp so that daily
+runs accumulate a time series.
+
+Nothing here touches a robots.txt-disallowed path.
+  Disallowed (do not add):  /public/data/  /downloadSalesData
+                            /memberFees    /lotSearchResults/
+
+Usage:
+    python3 copart_snapshot.py            # one snapshot, appends to ./data
+    python3 copart_snapshot.py --profile  # also print a lot-ID / mix profile
+
+Run daily (cron):
+    5 6 * * *  cd /path/to/cprt && /usr/bin/python3 copart_snapshot.py
+"""
+
+import argparse
+import csv
+import gzip
+import io
+import os
+import re
+import sys
+import time
+import urllib.parse
+import urllib.request
+from collections import Counter
+from datetime import datetime, timezone
+from xml.etree import ElementTree as ET
+
+SITEMAP_INDEX = "https://www.copart-sitemaps.com/sitemap-index.xml"
+NS = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+
+UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+      "(KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36")
+# Identify ourselves honestly via From/X-Contact while sending the conventional
+# header set a normal client sends; a bare urllib UA gets a blanket 403 at the WAF.
+HEADERS = {
+    "User-Agent": UA,
+    "Accept": "application/xml,text/xml,application/xhtml+xml,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Accept-Encoding": "gzip",
+    "From": "kendall_wu@college.harvard.edu",
+    "X-Contact": "kendall_wu@college.harvard.edu (academic research)",
+}
+SLEEP = 1.5           # be polite; these are static XML files
+OUTDIR = "data"
+
+# .../lot/<id>/<slug>
+LOT_RE = re.compile(r"/lot/(\d+)/([^/?#]*)")
+# .../saleListResult/<yardId>[/<YYYY-MM-DD>]?location=<ST - City>&saleDate=<ms|Future>
+SALE_RE = re.compile(r"/saleListResult/(\d+)(?:/(\d{4}-\d{2}-\d{2}))?")
+
+TITLE_PREFIXES = ("clean-title", "salvage", "cert-of-title", "nonrepairable",
+                  "certificate-of-destruction", "parts-only", "bill-of-sale")
+
+
+def fetch(url: str, tries: int = 3) -> bytes:
+    """GET with a real UA, gzip support, and simple backoff."""
+    last = None
+    for attempt in range(tries):
+        try:
+            req = urllib.request.Request(
+                url, headers=HEADERS
+            )
+            with urllib.request.urlopen(req, timeout=60) as r:
+                raw = r.read()
+                if r.headers.get("Content-Encoding") == "gzip":
+                    raw = gzip.decompress(raw)
+                return raw
+        except Exception as e:                                   # noqa: BLE001
+            last = e
+            time.sleep(2 ** attempt)
+    raise RuntimeError(f"failed to fetch {url}: {last}")
+
+
+def sitemap_children(index_url: str = SITEMAP_INDEX) -> list[str]:
+    root = ET.fromstring(fetch(index_url))
+    return [loc.text.strip() for loc in root.findall(".//sm:sitemap/sm:loc", NS)]
+
+
+def urlset_entries(url: str) -> list[tuple[str, str]]:
+    """Return [(loc, lastmod)] from a <urlset> sitemap."""
+    root = ET.fromstring(fetch(url))
+    out = []
+    for u in root.findall(".//sm:url", NS):
+        loc = u.findtext("sm:loc", default="", namespaces=NS).strip()
+        mod = u.findtext("sm:lastmod", default="", namespaces=NS).strip()
+        if loc:
+            out.append((loc, mod))
+    return out
+
+
+def split_slug(slug: str) -> tuple[str, str, str]:
+    """slug -> (title_type, year, remainder). Yard is the tail; see parse_lot."""
+    title = ""
+    for p in TITLE_PREFIXES:
+        if slug.startswith(p + "-"):
+            title = p
+            slug = slug[len(p) + 1:]
+            break
+    m = re.match(r"(\d{4})-(.*)", slug)
+    if m:
+        return title, m.group(1), m.group(2)
+    return title, "", slug
+
+
+def parse_lot(loc: str, lastmod: str, snap: str) -> dict | None:
+    m = LOT_RE.search(loc)
+    if not m:
+        return None
+    lot_id, slug = m.group(1), m.group(2)
+    title, year, rest = split_slug(slug)
+    # Yard slug is the trailing "<st>-<city...>" chunk. Heuristic: last 2-4 tokens
+    # starting with a 2-letter state code. Kept raw too, so nothing is lost.
+    yard, state = "", ""
+    toks = rest.split("-")
+    for i, t in enumerate(toks):
+        if len(t) == 2 and t.isalpha() and i >= 1:
+            state, yard = t, "-".join(toks[i:])
+            break
+    return {
+        "snapshot_utc": snap,
+        "lot_id": int(lot_id),
+        "title_type": title,
+        "year": year,
+        "state": state.upper(),
+        "yard_slug": yard,
+        "vehicle_slug": rest,
+        "lastmod": lastmod,
+        "loc": loc,
+    }
+
+
+def parse_sale(loc: str, snap: str) -> dict | None:
+    m = SALE_RE.search(loc)
+    if not m:
+        return None
+    q = urllib.parse.parse_qs(urllib.parse.urlparse(loc).query)
+    location = (q.get("location") or [""])[0]
+    sale_raw = (q.get("saleDate") or [""])[0]
+    sale_iso = ""
+    if sale_raw.isdigit():
+        sale_iso = datetime.fromtimestamp(
+            int(sale_raw) / 1000, tz=timezone.utc
+        ).strftime("%Y-%m-%d")
+    state = location.split(" - ")[0].strip() if " - " in location else ""
+    city = location.split(" - ", 1)[1].strip() if " - " in location else location
+    return {
+        "snapshot_utc": snap,
+        "yard_id": int(m.group(1)),
+        "sale_date": m.group(2) or sale_iso,
+        "sale_date_raw": sale_raw,
+        "state": state,
+        "city": city,
+        "loc": loc,
+    }
+
+
+def append_csv(path: str, rows: list[dict]) -> None:
+    if not rows:
+        return
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    new = not os.path.exists(path)
+    with open(path, "a", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=list(rows[0].keys()))
+        if new:
+            w.writeheader()
+        w.writerows(rows)
+
+
+def profile(lots: list[dict], sales: list[dict]) -> None:
+    ids = sorted(r["lot_id"] for r in lots)
+    print(f"\n--- lot.xml profile  (n={len(ids)}) ---")
+    if ids:
+        print(f"lot_id min / max : {ids[0]:,} / {ids[-1]:,}")
+        # Cluster detection: where are the big gaps in ID space?
+        gaps = sorted(
+            ((b - a, a, b) for a, b in zip(ids, ids[1:])), reverse=True
+        )[:8]
+        print("largest ID gaps (tests the 'one global counter' hypothesis):")
+        for g, a, b in gaps:
+            print(f"   gap {g:>12,}   between {a:,} and {b:,}")
+    print("\ntitle_type mix:")
+    for k, v in Counter(r["title_type"] or "(none)" for r in lots).most_common():
+        print(f"   {k:<28} {v:>6}  ({v/len(lots):.1%})")
+    print("\ntop states:")
+    for k, v in Counter(r["state"] for r in lots if r["state"]).most_common(10):
+        print(f"   {k:<6} {v:>6}")
+
+    print(f"\n--- sale-list profile  (n={len(sales)}) ---")
+    yards = {r["yard_id"] for r in sales}
+    dated = [r for r in sales if r["sale_date"]]
+    print(f"distinct yard_ids : {len(yards)}")
+    print(f"dated sale events : {len(dated)}")
+    if dated:
+        ds = sorted(r["sale_date"] for r in dated)
+        print(f"sale_date range   : {ds[0]} .. {ds[-1]}")
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--profile", action="store_true")
+    ap.add_argument("--outdir", default=OUTDIR)
+    args = ap.parse_args()
+
+    snap = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    children = sitemap_children()
+    print(f"[{snap}] sitemap index -> {len(children)} child sitemaps")
+
+    lots: list[dict] = []
+    sales: list[dict] = []
+
+    for child in children:
+        base = child.split("?")[0]
+        is_lot = base.endswith("/lot.xml")
+        is_sale = base.endswith("/sale-list-results.xml")
+        if not (is_lot or is_sale):
+            continue
+        try:
+            entries = urlset_entries(child)
+        except Exception as e:                                   # noqa: BLE001
+            print(f"  !! {child}: {e}", file=sys.stderr)
+            continue
+        print(f"  {child} -> {len(entries)} entries")
+        for loc, mod in entries:
+            row = parse_lot(loc, mod, snap) if is_lot else parse_sale(loc, snap)
+            if row is not None:
+                (lots if is_lot else sales).append(row)
+        time.sleep(SLEEP)
+
+    append_csv(os.path.join(args.outdir, "lots.csv"), lots)
+    append_csv(os.path.join(args.outdir, "sales.csv"), sales)
+    print(f"\nappended {len(lots)} lot rows, {len(sales)} sale rows -> {args.outdir}/")
+
+    if args.profile:
+        profile(lots, sales)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

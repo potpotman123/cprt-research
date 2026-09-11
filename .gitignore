@@ -1,0 +1,30 @@
+# THIRD-PARTY LICENSED CONTENT - MUST NEVER BE COMMITTED
+# 16 S&P Global Market Intelligence transcripts + 1 Stephens Inc. report.
+# Licensed to the user, not redistributable. Numeric facts extracted from them
+# ARE committed (data/csv/reported_units.csv, stephens_exhibit7.csv); sources are not.
+raw/
+**/transcripts/
+**/sellside/
+# (the Stephens PDF itself is already covered by raw/ above; the transcribed
+#  NUMERIC table and its comparison script are our own work and ARE committed)
+
+# BULK / OVERSIZED - regenerable, and over GitHub limits
+data/cprt.db
+data/cprt.db-shm
+data/cprt.db-wal
+data/lots.csv
+data/sales.csv
+data/carrier/
+
+# exceeds GitHub 100MB hard limit
+data/csv/lot_snapshots.csv
+
+# 10MB, regenerable from raw/cdx
+data/csv/lot_anchors.csv
+
+# ENV
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+logs/
