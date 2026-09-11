@@ -1345,3 +1345,28 @@ The account's start date is inferred (sell-side notes Oct/Nov 2025; FY26Q1 is th
 `data/csv/fasttrack_collision_claims_cw.csv` — ISS Fast Track quarterly collision claim counts (YoY, headline
 figures) 2019–2026Q1 from CollisionWeek's free archive (robots `Allow: /`; 2 pages fetched, saved to
 `raw/collisionweek/`). Twelve consecutive quarters of decline through 1Q26; 1Q26 the smallest since 1Q24.
+
+## ADDENDUM 15a — CORRECTION (same day): the account is Progressive and the cliff was Apr–Jul 2026
+
+The Stephens F4Q26 preview (2026-08-20, `raw/sellside/`, licensed, not committed) carries a by-carrier unit table
+sourced to "Reports, autoAstat and Stephens Inc." Progressive volume at Copart runs ~28–32k per quarter from
+1Q24 through 4Q25 and ~10–13k per month in Jan–Mar 2026, then **8,029 (Apr) → 3,557 (May) → 1,358 (Jun) →
+628 (Jul) 2026.** Absolute levels are autoAstat-derived and should not be quoted as data (see the do-not-use
+verdict, Addendum 9), but the SHAPE is unambiguous and matches management's "1 single customer loss."
+
+Consequences for Addendum 15:
+1. **The cliff is April–July 2026, not August–October 2025.** The panel's ~−3pp residual in FY26Q1/FY26Q3 is
+   therefore NOT the account — it is the carrier-mix drag (Copart structurally underweight the one carrier
+   growing double digits, at ~75% IAA). The further step to −6.8pp in FY26Q4 is Progressive's remaining
+   volume going to zero. Two separable effects: mix (~−3pp, decaying as PGR growth falls +22% → +8%) and the
+   account (~−3.5 to −4pp on units; management's −7.3pp is on *assignments*).
+2. **The lap is a FY27Q4 event** (May–Jul 2027 vs a base with ~5.5k Progressive units), reporting ~Sept 2027.
+   The drag on reported US insurance units persists at nearly full weight through FY27Q3. Earlier "full lap
+   by FY27Q2" schedules in this session's chat output are wrong.
+3. Ex-account, Copart is still at or above the pool (+1.8 to +3.0pp in FQ4) — unchanged.
+
+Named consensus, same report: **Equal-Weight, PT $35 = 13.5× FY27E EBITDA $2.033B (+5%); EPS $1.67 (+6.3%);
+underlying US unit growth FY27E +1.3%; return to positive unit/EBITDA/EPS growth forecast for F2Q27.** Stephens
+also cites Yipit alternative data suggesting Copart may be *gaining* share from the ~15% of GEICO it does not
+have, and names the bear narrative — "marginal economic rents … getting competed away and accruing to the
+insurer" — as "logical but … early to declare it a reality."

@@ -25,6 +25,12 @@ assignments (-5.0%) and management's ex-one-account assignments (+2.3%).
 PROVENANCE CAVEATS TO PRINT WITH ANY CHART: Copart units are transcript-provenance (no filing discloses them);
 CCC is a market-share-weighted sample, not a census; CCC's quarterly series may be discontinued (last public
 2025Q3); the 2026 claims term is a range (Fast Track "smallest decline since 1Q24"; mgmt frequency -3.4%).
+
+INTERPRETING THE RESIDUAL (corrected 2026-09-11, findings.md Addendum 15a): a sell-side by-carrier table shows
+the lost account (Progressive) fell from ~10-13k/month to ~600/month between APRIL and JULY 2026. So the
+~-3pp residual in FY26Q1/FY26Q3 is the CARRIER-MIX drag (underweight the one fast-growing carrier), and the
+further step to -6.8pp in FY26Q4 is the account itself. The comp fully laps in FY27Q4 (May-Jul 2027), not
+earlier; the drag persists at near-full weight through FY27Q3.
 """
 import csv, statistics as st, pathlib
 ROOT = pathlib.Path(__file__).resolve().parent.parent
