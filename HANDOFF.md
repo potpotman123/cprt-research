@@ -2,9 +2,7 @@
 
 **For: the next research session. Written 2026-09-08 → 09-11; last corrected the afternoon of 2026-09-11.**
 
-You are taking over equity research for a **long pitch on Copart, Inc. (NASDAQ: CPRT)** at the
-**HFAC × Citadel Intercollegiate Stock Pitch Competition**. The user is Kendall Wu
-(kendall_wu@college.harvard.edu).
+You are taking over equity research for a **long pitch on Copart, Inc. (NASDAQ: CPRT)** at a stock pitch competition.
 
 Read §2 before you do anything else. The research in this project is recoverable; bad judgment
 about *what to research* is not, given the clock. §2 is a list of specific, observed failure modes
