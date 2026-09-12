@@ -1,0 +1,5 @@
+base_month,end_month,gap_days,overlap_base_pct,overlap_end_pct,ours_yoy_pct,fiscal_q,days_off_quarter_end,reported_yoy_pct,error_pp
+202212,202401,392,0.82,0.0,5.51,FY2024 Q2,30,4.0,1.51
+202301,202401,364,0.0,0.0,7.05,FY2024 Q2,30,4.0,3.05
+202406,202506,365,0.1,0.03,-11.37,FY2025 Q3,32,-11.0,-0.37
+202509,202609,372,0.11,0.11,-5.22,FY2026 Q4,39,-3.4,-1.82
