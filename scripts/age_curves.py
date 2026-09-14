@@ -20,7 +20,7 @@ Inputs (all public, robots-open, provenance in PROVENANCE.md s.5):
   1970/2000/2013), 3_13 (S&P avg age 1970-2020), 3_14 (EPA/NHTSA annual miles by age), 3_15 (EPA survival by age),
   3_16 (heavy-truck survival, Schmoyer/ORNL).  data/csv/fred_TOTALNSA.csv + fred_LTRUCKNSA.csv (2022-2025 sales).
   CCC Crash Course statements quoted in docs/AGE_CURVES.md.
-Outputs: data/csv/ornl_tedb40_*.csv (clean extracts), light_vehicle_sales_by_year.csv, age_curves.csv,
+Outputs: data/csv/ornl_tedb40_*.csv (EPA/Ward's extracts; the IHS-sourced census and avg-age extracts go to raw/ornl/tedb40/extracts/, gitignored), light_vehicle_sales_by_year.csv, age_curves.csv,
          age_curves_validation.csv.
 Usage:  ./.venv/bin/python scripts/age_curves.py
 """
@@ -36,11 +36,13 @@ def rows_of(prefix):
     return list(load_workbook(f, read_only=True, data_only=True).worksheets[0].iter_rows(values_only=True)), f.split('/')[-1]
 def isnum(v): return isinstance(v, (int, float)) and not isinstance(v, bool)
 def nums(row): return [v for v in row if isnum(v)]
-def write_csv(name, hdr, cols, rows):
-    with open(OUT / name, 'w', newline='') as fh:
+LOCAL = ORNL / 'extracts'   # IHS-sourced tables (3.11/3.12/3.13) carry 'FURTHER REPRODUCTION PROHIBITED' -> extracts stay gitignored
+def write_csv(name, hdr, cols, rows, local=False):
+    dest = (LOCAL if local else OUT) / name
+    with open(dest, 'w', newline='') as fh:
         for h in hdr: fh.write(f"# {h}\n")
         w = csv.writer(fh); w.writerow(cols); w.writerows(rows)
-    print(f"  -> data/csv/{name} ({len(rows)} rows)")
+    print(f"  -> {dest.relative_to(ROOT)} ({len(rows)} rows)")
 
 # ----------------------------------------------------------------------------------------------------- 0. EXTRACT
 print("0. EXTRACT ORNL TEDB Ed.40 tables")
@@ -75,7 +77,7 @@ for r in R:
         g = lambda v: v if isnum(v) else None
         AVGAGE[int(c[0])] = (g(c[1]), g(c[2]), g(c[3]) if len(c) > 3 else None)
 write_csv('ornl_tedb40_avg_age.csv', [SRC, f"Table 3.13 ({f13}): U.S. average age of cars and light trucks (S&P Global Mobility / Polk)"],
-          ['year', 'avg_age_cars', 'avg_age_light_trucks', 'avg_age_all_light'], [[y, *AVGAGE[y]] for y in sorted(AVGAGE)])
+          ['year', 'avg_age_cars', 'avg_age_light_trucks', 'avg_age_all_light'], [[y, *AVGAGE[y]] for y in sorted(AVGAGE)], local=True)
 
 def parse_inop(prefix):
     R, f = rows_of(prefix); out = {}
@@ -96,7 +98,7 @@ assert len(CARS_INOP) == 17 and len(TRK_INOP) == 17
 write_csv('ornl_tedb40_vehicles_in_operation_by_age.csv',
           [SRC, f"Tables 3.11 ({f11}) and 3.12 ({f12}): cars / trucks in operation by age (thousands), IHS Automotive (Polk). 'trucks' INCLUDES heavy trucks. age 15 = 15 and older. Snapshot as of July 1."],
           ['age', 'cars_1970_k', 'cars_2000_k', 'cars_2013_k', 'trucks_1970_k', 'trucks_2000_k', 'trucks_2013_k'],
-          [[a, CARS_INOP[a]['v1970'], CARS_INOP[a]['v2000'], CARS_INOP[a]['v2013'], TRK_INOP[a]['v1970'], TRK_INOP[a]['v2000'], TRK_INOP[a]['v2013']] for a in range(16)])
+          [[a, CARS_INOP[a]['v1970'], CARS_INOP[a]['v2000'], CARS_INOP[a]['v2013'], TRK_INOP[a]['v1970'], TRK_INOP[a]['v2000'], TRK_INOP[a]['v2013']] for a in range(16)], local=True)
 
 R, f16 = rows_of('Table3_16'); S_HEAVY = {a: 1.0 - 0.0015 * a for a in range(4)}     # ages 0-3 not tabulated; ASSUMED ~1
 for r in R:

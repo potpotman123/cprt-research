@@ -73,6 +73,43 @@ By bucket (2024 model):
 | 7–12 | 29.1 | 33.6 | 38.6 | 0.810 | 0.256 | 11,396 |
 | 13+ | 34.6 | 17.0 | 33.3 | 0.345 | 0.436 | 7,739 |
 
+### Where each column comes from
+
+| Column | Data or derived? | Exact source |
+|---|---|---|
+| `age` | convention | `a = calendar year − model year`; a model-year-2024 vehicle is age 0 in 2024. CCC's "current year or newer" ≈ age 0; the IHS census is a mid-year snapshot, so its "under 1" straddles ages 0–1 (compared as a combined bucket). |
+| `S_EPA cars` | **data, verbatim** | U.S. EPA, *Draft Technical Assessment Report: Midterm Evaluation of Light-Duty Vehicle GHG Emission Standards and CAFE Standards for MY 2022–2025*, EPA-420-D-16-900, July 2016 — survival-rate schedule for cars, as republished in ORNL *Transportation Energy Data Book* Ed.40 **Table 3.15** (`raw/ornl/tedb40/Table3_15_01312022.xlsx`; extract `data/csv/ornl_tedb40_survival_by_age.csv`). The light-truck column of the same table is in the CSV. |
+| `S_2024 cars` | **derived** | `S_EPA,cars(a / 1.270)`, linearly interpolated between the table's integer ages. 1.270 = 1.064 × 1.194: **1.064** is the stretch that best reproduces the IHS 2013 census of cars by single year of age (ORNL **Table 3.11**, source line "IHS Automotive, Detroit, MI"); **1.194** is the further drift that makes the 2024 roll hit S&P's light-vehicle count and 66% aged 7+ (§2.4). Example: age 15 → 15/1.270 = 11.81 → between 0.826 (age 11) and 0.788 (age 12) → 0.795. |
+| `S_2024 LT` | **derived** | same construction for light trucks: `S_EPA,LT(a / 1.099)`, 1.099 = 0.921 × 1.194; 0.921 fitted to the IHS 2013 census of trucks (ORNL **Table 3.12**, which includes heavy trucks — heavy sales are rolled separately with Table 3.16 for that comparison). Example: age 15 → 13.65 → between 0.651 and 0.605 → 0.621. |
+| `miles/yr cars` | **data, verbatim** | EPA annual vehicle-miles-of-travel schedule by age for cars, same EPA report (EPA-420-D-16-900), republished as ORNL **Table 3.14** (`raw/ornl/tedb40/Table3_14_01312022.xlsx`; extract `data/csv/ornl_tedb40_miles_by_age.csv`). Table 3.14 also cites NHTSA, *Vehicle Survivability and Travel Mileage Schedules*, January 2006, as the earlier schedule. Used only for the R decomposition (§3.4), not in any fit. |
+| `R(a)` | **fitted** | `e(a)·exp(+0.0155·min(a,6) − 0.0952·max(a−6,0))`, `e(0)=0.5`. The two slopes are fitted jointly with P's four parameters to the eight CCC 2024 statistics in §5 (Nelder–Mead, 40 restarts, `scripts/age_curves.py`). The 0.5 half-year exposure at age 0 is an assumption with a stated reason (§3.2). Example: age 6 → exp(0.093) = 1.098; age 7 → 1.098 × exp(−0.0952) = 0.998. |
+| `P(a)` | **fitted** | `0.032 + 0.495 / (1 + exp(−(a − 9.93)/4.40))`, four parameters fitted jointly with R to the same eight statistics. Example: age 0 → 0.032 + 0.495/(1 + e^2.257) = 0.079. |
+| `fleet 2024 (M)` | **derived** | `sales(2024 − a) × S_2024` summed over cars and light trucks. Sales: Ward's Communications new retail vehicle sales 1970–2021 via ORNL **Table 3.6** (`data/csv/ornl_tedb40_new_sales.csv`); 2022–2025 FRED `TOTALNSA` and `LTRUCKNSA` (BEA light-vehicle sales, NSA, monthly summed by calendar year, `data/csv/fred_TOTALNSA.csv`, `fred_LTRUCKNSA.csv`), rescaled to Ward's basis (§1). Example: age 3 = MY2021 = Ward's 14.57M × S(3) ≈ 14.3M. |
+| `claims %` | **derived** | `fleet(a)·R(a) / Σ_a fleet(a)·R(a)` — the model's 2024 distribution of insured physical-damage claims by age. |
+| `TL %` | **derived** | `fleet(a)·R(a)·P(a) / Σ_a fleet(a)·R(a)·P(a)` — the model's 2024 distribution of total losses by age. |
+
+The eight CCC statistics that R and P are fitted to, with the page each comes from (all fetched as ungated HTML,
+`PROVENANCE.md` §5; quotes verbatim):
+
+| statistic | value | quote | page |
+|---|---|---|---|
+| TLF 2024, all loss categories | 22.3% | printed data label, chart "Total Loss Frequency Remains High as Vehicle Values Trend Up" | https://www.cccis.com/reports/crash-course-2026 → `data/csv/ccc_tlf_annual.csv` |
+| total losses from 7+ | 72% | "almost 72% of valuations across all loss categories are for vehicles 7 years or older" | https://www.cccis.com/reports/crash-course-2024/q4 |
+| repairables from 7+ | 45% | "vehicles seven years or older now make up nearly 45% of all repairable claims, up from 35% in 2019" | https://www.cccis.com/reports/crash-course-2024/q4 |
+| repairables ≤3 yrs | ~30% | "Only 26.3% of repairable ICE vehicles are three years or newer"; EVs 79.4% and hybrids 60.3% ≤3 yrs → all-fuel ≈30% | https://www.cccis.com/reports/crash-course-2024/q4 |
+| avg age, claim vehicles | 7.6 | "For claims, the average age of vehicles has increased to 7.6 years – up from 6.9 years in 2020" | https://www.cccis.com/reports/crash-course-2025/q1 |
+| avg age, repairables / total losses | 6.8 / 10.6 | "The average age of repairable vehicles was 6.8 years in 2024 (up from 6.1 years old in 2020) and 10.6 years for total loss vehicles (up from 10.0 years old in 2020)" | https://www.cccis.com/reports/crash-course-2025/q1 |
+| P(≤3 yrs) | 10% | "For claims that are three years old or newer, 1 in 10 are flagged as a total loss by the insurer" | https://www.cccis.com/reports/crash-course-2026 |
+
+Out-of-sample quotes (2025 pages): "Through Q1, 74% of valuations are on vehicles 7 years or older" (…/crash-course-2025/q2);
+"AAVV is biased due to the large share of vehicles 7 years or older (73%)" (…/q3); "over 72% of total loss valuations are
+on vehicles 7 years or older" and "almost 46% of repairable vehicles are 7 years or older" (…/q4).
+
+**Licence note.** ORNL republishes Tables 3.11, 3.12 and 3.13 from IHS Automotive with the line "FURTHER REPRODUCTION
+PROHIBITED". Those three extracts are therefore kept local-only (`raw/ornl/tedb40/extracts/`, gitignored) and cited by
+table number; the EPA and Ward's tables carry no such line and are committed. Reproducing the figures in a pitch is
+citation of a public DOE publication, not redistribution of the dataset.
+
 Bucket-level: **P(7+) = 31.6%, P(0–6) = 12.7%; R(7+)/R(0–6) = 0.57.** (The closed-form derivation from CCC's
 bucket shares alone — 0.455 of repairables and 0.72 of total losses from 7+, 66% of the fleet 7+, TLF 23.1% — gives
 32.2% / 13.4% and 0.55; the two routes agree.)
@@ -83,9 +120,9 @@ bucket shares alone — 0.455 of repairables and 0.72 of total losses from 7+, 6
 
 `data/csv/light_vehicle_sales_by_year.csv`. Ward's new retail sales 1970–2021, cars and light trucks separately
 (ORNL TEDB Ed.40 Table 3.6). 2022–2025 from FRED `TOTALNSA` (light vehicles) and `LTRUCKNSA` (light trucks), monthly
-NSA summed by calendar year, **rescaled to Ward's basis on the 2021 overlap** (cars ×0.9455… FRED's BEA series runs
-5.8% above Ward's retail because it counts fleet deliveries; without the rescale the young cohorts are inflated
-relative to the old ones and every young-vehicle share is wrong by ~1pp). Heavy trucks (Table 3.6) are carried only
+NSA summed by calendar year, **rescaled to Ward's basis on the 2021 overlap** (cars ×0.879, light trucks ×0.968; FRED's BEA-sourced series
+runs 5.8% above Ward's retail in total because it counts fleet deliveries, and the gap is concentrated in cars. Without
+the rescale the young cohorts are inflated relative to the old ones and every young-vehicle share is wrong by ~1pp). Heavy trucks (Table 3.6) are carried only
 for the 2013 truck-census check.
 
 ---
@@ -135,8 +172,11 @@ model's own average age (11.1 in 2024 on the `t−MY+0.5` convention) alongside 
 
 ### 2.4 Drift after 2013: one multiplier fitted to S&P's counts
 
-One multiplier on both k's, linear from 1.000 (2013) to **1.194 (2024)**, fitted to S&P's 2025 release as quoted by
-CCC: light VIO ≈ 289M and 66% aged 7+. Result and checks:
+One multiplier on both k's, linear from 1.000 (2013) to **1.194 (2024)**, fitted to two count anchors: 66% aged 7+
+(S&P Global Mobility, quoted in Crash Course 2024/Q4: "66% of vehicles in operation are seven years or older") and light
+VIO ≈ 289M. ⚠ **The 289M is S&P's 2025 average-age release recalled from memory — it is not on disk.** The on-disk
+alternative is Experian's 292.1M light-duty VIO at Q3-2024 (Crash Course 2025/Q1), which the fitted roll lands on
+anyway (292M), so the anchor choice does not move k. Confirm from the S&P release (§7 item 3). Result and checks:
 
 | check | model | anchor | fitted? |
 |---|---|---|---|
@@ -326,8 +366,8 @@ behaviour. That is the honest version of the "aging fleet" pitch and it is small
 | `data/csv/ornl_tedb40_survival_by_age.csv` | EPA survival by age, cars and light trucks (Table 3.15) |
 | `data/csv/ornl_tedb40_miles_by_age.csv` | EPA annual miles by age (Table 3.14) |
 | `data/csv/ornl_tedb40_new_sales.csv` | Ward's new retail sales 1970–2021 (Table 3.6) |
-| `data/csv/ornl_tedb40_vehicles_in_operation_by_age.csv` | IHS cars/trucks in operation by age, 1970/2000/2013 (Tables 3.11/3.12) |
-| `data/csv/ornl_tedb40_avg_age.csv` | S&P average age 1970–2020 (Table 3.13) |
+| `raw/ornl/tedb40/extracts/ornl_tedb40_vehicles_in_operation_by_age.csv` (local only) | IHS cars/trucks in operation by age, 1970/2000/2013 (Tables 3.11/3.12) — sheet is marked "FURTHER REPRODUCTION PROHIBITED", so the extract is not committed; cite the ORNL table |
+| `raw/ornl/tedb40/extracts/ornl_tedb40_avg_age.csv` (local only) | IHS/S&P average age 1970–2020 (Table 3.13) — same licence note |
 | `data/csv/fred_LTRUCKNSA.csv` | FRED light-truck sales, monthly NSA |
 | `data/csv/light_vehicle_sales_by_year.csv` | cohort sizes 1970–2025, cars and light trucks |
 | `data/csv/age_curves.csv` | S, miles, R, P by age; 2024 fleet, claims and TL shares |

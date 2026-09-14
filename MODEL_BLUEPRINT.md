@@ -292,7 +292,7 @@ nonsense result reads as a bug, not a discovery.
 | `rba_automotive_series.csv`, `duopoly_compare.csv` | RB Global lots / GTV / take rate |
 | `duopoly_daily.csv` | Copart vs IAA listed US inventory, daily |
 | `fred_TOTALNSA.csv`, `fred_LTRUCKNSA.csv`, `light_vehicle_sales_by_year.csv` | US light-vehicle sales; cohort sizes 1970–2025 by body type (Ward's basis) |
-| `ornl_tedb40_*.csv` | EPA survival by age, miles by age, IHS fleet-by-age census 2000/2013, S&P avg age, Ward's sales (ORNL TEDB Ed.40) |
+| `ornl_tedb40_*.csv` | EPA survival by age, miles by age, Ward's sales (ORNL TEDB Ed.40). The IHS census and avg-age extracts are local-only (`raw/ornl/tedb40/extracts/`, licence line on the sheet) |
 | `age_curves.csv`, `age_curves_validation.csv` | S, R, P by age with 2024 fleet/claims/TL shares; every target, OOS check and sensitivity |
 | `yard_panel_us.csv`, `cadence_fixed.csv`, `lots_per_sale_event.csv` | yards, sale events, utilization |
 | `backtest_inventory_v2.csv` | sitemap inventory vs reported (appendix exhibit) |
