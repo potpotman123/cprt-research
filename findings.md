@@ -1396,15 +1396,16 @@ T3.13), FRED LTRUCKNSA, and the CCC Crash Course statements already on disk.
 ## R(age), P(age): fitted jointly to eight CCC 2024 statistics, tested on 2019/2020/2025
 4. Targets (all CCC, quoted in the script): TLF 22.3%; 72% of TL valuations and 45% of repairables from 7+; ~30% of
    repairables ≤3 yrs (26.3% ICE + EV/hybrid); average age 7.6 claims / 6.8 repairables / 10.6 total losses; "1 in
-   10" TL for ≤3 yrs. Six parameters. Every target hit within tolerance (loss 0.5).
-5. **R(a) = e(a)·exp(+0.0155·min(a,6) − 0.0952·max(a−6,0)), e(0)=0.5.** Flat-to-rising through age 6, −9.5%/yr after.
-   The half-year exposure term at age 0 is necessary (without it the ≤3 share lands at 36% vs 30%). R(7+)/R(0–6) =
-   0.572 = EPA miles ratio 0.653 × coverage/filing residual 0.875.
-6. **P(a) = 0.032 + 0.495/(1+exp(−(a−9.93)/4.40)):** 8% new, 10% ≤3, 20% at 7, 34% at 12, 44% at 17. Buckets P(7+)
-   31.6% / P(0–6) 12.7% — identical under every survival assumption tried (31.4–31.7%), and matching the closed-form
+   10" TL for ≤3 yrs. Five parameters. Every target hit within tolerance (loss 0.8).
+5. **R(a) = e(a)·exp(−0.0895·max(a−6,0)), e(0)=0.5.** Flat through age 6, −8.6%/yr after. Same-day correction: the
+   first fit let a 0–6 slope float and returned +1.6%/yr; it is not identified by the targets (loss 0.5 vs 0.8), so
+   it is fixed flat. The half-year exposure term at age 0 is necessary (without it the ≤3 share lands at 36% vs
+   30%). R(7+)/R(0–6) = 0.568 = EPA miles ratio 0.653 × coverage/filing residual 0.869.
+6. **P(a) = 0.044 + 0.446/(1+exp(−(a−9.36)/3.91)):** 8% new, 10% ≤3, 20% at 7, 34% at 12, 43% at 17. Buckets P(7+)
+   0.317 / P(0–6) 0.127 — identical under every survival assumption tried (0.314–0.318), and matching the closed-form
    bucket derivation (32.2% / 13.4%). The "45.3% at 13+" anchor in the blueprint tab has **no source** — dropped.
-7. Out of sample with R,P frozen: 2020 average ages 7.2/6.4/10.3 vs actual 6.9/6.1/10.0; 2025 TL-7+ 72.6% vs >72%,
-   repairables-7+ 45.2% vs ~46%. 2019 repairable mix misses by 3–4pp (claims were younger in 2019: EV share of young
+7. Out of sample with R,P frozen: 2020 average ages 7.3/6.4/10.3 vs actual 6.9/6.1/10.0; 2025 TL-7+ 72.5% vs >72%,
+   repairables-7+ 45.0% vs ~46%. 2019 repairable mix misses by ~3pp (claims were younger in 2019: EV share of young
    claims ×4 since, and pre-AEB young fleet) — a slow drift against young vehicles, ignorable at 12 months.
 8. **Finding, restated with the new curves: fleet ageing adds +0.15pp/yr to TLF (0.05–0.18 across survival
    assumptions) — about a quarter of the +3.9pp rise 2019→2025.** Demographics-only TLF for 2019 is 21.4% vs actual

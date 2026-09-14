@@ -86,17 +86,18 @@ share(MY,t)     =  sales(MY) × S(age) × R(age)  ÷  Σ_MY′ [ same ]
   single year of age (cars 1.064, trucks 0.921; bucket MAE 0.4pp), drifted ×1.194 by 2024 to hit S&P's counts (VIO
   ~289M, 66% aged 7+); independent check: fleet growth 2020→25 +5.4% vs Experian +5.1%. **Never calibrate to S&P
   average age** — the census itself implies ~2 yrs less (a 27-yr-old registered tail); see `docs/AGE_CURVES.md` §2.3.
-- `R(age)` relative insured-claim frequency — `e(a)·exp(+0.0155·min(a,6) − 0.0952·max(a−6,0))`, e(0)=0.5 (half-year
-  exposure for the current model year). Fitted jointly with P to eight CCC 2024 claim-mix statistics.
+- `R(age)` relative insured-claim frequency — `e(a)·exp(−0.0895·max(a−6,0))`: flat through age 6, then −8.6%/yr;
+  e(0)=0.5 (half-year exposure for the current model year). Fitted jointly with P to eight CCC 2024 claim-mix
+  statistics; a free 0–6 slope is not identified (fits +1.6%/yr with no gain), so it is fixed flat.
   R(7+)/R(0–6) = 0.57 = miles-by-age 0.65 (EPA T3.14) × coverage/filing 0.87.
-- `P(age)` total-loss propensity — logistic `0.032 + 0.495/(1+exp(−(a−9.93)/4.40))`: 8% new, 10% for ≤3 yrs (CCC
-  "1 in 10"), 20% at 7, 34% at 12, 44% at 17. Buckets P(7+) 31.6% / P(0–6) 12.7%, unchanged under every survival
+- `P(age)` total-loss propensity — logistic `0.044 + 0.446/(1+exp(−(a−9.36)/3.91))`: 8% new, 10% for ≤3 yrs (CCC
+  "1 in 10"), 20% at 7, 34% at 12, 43% at 17. Buckets P(7+) 0.317 / P(0–6) 0.127, unchanged under every survival
   assumption. The old "45.3% at 13+" anchor is **unsourced — dropped.** Shape fixed; the LEVEL moves with the spread.
 - Per-age values `data/csv/age_curves.csv`; every fit target, out-of-sample check and sensitivity row
   `data/csv/age_curves_validation.csv`. Method and evidence, in full: **`docs/AGE_CURVES.md`**.
 - **Output and finding:** demographics move baseline TLF **+0.15pp/yr** (0.05–0.18 across survival assumptions) —
   about a quarter of the +3.9pp rise 2019→2025 — vs the **+0.60pp/yr** intercept in the spread regression. Out of
-  sample, the frozen curves reproduce 2020's average claim / repairable / total-loss ages within 0.3 yrs and 2025's
+  sample, the frozen curves reproduce 2020's average claim / repairable / total-loss ages within 0.4 yrs and 2025's
   7+ shares within 1pp. The 7–12-yr cohort peaks in 2026 (~88M, +14% vs 2022) and rolls off to 2028. Demographics
   are a quarter of the secular rise; the rest is the repair-cost cycle, technology and filing behaviour. **Say so** —
   smaller than the popular version, and more credible.

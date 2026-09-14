@@ -27,11 +27,12 @@ S_cars(a, t) = S_EPA,cars( a / k_cars(t) )        S_LT(a, t) = S_EPA,LT( a / k_L
     k(2024)      = 1.194 × k(2013)                 (fitted to S&P: VIO ≈ 289M light vehicles, 66% aged 7+)
     linear between 2013 and 2024; hold flat after 2024 in the base case (k>1 = vehicles last longer than the EPA schedule)
 
-R(a) = e(a) · exp( +0.0155 · min(a,6) − 0.0952 · max(a−6, 0) )        e(0) = 0.5, e(a≥1) = 1
-       (flat-to-slightly-rising through age 6, then −9.5%/yr; the 0.5 is half-year exposure for the current model year)
+R(a) = e(a) · exp( −0.0895 · max(a−6, 0) )        e(0) = 0.5, e(a≥1) = 1
+       (flat through age 6, then −8.6%/yr; the 0.5 is half-year exposure for the current model year. A free 0–6 slope
+        is not identified by the data — fitting one returns +1.6%/yr with no better fit — so it is fixed at zero)
 
-P(a) = 0.032 + (0.527 − 0.032) / ( 1 + exp( −(a − 9.93) / 4.40 ) )
-       (8% at age 0, 10% for ≤3 yrs, 20% at 7, 34% at 12, 44% at 17, 52% asymptote)
+P(a) = 0.044 + (0.490 − 0.044) / ( 1 + exp( −(a − 9.36) / 3.91 ) )
+       (8% at age 0, 10% for ≤3 yrs, 20% at 7, 34% at 12, 43% at 17, 49% asymptote)
 ```
 
 **Resolution.** The roll runs at single years of age, 0 to 31, for every model year 1970–2025; S, miles, R and P are
@@ -46,39 +47,39 @@ model's 2024 cross-section:
 
 | age | S_EPA cars | S_2024 cars | S_2024 LT | miles/yr cars | R(a) | P(a) | fleet 2024 (M) | claims % | TL % |
 |---|---|---|---|---|---|---|---|---|---|
-| 0 | 1.000 | 1.000 | 1.000 | 13,843 | 0.500 | 0.079 | 15.5 | 3.8 | 1.3 |
-| 1 | 0.997 | 0.998 | 0.992 | 13,580 | 1.016 | 0.090 | 15.1 | 7.5 | 3.0 |
-| 2 | 0.994 | 0.995 | 0.984 | 13,296 | 1.032 | 0.102 | 13.3 | 6.7 | 3.1 |
-| 3 | 0.991 | 0.993 | 0.975 | 12,992 | 1.048 | 0.117 | 14.3 | 7.3 | 3.8 |
-| 4 | 0.984 | 0.990 | 0.965 | 12,672 | 1.064 | 0.134 | 13.7 | 7.1 | 4.3 |
-| 5 | 0.974 | 0.984 | 0.950 | 12,337 | 1.081 | 0.154 | 16.0 | 8.4 | 5.8 |
-| 6 | 0.961 | 0.977 | 0.931 | 11,989 | 1.098 | 0.176 | 16.0 | 8.6 | 6.8 |
-| 7 | 0.942 | 0.967 | 0.909 | 11,630 | 0.998 | 0.200 | 15.6 | 7.6 | 6.9 |
-| 8 | 0.920 | 0.955 | 0.882 | 11,262 | 0.907 | 0.226 | 15.7 | 6.9 | 7.0 |
-| 9 | 0.893 | 0.940 | 0.852 | 10,887 | 0.825 | 0.254 | 15.2 | 6.1 | 7.0 |
-| 10 | 0.862 | 0.923 | 0.819 | 10,509 | 0.750 | 0.281 | 14.1 | 5.1 | 6.5 |
-| 11 | 0.826 | 0.902 | 0.784 | 10,129 | 0.682 | 0.309 | 12.9 | 4.3 | 5.9 |
-| 12 | 0.788 | 0.879 | 0.745 | 9,748 | 0.620 | 0.337 | 11.6 | 3.5 | 5.3 |
-| 13 | 0.718 | 0.854 | 0.705 | 9,370 | 0.564 | 0.362 | 9.7 | 2.7 | 4.4 |
-| 14 | 0.613 | 0.825 | 0.663 | 8,997 | 0.512 | 0.386 | 8.5 | 2.1 | 3.7 |
-| 15 | 0.510 | 0.795 | 0.621 | 8,629 | 0.466 | 0.408 | 7.3 | 1.7 | 3.0 |
-| 16 | 0.415 | 0.746 | 0.576 | 8,270 | 0.423 | 0.427 | 8.7 | 1.8 | 3.4 |
-| 17 | 0.332 | 0.678 | 0.529 | 7,922 | 0.385 | 0.444 | 9.5 | 1.8 | 3.6 |
-| 18 | 0.261 | 0.595 | 0.484 | 7,586 | 0.350 | 0.459 | 8.8 | 1.5 | 3.1 |
-| 19 | 0.203 | 0.514 | 0.440 | 7,265 | 0.318 | 0.471 | 7.9 | 1.2 | 2.6 |
-| 20 | 0.157 | 0.439 | 0.399 | 6,962 | 0.289 | 0.481 | 7.0 | 1.0 | 2.1 |
-| 25 | 0.040 | 0.172 | 0.233 | 5,778 | 0.180 | 0.511 | 3.4 | 0.3 | 0.7 |
-| 30 | 0.007 | 0.059 | 0.128 | 5,358 | 0.112 | 0.522 | 1.3 | 0.1 | 0.2 |
+| 0 | 1.000 | 1.000 | 1.000 | 13,843 | 0.500 | 0.081 | 15.5 | 4.0 | 1.5 |
+| 1 | 0.997 | 0.998 | 0.992 | 13,580 | 1.000 | 0.091 | 15.1 | 7.8 | 3.2 |
+| 2 | 0.994 | 0.995 | 0.984 | 13,296 | 1.000 | 0.103 | 13.3 | 6.9 | 3.2 |
+| 3 | 0.991 | 0.993 | 0.975 | 12,992 | 1.000 | 0.117 | 14.3 | 7.4 | 3.9 |
+| 4 | 0.984 | 0.990 | 0.965 | 12,672 | 1.000 | 0.134 | 13.7 | 7.1 | 4.3 |
+| 5 | 0.974 | 0.984 | 0.950 | 12,337 | 1.000 | 0.154 | 16.0 | 8.2 | 5.7 |
+| 6 | 0.961 | 0.977 | 0.931 | 11,989 | 1.000 | 0.176 | 16.0 | 8.2 | 6.5 |
+| 7 | 0.942 | 0.967 | 0.909 | 11,630 | 0.914 | 0.202 | 15.6 | 7.4 | 6.7 |
+| 8 | 0.920 | 0.955 | 0.882 | 11,262 | 0.836 | 0.228 | 15.7 | 6.8 | 6.9 |
+| 9 | 0.893 | 0.940 | 0.852 | 10,887 | 0.765 | 0.257 | 15.2 | 6.0 | 6.9 |
+| 10 | 0.862 | 0.923 | 0.819 | 10,509 | 0.699 | 0.285 | 14.1 | 5.1 | 6.5 |
+| 11 | 0.826 | 0.902 | 0.784 | 10,129 | 0.639 | 0.313 | 12.9 | 4.2 | 6.0 |
+| 12 | 0.788 | 0.879 | 0.745 | 9,748 | 0.585 | 0.339 | 11.6 | 3.5 | 5.3 |
+| 13 | 0.718 | 0.854 | 0.705 | 9,370 | 0.535 | 0.364 | 9.7 | 2.7 | 4.4 |
+| 14 | 0.613 | 0.825 | 0.663 | 8,997 | 0.489 | 0.386 | 8.5 | 2.1 | 3.7 |
+| 15 | 0.510 | 0.795 | 0.621 | 8,629 | 0.447 | 0.405 | 7.3 | 1.7 | 3.1 |
+| 16 | 0.415 | 0.746 | 0.576 | 8,270 | 0.409 | 0.421 | 8.7 | 1.8 | 3.5 |
+| 17 | 0.332 | 0.678 | 0.529 | 7,922 | 0.374 | 0.434 | 9.5 | 1.8 | 3.6 |
+| 18 | 0.261 | 0.595 | 0.484 | 7,586 | 0.342 | 0.446 | 8.8 | 1.6 | 3.1 |
+| 19 | 0.203 | 0.514 | 0.440 | 7,265 | 0.313 | 0.455 | 7.9 | 1.3 | 2.6 |
+| 20 | 0.157 | 0.439 | 0.399 | 6,962 | 0.286 | 0.462 | 7.0 | 1.0 | 2.1 |
+| 25 | 0.040 | 0.172 | 0.233 | 5,778 | 0.183 | 0.482 | 3.4 | 0.3 | 0.7 |
+| 30 | 0.007 | 0.059 | 0.128 | 5,358 | 0.117 | 0.488 | 1.3 | 0.1 | 0.2 |
 
 By bucket (2024 model): 
 
 | bucket | fleet % | claims % | TL % | R(a) | P(a) | miles/yr |
 |---|---|---|---|---|---|---|
-| 0 (current MY) | 5.3 | 3.8 | 1.3 | 0.500 | 0.079 | 15,546 |
-| 1–3 | 14.6 | 21.5 | 9.9 | 1.031 | 0.103 | 14,911 |
-| 4–6 | 15.6 | 24.1 | 16.9 | 1.082 | 0.156 | 13,537 |
-| 7–12 | 29.1 | 33.6 | 38.6 | 0.810 | 0.256 | 11,396 |
-| 13+ | 34.6 | 17.0 | 33.3 | 0.345 | 0.436 | 7,739 |
+| 0 (current MY) | 5.3 | 4.0 | 1.5 | 0.500 | 0.081 | 15,546 |
+| 1-3 | 14.6 | 22.0 | 10.2 | 1.000 | 0.103 | 14,911 |
+| 4-6 | 15.6 | 23.6 | 16.5 | 1.000 | 0.156 | 13,537 |
+| 7-12 | 29.1 | 33.0 | 38.3 | 0.751 | 0.259 | 11,396 |
+| 13+ | 34.6 | 17.5 | 33.5 | 0.335 | 0.426 | 7,739 |
 
 ### Where each column comes from
 
@@ -89,8 +90,8 @@ By bucket (2024 model):
 | `S_2024 cars` | **derived** | `S_EPA,cars(a / 1.270)`, linearly interpolated between the table's integer ages. 1.270 = 1.064 × 1.194: **1.064** is the stretch that best reproduces the IHS 2013 census of cars by single year of age (ORNL **Table 3.11**, source line "IHS Automotive, Detroit, MI"); **1.194** is the further drift that makes the 2024 roll hit S&P's light-vehicle count and 66% aged 7+ (§2.4). Example: age 15 → 15/1.270 = 11.81 → between 0.826 (age 11) and 0.788 (age 12) → 0.795. |
 | `S_2024 LT` | **derived** | same construction for light trucks: `S_EPA,LT(a / 1.099)`, 1.099 = 0.921 × 1.194; 0.921 fitted to the IHS 2013 census of trucks (ORNL **Table 3.12**, which includes heavy trucks — heavy sales are rolled separately with Table 3.16 for that comparison). Example: age 15 → 13.65 → between 0.651 and 0.605 → 0.621. |
 | `miles/yr cars` | **data, verbatim** | EPA annual vehicle-miles-of-travel schedule by age for cars, same EPA report (EPA-420-D-16-900), republished as ORNL **Table 3.14** (`raw/ornl/tedb40/Table3_14_01312022.xlsx`; extract `data/csv/ornl_tedb40_miles_by_age.csv`). Table 3.14 also cites NHTSA, *Vehicle Survivability and Travel Mileage Schedules*, January 2006, as the earlier schedule. Used only for the R decomposition (§3.4), not in any fit. |
-| `R(a)` | **fitted** | `e(a)·exp(+0.0155·min(a,6) − 0.0952·max(a−6,0))`, `e(0)=0.5`. The two slopes are fitted jointly with P's four parameters to the eight CCC 2024 statistics in §5 (Nelder–Mead, 40 restarts, `scripts/age_curves.py`). The 0.5 half-year exposure at age 0 is an assumption with a stated reason (§3.2). Example: age 6 → exp(0.093) = 1.098; age 7 → 1.098 × exp(−0.0952) = 0.998. |
-| `P(a)` | **fitted** | `0.032 + 0.495 / (1 + exp(−(a − 9.93)/4.40))`, four parameters fitted jointly with R to the same eight statistics. Example: age 0 → 0.032 + 0.495/(1 + e^2.257) = 0.079. |
+| `R(a)` | **fitted** | `e(a)·exp(−0.0895·max(a−6,0))`, `e(0)=0.5`: flat through age 6, then one fitted slope. That slope is fitted jointly with P's four parameters to the eight CCC 2024 statistics in §5 (Nelder–Mead, 40 restarts, `scripts/age_curves.py`). The 0.5 half-year exposure at age 0 is an assumption with a stated reason (§3.2). Example: ages 1–6 → 1.000; age 7 → exp(−0.0895) = 0.914; age 12 → exp(−0.537) = 0.585. |
+| `P(a)` | **fitted** | `0.044 + 0.446 / (1 + exp(−(a − 9.36)/3.91))`, four parameters fitted jointly with R to the same eight statistics. Example: age 0 → 0.044 + 0.446/(1 + e^2.394) = 0.081. |
 | `fleet 2024 (M)` | **derived** | `sales(2024 − a) × S_2024` summed over cars and light trucks. Sales: Ward's Communications new retail vehicle sales 1970–2021 via ORNL **Table 3.6** (`data/csv/ornl_tedb40_new_sales.csv`); 2022–2025 FRED `TOTALNSA` and `LTRUCKNSA` (BEA light-vehicle sales, NSA, monthly summed by calendar year, `data/csv/fred_TOTALNSA.csv`, `fred_LTRUCKNSA.csv`), rescaled to Ward's basis (§1). Example: age 3 = MY2021 = Ward's 14.57M × S(3) ≈ 14.3M. |
 | `claims %` | **derived** | `fleet(a)·R(a) / Σ_a fleet(a)·R(a)` — the model's 2024 distribution of insured physical-damage claims by age. |
 | `TL %` | **derived** | `fleet(a)·R(a)·P(a) / Σ_a fleet(a)·R(a)·P(a)` — the model's 2024 distribution of total losses by age. |
@@ -117,7 +118,7 @@ PROHIBITED". Those three extracts are therefore kept local-only (`raw/ornl/tedb4
 table number; the EPA and Ward's tables carry no such line and are committed. Reproducing the figures in a pitch is
 citation of a public DOE publication, not redistribution of the dataset.
 
-Bucket-level: **P(7+) = 31.6%, P(0–6) = 12.7%; R(7+)/R(0–6) = 0.57.** (The closed-form derivation from CCC's
+Bucket-level: **P(7+) = 0.317, P(0–6) = 0.127; R(7+)/R(0–6) = 0.57.** (The closed-form derivation from CCC's
 bucket shares alone — 0.455 of repairables and 0.72 of total losses from 7+, 66% of the fleet 7+, TLF 23.1% — gives
 32.2% / 13.4% and 0.55; the two routes agree.)
 
@@ -184,8 +185,8 @@ One multiplier on both k's, linear from 1.000 (2013) to **1.194 (2024)**, fitted
 VIO ≈ 289M. ⚠ **The 289M is S&P's 2025 average-age release recalled from memory — it is not on disk.** The on-disk
 alternative is Experian's 292.1M light-duty VIO at Q3-2024 (Crash Course 2025/Q1), which the fitted roll lands on
 anyway (292M), so the anchor choice barely moves k: refitting with 292.1M as the target gives k ×1.204 instead of
-×1.194, R and P parameters within 0.002, P(7+) 31.6% / P(0–6) 12.7% unchanged, demographic drift +0.16 instead of
-+0.15pp/yr. Confirm from the S&P release (§7 item 3). Result and checks:
+×1.194, the R slope 0.0908 vs 0.0895, P 0.046–0.486 vs 0.044–0.490, bucket P(7+) 31.7 / P(0–6) 12.7, and
+demographic drift +0.16 instead of +0.15pp/yr. Confirm from the S&P release (§7 item 3). Result and checks:
 
 | check | model | anchor | fitted? |
 |---|---|---|---|
@@ -236,16 +237,18 @@ low-value cars). It is not crash frequency, and it should not be sourced from cr
 
 ### 3.3 The fit
 
-Two slopes with a kink at age 6 — the youngest bucket boundary CCC reports — fitted jointly with P (six parameters
-total) to eight 2024 statistics (§5). Result: **flat to slightly rising through age 6 (+1.6%/yr), then −9.5%/yr.**
+One slope, starting at age 6 — the youngest bucket boundary CCC reports — fitted jointly with P (five parameters
+total) to eight 2024 statistics (§5). Result: **flat through age 6, then −8.6%/yr.** The flat segment is a
+choice, not a finding: when a second slope for ages 0–6 is left free, the fit returns +1.6%/yr with no meaningful gain
+(loss 0.5 vs 0.8 on eight targets), so the data cannot tell a slight rise from flat there and the simpler form is kept.
 Both halves are plausible: through age 6 nearly every vehicle is financed or leased and carries collision and
-comprehensive, mileage is near its peak, and the 4–6 bracket is the largest single claims bucket (24% of claims on
+comprehensive, and mileage is near its peak (the 4–6 bracket is the largest single claims bucket, 24% of claims on
 16% of the fleet); after 6, coverage is dropped, mileage declines, and small claims go unfiled.
 
 ### 3.4 Decomposition — how much of the decline is exposure
 
-R(7+)/R(0–6) = **0.572** = miles ratio **0.653** × residual **0.875**. So about two-thirds of the age gradient is
-simply that old cars are driven less; the remaining 12.5% is coverage and filing behaviour. That residual is where the
+R(7+)/R(0–6) = **0.568** = miles ratio **0.653** × residual **0.869**. So about two-thirds of the age gradient is
+simply that old cars are driven less; the remaining 13% is coverage and filing behaviour. That residual is where the
 2024–25 deductible shift lives (CCC: $1,000+ deductibles +3.5pp in one year, +6pp in two) — it is a *level* effect on
 claims that the industry-claims term of the identity already carries; do not put it in R.
 
@@ -280,8 +283,8 @@ repairs on old cars became total losses and left the repairable sample), not evi
 
 ### 4.3 The fit and its robustness
 
-Logistic in age (four parameters), fitted jointly with R. P(0–6) = 12.7%, P(7+) = 31.6%; the same two numbers come out
-at 12.7% / 31.4–31.7% under every survival assumption in §6, and the closed-form bucket derivation from CCC's shares
+Logistic in age (four parameters), fitted jointly with R. P(0–6) = 0.127, P(7+) = 0.317; the same two numbers come out
+at 0.126–0.127 / 0.314–0.318 under every survival assumption in §6, and the closed-form bucket derivation from CCC's shares
 alone gives 13.4% / 32.2%. **The bucket values are solid; the interior shape between 7 and 15 is interpolation** — the
 only anchors there are the 7+ aggregate and the 10.6-year average TL age.
 
@@ -297,32 +300,32 @@ only anchors there are the 7+ aggregate and the 10.6-year average TL age.
 
 ## 5. Validation — fit and out of sample
 
-Fitted on 2024 (eight statistics, six parameters; loss 0.5, i.e. every target within its stated tolerance):
+Fitted on 2024 (eight statistics, five parameters; loss 0.8, i.e. every target within its stated tolerance):
 
 | statistic (2024) | CCC | model | source |
 |---|---|---|---|
 | TLF, all loss categories | 22.3% | 22.3% | `ccc_tlf_annual.csv` |
-| total losses from 7+ | 72% | 71.9% | 2024/Q4 "almost 72%" |
-| repairables from 7+ | 45% | 44.6% | 2024/Q4 "nearly 45%" |
-| repairables from ≤3 (all-fuel) | ~30% | 29.2% | 2024/Q4 "26.3% of repairable ICE" + EV/hybrid |
+| total losses from 7+ | 72% | 71.8% | 2024/Q4 "almost 72%" |
+| repairables from 7+ | 45% | 44.3% | 2024/Q4 "nearly 45%" |
+| repairables from ≤3 (all-fuel) | ~30% | 30.1% | 2024/Q4 "26.3% of repairable ICE" + EV/hybrid |
 | avg age, claim vehicles | 7.6 | 7.7 | 2025/Q1 |
 | avg age, repairables | 6.8 | 6.8 | 2025/Q1 |
 | avg age, total losses | 10.6 | 10.6 | 2025/Q1 |
-| P(≤3 yrs) | 10% | 9.9% | 2026 "1 in 10" |
+| P(≤3 yrs) | 10% | 10.0% | 2026 "1 in 10" |
 
 Out of sample — **R and P frozen at the 2024 fit; only the fleet changes**:
 
 | statistic | actual | model | error |
 |---|---|---|---|
-| 2020 avg age, claims / repairables / total losses | 6.9 / 6.1 / 10.0 | 7.2 / 6.4 / 10.3 | +0.3 / +0.3 / +0.3 yrs |
-| 2025 total losses from 7+ | >72% | 72.6% | +0.6pp |
-| 2025 repairables from 7+ | ~46% | 45.2% | −0.8pp |
-| 2019 repairables from 7+ | 35% | 38.3% | +3.3pp |
-| 2019 repairables from ≤3 | 38.5% | 34.5% | −4.0pp |
-| 2019 / 2020 / 2025 TLF, demographics only | 19.2 / 20.6 / 23.1% | 21.4 / 21.5 / 22.3% | +2.2 / +0.9 / −0.8pp (= the non-demographic level) |
+| 2020 avg age, claims / repairables / total losses | 6.9 / 6.1 / 10.0 | 7.3 / 6.4 / 10.3 | +0.4 / +0.3 / +0.3 yrs |
+| 2025 total losses from 7+ | >72% | 72.5% | +0.5pp |
+| 2025 repairables from 7+ | ~46% | 45.0% | −1.0pp |
+| 2019 repairables from 7+ | 35% | 38.1% | +3.1pp |
+| 2019 repairables from ≤3 | 38.5% | 35.4% | −3.1pp |
+| 2019 / 2020 / 2025 TLF, demographics only | 19.2 / 20.6 / 23.1% | 21.4 / 21.4 / 22.3% | +2.2 / +0.8 / −0.8pp (= the non-demographic level) |
 
 The 2020 and 2025 checks pass. The 2019 misses are informative: claims were *younger* in 2019 than the frozen curves
-predict, by 3–4pp of mix. Two known reasons, both real: the EV/hybrid share of young-vehicle claims roughly quadrupled
+predict, by about 3pp of mix. Two known reasons, both real: the EV/hybrid share of young-vehicle claims roughly quadrupled
 2019→2024 (CCC: EVs 1.4% → ~7% of ≤3-year claims), and 2019's young fleet had far less standard AEB, so per-vehicle
 collision frequency of new cars has fallen relative to old ones. Either way, R is drifting slowly *against* young
 vehicles over time; for a 12-month horizon, ignore it; for a five-year roll, let R(≤6) decay ~1%/yr.
@@ -335,12 +338,12 @@ R and P refitted under four survival assumptions (k multiplier by 2024):
 
 | k mult | VIO 2024 | share 7+ | R(7+)/R(0–6) | P(7+) | P(0–6) | demographic TLF drift, pp/yr 2019→25 |
 |---|---|---|---|---|---|---|
-| 1.000 (raw EPA shape) | 246M | 58.2% | 0.749 | 31.4% | 12.7% | +0.05 |
-| 1.100 | 270M | 61.6% | 0.643 | 31.5% | 12.7% | +0.12 |
-| **1.194 (fitted)** | **292M** | **63.7%** | **0.572** | **31.6%** | **12.7%** | **+0.15** |
-| 1.300 | 318M | 65.5% | 0.510 | 31.7% | 12.7% | +0.18 |
+| 1.000 (raw EPA shape) | 246M | 58.2% | 0.752 | 0.314 | 0.127 | +0.04 |
+| 1.100 | 270M | 61.6% | 0.641 | 0.316 | 0.127 | +0.12 |
+| **1.194 (fitted)** | **292M** | **63.7%** | **0.568** | **0.317** | **0.127** | **+0.15** |
+| 1.300 | 318M | 65.5% | 0.504 | 0.318 | 0.126 | +0.18 |
 
-Read across: the survival assumption moves R's slope a lot (0.51–0.75) and P not at all, because claims-by-age is
+Read across: the survival assumption moves R's slope a lot (0.50–0.75) and P not at all, because claims-by-age is
 what CCC pins down and S·R is the product that produces it. **The finding — fleet ageing adds +0.15pp/yr to TLF
 (range 0.05–0.18), about a quarter of the +3.9pp rise from 2019 to 2025 — is the same under every S.** The other
 three-quarters are the level: the repair-cost/used-value cycle (the spread regression), technology, and filing

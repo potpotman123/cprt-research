@@ -7,7 +7,7 @@ and what evidence backs them?"
   S(age)  survival        : EPA schedule (ORNL TEDB Ed.40 Table 3.15) with ONE stretch parameter k per body type,
                             S_k(a) = S_EPA(a / k).  k is fitted to the IHS/Polk fleet-age census (Tables 3.11/3.12,
                             2000 and 2013) and to S&P's 2024/25 anchors (avg age, 66% 7+, VIO).  Rising k = cars last longer.
-  R(age)  rel. claim freq : R(a) = (1-f)*exp(-lam*a) + f, normalised R(0)=1.  Fitted jointly with P to CCC's published
+  R(age)  rel. claim freq : R(a) = e(a)*exp(-lam*max(a-6,0)): flat through age 6, then declines.  Fitted jointly with P to CCC's published
                             claim-mix statistics (share of repairables 7+, avg age of claim vehicles, ...).  Miles-by-age
                             (Table 3.14) shows how much of the decline is exposure vs coverage/reporting.
   P(age)  TL propensity   : logistic pmin + (pmax-pmin)/(1+exp(-(a-c)/s)).  Fitted jointly with R to CCC: TLF level,
@@ -237,13 +237,14 @@ def miles(a):
     a = min(a, 30); c, l = MILES[a]; w = fl24[min(a, max(fl24))]
     return (c * w[0] + l * w[1]) / (w[0] + w[1]) if (w[0] + w[1]) > 0 else (c + l) / 2
 EXPO0 = 0.5     # a model-year-t vehicle is on the road ~half of calendar year t (sales spread through the year)
-def Rf(a, l1, l2):
-    """relative insured-claim frequency per vehicle on the road; log-linear with a kink at age 6; age-0 exposure = half a year."""
-    return (EXPO0 if a == 0 else 1.0) * math.exp(-l1 * min(a, 6) - l2 * max(a - 6, 0))
+def Rf(a, lam):
+    """relative insured-claim frequency per vehicle on the road: FLAT through age 6, then log-linear decline; age-0 exposure = half a year.
+    (A free 0-6 slope is not identified by the CCC targets: fitting one gives +1.6%/yr with the same loss, so it is fixed at zero.)"""
+    return (EXPO0 if a == 0 else 1.0) * math.exp(-lam * max(a - 6, 0))
 def Pf(a, pmin, pmax, c, s): return pmin + (pmax - pmin) / (1 + math.exp(-(a - c) / s))
 def mix(F, th):
-    l1, l2, pmin, pmax, c, s = th
-    cl = {a: F.get(a, 0) * Rf(a, l1, l2) for a in AGES}
+    lam, pmin, pmax, c, s = th
+    cl = {a: F.get(a, 0) * Rf(a, lam) for a in AGES}
     tl = {a: cl[a] * Pf(a, pmin, pmax, c, s) for a in AGES}
     rp = {a: cl[a] - tl[a] for a in AGES}
     C, T, Rp = sum(cl.values()), sum(tl.values()), sum(rp.values())
@@ -264,8 +265,8 @@ TGT = {   # CCC 2024 statistics -> (value, scale, source).  scale = error that c
 }
 def make_loss(F):
     def loss(th):
-        l1, l2, pmin, pmax, c, s = th
-        if not (-0.1 <= l1 <= 0.5 and 0 <= l2 <= 0.5 and 0.01 <= pmin <= 0.3 and pmin < pmax <= 0.95 and 0 <= c <= 30 and 0.3 <= s <= 12): return 1e9
+        lam, pmin, pmax, c, s = th
+        if not (0 <= lam <= 0.5 and 0.01 <= pmin <= 0.3 and pmin < pmax <= 0.95 and 0 <= c <= 30 and 0.3 <= s <= 12): return 1e9
         m = mix(F, th); return sum(((m[k] - v) / sc) ** 2 for k, (v, sc, _) in TGT.items())
     return loss
 
@@ -292,14 +293,14 @@ def nelder_mead(fn, x0, step, iters=4000):
 def fit(F, seed=7, restarts=40):
     random.seed(seed); best = (None, 1e18); L = make_loss(F)
     for _ in range(restarts):
-        x0 = [random.uniform(0, 0.15), random.uniform(0.02, 0.2), random.uniform(0.03, 0.15), random.uniform(0.3, 0.8), random.uniform(4, 16), random.uniform(1, 6)]
-        th, v = nelder_mead(L, x0, [0.02, 0.02, 0.02, 0.05, 2, 1])
+        x0 = [random.uniform(0.02, 0.2), random.uniform(0.03, 0.15), random.uniform(0.3, 0.8), random.uniform(4, 16), random.uniform(1, 6)]
+        th, v = nelder_mead(L, x0, [0.02, 0.02, 0.05, 2, 1])
         if v < best[1]: best = (th, v)
     return best
-TH, L = fit(F24); l1, l2, pmin, pmax, c, s = TH
+TH, L = fit(F24); lam, pmin, pmax, c, s = TH
 m24x = mix(F24, TH)
-print(f"  fitted  R(a) = exposure(a) x exp(-{l1:.4f} x min(a,6) - {l2:.4f} x max(a-6,0)),  exposure(0)={EXPO0}, else 1")
-print(f"          P(a) = {pmin:.3f} + ({pmax:.3f} - {pmin:.3f}) / (1 + exp(-(a - {c:.2f}) / {s:.2f}))          loss {L:.1f} on 8 targets, 6 params")
+print(f"  fitted  R(a) = exposure(a) x exp(-{lam:.4f} x max(a-6,0))   [flat through age 6],  exposure(0)={EXPO0}, else 1")
+print(f"          P(a) = {pmin:.3f} + ({pmax:.3f} - {pmin:.3f}) / (1 + exp(-(a - {c:.2f}) / {s:.2f}))          loss {L:.1f} on 8 targets, 5 params")
 print(f"  {'statistic':10s} {'CCC 2024':>9s} {'model':>7s}   source")
 for k, (v, sc, q) in TGT.items():
     fmt = (lambda x: f"{x:9.1f}") if k.startswith('age') else (lambda x: f"{x:9.1%}")
@@ -307,15 +308,15 @@ for k, (v, sc, q) in TGT.items():
 
 w06 = sum(F24[a] for a in range(7)); w7 = sum(F24[a] for a in range(7, 32))
 mi06 = sum(F24[a] * miles(a) for a in range(7)) / w06; mi7 = sum(F24[a] * miles(a) for a in range(7, 32)) / w7
-r06 = sum(F24[a] * Rf(a, l1, l2) for a in range(7)) / w06; r7 = sum(F24[a] * Rf(a, l1, l2) for a in range(7, 32)) / w7
+r06 = sum(F24[a] * Rf(a, lam) for a in range(7)) / w06; r7 = sum(F24[a] * Rf(a, lam) for a in range(7, 32)) / w7
 print(f"\n  R decomposition, 7+ vs 0-6 (2024 fleet weights): fitted R ratio {r7/r06:.3f}; miles-per-vehicle ratio {mi7/mi06:.3f} (EPA T3.14) "
       f"-> residual {r7/r06/(mi7/mi06):.3f} = coverage/filing (liability-only, higher deductibles, unfiled small claims on older cars)")
-C = sum(F24[a] * Rf(a, l1, l2) for a in AGES); T = sum(F24[a] * Rf(a, l1, l2) * Pf(a, pmin, pmax, c, s) for a in AGES)
+C = sum(F24[a] * Rf(a, lam) for a in AGES); T = sum(F24[a] * Rf(a, lam) * Pf(a, pmin, pmax, c, s) for a in AGES)
 print("  bucket        fleet%  claims%   TL%   R(a)   P(a)  miles/yr")
 BUCK = []
 for lo, hi, lab in ((0, 0, '0 (new)'), (1, 3, '1-3'), (4, 6, '4-6'), (7, 12, '7-12'), (13, 99, '13+')):
-    fw = sum(F24[a] for a in AGES if lo <= a <= hi); cw = sum(F24[a] * Rf(a, l1, l2) for a in AGES if lo <= a <= hi)
-    tw = sum(F24[a] * Rf(a, l1, l2) * Pf(a, pmin, pmax, c, s) for a in AGES if lo <= a <= hi)
+    fw = sum(F24[a] for a in AGES if lo <= a <= hi); cw = sum(F24[a] * Rf(a, lam) for a in AGES if lo <= a <= hi)
+    tw = sum(F24[a] * Rf(a, lam) * Pf(a, pmin, pmax, c, s) for a in AGES if lo <= a <= hi)
     mi = sum(F24[a] * miles(a) for a in AGES if lo <= a <= hi) / fw
     BUCK.append((lab, fw / sum(F24.values()), cw / C, tw / T, cw / fw, tw / cw, mi))
     print(f"  {lab:12s} {fw/sum(F24.values()):6.1%} {cw/C:7.1%} {tw/T:6.1%}  {cw/fw:5.3f}  {tw/cw:5.3f}  {mi:7,.0f}")
@@ -349,8 +350,8 @@ for mm in (1.0, 1.10, m24, 1.30):
     F = FLm(2024); th, v = fit(F, restarts=20); mx = mix(F, th)
     tot = sum(F.values()); s7 = sum(F[a] for a in AGES if a >= 7) / tot
     w06 = sum(F[a] for a in range(7)); w7 = sum(F[a] for a in range(7, 32))
-    rr = (sum(F[a] * Rf(a, th[0], th[1]) for a in range(7, 32)) / w7) / (sum(F[a] * Rf(a, th[0], th[1]) for a in range(7)) / w06)
-    cl = {a: F[a] * Rf(a, th[0], th[1]) for a in AGES}; tl = {a: cl[a] * Pf(a, *th[2:]) for a in AGES}
+    rr = (sum(F[a] * Rf(a, th[0]) for a in range(7, 32)) / w7) / (sum(F[a] * Rf(a, th[0]) for a in range(7)) / w06)
+    cl = {a: F[a] * Rf(a, th[0]) for a in AGES}; tl = {a: cl[a] * Pf(a, *th[1:]) for a in AGES}
     p7 = sum(tl[a] for a in range(7, 32)) / sum(cl[a] for a in range(7, 32)); p06 = sum(tl[a] for a in range(7)) / sum(cl[a] for a in range(7))
     d = (mix(FLm(2025), th)['tlf'] - mix(FLm(2019), th)['tlf']) * 100 / 6
     SENS.append((mm, tot / 1e3, s7, rr, p7, p06, d, v))
@@ -360,13 +361,13 @@ for mm in (1.0, 1.10, m24, 1.30):
 rows = []
 for a in AGES:
     rows.append([a, S_EPA[a][0], S_EPA[a][1], round(S_of(0, a, kc24), 4), round(S_of(1, a, kl24), 4),
-                 MILES[min(a, 30)][0], MILES[min(a, 30)][1], round(Rf(a, l1, l2), 4), round(Pf(a, pmin, pmax, c, s), 4),
-                 round(F24.get(a, 0) / 1e3, 3), round(F24.get(a, 0) * Rf(a, l1, l2) / sum(F24[b] * Rf(b, l1, l2) for b in AGES), 4),
-                 round(F24.get(a, 0) * Rf(a, l1, l2) * Pf(a, pmin, pmax, c, s) / sum(F24[b] * Rf(b, l1, l2) * Pf(b, pmin, pmax, c, s) for b in AGES), 4)])
+                 MILES[min(a, 30)][0], MILES[min(a, 30)][1], round(Rf(a, lam), 4), round(Pf(a, pmin, pmax, c, s), 4),
+                 round(F24.get(a, 0) / 1e3, 3), round(F24.get(a, 0) * Rf(a, lam) / sum(F24[b] * Rf(b, lam) for b in AGES), 4),
+                 round(F24.get(a, 0) * Rf(a, lam) * Pf(a, pmin, pmax, c, s) / sum(F24[b] * Rf(b, lam) * Pf(b, pmin, pmax, c, s) for b in AGES), 4)])
 write_csv('age_curves.csv',
           ["Mechanism A age curves (scripts/age_curves.py, 2026-09-14). S_epa_* = ORNL TEDB40 T3.15 raw; S_2024_* = stretched S(a/k) with "
            f"k_cars={kc24:.3f}, k_LT={kl24:.3f} (fitted: IHS 2013 census shape, then S&P 2024 counts: VIO 289M, 66% aged 7+); miles = T3.14;",
-           f"R(a) = exposure(a) * exp(-{l1:.5f}*min(a,6) - {l2:.5f}*max(a-6,0)), exposure(0)={EXPO0}; P(a) = {pmin:.4f} + ({pmax:.4f}-{pmin:.4f})/(1+exp(-(a-{c:.3f})/{s:.3f})); both fitted jointly to 8 CCC 2024 statistics (see age_curves_validation.csv)",
+           f"R(a) = exposure(a) * exp(-{lam:.5f}*max(a-6,0)) [flat through age 6], exposure(0)={EXPO0}; P(a) = {pmin:.4f} + ({pmax:.4f}-{pmin:.4f})/(1+exp(-(a-{c:.3f})/{s:.3f})); both fitted jointly to 8 CCC 2024 statistics (see age_curves_validation.csv)",
            "fleet_2024_M = modelled light vehicles by age (end-2024). claims_share / tl_share = modelled 2024 distribution of claims and total losses by age."],
           ['age', 'S_epa_cars', 'S_epa_lt', 'S_2024_cars', 'S_2024_lt', 'miles_cars', 'miles_lt', 'R', 'P', 'fleet_2024_M', 'claims_share_2024', 'tl_share_2024'], rows)
 val = [['fit', 2024, k, v, round(m24x[k], 4), q] for k, (v, sc, q) in TGT.items()]
