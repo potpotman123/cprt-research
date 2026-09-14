@@ -9,6 +9,7 @@ is gitignored and never committed.**
 | Read | For |
 |---|---|
 | **`MODEL_BLUEPRINT.md`** | **The model architecture** — mechanisms A–E, the units identity, the RPU chain, tab map, build order, checks. Open this every time you touch the model. |
+| **`model/CPRT_Intermediate.xlsx`** | **The workbook to copy from** — every dataset as a Data_* tab plus the live formulas (fleet roll, age curves, Solver calibration, TLF drift, spread and RPU regressions, checks). Rebuild with `scripts/build_intermediate_xlsx.py`. |
 | `docs/AGE_CURVES.md` | How the fleet-survival, claim-frequency and total-loss-propensity curves are calculated and what evidence backs each; the manual-pull list. |
 | **`HANDOFF.md`** | The current state of the project: what is verified, what was retracted, the thesis, the data sources, the failure modes to avoid. Read §0a and §2 first. |
 | `findings.md` | The lab notebook — every result in chronological addenda, **including every retraction**. |

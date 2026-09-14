@@ -72,7 +72,7 @@ everything with `scripts/analysis_20260911.py`.
    counts (independent check: fleet growth 2020→25 +5.4% vs Experian +5.1%). R(age) and P(age) fitted jointly to
    eight CCC 2024 claim-mix statistics and tested out of sample on 2019/2020/2025. ⚠ **Never calibrate survival to
    S&P average age** (the blueprint tab did; that is its flat-survival artefact). ⚠ "45.3% TL at 13+" is unsourced.
-   Demographic TLF drift is **+0.15pp/yr** (0.05–0.18), a quarter of the 2019→25 rise. `findings.md` Addendum 16.
+   Demographic TLF drift is **+0.16pp/yr** (0.04–0.18), a quarter of the 2019→25 rise. `findings.md` Addendum 16.
 
 ## 0. How to read this document
 

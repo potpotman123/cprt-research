@@ -1,23 +1,23 @@
 # Targets and model values for the age curves (scripts/age_curves.py, 2026-09-14). 'fit' rows were used to fit R,P; 'out_of_sample' rows were not.
 kind,year,statistic,actual,model,source
-fit,2024,tlf,0.223,0.2226,CCC annual all-loss TLF 2024 = 22.3% (data/csv/ccc_tlf_annual.csv)
-fit,2024,tl7,0.72,0.7181,Crash Course 2024/Q4: 'almost 72% of valuations across all loss categories are for vehicles 7 years or older'
-fit,2024,rp7,0.45,0.4435,2024/Q4: 'vehicles seven years or older now make up nearly 45% of all repairable claims'
-fit,2024,rp3,0.3,0.3008,2024/Q4: 'only 26.3% of repairable ICE vehicles are three years or newer'; all-fuel ~30% after adding EV/hybrid (79%/60% of which are <=3 yrs)
-fit,2024,age_cl,7.6,7.6738,"2025/Q1: 'for claims, the average age of vehicles has increased to 7.6 years' (2024)"
-fit,2024,age_rp,6.8,6.8333,2025/Q1: 'the average age of repairable vehicles was 6.8 years in 2024'
-fit,2024,age_tl,10.6,10.6095,2025/Q1: '... and 10.6 years for total loss vehicles' (2024)
+fit,2024,tlf,0.223,0.2225,CCC annual all-loss TLF 2024 = 22.3% (data/csv/ccc_tlf_annual.csv)
+fit,2024,tl7,0.72,0.7179,Crash Course 2024/Q4: 'almost 72% of valuations across all loss categories are for vehicles 7 years or older'
+fit,2024,rp7,0.45,0.4426,2024/Q4: 'vehicles seven years or older now make up nearly 45% of all repairable claims'
+fit,2024,rp3,0.3,0.3012,2024/Q4: 'only 26.3% of repairable ICE vehicles are three years or newer'; all-fuel ~30% after adding EV/hybrid (79%/60% of which are <=3 yrs)
+fit,2024,age_cl,7.6,7.6792,"2025/Q1: 'for claims, the average age of vehicles has increased to 7.6 years' (2024)"
+fit,2024,age_rp,6.8,6.8399,2025/Q1: 'the average age of repairable vehicles was 6.8 years in 2024'
+fit,2024,age_tl,10.6,10.6114,2025/Q1: '... and 10.6 years for total loss vehicles' (2024)
 fit,2024,p03,0.1,0.1001,"2026 annual: 'for claims that are three years old or newer, 1 in 10 are flagged as a total loss'"
-out_of_sample,2019,2019 repairables 7+ share,0.35,0.3812,2024/Q4: 'up from 35% in 2019'
-out_of_sample,2019,2019 repairables <=3 share,0.385,0.3537,2025/Q1: 'vehicles 3 years or newer represented 38.5% of the repairable mix in 2019'
-out_of_sample,2020,"2020 avg age, claims",6.9,7.2551,2025/Q1: 'up from 6.9 years in 2020'
-out_of_sample,2020,"2020 avg age, repairables",6.1,6.4311,2025/Q1: 'up from 6.1 years old in 2020'
-out_of_sample,2020,"2020 avg age, total loss",10.0,10.2733,2025/Q1: 'up from 10.0 years old in 2020'
-out_of_sample,2019,2019 TLF (demographics only),0.192,0.2136,CCC annual 2019 = 19.2%; gap = non-demographic (cycle / technology / filing)
-out_of_sample,2020,2020 TLF (demographics only),0.206,0.2145,CCC annual 2020 = 20.6%
+out_of_sample,2019,2019 repairables 7+ share,0.35,0.3801,2024/Q4: 'up from 35% in 2019'
+out_of_sample,2019,2019 repairables <=3 share,0.385,0.3543,2025/Q1: 'vehicles 3 years or newer represented 38.5% of the repairable mix in 2019'
+out_of_sample,2020,"2020 avg age, claims",6.9,7.2468,2025/Q1: 'up from 6.9 years in 2020'
+out_of_sample,2020,"2020 avg age, repairables",6.1,6.4268,2025/Q1: 'up from 6.1 years old in 2020'
+out_of_sample,2020,"2020 avg age, total loss",10.0,10.2543,2025/Q1: 'up from 10.0 years old in 2020'
+out_of_sample,2019,2019 TLF (demographics only),0.192,0.2134,CCC annual 2019 = 19.2%; gap = non-demographic (cycle / technology / filing)
+out_of_sample,2020,2020 TLF (demographics only),0.206,0.2143,CCC annual 2020 = 20.6%
 out_of_sample,2025,2025 TLF (demographics only),0.231,0.2229,CCC annual 2025 = 23.1%
-out_of_sample,2025,2025 TL 7+ share,0.72,0.725,2025/Q4: 'over 72% of total loss valuations are on vehicles 7 years or older'
-out_of_sample,2025,2025 repairables 7+ share,0.46,0.4495,2025/Q4: 'almost 46% of repairable vehicles are 7 years or older'
+out_of_sample,2025,2025 TL 7+ share,0.72,0.7249,2025/Q4: 'over 72% of total loss valuations are on vehicles 7 years or older'
+out_of_sample,2025,2025 repairables 7+ share,0.46,0.4486,2025/Q4: 'almost 46% of repairable vehicles are 7 years or older'
 S_check,2024,avg age all light (t-MY+0.5),12.8,11.14,S&P via CCC 2026 — NOT fitted; convention gap documented in docs/AGE_CURVES.md
 S_check,2024,avg age cars,14.5,12.92,S&P via CCC 2025/Q2 (not fitted)
 S_check,2024,avg age light trucks,11.9,9.94,S&P via CCC 2025/Q2 (not fitted)
@@ -28,12 +28,12 @@ S_check,2013,k cars (census fit),,1.064,IHS 2013 cars by age
 S_check,2013,k trucks (census fit),,0.921,IHS 2013 trucks by age (incl. heavy)
 S_check,2000,k cars (census fit),,0.922,IHS 2000 cars by age
 S_check,2000,k trucks (census fit),,0.879,IHS 2000 trucks by age (incl. heavy)
-sensitivity,2024,"k mult 1.000: VIO 246M, 7+ 58.2%",,R7+/0-6 0.752; P7+ 0.314; P0-6 0.127; drift +0.04pp/yr,"R,P refitted under this survival drift"
-sensitivity,2024,"k mult 1.100: VIO 270M, 7+ 61.6%",,R7+/0-6 0.641; P7+ 0.316; P0-6 0.127; drift +0.12pp/yr,"R,P refitted under this survival drift"
-sensitivity,2024,"k mult 1.194: VIO 292M, 7+ 63.7%",,R7+/0-6 0.568; P7+ 0.317; P0-6 0.127; drift +0.15pp/yr,"R,P refitted under this survival drift"
-sensitivity,2024,"k mult 1.300: VIO 318M, 7+ 65.5%",,R7+/0-6 0.504; P7+ 0.318; P0-6 0.126; drift +0.18pp/yr,"R,P refitted under this survival drift"
-bucket,2024,0 (new),,fleet 0.053; claims 0.040; TL 0.015; R 0.500; P 0.081; miles 15546,model 2024
+sensitivity,2024,"k mult 1.000: VIO 246M, 7+ 58.2%",,R7+/0-6 0.751; P7+ 0.314; P0-6 0.127; drift +0.04pp/yr,"R,P refitted under this survival drift"
+sensitivity,2024,"k mult 1.100: VIO 270M, 7+ 61.7%",,R7+/0-6 0.640; P7+ 0.316; P0-6 0.127; drift +0.12pp/yr,"R,P refitted under this survival drift"
+sensitivity,2024,"k mult 1.194: VIO 292M, 7+ 64.5%",,R7+/0-6 0.565; P7+ 0.317; P0-6 0.127; drift +0.16pp/yr,"R,P refitted under this survival drift"
+sensitivity,2024,"k mult 1.300: VIO 318M, 7+ 67.2%",,R7+/0-6 0.500; P7+ 0.318; P0-6 0.126; drift +0.18pp/yr,"R,P refitted under this survival drift"
+bucket,2024,0 (new),,fleet 0.053; claims 0.040; TL 0.015; R 0.500; P 0.082; miles 15546,model 2024
 bucket,2024,1-3,,fleet 0.146; claims 0.220; TL 0.102; R 1.000; P 0.103; miles 14911,model 2024
 bucket,2024,4-6,,fleet 0.156; claims 0.236; TL 0.165; R 1.000; P 0.156; miles 13537,model 2024
-bucket,2024,7-12,,fleet 0.291; claims 0.330; TL 0.383; R 0.751; P 0.259; miles 11396,model 2024
-bucket,2024,13+,,fleet 0.346; claims 0.175; TL 0.335; R 0.335; P 0.426; miles 7739,model 2024
+bucket,2024,7-12,,fleet 0.291; claims 0.329; TL 0.385; R 0.749; P 0.260; miles 11396,model 2024
+bucket,2024,13+,,fleet 0.354; claims 0.175; TL 0.333; R 0.327; P 0.424; miles 7701,model 2024

@@ -230,7 +230,7 @@ print(f"    implied median lifetime 2024 curves: cars {med_c:.1f} yrs, light tru
 
 # ----------------------------------------------------------------------------------------------------- 2. R(age), P(age)
 print("\n2. R(age) and P(age): joint fit to CCC's 2024 claim-mix statistics, then out-of-sample on 2019/2020/2025")
-AGES = range(0, 32)
+AGES = range(0, 46)   # sum to 45: with k~1.27 the stretched EPA schedule is non-zero to ~age 39 (the workbook does the same)
 def fleet_by_age(fl): return {a: v[0] + v[1] for a, v in fl.items()}
 F24, F20, F19, F25 = map(fleet_by_age, (fl24, fl20, fl19, fl25))
 def miles(a):
@@ -360,7 +360,8 @@ for mm in (1.0, 1.10, m24, 1.30):
 # ----------------------------------------------------------------------------------------------------- 3. WRITE
 rows = []
 for a in AGES:
-    rows.append([a, S_EPA[a][0], S_EPA[a][1], round(S_of(0, a, kc24), 4), round(S_of(1, a, kl24), 4),
+    sE = S_EPA.get(a, (0.0, 0.0))                     # EPA table ends at 31; the stretched curve is still >0 to ~39
+    rows.append([a, sE[0], sE[1], round(S_of(0, a, kc24), 4), round(S_of(1, a, kl24), 4),
                  MILES[min(a, 30)][0], MILES[min(a, 30)][1], round(Rf(a, lam), 4), round(Pf(a, pmin, pmax, c, s), 4),
                  round(F24.get(a, 0) / 1e3, 3), round(F24.get(a, 0) * Rf(a, lam) / sum(F24[b] * Rf(b, lam) for b in AGES), 4),
                  round(F24.get(a, 0) * Rf(a, lam) * Pf(a, pmin, pmax, c, s) / sum(F24[b] * Rf(b, lam) * Pf(b, pmin, pmax, c, s) for b in AGES), 4)])

@@ -86,18 +86,18 @@ share(MY,t)     =  sales(MY) × S(age) × R(age)  ÷  Σ_MY′ [ same ]
   single year of age (cars 1.064, trucks 0.921; bucket MAE 0.4pp), drifted ×1.194 by 2024 to hit S&P's counts (VIO
   ~289M, 66% aged 7+); independent check: fleet growth 2020→25 +5.4% vs Experian +5.1%. **Never calibrate to S&P
   average age** — the census itself implies ~2 yrs less (a 27-yr-old registered tail); see `docs/AGE_CURVES.md` §2.3.
-- `R(age)` relative insured-claim frequency — `e(a)·exp(−0.0895·max(a−6,0))`: flat through age 6, then −8.6%/yr;
+- `R(age)` relative insured-claim frequency — `e(a)·exp(−0.0903·max(a−6,0))`: flat through age 6, then −8.6%/yr;
   e(0)=0.5 (half-year exposure for the current model year). Fitted jointly with P to eight CCC 2024 claim-mix
   statistics; a free 0–6 slope is not identified (fits +1.6%/yr with no gain), so it is fixed flat.
   R(7+)/R(0–6) = 0.57 = miles-by-age 0.65 (EPA T3.14) × coverage/filing 0.87.
-- `P(age)` total-loss propensity — logistic `0.044 + 0.446/(1+exp(−(a−9.36)/3.91))`: 8% new, 10% for ≤3 yrs (CCC
+- `P(age)` total-loss propensity — logistic `0.048 + 0.432/(1+exp(−(a−9.22)/3.73))`: 8% new, 10% for ≤3 yrs (CCC
   "1 in 10"), 20% at 7, 34% at 12, 43% at 17. Buckets P(7+) 31.7% / P(0–6) 12.7%, unchanged under every survival
   assumption. The old "45.3% at 13+" anchor is **unsourced — dropped.** Shape fixed; the LEVEL moves with the spread.
 - Per-age values `data/csv/age_curves.csv`; every fit target, out-of-sample check and sensitivity row
   `data/csv/age_curves_validation.csv`. Method and evidence, in full: **`docs/AGE_CURVES.md`**.
-- **Output and finding:** demographics move baseline TLF **+0.15pp/yr** (0.05–0.18 across survival assumptions) —
+- **Output and finding:** demographics move baseline TLF **+0.16pp/yr** (0.04–0.18 across survival assumptions) —
   about a quarter of the +3.9pp rise 2019→2025 — vs the **+0.60pp/yr** intercept in the spread regression. Out of
-  sample, the frozen curves reproduce 2020's average claim / repairable / total-loss ages within 0.4 yrs and 2025's
+  sample, the frozen curves reproduce 2020's average claim / repairable / total-loss ages within 0.3 yrs and 2025's
   7+ shares within 1pp. The 7–12-yr cohort peaks in 2026 (~88M, +14% vs 2022) and rolls off to 2028. Demographics
   are a quarter of the secular rise; the rest is the repair-cost cycle, technology and filing behaviour. **Say so** —
   smaller than the popular version, and more credible.
@@ -295,6 +295,7 @@ nonsense result reads as a bug, not a discovery.
 | `fred_TOTALNSA.csv`, `fred_LTRUCKNSA.csv`, `light_vehicle_sales_by_year.csv` | US light-vehicle sales; cohort sizes 1970–2025 by body type (Ward's basis) |
 | `ornl_tedb40_*.csv` | EPA survival by age, miles by age, Ward's sales (ORNL TEDB Ed.40). The IHS census and avg-age extracts are local-only (`raw/ornl/tedb40/extracts/`, licence line on the sheet) |
 | `age_curves.csv`, `age_curves_validation.csv` | S, R, P by age with 2024 fleet/claims/TL shares; every target, OOS check and sensitivity |
+| **`model/CPRT_Intermediate.xlsx`** | **the workbook to copy from** — every Data_* tab plus live formulas: Survival, Fleet, FleetByAge, Curves, Calibration (Solver), TLF_Roll, Spread_Reg, RPU_Reg, Checks (`scripts/build_intermediate_xlsx.py`; verified by `verify_intermediate_xlsx.py`) |
 | `yard_panel_us.csv`, `cadence_fixed.csv`, `lots_per_sale_event.csv` | yards, sale events, utilization |
 | `backtest_inventory_v2.csv` | sitemap inventory vs reported (appendix exhibit) |
 
