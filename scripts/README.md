@@ -23,6 +23,7 @@ robots-disallowed path.
 |---|---|---|
 | `analysis_20260911.py` | ANALYSIS | TLF calibration (ΔTLF ~ totaling spread, CCC 2018Q1–2025Q3), the rebuilt RPU/ASP elasticity (n=17, aligned inputs), and the matched-denominator decomposition. Writes `tlf_calibration`, `totaling_spread_quarterly`, `elasticity_rebuild`, `decomposition` CSVs. |
 | `units_decomp_panel.py` | ANALYSIS | Six-quarter units decomposition panel under three claims denominators with the CCC direct anchor → `units_decomp_panel_v2.csv`. |
+| `age_curves.py` | ANALYSIS | Mechanism A age curves. Extracts ORNL TEDB Ed.40 tables (EPA survival, miles by age, IHS fleet census, Ward's sales), calibrates survival to the 2013 census and S&P 2024 counts, fits R(age) and P(age) jointly to eight CCC 2024 claim-mix statistics, tests them out of sample on 2019/2020/2025, and runs the survival sensitivity → `age_curves.csv`, `age_curves_validation.csv`, `light_vehicle_sales_by_year.csv`, `ornl_tedb40_*.csv`. Method: `docs/AGE_CURVES.md`. |
 | `nowcast.py` | ANALYSIS | The CPI-used-cars → Copart ASP chain (still valid, r=0.77). ⚠ Its RPU-elasticity section used a misaligned Stephens ASP column and is **superseded** by `analysis_20260911.py`. |
 | `rba_units.py` | ONE-OFF | RB Global (IAA parent) absolute quarterly Automotive lots and take rate from 8-K Ex-99.1. |
 | `corroborate_stephens.py` | ONE-OFF | Cross-check of the transcript series against the Stephens exhibit (15/15). ⚠ Found later: the exhibit's `global_asp_yoy` column is shifted one quarter; `us_ins_asp` is fine. |

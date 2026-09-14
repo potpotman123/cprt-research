@@ -1370,3 +1370,48 @@ underlying US unit growth FY27E +1.3%; return to positive unit/EBITDA/EPS growth
 also cites Yipit alternative data suggesting Copart may be *gaining* share from the ~15% of GEICO it does not
 have, and names the bear narrative — "marginal economic rents … getting competed away and accruing to the
 insurer" — as "logical but … early to declare it a reality."
+
+---
+
+# ADDENDUM 16 — 2026-09-14: the age curves behind mechanism A are now evidence-backed (`docs/AGE_CURVES.md`)
+
+Question asked: how exactly are S(age), R(age), P(age) calculated, and what backs them. Script:
+`scripts/age_curves.py`. Sources: ORNL Transportation Energy Data Book Ed.40 (EPA survival by age T3.15, EPA miles by
+age T3.14, IHS/Polk fleet census by single year of age for 2000 and 2013 T3.11/3.12, Ward's sales T3.6, S&P avg age
+T3.13), FRED LTRUCKNSA, and the CCC Crash Course statements already on disk.
+
+## S(age): EPA shape, count-calibrated scale
+1. Rolling Ward's sales through the raw EPA schedule reproduces the IHS 2013 census by single year of age to a
+   0.4pp bucket MAE after ONE stretch parameter (cars k=1.064, trucks 0.921). In 2000 the fitted k was ~0.9: vehicles
+   have been outliving the schedule since, and the trend is up.
+2. **S&P average age is not a usable calibration target.** The IHS 2013 census itself implies 9.6–11.1 yrs for cars
+   depending on the mean age of the 15+ bucket; S&P published 11.4. Reproducing S&P needs a 15+ tail averaging ~27
+   years. Calibrating a curve to 12.7–12.8 (as the blueprint tab did) inflates that tail, gives 90% survival at 17,
+   and 341M vehicles. **That is the blueprint tab's flat-survival artefact, explained.**
+3. Calibrated instead to counts: k ×1.194 by 2024 hits S&P VIO ~289M (model 292M) and 66% aged 7+ (64.5%).
+   Independent check: fleet growth 2020→2025 **+5.4% vs Experian +5.1%** — sales were ~2M/yr below 2015–19, so the
+   fleet could only grow if scrappage fell, which is what rising k says. Experian's "over 12M fewer ≤6-yr vehicles"
+   is NOT reproducible from sales under any survival (sales alone give −9.7M with zero scrappage) → definitional.
+
+## R(age), P(age): fitted jointly to eight CCC 2024 statistics, tested on 2019/2020/2025
+4. Targets (all CCC, quoted in the script): TLF 22.3%; 72% of TL valuations and 45% of repairables from 7+; ~30% of
+   repairables ≤3 yrs (26.3% ICE + EV/hybrid); average age 7.6 claims / 6.8 repairables / 10.6 total losses; "1 in
+   10" TL for ≤3 yrs. Six parameters. Every target hit within tolerance (loss 0.5).
+5. **R(a) = e(a)·exp(+0.0155·min(a,6) − 0.0952·max(a−6,0)), e(0)=0.5.** Flat-to-rising through age 6, −9.5%/yr after.
+   The half-year exposure term at age 0 is necessary (without it the ≤3 share lands at 36% vs 30%). R(7+)/R(0–6) =
+   0.572 = EPA miles ratio 0.653 × coverage/filing residual 0.875.
+6. **P(a) = 0.032 + 0.495/(1+exp(−(a−9.93)/4.40)):** 8% new, 10% ≤3, 20% at 7, 34% at 12, 44% at 17. Buckets P(7+)
+   31.6% / P(0–6) 12.7% — identical under every survival assumption tried (31.4–31.7%), and matching the closed-form
+   bucket derivation (32.2% / 13.4%). The "45.3% at 13+" anchor in the blueprint tab has **no source** — dropped.
+7. Out of sample with R,P frozen: 2020 average ages 7.2/6.4/10.3 vs actual 6.9/6.1/10.0; 2025 TL-7+ 72.6% vs >72%,
+   repairables-7+ 45.2% vs ~46%. 2019 repairable mix misses by 3–4pp (claims were younger in 2019: EV share of young
+   claims ×4 since, and pre-AEB young fleet) — a slow drift against young vehicles, ignorable at 12 months.
+8. **Finding, restated with the new curves: fleet ageing adds +0.15pp/yr to TLF (0.05–0.18 across survival
+   assumptions) — about a quarter of the +3.9pp rise 2019→2025.** Demographics-only TLF for 2019 is 21.4% vs actual
+   19.2%: the 2019 LEVEL was low because used values were high relative to repair costs — the spread regression's
+   territory. The 7–12 cohort peaks 2026 (~88M, +14% vs 2022). Supersedes the +0.07–0.11pp/yr from the blueprint tab.
+
+## Manual pulls that would upgrade this (user offered)
+HLDI claim frequency by vehicle age (measured R); CCC 2026 Figures 18/22 data labels (interior of P; settles 45.3%);
+S&P 2025 average-age release (primary count anchors); Experian Q3-2025 VIO by model year (the −12M definition);
+a depreciation curve by age (structural P). Full list with reasons: `docs/AGE_CURVES.md` §7.

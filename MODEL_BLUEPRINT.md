@@ -80,15 +80,26 @@ bridge. B and D as appendix exhibits unless A and C are green by day 10. E is on
 baseline TLF_t  =  Σ_MY [ share(MY,t) × P(age) ]          age = t − MY
 share(MY,t)     =  sales(MY) × S(age) × R(age)  ÷  Σ_MY′ [ same ]
 ```
-- `sales(MY)` = FRED TOTALNSA by calendar year (REAL). 2009: 10.6M · 2015–19: 17.5–17.9M · 2020–22: 14.2–15.4M.
-- `S(age)` survival — logistic shape ASSUMED, centre CALIBRATED to S&P avg fleet age 12.7 (2025).
-- `R(age)` relative insured-claim frequency — ASSUMED step (1.0 → 0.4); old cars driven less, often liability-only.
-- `P(age)` total-loss propensity — anchors ~10% (new) and ~45% (13+) from CCC; interior INTERPOLATED; level
-  CALIBRATED to CCC 2019 = 19.2%. **Use the gentler curve that passes the "70% of TLs from 7+" check.**
-- **Output and finding:** demographics move baseline TLF only **+0.07 to +0.11pp/yr** across all curve
-  assumptions, vs the **+0.60pp/yr** intercept in the CCC spread regression. The 7–12-yr cohort peaks in
-  2026 (105M, +17% vs 2022) and plateaus to 2028. Demographics are ~a sixth of the secular rise; the rest is
-  technology and the repair-cost cycle. **Say so** — smaller than the popular version, and more credible.
+- `sales(MY)` = Ward's new retail sales 1970–2021 (ORNL TEDB Ed.40 T3.6) + FRED TOTALNSA/LTRUCKNSA 2022–25 rescaled
+  to Ward's basis → `data/csv/light_vehicle_sales_by_year.csv`, cars and light trucks separately.
+- `S(age)` survival — **EPA schedule (ORNL T3.15), stretched:** `S(a/k)`. k fitted to the IHS/Polk 2013 census by
+  single year of age (cars 1.064, trucks 0.921; bucket MAE 0.4pp), drifted ×1.194 by 2024 to hit S&P's counts (VIO
+  ~289M, 66% aged 7+); independent check: fleet growth 2020→25 +5.4% vs Experian +5.1%. **Never calibrate to S&P
+  average age** — the census itself implies ~2 yrs less (a 27-yr-old registered tail); see `docs/AGE_CURVES.md` §2.3.
+- `R(age)` relative insured-claim frequency — `e(a)·exp(+0.0155·min(a,6) − 0.0952·max(a−6,0))`, e(0)=0.5 (half-year
+  exposure for the current model year). Fitted jointly with P to eight CCC 2024 claim-mix statistics.
+  R(7+)/R(0–6) = 0.57 = miles-by-age 0.65 (EPA T3.14) × coverage/filing 0.87.
+- `P(age)` total-loss propensity — logistic `0.032 + 0.495/(1+exp(−(a−9.93)/4.40))`: 8% new, 10% for ≤3 yrs (CCC
+  "1 in 10"), 20% at 7, 34% at 12, 44% at 17. Buckets P(7+) 31.6% / P(0–6) 12.7%, unchanged under every survival
+  assumption. The old "45.3% at 13+" anchor is **unsourced — dropped.** Shape fixed; the LEVEL moves with the spread.
+- Per-age values `data/csv/age_curves.csv`; every fit target, out-of-sample check and sensitivity row
+  `data/csv/age_curves_validation.csv`. Method and evidence, in full: **`docs/AGE_CURVES.md`**.
+- **Output and finding:** demographics move baseline TLF **+0.15pp/yr** (0.05–0.18 across survival assumptions) —
+  about a quarter of the +3.9pp rise 2019→2025 — vs the **+0.60pp/yr** intercept in the spread regression. Out of
+  sample, the frozen curves reproduce 2020's average claim / repairable / total-loss ages within 0.3 yrs and 2025's
+  7+ shares within 1pp. The 7–12-yr cohort peaks in 2026 (~88M, +14% vs 2022) and rolls off to 2028. Demographics
+  are a quarter of the secular rise; the rest is the repair-cost cycle, technology and filing behaviour. **Say so** —
+  smaller than the popular version, and more credible.
 
 ### Spread cycle → ΔTLF around the baseline
 
@@ -257,6 +268,9 @@ nonsense result reads as a bug, not a discovery.
 - **Fee-grid numbers in the old prompt files are unsourced** ($95 gate / flat $1,000 / 7.5%+$250). Read the
   grid yourself.
 - Copart unit growth is **transcript-provenance**; no filing discloses it.
+- **The blueprint tab's survival curve was calibrated to S&P average age — wrong target.** It forces a 27-year
+  registered tail and 90% survival at 17. Calibrate survival to vehicle counts (`docs/AGE_CURVES.md` §2.3).
+- **"45.3% total-loss propensity at 13+" is unsourced.** Use the fitted P curve (36% at 13, 44% at 17).
 
 ---
 
@@ -277,7 +291,9 @@ nonsense result reads as a bug, not a discovery.
 | `geico_frequency_series.csv` | Berkshire frequency bands |
 | `rba_automotive_series.csv`, `duopoly_compare.csv` | RB Global lots / GTV / take rate |
 | `duopoly_daily.csv` | Copart vs IAA listed US inventory, daily |
-| `fred_TOTALNSA.csv` | US light-vehicle sales (cohort sizes) |
+| `fred_TOTALNSA.csv`, `fred_LTRUCKNSA.csv`, `light_vehicle_sales_by_year.csv` | US light-vehicle sales; cohort sizes 1970–2025 by body type (Ward's basis) |
+| `ornl_tedb40_*.csv` | EPA survival by age, miles by age, IHS fleet-by-age census 2000/2013, S&P avg age, Ward's sales (ORNL TEDB Ed.40) |
+| `age_curves.csv`, `age_curves_validation.csv` | S, R, P by age with 2024 fleet/claims/TL shares; every target, OOS check and sensitivity |
 | `yard_panel_us.csv`, `cadence_fixed.csv`, `lots_per_sale_event.csv` | yards, sale events, utilization |
 | `backtest_inventory_v2.csv` | sitemap inventory vs reported (appendix exhibit) |
 
