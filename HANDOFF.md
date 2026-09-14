@@ -53,6 +53,9 @@ number is in `findings.md` **Addendum 14**; the summary:
    +3.0pp.** No share loss before the account; one discrete step equal to it; at-or-above the pool
    after, ex-account. Pool explains ~60% of the six-quarter average decline; the residual is entirely
    the last three quarters and is one customer. **This is the chart for page one.**
+8. **`MODEL_BLUEPRINT.md` (2026-09-14) is now the reference for the model** — the A–E mechanism
+   architecture, the identity, the RPU chain, tab map, build order and checks. §7–§10 of this document
+   describe the analysis that fed it; the blueprint describes how to build it.
 
 Also: `NMVTIS` annual report is robots-Disallowed at AAMVA (not requested). Progressive personal-auto
 PIF YoY has decelerated **+22.1% (Jan-25) → +8.4% (Jul-26)** — the mix drag decaying in real time,

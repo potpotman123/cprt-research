@@ -8,6 +8,7 @@ is gitignored and never committed.**
 
 | Read | For |
 |---|---|
+| **`MODEL_BLUEPRINT.md`** | **The model architecture** — mechanisms A–E, the units identity, the RPU chain, tab map, build order, checks. Open this every time you touch the model. |
 | **`HANDOFF.md`** | The current state of the project: what is verified, what was retracted, the thesis, the data sources, the failure modes to avoid. Read §0a and §2 first. |
 | `findings.md` | The lab notebook — every result in chronological addenda, **including every retraction**. |
 | `PROVENANCE.md` | Every host touched, its robots.txt status, what was fetched, where it is saved. |
