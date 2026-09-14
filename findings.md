@@ -1402,7 +1402,7 @@ T3.13), FRED LTRUCKNSA, and the CCC Crash Course statements already on disk.
    it is fixed flat. The half-year exposure term at age 0 is necessary (without it the ≤3 share lands at 36% vs
    30%). R(7+)/R(0–6) = 0.568 = EPA miles ratio 0.653 × coverage/filing residual 0.869.
 6. **P(a) = 0.044 + 0.446/(1+exp(−(a−9.36)/3.91)):** 8% new, 10% ≤3, 20% at 7, 34% at 12, 43% at 17. Buckets P(7+)
-   0.317 / P(0–6) 0.127 — identical under every survival assumption tried (0.314–0.318), and matching the closed-form
+   31.7% / P(0–6) 12.7% — identical under every survival assumption tried (31.4%–31.8%), and matching the closed-form
    bucket derivation (32.2% / 13.4%). The "45.3% at 13+" anchor in the blueprint tab has **no source** — dropped.
 7. Out of sample with R,P frozen: 2020 average ages 7.3/6.4/10.3 vs actual 6.9/6.1/10.0; 2025 TL-7+ 72.5% vs >72%,
    repairables-7+ 45.0% vs ~46%. 2019 repairable mix misses by ~3pp (claims were younger in 2019: EV share of young

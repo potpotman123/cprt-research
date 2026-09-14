@@ -118,7 +118,7 @@ PROHIBITED". Those three extracts are therefore kept local-only (`raw/ornl/tedb4
 table number; the EPA and Ward's tables carry no such line and are committed. Reproducing the figures in a pitch is
 citation of a public DOE publication, not redistribution of the dataset.
 
-Bucket-level: **P(7+) = 0.317, P(0–6) = 0.127; R(7+)/R(0–6) = 0.57.** (The closed-form derivation from CCC's
+Bucket-level: **P(7+) = 31.7%, P(0–6) = 12.7%; R(7+)/R(0–6) = 0.57.** (The closed-form derivation from CCC's
 bucket shares alone — 0.455 of repairables and 0.72 of total losses from 7+, 66% of the fleet 7+, TLF 23.1% — gives
 32.2% / 13.4% and 0.55; the two routes agree.)
 
@@ -185,7 +185,7 @@ One multiplier on both k's, linear from 1.000 (2013) to **1.194 (2024)**, fitted
 VIO ≈ 289M. ⚠ **The 289M is S&P's 2025 average-age release recalled from memory — it is not on disk.** The on-disk
 alternative is Experian's 292.1M light-duty VIO at Q3-2024 (Crash Course 2025/Q1), which the fitted roll lands on
 anyway (292M), so the anchor choice barely moves k: refitting with 292.1M as the target gives k ×1.204 instead of
-×1.194, the R slope 0.0908 vs 0.0895, P 0.046–0.486 vs 0.044–0.490, bucket P(7+) 31.7 / P(0–6) 12.7, and
+×1.194, the R slope 0.0908 vs 0.0895, P 0.046–0.486 vs 0.044–0.490, bucket P(7+) 31.7% / P(0–6) 12.7%, and
 demographic drift +0.16 instead of +0.15pp/yr. Confirm from the S&P release (§7 item 3). Result and checks:
 
 | check | model | anchor | fitted? |
@@ -283,8 +283,8 @@ repairs on old cars became total losses and left the repairable sample), not evi
 
 ### 4.3 The fit and its robustness
 
-Logistic in age (four parameters), fitted jointly with R. P(0–6) = 0.127, P(7+) = 0.317; the same two numbers come out
-at 0.126–0.127 / 0.314–0.318 under every survival assumption in §6, and the closed-form bucket derivation from CCC's shares
+Logistic in age (four parameters), fitted jointly with R. P(0–6) = 12.7%, P(7+) = 31.7%; the same two numbers come out
+at 12.6%–12.7% / 31.4%–31.8% under every survival assumption in §6, and the closed-form bucket derivation from CCC's shares
 alone gives 13.4% / 32.2%. **The bucket values are solid; the interior shape between 7 and 15 is interpolation** — the
 only anchors there are the 7+ aggregate and the 10.6-year average TL age.
 
@@ -338,10 +338,10 @@ R and P refitted under four survival assumptions (k multiplier by 2024):
 
 | k mult | VIO 2024 | share 7+ | R(7+)/R(0–6) | P(7+) | P(0–6) | demographic TLF drift, pp/yr 2019→25 |
 |---|---|---|---|---|---|---|
-| 1.000 (raw EPA shape) | 246M | 58.2% | 0.752 | 0.314 | 0.127 | +0.04 |
-| 1.100 | 270M | 61.6% | 0.641 | 0.316 | 0.127 | +0.12 |
-| **1.194 (fitted)** | **292M** | **63.7%** | **0.568** | **0.317** | **0.127** | **+0.15** |
-| 1.300 | 318M | 65.5% | 0.504 | 0.318 | 0.126 | +0.18 |
+| 1.000 (raw EPA shape) | 246M | 58.2% | 0.752 | 31.4% | 12.7% | +0.04 |
+| 1.100 | 270M | 61.6% | 0.641 | 31.6% | 12.7% | +0.12 |
+| **1.194 (fitted)** | **292M** | **63.7%** | **0.568** | **31.7%** | **12.7%** | **+0.15** |
+| 1.300 | 318M | 65.5% | 0.504 | 31.8% | 12.6% | +0.18 |
 
 Read across: the survival assumption moves R's slope a lot (0.50–0.75) and P not at all, because claims-by-age is
 what CCC pins down and S·R is the product that produces it. **The finding — fleet ageing adds +0.15pp/yr to TLF

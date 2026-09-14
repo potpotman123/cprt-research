@@ -91,7 +91,7 @@ share(MY,t)     =  sales(MY) × S(age) × R(age)  ÷  Σ_MY′ [ same ]
   statistics; a free 0–6 slope is not identified (fits +1.6%/yr with no gain), so it is fixed flat.
   R(7+)/R(0–6) = 0.57 = miles-by-age 0.65 (EPA T3.14) × coverage/filing 0.87.
 - `P(age)` total-loss propensity — logistic `0.044 + 0.446/(1+exp(−(a−9.36)/3.91))`: 8% new, 10% for ≤3 yrs (CCC
-  "1 in 10"), 20% at 7, 34% at 12, 43% at 17. Buckets P(7+) 0.317 / P(0–6) 0.127, unchanged under every survival
+  "1 in 10"), 20% at 7, 34% at 12, 43% at 17. Buckets P(7+) 31.7% / P(0–6) 12.7%, unchanged under every survival
   assumption. The old "45.3% at 13+" anchor is **unsourced — dropped.** Shape fixed; the LEVEL moves with the spread.
 - Per-age values `data/csv/age_curves.csv`; every fit target, out-of-sample check and sensitivity row
   `data/csv/age_curves_validation.csv`. Method and evidence, in full: **`docs/AGE_CURVES.md`**.
