@@ -34,6 +34,13 @@ P(a) = 0.032 + (0.527 − 0.032) / ( 1 + exp( −(a − 9.93) / 4.40 ) )
        (8% at age 0, 10% for ≤3 yrs, 20% at 7, 34% at 12, 44% at 17, 52% asymptote)
 ```
 
+**Resolution.** The roll runs at single years of age, 0 to 31, for every model year 1970–2025; S, miles, R and P are
+all single-year curves and the CSV carries all 32 ages. Buckets appear in this document only where the *evidence* is
+bucket-level: CCC publishes its claim mix as current-year / 1–3 / 4–6 / 7+ (and 7–12 / 13+ since 2026), and the IHS
+census lumps 15+. So the single-year shape of S is measured (EPA schedule, checked against the census age by age),
+while the single-year shapes of R and P *between* the bucket anchors come from the parametric forms — the
+buckets are where they are pinned, the interior is interpolation. Build the tab at single-year resolution.
+
 Per-age values (cars' EPA survival shown; light trucks in the CSV). Fleet, claims and total-loss shares are the
 model's 2024 cross-section:
 
@@ -176,7 +183,9 @@ One multiplier on both k's, linear from 1.000 (2013) to **1.194 (2024)**, fitted
 (S&P Global Mobility, quoted in Crash Course 2024/Q4: "66% of vehicles in operation are seven years or older") and light
 VIO ≈ 289M. ⚠ **The 289M is S&P's 2025 average-age release recalled from memory — it is not on disk.** The on-disk
 alternative is Experian's 292.1M light-duty VIO at Q3-2024 (Crash Course 2025/Q1), which the fitted roll lands on
-anyway (292M), so the anchor choice does not move k. Confirm from the S&P release (§7 item 3). Result and checks:
+anyway (292M), so the anchor choice barely moves k: refitting with 292.1M as the target gives k ×1.204 instead of
+×1.194, R and P parameters within 0.002, P(7+) 31.6% / P(0–6) 12.7% unchanged, demographic drift +0.16 instead of
++0.15pp/yr. Confirm from the S&P release (§7 item 3). Result and checks:
 
 | check | model | anchor | fitted? |
 |---|---|---|---|
