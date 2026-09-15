@@ -146,8 +146,8 @@ rows = [
  (13, 'P ceiling (pmax)',                     FIT['pmax'], DEC3, 'yellow', ""),
  (14, 'P midpoint age (mid)',                 FIT['pmid'],  '0.00', 'yellow', ""),
  (15, 'P width (yrs)',                        FIT['pwid'],  '0.00', 'yellow', ""),
- (16, 'Future new-vehicle sales, cars (k/yr, 2026+)', None, NUM0, 'blue', "ASSUMED = 2025 level (Data_Sales). Flex for a sales-recovery case"),
- (17, 'Future new-vehicle sales, light trucks (k/yr, 2026+)', None, NUM0, 'blue', "ASSUMED = 2025 level"),
+ (16, 'Future new-vehicle sales, cars (thousands per year, 2026+)', None, NUM0, 'blue', "ASSUMED = 2025 level (Data_Sales). Flex for a sales-recovery case"),
+ (17, 'Future new-vehicle sales, light trucks (thousands per year, 2026+)', None, NUM0, 'blue', "ASSUMED = 2025 level"),
  (18, 'VIO anchor, end-2024 (M light vehicles)', 289, NUM0, 'blue', "S&P Global Mobility 2025 avg-age release — NOT ON DISK, confirm; Experian Q3-2024 = 292.1M (Crash Course 2025/Q1)"),
  (19, 'Share aged 7+ anchor, 2024',           0.66,  PCT,  'blue',   "'66% of vehicles in operation are seven years or older' — S&P via CCC Crash Course 2024/Q4"),
 ]
@@ -171,19 +171,21 @@ widths(wi, {'A': 46, 'B': 12, 'C': 90}); wi.freeze_panes = 'A4'
 # ---- Data_Sales (specific layout: MY 1970..2030)
 wsl = wb.create_sheet('Data_Sales')
 prov, hdr, rows = read_csv('light_vehicle_sales_by_year.csv')
-put(wsl, 'A1', 'Cohort sizes — new light-vehicle sales by model year (thousands)', TITLE)
+put(wsl, 'A1', 'Cohort sizes — new light-vehicle sales by model year (thousands of vehicles)', TITLE)
 put(wsl, 'A2', " | ".join(prov), NOTE, wrap=True); wsl.merge_cells('A2:F2'); wsl.row_dimensions[2].height = 42
-put(wsl, 'A3', "Ward's via ORNL TEDB Ed.40 Table 3.6 for 1970–2021; FRED TOTALNSA/LTRUCKNSA rescaled to Ward's basis for 2022–2025; 2026+ = Inputs (green). data/csv/light_vehicle_sales_by_year.csv", NOTE)
-for j, h in enumerate(['year', 'cars_k', 'light_trucks_k', 'heavy_trucks_k', 'source']): put(wsl, f'{L(j+1)}4', h, BOLD, fill=HDR)
+put(wsl, 'A3', "Unit: thousands of vehicles (8,321 = 8,321,000 cars). Ward's reports to the single vehicle, so the source carries decimals (e.g. 8,720.3); they are kept in the cells and hidden by the format. Ward's via ORNL TEDB Ed.40 Table 3.6 for 1970–2021; FRED TOTALNSA/LTRUCKNSA rescaled to Ward's basis for 2022–2025 (estimates — the decimals there mean nothing); 2026+ = Inputs (green). data/csv/light_vehicle_sales_by_year.csv", NOTE, wrap=True)
+wsl.merge_cells('A3:F3'); wsl.row_dimensions[3].height = 42
+for j, h in enumerate(['model year', 'cars (thousands)', 'light trucks (thousands)', 'heavy trucks (thousands)', 'source']): put(wsl, f'{L(j+1)}4', h, BOLD, fill=HDR, wrap=True)
+wsl.row_dimensions[4].height = 30
 byy = {int(r[0]): r for r in rows}
 SR0 = 5
 for i, my in enumerate(MYS):
     r = SR0 + i; put(wsl, f'A{r}', my, BLUE, YR)
     if my in byy:
-        put(wsl, f'B{r}', round(float(byy[my][1]), 1), BLUE, NUM1); put(wsl, f'C{r}', round(float(byy[my][2]), 1), BLUE, NUM1)
-        put(wsl, f'D{r}', round(float(byy[my][3]), 1), BLUE, NUM1); put(wsl, f'E{r}', byy[my][4], NOTE)
+        put(wsl, f'B{r}', round(float(byy[my][1]), 1), BLUE, NUM0); put(wsl, f'C{r}', round(float(byy[my][2]), 1), BLUE, NUM0)
+        put(wsl, f'D{r}', round(float(byy[my][3]), 1), BLUE, NUM0); put(wsl, f'E{r}', byy[my][4], NOTE)
     else:
-        put(wsl, f'B{r}', '=Inputs!$B$16', GRN, NUM1); put(wsl, f'C{r}', '=Inputs!$B$17', GRN, NUM1); put(wsl, f'D{r}', 0, BLUE, NUM1); put(wsl, f'E{r}', 'ASSUMED — Inputs B16/B17', NOTE)
+        put(wsl, f'B{r}', '=Inputs!$B$16', GRN, NUM0); put(wsl, f'C{r}', '=Inputs!$B$17', GRN, NUM0); put(wsl, f'D{r}', 0, BLUE, NUM0); put(wsl, f'E{r}', 'ASSUMED — Inputs B16/B17', NOTE)
 SR1 = SR0 + len(MYS) - 1     # 65
 widths(wsl, {'A': 8, 'B': 12, 'C': 14, 'D': 14, 'E': 44}); wsl.freeze_panes = 'A5'
 SALES_Y = f"Data_Sales!$A${SR0}:$A${SR1}"; SALES_C = f"Data_Sales!$B${SR0}:$B${SR1}"; SALES_L = f"Data_Sales!$C${SR0}:$C${SR1}"
@@ -313,7 +315,7 @@ wc = wb.create_sheet('Curves')
 put(wc, 'A1', 'Age curves — R(a) relative insured-claim frequency, P(a) total-loss propensity, miles by age', TITLE)
 put(wc, 'A2', 'R and P read their parameters from Inputs (yellow cells). Flags feed the SUMPRODUCTs on TLF_Roll. Miles: EPA schedule (Data_EPA_Miles), age>30 = age-30 value. Columns I–K: 2024 fleet split by body for the fleet-weighted miles ratio (docs/AGE_CURVES.md §3.4).', NOTE, wrap=True)
 wc.merge_cells('A2:K2'); wc.row_dimensions[2].height = 42
-hdrs = ['age', 'R(a)', 'P(a)', 'miles/yr cars', 'miles/yr light trucks', 'flag age≥7', 'flag age≤3', '(unused)', 'cars fleet 2024 (k)', 'LT fleet 2024 (k)', 'miles/yr fleet-weighted 2024']
+hdrs = ['age', 'R(a)', 'P(a)', 'miles/yr cars', 'miles/yr light trucks', 'flag age≥7', 'flag age≤3', '(unused)', 'cars fleet 2024 (thousands)', 'LT fleet 2024 (thousands)', 'miles/yr fleet-weighted 2024']
 for j, h in enumerate(hdrs): put(wc, f'{L(j+1)}4', h, BOLD, fill=HDR, wrap=True)
 wc.row_dimensions[4].height = 30
 QR0 = 6; QR1 = QR0 + NA - 1
@@ -350,7 +352,7 @@ for r, lab, v, fmt, b in [(4, 'R slope after kink', FIT['r_slope'], DEC4, '0 to 
     put(wk, f'A{r}', lab, BLK); put(wk, f'B{r}', v, BLUE, fmt, fill=YEL); put(wk, f'C{r}', b, NOTE)
 put(wk, 'A9', 'Exposure age 0 (from Inputs)', BLK); put(wk, 'B9', '=Inputs!$B$9', GRN, '0.00'); put(wk, 'A10', 'R kink age (from Inputs)', BLK); put(wk, 'B10', '=Inputs!$B$10', GRN, YR)
 KR0 = 13; KR1 = KR0 + NA - 1     # 13..58
-for j, h in enumerate(['age', 'fleet 2024 (k)', 'R(a)', 'P(a)', 'claims = fleet×R', 'total losses = claims×P', 'repairables = claims−TL']): put(wk, f'{L(j+1)}12', h, BOLD, fill=HDR, wrap=True)
+for j, h in enumerate(['age', 'fleet 2024 (thousands)', 'R(a)', 'P(a)', 'claims = fleet×R', 'total losses = claims×P', 'repairables = claims−TL']): put(wk, f'{L(j+1)}12', h, BOLD, fill=HDR, wrap=True)
 wk.row_dimensions[12].height = 30
 for i, a in enumerate(AGES):
     r = KR0 + i; put(wk, f'A{r}', a, BLUE, YR)
@@ -398,7 +400,7 @@ wr.merge_cells('A2:N2'); wr.row_dimensions[2].height = 42
 put(wr, 'A4', 'Year →', BOLD, fill=LIGHT)
 for i, y in enumerate(YEARS): put(wr, f'{YC[i]}4', f'=Inputs!{YC[i]}23', GRN, YR, fill=LIGHT)
 RW = {'cl': 6, 'tl': 7, 'tlf': 8, 'drift': 9, 'cl7': 10, 'tl7': 11, 'rp7': 12, 'rp3': 13, 'age_cl': 14, 'age_tl': 15, 'age_rp': 16, 'p03': 17, 'vio': 18, 'sh7': 19, 'avg': 20, 'tlgr': 21}
-labels = {'cl': 'Claims index Σ fleet·R (k)', 'tl': 'Total-loss index Σ fleet·R·P (k)', 'tlf': 'Baseline TLF (demographics only)', 'drift': 'YoY change in baseline TLF (pp)',
+labels = {'cl': 'Claims index Σ fleet·R (thousands)', 'tl': 'Total-loss index Σ fleet·R·P (thousands)', 'tlf': 'Baseline TLF (demographics only)', 'drift': 'YoY change in baseline TLF (pp)',
           'cl7': 'Claims share, vehicles 7+', 'tl7': 'Total-loss share, vehicles 7+', 'rp7': 'Repairable share, vehicles 7+', 'rp3': 'Repairable share, vehicles ≤3',
           'age_cl': 'Average age, claim vehicles', 'age_tl': 'Average age, total losses', 'age_rp': 'Average age, repairables', 'p03': 'Total-loss rate, vehicles ≤3',
           'vio': 'VIO (M) — FleetByAge', 'sh7': 'Fleet share aged 7+ — FleetByAge', 'avg': 'Average fleet age (t−MY+0.5)', 'tlgr': 'Total-loss index YoY % (demographic TL pool growth)'}
