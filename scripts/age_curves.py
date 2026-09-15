@@ -113,15 +113,16 @@ def fred_annual(path, col):
         v = r.get(col) or r.get('value')
         if v and v != '.': d.setdefault(int(r['observation_date'][:4]), []).append(float(v))
     return {y: sum(v) for y, v in d.items() if len(v) == 12}
-TOT = fred_annual(OUT / 'fred_TOTALNSA.csv', 'TOTALNSA'); LTR = fred_annual(OUT / 'fred_LTRUCKNSA.csv', 'LTRUCKNSA')
-sc_lt = SALES[2021]['lt'] / LTR[2021]; sc_car = SALES[2021]['cars'] / (TOT[2021] - LTR[2021])
+TOT = fred_annual(OUT / 'fred_TOTALNSA.csv', 'TOTALNSA'); LTR = fred_annual(OUT / 'fred_LTRUCKNSA.csv', 'LTRUCKNSA'); HVY = fred_annual(OUT / 'fred_HTRUCKSNSA.csv', 'HTRUCKSNSA')
+sc_lt = SALES[2021]['lt'] / LTR[2021]; sc_car = SALES[2021]['cars'] / (TOT[2021] - LTR[2021]); sc_hvy = SALES[2021]['heavy'] / HVY[2021]
+print(f"  heavy trucks: Ward's (>10,000 lb) 2021 {SALES[2021]['heavy']:,.0f}k vs BEA HTRUCKSNSA (>14,000 lb) {HVY[2021]:,.0f}k -> FRED 2022-25 scaled x{sc_hvy:.3f} (class-3 gap; heavy trucks enter only the 2013 census check)")
 print(f"  FRED vs Ward's 2021 overlap: light {TOT[2021]:,.0f}k vs {SALES[2021]['cars']+SALES[2021]['lt']:,.0f}k; LT {LTR[2021]:,.0f}k vs {SALES[2021]['lt']:,.0f}k "
       f"-> FRED 2022-25 scaled by cars x{sc_car:.4f}, LT x{sc_lt:.4f} (BEA counts fleet deliveries Ward's retail series does not)")
 for y in range(2022, 2026):
-    SALES[y] = dict(cars=(TOT[y] - LTR[y]) * sc_car, lt=LTR[y] * sc_lt, heavy=SALES[2021]['heavy'], src="FRED TOTALNSA/LTRUCKNSA x Ward's-basis scale")
+    SALES[y] = dict(cars=(TOT[y] - LTR[y]) * sc_car, lt=LTR[y] * sc_lt, heavy=HVY[y] * sc_hvy, src="FRED TOTALNSA/LTRUCKNSA/HTRUCKSNSA x Ward's-basis scale")
 write_csv('light_vehicle_sales_by_year.csv',
           ["Cohort sizes for the fleet roll. 1970-2021 Ward's via ORNL TEDB Ed.40 Table 3.6; 2022-2025 FRED TOTALNSA (light vehicles) and LTRUCKNSA (light trucks), NSA monthly summed by calendar year (fetched 2026-09-14),",
-           f" rescaled to Ward's basis using the 2021 overlap (cars x{sc_car:.4f}, light trucks x{sc_lt:.4f}). heavy trucks 2022-25 = 2021 carried (used only for the 2013 truck-census check)."],
+           f" rescaled to Ward's basis using the 2021 overlap (cars x{sc_car:.4f}, light trucks x{sc_lt:.4f}); heavy trucks 2022-25 = FRED HTRUCKSNSA (BEA, >14,000 lb) x{sc_hvy:.3f} to Ward's >10,000 lb basis — estimates, used only for the 2013 truck-census check."],
           ['year', 'cars_k', 'light_trucks_k', 'heavy_trucks_k', 'source'],
           [[y, round(SALES[y]['cars'], 1), round(SALES[y]['lt'], 1), round(SALES[y]['heavy'], 1), SALES[y].get('src', "Ward's (ORNL TEDB40 T3.6)")] for y in sorted(SALES)])
 

@@ -131,8 +131,9 @@ bucket shares alone — 0.455 of repairables and 0.72 of total losses from 7+, 6
 (ORNL TEDB Ed.40 Table 3.6). 2022–2025 from FRED `TOTALNSA` (light vehicles) and `LTRUCKNSA` (light trucks), monthly
 NSA summed by calendar year, **rescaled to Ward's basis on the 2021 overlap** (cars ×0.879, light trucks ×0.968; FRED's BEA-sourced series
 runs 5.8% above Ward's retail in total because it counts fleet deliveries, and the gap is concentrated in cars. Without
-the rescale the young cohorts are inflated relative to the old ones and every young-vehicle share is wrong by ~1pp). Heavy trucks (Table 3.6) are carried only
-for the 2013 truck-census check.
+the rescale the young cohorts are inflated relative to the old ones and every young-vehicle share is wrong by ~1pp). Heavy trucks (Ward's >10,000 lb, Table 3.6; 2022–25 from FRED
+`HTRUCKSNSA`, BEA's >14,000 lb series, spliced ×1.82 on the 2021 overlap) are outside the light-vehicle roll and are carried
+only for the 2013 truck-census check, where the IHS "trucks" count includes them.
 
 ---
 

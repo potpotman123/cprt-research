@@ -92,6 +92,7 @@ DESC = {  # description + source for CSVs that carry no '#' provenance header
  'backtest_inventory_v2.csv': "Sitemap inventory YoY vs Copart reported US inventory YoY, overlap<=1% gate. scripts/backtest_inventory_v2.py",
  'fred_TOTALNSA.csv': "FRED TOTALNSA: light weight vehicle sales, autos and light trucks, thousands of units, monthly NSA (BEA).",
  'fred_LTRUCKNSA.csv': "FRED LTRUCKNSA: light weight vehicle sales, light trucks, thousands of units, monthly NSA (BEA). Fetched 2026-09-14.",
+ 'fred_HTRUCKSNSA.csv': "FRED HTRUCKSNSA: motor vehicle retail sales, heavy weight trucks (>14,000 lb GVW), thousands of units, monthly NSA (BEA). Fetched 2026-09-15. Ward's 'heavy' is >10,000 lb, so the 2021 overlap ratio (~1.8) is a class-3 definitional gap.",
  'capex_decomp.csv': "Copart capex decomposition from 10-K PP&E roll-forward (XBRL).",
  'owner_earnings.csv': "Owner-earnings bridge (EBIT less non-land capex above D&A), 10-K XBRL.",
 }
@@ -104,7 +105,7 @@ DATA_TABS = [  # (sheet name, csv)
  ('Data_FastTrack', 'fasttrack_collision_claims_cw.csv'), ('Data_PGR_PIF', 'pgr_monthly_pif.csv'), ('Data_GEICO', 'geico_frequency_series.csv'),
  ('Data_RBA', 'rba_automotive_series.csv'), ('Data_DuopolyCompare', 'duopoly_compare.csv'), ('Data_DuopolyDaily', 'duopoly_daily.csv'),
  ('Data_Yards', 'yard_panel_us.csv'), ('Data_Cadence', 'cadence_fixed.csv'), ('Data_LotsPerEvent', 'lots_per_sale_event.csv'),
- ('Data_BacktestInv', 'backtest_inventory_v2.csv'), ('Data_FRED_TOTALNSA', 'fred_TOTALNSA.csv'), ('Data_FRED_LTRUCKNSA', 'fred_LTRUCKNSA.csv'),
+ ('Data_BacktestInv', 'backtest_inventory_v2.csv'), ('Data_FRED_TOTALNSA', 'fred_TOTALNSA.csv'), ('Data_FRED_LTRUCKNSA', 'fred_LTRUCKNSA.csv'), ('Data_FRED_HTRUCKSNSA', 'fred_HTRUCKSNSA.csv'),
  ('Data_EPA_Miles', 'ornl_tedb40_miles_by_age.csv'), ('Data_AgeCurvesPy', 'age_curves.csv'), ('Data_AgeCurvesValid', 'age_curves_validation.csv'),
  ('Data_Capex', 'capex_decomp.csv'), ('Data_OwnerEarnings', 'owner_earnings.csv'),
 ]
@@ -173,7 +174,7 @@ wsl = wb.create_sheet('Data_Sales')
 prov, hdr, rows = read_csv('light_vehicle_sales_by_year.csv')
 put(wsl, 'A1', 'Cohort sizes — new light-vehicle sales by model year (thousands of vehicles)', TITLE)
 put(wsl, 'A2', " | ".join(prov), NOTE, wrap=True); wsl.merge_cells('A2:F2'); wsl.row_dimensions[2].height = 42
-put(wsl, 'A3', "Unit: thousands of vehicles (8,321 = 8,321,000 cars). Ward's reports to the single vehicle, so the source carries decimals (e.g. 8,720.3); they are kept in the cells and hidden by the format. Ward's via ORNL TEDB Ed.40 Table 3.6 for 1970–2021; FRED TOTALNSA/LTRUCKNSA rescaled to Ward's basis for 2022–2025 (estimates — the decimals there mean nothing); 2026+ = Inputs (green). data/csv/light_vehicle_sales_by_year.csv", NOTE, wrap=True)
+put(wsl, 'A3', "Unit: thousands of vehicles (8,321 = 8,321,000 cars). Ward's reports to the single vehicle, so the source carries decimals (e.g. 8,720.3); they are kept in the cells and hidden by the format. Ward's via ORNL TEDB Ed.40 Table 3.6 for 1970–2021; FRED TOTALNSA / LTRUCKNSA / HTRUCKSNSA rescaled to Ward's basis on the 2021 overlap for 2022–2025 (estimates — the decimals there mean nothing); 2026+ = Inputs (green). Heavy trucks (>10,000 lb) are NOT in the fleet roll; the column exists for the 2013 census check only. data/csv/light_vehicle_sales_by_year.csv", NOTE, wrap=True)
 wsl.merge_cells('A3:F3'); wsl.row_dimensions[3].height = 42
 for j, h in enumerate(['model year', 'cars (thousands)', 'light trucks (thousands)', 'heavy trucks (thousands)', 'source']): put(wsl, f'{L(j+1)}4', h, BOLD, fill=HDR, wrap=True)
 wsl.row_dimensions[4].height = 30
@@ -185,7 +186,7 @@ for i, my in enumerate(MYS):
         put(wsl, f'B{r}', round(float(byy[my][1]), 1), BLUE, NUM0); put(wsl, f'C{r}', round(float(byy[my][2]), 1), BLUE, NUM0)
         put(wsl, f'D{r}', round(float(byy[my][3]), 1), BLUE, NUM0); put(wsl, f'E{r}', byy[my][4], NOTE)
     else:
-        put(wsl, f'B{r}', '=Inputs!$B$16', GRN, NUM0); put(wsl, f'C{r}', '=Inputs!$B$17', GRN, NUM0); put(wsl, f'D{r}', 0, BLUE, NUM0); put(wsl, f'E{r}', 'ASSUMED — Inputs B16/B17', NOTE)
+        put(wsl, f'B{r}', '=Inputs!$B$16', GRN, NUM0); put(wsl, f'C{r}', '=Inputs!$B$17', GRN, NUM0); put(wsl, f'D{r}', None, BLUE, NUM0); put(wsl, f'E{r}', 'ASSUMED — Inputs B16/B17; heavy trucks not modelled (outside the light-vehicle roll)', NOTE)
 SR1 = SR0 + len(MYS) - 1     # 65
 widths(wsl, {'A': 8, 'B': 12, 'C': 14, 'D': 14, 'E': 44}); wsl.freeze_panes = 'A5'
 SALES_Y = f"Data_Sales!$A${SR0}:$A${SR1}"; SALES_C = f"Data_Sales!$B${SR0}:$B${SR1}"; SALES_L = f"Data_Sales!$C${SR0}:$C${SR1}"
