@@ -24,7 +24,7 @@ YEARS = list(range(2013, 2031)); col = lambda y: chr(ord('C') + YEARS.index(y))
 c24, c19, c20, c25 = col(2024), col(2019), col(2020), col(2025)
 
 tests = [  # cell, expected, tolerance, label
- ('Inputs!%s24' % c24, 1.194, 1e-3, 'k multiplier 2024'),
+ ('Inputs!%s34' % c24, 1.194, 1e-3, 'k multiplier 2024'),
  ('Survival!C6', 1.0, 1e-9, 'S(0)=1'),
  ('FleetByAge!%s53' % c24, 292, 3, 'VIO 2024 (M)'), ('FleetByAge!%s54' % c24, 0.645, 0.005, 'share 7+ 2024'),
  ('Calibration!K13', fitv('tlf'), 0.0015, 'cal tlf'), ('Calibration!K14', fitv('tl7'), 0.004, 'cal tl7'), ('Calibration!K15', fitv('rp7'), 0.004, 'cal rp7'),
@@ -58,7 +58,7 @@ print(f"  py   RPU_Reg!K7 CORREL (ASP~CPI)            = {pear(g, h):.3f}   (expe
 e = [xl.evaluate(f'Data_Elasticity!E{r}') for r in range(5, 22)]; f = [xl.evaluate(f'Data_Elasticity!F{r}') for r in range(5, 22)]
 print(f"  py   RPU_Reg!K14 RSQ (service RPU ~ ASP)     = {pear(e, f)**2:.3f}   (expected 0.61)")
 
-for r in range(4, 16):
+for r in range(5, 17):
     s = xl.evaluate(f'Checks!E{r}'); bad += (s != 'OK'); print(f"  Checks!E{r}: {s:4s} <- {xl.evaluate(f'Checks!A{r}')}")
-print("  ALL CHECKS:", xl.evaluate('Checks!E17'))
+print("  ALL CHECKS:", xl.evaluate('Checks!E18'))
 print(f"problems: {bad}"); sys.exit(1 if bad else 0)
