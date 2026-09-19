@@ -212,7 +212,7 @@ in_row(7,  'k_lt',   'Stretch k, light trucks, 2013',   round(FIT['k_lt'] / KMUL
 in_row(8,  'k_mult', 'k multiplier by drift-end year',   KMULT, DEC3, 'x', "fitted so the 2024 roll hits the VIO anchor and 66% aged 7+. 289M anchor is unverified (from memory); Experian 292.1M (on disk) gives 1.204 — same downstream. §2.4", True)
 in_row(9,  'drift0', 'Drift start year',                 2013, YR, 'year', "k = 2013 value up to here")
 in_row(10, 'drift1', 'Drift end year',                   2024, YR, 'year', "k reaches k_2013 × multiplier here; FLAT after (base case). Sensitivity: set 2030 to keep survival improving")
-in_section(12, 'Claim frequency R(age) — insured physical-damage claims per vehicle on the road, relative to a 1–6-year-old')
+in_section(12, 'Claim frequency R(age) — claims per vehicle on the road, relative to a 1–6-year-old. FITTED, not measured: the slope below is the one free parameter')
 in_row(13, 'expo0', 'Exposure factor, age 0',            0.5, '0.00', 'x', "a model-year-t vehicle is on the road ~half of calendar year t. Necessary: without it the ≤3-yr repairable share fits at 36% vs CCC ~30%. §3.2")
 in_row(14, 'kink',  'Kink age',                          6, YR, 'yrs', "R is flat through this age (a free 0–6 slope is not identified by the CCC targets). §3.3")
 in_row(15, 'slope', 'Decline per year of age after the kink', FIT['r_slope'], DEC4, 'per yr', "R(a) = e(a)·exp(−slope·max(a−kink,0)). Solver-fitted with P to eight CCC 2024 statistics. §3.3", True)
@@ -402,7 +402,7 @@ def fa_col(c): return f"FleetByAge!{c}${AR0}:{c}${AR1}"
 wc = wb.create_sheet('Curves')
 QR0 = 6; QR1 = QR0 + NA - 1
 skin(wc, 'Age curves — R(age) relative insured-claim frequency, P(age) total-loss propensity, miles by age', 'single-year resolution, ages 0–45',
-     'R and P read their parameters from Inputs (green). Flags feed the SUMPRODUCTs on TLF_Roll. Miles: EPA schedule (Data_EPA_Miles), age > 30 = age-30 value. Columns I–K: the 2024 fleet split by body, for the fleet-weighted miles ratio in the R decomposition (docs/AGE_CURVES.md §3.4).', 11, freeze='B6')
+     'R(a) and P(a) are NOT measured data — no public source publishes claim frequency or total-loss rate by single year of age. They are curves with 5 fitted parameters (Inputs B15, B18:B21; fitted on Calibration) chosen so the model reproduces the eight CCC claim-mix statistics on Data_CCC_Targets, given the fleet by age. Flags feed the SUMPRODUCTs on TLF_Roll. Miles (Data_EPA_Miles) are used only AFTER the fit, to split R into an exposure part and a coverage/filing part (columns I–K, docs/AGE_CURVES.md §3.4). Measured R would come from HLDI’s claim frequency by vehicle age — manual pull list, item 1.', 11, freeze='B6')
 hdrs = ['Age', 'R(a)', 'P(a)', 'Miles / yr, cars', 'Miles / yr, light trucks', 'Flag age ≥ 7', 'Flag age ≤ 3', '', 'Cars on road 2024 (thousands)', 'Light trucks on road 2024 (thousands)', 'Miles / yr, fleet-weighted 2024']
 header_row(wc, 4, 1, 11, hdrs, height=42)
 for j, u in enumerate(['years', 'x', 'share', 'miles', 'miles', '0/1', '0/1', '', 'thousands', 'thousands', 'miles']): put(wc, f'{L(j+1)}5', u, NOTE, fl=GREY, align='center')
