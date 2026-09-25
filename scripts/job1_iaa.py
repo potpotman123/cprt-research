@@ -34,7 +34,8 @@ Same-day guard (inherits the lesson from Job 1's three iterations): a re-run on 
 UTC day only replaces the stored rows if it captured at least 90% as many vehicles.
 Never delete before a successful parse.
 """
-import sys, os, re, sqlite3, csv, datetime, pathlib, urllib.parse, collections, glob
+import sys, os, re, sqlite3, csv, datetime, pathlib, urllib.parse, collections, glob, time
+BIG_PAUSE = int(os.environ.get('IAA_BIG_PAUSE', '90'))   # seconds between the ~6.8 MB vehicle sitemaps: 11 of the first 15 nightly runs lost sitemap3 to the volume throttle
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 import prov
@@ -126,8 +127,13 @@ def is_challenge(body):
 
 # ---- 3. children -------------------------------------------------------------------
 veh, br, auc = [], [], []
+big_seen = 0
 for u in children:
     tag = WANT.search(u).group(1)
+    is_veh = bool(re.match(r"sitemap\d", tag))
+    if is_veh and big_seen and not FROM_DIR:
+        print(f"  pausing {BIG_PAUSE}s before {tag} (spread the volume; IAA throttles bursts)"); time.sleep(BIG_PAUSE)
+    if is_veh: big_seen += 1
     if not robots_ok(u):
         print(f"REFUSED (robots): {u}"); prov.log(u, "GET", None, b"", "disallowed", ROBOTS_BASIS, "refused by policy"); continue
     if FROM_DIR:
@@ -151,6 +157,10 @@ for u in children:
     runlog.append((SNAP, tag, s, len(b), n, ""))
     print(f"  {s} {len(b):>9,}b rows={n:<7} {tag}")
 
+veh_failed = sorted(t for (_s, t, _h, _b, n, _n) in runlog if re.match(r"sitemap\d", t) and n == 0)
+iaa_complete = 0 if veh_failed else 1
+if veh_failed: print(f"  !! IAA INCOMPLETE: {', '.join(veh_failed)} not parsed - vehicle total is partial; share will be NULL")
+
 # dedupe vehicles across the three files (defensive; observed 0 overlap)
 seen = set(); veh_u = []
 for r in veh:
@@ -163,6 +173,9 @@ print(f"vehicles={len(veh_u):,} (dup dropped {len(veh)-len(veh_u)})  branches={l
 
 # ---- 4. same-day guard + store -----------------------------------------------------
 con = db()
+for _col, _typ in (("iaa_complete", "INT"), ("copart_overlap_pct", "REAL"), ("usable", "INT")):
+    try: con.execute(f"ALTER TABLE duopoly_daily ADD COLUMN {_col} {_typ}")
+    except sqlite3.OperationalError: pass
 prev = con.execute("SELECT snapshot_utc, count(*) FROM iaa_vehicle_snapshots WHERE substr(snapshot_utc,1,10)=? GROUP BY 1 ORDER BY 2 DESC LIMIT 1", (TODAY,)).fetchone()
 replace = True; note = ""
 if not veh_u:
@@ -195,11 +208,19 @@ cp_snap = cp[0] if cp else None
 if cp_snap and veh_u:
     tot = con.execute("SELECT count(DISTINCT lot_id) FROM lot_snapshots WHERE snapshot_utc=?", (cp_snap,)).fetchone()[0]
     us = con.execute("SELECT count(DISTINCT lot_id) FROM lot_snapshots WHERE snapshot_utc=? AND length(state)=2 AND state GLOB '[A-Z][A-Z]'", (cp_snap,)).fetchone()[0]
-    share = 100 * us / (us + len(veh_u))
-    stale = "" if cp_snap[:10] == TODAY else f"copart snapshot is from {cp_snap[:10]}"
-    con.execute("INSERT OR REPLACE INTO duopoly_daily VALUES(?,?,?,?,?,?,?,?,?,?,?)",
-                (SNAP, TODAY, cp_snap, us, tot, len(veh_u), len(set(x[1] for x in br)), len(auc), round(share, 2), round(pct4, 1), stale))
-    print(f"\nDUOPOLY {TODAY}: Copart US {us:,} (total {tot:,}, snap {cp_snap}) | IAA US {len(veh_u):,} | Copart share {share:.1f}%  {stale}")
+    cr, cl = con.execute("SELECT count(*), count(DISTINCT lot_id) FROM lot_snapshots WHERE snapshot_utc=?", (cp_snap,)).fetchone()
+    ov = round(100.0 * (cr - cl) / cr, 2) if cr else None                      # cross-page overlap = Copart quality gate (<=1% usable)
+    share = round(100 * us / (us + len(veh_u)), 2) if iaa_complete else None   # never publish a share off a partial IAA count
+    usable = 1 if (iaa_complete and ov is not None and ov <= 1.0) else 0
+    notes = []
+    if cp_snap[:10] != TODAY: notes.append(f"copart snapshot is from {cp_snap[:10]}")
+    if veh_failed: notes.append(f"iaa incomplete: {','.join(veh_failed)} failed")
+    if ov is not None and ov > 1.0: notes.append(f"copart overlap {ov}% > 1 (ungated)")
+    con.execute("INSERT OR REPLACE INTO duopoly_daily(snapshot_utc,day,copart_snapshot,copart_us_lots,copart_total_lots,iaa_vehicles,iaa_branches,iaa_auctions,"
+                "copart_share_pct,iaa_lastmod_4day_pct,note,iaa_complete,copart_overlap_pct,usable) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                (SNAP, TODAY, cp_snap, us, tot, len(veh_u), len(set(x[1] for x in br)), len(auc), share, round(pct4, 1), "; ".join(notes), iaa_complete, ov, usable))
+    print(f"\nDUOPOLY {TODAY}: Copart US {us:,} (total {tot:,}, overlap {ov}%, snap {cp_snap}) | IAA US {len(veh_u):,}{'' if iaa_complete else ' PARTIAL'} | "
+          f"Copart share {('%.1f%%' % share) if share is not None else 'n/a'} | usable={usable}  {'; '.join(notes)}")
 con.commit()
 rows = con.execute("SELECT * FROM duopoly_daily ORDER BY snapshot_utc").fetchall()
 cols = [d[1] for d in con.execute("PRAGMA table_info(duopoly_daily)")]

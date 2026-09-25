@@ -1420,3 +1420,29 @@ T3.13), FRED LTRUCKNSA, and the CCC Crash Course statements already on disk.
 HLDI claim frequency by vehicle age (measured R); CCC 2026 Figures 18/22 data labels (interior of P; settles 45.3%);
 S&P 2025 average-age release (primary count anchors); Experian Q3-2025 VIO by model year (the −12M definition);
 a depreciation curve by age (structural P). Full list with reasons: `docs/AGE_CURVES.md` §7.
+
+---
+
+# ADDENDUM 17 — 2026-09-25: two weeks of the live collectors, audited
+
+## Copart (lot.xml, nightly ~23:00Z; 15 captures 09-08 → 09-24, 09-09 missed)
+1. **The listing has shrunk to three sitemap pages.** `lot4` returned 0 rows on every run since 09-10 (55 on 09-14); `lot3`
+   is partial (37,875–49,999 rows) and varies nightly. Union counts run 128k–149k.
+2. **The day-to-day swing is page sync, not flow.** Consecutive-day churn is 20–45k lots (15–30%) on out-of-sync days and
+   369 new / 763 gone on the one perfectly in-sync pair (09-12 → 09-13). The collector's own warning is right: lot.xml is
+   a rotating/out-of-sync sample. **Daily new-lot inflow is NOT a usable assignments proxy.** Negative result; keep it.
+3. **The overlap gate still works.** 8 of 16 nights pass ≤1% cross-page overlap (09-10, 12, 13, 17, 18, 20, 21, 23).
+   Gated-night mean union = **143,562** (range 137.8k–149.4k). Against the usable 2025-09-01 base of 153,101:
+   **−6.2% YoY**; against 2026-01-01 (159,593): −10%. Reported US inventory YoY was −4.7% (Apr-30) and −3.4% (Jul-31);
+   the sitemap says the decline has not reversed into September. Listed inventory, not yard inventory; one base capture.
+4. Sale events stable at 620–630 dated events across 223–225 US yards every night — the facility series is accruing.
+
+## IAA (vehicle sitemaps; 15 runs)
+5. **`sitemap3` was throttled on 11 of 15 runs** (9 "Pardon Our Interruption" pages, 2 connection errors), so the stored
+   vehicle total was the 89,999 of sitemaps 1+2 and the published Copart share (60–62%) was WRONG on those days.
+   Complete days: 09-11 102,976 · 09-16 105,898 · 09-17 103,677 · 09-18 103,235 → IAA ~103–106k, stable.
+6. **Fix (this commit).** `job1_iaa.py` now (a) pauses 90 s between the three ~6.8 MB vehicle sitemaps (spreading volume,
+   not evading anything), (b) records `iaa_complete`, `copart_overlap_pct` and `usable` on `duopoly_daily`, and (c) never
+   writes a share off a partial IAA count. History re-flagged, three duplicate-day rows dropped, CSV re-exported.
+7. **Clean duopoly reads so far (both sides gated): 09-11 57.05% · 09-17 57.45% · 09-18 56.75%.** Copart ≈ 57% of listed
+   US duopoly inventory. Kill condition for the pitch remains share < 55% by mid-October, now measured only on `usable=1` days.

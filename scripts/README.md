@@ -13,7 +13,7 @@ robots-disallowed path.
 |---|---|---|
 | `prov.py` | LIVE | Provenance-logged, rate-limited fetcher. Per-host headers (SEC wants a descriptive UA; Copart/IAA want a conventional browser set). Retries WAF challenges with backoff; refuses disallowed URLs. |
 | `job1_snapshot.py` | LIVE | **Job 1.** Copart daily sitemap snapshot: `sale-list-results.xml` + `lot.xml` pages 1–4. Robots parsed from the saved live file; cross-page overlap as a quality gate; same-day guard v3. |
-| `job1_iaa.py` | LIVE | **Job 1b.** IAA daily sitemap snapshot → `duopoly_daily` (Copart vs IAA listed US inventory). Small files first (IAA volume-throttles); never parses a challenge page. `--from-dir` loads saved XML. |
+| `job1_iaa.py` | LIVE | **Job 1b.** IAA daily sitemap snapshot → `duopoly_daily` (Copart vs IAA listed US inventory). Small files first, then the three ~6.8 MB vehicle sitemaps 90 s apart (IAA volume-throttles bursts); never parses a challenge page; records `iaa_complete` / `copart_overlap_pct` / `usable` and publishes a share only when both sides are clean. `--from-dir` loads saved XML. |
 | `run_job1.sh` | LIVE | Nightly runner invoked by LaunchAgent `com.cprt.job1` (`com.cprt.job1.plist`, 18:45 local). |
 | `reported_series.py` | ONE-OFF | **Hand-transcribed** quarterly unit / inventory / ASP series from 16 earnings calls (authoritative; the regex parser was discarded — see dead-ends). |
 

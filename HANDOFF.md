@@ -74,6 +74,12 @@ everything with `scripts/analysis_20260911.py`.
    S&P average age** (the blueprint tab did; that is its flat-survival artefact). ⚠ "45.3% TL at 13+" is unsourced.
    Demographic TLF drift is **+0.16pp/yr** (0.04–0.18), a quarter of the 2019→25 rise. `findings.md` Addendum 16.
 
+10. **§5 / §9 — collectors audited after two weeks (2026-09-25).** IAA's third vehicle sitemap was throttled on 11 of 15
+   nights, so the duopoly share was overstated on those days; the collector now paces the big files 90 s apart, flags
+   completeness, and only publishes a share on `usable=1` days (clean reads ≈ 57%). Copart's lot.xml is down to three
+   pages and out of sync night to night — the overlap gate (≤1%) is mandatory and **daily inflow is not an assignments
+   proxy**. Gated September listing ≈ 143.6k vs 153.1k on 2025-09-01 (−6.2% YoY). `findings.md` Addendum 17.
+
 ## 0. How to read this document
 
 There are **two prior handoff documents** in this repo and they contradict each other:
