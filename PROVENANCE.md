@@ -178,4 +178,4 @@ concurrent requests against a single host.
 
 Every request above is also in `logs/provenance.jsonl` / `data/cprt.db` `provenance` via `scripts/prov.py`,
 except the CCC/BLS/FRED/CollisionWeek/SEC probe fetches made by the 2026-09-11 feasibility agents, which
-logged URL, status, byte count and retrieval time in their own reports (summarised in `HANDOFF.md` §9).
+logged URL, status, byte count and retrieval time in their own reports (summarised in `docs/archive/HANDOFF_2026-09-11_updated-to-09-25.md` §9).

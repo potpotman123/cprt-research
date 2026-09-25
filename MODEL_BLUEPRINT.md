@@ -57,7 +57,7 @@ bridge. B and D as appendix exhibits unless A and C are green by day 10. E is on
 | `Hist_Industry` | CCC, BLS, Fast Track, PGR, GEICO, RBA, duopoly, FRED sales | see §10 |
 | `Calib_TLF` | ΔTLF ~ spread(t−1), live SLOPE/INTERCEPT/RSQ | `ccc_tlf_quarterly.csv`, `totaling_spread_quarterly.csv` |
 | `Calib_RPU` | ASP ~ used-car CPI; service RPU ~ ASP | `elasticity_rebuild.csv`, `reported_units.csv` |
-| `A_CohortRoll` | fleet cohort roll → baseline TLF | blueprint built: `model/blueprint_A_CohortRoll.xlsx` |
+| `A_CohortRoll` | fleet cohort roll → baseline TLF | **built as live formulas in `model/CPRT_Intermediate.xlsx`** (Survival, Fleet, FleetByAge, Curves, TLF_Roll). The earlier worked example `model/legacy/blueprint_A_CohortRoll.xlsx` is kept only as a record — its survival curve was calibrated to S&P average age, which `docs/AGE_CURVES.md` §2.3 shows is the wrong target |
 | `B_CarrierBook` | named carriers + "all other" → share and mix | Stephens carrier table (shares only), PGR PIF, Berkshire, NAIC republishers |
 | `C_FeeGrid` | fee schedule × ASP distribution → service RPU | **needs a hand read of the fee pages in a browser** |
 | `D_Yards` | yards × lots/event → facility cost | `yard_panel_us.csv`, `lots_per_sale_event.csv`, `facility_ops_quarterly.csv` |
