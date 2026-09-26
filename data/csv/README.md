@@ -32,6 +32,7 @@ The IHS-sourced ORNL tables (3.11, 3.12, 3.13 — census by age, average age) ar
 | `totaling_spread_quarterly.csv` | ANALYSIS | repair-CPI YoY − used-car-CPI YoY, quarterly mean | `months < 3` rows are partial quarters |
 | `tlf_calibration.csv` | ANALYSIS | ΔTLF = a + b·spread(t−1): a, b, se, R², residual autocorrelation, effective n, OOS MAE | effective n ≈ 6 on the non-comp variant |
 | `recovery_divergence_quarterly.csv` | ANALYSIS | Copart insurance ASP YoY − used-car CPI YoY by quarter with ΔTLF and spread; the salvage-recovery check (`scripts/recovery_divergence_check.py`) | n = 14 overlap; negative result, see Addendum 18 |
+| `listed_body_share_monthly.csv` | ANALYSIS | Light-truck (pickup/SUV/van) share of Copart's listed pool by capture, 2022-08 → 2026-09, from lot slugs; salvage vs clean split; ambiguity band (`scripts/experiments/e1_listed_body_share.py`, `reports/E1_step1_listed_body_share.md`) | listings, not total losses; archive captures may be page-out-of-sync (shares only) |
 | `asp_vintage_effect.csv` | ANALYSIS | Sticker index of the modelled total-loss pool by year, its YoY change (the vintage effect), mean model year and light-truck share (`scripts/asp_vintage_effect.py`) | level assumes a model year's sticker tracks new-vehicle CPI of its vintage; 2026+ vintages held flat |
 | `cpi_insurance_repair_yoy.csv` | LEGACY | Earlier two-series CPI extract (2021–2026) | superseded by `cprt_cpi_three_series.csv` |
 
