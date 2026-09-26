@@ -1,6 +1,6 @@
 # CPRT research — Copart, Inc. (NASDAQ: CPRT)
 
-Research pipeline behind a **pitch on Copart — long or short, decided by the analyses** (direction opened 2026-09-26; see `HANDOFF.md` §1): public, robots-compliant data with a logged provenance trail,
+Research pipeline behind a **pitch on Copart — direction decided 2026-09-26: SHORT on a 3–6 month horizon, with stated flip conditions** (see `SHORT_THESIS_HANDOFF_2026-09-26.md`): public, robots-compliant data with a logged provenance trail,
 calibrated mechanisms, and one workbook the model is built from. **Licensed content (transcripts, sell-side, the
 reference model) is gitignored and never committed.**
 
@@ -8,6 +8,7 @@ reference model) is gitignored and never committed.**
 
 | Read | For |
 |---|---|
+| **`SHORT_THESIS_HANDOFF_2026-09-26.md`** | **Start here if you are continuing the work: direction decided (short, 3–6 months), the business and model from the bottom up in plain terms, every experiment's result, quality of each component, the sell-side reference, the quantified thesis, weaknesses and next steps in order.** |
 | **`NEXT_STEPS_FOR_OTHER_CLAUDE_FABLE.md`** | **For a second Fable session with a fresh budget:** the expensive experiments, each specified end to end (goal, the explanation being tested, steps and why, cost, cheaper alternatives, kill criteria, deliverable). Start here if you were sent this repo to run them. |
 | **`HANDOFF.md`** | **The whole project by research thread: what was tried, why, what was found, where it led, what is still open.** Confidence labelled on every result. Read §0–§3 first. |
 | **`MODEL_BLUEPRINT.md`** | The model architecture — mechanisms A–E, the units identity, the RPU chain, tab map, build order, checks. |

@@ -99,7 +99,7 @@ the sources are not. The GitHub remote is private.
 8. **Everything was assembled into one styled workbook** the user copies from (§4), verified cell by cell against the
    scripts, and the collectors were audited after two weeks, which found and fixed a bug in the IAA share (§3G).
 
-**Direction is open (owner's instruction, 2026-09-26).** Everything before this date was written toward a long. Two
+**Direction decided at the end of 2026-09-26: SHORT on a 3–6 month horizon, with flip conditions (`SHORT_THESIS_HANDOFF_2026-09-26.md`). The paragraph below records how it was opened.** **Direction was opened (owner's instruction, 2026-09-26).** Everything before this date was written toward a long. Two
 findings from the second session cut the other way and must be weighed without a thumb on the scale: (1) the ageing-fleet
 contribution to total-loss frequency is measured from CCC's own buckets as ≈0 since 2023 (`reports/CCC_age_buckets_2026.md`),
 so the demographic tailwind has already passed through; (2) light trucks total about three-quarters as often as cars of the

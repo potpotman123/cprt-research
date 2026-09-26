@@ -1740,3 +1740,10 @@ reported as blocked with their status codes. New code under `scripts/experiments
   elective long-haul investment (BNP/CFO), ~$17M (Barclays); yards ~60% utilised, land ~$4B vs $2.4B book (JPM).
 - **For mechanism D:** the FY26Q4 per-unit cost jump (+14.2% US facility cost/unit) is partly elective; strip long-haul before
   reading it as deleverage.
+
+## F. Decision (owner, end of session)
+- Pitch a SHORT on a 3–6 month horizon, target ~20% below $27.59, mechanism = revenue-per-car deceleration (fee intercept
+  fading in the first clean quarter: 1.6–2.6 pts vs the +4.1 regression average) into a still-negative unit base, plus
+  elective cost growth and ACV dilution; concede the market-share point; publish flip conditions. Full context, the plain-terms
+  model walk-through, experiment scorecard, component quality, and ordered next steps: `SHORT_THESIS_HANDOFF_2026-09-26.md`.
+
