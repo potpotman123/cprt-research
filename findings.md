@@ -1641,6 +1641,14 @@ requests through `prov.py`; new code under `scripts/experiments/`; each experime
   `ASP_Drivers!B4` set to 1.50; workbook rebuilt; verify ALL CHECKS OK. Body mix now explains ~+0.5–0.8pp/yr of the ASP
   intercept; with vintage (~1.0) about half of the 3.3pp is named.
 
+## E2. E6 — the fee grids, read live (`reports/E6_fee_grid.md`)
+- Copart has two schedules (Standard: 7.25% clean / 7.50% non-clean above $15k; Preferred for ≥25 units and ≥$75K/yr: 5.75% /
+  6.00%), 45 fixed-dollar bands below $15k, non-clean title a distinct higher grid, gate $79/$95, environmental $15, virtual-bid
+  $39–160. **IAA's grids are identical to Copart's non-clean grids band for band** (0 mismatches at 45 prices on both tiers; heavy
+  and internet-bid fees too), dated "Effective November 4, 2024"; IAA adds a $105 service fee effective 2026-10-01.
+- Simulation: the grid's convexity gives a buyer-fee elasticity to price of 0.4–0.5 for any plausible lognormal price
+  distribution (median $2.5–7k ASSUMED) — the mechanism behind the measured 0.514.
+
 ## F. Blockers and negatives (paste the status codes)
 - FRED `fredgraph.csv` timed out on every attempt today (`[Errno 60] Operation timed out`, 4 attempts, robots.txt too);
   E7 step 1 (dollar index) waits. Not a block; a network condition.
