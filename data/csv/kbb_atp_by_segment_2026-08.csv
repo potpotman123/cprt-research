@@ -1,0 +1,23 @@
+# Kelley Blue Book / Cox Automotive average transaction prices by segment, August 2026 (raw/cox/august-2026-atp-data-tables.pdf, fetched 2026-09-26 from coxautoinc.com; robots allows). New-vehicle transaction prices excluding applied incentives. VERIFIED. Used in E8 for the light-truck vs car sticker ratio.
+segment,body,atp_aug2026_usd,atp_aug2025_usd,yoy_pct
+Compact Car,car,27997,27203,2.9
+Mid-size Car,car,33909,33707,0.6
+Subcompact Car,car,37622,25036,50.3
+Sports Car,car,43110,50635,-14.9
+Luxury Car,car,60243,60555,-0.5
+Entry-level Luxury Car,car,60618,57823,4.8
+High-end Luxury Car,car,123947,119598,3.6
+High Performance Car,car,137988,134057,2.9
+Subcompact SUV/Crossover,suv,31149,30464,2.2
+Compact SUV/Crossover,suv,37722,37313,1.1
+Mid-size SUV/Crossover,suv,50315,49526,1.6
+Full-size SUV/Crossover,suv,79710,76954,3.6
+Lux. Subcompact SUV/Crossover,suv,47175,46360,1.8
+Luxury Compact SUV/Crossover,suv,54963,54741,0.4
+Luxury Mid-size SUV/Crossover,suv,74605,73828,1.1
+Luxury Full-size SUV/Crossover,suv,100282,101927,-1.6
+Small/Mid-size Pickup Truck,pickup,43806,43294,1.2
+Full-size Pickup Truck,pickup,67446,66042,2.1
+Minivan,van,49151,48642,1.0
+Van,van,64645,60285,7.2
+Industry Average,all,50089,49163,1.9
