@@ -57,6 +57,7 @@ The IHS-sourced ORNL tables (3.11, 3.12, 3.13 — census by age, average age) ar
 |---|---|---|---|
 | `reported_units.csv` | RAW | Quarterly US inventory, US insurance units (incl./ex-CAT), US insurance ASP, global ASP, global insurance units YoY — **hand-transcribed from earnings calls** (`scripts/reported_series.py`) | Tier 2; no filing discloses these |
 | `stephens_exhibit7.csv` | RAW | Numeric exhibit from a sell-side preview, transcribed for corroboration (15/15 match) | its global-ASP column is shifted one quarter — **never regress on it** |
+| `street_estimates_2026-09.csv` | RAW | Sell-side ratings, price targets, FY26–29 revenue/EBITDA/EPS and unit assumptions transcribed from 13 broker notes supplied 2026-09-26 (`reports/street_reference_2026-09.md`) | licensed PDFs stay in `raw/sellside/`; Bloomberg/Visible Alpha consensus as quoted by each broker on its date |
 | `quarterly_pl.csv`, `quarterly_margin.csv`, `quarterly_segments.csv`, `segment_service_rev_8k.csv`, `facility_ops_quarterly.csv` | RAW | 8-K Ex-99.1 press-release lines | Tier 1 |
 | `sec_annual.csv` | RAW | 10-K XBRL annual figures (`scripts/sec_extract.py`) | Tier 1 |
 | `elasticity_rebuild.csv` | ANALYSIS | 17 quarters: service and total revenue YoY, global units and ASP YoY, implied RPU YoY, fee/mix component | the basis-matched inputs behind β = 0.514 |

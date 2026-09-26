@@ -1726,3 +1726,17 @@ reported as blocked with their status codes. New code under `scripts/experiments
 - `raw/` is absent here (gitignored), so nothing that reads licensed or archived files (`age_curves.py`, `asp_vintage_effect.py`,
   the transcripts, the HLDI PDFs) can run; E1 step 4 used the class ratios recorded in the step 3 report instead of the sheets.
 - pip from PyPI is allowed: numpy, openpyxl and pycel were installed to run the workbook build and verify.
+
+## E. Sell-side notes read (13 PDFs supplied by the owner; `reports/street_reference_2026-09.md`, `data/csv/street_estimates_2026-09.csv`)
+- **No target near $27.59.** Barclays UW $25 (10× FY26 EBITDA; downside $21 at 8×) is the only target below spot and the reference
+  bear; Stephens EW $35 (13.5× FY27 EBITDA $2,033M, EPS $1.67, US units +1.3%, **US RPU +2.0% every FY27 quarter**) is the
+  reference base and the named opponent on RPU. JPM went from OW $40 (09-03) to Not Rated (09-11; it advised ACV). BNP $40,
+  HSBC $46, Jefferies $45, Equisights $43. Bloomberg consensus FY27 EPS $1.68 / FY28 $1.78 on 09-10; post-print models 1.56–1.62.
+- At $27.59 the stock is ~11× FY26A EBITDA pre-ACV cash out, ~12× after; ~17× FY27E EPS. Between Barclays' 10× and Stephens' 13.5×.
+- **New facts for open questions:** international buyers 38.2% of US units / 45.7% of dollars (FQ4 call via BNP; closes the E7
+  step-2 gap); buyers <1yr / <2yr on the platform 8.9% / 21.7% of FY26 units; Copart's last buy-side fee increase November 2024
+  (JPM; same month as IAA's grid date); sell-side fees at a peer near breakeven for a large carrier vs ~$100/unit variable cost
+  (JPM channel check); GEICO win cost CPRT 25–50bp of take rate, visible F2Q27 (Barclays); >½ of the $30M yoy yard-cost rise was
+  elective long-haul investment (BNP/CFO), ~$17M (Barclays); yards ~60% utilised, land ~$4B vs $2.4B book (JPM).
+- **For mechanism D:** the FY26Q4 per-unit cost jump (+14.2% US facility cost/unit) is partly elective; strip long-haul before
+  reading it as deleverage.
