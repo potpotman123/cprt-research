@@ -9,11 +9,11 @@ Test, all from data on disk:
   divergence(q) = Copart US insurance ASP YoY (transcripts) − used-car CPI YoY (BLS SA, fiscal-quarter average),
                   mapped to the calendar quarter sharing two of three months.
   ΔTLF(q+1) regressed on spread(q) alone and with divergence(q) (raw, and orthogonalised on CPI to remove the shared
-  −CPI component). n = 11 overlapping quarters — a direction check, not a coefficient to pitch.
+  −CPI component). n = 14 overlapping quarters — a direction check, not a coefficient to pitch.
 
 Result (2026-09-25): divergence averages +4.2pp/yr and is persistent, but adds nothing to the spread regression on this
-sample; its marginal coefficient is NEGATIVE (wrong sign) and the two regressors are 0.85 correlated. Contemporaneous
-correlation with ΔTLF is +0.64, which is what selection/mix would produce (more totals -> higher average salvage price),
+sample; its marginal coefficient is NEGATIVE (wrong sign) and the two regressors are 0.69 correlated. Contemporaneous
+correlation with ΔTLF is +0.54, which is what selection/mix would produce (more totals -> higher average salvage price),
 so it cannot identify the mechanism. Findings.md Addendum 18. Output: data/csv/recovery_divergence_quarterly.csv
 """
 import csv, math, pathlib, statistics as st
@@ -65,6 +65,6 @@ for lab, X in (("spread only", [[1, s] for s in sp]), ("spread + divergence", [[
     beta, r2 = ols(X, y); print(f"  ΔTLF(t+1) ~ {lab:32s} a={beta[0]:+.3f} b_spread={beta[1]:+.4f}" + (f" c_div={beta[2]:+.4f}" if len(beta) > 2 else "") + f" R²={r2:.3f}")
 print(f"  corr(ΔTLF(t+1), div(t))={corr(y, dv):+.2f}; corr(ΔTLF(t), div(t))={corr([r['dtlf_same_q'] for r in S if r['dtlf_same_q'] is not None], [r['divergence_pp'] for r in S if r['dtlf_same_q'] is not None]):+.2f} (contemporaneous — selection/mix, not identification)")
 with open(D / 'recovery_divergence_quarterly.csv', 'w', newline='') as fh:
-    fh.write("# Salvage-recovery divergence check (scripts/recovery_divergence_check.py, 2026-09-25): Copart US insurance ASP YoY (transcripts; FY26Q4 from the 2026-09-10 call) minus used-car CPI YoY (BLS CUSR0000SETA02, fiscal-quarter avg), by fiscal quarter mapped to the calendar quarter sharing 2 of 3 months; CCC all-loss TLF changes; totaling spread. Result: divergence persistent (~+4pp/yr) but adds nothing to the spread regression on n=11 (marginal coefficient negative). findings.md Addendum 18.\n")
+    fh.write("# Salvage-recovery divergence check (scripts/recovery_divergence_check.py, 2026-09-25): Copart US insurance ASP YoY (transcripts; FY26Q4 from the 2026-09-10 call) minus used-car CPI YoY (BLS CUSR0000SETA02, fiscal-quarter avg), by fiscal quarter mapped to the calendar quarter sharing 2 of 3 months; CCC all-loss TLF changes; totaling spread. Result: divergence persistent (~+4pp/yr) but adds nothing to the spread regression on n=14 (marginal coefficient negative). findings.md Addendum 18.\n")
     w = csv.DictWriter(fh, fieldnames=list(rows[0].keys())); w.writeheader(); w.writerows(rows)
 print("-> data/csv/recovery_divergence_quarterly.csv")

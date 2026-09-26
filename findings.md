@@ -1464,19 +1464,19 @@ our transcript series (MEASURED, Tier 2 provenance). Mix is a competing explanat
 drivable cars raise the average salvage price without any per-car recovery gain.
 
 ## 2. It does NOT add to the spread regression — on a small sample, with the wrong sign
-On the 11 quarters where ΔTLF(t+1), spread(t) and divergence(t) all exist (2022Q2–2026Q1):
+On the 14 quarters where ΔTLF(t+1), spread(t) and divergence(t) all exist (2022Q2–2026Q1):
 
 | model | intercept | b_spread | c_divergence | R² |
 |---|---|---|---|---|
-| spread only | +0.50 | +0.078 | — | 0.51 |
-| spread + raw divergence | +0.67 | +0.121 | **−0.147** | 0.57 |
-| spread + divergence orthogonalised on CPI | +0.41 | +0.084 | **−0.170** | 0.60 |
+| spread only | +0.50 | +0.077 | — | 0.50 |
+| spread + raw divergence | +0.58 | +0.101 | **−0.083** | 0.56 |
+| spread + divergence orthogonalised on CPI | +0.42 | +0.080 | **−0.100** | 0.58 |
 
-The two regressors are 0.85 correlated because both subtract used-car CPI; once the spread is in, the divergence's
+The two regressors are 0.69 correlated because both subtract used-car CPI; once the spread is in, the divergence's
 marginal coefficient is negative, the opposite of the hypothesis. The contemporaneous correlation of ΔTLF with the
-divergence is +0.64, which is exactly what selection would produce (the note's own caveat: auction prices are observed
+divergence is +0.54 (lead correlation only +0.32), which is exactly what selection would produce (the note's own caveat: auction prices are observed
 after the totaling decision). **Verdict: no support in our data for salvage-recovery divergence as a driver of the TLF
-residual; not a refutation either — n=11, realised ASP is not the recovery estimate the adjuster used, and the
+residual; not a refutation either — n=14, realised ASP is not the recovery estimate the adjuster used, and the
 fiscal-to-calendar mapping is two-of-three months.** The 0.6pp/yr unexplained drift stays unexplained.
 
 Not tested, and worth knowing: the mechanism can only operate where the state's total-loss rule puts salvage value in
@@ -1489,3 +1489,5 @@ give scheduled sale dates per branch (185–191 branches, 1.55–1.93 scheduled 
 over two weeks), a weak cadence proxy, not a workload measure. A congestion test needs carrier-by-yard volumes, which
 exist only in paid alternative data. The note's own conclusion stands: local hypothesis, national version not passed,
 and the Stephens preview already cites Yipit data on GEICO share movement, so it is not novel.
+
+*Note: a first inline run of this check reported n=11 with larger (still negative) coefficients; it mishandled the quarter shift across year ends. The committed script is authoritative and the table above is from it.*

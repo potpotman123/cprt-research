@@ -31,7 +31,7 @@ The IHS-sourced ORNL tables (3.11, 3.12, 3.13 — census by age, average age) ar
 | `cprt_cpi_three_series.csv` | RAW | BLS CPI used cars, vehicle repair, vehicle insurance; SA and NSA; YoY; footnote codes | Oct-2025 (repair) and Oct+Nov-2025 (insurance) are BLS gaps, left blank |
 | `totaling_spread_quarterly.csv` | ANALYSIS | repair-CPI YoY − used-car-CPI YoY, quarterly mean | `months < 3` rows are partial quarters |
 | `tlf_calibration.csv` | ANALYSIS | ΔTLF = a + b·spread(t−1): a, b, se, R², residual autocorrelation, effective n, OOS MAE | effective n ≈ 6 on the non-comp variant |
-| `recovery_divergence_quarterly.csv` | ANALYSIS | Copart insurance ASP YoY − used-car CPI YoY by quarter with ΔTLF and spread; the salvage-recovery check (`scripts/recovery_divergence_check.py`) | n = 11 overlap; negative result, see Addendum 18 |
+| `recovery_divergence_quarterly.csv` | ANALYSIS | Copart insurance ASP YoY − used-car CPI YoY by quarter with ΔTLF and spread; the salvage-recovery check (`scripts/recovery_divergence_check.py`) | n = 14 overlap; negative result, see Addendum 18 |
 | `cpi_insurance_repair_yoy.csv` | LEGACY | Earlier two-series CPI extract (2021–2026) | superseded by `cprt_cpi_three_series.csv` |
 
 ## Copart reported series and the units decomposition
