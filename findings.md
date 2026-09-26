@@ -1599,3 +1599,55 @@ own cycle is missing. Either way the residual is where the next driver search go
 disk gives it. Options ranked by cost: a manual read of a public sale-price listing (user), or a fetch of a public
 auction-results page (robots status unknown — check first). A working guess of 1.3–1.5 would make the body-mix effect
 +0.4 to +0.8pp/yr (LT share of the TL pool rising ~1.7pp/yr), which with vintage would explain roughly half of the 3.3.
+
+---
+
+# ADDENDUM 22 — 2026-09-26 (second Fable session): Phase A of the expensive experiments
+
+Scope: `reports/00_scoping_2026-09-26.md` (approved by the owner: Phase 0 and A; commit each experiment as it lands). All
+requests through `prov.py`; new code under `scripts/experiments/`; each experiment has a report under `reports/`.
+
+## A. E10 — the two documents (`reports/E10_filings.md`)
+- **Copart's FY26 10-K is not filed** as of 09-26 17:00Z (last three were filed Sept 26/30/28). Re-check daily.
+- **ACV's SC 14D-9 (filed 09-17) read.** Standalone projections VERIFIED: revenue $857M/$964M/$1,116M/$1,322M/$1,525M
+  (2026E–2030E), adj. EBITDA $78/$123/$187/$283/$382M, unlevered FCF −$97/−$69/−$8/+$37M (2027E–2030E). J.P. Morgan DCF
+  $9.50–13.00 (WACC 10–11%, terminal growth 2.5–3.5%); comps $7.50–10.75; offer $10.50 vs $7.03 unaffected. A real auction:
+  Party A bid $10.50 (Aug 6) then $10.00 (Sept 8); Party B bid $11–12 cash and withdrew; reverse break fee $115.3M (~6%).
+  Copart's Offer to Purchase carries no synergy, integration, accretion or yard language. At $1.9B the deal is 15.4× 2027E
+  EBITDA and EPS-dilutive in FY27–28 on the standalone plan against ~$75M/yr of foregone interest.
+
+## B. E1 step 1 — listed light-truck share (`reports/E1_step1_listed_body_share.md`)
+- Light-truck share of Copart's listed salvage-title pool: 46.3% (2022) → 50.8% (2024) → 54.0% (2025) → 56.7% (Sep 2026,
+  17 live nights); all-light 47% → 58%; clean-title 52% → 64%. Roll's modelled TL share: 57.2% (2024), 60.7% (2026). Gap 4–6pp,
+  gate passed. Pickups flat at ~11% of the light pool; SUVs 33% → 41% do all the work. Trucks in the pool are newer (median
+  MY 2018 vs 2016 for cars).
+
+## C. E4 — off-lease cohort supply vs used-car CPI (`reports/E4_offlease_values.md`)
+- Growth form: no supply effect (t −0.8); new-vehicle CPI does the work. Killed as specified.
+- Level form (1995–2019): log(used/new) elasticity to the 2–4-year-old stock **−0.175 (t −5.1, R² 0.60)**; full-sample fit
+  collapses on 2021–22. The known stock path (sales through Aug-2026) implies used/new −2.6% by 2027Q2 and −4.9% by 2028Q2
+  → spread value side +2.6/+4.9pp → **ΔTLF +0.2pp (FY27) / +0.4pp (FY28)**. Small; the spread's action is on the repair side.
+
+## D. CCC 2026 chart data at full resolution (`reports/CCC_age_buckets_2026.md`) — the biggest upgrade of the day
+- **P by age bucket for every year 2020–2025** (Figure 19) and TL mix by bucket (Figure 18) are on the CCC page as chart
+  images with data labels. **"45.3% at 13+" is CY2025 in Figure 19** — the anchor dropped as unsourced in Addendum 16 is real.
+- Decomposition from CCC's own buckets, no fitted curves: 2020→2025 TLF +2.77pp = ageing mix **+1.75** + within-age
+  propensity **+1.02**; but 2022→2025 (+4.16pp) = mix **+0.29** + propensity **+3.80**. Ageing was a 2020–22 event (the
+  young-claims share collapsed with new sales); since 2023 it is ≈0. Supersedes the roll's +0.16pp/yr as the citable number.
+- Deductible shares quarterly 2021Q1–2025Q4 (Figure 2): $1,000+ from 19.3% to 28.1%, accelerating from 2023Q4.
+
+## E. E8 — body value ratio (`reports/E8_body_value_ratio.md`)
+- KBB ATP Aug-2026 by segment × iSeeCars 2026 5-yr retention: LT/car value ratio **1.58 at age 5** (range 1.3–1.7).
+  `ASP_Drivers!B4` set to 1.50; workbook rebuilt; verify ALL CHECKS OK. Body mix now explains ~+0.5–0.8pp/yr of the ASP
+  intercept; with vintage (~1.0) about half of the 3.3pp is named.
+
+## F. Blockers and negatives (paste the status codes)
+- FRED `fredgraph.csv` timed out on every attempt today (`[Errno 60] Operation timed out`, 4 attempts, robots.txt too);
+  E7 step 1 (dollar index) waits. Not a block; a network condition.
+- `api.census.gov/robots.txt` → "Request Rejected" (WAF). E7 step 3 closed from here.
+- HLDI: `/research-areas/vehicle-age` 404; `/api/hldilosses/getviewmodel` 404 on GET; the two 2025 bulletins are theft studies.
+  Class-level losses still not reached. iSeeCars `/car-depreciation-study` 404.
+- Copart fee pages: the 40 archived copies on disk are Angular stubs (0 dollar figures); management says on the calls "we
+  don't talk about fee schedules." E6 needs a human browser session.
+- The 10-K (fee language, revenue disaggregation, international buyers): the FY25 10-K says only that foreign importers are
+  "a significant part of our total buyer base" — no percentage.

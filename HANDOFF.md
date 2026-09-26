@@ -412,8 +412,9 @@ conclusions, and expect correction.
   the same answer within 1%. Confirm or replace.
 - **R(age) is fitted, not measured.** HLDI's insurance loss statistics by vehicle age would make it measured. We
   could not reach iihs.org from this environment; the user offered to pull manually.
-- **P(age)'s interior** (ages 7–15) is interpolation between bucket anchors. CCC's 2026 Figures 18 and 22 may carry
-  data labels by age group.
+- **P(age)'s interior — now MEASURED at bucket level.** CCC 2026 Figure 19 gives P for six age buckets, every year 2020–2025
+  (`data/csv/ccc_tl_share_by_age_2020_2025.csv`, `reports/CCC_age_buckets_2026.md`); "45.3% at 13+" is CY2025 in it. The
+  fitted single-year curve is still the interpolation between those buckets.
 - **The survival drift path** 2013→2024 is linear by assumption; only its endpoints are anchored. Forward, k is held
   flat, which is a choice.
 - **Experian's "12M fewer ≤6-year vehicles"** cannot be reproduced from sales; we suspect a definitional difference
@@ -427,9 +428,13 @@ conclusions, and expect correction.
 - **Listed inventory versus yard inventory** — coverage of the sitemap is unknown and may have changed with the
   shrink to three pages.
 - **Competition dates and the two-page limit** are from an uncited brief.
-- **Two documents would change conclusions:** the FY26 10-K (expected late Sept–early Oct) and ACV's SC 14D-9 with
-  management projections.
-- **The IAA pacing fix** has not yet run a full night.
+- **ACV's SC 14D-9 is read** (`reports/E10_filings.md`, Addendum 22): projections verified, FCF-negative through 2029,
+  a rival bid at $11–12 that withdrew. **The FY26 10-K is still not filed** (checked 2026-09-26).
+- **The IAA pacing fix** worked on 2026-09-25 (all three sitemaps clean) but the Copart side was ungated that night, so no
+  usable duopoly share yet.
+- **Second-session experiments (2026-09-26):** scope in `reports/00_scoping_2026-09-26.md`; results so far in Addendum 22 and
+  `reports/E1_step1_*.md`, `E4_*.md`, `E8_*.md`, `E10_*.md`, `CCC_age_buckets_2026.md`. E2, E3, E6 (human step) and E1 steps 3–6 are
+  open.
 
 ---
 

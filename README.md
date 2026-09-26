@@ -13,7 +13,8 @@ reference model) is gitignored and never committed.**
 | **`MODEL_BLUEPRINT.md`** | The model architecture — mechanisms A–E, the units identity, the RPU chain, tab map, build order, checks. |
 | **`model/CPRT_Intermediate.xlsx`** | The workbook to copy from: every dataset as a tab plus live formulas (fleet roll, age curves, Solver calibration, TLF drift, spread and RPU regressions, checks). Rebuild with `scripts/build_intermediate_xlsx.py`. |
 | `docs/AGE_CURVES.md` | How S(age), R(age), P(age) are derived and validated, and what is fitted versus measured. |
-| `findings.md` | The lab notebook — every result in chronological addenda, **including every retraction**. |
+| `findings.md` | The lab notebook — every result in chronological addenda, **including every retraction**. Addendum 22 = the 2026-09-26 experiment session. |
+| `reports/` | One report per experiment from the second session (E1, E4, E8, E10, CCC age buckets) and the scoping doc. |
 | `PROVENANCE.md` | Every host touched, its robots.txt status, what was fetched, where it is saved. |
 | `ARCHITECTURE.md` | How the collector and the sitemap data physically work, and the bugs found the hard way. |
 | `scripts/README.md`, `data/csv/README.md` | One line per script and per dataset: what it is and whether it is live, analysis, dead-end or legacy. |
