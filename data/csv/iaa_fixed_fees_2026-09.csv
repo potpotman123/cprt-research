@@ -1,0 +1,7 @@
+# IAA fixed and conditional buyer fees as printed on the licensed buyer fee page 2026-09-26. VERIFIED (page text).
+read_date,page,fee,amount_usd,effective,quote
+2026-09-26,licensed,service_fee,105,2026-10-01,"Service Fee: $105 per unit for vehicle handling, including imaging, pull-out, and/or loading"
+2026-09-26,licensed,title_handling_fee,20,,A $20 fee will be applied to all purchases
+2026-09-26,licensed,premium_imagery_set_fee,10,,"$10 per unit, applied only to eligible vehicles that include a Premium Imagery Set"
+2026-09-26,licensed,ehs_fuel_surcharge,not stated on page,,"surcharge designed to help defray our fluctuating energy, fuel, and utility costs ... not a government-mandated tax or fee"
+2026-09-26,licensed,storage,by branch,,Please check with your local branch regarding the total cost of per-day storage fees
