@@ -1491,3 +1491,70 @@ exist only in paid alternative data. The note's own conclusion stands: local hyp
 and the Stephens preview already cites Yipit data on GEICO share movement, so it is not novel.
 
 *Note: a first inline run of this check reported n=11 with larger (still negative) coefficients; it mishandled the quarter shift across year ends. The committed script is authoritative and the table above is from it.*
+
+---
+
+# ADDENDUM 19 — 2026-09-25: four corrections prompted by an external review of this repo
+
+Another model reviewed the repo and the workbook and raised four points. Each was checked against our own files; all
+four stand, and the documents are corrected (`MODEL_BLUEPRINT.md` §D and §8, `HANDOFF.md` §3C/§3F/§3H, `README.md`,
+the RPU_Reg note in the workbook).
+
+1. **The "FY26Q4 back-test to 0.1pp" is RETRACTED.** It came from Addendum 13 — the retracted 0.465/+4.51 chain on
+   management's total-RPU definition (4.51 + 0.465×2.1 = 5.49 vs +5.4). With the rebuilt coefficients: used-car CPI
+   −1.9% → ASP +2.1% (actual global +3.5%, US +3.7%) → service RPU +5.2% (actual implied +4.4%); total RPU +4.4% (actual
+   +5.5%). The miss is 1.4pp at the ASP step. FY26Q4 is also inside the n=17 fitting sample, so it was never a back-test.
+2. **`MODEL_BLUEPRINT.md` §D mixed cost bases.** Its annual line took FY23–FY25 facility operations inclusive of facility
+   D&A and stock comp ($1,518M / $1,710M / $1,944M) and FY26 exclusive ($1,756M), implying −9.7%. On the 8-K's own
+   exclusive basis: $1,369M / $1,532M / $1,744M / $1,756M (**+0.6%**); inclusive: $1,966M (**+1.1%**). The US-segment
+   figure that thesis #2 relies on (−$11.8M, −0.7%) is correct — it is the segment table on one basis.
+3. **Forward demographic drift is ≈ 0.** Our own TLF_Roll: +0.035pp (2025), +0.019 (2026), +0.006 (2027), −0.008 to
+   −0.030 for 2028–30 with sales held at 2025 levels. The +0.16pp/yr is the 2019–2025 average. Demographics explain part
+   of the past rise and none of the next two years. Every document now says so.
+4. **Two scrape caveats accepted as written.** Lots per sale event is *listed inventory ÷ scheduled events*, not
+   vehicles sold per auction; the duopoly split is of *listings* and depends on each side's listing coverage. Both were
+   already labelled that way but not prominently enough.
+
+Also from that review, UNVERIFIED until we read the filing ourselves: ACV's SC 14D-9 (reportedly filed 2026-09-17)
+carries standalone management projections — 2027 adjusted EBITDA $123M, EBIT after stock comp $20M, unlevered FCF
+−$97M — and Copart's stated EPS accretion begins FY28. One allowed EDGAR fetch would confirm it.
+
+---
+
+# ADDENDUM 20 — 2026-09-25: decomposing a fitted number into drivers — first pass on the ASP intercept
+
+The user's standard, stated 2026-09-25: a fitted slope or intercept is not a finding until its drivers are named and,
+where possible, measured. A pod shop's model already has the curve fits; the edge, if any, is in the drivers. Start with
+the largest fitted constant we rely on: Copart insurance ASP grows **~3.3pp/yr faster than used-car CPI** (ASP = 3.34 +
+0.602×CPI, n=17). Candidate drivers and what the cheap checks (all data on disk) say:
+
+**(a) Vintage drift — the typical totaled car is one model year newer every year.** The median model year of Copart's
+listed inventory advanced exactly one year per year across 27 archived captures: 2013 (Aug-2022) → 2014 (Mar-2023) →
+2015 (Mar-2024) → 2016 (Jun-2025 onward); live September-2026 lots average MY 2016.2. Independently, the fleet roll's
+mean model year of modelled total losses also rises 1.0/yr (2013.4 in 2024 → 2016.4 in 2027). So the *age* of what
+Copart sells is roughly constant (~9–10 years) while the vintage advances. Used-car CPI is quality-adjusted; it does
+not price the fact that a 10-year-old car in 2027 is a MY2017 vehicle with a MY2017 sticker, not a MY2013 one. New-
+vehicle price inflation by vintage is therefore a direct, measurable driver of the intercept (MEASURED direction;
+magnitude needs the BLS new-vehicle CPI series SETA01, one allowed flat-file fetch — not yet done).
+
+**(b) Body mix — light trucks are taking over the total-loss pool.** Light-truck share of new sales: 50% (MY2010–13),
+60% (2016), 72% (2019), 78% (2022), 83% (2025). Rolled through the two EPA survival schedules and the fitted R and P,
+the light-truck share of modelled total losses rises **51% (2019) → 57% (2024) → 62% (2027) → 68% (2030)**, about
++1.7pp a year, because the truck-heavy cohorts are only now reaching the 7–12-year totaling sweet spot. Trucks and SUVs
+carry higher values than cars at the same age, so the mix alone lifts nominal salvage prices. Magnitude needs a
+truck-vs-car salvage value differential (ASSUMED until sourced; Copart's own ASP is not split by body).
+
+**(c) Not the totaling spread.** The ASP residual (ASP − fitted-on-CPI) has correlation +0.07 with the spread level and
++0.31 with its change (n=15). The idea that wider spreads total less-damaged cars and so raise salvage/value does not
+show in Copart's ASP. Consistent with Addendum 18.
+
+**(d) What is left is the residual for international demand, buyer-base growth and fee-tier effects** — the part the
+external note calls export-driven recovery. It is not identified here; it is what remains after (a) and (b).
+
+**Implication for the pitch.** Two of the intercept's drivers are demographic and already in motion for years: the
+truck-heavy 2016–2025 cohorts age into the total-loss window through 2030, and each year's totaled car carries a newer
+sticker. That is a *driver-based* reason to expect the "ASP above used-car CPI" gap to persist, which is a stronger
+claim than "the regression intercept is +3.3." Next cheap steps, none started: (1) fetch BLS SETA01 (new-vehicle CPI) and
+express the vintage effect in pp/yr; (2) source a truck-vs-car salvage value ratio (a manual pull from a public auction
+sale-price listing would do); (3) rebuild the ASP line as `vintage effect + body-mix effect + CPI pass-through +
+residual` on the RPU_Reg tab and see how much of 3.3 is explained.

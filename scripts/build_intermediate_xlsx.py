@@ -613,7 +613,7 @@ put(wq, 'J21', '→ US insurance ASP YoY %', BLK); put(wq, 'K21', '=K6+K5*K20', 
 put(wq, 'J22', '→ Service RPU YoY %', BOLD, fl=PINK); put(wq, 'K22', '=K13+K12*K21', BOLD, '+0.0;-0.0', fl=PINK)
 put(wq, 'J23', '→ Total RPU YoY % (mgmt definition)', BLK); put(wq, 'K23', '=L13+L12*K21', BLK, '+0.0;-0.0')
 rules(wq, 20, 23, 10, 11)
-put(wq, 'J24', 'Back-test FY26Q4: used-car CPI ≈ −1.9% → service RPU ≈ +4.4%; reported +4.4%. RPU is low-variance: +3.3% to +8.9% across used-car CPI −8% to +10%.', NOTE, wrap=True); wq.merge_cells('J24:P25')
+put(wq, 'J24', 'FY26Q4 check (IN-SAMPLE, not a back-test): used-car CPI −1.9% → ASP +2.1% (actual +3.5%) → service RPU +5.2% (actual implied +4.4%). The miss is mostly the ASP step. RPU is low-variance: +3.3% to +8.9% across used-car CPI −8% to +10%.', NOTE, wrap=True); wq.merge_cells('J24:P25')
 widths(wq, {'A': 13, 'B': 9, 'C': 9, 'D': 9, 'E': 13, 'F': 13, 'G': 10, 'H': 16, 'I': 2, 'J': 46, 'K': 12, 'L': 18})
 
 # ================================================================ Checks

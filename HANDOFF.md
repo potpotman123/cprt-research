@@ -171,8 +171,9 @@ global revenue.
 Management's total-RPU definition gives 0.752, intercept +2.84. Residual autocorrelation makes the effective n about
 6 — disclose it. The intercept is the robust finding; it decelerated in FY26 (+5–6pp → +1.3 to +3.5pp), partly
 CAT-comp distortion. Upstream, used-car CPI explains Copart's insurance ASP (β 0.599, r 0.77, n 15), and CPI
-publishes two weeks after month-end against Copart's five, so the chain nowcasts: used-car CPI → ASP → RPU. It
-back-tested FY26Q4 to within 0.1pp.
+publishes two weeks after month-end against Copart's five, so the chain nowcasts: used-car CPI → ASP → RPU. The "0.1pp FY26Q4 back-test" quoted in earlier documents used the RETRACTED coefficients on management's total-RPU
+  definition; with the rebuilt coefficients the chain misses FY26Q4 service RPU by ~0.8pp (predicted +5.2%, actual +4.4%),
+  mostly at the ASP step (+2.1% predicted, +3.5% actual), and FY26Q4 sits inside the fitting sample (Addendum 19).
 
 **Where it led.** Thesis #1 in the archived handoff; the RPU_Reg tab in the workbook; the user's RPU Build tab.
 The forward RPU floor (+4.5–5.5% vs a Street implied ~3%) rests on the intercept holding — the FY26 deceleration
@@ -253,6 +254,8 @@ losses = claims × P(age); baseline TLF = total losses ÷ claims (`scripts/age_c
   UNVERIFIED).
 - **Demographics add +0.16pp/yr to TLF (0.04–0.18 across survival assumptions), about a quarter of the 2019–2025
   rise.** The rest is level: the spread cycle, technology, filing behaviour (MEASURED given the fitted curves).
+- **Forward, the same roll gives about zero:** +0.035pp (2025), +0.019 (2026), +0.006 (2027), slightly negative
+  2028–30 with sales held at the 2025 level. The +0.16 is a 2019–2025 average, **not a near-term catalyst** (Addendum 19).
 
 **Corrections made while building it** (all in `findings.md` Addendum 16): the "45.3% total-loss propensity at 13+"
 anchor had no source and was dropped; the fit originally summed ages to 31 while the stretched curve is non-zero
@@ -291,7 +294,9 @@ firm's true inventory is unknown; the split is of *listings*.
 
 **Why.** Facility costs are Copart's largest cost line and are fixed-ish; the FY26 margin damage is unit deleverage.
 
-**What we found.** US facility costs fell in dollars in FY26 yet rose +6.6% per unit; international grew costs 11.4%
+**What we found.** US facility costs fell in dollars in FY26 (segment table, −$11.8M / −0.7%) yet rose +6.6% per unit;
+consolidated facility operations were +0.6% on the 8-K's exclusive-of-D&A basis and +1.1% inclusive — an earlier
+blueprint line that mixed those bases and showed −9.7% is corrected (Addendum 19); international grew costs 11.4%
 and per-unit +1.2% because its units grew (VERIFIED, 8-K). **Cars per weekly sale event ~700 → 492**, with weekly US
 sale events up while units fell (MEASURED from two scraped series; an earlier 745 peak **fails the overlap gate** and
 is retracted in favour of ~700). Sale events have been stable at 620–630 across 223–225 US yards every night since

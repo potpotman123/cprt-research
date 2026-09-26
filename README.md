@@ -21,8 +21,8 @@ reference model) is gitignored and never committed.**
 ## The results that carry the pitch (details, caveats and confidence in `HANDOFF.md` §3)
 
 1. **Revenue per unit is a fee-and-mix engine, not a price pass-through.** Service-RPU elasticity to ASP 0.514
-   (95% CI 0.29–0.73) with a +4.1pp intercept, n = 17; effective n ≈ 6. Used-car CPI → ASP → RPU back-tested FY26Q4
-   to 0.1pp.
+   (95% CI 0.29–0.73) with a +4.1pp intercept, n = 17; effective n ≈ 6. Used-car CPI → ASP → RPU is the nowcast chain; its FY26Q4 miss is ~0.8pp on service RPU,
+   mostly at the ASP step (findings Addendum 19).
 2. **Total-loss frequency follows the totaling spread** (repair CPI − used-car CPI), calibrated on 27 CCC industry
    quarters, not Copart's: ΔTLF = 0.599 + 0.0815 × spread(t−1), R² 0.81, one live out-of-sample hit. The spread went
    +15.7pp → +2.3pp → +8.3pp.

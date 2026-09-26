@@ -150,8 +150,11 @@ clean vs non-clean. Corroborate with third-party fee calculators and the Substac
 ```
 facility cost_t  =  fixed cost per yard-week × yards_t  +  variable cost per lot × lots_t
 ```
-Calibrate the two parameters to the annual line (FY23 $1,518M · FY24 $1,710M · FY25 $1,944M · FY26
-$1,756M) and check against FQ4 FY26's disclosed +7.7% dollars on −5.7% units (+14.2% per unit). Exhibit:
+Calibrate the two parameters to the annual line **on one basis**. The 8-Ks present facility operations excluding
+facility D&A and stock comp: FY23 $1,369M · FY24 $1,532M · FY25 $1,744M · FY26 $1,756M (+0.6%); inclusive of both:
+$1,518M · $1,710M · $1,944M · $1,966M (+1.1%). An earlier version of this line mixed the two bases and implied −9.7%
+(corrected 2026-09-25, findings Addendum 19). Segment table FY26: US −0.7% (−$11.8M), international +11.2%. Check
+against FQ4 FY26's disclosed +7.7% dollars on −5.7% units (+14.2% per unit). Exhibit:
 International, same quarter, +11.4% dollars / **+1.2%** per unit — opposite leverage sign. US yards 187 →
 204 (2022 → 2026); sale events/week 204 → 295; **lots per event ~700 → 492 (−30%)** on quality-gated months.
 Not available: acreage (not in any 10-K), per-yard cost, US/intl facility split before FQ4 FY26.
@@ -248,8 +251,9 @@ EBITDA margin 42.0%, US units **+1.3%**, positive growth from F2Q27. FY26E for r
    above on RPU not units. FY27 US insurance units ≈ −3 / −1 / 0 / **+5** by quarter (lap is Q4).
 7. Costs — reconcile FY26 EBITDA to $1,937M via the SBC cell; FY26 EPS to $1.55.
 8. Bridge, then Valuation. Bear PT **below spot**.
-9. **Back-test the whole chain on FY26Q4:** actual used-car CPI −1.9% → service RPU ≈ +4.4%, mgmt-def RPU
-   ≈ +5.4%; actual claims/TLF → US insurance units ≈ −7.5%. If yes, the plumbing is right.
+9. **Check the plumbing on FY26Q4 — in-sample, not a back-test:** used-car CPI −1.9% → ASP +2.1% (actual +3.5%) →
+   service RPU +5.2% (actual implied +4.4%), mgmt-def RPU +4.4% (actual +5.5%); actual claims/TLF → US insurance
+   units ≈ −7.5%. The chain's miss is at the ASP step (findings Addenda 19–20).
 
 **Every tab:** title + two-sentence description + sources / INPUTS / CALCULATION / OUTPUT / CHECKS. Guess the
 three headline outputs *before* building (FY27 RPU ~+5%, FY28 units ~+6%, FY28 EBITDA ~$2.35B) so a
