@@ -172,6 +172,7 @@ DATA_TABS = [  # (sheet, csv, display title)
  ('Data_FRED_HTRUCKSNSA', 'fred_HTRUCKSNSA.csv', 'FRED HTRUCKSNSA — heavy-truck sales, monthly'), ('Data_EPA_Miles', 'ornl_tedb40_miles_by_age.csv', 'Miles(age): annual miles per vehicle by age (EPA)'),
  ('Data_AgeCurvesPy', 'age_curves.csv', 'Age curves as computed by the script (reference copy)'), ('Data_AgeCurvesValid', 'age_curves_validation.csv', 'Age-curve validation table (script)'),
  ('Data_Capex', 'capex_decomp.csv', 'Copart capex decomposition (10-K)'), ('Data_OwnerEarnings', 'owner_earnings.csv', 'Owner-earnings bridge (10-K)'),
+ ('Data_RecoveryDiv', 'recovery_divergence_quarterly.csv', 'ASP YoY − used-car CPI YoY by quarter, with ΔTLF and spread'), ('Data_AspVintage', 'asp_vintage_effect.csv', 'Vintage effect: sticker index of the total-loss pool by year (BLS new-vehicle CPI × fleet roll)'),
 ]
 
 def add_data_sheet(wb, name, fname, title):
@@ -616,6 +617,34 @@ rules(wq, 20, 23, 10, 11)
 put(wq, 'J24', 'FY26Q4 check (IN-SAMPLE, not a back-test): used-car CPI −1.9% → ASP +2.1% (actual +3.5%) → service RPU +5.2% (actual implied +4.4%). The miss is mostly the ASP step. RPU is low-variance: +3.3% to +8.9% across used-car CPI −8% to +10%.', NOTE, wrap=True); wq.merge_cells('J24:P25')
 widths(wq, {'A': 13, 'B': 9, 'C': 9, 'D': 9, 'E': 13, 'F': 13, 'G': 10, 'H': 16, 'I': 2, 'J': 46, 'K': 12, 'L': 18})
 
+
+# ================================================================ ASP_Drivers — decomposing the ASP intercept into named drivers
+wd = wb.create_sheet('ASP_Drivers')
+skin(wd, 'ASP drivers — what is behind "ASP grows ~3.3pp/yr faster than used-car CPI"', 'a fitted constant, taken apart',
+     'Calendar-year view. ASP YoY and used-car CPI YoY are the averages of the fiscal quarters mapped to each calendar year (Data_RecoveryDiv). CPI pass-through uses the RPU_Reg slope. Vintage effect = the rise in the total-loss pool’s sticker price because the typical totaled car is one model year newer each year (Data_AspVintage; BLS new-vehicle CPI × fleet roll). Body-mix effect needs a truck-vs-car salvage value ratio (B8) — UNSOURCED, default 1.00 = no effect until sourced. Residual = what is left: international demand, buyer base, fee tiers, mix within body. findings.md Addenda 20–21.', 10, freeze='A13')
+put(wd, 'A4', 'Truck-vs-car salvage value ratio (same age)', BLK); put(wd, 'B4', 1.00, BLUE, '0.00', fl=PINK); put(wd, 'C4', 'UNSOURCED placeholder — 1.00 means the body-mix effect is zero. Set from a sale-price listing when pulled; ~1.3–1.5 is the working guess, not a number to pitch.', NOTE)
+put(wd, 'A5', 'CPI pass-through slope (RPU_Reg)', BLK); put(wd, 'B5', '=RPU_Reg!K5', GRN, DEC3)
+put(wd, 'A6', 'ASP intercept on CPI, pp/yr (RPU_Reg)', BLK); put(wd, 'B6', '=RPU_Reg!K6', GRN, '0.00')
+rules(wd, 4, 6, 1, 2)
+hdrs = ['Calendar year', 'Used-car CPI YoY %', 'ASP YoY % (actual)', 'CPI pass-through (pp)', 'Vintage effect (pp)', 'LT share of TL pool', 'Δ LT share (pp)', 'Body-mix effect (pp)', 'Residual (pp)', 'Quarters averaged']
+header_row(wd, 12, 1, 10, hdrs, height=42)
+RD0, RD1 = 5, 4 + len(read_csv('recovery_divergence_quarterly.csv')[2]); AV0, AV1 = 5, 4 + len(read_csv('asp_vintage_effect.csv')[2])
+rdQ = f'Data_RecoveryDiv!$B${RD0}:$B${RD1}'; rdCPI = f'Data_RecoveryDiv!$C${RD0}:$C${RD1}'; rdASP = f'Data_RecoveryDiv!$D${RD0}:$D${RD1}'
+avY = f'Data_AspVintage!$A${AV0}:$A${AV1}'; avV = f'Data_AspVintage!$F${AV0}:$F${AV1}'; avL = f'Data_AspVintage!$E${AV0}:$E${AV1}'   # F = vintage_effect_tl_pp, E = lt_share_tl
+for i, y in enumerate(range(2022, 2027)):
+    r = 13 + i; put(wd, f'A{r}', y, BLUE, YR, align='center')
+    put(wd, f'B{r}', f'=AVERAGEIF({rdQ},"{y}*",{rdCPI})', GRN, '+0.0;-0.0'); put(wd, f'C{r}', f'=AVERAGEIF({rdQ},"{y}*",{rdASP})', GRN, '+0.0;-0.0')
+    put(wd, f'D{r}', f'=$B$5*B{r}', BLK, '+0.00;-0.00'); put(wd, f'E{r}', f'=INDEX({avV},MATCH(A{r},{avY},0))', GRN, '+0.00;-0.00')
+    put(wd, f'F{r}', f'=INDEX({avL},MATCH(A{r},{avY},0))', GRN, PCT); put(wd, f'G{r}', f'=(F{r}-INDEX({avL},MATCH(A{r}-1,{avY},0)))*100', BLK, '+0.00;-0.00')
+    put(wd, f'H{r}', f'=($B$4-1)*G{r}/(1+($B$4-1)*INDEX({avL},MATCH(A{r}-1,{avY},0)))', BLK, '+0.00;-0.00')
+    put(wd, f'I{r}', f'=C{r}-D{r}-E{r}-H{r}', BOLD, '+0.00;-0.00', fl=PINK); put(wd, f'J{r}', f'=COUNTIF({rdQ},"{y}*")', BLK, '0', align='center')
+rules(wd, 13, 17, 1, 10, header_row_=12)
+put(wd, 'A19', 'Average 2022–2025 (full years)', BOLD, fl=GREY)
+for c_ in 'BCDEFGHI': put(wd, f'{c_}19', f'=AVERAGE({c_}13:{c_}16)', BOLD, ('+0.00;-0.00' if c_ != 'F' else PCT), fl=GREY)
+put(wd, 'A21', 'Reading the table', BOLD)
+put(wd, 'A22', 'ASP actual − CPI pass-through ≈ the 3.3pp intercept. Of that, the vintage effect explains ~1.0pp/yr in 2022–26 (rising to ~1.4 by 2028 as MY2016–20 vintages enter the pool). The body-mix column is zero until B4 is sourced. The residual is the unexplained part — the space where international demand would live. Plausibility check: the residual should be roughly stable; a trend in it is a driver we have not named.', NOTE, wrap=True); wd.merge_cells('A22:J23'); wd.row_dimensions[22].height = 44
+widths(wd, {'A': 40, 'B': 14, 'C': 14, 'D': 16, 'E': 14, 'F': 14, 'G': 12, 'H': 16, 'I': 12, 'J': 12})
+
 # ================================================================ Checks
 wch = wb.create_sheet('Checks')
 skin(wch, 'Checks — every row should read OK after Excel recalculates', 'reference values from the Python scripts', 'A FAIL after copying tabs into another workbook almost always means a sheet was renamed or a dependency tab was not copied. Tolerances are deliberately loose; they catch broken references, not rounding.', 5, freeze='A5')
@@ -676,7 +705,7 @@ def divider(title):
     return ws
 for d in ('Inputs & Curves →', 'Fleet Build →', 'Regressions →', 'Raw Data →'): divider(d)
 ORDER = ['Cover', 'README', 'Inputs & Curves →', 'Inputs', 'Curves', 'Calibration', 'Fleet Build →', 'Data_Sales', 'Data_EPA_Survival', 'Survival', 'Fleet', 'FleetByAge', 'TLF_Roll',
-         'Regressions →', 'Spread_Reg', 'RPU_Reg', 'Checks', 'Raw Data →', 'Data_CCC_Targets'] + [n for n, _, _ in DATA_TABS]
+         'Regressions →', 'Spread_Reg', 'RPU_Reg', 'ASP_Drivers', 'Checks', 'Raw Data →', 'Data_CCC_Targets'] + [n for n, _, _ in DATA_TABS]
 wb._sheets = [wb[n] for n in ORDER]
 
 # ================================================================ Cover
@@ -705,6 +734,7 @@ toc = [
  ('TLF_Roll', 'Fleet Build', 'Baseline total-loss frequency from demographics, its drift, and the out-of-sample checks vs CCC.'),
  ('Spread_Reg', 'Regressions', 'ΔTLF = a + b · spread(t−1): pairs built by formula, SLOPE / INTERCEPT / RSQ, prediction, live 2Q26 test.'),
  ('RPU_Reg', 'Regressions', 'ASP ~ used-car CPI by fiscal quarter; service and total RPU ~ ASP; the chain calculator.'),
+ ('ASP_Drivers', 'Regressions', 'The ASP intercept taken apart: CPI pass-through, vintage effect, body mix (placeholder ratio), residual.'),
  ('Checks', 'Regressions', 'OK / FAIL on the key outputs and the reference regression values.'),
  ('Data_CCC_Targets', 'Raw Data', 'The CCC statistics R and P are fitted to and tested against, with verbatim quotes and pages.'),
 ] + [(n, 'Raw Data', t) for n, _, t in DATA_TABS]

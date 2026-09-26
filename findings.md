@@ -1558,3 +1558,44 @@ claim than "the regression intercept is +3.3." Next cheap steps, none started: (
 express the vintage effect in pp/yr; (2) source a truck-vs-car salvage value ratio (a manual pull from a public auction
 sale-price listing would do); (3) rebuild the ASP line as `vintage effect + body-mix effect + CPI pass-through +
 residual` on the RPU_Reg tab and see how much of 3.3 is explained.
+
+---
+
+# ADDENDUM 21 — 2026-09-25: the vintage effect is measured — about 1pp/yr of the 3.3pp ASP intercept, rising to 1.4
+
+**Data.** BLS CPI flat file `cu.data.14.USTransportation` (download.bls.gov; the browser-style header set was refused
+with 403 four times, the descriptive User-Agent with contact email succeeded — logged). New series on disk: new
+vehicles (CUUR0000SETA01), new cars (SS45011), new trucks (SS45021). For reference: new-vehicle CPI 2013→2019 +0.7%,
+2019→2026 +22.0%; used cars & trucks 2019→2026 +28.8% (used rose *more* than new).
+
+**Construction** (`scripts/asp_vintage_effect.py` → `asp_vintage_effect.csv`). Sticker index of the total-loss pool in
+year t = Σ_MY w_t(MY)·NV(MY) / Σ w_t(MY), with w_t(MY) the fleet roll's total losses by model year and NV(MY) the
+new-vehicle CPI of the vintage (mean of years MY−1 and MY). Vintage effect = the index's YoY change.
+
+| year | mean model year of TL pool | vintage effect, pp/yr |
+|---|---|---|
+| 2019 | 2008.8 | +0.34 |
+| 2022 | 2011.6 | +0.56 |
+| 2024 | 2013.4 | +1.03 |
+| 2026 | 2015.4 | +1.26 |
+| 2028 | 2017.4 | +1.41 |
+| 2030 | 2019.3 | +1.43 |
+
+**Result.** Mean **+0.97pp/yr over 2022–2026 ≈ 29% of the 3.3pp intercept** (MEASURED direction; the level assumes a
+model year's sticker tracks the new-vehicle CPI of its vintage). It is *accelerating*: the pool's mean vintage is
+moving out of the flat-priced 2008–2013 model years into the 2014–2020 ones, and the 2021–23 new-vehicle inflation
+reaches the ten-year-old pool only in the early 2030s. So a driver-based forecast of the ASP-over-CPI gap is ~1.0–1.4pp
+from vintage alone through 2030, before body mix and demand.
+
+**Workbook.** New tab `ASP_Drivers` decomposes calendar-year ASP growth into CPI pass-through (RPU_Reg slope), vintage
+effect (this series), body-mix effect (needs a truck-vs-car salvage value ratio — UNSOURCED placeholder, default 1.00 =
+zero effect), and a residual. On 2022–2025: ASP +2.1%/yr average with used-car CPI −1.7%; pass-through −1.0; vintage
++0.6 (the 2022–25 window is lower than 2022–26 because 2022–23 were low years); residual ≈ +2.6pp/yr and **not
+stable** — it runs ~3.5 in 2022 and 2025 and ~1–1.6 in 2023–24, i.e. it co-moves with CPI itself. That pattern says
+the pass-through slope of 0.6 is too low in strong-CPI years and too high in weak ones, or that a demand term with its
+own cycle is missing. Either way the residual is where the next driver search goes.
+
+**Not done, and why.** The body-mix term needs a truck-versus-car salvage value ratio at the same age. Nothing on
+disk gives it. Options ranked by cost: a manual read of a public sale-price listing (user), or a fetch of a public
+auction-results page (robots status unknown — check first). A working guess of 1.3–1.5 would make the body-mix effect
++0.4 to +0.8pp/yr (LT share of the TL pool rising ~1.7pp/yr), which with vintage would explain roughly half of the 3.3.
