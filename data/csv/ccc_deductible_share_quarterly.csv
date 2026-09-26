@@ -1,0 +1,22 @@
+# CCC Crash Course 2026, Figure 2: "Share of Repairable Collision Claims by Deductible Group (Quarterly 2021-2025)". Data labels read from raw/ccc/img/cc2026_fig2_deductibles.png (fetched 2026-09-26). VERIFIED. Percent of repairable collision claims. E2 filing-behaviour series.
+quarter,ded_lt_500,ded_500_to_999,ded_1000_plus
+2021Q1,24.9,55.8,19.3
+2021Q2,25.2,55.2,19.5
+2021Q3,24.9,55.2,19.9
+2021Q4,24.3,55.4,20.2
+2022Q1,24.0,55.8,20.2
+2022Q2,24.3,55.3,20.4
+2022Q3,25.0,54.5,20.4
+2022Q4,24.7,54.5,20.8
+2023Q1,24.8,54.5,20.7
+2023Q2,25.6,53.6,20.8
+2023Q3,25.8,52.9,21.2
+2023Q4,25.7,52.3,21.9
+2024Q1,25.5,52.3,22.3
+2024Q2,26.0,51.0,23.0
+2024Q3,26.2,50.2,23.7
+2024Q4,25.8,49.7,24.5
+2025Q1,25.1,49.7,25.2
+2025Q2,25.1,48.6,26.3
+2025Q3,25.1,47.9,27.0
+2025Q4,24.4,47.4,28.1

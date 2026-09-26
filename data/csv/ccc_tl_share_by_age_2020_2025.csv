@@ -1,0 +1,9 @@
+# CCC Crash Course 2026, Figure 19: "CCC National Industry Total Loss Share of Claim Count by Vehicle Age, All Loss Categories", CY2020-CY2025. Data labels read from the chart image (raw/ccc/img/cc2026_fig19_tl_share_by_age.png, 4409px, fetched 2026-09-26 from the cccis.com report page). CCC disclaimer on the chart: the age-grouping methodology "does not match up 100% to current industry reporting ... should not be compared to other reporting as it could vary slightly." VERIFIED (image on disk). This is P(age bucket) = share of claims declared total loss, by calendar year.
+age_bucket,cy2020,cy2021,cy2022,cy2023,cy2024,cy2025
+current_year_or_newer,6.8,7.1,9.2,9.0,9.7,9.6
+1-3,9.7,9.4,8.9,9.3,10.2,10.7
+4-6,15.3,14.6,13.3,14.1,15.4,15.7
+7-9,22.8,21.6,19.1,20.5,22.8,23.4
+10-12,31.6,29.2,26.5,28.4,31.5,32.3
+13+,43.1,40.0,37.8,40.6,43.6,45.3
+total,20.6,19.7,18.8,20.2,22.3,23.1

@@ -1,0 +1,8 @@
+# CCC Crash Course 2026, Figure 18: "National Industry Share of Total Loss Valuations by Vehicle Age Group, All Loss Categories", CY2020-CY2025. Data labels read from raw/ccc/img/cc2026_fig18_tl_valuations_by_age.png (fetched 2026-09-26). Same age-grouping disclaimer as Figure 19. VERIFIED. Share of total-loss valuations (count) by age bucket; columns sum to ~100.
+age_bucket,cy2020,cy2021,cy2022,cy2023,cy2024,cy2025
+current_year_or_newer,1.6,1.9,1.7,1.7,1.9,2.0
+1-3,13.7,12.7,10.9,9.9,9.8,10.3
+4-6,19.4,19.8,18.1,17.8,16.3,15.1
+7-9,18.7,19.7,20.1,20.8,21.6,20.9
+10-12,14.8,13.9,15.6,17.5,18.6,19.9
+13+,31.9,32.0,33.5,32.4,31.8,31.8
