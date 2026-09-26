@@ -8,6 +8,7 @@ reference model) is gitignored and never committed.**
 
 | Read | For |
 |---|---|
+| **`NEXT_STEPS_FOR_OTHER_CLAUDE_FABLE.md`** | **For a second Fable session with a fresh budget:** the expensive experiments, each specified end to end (goal, the explanation being tested, steps and why, cost, cheaper alternatives, kill criteria, deliverable). Start here if you were sent this repo to run them. |
 | **`HANDOFF.md`** | **The whole project by research thread: what was tried, why, what was found, where it led, what is still open.** Confidence labelled on every result. Read §0–§3 first. |
 | **`MODEL_BLUEPRINT.md`** | The model architecture — mechanisms A–E, the units identity, the RPU chain, tab map, build order, checks. |
 | **`model/CPRT_Intermediate.xlsx`** | The workbook to copy from: every dataset as a tab plus live formulas (fleet roll, age curves, Solver calibration, TLF drift, spread and RPU regressions, checks). Rebuild with `scripts/build_intermediate_xlsx.py`. |

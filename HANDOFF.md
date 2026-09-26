@@ -20,6 +20,8 @@ what we found, and where it led. Confidence is labelled on every result. Where w
 | how the collector and the sitemap data physically work | `ARCHITECTURE.md` |
 | what each script / CSV is and whether it is live, analysis, dead-end or legacy | `scripts/README.md`, `data/csv/README.md` |
 | the previous handoff with its detailed sections on competitors, theses, feasibility | `docs/archive/HANDOFF_2026-09-11_updated-to-09-25.md` |
+| the expensive experiments a second session should run, specified end to end | `NEXT_STEPS_FOR_OTHER_CLAUDE_FABLE.md` |
+| the model walk-through page with charts | `docs/walkthrough.html` (published as an artifact; `scripts/build_walkthrough_page.py`) |
 
 **Confidence labels used throughout:**
 - **VERIFIED** — in a filing, a transcript, or a fetched page on disk; you can re-read the source.
@@ -268,6 +270,27 @@ TLF_Roll) and one number for the Units Build: demographic drift. Honest version 
 **Open.** HLDI publishes measured claim frequency by vehicle age — it would replace fitted R with data (user pull).
 CCC 2026 Figures 18/22 data labels would pin P's interior. The k-drift path between 2013 and 2024 is linear by
 assumption; only its endpoints are anchored.
+
+### F2. Decomposing the fitted price intercept into drivers (2026-09-25, Addenda 20–21)
+
+**Why.** The owner's standard: a fitted constant is not a finding until its drivers are named. Copart's realised price
+grows ~3.3pp/yr faster than used-car CPI (the ASP-on-CPI intercept); a pod shop has the same fit.
+
+**What we found.** (a) **Vintage drift, MEASURED:** the median model year of Copart's listed inventory advances one year
+per year (2013 in 2022 → 2016 in 2025), so the typical totaled car is constant in age but newer in sticker; weighted
+through the fleet roll with BLS new-vehicle CPI (fetched 2026-09-25, `raw/bls/`), this adds **~1.0pp/yr in 2022–26,
+rising to ~1.4 by 2028** — about 29% of the intercept. (b) **Body mix:** light-truck share of the total-loss pool rises
+57% → 62% (2024 → 2027) → 68% (2030); its price effect needs a truck-vs-car salvage value ratio (UNSOURCED, `ASP_Drivers!B4`).
+(c) The totaling spread does **not** explain the residual (corr +0.07). (d) The remaining residual (~2.2pp/yr) co-moves
+with CPI and is unexplained — export demand and fee tiers are candidates (`NEXT_STEPS_FOR_OTHER_CLAUDE_FABLE.md` E6, E7).
+The `ASP_Drivers` tab in the workbook lays this out by calendar year.
+
+**Corrections in the same pass (Addendum 19):** the "FY26Q4 back-test to 0.1pp" on RPU is retracted (retracted
+coefficients, in-sample; the current chain misses by 0.8pp at the ASP step); the blueprint's facility-cost line had mixed
+bases (comparable +0.6%/+1.1%, not −9.7%); forward demographic drift is ≈0 for 2026–27.
+
+**Where it led.** The owner's critique that the theses are observations, not explanations. The expensive experiments
+that would supply explanations are specified in `NEXT_STEPS_FOR_OTHER_CLAUDE_FABLE.md`.
 
 ### G. IAA — the duopoly inventory split
 
