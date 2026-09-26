@@ -44,6 +44,8 @@ The IHS-sourced ORNL tables (3.11, 3.12, 3.13 — census by age, average age) ar
 | `iaa_fee_grid_2026-09.csv`, `iaa_fixed_fees_2026-09.csv` | RAW | IAA buyer fee schedule (licensed standard/high volume, non-licensed, heavy, rec rides, internet bid fees) from the page SVGs via local OCR, cross-checked; identical to Copart's non-clean grids | tables "Effective November 4, 2024"; $105 service fee effective 2026-10-01 |
 | `kbb_atp_by_segment_2026-08.csv` | RAW | KBB/Cox average new-vehicle transaction prices by segment, Aug-2026 vs Aug-2025 (`reports/E8_body_value_ratio.md`) | new prices, not salvage values |
 | `asp_vintage_effect.csv` | ANALYSIS | Sticker index of the modelled total-loss pool by year, its YoY change (the vintage effect), mean model year and light-truck share (`scripts/asp_vintage_effect.py`) | level assumes a model year's sticker tracks new-vehicle CPI of its vintage; 2026+ vintages held flat |
+| `ppi_motor_vehicle_parts.csv` | RAW | BLS PPI motor vehicle parts manufacturing (PCU3363--3363--), monthly 2003-12 → 2026-08 with YoY (`reports/E3_repair_labour.md`) | manufacturers' prices, not shop-billed |
+| `repair_cost_drivers.csv` | ANALYSIS | Annual YoY of repair CPI, used-car CPI, parts PPI, automotive-repair wages and jobs (CES 8111), all-private wages (`scripts/experiments/e3_repair_cost_drivers.py`) | CES 8111 includes mechanical repair |
 | `cpi_insurance_repair_yoy.csv` | LEGACY | Earlier two-series CPI extract (2021–2026) | superseded by `cprt_cpi_three_series.csv` |
 
 ## Copart reported series and the units decomposition
