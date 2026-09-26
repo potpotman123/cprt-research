@@ -173,6 +173,9 @@ DATA_TABS = [  # (sheet, csv, display title)
  ('Data_AgeCurvesPy', 'age_curves.csv', 'Age curves as computed by the script (reference copy)'), ('Data_AgeCurvesValid', 'age_curves_validation.csv', 'Age-curve validation table (script)'),
  ('Data_Capex', 'capex_decomp.csv', 'Copart capex decomposition (10-K)'), ('Data_OwnerEarnings', 'owner_earnings.csv', 'Owner-earnings bridge (10-K)'),
  ('Data_RecoveryDiv', 'recovery_divergence_quarterly.csv', 'ASP YoY − used-car CPI YoY by quarter, with ΔTLF and spread'), ('Data_AspVintage', 'asp_vintage_effect.csv', 'Vintage effect: sticker index of the total-loss pool by year (BLS new-vehicle CPI × fleet roll)'),
+ ('Data_BodyCurves', 'age_curves_by_body.csv', 'E1: totaling propensity by age and body — P_car, P_LT (probit offset from HLDI severity × E8 value ratio; aggregate P(a) preserved)'),
+ ('Data_BodyMix', 'body_mix_tlf_asp_2015_2030.csv', 'E1: one-body vs two-body fleet roll — body-mix supply effect on TLF (pp/yr), LT share of claims and total losses, ASP body-mix effect, 2016–2030'),
+ ('Data_StateDispersion', 'state_share_dispersion.csv', 'E5 screen: each state’s share of listed lots 2023–2026, relative change, within-year wobble, region, CAT-2024 flag'),
 ]
 
 def add_data_sheet(wb, name, fname, title):
@@ -530,6 +533,7 @@ c19, c25 = YC[YEARS.index(2019)], YC[YEARS.index(2025)]
 for c_ in 'ABCDEF': wr[f'{c_}{r+1}'].fill = PINK
 put(wr, f'A{r+1}', 'Demographic drift 2019→2025, pp per year', BOLD, fl=PINK); put(wr, f'C{r+1}', 'model vs actual CCC rise (+0.65pp/yr, 19.2% → 23.1%)', BLK, fl=PINK); put(wr, f'D{r+1}', '=(0.231-0.192)*100/6', BLK, '+0.00', fl=PINK)
 put(wr, f'E{r+1}', f'=({c25}{RW["tlf"]}-{c19}{RW["tlf"]})*100/6', BOLD, '+0.00', fl=PINK); put(wr, f'F{r+1}', f'=E{r+1}/D{r+1}', BOLD, PCT, fl=PINK); put(wr, f'G{r+1}', 'share of the 2019→2025 rise that is demographics (~24%); the rest is level', NOTE)
+put(wr, f'A{r+3}', 'Body mix (E1, 2026-09-26): this roll totals light trucks like cars. With body-specific P (Data_BodyCurves: P_LT ≈ 0.72–0.76 × P_car at ages 8–12) the light-truck share of claims rising ~2pp/yr LOWERS TLF by ~0.13pp/yr through 2030 (range −0.08 to −0.18; Data_BodyMix column body_mix_supply_effect_pp). Net demographic drift forward ≈ −0.1pp/yr, not the +0.16 average above. The two-body roll also lands within 1–3pp of Copart’s listed truck share (E1 step 1), which this one-body roll overshoots by 4–6pp. reports/E1_step4_6_body_propensity.md.', NOTE, wrap=True); wr.merge_cells(start_row=r+3, start_column=1, end_row=r+5, end_column=9)
 widths(wr, {'A': 50, 'B': 10})
 for c in YC: wr.column_dimensions[c].width = 9
 

@@ -1,0 +1,18 @@
+# E1 steps 4-6 (scripts/experiments/e1_body_propensity.py, 2026-09-26): fleet roll with body-specific totaling propensity. Base variant: R_LT = R_car (f=1.00), value ratio LT/car 1.50 (E8), HLDI severity ratio 1.01, probit offset dz = (ln1.50 - ln1.01)/sigma_eff with sigma_eff = delta/gamma, delta = 0.11/yr (ASSUMED), gamma = probit slope of CCC 2024 P-by-bucket in age (MEASURED). Aggregate 2024 P(a) preserved at every age.
+# body_mix_supply_effect_pp = (two-body dTLF) - (one-body dTLF): the change in TLF each year attributable to the light-truck share of claims rising, i.e. what the single-curve roll (TLF_Roll) overstates. asp_body_mix_effect_pp = ASP_Drivers!H formula on the two-body LT-share-of-TL path with ratio 1.50. copart_units_effect = supply effect / TLF; service_rpu_effect = 0.514 x ASP effect; revenue = sum. Sales after the last actual year held at that year's level and mix (ASSUMED). FITTED/ASSUMED: sigma_eff, delta, value ratio; MEASURED: severity ratio, gamma, sales, CCC buckets.
+year,tlf_one_body_pct,tlf_two_body_pct,dtlf_one_body_pp,dtlf_two_body_pp,body_mix_supply_effect_pp,lt_share_claims_pct,lt_share_tl_pct,d_lt_share_tl_pp,asp_body_mix_effect_pp,copart_units_effect_pct,service_rpu_effect_pct,revenue_effect_pct
+2016,21.624,22.394,-0.154,-0.178,-0.024,49.74,40.72,0.49,0.206,-0.108,0.106,-0.002
+2017,21.489,22.224,-0.136,-0.17,-0.035,50.85,41.34,0.62,0.257,-0.155,0.132,-0.023
+2018,21.389,22.073,-0.099,-0.15,-0.051,52.28,42.13,0.8,0.33,-0.23,0.169,-0.06
+2019,21.335,21.947,-0.055,-0.127,-0.072,53.97,43.12,0.99,0.409,-0.326,0.21,-0.116
+2020,21.422,21.941,0.087,-0.006,-0.093,55.76,44.26,1.14,0.467,-0.423,0.24,-0.183
+2021,21.61,22.016,0.188,0.075,-0.113,57.61,45.52,1.26,0.515,-0.514,0.265,-0.249
+2022,21.852,22.131,0.242,0.115,-0.128,59.45,46.89,1.37,0.558,-0.581,0.287,-0.294
+2023,22.083,22.226,0.231,0.095,-0.136,61.32,48.37,1.48,0.601,-0.615,0.309,-0.306
+2024,22.251,22.251,0.168,0.025,-0.142,63.25,50.0,1.62,0.653,-0.64,0.336,-0.305
+2025,22.286,22.139,0.035,-0.112,-0.147,65.29,51.81,1.82,0.727,-0.66,0.374,-0.286
+2026,22.305,22.011,0.019,-0.128,-0.147,67.27,53.7,1.89,0.75,-0.665,0.385,-0.28
+2027,22.311,21.881,0.006,-0.13,-0.136,69.09,55.59,1.89,0.746,-0.62,0.384,-0.236
+2028,22.303,21.745,-0.008,-0.135,-0.127,70.75,57.48,1.89,0.739,-0.583,0.38,-0.203
+2029,22.281,21.607,-0.022,-0.139,-0.117,72.26,59.37,1.88,0.731,-0.536,0.376,-0.16
+2030,22.251,21.469,-0.03,-0.137,-0.108,73.63,61.22,1.86,0.716,-0.498,0.368,-0.13
