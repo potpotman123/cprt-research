@@ -1,0 +1,10 @@
+# Copart US fixed and conditional fees, read 2026-09-26 (same session as copart_fee_grid_2026-09.csv). VERIFIED.
+read_date,page,fee,amount_usd,basis,quote
+2026-09-26,non-licensed,gate_fee,79,per purchase,A $79.00 Gate Fee is assessed to all Copart purchases
+2026-09-26,non-licensed,environmental_fee,15,per item sold,A $15 fee is applied to each item sold
+2026-09-26,non-licensed,late_payment_fee,50,per vehicle after 3 business days,fee of $50.00 per vehicle
+2026-09-26,non-licensed,relist_fee,10% min $600,of final sale price if unpaid within 8 calendar days,The Relist Fee will be 10% of the final sale price with a minimum of $600
+2026-09-26,non-licensed,third_party_finance_fee,69,per vehicle via affiliated finance companies,charged a $69 flooring service fee
+2026-09-26,non-licensed,title_mail_usps,15,up to 10 titles per location,up to 10 titles mailed from a single location for $15 by US Postal Service
+2026-09-26,non-licensed,title_mail_fedex,20,up to 10 titles per location,up to 10 titles for $20 by FedEx
+2026-09-26,non-licensed,title_pickup_handling,20,per title,A handling fee of $20 per title will be charged for titles picked up in person
