@@ -1590,8 +1590,8 @@ from vintage alone through 2030, before body mix and demand.
 **Workbook.** New tab `ASP_Drivers` decomposes calendar-year ASP growth into CPI pass-through (RPU_Reg slope), vintage
 effect (this series), body-mix effect (needs a truck-vs-car salvage value ratio — UNSOURCED placeholder, default 1.00 =
 zero effect), and a residual. On 2022–2025: ASP +2.1%/yr average with used-car CPI −1.7%; pass-through −1.0; vintage
-+0.6 (the 2022–25 window is lower than 2022–26 because 2022–23 were low years); residual ≈ +2.6pp/yr and **not
-stable** — it runs ~3.5 in 2022 and 2025 and ~1–1.6 in 2023–24, i.e. it co-moves with CPI itself. That pattern says
++0.9; residual ≈ +2.2pp/yr and **not stable** — 3.5 (2022), 1.6 (2023), 1.0 (2024), 2.8 (2025), 4.1 (2026 YTD, two
+quarters), i.e. it co-moves with CPI itself. That pattern says
 the pass-through slope of 0.6 is too low in strong-CPI years and too high in weak ones, or that a demand term with its
 own cycle is missing. Either way the residual is where the next driver search goes.
 
