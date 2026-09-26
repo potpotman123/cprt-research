@@ -59,6 +59,8 @@ The IHS-sourced ORNL tables (3.11, 3.12, 3.13 — census by age, average age) ar
 | `elasticity_rebuild.csv` | ANALYSIS | 17 quarters: service and total revenue YoY, global units and ASP YoY, implied RPU YoY, fee/mix component | the basis-matched inputs behind β = 0.514 |
 | `units_decomp_panel_v2.csv` | ANALYSIS | Six-quarter decomposition under three claims denominators; residual = share term | claims term for 2026 is a range |
 | `decomposition.csv` | ANALYSIS | CY2025 and FQ4 FY26 matched-denominator windows | |
+| `pgr_frequency_quarterly.csv` | RAW | Progressive personal-auto incurred accident frequency and severity, YoY % by quarter, transcribed by regex from 47 10-Q/10-K MD&As 2015–2026 with the source sentence on every row (`scripts/experiments/e2_pgr_frequency.py`, `reports/E2_affordability_claims.md`) | Q4 absent; Progressive's own mix |
+| `claims_term_drivers.csv` | ANALYSIS | Quarterly panel: Progressive frequency/collision/severity YoY, VMT YoY, motor-vehicle insurance CPI YoY (`e2_affordability_claims.py`) | Oct/Nov-2025 CPI interpolated |
 | `fasttrack_collision_claims_cw.csv` | RAW | ISS Fast Track collision-claim-count headlines via CollisionWeek | headline figures with qualifiers, not levels |
 | `pgr_monthly_pif.csv` | RAW | Progressive personal-auto policies in force, monthly 8-K | definition change Dec-2024 noted in file |
 | `geico_frequency_series.csv` | RAW | Berkshire filing sentences on GEICO claim frequency | text, banded |

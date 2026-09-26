@@ -27,6 +27,9 @@ for r in rd(D / 'pgr_frequency_quarterly.csv'):
 def q_of(k): y, m = int(k[:4]), int(k[5:7]); return f"{y}Q{(m - 1) // 3 + 1}"
 vmt_m = {r['observation_date'][:7]: float(r['TRFVOLUSM227NFWA']) for r in rd(ROOT / 'raw/fred/TRFVOLUSM227NFWA.csv') if r['TRFVOLUSM227NFWA'] not in ('', '.')}
 ins_m = {r['date']: float(r['CUUR0000SETE']) for r in rd(D / 'cprt_cpi_three_series.csv') if r.get('CUUR0000SETE')}
+# BLS left Oct/Nov-2025 blank (source gap): linear interpolation so 2026 quarters are usable (ASSUMED, two months)
+for gap, a, b in (('2025-10', '2025-09', '2025-12'), ('2025-11', '2025-09', '2025-12')):
+    if gap not in ins_m and a in ins_m and b in ins_m: ins_m[gap] = ins_m[a] + (ins_m[b] - ins_m[a]) * (1 if gap == '2025-10' else 2) / 3
 def qagg(series, agg):
     b = {}
     for k, v in series.items(): b.setdefault(q_of(k), []).append(v)

@@ -1649,6 +1649,15 @@ requests through `prov.py`; new code under `scripts/experiments/`; each experime
 - Simulation: the grid's convexity gives a buyer-fee elasticity to price of 0.4–0.5 for any plausible lognormal price
   distribution (median $2.5–7k ASSUMED) — the mechanism behind the measured 0.514.
 
+## E3. E2 and E3 — Phase B (`reports/E2_affordability_claims.md`, `reports/E3_repair_labour.md`)
+- **E2:** Progressive's quarterly accident frequency 2015–2026 (47 filings, every number with its quote). Miles driven explain it;
+  the insurance-CPI lag structure exists only with 2020–21 in the sample (kill rule met for the frequency channel). The
+  mechanism's footprint is the deductible share: CCC $1,000+ share tracks insurance CPI at a 4–6-quarter lag (corr 0.8–0.9).
+  Frequency decline is ending: −9/−8/−5 (2024) → −3/−4/−2 (2025) → 0/−2 (2026H1); the model's −3 to −5% claims input is stale.
+- **E3:** body-shop wages (CES 8111) +3.6% YoY = all-private +3.2%; sector jobs flat; parts PPI +2.4%; yet repair CPI +6.6%
+  and CCC TCOR only +1.7% (2025). The spread's numerator is ~3pp above measurable inputs — not a labour-scarcity story.
+  If repair CPI reverts to inputs, ΔTLF loses ~0.25pp/yr.
+
 ## F. Blockers and negatives (paste the status codes)
 - FRED `fredgraph.csv` timed out on every attempt today (`[Errno 60] Operation timed out`, 4 attempts, robots.txt too);
   E7 step 1 (dollar index) waits. Not a block; a network condition.

@@ -20,28 +20,34 @@ def pct_after(s, words=('increased', 'decreased', 'up', 'down', 'flat', 'unchang
 rows = []
 for f in sorted(glob.glob(str(ROOT / 'raw/sec/pgr/*.htm'))):
     base = os.path.basename(f); dt, form = base[:10], base[11:].split('_')[0]
+    if form != '10-Q': continue                      # 10-K primary documents carry no MD&A (Exhibit 13); skip
     txt = text_of(f).replace('\n', ' ')
-    # frequency sentence
-    fm = re.search(r'([^.]*incurred frequency of (?:auto|personal auto) accidents[^.]*\.)', txt) or re.search(r'([^.]*\bauto accident frequency[^.]*\.)', txt) or re.search(r'([^.]*\bfrequency\b[^.]*(?:quarter|three months)[^.]*\.)', txt)
+    # frequency: four wordings across 2015–2026
+    fm = (re.search(r'([^.]*incurred frequency of (?:auto|personal auto) accidents[^.]*\.)', txt)
+          or re.search(r'([^.]*personal auto incurred (?:accident )?frequency,? on a (?:calendar-year|calendar year|year-over-year) basis,[^.]*\.)', txt)
+          or re.search(r'([^.]*incurred personal auto accident frequency[^.]*\.)', txt)
+          or re.search(r'([^.]*personal auto incurred accident frequency was (?:down|up)[^.]*\.)', txt))
     fs = fm.group(1).strip() if fm else ''
-    # per-coverage collision bullet (first "Collision ..." sentence after the frequency sentence)
+    TB = r'personal auto incurred frequency, on a calendar-year basis, over the prior-year period, was as follows:.{0,700}?'
+    tbl = re.search(TB + r'Total \(?(\d+)\)?', txt)        # 2023+ table: "Total (4) (3)" (Q1 filings have one column); parentheses = negative
+    ctb = re.search(TB + r'Collision \(?(\d+)\)?', txt)
+    def signed(m, i):  # parenthesised = negative
+        seg = m.group(0); num = m.group(i); j = seg.rfind(num); return -float(num) if seg[j - 1] == '(' else float(num)
     cs = ''
     if fm:
         cm = re.search(r'(Collision[^.•]*\.)', txt[fm.end():fm.end() + 2500]); cs = cm.group(1).strip() if cm else ''
-    # severity sentence
     sm = re.search(r'(?:Total )?personal auto incurred severity', txt) or re.search(r'incurred severity', txt)
     ss = re.sub(r'\(i\.e\.,[^)]*\)', '', txt[sm.start():sm.start() + 700]).strip() if sm else ''
     ss = ss.split('. ')[0] + '.' if ss else ''
-    # quarter figure: prefer the clause mentioning 'quarter'
     def qfig(s):
         if not s: return None
-        parts = re.split(r'\band\b|,|;', s)
-        for p in parts:
-            if 'quarter' in p or 'three months' in p:
-                v = pct_after(p)
-                if v is not None: return v
-        return pct_after(s)
-    rows.append(dict(filing_date=dt, form=form, freq_total_q=qfig(fs), freq_collision_q=qfig(cs), severity_total_q=qfig(ss), freq_quote=fs[:300], collision_quote=cs[:200], severity_quote=ss[:300]))
+        m = re.search(r'(increased|decreased|down|up)\s+(?:by\s+)?(?:about|approximately|around|nearly|almost|roughly)?\s*(\d+(?:\.\d+)?)\s*%?(?:\s+to\s+\d+%)?', s)
+        if m: return (1 if m.group(1) in ('increased', 'up') else -1) * float(m.group(2))
+        if re.search(r'\b(flat|unchanged)\b', s): return 0.0
+        return None
+    f_q = signed(tbl, 1) if tbl else qfig(fs); c_q = signed(ctb, 1) if ctb else qfig(cs)
+    if tbl: fs = 'TABLE: ' + tbl.group(0)[:300].replace('|', '/')
+    rows.append(dict(filing_date=dt, form=form, freq_total_q=f_q, freq_collision_q=c_q, severity_total_q=qfig(ss), freq_quote=fs[:300], collision_quote=cs[:200], severity_quote=ss[:300]))
 out = ROOT / 'data/csv/pgr_frequency_quarterly.csv'
 with open(out, 'w', newline='') as fh:
     fh.write("# Progressive (CIK 80661) personal-auto incurred claim frequency and severity, year-over-year % change for the quarter, transcribed by regex from each 10-Q/10-K MD&A (raw/sec/pgr/, fetched 2026-09-26) with the source sentence beside every number (scripts/experiments/e2_pgr_frequency.py). 10-K rows are full-year unless the sentence gives Q4. Comprehensive coverage excluded by Progressive's own convention. VERIFIED quotes; parsed figures should be spot-checked against them.\n")
