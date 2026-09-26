@@ -1446,3 +1446,46 @@ a depreciation curve by age (structural P). Full list with reasons: `docs/AGE_CU
    writes a share off a partial IAA count. History re-flagged, three duplicate-day rows dropped, CSV re-exported.
 7. **Clean duopoly reads so far (both sides gated): 09-11 57.05% · 09-17 57.45% · 09-18 56.75%.** Copart ≈ 57% of listed
    US duopoly inventory. Kill condition for the pitch remains share < 55% by mid-October, now measured only on `usable=1` days.
+
+---
+
+# ADDENDUM 18 — 2026-09-25: cheap checks on an external note's two hypotheses
+
+Source: a research note written by another model (user's `~/Documents/ChatGPT/HFAC x Citadel/research/cprt_feasibility_2026-09-25/research_note.md`),
+proposing (1) that rising salvage recoveries tip marginal repairable cars into total losses, and (2) that Progressive's
+move to IAA congests IAA yards and pushes other carriers to Copart. Three checks, all from data on disk, seconds each
+(`scripts/recovery_divergence_check.py`).
+
+## 1. The recovery/value divergence is real and persistent in our own series
+Copart US insurance ASP YoY minus used-car CPI YoY averages **+4.15pp/yr** over 17 fiscal quarters (FY22Q4–FY26Q4),
+sd 3.2, first half +3.7 / second half +4.5. Equivalently the regression ASP = 3.34 + 0.602×CPI has a ~3.3pp intercept.
+The note inferred the same divergence from one IAA ratio (ASP +3.9% vs ACV +0.4% in 2Q26); here it is on 17 quarters of
+our transcript series (MEASURED, Tier 2 provenance). Mix is a competing explanation: more totals of higher-value
+drivable cars raise the average salvage price without any per-car recovery gain.
+
+## 2. It does NOT add to the spread regression — on a small sample, with the wrong sign
+On the 11 quarters where ΔTLF(t+1), spread(t) and divergence(t) all exist (2022Q2–2026Q1):
+
+| model | intercept | b_spread | c_divergence | R² |
+|---|---|---|---|---|
+| spread only | +0.50 | +0.078 | — | 0.51 |
+| spread + raw divergence | +0.67 | +0.121 | **−0.147** | 0.57 |
+| spread + divergence orthogonalised on CPI | +0.41 | +0.084 | **−0.170** | 0.60 |
+
+The two regressors are 0.85 correlated because both subtract used-car CPI; once the spread is in, the divergence's
+marginal coefficient is negative, the opposite of the hypothesis. The contemporaneous correlation of ΔTLF with the
+divergence is +0.64, which is exactly what selection would produce (the note's own caveat: auction prices are observed
+after the totaling decision). **Verdict: no support in our data for salvage-recovery divergence as a driver of the TLF
+residual; not a refutation either — n=11, realised ASP is not the recovery estimate the adjuster used, and the
+fiscal-to-calendar mapping is two-of-three months.** The 0.6pp/yr unexplained drift stays unexplained.
+
+Not tested, and worth knowing: the mechanism can only operate where the state's total-loss rule puts salvage value in
+the formula (roughly half the states use a "total loss formula", the rest a percentage-of-value threshold). No state
+table is on disk (UNVERIFIED lead).
+
+## 3. Hypothesis 2 cannot be tested from what we collect
+IAA vehicle sitemap entries carry `loc`, `lastmod`, `changefreq`, `priority` only — no branch. The auctions sitemap does
+give scheduled sale dates per branch (185–191 branches, 1.55–1.93 scheduled auctions per branch per snapshot, stable
+over two weeks), a weak cadence proxy, not a workload measure. A congestion test needs carrier-by-yard volumes, which
+exist only in paid alternative data. The note's own conclusion stands: local hypothesis, national version not passed,
+and the Stephens preview already cites Yipit data on GEICO share movement, so it is not novel.
