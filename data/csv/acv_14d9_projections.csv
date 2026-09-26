@@ -1,0 +1,7 @@
+# ACV Auctions management projections as disclosed in its Schedule 14D-9 (filed 2026-09-17, accession 0001193125-26-393862, raw/sec/acv/sc14d9_2026-09-17.htm), "Certain Unaudited Prospective Financial Information". Standalone basis, no synergies. $ millions, fiscal years ending Dec 31. VERIFIED (transcribed from the filing text 2026-09-26; reports/E10_filings.md). Adjusted EBITDA is unburdened by SBC; Adjusted EBIT is burdened by SBC; NOPAT = Adj EBIT less taxes; uFCF = NOPAT + D&A - capex - capitalized software - dNWC. 'na' in the filing = blank here.
+fiscal_year,revenue_musd,adj_ebitda_unburdened_sbc_musd,adj_ebit_burdened_sbc_musd,nopat_musd,unlevered_fcf_musd
+2026E,857,78,-15,,
+2027E,964,123,20,15,-97
+2028E,1116,187,73,55,-69
+2029E,1322,283,152,114,-8
+2030E,1525,382,244,183,37
