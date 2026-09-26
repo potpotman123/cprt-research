@@ -41,6 +41,22 @@ robots-disallowed path.
 | `state_panel.py` | ONE-OFF | State-level listed inventory from lot slugs, per complete month. |
 | `yard_analysis.py` / `parse_salelist_sitemaps.py` | ONE-OFF | Yard / sale-event panel Aug-2022 → Jan-2026 from archived sale-list sitemaps. |
 
+## `experiments/` — the second-session experiments (2026-09-26; scope in `reports/00_scoping_2026-09-26.md`)
+
+One script per experiment, one report per script under `reports/`, data to `data/csv/` with a `#` provenance header.
+
+| Script | Status | Purpose |
+|---|---|---|
+| `e1_listed_body_share.py` | ANALYSIS | E1 step 1: light-truck share of the listed pool 2022–2026 from lot slugs → `listed_body_share_monthly.csv`. |
+| `e1_body_propensity.py` | ANALYSIS | E1 steps 4–6: body-specific P(age) as a probit offset (HLDI severity × E8 value ÷ σ_eff from CCC's bucket slope), two-body fleet roll to 2030, listing check on the frequency ratio → `age_curves_by_body.csv`, `body_mix_tlf_asp_2015_2030.csv`. |
+| `e2_pgr_frequency.py`, `e2_affordability_claims.py` | ANALYSIS | E2: Progressive quarterly frequency/severity from 47 filings; VMT and insurance-CPI lag tests; deductible-share tracking → `pgr_frequency_quarterly.csv`, `claims_term_drivers.csv`. |
+| `e3_repair_cost_drivers.py` | ANALYSIS | E3: repair-CPI numerator decomposed against CES 8111 wages/jobs and parts PPI → `repair_cost_drivers.csv`. |
+| `e4_offlease_used_values.py` | ANALYSIS | E4: 2–4-year-old cohort stock vs used-car CPI, growth and level forms → `used_car_cpi_drivers.csv`. |
+| `e5_state_dispersion.py` | ANALYSIS | E5 step 1: cross-state dispersion screen on listed shares (persistence, region, CAT flags) → `state_share_dispersion.csv`. Kill rule met. |
+| `e6_parse_fee_page.py`, `e6_ocr_iaa_table.py`, `e6_iaa_ocr_to_csv.py`, `e6_fee_grid_simulation.py`, `ocr_image.swift` | ANALYSIS | E6: Copart and IAA fee grids from an owner-driven browser session (local OCR), and the grid-convexity simulation of the fee elasticity → `copart_fee_grid_2026-09.csv`, `iaa_fee_grid_2026-09.csv`, fixed-fee files. |
+| `e8_body_value_ratio.py` | ANALYSIS | E8: light-truck vs car value ratio at age 5 (KBB ATP × iSeeCars retention) → `ASP_Drivers!B4`. |
+| `ccc_age_decomposition.py` | ANALYSIS | CCC 2026 Figures 18/19: TLF change into claims-age mix vs within-age propensity → `ccc_tlf_mix_vs_propensity.csv`. |
+
 ## SEC extraction
 
 | Script | Status | Purpose |

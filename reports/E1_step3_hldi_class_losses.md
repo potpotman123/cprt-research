@@ -41,7 +41,9 @@ light trucks file **one-third fewer** collision claims per insured vehicle year.
   wired to `ASP_Drivers!B4` (E8).
 - **Net for Copart:** units per registered vehicle drift down with the truck share; revenue per unit drifts up. Whether
   revenue per registered vehicle rises depends on the elasticity of fees to value (0.514 on service RPU), so the net is
-  positive for revenue and mildly negative for units. This is a driver-based reason to expect exactly the pattern of the last
+  positive for revenue and mildly negative for units. **[RETRACTED 2026-09-26, step 4: quantified, the net is units −0.6%/yr,
+  service RPU +0.4%/yr, revenue ≈ −0.3%/yr — unit-negative and revenue-neutral to slightly negative;
+  `reports/E1_step4_6_body_propensity.md` §5.]** This is a driver-based reason to expect exactly the pattern of the last
   two years — flat-to-down units, rising RPU — and it has a calendar.
 
 **Caveats.** HLDI's relatives are for 2022–24 model years (age 0–3), where totaling is rare; the frequency gap partly reflects

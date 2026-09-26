@@ -1668,3 +1668,61 @@ requests through `prov.py`; new code under `scripts/experiments/`; each experime
   don't talk about fee schedules." E6 needs a human browser session.
 - The 10-K (fee language, revenue disaggregation, international buyers): the FY25 10-K says only that foreign importers are
   "a significant part of our total buyer base" — no percentage.
+
+# ADDENDUM 23 — 2026-09-26 (third session, cloud container): E1 steps 4–6 and the E5 screen; the network items blocked
+
+Scope: `RESUME_2026-09-26.md` open items in order. This container has no `raw/` (gitignored) and no `data/cprt.db`, and its egress
+policy denies every host the network items need (§D below), so the two local items were run and the three network items are
+reported as blocked with their status codes. New code under `scripts/experiments/`, reports under `reports/`, CSVs indexed in
+`data/csv/README.md`. Workbook rebuilt (58 sheets, 5,369 formulas), `verify_intermediate_xlsx.py` ALL CHECKS OK, problems 0.
+
+## A. E1 steps 4–6 — body-specific totaling propensity (`reports/E1_step4_6_body_propensity.md`)
+- **Structural form validated on CCC's own data:** the probit index Φ⁻¹(P) of CCC Figure 19's P by age bucket is linear in the
+  claims-weighted bucket age with **R² 0.980 (2024) / 0.986 (2025)**, slope γ = 0.070/yr (MEASURED). So P = Pr[repair > θ·value]
+  with lognormal dispersion is a good description, and the body difference is one probit shift Δz = (ln 1.50 − ln 1.01)/σ_eff.
+- σ_eff = δ/γ = **1.57** at δ = 0.11/yr (ASSUMED from iSeeCars 5-yr retention plus sticker drift; range 1.14–2.00); the HLDI
+  claim-size distribution alone gives σ 1.05, a lower bound (it omits within-age value dispersion) → Δz **0.25** base, 0.20–0.38.
+- **P_LT ≈ 0.72–0.76 × P_car at ages 8–12** (0.64 at age 0, 0.80 at 20), with the aggregate P(a) preserved at every age; nothing
+  refitted, `TLF_Roll` unchanged. `age_curves_by_body.csv`.
+- **Out-of-sample validation from the listed pool:** the one-body roll put the light-truck share of total losses 4–6pp above
+  Copart's listed salvage-title share (E1 step 1). The two-body roll with no frequency differential lands at **50.0% (2024) and
+  53.7% (2026) vs listed 50.8% / 56.7%** — within 1–3pp. The listing was not used to build the curves.
+- **HLDI's adjusted collision-frequency relative (LT 0.67× cars) is not visible in the aggregate:** applying it puts the truck share
+  11–13pp below the listing. Solving for the ratio that matches the listing gives f = 1.03 (2024) / 1.13 (2026). Use f = 1.0. The
+  claim-size-only σ would need f = 1.2–1.3 (wrong direction vs HLDI), so the base σ_eff is preferred.
+- **Supply effect (step 5):** body mix lowers TLF by **−0.13pp/yr 2024→2030** (range −0.08 to −0.18 across V 1.3–1.7, δ 0.08–0.14,
+  σ bound). Combined with the one-body roll's ≈0 forward drift, **net demographic drift is ≈ −0.1pp/yr through 2030**, not +0.16.
+  CCC's 2022→25 "within-age propensity" +3.8pp (Addendum 22 D) contains ≈ −0.4pp of body mix; the cyclical part is slightly larger.
+- **Price effect:** +0.7pp/yr of ASP on the two-body share path (ratio 1.50), ~0.1 above the workbook's one-body placeholder.
+- **Net for Copart:** US insurance units −0.6%/yr, service RPU +0.4%/yr (0.514), revenue **≈ −0.3%/yr** (≈ −0.1% on the 0.752
+  total-RPU definition). **RETRACTED:** the step 3 report's line that the net was "positive for revenue and mildly negative for
+  units" — on this arithmetic it is unit-negative and revenue-neutral to slightly negative.
+- Step 6 is step 1 (already done); step 2 (a body-level total-loss statement) was searched on the CCC pages in the second session
+  and not found. E1 is complete at the level the offline data allow. `body_mix_tlf_asp_2015_2030.csv`.
+- Both directions: short — the "ageing fleet + truck wave" supply story is wrong on the totaling side, with a calendar to 2030;
+  long — the same mechanism is the +0.7pp/yr ASP tailwind that feeds the RPU intercept, and it explains flat-to-down units with
+  rising RPU as a driver rather than an excuse.
+
+## B. E5 step 1 — cross-state dispersion screen (`reports/E5_step1_state_dispersion.md`)
+- 43 states ≥ 0.5% of listings: relative share change 2023→Sep-2026 stdev **30%**, 2.5× the within-year wobble (CV 12%), no size
+  dependence — real dispersion. But **persistence corr(Δ23→24, Δ24→26) = −0.37** (mean-reverting: MO +48% then −47%, NM +74% then
+  −43%, FL −30% then +45%), the Helene/Milton-2024 states do not stand out, and the only structure is regional (Northeast +25%,
+  Midwest +9%, South −9%, West −9%). Wrong shape for a titling-speed story, which needs persistent one-directional declines.
+- **Kill rule met.** E5 stops; the 20–60 DMV requests of steps 2–3 are not justified before the finals. If the owner supplies
+  state e-title adoption dates from one source, the diff-in-diff runs on `state_share_dispersion.csv` with no fetches.
+- Neither direction: the −6% listed-inventory decline stays a volume signal (the account loss), not a velocity artefact.
+
+## C. Workbook
+- Three data tabs added (`Data_BodyCurves`, `Data_BodyMix`, `Data_StateDispersion`); a note under the `TLF_Roll` checks block
+  says the roll's drift row is one-body and where to read the body-mix correction. No formula changed; verify ALL CHECKS OK.
+
+## D. Blockers (status codes; do not retry from a container with this policy)
+- The session's egress proxy answers **403 to CONNECT** for `data.sec.gov`, `www.sec.gov`, `fred.stlouisfed.org`, `www.iihs.org`,
+  `download.bls.gov`, `www.progressive.com` (curl exit 56, `connect_rejected`, "policy denial", 18:48–18:49Z). Not a robots or
+  host block — an organisation policy for this container. Consequences, in RESUME order:
+  1. **FY26 10-K check (item 1): not done.** Re-check `data.sec.gov/submissions/CIK0000900075.json` from the owner's machine.
+  2. **E7 dollar screen (item 3): not done** (FRED denied). One request from the owner's machine; the script is ~20 lines.
+  3. **Progressive Q4 frequency (item 4): not done** (SEC denied).
+- `raw/` is absent here (gitignored), so nothing that reads licensed or archived files (`age_curves.py`, `asp_vintage_effect.py`,
+  the transcripts, the HLDI PDFs) can run; E1 step 4 used the class ratios recorded in the step 3 report instead of the sheets.
+- pip from PyPI is allowed: numpy, openpyxl and pycel were installed to run the workbook build and verify.

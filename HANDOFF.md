@@ -15,7 +15,7 @@ what we found, and where it led. Confidence is labelled on every result. Where w
 | the model architecture the user is building (mechanisms A–E, tab map, build order) | `MODEL_BLUEPRINT.md` |
 | how the age curves S(age), R(age), P(age) were derived and validated | `docs/AGE_CURVES.md` |
 | the numbers, formulas and data in one workbook to copy from | `model/CPRT_Intermediate.xlsx` (built by `scripts/build_intermediate_xlsx.py`) |
-| every result in the order it happened, **including every retraction** | `findings.md` (Addenda 1–17) |
+| every result in the order it happened, **including every retraction** | `findings.md` (Addenda 1–23) |
 | every host touched, its robots.txt status, what was saved where | `PROVENANCE.md` |
 | how the collector and the sitemap data physically work | `ARCHITECTURE.md` |
 | what each script / CSV is and whether it is live, analysis, dead-end or legacy | `scripts/README.md`, `data/csv/README.md` |
@@ -102,9 +102,11 @@ the sources are not. The GitHub remote is private.
 **Direction is open (owner's instruction, 2026-09-26).** Everything before this date was written toward a long. Two
 findings from the second session cut the other way and must be weighed without a thumb on the scale: (1) the ageing-fleet
 contribution to total-loss frequency is measured from CCC's own buckets as ≈0 since 2023 (`reports/CCC_age_buckets_2026.md`),
-so the demographic tailwind has already passed through; (2) the truck-heavy cohorts file fewer collision claims at higher
-value, which lowers age-specific totaling propensity (`reports/E1_step3_hldi_class_losses.md`) — a supply headwind with a
-calendar. Every report from here states what it implies for both directions.
+so the demographic tailwind has already passed through; (2) light trucks total about three-quarters as often as cars of the
+same age (HLDI severity ≈ equal, value 1.5×; `reports/E1_step3_hldi_class_losses.md`, quantified in
+`reports/E1_step4_6_body_propensity.md`): the truck wave lowers TLF by ~0.13pp/yr through 2030, so net demographic drift is
+≈ −0.1pp/yr, not +0.16 — a supply headwind with a calendar, partly offset by +0.7pp/yr of ASP. Every report from here states
+what it implies for both directions.
 
 **Where it leads next:** the user's model (DCF + three statements) with three build tabs — units, RPU, facility cost —
 each handing one row to a revenue tab; manual pulls that would turn fitted curves into measured ones (§6); and the
@@ -274,9 +276,15 @@ stretch by 1% and nothing downstream.
 **Where it led.** The engine tabs in the workbook (Inputs, Curves, Calibration, Survival, Fleet, FleetByAge,
 TLF_Roll) and one number for the Units Build: demographic drift. Honest version of the ageing-fleet story.
 
-**Open.** HLDI publishes measured claim frequency by vehicle age — it would replace fitted R with data (user pull).
-CCC 2026 Figures 18/22 data labels would pin P's interior. The k-drift path between 2013 and 2024 is linear by
-assumption; only its endpoints are anchored.
+**Superseded in part (2026-09-26, Addenda 22–23).** P's interior is now MEASURED at bucket level (CCC Figure 19), and a
+probit in age fits those buckets with R² 0.98, so P = Pr[repair > θ·value] is a validated form. Splitting P by body
+(`reports/E1_step4_6_body_propensity.md`: P_LT ≈ 0.72–0.76 × P_car at ages 8–12) turns the forward drift from ≈0 to
+**≈ −0.1pp/yr through 2030**, and the two-body roll matches Copart's listed truck share within 1–3pp where the one-body roll
+overshot by 4–6pp. The +0.16pp/yr above is the one-body 2019–2025 average; do not carry it forward.
+
+**Open.** HLDI publishes measured claim frequency by vehicle age — it would replace fitted R with data (user pull); by age
+*and body* it would make the frequency ratio f (≈1 from the listing check) measured. The k-drift path between 2013 and 2024
+is linear by assumption; only its endpoints are anchored.
 
 ### F2. Decomposing the fitted price intercept into drivers (2026-09-25, Addenda 20–21)
 
@@ -439,9 +447,13 @@ conclusions, and expect correction.
   a rival bid at $11–12 that withdrew. **The FY26 10-K is still not filed** (checked 2026-09-26).
 - **The IAA pacing fix** worked on 2026-09-25 (all three sitemaps clean) but the Copart side was ungated that night, so no
   usable duopoly share yet.
-- **Second-session experiments (2026-09-26):** scope in `reports/00_scoping_2026-09-26.md`; results so far in Addendum 22 and
-  `reports/E1_step1_*.md`, `E4_*.md`, `E8_*.md`, `E10_*.md`, `CCC_age_buckets_2026.md`. E2, E3, E6 (human step) and E1 steps 3–6 are
-  open.
+- **Second- and third-session experiments (2026-09-26):** scope in `reports/00_scoping_2026-09-26.md`; results in Addenda 22–23
+  and `reports/E1_*.md`, `E2_*.md`, `E3_*.md`, `E4_*.md`, `E5_*.md`, `E6_*.md`, `E8_*.md`, `E10_*.md`, `CCC_age_buckets_2026.md`.
+  E1 is complete offline; E5 killed at the screen; E9 dead. Still open: the FY26 10-K tie-out, the E7 dollar screen (one FRED
+  request), Progressive Q4 frequency (11 Exhibit-13 fetches) — all three need a machine whose network policy allows
+  sec.gov and fred.stlouisfed.org (the 2026-09-26 cloud container's did not; Addendum 23 D).
+- **σ_eff and δ in the body split are assumptions** (bracketed by the HLDI claim-size bound and the listing check); the
+  supply effect's range −0.08 to −0.18pp/yr is the honest statement.
 
 ---
 
@@ -450,6 +462,8 @@ conclusions, and expect correction.
 1. Read the FY26 10-K the day it files; tie the FY26 base year in the workbook to it (`MODEL_BLUEPRINT.md` §7).
 2. Confirm or replace the 289M anchor from S&P's release; re-run `age_curves.py` and rebuild the workbook (two
    commands; the verify script tells you if anything moved).
+2b. E7 step 1 from a machine that can reach FRED (`fredgraph.csv?id=DTWEXBGS`, one request): regress the `ASP_Drivers`
+   residual on the dollar; then the Progressive Q4 series and the FY26 10-K when EDGAR is reachable (Addendum 23 D).
 3. If the user pulls HLDI claim frequency by vehicle age, replace the fitted R slope with the measured curve on
    `Inputs` and re-run the out-of-sample checks on `TLF_Roll` — this is the single biggest upgrade to §3F.
 4. Watch `duopoly_daily.usable` for a week; if sitemap3 keeps failing, try a second, later fetch of only the missing
