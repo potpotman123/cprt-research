@@ -8,6 +8,8 @@ what exists, what was retracted, and how this project fails.*
 
 ## 0. The standard you are working to
 
+*Owner's instruction 2026-09-26: the pitch is long OR short, decided by the analyses. Do not write toward a direction; report what each result implies for both.*
+
 **The problem with the repository as it stands.** It forecasts Copart's KPIs through an identity — US insurance
 units = industry claims × total-loss rate × Copart share; revenue per unit = f(realised price, fees) — and each term is
 either measured or fitted on public history. That is honest, and it is not a pitch. A multi-manager pod has the same

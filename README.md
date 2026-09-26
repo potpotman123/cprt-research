@@ -1,6 +1,6 @@
 # CPRT research — Copart, Inc. (NASDAQ: CPRT)
 
-Research pipeline behind a **long pitch on Copart**: public, robots-compliant data with a logged provenance trail,
+Research pipeline behind a **pitch on Copart — long or short, decided by the analyses** (direction opened 2026-09-26; see `HANDOFF.md` §1): public, robots-compliant data with a logged provenance trail,
 calibrated mechanisms, and one workbook the model is built from. **Licensed content (transcripts, sell-side, the
 reference model) is gitignored and never committed.**
 

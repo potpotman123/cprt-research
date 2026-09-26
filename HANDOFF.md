@@ -43,7 +43,7 @@ what we found, and where it led. Confidence is labelled on every result. Where w
 
 ## 1. The task and the constraints
 
-**Goal.** A long pitch on Copart (NASDAQ: CPRT) for a student stock-pitch competition judged by hedge-fund
+**Goal.** A pitch on Copart (NASDAQ: CPRT) — **long or short, whichever the data support** — for a student stock-pitch competition judged by hedge-fund
 practitioners: a two-page PDF plus a model. Horizon 3–12 months. The user builds the Excel model themself; this
 repository supplies the data, the mechanisms, the calibrations and the reasoning.
 
@@ -98,6 +98,13 @@ the sources are not. The GitHub remote is private.
    measured, and that one anchor we used (289M vehicles) is from memory and still unverified.
 8. **Everything was assembled into one styled workbook** the user copies from (§4), verified cell by cell against the
    scripts, and the collectors were audited after two weeks, which found and fixed a bug in the IAA share (§3G).
+
+**Direction is open (owner's instruction, 2026-09-26).** Everything before this date was written toward a long. Two
+findings from the second session cut the other way and must be weighed without a thumb on the scale: (1) the ageing-fleet
+contribution to total-loss frequency is measured from CCC's own buckets as ≈0 since 2023 (`reports/CCC_age_buckets_2026.md`),
+so the demographic tailwind has already passed through; (2) the truck-heavy cohorts file fewer collision claims at higher
+value, which lowers age-specific totaling propensity (`reports/E1_step3_hldi_class_losses.md`) — a supply headwind with a
+calendar. Every report from here states what it implies for both directions.
 
 **Where it leads next:** the user's model (DCF + three statements) with three build tabs — units, RPU, facility cost —
 each handing one row to a revenue tab; manual pulls that would turn fitted curves into measured ones (§6); and the
