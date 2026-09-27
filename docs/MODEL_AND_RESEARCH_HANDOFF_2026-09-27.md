@@ -4,6 +4,8 @@ Updated 27 September 2026. Read this before the older `HANDOFF.md` and `MODEL_BL
 
 ## 1. What the user wants now
 
+**Forecast architecture revision:** the user now requires all projected service revenue to arise from explicit volume and fee drivers, replacing the latest-growth baseline and small fleet overlay. See the [bottom-up replacement design](../model/service_revenue_2026-09-27/BOTTOM_UP_REPLACEMENT_DESIGN.md). Integrate damage selection into both totaling probabilities and conditional fees. Preserve the approved four-tab reading organization. This is the intended replacement; the currently delivered workbook still uses the old baseline until the new engine is built and reconciled.
+
 **Architecture approved:** the user subsequently approved the organization of the 14-tab workbook with four main reading tabs and will continue visual design with Fable. Preserve the [approved architecture](../model/service_revenue_2026-09-27/APPROVED_ARCHITECTURE.md). Analytical development continues here; the approval is not validation of the inputs or final styling.
 
 - A differentiated Copart pitch with an approximately six-month catalyst horizon. The user is currently pursuing a short, but the calculation must retain contrary evidence and must not be adjusted to manufacture downside.
