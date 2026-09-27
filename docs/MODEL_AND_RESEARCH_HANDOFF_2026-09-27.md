@@ -4,6 +4,8 @@ Updated 27 September 2026. Read this before the older `HANDOFF.md` and `MODEL_BL
 
 ## 1. What the user wants now
 
+**Architecture approved:** the user subsequently approved the organization of the 14-tab workbook with four main reading tabs and will continue visual design with Fable. Preserve the [approved architecture](../model/service_revenue_2026-09-27/APPROVED_ARCHITECTURE.md). Analytical development continues here; the approval is not validation of the inputs or final styling.
+
 - A differentiated Copart pitch with an approximately six-month catalyst horizon. The user is currently pursuing a short, but the calculation must retain contrary evidence and must not be adjusted to manufacture downside.
 - **The present model deliverable is quarterly TOTAL SERVICE REVENUE: US service revenue plus international service revenue.** Do not build EPS, margins, a DCF or vehicle-sales revenue as part of this task. A separate valuation model may exist elsewhere.
 - Preserve the detailed research: repair-cost weighting, age/body cohorts, economic total-loss thresholds, probability calibration, auction pricing and nonlinear fees. The user values granular equations and visible calculations.
