@@ -1,0 +1,14 @@
+{
+  "records": 6,
+  "historical_data_modified": false,
+  "new_network_requests": 0,
+  "fq4_frequency_only_pool_proxy_pct": 0.48125000000001084,
+  "fq4_assignment_relative_residual_pct_if_exposure_flat": -5.454997822976937,
+  "fq4_ex_account_relative_residual_pct_if_exposure_flat": 1.8100391864153575,
+  "prior_year_insurance_unit_weight_implied_by_rounded_q4_growth": 0.7662337662337663,
+  "implied_weight_caveat": "Conditional on US total, insurance and non-insurance growth sharing the identical sold-unit scope. Prior FY25Q4 unit weight, not current share or service revenue weight. Rounding and source verification pending.",
+  "cy2025_copart_simple_four_quarter_mean_pct": -2.35,
+  "cy2025_copart_month_weighted_growth_approx_pct": -3.483333333333334,
+  "calendar_average_caveat": "Neither arithmetic mean is exact annual volume growth without prior-year unit weights; the two stored research approaches conflict.",
+  "multiplicative_reconciliation_passed": true
+}

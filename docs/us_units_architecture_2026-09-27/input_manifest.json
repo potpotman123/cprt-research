@@ -1,0 +1,9 @@
+{
+  "data/csv/reported_units.csv": "cfcc09e1ce16af44422b212ebe1271acbcb2ff78f59ac56a19a143e73ffbba7b",
+  "data/csv/units_decomp_panel_v2.csv": "31ec9c01e9ac2f3a60ca9a9d1f3f7ad646bf51e37272afef97953f4c259bc0f6",
+  "data/csv/decomposition.csv": "4352ea5e0a46d87f74e9cdbc87099e05b1e8dc05249a17e393b52e397ba364d6",
+  "data/csv/segment_service_rev_8k.csv": "f7d0d7d9ed2bda36fc69745ec8692647de80156921148a28cd5d77ab513d3394",
+  "scripts/units_decomp_panel.py": "b1a15838e54c88240b59731ce95684fa3b50722ec69c45059f498f7cd33b6a50",
+  "MODEL_BLUEPRINT.md": "e75eb344bb7947eef7b740aad815d26a333f8235abeffd2e39859697e147b76a",
+  "findings.md": "2e29341b050c8cc02366a5ed1ec03d3097738710272b23953de6459dfba7634f"
+}
