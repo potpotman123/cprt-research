@@ -1,0 +1,31 @@
+model_year,model,body,trim,fair_purchase_price_usd,url,access_date,status
+2016,Camry,Car,LE,13500,https://www.kbb.com/toyota/camry/2016/,2026-09-26,published retail proxy; not insurer ACV or salvage proceeds
+2016,Camry,Car,SE,13100,https://www.kbb.com/toyota/camry/2016/,2026-09-26,published retail proxy; not insurer ACV or salvage proceeds
+2016,Camry,Car,SE Special Edition,13550,https://www.kbb.com/toyota/camry/2016/,2026-09-26,published retail proxy; not insurer ACV or salvage proceeds
+2016,Camry,Car,XSE,14550,https://www.kbb.com/toyota/camry/2016/,2026-09-26,published retail proxy; not insurer ACV or salvage proceeds
+2016,Camry,Car,XLE,14200,https://www.kbb.com/toyota/camry/2016/,2026-09-26,published retail proxy; not insurer ACV or salvage proceeds
+2016,Accord,Car,LX Sedan,12900,https://www.kbb.com/honda/accord/2016/,2026-09-26,published retail proxy; not insurer ACV or salvage proceeds
+2016,Accord,Car,Sport Sedan,13650,https://www.kbb.com/honda/accord/2016/,2026-09-26,published retail proxy; not insurer ACV or salvage proceeds
+2016,Accord,Car,EX Sedan,13750,https://www.kbb.com/honda/accord/2016/,2026-09-26,published retail proxy; not insurer ACV or salvage proceeds
+2016,Accord,Car,EX-L Sedan,13200,https://www.kbb.com/honda/accord/2016/,2026-09-26,published retail proxy; not insurer ACV or salvage proceeds
+2016,Accord,Car,Touring Sedan,14550,https://www.kbb.com/honda/accord/2016/,2026-09-26,published retail proxy; not insurer ACV or salvage proceeds
+2016,RAV4,Crossover,LE,15400,https://www.kbb.com/toyota/rav4/2016/,2026-09-26,published retail proxy; not insurer ACV or salvage proceeds
+2016,RAV4,Crossover,XLE,15650,https://www.kbb.com/toyota/rav4/2016/,2026-09-26,published retail proxy; not insurer ACV or salvage proceeds
+2016,RAV4,Crossover,SE,16250,https://www.kbb.com/toyota/rav4/2016/,2026-09-26,published retail proxy; not insurer ACV or salvage proceeds
+2016,RAV4,Crossover,Limited,16550,https://www.kbb.com/toyota/rav4/2016/,2026-09-26,published retail proxy; not insurer ACV or salvage proceeds
+2016,CR-V,Crossover,LX,13500,https://www.kbb.com/honda/cr-v/2016/,2026-09-26,published retail proxy; not insurer ACV or salvage proceeds
+2016,CR-V,Crossover,SE,14400,https://www.kbb.com/honda/cr-v/2016/,2026-09-26,published retail proxy; not insurer ACV or salvage proceeds
+2016,CR-V,Crossover,EX,14700,https://www.kbb.com/honda/cr-v/2016/,2026-09-26,published retail proxy; not insurer ACV or salvage proceeds
+2016,CR-V,Crossover,EX-L,15600,https://www.kbb.com/honda/cr-v/2016/,2026-09-26,published retail proxy; not insurer ACV or salvage proceeds
+2016,CR-V,Crossover,Touring,16500,https://www.kbb.com/honda/cr-v/2016/,2026-09-26,published retail proxy; not insurer ACV or salvage proceeds
+2016,F150 SuperCrew,Pickup,XL 6.5,14350,https://www.kbb.com/ford/f150-supercrew-cab/2016/,2026-09-26,published retail proxy; not insurer ACV or salvage proceeds
+2016,F150 SuperCrew,Pickup,XL 5.5,16150,https://www.kbb.com/ford/f150-supercrew-cab/2016/,2026-09-26,published retail proxy; not insurer ACV or salvage proceeds
+2016,F150 SuperCrew,Pickup,XLT 5.5,18150,https://www.kbb.com/ford/f150-supercrew-cab/2016/,2026-09-26,published retail proxy; not insurer ACV or salvage proceeds
+2016,F150 SuperCrew,Pickup,XLT 6.5,19400,https://www.kbb.com/ford/f150-supercrew-cab/2016/,2026-09-26,published retail proxy; not insurer ACV or salvage proceeds
+2016,F150 SuperCrew,Pickup,King Ranch 6.5,21100,https://www.kbb.com/ford/f150-supercrew-cab/2016/,2026-09-26,published retail proxy; not insurer ACV or salvage proceeds
+2016,F150 SuperCrew,Pickup,Platinum 6.5,22500,https://www.kbb.com/ford/f150-supercrew-cab/2016/,2026-09-26,published retail proxy; not insurer ACV or salvage proceeds
+2016,F150 SuperCrew,Pickup,Lariat 6.5,21200,https://www.kbb.com/ford/f150-supercrew-cab/2016/,2026-09-26,published retail proxy; not insurer ACV or salvage proceeds
+2016,F150 SuperCrew,Pickup,Lariat 5.5,21300,https://www.kbb.com/ford/f150-supercrew-cab/2016/,2026-09-26,published retail proxy; not insurer ACV or salvage proceeds
+2016,F150 SuperCrew,Pickup,King Ranch 5.5,23600,https://www.kbb.com/ford/f150-supercrew-cab/2016/,2026-09-26,published retail proxy; not insurer ACV or salvage proceeds
+2016,F150 SuperCrew,Pickup,Platinum 5.5,24000,https://www.kbb.com/ford/f150-supercrew-cab/2016/,2026-09-26,published retail proxy; not insurer ACV or salvage proceeds
+2016,F150 SuperCrew,Pickup,Limited 5.5,23100,https://www.kbb.com/ford/f150-supercrew-cab/2016/,2026-09-26,published retail proxy; not insurer ACV or salvage proceeds

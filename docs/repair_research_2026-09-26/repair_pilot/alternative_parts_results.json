@@ -1,0 +1,147 @@
+{
+  "date": "2026-09-26",
+  "scope": "2015 Camry LE versus RAV4 XLE Canada-built; left fender and hood only",
+  "status": "Exploratory catalog-price sensitivity, not a repair-premium estimate",
+  "observations": [
+    {
+      "vendor": "PaintedAutoParts",
+      "vehicle": "Camry",
+      "component": "fender",
+      "price_usd": 68.8,
+      "sku": "BG009240",
+      "oe_cross_reference": "5381206210",
+      "url": "https://paintedautoparts.com/toyota-camry-fender-left-capa-oem-5381206210-2015-2017.html",
+      "reported_crawl_age": "today",
+      "caveat": "Seller CAPA label; displayed base-price finish not conclusively resolved; painting selector and inconsistent marketing text. Provisional only."
+    },
+    {
+      "vendor": "PaintedAutoParts",
+      "vehicle": "RAV4",
+      "component": "fender",
+      "price_usd": 113.57,
+      "sku": "BG009379",
+      "oe_cross_reference": "538020R050",
+      "url": "https://paintedautoparts.com/toyota-rav4-fender-left-capa-oem-538020r050-2013-2018.html",
+      "reported_crawl_age": "today",
+      "caveat": "Seller CAPA label; displayed base-price finish not conclusively resolved; painting selector and inconsistent marketing text. Provisional only."
+    },
+    {
+      "vendor": "PaintedAutoParts",
+      "vehicle": "Camry",
+      "component": "hood",
+      "price_usd": 250.9,
+      "sku": "BG036560",
+      "oe_cross_reference": "5330106160",
+      "url": "https://paintedautoparts.com/toyota-camry-hood-capa-oem-5330106160-2015-2017.html",
+      "reported_crawl_age": "2 months",
+      "caveat": "Seller CAPA label; displayed base-price finish not conclusively resolved; painting selector and inconsistent marketing text. Provisional only."
+    },
+    {
+      "vendor": "PaintedAutoParts",
+      "vehicle": "RAV4",
+      "component": "hood",
+      "price_usd": 282.63,
+      "sku": "BG036614",
+      "oe_cross_reference": "533010R050",
+      "url": "https://paintedautoparts.com/toyota-rav4-hood-capa-oem-533010r050-2013-2018.html",
+      "reported_crawl_age": "today",
+      "caveat": "Seller CAPA label; displayed base-price finish not conclusively resolved; painting selector and inconsistent marketing text. Provisional only."
+    },
+    {
+      "vendor": "CarParts",
+      "vehicle": "Camry",
+      "component": "fender",
+      "price_usd": 71.99,
+      "sku": "REPT220198Q",
+      "oe_cross_reference": "5381206210",
+      "url": "https://www.carparts.com/details/fender/replacement/rept220198q",
+      "reported_crawl_age": "today",
+      "caveat": "Seller CAPA label, steel primed. Camry hood price from older 2016 fitment page for shared part; not a simultaneous current quote. No VIN/checkout validation."
+    },
+    {
+      "vendor": "CarParts",
+      "vehicle": "RAV4",
+      "component": "fender",
+      "price_usd": 66.49,
+      "sku": "REPT220180Q",
+      "oe_cross_reference": "538020R050 / 5380242200",
+      "url": "https://www.carparts.com/details/fender/replacement/rept220180q",
+      "reported_crawl_age": "today",
+      "caveat": "Seller CAPA label, steel primed. Camry hood price from older 2016 fitment page for shared part; not a simultaneous current quote. No VIN/checkout validation."
+    },
+    {
+      "vendor": "CarParts",
+      "vehicle": "Camry",
+      "component": "hood",
+      "price_usd": 261.49,
+      "sku": "REPT130124Q",
+      "oe_cross_reference": "5330106160",
+      "url": "https://www.carparts.com/details/Toyota/Camry/Replacement/Hood/2016/REPT130124Q.html",
+      "reported_crawl_age": "11 months",
+      "caveat": "Seller CAPA label, steel primed. Camry hood price from older 2016 fitment page for shared part; not a simultaneous current quote. No VIN/checkout validation."
+    },
+    {
+      "vendor": "CarParts",
+      "vehicle": "RAV4",
+      "component": "hood",
+      "price_usd": 240.49,
+      "sku": "REPT130118Q",
+      "oe_cross_reference": "533010R050",
+      "url": "https://www.carparts.com/details/hood/replacement/rept130118q",
+      "reported_crawl_age": "today",
+      "caveat": "Seller CAPA label, steel primed. Camry hood price from older 2016 fitment page for shared part; not a simultaneous current quote. No VIN/checkout validation."
+    }
+  ],
+  "baskets": [
+    {
+      "vendor": "OEM dealer",
+      "camry": 724.0999999999999,
+      "rav4": 718.53,
+      "rav4_premium": -0.007692307692307554,
+      "historical_weighted_camry": 115.17463799999999,
+      "historical_weighted_rav4": 119.78052799999999,
+      "historical_weighted_premium": 0.039990488183691886
+    },
+    {
+      "vendor": "PaintedAutoParts",
+      "camry": 319.7,
+      "rav4": 396.2,
+      "rav4_premium": 0.23928683140444162,
+      "historical_weighted_camry": 48.739999999999995,
+      "historical_weighted_rav4": 62.77780299999999,
+      "historical_weighted_premium": 0.2880140131308986
+    },
+    {
+      "vendor": "CarParts",
+      "camry": 333.48,
+      "rav4": 306.98,
+      "rav4_premium": -0.07946503538443084,
+      "historical_weighted_camry": 50.859673,
+      "historical_weighted_rav4": 46.836622999999996,
+      "historical_weighted_premium": -0.07910098045655944
+    }
+  ],
+  "excluded_recycled": [
+    {
+      "url": "https://ahparts.com/buy-used/2015-toyota-camry-hood-gray-has-damage-53301-06160-5330106160/128195-1",
+      "reason": "Sold; damaged"
+    },
+    {
+      "url": "https://www.benzeenautoparts.com/used-parts/2015-toyota-camry-hood/509058",
+      "reason": "No unambiguous public sale price; internal notes not treated as quote"
+    },
+    {
+      "url": "https://www.usedpart.us/auto-parts/2015/toyota/rav4/hood/",
+      "reason": "Quote required; no comparable observable price"
+    }
+  ],
+  "unmeasured": [
+    "Sourcing shares by body/age/component",
+    "Labor, paint and fit adjustments",
+    "Freight, tax and trade discounts",
+    "Actual repair and replacement frequencies by segment",
+    "Simultaneous executable prices",
+    "Recycled condition-matched availability"
+  ],
+  "forecast_changed": false
+}

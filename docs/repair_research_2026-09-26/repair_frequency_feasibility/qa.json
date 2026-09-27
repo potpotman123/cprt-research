@@ -1,0 +1,15 @@
+{
+  "accident_rows": 51658,
+  "vehicle_rows": 90641,
+  "retained_rows": 73875,
+  "exclusions_and_age_flags": {
+    "body_outside_selected_or_unknown": 15024,
+    "missing_invalid_model_year": 1742,
+    "next_model_year_assigned_age_zero": 263
+  },
+  "strata": 25,
+  "variance_psus": 67,
+  "unique_keys": true,
+  "all_vehicle_crash_weights_and_design_ids_match": true,
+  "method": "ratio linearization, with-replacement stratified PSU totals; zero residuals for out-of-domain PSUs; no FPC; SEs not full nonsampling uncertainty"
+}

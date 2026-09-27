@@ -1,0 +1,74 @@
+{
+  "source": "https://device.report/m/5694a4bab9268932b8a1959beafb692ec37c21ce3c2aba84371219a3e5b41083.pdf",
+  "publication": "Mitchell Q3 2015 Industry Trends Report, feature pp. 4-6",
+  "status": "Historical pooled repairable-estimate data; primary report mirrored by third party; indexed text read; direct PDF download failed",
+  "rows": [
+    {
+      "component": "bumper cover",
+      "involvement": 0.68,
+      "replacement_conditional": 0.72,
+      "implied_involvement_times_replacement": 0.48960000000000004
+    },
+    {
+      "component": "fender",
+      "involvement": 0.37,
+      "replacement_conditional": 0.59,
+      "implied_involvement_times_replacement": 0.2183
+    },
+    {
+      "component": "bumper absorber",
+      "involvement": 0.29,
+      "replacement_conditional": 0.91,
+      "implied_involvement_times_replacement": 0.26389999999999997
+    },
+    {
+      "component": "grille",
+      "involvement": 0.22,
+      "replacement_conditional": 0.88,
+      "implied_involvement_times_replacement": 0.1936
+    },
+    {
+      "component": "hood",
+      "involvement": 0.24,
+      "replacement_conditional": 0.56,
+      "implied_involvement_times_replacement": 0.13440000000000002
+    },
+    {
+      "component": "headlamp",
+      "involvement": 0.29,
+      "replacement_conditional": 0.95,
+      "implied_involvement_times_replacement": 0.27549999999999997
+    },
+    {
+      "component": "quarter panel",
+      "involvement": 0.28,
+      "replacement_conditional": 0.22,
+      "implied_involvement_times_replacement": 0.06160000000000001
+    },
+    {
+      "component": "door shell",
+      "involvement": 0.28,
+      "replacement_conditional": 0.38,
+      "implied_involvement_times_replacement": 0.10640000000000001
+    },
+    {
+      "component": "bumper reinforcement",
+      "involvement": 0.21,
+      "replacement_conditional": 0.86,
+      "implied_involvement_times_replacement": 0.18059999999999998
+    },
+    {
+      "component": "deck lid",
+      "involvement": 0.15,
+      "replacement_conditional": 0.43,
+      "implied_involvement_times_replacement": 0.0645
+    }
+  ],
+  "demonstration": {
+    "camry_two_component_index": 115.17463800000002,
+    "rav4_two_component_index": 119.780528,
+    "ratio": 1.0399904881836919,
+    "assumptions": "Common historical weights, one item per replacement event, current catalog OEM prices for 2015 model pair. Not measured per-claim cost; no multiplicity, repair labor or segment-specific weights."
+  },
+  "segment_specific_weights_available": false
+}

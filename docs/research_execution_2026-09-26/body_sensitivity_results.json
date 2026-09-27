@@ -1,0 +1,421 @@
+{
+  "source_ref": "origin/claude/jolly-edison-4f0gk9",
+  "source_sha256": "dcb3d10481971633df4759483f1cbece6bb8f155d2b905b43091c090ae227a90",
+  "sigma": 1.5702059479932844,
+  "baseline_replication": {
+    "repair_ratio": 1.01,
+    "threshold_ratio": 1.5,
+    "auction_price_ratio": 1.5,
+    "sigma": 1.5702059479932844,
+    "units_effect_pct": -0.6200516411496259,
+    "rpu_effect_pct": 0.383682425517376,
+    "revenue_additive_pct": -0.23636921563224983,
+    "revenue_compounded_pct": -0.23874824480846213,
+    "tlf_2027_pct": 21.880642713712877
+  },
+  "class_means_from_primary_table": {
+    "four_door": {
+      "frequency_mean": 140,
+      "paid_severity_mean": 92,
+      "size_rows": 5
+    },
+    "pickups": {
+      "frequency_mean": 86.66666666666667,
+      "paid_severity_mean": 100.66666666666667,
+      "size_rows": 3
+    },
+    "suv": {
+      "frequency_mean": 94,
+      "paid_severity_mean": 95.2,
+      "size_rows": 5
+    },
+    "minivan": {
+      "frequency_mean": 100,
+      "paid_severity_mean": 91,
+      "size_rows": 1
+    }
+  },
+  "prior_mini_to_large_car_severity_mean": 95.5,
+  "prior_mini_to_large_car_frequency_mean": 137.75,
+  "prior_paid_ratio_excluding_microcars": 1.0110529377545086,
+  "paid_ratio_including_microcars": 1.0495169082125604,
+  "paid_severity_ratio_equal_classes_including_microcars": 1.0393719806763284,
+  "include_microcars_scenario": {
+    "repair_ratio": 1.0495169082125604,
+    "threshold_ratio": 1.5,
+    "auction_price_ratio": 1.5,
+    "sigma": 1.5702059479932844,
+    "units_effect_pct": -0.55870362905405,
+    "rpu_effect_pct": 0.38103934599749145,
+    "revenue_additive_pct": -0.17766428305655857,
+    "revenue_compounded_pct": -0.17979316371076193,
+    "tlf_2027_pct": 21.922930114250267
+  },
+  "arithmetic_audit": "Prior 1.01 ratio is reproducible. Initial apparent discrepancy was microcar inclusion, not an arithmetic error. Neither population supplies repair-only severity.",
+  "grid": [
+    {
+      "repair_ratio": 1.0,
+      "threshold_ratio": 1.3,
+      "auction_price_ratio": 1.3,
+      "sigma": 1.5702059479932844,
+      "units_effect_pct": -0.40815065499840736,
+      "rpu_effect_pct": 0.24589454865817506,
+      "revenue_additive_pct": -0.1622561063402323,
+      "revenue_compounded_pct": -0.16325972655117926,
+      "tlf_2027_pct": 22.027003783185545
+    },
+    {
+      "repair_ratio": 1.01,
+      "threshold_ratio": 1.3,
+      "auction_price_ratio": 1.3,
+      "sigma": 1.5702059479932844,
+      "units_effect_pct": -0.3924277388345248,
+      "rpu_effect_pct": 0.245430295151148,
+      "revenue_additive_pct": -0.1469974436833768,
+      "revenue_compounded_pct": -0.14796058024105774,
+      "tlf_2027_pct": 22.037896469540783
+    },
+    {
+      "repair_ratio": 1.05,
+      "threshold_ratio": 1.3,
+      "auction_price_ratio": 1.3,
+      "sigma": 1.5702059479932844,
+      "units_effect_pct": -0.33122109196321037,
+      "rpu_effect_pct": 0.24356082579766325,
+      "revenue_additive_pct": -0.08766026616554712,
+      "revenue_compounded_pct": -0.0884669909923419,
+      "tlf_2027_pct": 22.08034172748387
+    },
+    {
+      "repair_ratio": 1.1,
+      "threshold_ratio": 1.3,
+      "auction_price_ratio": 1.3,
+      "sigma": 1.5702059479932844,
+      "units_effect_pct": -0.25827594259242365,
+      "rpu_effect_pct": 0.24120465435011562,
+      "revenue_additive_pct": -0.017071288242308025,
+      "revenue_compounded_pct": -0.017694261836909142,
+      "tlf_2027_pct": 22.131012898217755
+    },
+    {
+      "repair_ratio": 1.15,
+      "threshold_ratio": 1.3,
+      "auction_price_ratio": 1.3,
+      "sigma": 1.5702059479932844,
+      "units_effect_pct": -0.18896853935055433,
+      "rpu_effect_pct": 0.23883839060903841,
+      "revenue_additive_pct": 0.04986985125848409,
+      "revenue_compounded_pct": 0.04941852184032758,
+      "tlf_2027_pct": 22.17924120647296
+    },
+    {
+      "repair_ratio": 1.2,
+      "threshold_ratio": 1.3,
+      "auction_price_ratio": 1.3,
+      "sigma": 1.5702059479932844,
+      "units_effect_pct": -0.12299432133960472,
+      "rpu_effect_pct": 0.23647184598145157,
+      "revenue_additive_pct": 0.11347752464184685,
+      "revenue_compounded_pct": 0.11318667769972812,
+      "tlf_2027_pct": 22.225224129577374
+    },
+    {
+      "repair_ratio": 1.3,
+      "threshold_ratio": 1.3,
+      "auction_price_ratio": 1.3,
+      "sigma": 1.5702059479932844,
+      "units_effect_pct": 0.0,
+      "rpu_effect_pct": 0.23176748355606705,
+      "revenue_additive_pct": 0.23176748355606705,
+      "revenue_compounded_pct": 0.2317674835560668,
+      "tlf_2027_pct": 22.311134735213038
+    },
+    {
+      "repair_ratio": 1.5,
+      "threshold_ratio": 1.3,
+      "auction_price_ratio": 1.3,
+      "sigma": 1.5702059479932844,
+      "units_effect_pct": 0.21601552360716358,
+      "rpu_effect_pct": 0.22260667764738412,
+      "revenue_additive_pct": 0.4386222012545477,
+      "revenue_compounded_pct": 0.4391030662348472,
+      "tlf_2027_pct": 22.462565313866296
+    },
+    {
+      "repair_ratio": 1.0,
+      "threshold_ratio": 1.5,
+      "auction_price_ratio": 1.5,
+      "sigma": 1.5702059479932844,
+      "units_effect_pct": -0.6359890331186742,
+      "rpu_effect_pct": 0.38434432543386504,
+      "revenue_additive_pct": -0.2516447076848091,
+      "revenue_compounded_pct": -0.25408909544398783,
+      "tlf_2027_pct": 21.86966871461301
+    },
+    {
+      "repair_ratio": 1.01,
+      "threshold_ratio": 1.5,
+      "auction_price_ratio": 1.5,
+      "sigma": 1.5702059479932844,
+      "units_effect_pct": -0.6200516411496259,
+      "rpu_effect_pct": 0.383682425517376,
+      "revenue_additive_pct": -0.23636921563224983,
+      "revenue_compounded_pct": -0.23874824480846213,
+      "tlf_2027_pct": 21.880642713712877
+    },
+    {
+      "repair_ratio": 1.05,
+      "threshold_ratio": 1.5,
+      "auction_price_ratio": 1.5,
+      "sigma": 1.5702059479932844,
+      "units_effect_pct": -0.5579692738712131,
+      "rpu_effect_pct": 0.3810067970316576,
+      "revenue_additive_pct": -0.17696247683955552,
+      "revenue_compounded_pct": -0.1790883776983554,
+      "tlf_2027_pct": 21.923436738079456
+    },
+    {
+      "repair_ratio": 1.1,
+      "threshold_ratio": 1.5,
+      "auction_price_ratio": 1.5,
+      "sigma": 1.5702059479932844,
+      "units_effect_pct": -0.48389560548612265,
+      "rpu_effect_pct": 0.3776140362516363,
+      "revenue_additive_pct": -0.10628156923448634,
+      "revenue_compounded_pct": -0.10810882696160595,
+      "tlf_2027_pct": 21.974591032401985
+    },
+    {
+      "repair_ratio": 1.15,
+      "threshold_ratio": 1.5,
+      "auction_price_ratio": 1.5,
+      "sigma": 1.5702059479932844,
+      "units_effect_pct": -0.41343036070000105,
+      "rpu_effect_pct": 0.3741872556398396,
+      "revenue_additive_pct": -0.03924310506016143,
+      "revenue_compounded_pct": -0.04079010878083045,
+      "tlf_2027_pct": 22.023347048477767
+    },
+    {
+      "repair_ratio": 1.2,
+      "threshold_ratio": 1.5,
+      "auction_price_ratio": 1.5,
+      "sigma": 1.5702059479932844,
+      "units_effect_pct": -0.34627633265676855,
+      "rpu_effect_pct": 0.370743445232555,
+      "revenue_additive_pct": 0.02446711257578643,
+      "revenue_compounded_pct": 0.023183315770070045,
+      "tlf_2027_pct": 22.069895162552484
+    },
+    {
+      "repair_ratio": 1.3,
+      "threshold_ratio": 1.5,
+      "auction_price_ratio": 1.5,
+      "sigma": 1.5702059479932844,
+      "units_effect_pct": -0.22087956728056526,
+      "rpu_effect_pct": 0.363856577028973,
+      "revenue_additive_pct": 0.14297700974840774,
+      "revenue_compounded_pct": 0.142173324915551,
+      "tlf_2027_pct": 22.157025537261916
+    },
+    {
+      "repair_ratio": 1.5,
+      "threshold_ratio": 1.5,
+      "auction_price_ratio": 1.5,
+      "sigma": 1.5702059479932844,
+      "units_effect_pct": 0.0,
+      "rpu_effect_pct": 0.3503247596370852,
+      "revenue_additive_pct": 0.3503247596370852,
+      "revenue_compounded_pct": 0.3503247596370773,
+      "tlf_2027_pct": 22.311134735213038
+    },
+    {
+      "repair_ratio": 1.0,
+      "threshold_ratio": 1.7,
+      "auction_price_ratio": 1.7,
+      "sigma": 1.5702059479932844,
+      "units_effect_pct": -0.8374515106251024,
+      "rpu_effect_pct": 0.5071615440553838,
+      "revenue_additive_pct": -0.33028996656971854,
+      "revenue_compounded_pct": -0.33453719858170805,
+      "tlf_2027_pct": 21.731373235298925
+    },
+    {
+      "repair_ratio": 1.01,
+      "threshold_ratio": 1.7,
+      "auction_price_ratio": 1.7,
+      "sigma": 1.5702059479932844,
+      "units_effect_pct": -0.8213756181542751,
+      "rpu_effect_pct": 0.5063624577500492,
+      "revenue_additive_pct": -0.3150131604042259,
+      "revenue_compounded_pct": -0.31917229817167714,
+      "tlf_2027_pct": 21.742379276671496
+    },
+    {
+      "repair_ratio": 1.05,
+      "threshold_ratio": 1.7,
+      "auction_price_ratio": 1.7,
+      "sigma": 1.5702059479932844,
+      "units_effect_pct": -0.758717037711924,
+      "rpu_effect_pct": 0.503119113942598,
+      "revenue_additive_pct": -0.255597923769326,
+      "revenue_compounded_pct": -0.2594151742067785,
+      "tlf_2027_pct": 21.7853262903514
+    },
+    {
+      "repair_ratio": 1.1,
+      "threshold_ratio": 1.7,
+      "auction_price_ratio": 1.7,
+      "sigma": 1.5702059479932844,
+      "units_effect_pct": -0.6838795314370181,
+      "rpu_effect_pct": 0.49898025233018933,
+      "revenue_additive_pct": -0.18489927910682874,
+      "revenue_compounded_pct": -0.18831170291842003,
+      "tlf_2027_pct": 21.836722127627624
+    },
+    {
+      "repair_ratio": 1.15,
+      "threshold_ratio": 1.7,
+      "auction_price_ratio": 1.7,
+      "sigma": 1.5702059479932844,
+      "units_effect_pct": -0.6126106551344251,
+      "rpu_effect_pct": 0.4947751896222055,
+      "revenue_additive_pct": -0.11783546551221963,
+      "revenue_compounded_pct": -0.12086651104281643,
+      "tlf_2027_pct": 21.88576800846533
+    },
+    {
+      "repair_ratio": 1.2,
+      "threshold_ratio": 1.7,
+      "auction_price_ratio": 1.7,
+      "sigma": 1.5702059479932844,
+      "units_effect_pct": -0.5446209089683116,
+      "rpu_effect_pct": 0.49052829421298993,
+      "revenue_additive_pct": -0.05409261475532168,
+      "revenue_compounded_pct": -0.056764134410003386,
+      "tlf_2027_pct": 21.932647395207614
+    },
+    {
+      "repair_ratio": 1.3,
+      "threshold_ratio": 1.7,
+      "auction_price_ratio": 1.7,
+      "sigma": 1.5702059479932844,
+      "units_effect_pct": -0.41748098487594026,
+      "rpu_effect_pct": 0.4819840318267388,
+      "revenue_additive_pct": 0.06450304695079856,
+      "revenue_compounded_pct": 0.06249085526777165,
+      "tlf_2027_pct": 22.020541918129386
+    },
+    {
+      "repair_ratio": 1.5,
+      "threshold_ratio": 1.7,
+      "auction_price_ratio": 1.7,
+      "sigma": 1.5702059479932844,
+      "units_effect_pct": -0.19295038203770187,
+      "rpu_effect_pct": 0.46504529759599283,
+      "revenue_additive_pct": 0.27209491555829096,
+      "revenue_compounded_pct": 0.27119760887992506,
+      "tlf_2027_pct": 22.176468219048022
+    }
+  ],
+  "repair_break_even": [
+    {
+      "value_and_price_ratio": 1.3,
+      "repair_break_even": 1.1129310642451458
+    },
+    {
+      "value_and_price_ratio": 1.5,
+      "repair_break_even": 1.1815907194972795
+    },
+    {
+      "value_and_price_ratio": 1.7,
+      "repair_break_even": 1.2464205797401462
+    }
+  ],
+  "dispersion": [
+    {
+      "sigma": 1.05,
+      "base_revenue_pct": -0.5447753926537402,
+      "repair_break_even": 1.278785043114084
+    },
+    {
+      "sigma": 1.5702059479932844,
+      "base_revenue_pct": -0.23874824480846213,
+      "repair_break_even": 1.1815907194972795
+    },
+    {
+      "sigma": 2.0,
+      "base_revenue_pct": -0.10866350832006155,
+      "repair_break_even": 1.1068868757472217
+    }
+  ],
+  "recovery": [
+    {
+      "car_net_recovery_fraction": 0.3,
+      "lt_net_recovery_fraction": 0.2,
+      "repair_ratio": 1.01,
+      "threshold_ratio": 1.7142857142857146,
+      "auction_price_ratio": 1.0000000000000002,
+      "sigma": 1.5702059479932844,
+      "units_effect_pct": -0.8348948704681818,
+      "rpu_effect_pct": 2.1856296989740684e-16,
+      "revenue_additive_pct": -0.8348948704681816,
+      "revenue_compounded_pct": -0.8348948704681836,
+      "tlf_2027_pct": 21.733123242876818
+    },
+    {
+      "car_net_recovery_fraction": 0.3,
+      "lt_net_recovery_fraction": 0.25,
+      "repair_ratio": 1.01,
+      "threshold_ratio": 1.6071428571428572,
+      "auction_price_ratio": 1.25,
+      "sigma": 1.5702059479932844,
+      "units_effect_pct": -0.7308089421301048,
+      "rpu_effect_pct": 0.2165280985182029,
+      "revenue_additive_pct": -0.514280843611902,
+      "revenue_compounded_pct": -0.5158632503180938,
+      "tlf_2027_pct": 21.804479814591442
+    },
+    {
+      "car_net_recovery_fraction": 0.3,
+      "lt_net_recovery_fraction": 0.3,
+      "repair_ratio": 1.01,
+      "threshold_ratio": 1.4999999999999998,
+      "auction_price_ratio": 1.5,
+      "sigma": 1.5702059479932844,
+      "units_effect_pct": -0.6200516411496132,
+      "rpu_effect_pct": 0.38368242551737153,
+      "revenue_additive_pct": -0.23636921563224167,
+      "revenue_compounded_pct": -0.23874824480847323,
+      "tlf_2027_pct": 21.88064271371288
+    },
+    {
+      "car_net_recovery_fraction": 0.3,
+      "lt_net_recovery_fraction": 0.35,
+      "repair_ratio": 1.01,
+      "threshold_ratio": 1.392857142857143,
+      "auction_price_ratio": 1.7499999999999998,
+      "sigma": 1.5702059479932844,
+      "units_effect_pct": -0.5017820526292985,
+      "rpu_effect_pct": 0.5123964268440182,
+      "revenue_additive_pct": 0.010614374214719668,
+      "revenue_compounded_pct": 0.00804326090650953,
+      "tlf_2027_pct": 21.96222956915291
+    },
+    {
+      "car_net_recovery_fraction": 0.3,
+      "lt_net_recovery_fraction": 0.4,
+      "repair_ratio": 1.01,
+      "threshold_ratio": 1.2857142857142856,
+      "auction_price_ratio": 2.0000000000000004,
+      "sigma": 1.5702059479932844,
+      "units_effect_pct": -0.3749874484300374,
+      "rpu_effect_pct": 0.6101547597772294,
+      "revenue_additive_pct": 0.23516731134719204,
+      "revenue_compounded_pct": 0.23287930758202346,
+      "tlf_2027_pct": 22.049984105047713
+    }
+  ],
+  "elapsed_seconds": 0.49909199999819975,
+  "scope": "Sensitivity of prior all-light-truck model; not a newly estimated SUV-specific causal model"
+}

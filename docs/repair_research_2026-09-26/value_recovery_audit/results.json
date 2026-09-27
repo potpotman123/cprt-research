@@ -1,0 +1,68 @@
+{
+  "status": "AUDIT CHECKS; NO NEW VALIDATED FLEET-WIDE OR AUCTION RATIO",
+  "kbb_models": {
+    "Camry": {
+      "mean": 13780,
+      "median": 13550,
+      "n_trims": 5,
+      "ratio_to_two_sedan_mean": 1.0062066447608615
+    },
+    "Accord": {
+      "mean": 13610,
+      "median": 13650,
+      "n_trims": 5,
+      "ratio_to_two_sedan_mean": 0.9937933552391384
+    },
+    "RAV4": {
+      "mean": 15962.5,
+      "median": 15950.0,
+      "n_trims": 4,
+      "ratio_to_two_sedan_mean": 1.16557137641475
+    },
+    "CR-V": {
+      "mean": 14940,
+      "median": 14700,
+      "n_trims": 5,
+      "ratio_to_two_sedan_mean": 1.0909090909090908
+    },
+    "F150 SuperCrew": {
+      "mean": 20440.909090909092,
+      "median": 21200,
+      "n_trims": 11,
+      "ratio_to_two_sedan_mean": 1.492581897839291
+    }
+  },
+  "equal_model_sedan_mean": 13695,
+  "equal_model_crossover_mean": 15451.25,
+  "crossover_ratio": 1.1282402336619204,
+  "pickup_ratio": 1.492581897839291,
+  "historical_2013Q3": {
+    "Sedan": {
+      "ACV": 7351.28,
+      "average_age": 10.46,
+      "ratio_to_sedan": 1.0
+    },
+    "SUV": {
+      "ACV": 9329.23,
+      "average_age": 10.12,
+      "ratio_to_sedan": 1.2690619864839865
+    },
+    "Pickup": {
+      "ACV": 9879.7,
+      "average_age": 12.03,
+      "ratio_to_sedan": 1.3439428235626993
+    },
+    "Van": {
+      "ACV": 5837.79,
+      "average_age": 11.15,
+      "ratio_to_sedan": 0.7941188473299888
+    }
+  },
+  "mechanical_example_NOT_DATA": {
+    "ACV_ratio": 1.5,
+    "car_gross_and_net_recovery_fraction_assumed": 0.3,
+    "LT_gross_and_net_recovery_fraction_assumed": 0.4,
+    "auction_price_ratio": 2.0000000000000004,
+    "economic_threshold_ratio": 1.2857142857142856
+  }
+}

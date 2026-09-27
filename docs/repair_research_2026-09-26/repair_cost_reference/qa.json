@@ -1,0 +1,14 @@
+{
+  "four_source_series": 4,
+  "eleven_bins_each": true,
+  "printed_sums": [
+    99.9,
+    100.0,
+    99.9,
+    100.0
+  ],
+  "normalization": "each percentage divided by its series sum; printed values retained",
+  "benchmark_means_reconcile": true,
+  "estimated_population_mean": false,
+  "no_tail_extrapolation": true
+}

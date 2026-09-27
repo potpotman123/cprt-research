@@ -1,0 +1,35 @@
+# ORNL Transportation Energy Data Book Ed.40 (June 2022) spreadsheets, https://tedb.ornl.gov/wp-content/uploads/2022/06/TEDB_40_Spreadsheets_06012022.zip (robots-open, fetched 2026-09-14)
+# Table 3.15 (Table3_15_01312022.xlsx): EPA estimated survival rates by vehicle age, cars and light trucks (MY2015 rulemaking schedules)
+age,survival_cars,survival_light_trucks
+0,1,1
+1,0.997,0.991
+2,0.994,0.982
+3,0.991,0.973
+4,0.984,0.96
+5,0.974,0.941
+6,0.961,0.919
+7,0.942,0.891
+8,0.92,0.859
+9,0.893,0.823
+10,0.862,0.784
+11,0.826,0.741
+12,0.788,0.697
+13,0.718,0.651
+14,0.613,0.605
+15,0.51,0.553
+16,0.415,0.502
+17,0.332,0.453
+18,0.261,0.407
+19,0.203,0.364
+20,0.157,0.324
+21,0.12,0.288
+22,0.092,0.255
+23,0.07,0.225
+24,0.053,0.198
+25,0.04,0.174
+26,0.03,0.153
+27,0.023,0.133
+28,0.013,0.117
+29,0.01,0.102
+30,0.007,0.089
+31,0.002,0.027

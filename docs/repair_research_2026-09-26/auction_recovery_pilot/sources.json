@@ -1,0 +1,36 @@
+[
+  {
+    "key": "camry_rear",
+    "url": "https://vin-archive.net/lot/4t4bf1fk4gr540574-toyota-camry-2016",
+    "retrieved_utc": "2026-09-27T02:44:05.142494+00:00",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "key": "rav4_rear",
+    "url": "https://vin-archive.net/lot/2t3dfrevxgw533908-toyota-rav4-2016",
+    "retrieved_utc": "2026-09-27T02:44:05.143023+00:00",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "key": "f150_front",
+    "url": "https://finalbid.vin/en/ford/f-150/2016/iaai-45136422-1FTEW1CF6GFA07312",
+    "retrieved_utc": "2026-09-27T02:44:05.143103+00:00",
+    "status": 200,
+    "sha256": "a3e381d11f4e01155e128a0d719a135acbfc384b1b047de56d3e0c68497ca4e5",
+    "bytes": 484216
+  },
+  {
+    "key": "f150_side",
+    "url": "https://finalbid.vin/en/ford/f-150/2016/copart-65004706-1FTMF1C81GKD57189",
+    "retrieved_utc": "2026-09-27T02:44:05.241012+00:00",
+    "status": 200,
+    "sha256": "572536ff7b46674dc477cf088a0d78a96353637f7db3ab6511f388b04fd09ed1",
+    "bytes": 429645
+  },
+  {
+    "key": "camry_carfast",
+    "url": "https://carfast.express/en/auction/lots/111042860129-toyota-camry-2016-vin-4t1bf1fk1gu193991",
+    "retrieved_utc": "2026-09-27T02:44:05.243970+00:00",
+    "error": "HTTP Error 403: Forbidden"
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "status": "UNVALIDATED SCENARIO INPUTS, NOT ESTIMATED PROBABILITIES",
+  "population": "hypothetical front-impact cases, conditional on front impact; target 7-9-year-old cars and SUVs",
+  "scope_definitions": {
+    "exterior": "Provisional exterior-only complete repair bundle; precise component list and equipment still to be priced",
+    "intermediate": "Provisional mutually exclusive complete bundle with additional lamp/reinforcement/cooling work; NOT exterior costs added twice",
+    "extensive": "Provisional complete deeper-damage bundle; structural inclusion to be specified"
+  },
+  "costs_usd": {
+    "car": {
+      "exterior": null,
+      "intermediate": null,
+      "extensive": null
+    },
+    "suv": {
+      "exterior": null,
+      "intermediate": null,
+      "extensive": null
+    }
+  },
+  "model_rule": "average_front_cost = sum(scope_share * complete_scope_cost); missing costs produce unavailable, not zero",
+  "car_vs_suv_rule": "SUV average minus car average; divide by car average only if positive",
+  "all_impact_rule": "Not calculated: CRSS crash weights are not claims weights, and rear/side/other costs remain missing",
+  "total_loss_rule": "Not calculated: need same-population ACV, salvage and cost distributions, including total losses",
+  "grid_step_pp": 10,
+  "base_case": null,
+  "probability_assigned_to_grid_cases": null
+}

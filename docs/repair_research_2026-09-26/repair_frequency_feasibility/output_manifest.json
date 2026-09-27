@@ -1,0 +1,9 @@
+{
+  "fetch.py": "82229adfe36030e6192e773491dd80836a2dfde9d0a27848527a4c9cf5ab3297",
+  "extract_manuals.py": "c77ceb5a7e89692f9419e79a8920ab3433ce24efc85a4fd9e9fb57dabd140c1f",
+  "qa.json": "8c4acb7964e5cae1b150225e7338657cf5b06b1ee44e39d47611aacf6675afc6",
+  "sources.jsonl": "b9e91012d9034e04cf6b15746856c12694e3629b0031ceaa9c03fd794ca4e9c9",
+  "README.md": "c94aac2a63478763aaa0a1855cf89fb69beda5b972bdd88d7c70e2765c12014c",
+  "cohort_table.csv": "55aa1119340bc21ee9b9be34861b6e79ad7ad34cb1b8f64775c323bbb3275297",
+  "analyze.py": "39d0d1ef7c9ab6ea00521be73895adbce9dbf3900f1ec49bb9052bd33f4ab419"
+}

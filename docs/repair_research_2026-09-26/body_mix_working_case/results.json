@@ -1,0 +1,69 @@
+{
+  "status": "ASSUMPTION-DRIVEN WORKING BASE, NOT OBSERVED CAUSAL PREMIUM",
+  "body_average_cost_usd": {
+    "Car": 3682.0,
+    "SUV": 3706.9777358408687,
+    "Pickup": 4822.90638679079,
+    "Minivan": 3612.699529780427
+  },
+  "body_repair_premium_pct": {
+    "Car": 0.0,
+    "SUV": 0.678374140164828,
+    "Pickup": 30.98605070045599,
+    "Minivan": -1.882142048331692
+  },
+  "same_impact_mix_premium_pct": {
+    "Car": 0.0,
+    "SUV": 1.907688169320676,
+    "Pickup": 28.84280650666964,
+    "Minivan": 1.907688169320676
+  },
+  "light_truck_weights": {
+    "SUV": 0.7238938053097346,
+    "Pickup": 0.1929203539823009,
+    "Minivan": 0.08318584070796461
+  },
+  "light_truck_cost_usd": 3914.4204743695427,
+  "light_truck_repair_premium_pct": 6.312343138770848,
+  "new_2027_bridge": {
+    "repair_ratio": 1.0631234313877085,
+    "unit_growth_contribution_pp": -0.5381598570087466,
+    "asp_mix_contribution_pct": 0.7395344380656268,
+    "rpu_growth_contribution_pp": 0.38012070116573216,
+    "revenue_growth_contribution_pp": -0.16008481286486909,
+    "revenue_change_per_1bn_exposed_service_usd": -1600848.1286486909,
+    "lt_share_total_losses_2026": 0.5462215036209064,
+    "lt_share_total_losses_2027": 0.5650516885096154,
+    "tlf_2026": 0.22049676546894315,
+    "tlf_2027": 0.21937106856759717
+  },
+  "old_2027_bridge": {
+    "repair_ratio": 1.01,
+    "unit_growth_contribution_pp": -0.6200516411496259,
+    "asp_mix_contribution_pct": 0.7464638628742724,
+    "rpu_growth_contribution_pp": 0.383682425517376,
+    "revenue_growth_contribution_pp": -0.23874824480846213,
+    "revenue_change_per_1bn_exposed_service_usd": -2387482.448084621,
+    "lt_share_total_losses_2026": 0.5370002153461232,
+    "lt_share_total_losses_2027": 0.5559380051547245,
+    "tlf_2026": 0.22011029646629676,
+    "tlf_2027": 0.21880642713712878
+  },
+  "inherited_sigma": 1.5702059479932844,
+  "prior_model_commit": "71803fc87727332171c5b682ea9853d6281a4a11",
+  "assumptions": {
+    "other_impact_SUV_premium": 0.1,
+    "other_impact_pickup_premium": 0.15,
+    "minivan_cost_ratio_proxy": "SUV",
+    "car_rear_to_front_cost": 0.6,
+    "car_other_to_front_cost": 0.8,
+    "AAA_new_to_old_relative_cost_transfer": 1,
+    "threshold_and_auction_price_ratio": 1.5,
+    "relative_claim_frequency": 1,
+    "fee_elasticity": 0.514,
+    "cohort_transfer": "7-9 age ratios held constant across model ages",
+    "van_proxy": "listed vans bucket treated as minivans for repair weighting",
+    "claims_exposure_proxy": "current listed-body shares fixed within LT, despite disposal selection"
+  },
+  "checks": "shares sum, car mean reconciliation, equal cost/threshold eliminates modeled unit difference"
+}

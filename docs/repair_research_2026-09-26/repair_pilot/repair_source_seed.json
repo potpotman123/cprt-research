@@ -1,0 +1,26 @@
+{
+  "evidence_class": "shop survey, not claim approval probability",
+  "source": "https://ohioautobody.org/wp-content/uploads/2024/09/2024-Who-Pays-for-What-Refinish.pdf",
+  "page": 14,
+  "survey_period": "January 2024",
+  "operation": "prepare raw plastic parts",
+  "rows": [
+    {
+      "insurer": "Progressive",
+      "network": "DRP",
+      "always_pct": 61.0,
+      "most_pct": 20.3,
+      "never_asked_pct": 4.8,
+      "reported_responses": 62
+    },
+    {
+      "insurer": "GEICO",
+      "network": "DRP",
+      "always_pct": 27.8,
+      "most_pct": 30.6,
+      "never_asked_pct": 2.7,
+      "reported_responses": 37
+    }
+  ],
+  "denominator": "Always/most percentages conditional on negotiating; reported responses include never asked. No inference of claim-level probability."
+}

@@ -1,0 +1,52 @@
+{
+  "date": "2026-09-26",
+  "search_queries": 10,
+  "modern_segment_frequency_matrix_found": false,
+  "sources": [
+    {
+      "source": "CCC Crash Course 2026",
+      "url": "https://www.cccis.com/reports/crash-course-2026",
+      "population": "National non-comprehensive repairable appraisals",
+      "period": "CY2025 with historical comparisons",
+      "available": "Overall replacement counts, parts sourcing, labor, initial/supplement trends",
+      "missing": "Component involvement x body type x vehicle age",
+      "decision": "Aggregate reasonableness checks only; no segment weight calibration"
+    },
+    {
+      "source": "CCC Electric vs ICE Vehicles, July 11 2022",
+      "url": "https://www.cccis.com/news-and-insights/posts/electric-vs-ice-vehicles-unpacking-repair-cost-impacts",
+      "population": "Driveable front-impact collision losses, current through three-year-old vehicles; selected nonluxury models and midsize luxury SUVs",
+      "period": "2022 publication; exact observation window not independently verified",
+      "available": "Controlled comparison design; repair metrics and selected component price comparisons",
+      "missing": "Older car versus crossover versus pickup component frequencies",
+      "decision": "Matching-method reference, not body-type premium calibration"
+    },
+    {
+      "source": "CCC Crash Course 2016 figure 53",
+      "url": "https://www.tech-cor.com/OtherResources/CCC-Crash-Course-2016.pdf",
+      "population": "CY2015 repaired vehicles, driveability/body/age categories",
+      "period": "CY2015",
+      "available": "Repair cycle/productivity measures by body type",
+      "missing": "Relevant component replacement frequency matrix",
+      "decision": "Do not confuse hours per repair day with total labor or repair costs"
+    },
+    {
+      "source": "CCC Parts of the Vehicle Repair, 2014, third-party mirror",
+      "url": "https://studylib.net/doc/18165568/parts-of-the-vehicle-repair",
+      "population": "CCC network repairable appraisals",
+      "period": "CY2013 and earlier comparisons",
+      "available": "Age-related OEM/non-OEM dollar and count shares; evidence of component-specific sourcing variation",
+      "missing": "Modern body-specific frequencies; underlying charts not fully extracted",
+      "decision": "Historical sourcing-method caution only; not current calibration"
+    },
+    {
+      "source": "CCC Collision Estimating Glossary",
+      "url": "https://help.cccis.com/webhelp/insurance_company/thecccportal/Content/Insurance/Analytics/Categorized%20Glossaries%20with%20Dropdn/Collision%20Estimating%20Glossary.htm",
+      "population": "Product metadata, not observed data",
+      "period": "Not applicable",
+      "available": "Body category, claim count, parts/labor metrics in indexed documentation",
+      "missing": "Data access and proof of component x age x body cross-tab availability",
+      "decision": "Schema lead only; no implied provider access"
+    }
+  ]
+}

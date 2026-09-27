@@ -1,0 +1,75 @@
+{
+  "source": "https://newsroom.aaa.com/wp-content/uploads/2023/11/Report_Cost-of-ADAS-Repairs-FINAL-23.pdf",
+  "retrieved": "2026-09-26",
+  "evidence": "Hypothetical repair estimates, not approved/paid claims",
+  "rows": [
+    {
+      "scope": "Front impact",
+      "figure": 10,
+      "rogue": 10209.09,
+      "camry": 10270.37,
+      "f150": 14645.42,
+      "rogue_vs_camry": -0.00596667890251279,
+      "f150_vs_camry": 0.42598757396276854
+    },
+    {
+      "scope": "Side mirror",
+      "figure": 11,
+      "rogue": 1583.53,
+      "camry": 1028.81,
+      "f150": 1910.3,
+      "rogue_vs_camry": 0.5391860499023144,
+      "f150_vs_camry": 0.8568054354059544
+    },
+    {
+      "scope": "Rear impact",
+      "figure": 12,
+      "rogue": 1782.75,
+      "camry": 1733.41,
+      "f150": 1578.67,
+      "rogue_vs_camry": 0.02846412562521272,
+      "f150_vs_camry": -0.08926912848085566
+    },
+    {
+      "scope": "Windshield",
+      "figure": 13,
+      "rogue": 1687.4,
+      "camry": 1371.95,
+      "f150": 1259.98,
+      "rogue_vs_camry": 0.2299282043806261,
+      "f150_vs_camry": -0.08161376143445465
+    }
+  ],
+  "issues": [
+    {
+      "issue": "F150 radar subtotal",
+      "detailed_figure": 5,
+      "detailed_value": 1292.16,
+      "summary_figure": 10,
+      "summary_value": 697.88,
+      "difference": 594.28,
+      "treatment": "Unresolved. Do not modify published total repair estimate or use front ADAS decomposition."
+    },
+    {
+      "issue": "Rear sensor decomposition",
+      "detail_figure": 8,
+      "summary_figure": 12,
+      "difference_per_vehicle": 22.5,
+      "treatment": "Summary equals four sensor prices; detail adds labor. Total repair estimate allocation unclear. Do not add labor again."
+    },
+    {
+      "issue": "Calibration displayed hours versus charge",
+      "hours": 3.3,
+      "rate": 110,
+      "product": 363,
+      "reported_charge": 360,
+      "treatment": "Retain stated charge; possible rounded hours, not a demonstrated error."
+    },
+    {
+      "issue": "ADAS labeling across mirror assemblies",
+      "treatment": "Assembly bundling differs; no clean causal ADAS surcharge from labelled parts subtotal."
+    }
+  ],
+  "population": "Three 2023 models only; exact trim control not established",
+  "forecast_changed": false
+}

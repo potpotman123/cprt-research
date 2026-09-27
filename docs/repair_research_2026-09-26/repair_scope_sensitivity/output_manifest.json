@@ -1,0 +1,10 @@
+{
+  "scope_inputs.json": "a9d7e8640d5089cb2d9cae644a60a2d6208fc952d5671ac09dda7eb0d8d54384",
+  "build.py": "9e0f2b92b6817d0c7c71cbc7d01e3d7648740887559e14dbb96c5a9e6f0e3e16",
+  "ciss_completeness.json": "c0a1c25ac290c6a6709a518c6a0b0f4036acf419c2fe8be4d642a2dbd0f83afe",
+  "qa.json": "d106722cd285a9c7cfdf01dd1685130343bb1e9fff9c97f425b521f9701d1b97",
+  "scope_grid.csv": "ab6cd275552826d637ac94d03731142758df24b09e1c89742334412f3fcd051f",
+  "sources.jsonl": "729a1357311b45942bcff212fe350e5c1be9fe2e411d31b06dd098790c1cc557",
+  "README.md": "0062dc8cda3efdb4b4f41c79e4a6872b8c2c16a96c023a07609f19ada673ea17",
+  "evaluate.py": "96172a4aafe1bbf7d353daeed096401fc3a86a4b16b5112a8d165f047fa86c5e"
+}

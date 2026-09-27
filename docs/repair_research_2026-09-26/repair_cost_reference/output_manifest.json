@@ -1,0 +1,13 @@
+{
+  "fetch.py": "82229adfe36030e6192e773491dd80836a2dfde9d0a27848527a4c9cf5ab3297",
+  "build.py": "fdcb459ae833869346e098f1d8b50f06c8c53b9d39eaa41d30294cedd44a638c",
+  "qa.json": "ac9c09107ad89bf2a66ef05d477e193ad660405146b9112111b67f0e7e3211c9",
+  "historical_summary.csv": "0e1a128b7c6926ee76892794dd9fbc5f7d4000756c5a28e0f1fcbe84f75acd29",
+  "sources.jsonl": "6f4a7220e1b715673751bdadfeb0afe18aedb16c756aea210109b404b1e4fd2e",
+  "benchmark_aligned_bins.csv": "658ebf2ded1ce801c61c3eb3400aee50d71e96800f6c290dd2519358f3926555",
+  "README.md": "3902dd2799e60332d4d30157f5aa21ef3acd8146ea86bc1b3f51e84201a8cad8",
+  "historical_bins.csv": "98ef7aa010292cd31eefcb3a9faf4c667d5e872b5bafb1117dd0511f1a9ae674",
+  "raw/ccc2026.html": "04bc26f938cb21ff26d19b49a04bee39da0a389583f03a802931f992142effc7",
+  "raw/mitchell2026q2.html": "be04ea76e405361d467b9a6700d316f0f979c94fbe079b4bf7fc104af0ce2225",
+  "raw/ccc2018_figure32.txt": "0a47ff084c74ef9511360b9dab6f2bcb4df612937015f7c07d39f217b9596f9f"
+}

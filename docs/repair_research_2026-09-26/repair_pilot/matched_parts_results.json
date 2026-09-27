@@ -1,0 +1,74 @@
+{
+  "date": "2026-09-26",
+  "population": "One model pair: 2015 Camry LE vs 2015 RAV4 XLE Canada-built variant",
+  "evidence": "Public dealer catalog prices; not invoices or completed repair estimates; indexed page freshness varies",
+  "selection": "Fender available first; hood added after front bumper access failed; insulation conditional sensitivity discovered on hood pages. Exploratory, not prespecified.",
+  "parts": [
+    {
+      "component": "left front fender",
+      "camry_part": "53812-06210",
+      "rav4_part": "53802-0R050",
+      "camry_price": 212.82,
+      "rav4_price": 276.64,
+      "camry_msrp": 241.84,
+      "rav4_msrp": 314.36,
+      "camry_source": "https://parts.reliabletoyotamo.com/v-2015-toyota-camry--le--2-5l-l4-gas/body--fender-and-components",
+      "rav4_source": "https://parts.reliabletoyotamo.com/v-2015-toyota-rav4--xle--2-5l-l4-gas/body--fender-and-components",
+      "ratio": 1.299877831030918,
+      "msrp_ratio": 1.2998676811114787
+    },
+    {
+      "component": "hood panel",
+      "camry_part": "53301-06160",
+      "rav4_part": "53301-0R050",
+      "camry_price": 511.28,
+      "rav4_price": 441.89,
+      "camry_msrp": 581.0,
+      "rav4_msrp": 502.15,
+      "camry_source": "https://parts.reliabletoyotamo.com/v-2015-toyota-camry--le--2-5l-l4-gas/body--hood-and-components",
+      "rav4_source": "https://parts.reliabletoyotamo.com/v-2015-toyota-rav4--xle--2-5l-l4-gas/body--hood-and-components",
+      "ratio": 0.8642818025348146,
+      "msrp_ratio": 0.8642857142857142
+    },
+    {
+      "component": "hood insulation pad",
+      "camry_part": "53341-06400",
+      "rav4_part": "53341-42090",
+      "camry_price": 197.3,
+      "rav4_price": 395.35,
+      "camry_msrp": 224.2,
+      "rav4_msrp": 449.26,
+      "camry_source": "https://parts.reliabletoyotamo.com/v-2015-toyota-camry--le--2-5l-l4-gas/body--hood-and-components",
+      "rav4_source": "https://parts.reliabletoyotamo.com/v-2015-toyota-rav4--xle--2-5l-l4-gas/body--hood-and-components",
+      "ratio": 2.0038013177901672,
+      "msrp_ratio": 2.003835860838537
+    }
+  ],
+  "baskets": [
+    {
+      "number_components": 2,
+      "camry": 724.1,
+      "rav4": 718.53,
+      "ratio": 0.9923076923076922,
+      "ratio_equal_600_other_cost": 0.9957933690808852
+    },
+    {
+      "number_components": 3,
+      "camry": 921.4,
+      "rav4": 1113.88,
+      "ratio": 1.2088995007597136,
+      "ratio_equal_600_other_cost": 1.1265150519258578
+    }
+  ],
+  "matched_complete_repairs": 0,
+  "unmeasured": [
+    "labor hours",
+    "paint preparation and materials",
+    "fasteners and ancillary components",
+    "freight/tax",
+    "actual OEM/aftermarket/recycled shares",
+    "damage incidence",
+    "insulation reuse probability"
+  ],
+  "model_break_even_reference": 1.18159
+}

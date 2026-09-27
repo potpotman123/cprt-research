@@ -1,5 +1,7 @@
 # CPRT research — handoff for the next agent
 
+**Current model/research update (27 September 2026):** Start with [MODEL_AND_RESEARCH_HANDOFF_2026-09-27.md](docs/MODEL_AND_RESEARCH_HANDOFF_2026-09-27.md). It records the repair and value audits, quarterly service-revenue build, corrections, current four-main-tab presentation, and the latest scope. The service-revenue-only scope there supersedes this file's older three-statement/DCF build sequence.
+
 *Written 2026-09-25 for whoever (or whatever) picks this up. Organised by research thread: what we tried, why,
 what we found, and where it led. Confidence is labelled on every result. Where we are not sure, it says so.*
 

@@ -180,3 +180,17 @@ concurrent requests against a single host.
 Every request above is also in `logs/provenance.jsonl` / `data/cprt.db` `provenance` via `scripts/prov.py`,
 except the CCC/BLS/FRED/CollisionWeek/SEC probe fetches made by the 2026-09-11 feasibility agents, which
 logged URL, status, byte count and retrieval time in their own reports (summarised in `docs/archive/HANDOFF_2026-09-11_updated-to-09-25.md` §9).
+
+## Repair-frequency research — 2026-09-26 ET
+
+See [repair research audit index](docs/repair_research_2026-09-26/README.md) for the current CRSS cohort feasibility pass and preserved earlier repair research. This pass uses its own `sources.jsonl` and output hashes; it was not logged through `scripts/prov.py`. Raw source locations, reproduction steps, missing historical provenance and inferential limitations are explicitly recorded in that index and its linked methodology.
+
+2026-09-26: Added `docs/repair_research_2026-09-26/value_recovery_audit/`: provenance of the reused 1.50 value/auction assumptions, transcribed five-model KBB 2016-year valuation panel, historical Mitchell Q3 2013 ACV table reproduced in Manheim 2014, reproducible ratios, population/extrapolation limitations, and separate gross/net salvage recovery equations. No model/workbook update or auction-recovery validation claimed.
+
+2026-09-26: Added `docs/repair_research_2026-09-26/auction_recovery_pilot/`: bounded seven-VIN paired ACV/proceeds feasibility study, source URLs, raw successful HTML and failed-request logs, event-history discrepancies, explicit exclusions, and two descriptive recovery fractions. Zero matched cross-body sets, no primary settlement verification, and no model-input changes.
+
+2026-09-26: `docs/repair_research_2026-09-26/contract_scope_screen/` reconstructs supplied Barclays 25-Aug Figure 1 from a visually inspected embedded table. $59.595m gain matches rounded $60m with discounts on 621.9k carrier units rather than 125k incremental units. Not actual-contract verification. Pre/post-award base ambiguity preserved; no double-counting against existing analyst estimates or model updates.
+
+## 2026-09-27 research consolidation and quarterly model redesign
+
+Consolidated the repair research, execution plan v2 and bounded local experiments into docs, with a current MODEL_AND_RESEARCH_HANDOFF_2026-09-27.md. Restored live repair, CCC calibration, cohort and nonlinear fee equations behind four main reading tabs. The reproducible package is model/service_revenue_2026-09-27/. Validation independently reconstructed 920 stock cells, body repair means, calibrated probabilities, fee calculations and quarterly dollar forecasts. Input-change/restoration tests passed. Data tabs contain only values; section markers alone have colored tabs. Artifact-tool recalculation and rendered views were checked; desktop Excel was not tested. No new scrape, OCR or paid data acquisition. Licensed raw sources remain local, and concurrent nightly collector changes are excluded.

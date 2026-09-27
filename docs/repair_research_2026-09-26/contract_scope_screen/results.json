@@ -1,0 +1,29 @@
+{
+  "source_status": "Barclays analyst estimates, not verified contract terms",
+  "inputs": {
+    "price": 3850,
+    "commission": 0.04,
+    "discount": 0.2,
+    "carrier_volume": 621900,
+    "incremental_volume_midpoint": 125000,
+    "total_service_RPU": 950,
+    "incremental_cost": 40000000.0
+  },
+  "concession_per_affected_vehicle": 30.8,
+  "new_revenue": 118750000,
+  "contribution_before_concession": 78750000.0,
+  "carrier_base_concession": 19154520.0,
+  "reconstructed_gain_EBITDA": 59595480.0,
+  "incremental_only_concession_gain": 74900000.0,
+  "alternative_if_table_carrier_base_pre_award_and_new_also_discounted": 55745480.0,
+  "published_gain_EBITDA": 60000000.0,
+  "lost_volume_midpoint": 245000,
+  "lost_contribution": 152750000.0,
+  "net_two_contracts_reconstructed": -93154520.0,
+  "published_net_two_contracts": -90000000.0,
+  "break_even_concession_per_table_carrier_unit": 126.62807525325616,
+  "break_even_discount_fraction_of_assumed_seller_commission": 0.8222602289172477,
+  "scenario_gain_at_40pct_discount": 40440960.0,
+  "RB_reconstructed_gain": 106332444.0,
+  "RB_published_gain": 105000000.0
+}

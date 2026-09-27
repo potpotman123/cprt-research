@@ -1,0 +1,152 @@
+{
+  "date": "2026-09-26",
+  "purpose": "Small public-document feasibility and assumption challenge; not representative severity estimation",
+  "estimates": [
+    {
+      "id": "RAV4_2022",
+      "vehicle": "2022 Toyota RAV4 XLE AWD",
+      "date": "2023-03-14",
+      "status": "Preliminary visual estimate; self-pay; not final invoice",
+      "source": "https://www.scribd.com/document/720590247/ESTIMATE-22-TOYOTA-RAV4",
+      "locator": "document pages 2-3",
+      "parts": 608.94,
+      "body_hours": 18,
+      "paint_hours": 9.4,
+      "mechanical_hours": 0.5,
+      "other_labor_hours": 0,
+      "other": 0,
+      "body_rate": 60,
+      "paint_rate": 60,
+      "mechanical_rate": 60,
+      "materials_rate": 40,
+      "pre_discount_pretax": 2658.94,
+      "discount": 132.95,
+      "tax": 167.35,
+      "gross": 2693.34,
+      "front_bumper_overhaul_hours": 2.6,
+      "reconstructed_pretax": 2658.94,
+      "standardized_pretax_no_discount": 2678.94
+    },
+    {
+      "id": "Camry_2023",
+      "vehicle": "2023 Toyota Camry SE",
+      "date": "2024-02-15",
+      "status": "Insurer estimate of record; not final invoice; full page intermittently unavailable, indexed document text used",
+      "source": "https://www.scribd.com/document/835879619/Geico-Mobile",
+      "locator": "document pages 2 and 4",
+      "parts": 4523.14,
+      "body_hours": 19.7,
+      "paint_hours": 13.3,
+      "mechanical_hours": 0.9,
+      "other_labor_hours": 0,
+      "other": 4,
+      "body_rate": 54,
+      "paint_rate": 54,
+      "mechanical_rate": 100,
+      "materials_rate": 38,
+      "pre_discount_pretax": 6904.54,
+      "discount": 0,
+      "tax": 301.71,
+      "gross": 7206.25,
+      "front_bumper_overhaul_hours": 3.5,
+      "reconstructed_pretax": 6904.54,
+      "standardized_pretax_no_discount": 7129.14
+    },
+    {
+      "id": "F150_2013",
+      "vehicle": "2013 Ford F-150 FX2 SuperCrew",
+      "date": "2023-08-24",
+      "status": "Supplement of record 1; not verified paid invoice",
+      "source": "https://www.scribd.com/document/768641568/estimates",
+      "locator": "document pages 2-3 and 6",
+      "parts": 281,
+      "body_hours": 30.1,
+      "paint_hours": 10.9,
+      "mechanical_hours": 1,
+      "other_labor_hours": 1.6,
+      "other": 125,
+      "body_rate": 75,
+      "paint_rate": 75,
+      "mechanical_rate": 140,
+      "materials_rate": 60,
+      "pre_discount_pretax": 4395,
+      "discount": 0,
+      "tax": 436.05,
+      "gross": 4831.05,
+      "front_bumper_overhaul_hours": 1.9,
+      "initial_estimate": 3499.97,
+      "supplement": 1331.08,
+      "reconstructed_pretax": 4395.0,
+      "standardized_pretax_no_discount": 3498.0
+    }
+  ],
+  "standardization_assumptions": {
+    "body_and_paint_usd_per_hour": 60,
+    "mechanical": 100,
+    "materials_per_paint_hour": 40
+  },
+  "bumper_overhaul_rav4_camry_ratio": 0.7428571428571429,
+  "f150_supplement_fraction": 0.3803118312442678,
+  "controlled_crashes": [
+    {
+      "pair": "Honda CR-V / Civic",
+      "suv_front": 1721,
+      "suv_rear": 1053,
+      "car_front": 4921,
+      "car_rear": 1274,
+      "two_orientation_suv_car_ratio": 0.44778046811945116
+    },
+    {
+      "pair": "Toyota RAV4 / Corolla",
+      "suv_front": 1434,
+      "suv_rear": 6015,
+      "car_front": 3852,
+      "car_rear": 2327,
+      "two_orientation_suv_car_ratio": 1.205534876193559
+    },
+    {
+      "pair": "Hyundai Tucson / Kia Forte",
+      "suv_front": 850,
+      "suv_rear": 2091,
+      "car_front": 1510,
+      "car_rear": 3223,
+      "two_orientation_suv_car_ratio": 0.6213817874498204
+    },
+    {
+      "pair": "VW Tiguan / Golf",
+      "suv_front": 2329,
+      "suv_rear": 1872,
+      "car_front": 4555,
+      "car_rear": 2058,
+      "two_orientation_suv_car_ratio": 0.635263874187207
+    },
+    {
+      "pair": "Jeep Patriot / Dodge Caliber",
+      "suv_front": 1415,
+      "suv_rear": 1338,
+      "car_front": 2559,
+      "car_rear": 3095,
+      "two_orientation_suv_car_ratio": 0.48691192076406087
+    },
+    {
+      "pair": "Ford Escape / Focus",
+      "suv_front": 1470,
+      "suv_rear": 2208,
+      "car_front": 5203,
+      "car_rear": 3386,
+      "two_orientation_suv_car_ratio": 0.42822214460356267
+    },
+    {
+      "pair": "Nissan Rogue / Sentra",
+      "suv_front": 2884,
+      "suv_rear": 1428,
+      "car_front": 5114,
+      "car_rear": 4560,
+      "two_orientation_suv_car_ratio": 0.44573082489146165
+    }
+  ],
+  "controlled_crash_source": "https://www.iihs.org/media/e715d94d-5244-440e-bd04-252d823f747c/1122916300/RegulatoryComments/comment%202012-03-05_2.pdf",
+  "controlled_crash_locator": "PDF page 10, printed Status Report page 2; 2010-11 models; November 2010 costs",
+  "fully_matched_total_repair_pairs": 0,
+  "confidence_interval": null
+}

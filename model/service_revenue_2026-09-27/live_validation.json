@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "formula_errors": [],
+  "external_links": false,
+  "data_tabs_values_only": true,
+  "colored_section_markers_only": true,
+  "independent_stock_cells_checked": 920,
+  "repair_means": [
+    3682.0,
+    3706.9777358408687,
+    4822.90638679079,
+    3612.699529780427
+  ],
+  "forecasts": [
+    {
+      "quarter": "Q1 FY27E",
+      "total_service_m": 1005.445493583772,
+      "fleet_adjustment_m": -0.2344340484171859
+    },
+    {
+      "quarter": "Q2 FY27E",
+      "total_service_m": 965.1659334388146,
+      "fleet_adjustment_m": -0.4491534213283077
+    },
+    {
+      "quarter": "Q3 FY27E",
+      "total_service_m": 1072.5968155906698,
+      "fleet_adjustment_m": -0.7394766300481731
+    },
+    {
+      "quarter": "Q4 FY27E",
+      "total_service_m": 985.1791706812742,
+      "fleet_adjustment_m": -0.903367569495146
+    }
+  ],
+  "input_propagation_tests_passed": true,
+  "engine": "artifact-tool recalculation plus independent Python reconstruction; not desktop Excel tested"
+}

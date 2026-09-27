@@ -1,0 +1,119 @@
+{
+  "historical_page1": [
+    {
+      "year": "2022",
+      "captures": 4,
+      "lt_pct": 46.298151665333364,
+      "suv_pct": 32.26341470523739,
+      "pickup_pct": 9.67105919023519,
+      "mean_model_year": 2012.6807010030684
+    },
+    {
+      "year": "2023",
+      "captures": 7,
+      "lt_pct": 48.259286438072195,
+      "suv_pct": 34.245447181220705,
+      "pickup_pct": 10.076127536669858,
+      "mean_model_year": 2013.4191780140175
+    },
+    {
+      "year": "2024",
+      "captures": 8,
+      "lt_pct": 50.63995793507295,
+      "suv_pct": 36.48947447306869,
+      "pickup_pct": 10.170401388890308,
+      "mean_model_year": 2014.3507846420337
+    },
+    {
+      "year": "2025",
+      "captures": 5,
+      "lt_pct": 54.32204494262149,
+      "suv_pct": 39.41392112748202,
+      "pickup_pct": 10.811768100449072,
+      "mean_model_year": 2015.4415619976485
+    },
+    {
+      "year": "2026",
+      "captures": 1,
+      "lt_pct": 54.790592783505154,
+      "suv_pct": 40.824742268041234,
+      "pickup_pct": 10.3125,
+      "mean_model_year": 2015.7618234536083
+    }
+  ],
+  "ccc_chart_corrected": [
+    {
+      "period": "2020\u20132022",
+      "base_mix_pp": 1.425289262204433,
+      "symmetric_mix_pp": 1.2798927790142944,
+      "symmetric_within_pp": -2.680161375868866,
+      "total_pp": -1.4002685968545716
+    },
+    {
+      "period": "2022\u20132025",
+      "base_mix_pp": 0.2948968254767068,
+      "symmetric_mix_pp": 0.3290053010584934,
+      "symmetric_within_pp": 3.834047090332267,
+      "total_pp": 4.16305239139076
+    },
+    {
+      "period": "2024\u20132025",
+      "base_mix_pp": 0.026429614534604885,
+      "symmetric_mix_pp": 0.02717989773808476,
+      "symmetric_within_pp": 0.6832222592359026,
+      "total_pp": 0.7104021569739873
+    }
+  ],
+  "fee_bounds": [
+    {
+      "car_price_assumed": 2000,
+      "suv_price_assumed": 3000.0,
+      "car_buyer_fee": 535.0,
+      "suv_buyer_fee": 655.0,
+      "fee_gain_pct": 22.429906542056077,
+      "break_even_sale_probability_ratio": 0.816793893129771
+    },
+    {
+      "car_price_assumed": 4000,
+      "suv_price_assumed": 6000.0,
+      "car_buyer_fee": 725.0,
+      "suv_buyer_fee": 825.0,
+      "fee_gain_pct": 13.793103448275868,
+      "break_even_sale_probability_ratio": 0.8787878787878788
+    },
+    {
+      "car_price_assumed": 8000,
+      "suv_price_assumed": 12000.0,
+      "car_buyer_fee": 925.0,
+      "suv_buyer_fee": 1000.0,
+      "fee_gain_pct": 8.108108108108114,
+      "break_even_sale_probability_ratio": 0.925
+    }
+  ],
+  "input_register": [
+    {
+      "path": "/Users/kwu/cprt/data/csv/copart_fee_grid_2026-09.csv",
+      "sha256": "1a4d9f152c97f488c5657227ed8180c8d4149735d14d0f78dd6bf62eb9a8d95f",
+      "population": "One documented buyer category; not actual buyer mix",
+      "status": "Previously transcribed schedule; used as read, not freshly verified online"
+    },
+    {
+      "path": "/Users/kwu/cprt/data/csv/ccc_tl_share_by_age_2020_2025.csv",
+      "sha256": "f8578c0aed0de5ff19d9dbe9a53cb83b6a97eae5e18d9651f4c35fb929e1fd53",
+      "population": "CCC all-loss claim count by age, with source methodology disclaimer",
+      "status": "Visually checked; local analytical override 31.6 to 31.8 for CY2020 age 10\u201312"
+    },
+    {
+      "path": "/Users/kwu/cprt/data/csv/ccc_tl_valuation_share_by_age_2020_2025.csv",
+      "sha256": "577c30c3231582b7170a638f88a65e8dc11f708dad26c039fda5a1a6047a3aa5",
+      "population": "CCC share of total-loss valuations by age",
+      "status": "Visually checked against stored chart; compatibility with claim-count population remains a limitation"
+    }
+  ],
+  "source_correction": {
+    "field": "10\u201312 years, CY2020 total-loss share",
+    "stored": 31.6,
+    "chart": 31.8,
+    "source_csv_modified": false
+  }
+}

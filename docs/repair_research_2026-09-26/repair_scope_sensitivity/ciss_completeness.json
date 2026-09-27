@@ -1,0 +1,60 @@
+{
+  "status": "unweighted field-availability audit, not frequency estimates; any recorded front event, not initial impact; all case categories retained",
+  "cohorts": {
+    "Car": {
+      "all_age_body_vehicle_records": 840,
+      "vehicles_with_any_recorded_front_CDC": 473,
+      "front_CDC_records": 582,
+      "vehicles_multiple_front_CDC": 73,
+      "inspection_status_among_front_vehicles": {
+        "1": 394,
+        "5": 26,
+        "3": 2,
+        "4": 47,
+        "2": 4
+      },
+      "front_event_extent_codes": {
+        "08": 7,
+        "06": 37,
+        "01": 205,
+        "02": 136,
+        "03": 71,
+        "09": 32,
+        "99": 64,
+        "05": 8,
+        "04": 14,
+        "07": 8
+      },
+      "front_event_A_pillar_codes": {
+        "8": 582
+      }
+    },
+    "SUV": {
+      "all_age_body_vehicle_records": 490,
+      "vehicles_with_any_recorded_front_CDC": 278,
+      "front_CDC_records": 342,
+      "vehicles_multiple_front_CDC": 42,
+      "inspection_status_among_front_vehicles": {
+        "1": 224,
+        "5": 14,
+        "4": 34,
+        "3": 6
+      },
+      "front_event_extent_codes": {
+        "01": 146,
+        "03": 45,
+        "02": 62,
+        "99": 38,
+        "06": 21,
+        "05": 8,
+        "07": 2,
+        "09": 10,
+        "04": 5,
+        "08": 5
+      },
+      "front_event_A_pillar_codes": {
+        "8": 342
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+node_modules/
+preview_live/
+*.inspect.ndjson
+__pycache__/

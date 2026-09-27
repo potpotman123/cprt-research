@@ -1,0 +1,18 @@
+{
+  "candidates": 7,
+  "secondary_corroborated_pairs": 2,
+  "primary_verified_pairs": 0,
+  "matched_cross_body_sets": 0,
+  "net_seller_proceeds_records": 0,
+  "model_updates": 0,
+  "usable_pairs": [
+    {
+      "vin": "1FTMF1C81GKD57189",
+      "gross_recovery_fraction": 0.4160318762451658
+    },
+    {
+      "vin": "4T4BF1FK4GR557682",
+      "gross_recovery_fraction": 0.21694214876033058
+    }
+  ]
+}
