@@ -1,0 +1,780 @@
+{
+  "baseline": [
+    {
+      "total": 1005.4454935837717,
+      "adjustment": -0.23443404841735518,
+      "growth": 0.0007901976090349816
+    },
+    {
+      "total": 965.1659334388146,
+      "adjustment": -0.44915342132846975,
+      "growth": 0.00048275357905547267
+    },
+    {
+      "total": 1072.5968155906694,
+      "adjustment": -0.7394766300485275,
+      "growth": 0.00017125478352841839
+    },
+    {
+      "total": 985.179170681274,
+      "adjustment": -0.9033675694953076,
+      "growth": -0.00014147851493573338
+    }
+  ],
+  "h1_service_m": 1970.6114270225862,
+  "sensitivities": [
+    {
+      "driver": "US baseline growth",
+      "case": "low",
+      "setting": -0.01847586058900618,
+      "definition": "Minus/plus 1 percentage point in all forecast quarters; no historical change",
+      "h1_delta_m": -16.743115690092964,
+      "quarter_delta_m": [
+        -8.552975619355152,
+        -8.190140070737925,
+        -8.947182020908485,
+        -8.169109101600384
+      ]
+    },
+    {
+      "driver": "US baseline growth",
+      "case": "high",
+      "setting": 0.0015241394109938213,
+      "definition": "Minus/plus 1 percentage point in all forecast quarters; no historical change",
+      "h1_delta_m": 16.743115690092964,
+      "quarter_delta_m": [
+        8.552975619355038,
+        8.190140070737698,
+        8.947182020908485,
+        8.16910910160027
+      ]
+    },
+    {
+      "driver": "International baseline growth",
+      "case": "low",
+      "setting": 0.14469268470881924,
+      "definition": "Minus/plus 1 percentage point in all forecast quarters",
+      "h1_delta_m": -2.688949999999977,
+      "quarter_delta_m": [
+        -1.363110000000006,
+        -1.3258400000000847,
+        -1.6061600000000453,
+        -1.517219999999952
+      ]
+    },
+    {
+      "driver": "International baseline growth",
+      "case": "high",
+      "setting": 0.16469268470881926,
+      "definition": "Minus/plus 1 percentage point in all forecast quarters",
+      "h1_delta_m": 2.6889500000002045,
+      "quarter_delta_m": [
+        1.363110000000006,
+        1.325839999999971,
+        1.6061600000000453,
+        1.517219999999952
+      ]
+    },
+    {
+      "driver": "SUV pre-loss value ratio",
+      "case": "low",
+      "setting": [
+        1,
+        1.2,
+        1.5,
+        1.5
+      ],
+      "definition": "SUV/car 1.20x or 1.80x versus 1.50x; historical and forecast economics recalibrated",
+      "h1_delta_m": -0.06013650510476509,
+      "quarter_delta_m": [
+        -0.020047351715675177,
+        -0.04008915338931729,
+        -0.09324889705726491,
+        -0.13764795108011185
+      ]
+    },
+    {
+      "driver": "SUV pre-loss value ratio",
+      "case": "high",
+      "setting": [
+        1,
+        1.8,
+        1.5,
+        1.5
+      ],
+      "definition": "SUV/car 1.20x or 1.80x versus 1.50x; historical and forecast economics recalibrated",
+      "h1_delta_m": 0.11128923914930056,
+      "quarter_delta_m": [
+        0.0384273887435711,
+        0.07286185040561577,
+        0.11040644372633324,
+        0.12645327104075932
+      ]
+    },
+    {
+      "driver": "All LT repair costs",
+      "case": "low",
+      "setting": [
+        3682.0,
+        3336.279962256782,
+        4340.615748111711,
+        3251.4295768023844
+      ],
+      "definition": "All non-car costs minus/plus 10%; CCC buckets recalibrated",
+      "h1_delta_m": 0.05999620683928697,
+      "quarter_delta_m": [
+        0.02021092071061048,
+        0.0397852861285628,
+        0.08386573982079426,
+        0.11843933425404884
+      ]
+    },
+    {
+      "driver": "All LT repair costs",
+      "case": "high",
+      "setting": [
+        3682.0,
+        4077.675509424956,
+        5305.197025469869,
+        3973.96948275847
+      ],
+      "definition": "All non-car costs minus/plus 10%; CCC buckets recalibrated",
+      "h1_delta_m": -0.054773563207163534,
+      "quarter_delta_m": [
+        -0.018473054235073505,
+        -0.0363005089723174,
+        -0.07595417039533459,
+        -0.10683278579961097
+      ]
+    },
+    {
+      "driver": "Gross salvage recovery",
+      "case": "low",
+      "setting": 0.25,
+      "definition": "25%/35% across all bodies versus 30%; common threshold change absorbed in age calibration",
+      "h1_delta_m": 0.09125303894757053,
+      "quarter_delta_m": [
+        0.031042092697703083,
+        0.06021094624975376,
+        0.11048777894711748,
+        0.14491157158045098
+      ]
+    },
+    {
+      "driver": "Gross salvage recovery",
+      "case": "high",
+      "setting": 0.35,
+      "definition": "25%/35% across all bodies versus 30%; common threshold change absorbed in age calibration",
+      "h1_delta_m": 0.08830087052228919,
+      "quarter_delta_m": [
+        0.03069756632237386,
+        0.05760330419980164,
+        0.077187813560613,
+        0.07885219177080671
+      ]
+    },
+    {
+      "driver": "Insured service exposure",
+      "case": "low",
+      "setting": 0.8,
+      "definition": "80%/100% versus assumed 90%",
+      "h1_delta_m": 0.0758875297378836,
+      "quarter_delta_m": [
+        0.026025375841754794,
+        0.04986215389590143,
+        0.0820919885704825,
+        0.100286117473388
+      ]
+    },
+    {
+      "driver": "Insured service exposure",
+      "case": "high",
+      "setting": 1.0,
+      "definition": "80%/100% versus assumed 90%",
+      "h1_delta_m": -0.07587088960963229,
+      "quarter_delta_m": [
+        -0.02601966916517995,
+        -0.04985122044467971,
+        -0.08207398796844245,
+        -0.10026412738022827
+      ]
+    },
+    {
+      "driver": "Latent repair dispersion",
+      "case": "low",
+      "setting": 1.2561647583946276,
+      "definition": "Minus/plus 20%; CCC buckets recalibrated",
+      "h1_delta_m": 0.04783667113292722,
+      "quarter_delta_m": [
+        0.01611118099765463,
+        0.03172549013515891,
+        0.06710552328945596,
+        0.09492095867710759
+      ]
+    },
+    {
+      "driver": "Latent repair dispersion",
+      "case": "high",
+      "setting": 1.8842471375919412,
+      "definition": "Minus/plus 20%; CCC buckets recalibrated",
+      "h1_delta_m": -0.032387204461429064,
+      "quarter_delta_m": [
+        -0.010917705161091362,
+        -0.021469499300337702,
+        -0.04513356828442738,
+        -0.06363202461977835
+      ]
+    },
+    {
+      "driver": "LT survival stretch",
+      "case": "low",
+      "setting": 1.04405,
+      "definition": "Minus/plus 5%; hypothetical structural refit, not a six-month mortality shock",
+      "h1_delta_m": -0.0654467445674527,
+      "quarter_delta_m": [
+        -0.022641278690002764,
+        -0.04280546587756362,
+        -0.061636884192012076,
+        -0.0675905724549466
+      ]
+    },
+    {
+      "driver": "LT survival stretch",
+      "case": "high",
+      "setting": 1.15395,
+      "definition": "Minus/plus 5%; hypothetical structural refit, not a six-month mortality shock",
+      "h1_delta_m": 0.0529290099705122,
+      "quarter_delta_m": [
+        0.018219400869497804,
+        0.03470960910090071,
+        0.05400524068272716,
+        0.06324572126368366
+      ]
+    },
+    {
+      "driver": "Claim age decay",
+      "case": "low",
+      "setting": 0.072216,
+      "definition": "Minus/plus 20%; hypothetical structural refit",
+      "h1_delta_m": 0.1694543735065963,
+      "quarter_delta_m": [
+        0.05930809826713812,
+        0.11014627523923082,
+        0.12961072149960273,
+        0.1131142510656673
+      ]
+    },
+    {
+      "driver": "Claim age decay",
+      "case": "high",
+      "setting": 0.108324,
+      "definition": "Minus/plus 20%; hypothetical structural refit",
+      "h1_delta_m": -0.15395101181115933,
+      "quarter_delta_m": [
+        -0.054090141241317724,
+        -0.0998608705699553,
+        -0.10795205731460555,
+        -0.08250876646297911
+      ]
+    },
+    {
+      "driver": "Age-10 car value",
+      "case": "low",
+      "setting": 8000,
+      "definition": "Minus/plus 20%; all body dollar values scale, same historical/forecast fee convention",
+      "h1_delta_m": -0.06579546642251444,
+      "quarter_delta_m": [
+        -0.024048253805631248,
+        -0.04174721261711056,
+        -0.004836647562342478,
+        0.050009018764740176
+      ]
+    },
+    {
+      "driver": "Age-10 car value",
+      "case": "high",
+      "setting": 12000,
+      "definition": "Minus/plus 20%; all body dollar values scale, same historical/forecast fee convention",
+      "h1_delta_m": -0.03301361773765166,
+      "quarter_delta_m": [
+        -0.011819615886338397,
+        -0.021194001851426947,
+        -0.013666768837310883,
+        0.0018848062813958677
+      ]
+    },
+    {
+      "driver": "Future vehicle births",
+      "case": "low",
+      "setting": -0.1,
+      "definition": "CY26 and CY27 births compound -10%/+10% annually from CY25; historical cohorts fixed",
+      "h1_delta_m": -1.5553967224564076,
+      "quarter_delta_m": [
+        -0.5242424241123445,
+        -1.0311542983440631,
+        -2.092790076248548,
+        -2.9039544884512907
+      ]
+    },
+    {
+      "driver": "Future vehicle births",
+      "case": "high",
+      "setting": 0.1,
+      "definition": "CY26 and CY27 births compound -10%/+10% annually from CY25; historical cohorts fixed",
+      "h1_delta_m": 1.5572949718305154,
+      "quarter_delta_m": [
+        0.5230563763460623,
+        1.0342385954843394,
+        2.1756843218379345,
+        3.0708248243073513
+      ]
+    },
+    {
+      "driver": "Seller fee rate",
+      "case": "low",
+      "setting": 0.02,
+      "definition": "2%/6% versus 4%, applied to modeled history and forecast; no repricing event",
+      "h1_delta_m": 0.0199035488149093,
+      "quarter_delta_m": [
+        0.007105661488139958,
+        0.012797887326541968,
+        0.009516391425222537,
+        0.0014932474491615721
+      ]
+    },
+    {
+      "driver": "Seller fee rate",
+      "case": "high",
+      "setting": 0.06,
+      "definition": "2%/6% versus 4%, applied to modeled history and forecast; no repricing event",
+      "h1_delta_m": -0.016945034175023466,
+      "quarter_delta_m": [
+        -0.006048851639661734,
+        -0.010896182535361731,
+        -0.008151736013132904,
+        -0.0013771145236205484
+      ]
+    }
+  ],
+  "attribution": [
+    {
+      "quarter": "Q1 FY27E",
+      "fleet_size_m": 0.02149327019227459,
+      "age_m": -0.30364861349785544,
+      "body_given_age_m": 0.028100223956861212,
+      "interaction_m": 0.019621070931364473,
+      "total_m": -0.23443404841735518
+    },
+    {
+      "quarter": "Q2 FY27E",
+      "fleet_size_m": 0.03965595070729703,
+      "age_m": -0.5810549913798961,
+      "body_given_age_m": 0.05414834392557919,
+      "interaction_m": 0.038097275418550146,
+      "total_m": -0.44915342132846975
+    },
+    {
+      "quarter": "Q3 FY27E",
+      "fleet_size_m": 0.042890841122999,
+      "age_m": -0.9510935404872144,
+      "body_given_age_m": 0.10956991926871408,
+      "interaction_m": 0.05915615004697382,
+      "total_m": -0.7394766300485275
+    },
+    {
+      "quarter": "Q4 FY27E",
+      "fleet_size_m": 0.032797418289768704,
+      "age_m": -1.156836771652726,
+      "body_given_age_m": 0.15181774839586298,
+      "interaction_m": 0.06885403547178665,
+      "total_m": -0.9033675694953076
+    }
+  ],
+  "counterfactual_worlds": {
+    "age_0_body_0": {
+      "forecast": [
+        {
+          "total": 1005.7014209023814,
+          "adjustment": 0.02149327019227459,
+          "growth": 0.0021368292234118513
+        },
+        {
+          "total": 965.6547428108502,
+          "adjustment": 0.03965595070729703,
+          "growth": 0.0021629549882471455
+        },
+        {
+          "total": 1073.379183061841,
+          "adjustment": 0.042890841122999,
+          "growth": 0.002162399823411043
+        },
+        {
+          "total": 986.115335669059,
+          "adjustment": 0.032797418289768704,
+          "growth": 0.0021536486299160718
+        }
+      ],
+      "unit_yoy": [
+        0.0021368292234118513,
+        0.0021629549882471455,
+        0.002162399823410821,
+        0.0021536486299160718
+      ],
+      "rpu_yoy": [
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        2.220446049250313e-16
+      ]
+    },
+    "age_1_body_0": {
+      "forecast": [
+        {
+          "total": 1005.3977722888835,
+          "adjustment": -0.28215534330558084,
+          "growth": 0.0033470483418167607
+        },
+        {
+          "total": 965.0736878194705,
+          "adjustment": -0.5413990406725991,
+          "growth": 0.0029750295815615946
+        },
+        {
+          "total": 1072.4280895213537,
+          "adjustment": -0.9082026993642154,
+          "growth": 0.0025775084070809307
+        },
+        {
+          "total": 984.9584988974063,
+          "adjustment": -1.1240393533629571,
+          "growth": 0.0021725092647777444
+        }
+      ],
+      "unit_yoy": [
+        0.003775670402325515,
+        0.0036194003559288923,
+        0.0033549970741162394,
+        0.0030577329588288293
+      ],
+      "rpu_yoy": [
+        -0.0004270098121992305,
+        -0.0006420469494101688,
+        -0.0007748889169859607,
+        -0.0008825251677588852
+      ]
+    },
+    "age_0_body_1": {
+      "forecast": [
+        {
+          "total": 1005.7295211263382,
+          "adjustment": 0.0495934941491358,
+          "growth": -0.00039514426020870186
+        },
+        {
+          "total": 965.7088911547758,
+          "adjustment": 0.09380429463287622,
+          "growth": -0.00033185380946809673
+        },
+        {
+          "total": 1073.4887529811097,
+          "adjustment": 0.15246076039171308,
+          "growth": -0.00026936195636884097
+        },
+        {
+          "total": 986.2671534174549,
+          "adjustment": 0.1846151666856317,
+          "growth": -0.00020721508397980593
+        }
+      ],
+      "unit_yoy": [
+        -0.003516423452269102,
+        -0.0035048860231610135,
+        -0.0034783312261263966,
+        -0.0034501352907559957
+      ],
+      "rpu_yoy": [
+        0.003132293662956309,
+        0.0031841924452895576,
+        0.003220170087927743,
+        0.0032541474557545857
+      ]
+    },
+    "age_1_body_1": {
+      "forecast": [
+        {
+          "total": 1005.4454935837717,
+          "adjustment": -0.23443404841735518,
+          "growth": 0.0007901976090349816
+        },
+        {
+          "total": 965.1659334388146,
+          "adjustment": -0.44915342132846975,
+          "growth": 0.00048275357905547267
+        },
+        {
+          "total": 1072.5968155906694,
+          "adjustment": -0.7394766300485275,
+          "growth": 0.00017125478352841839
+        },
+        {
+          "total": 985.179170681274,
+          "adjustment": -0.9033675694953076,
+          "growth": -0.00014147851493573338
+        }
+      ],
+      "unit_yoy": [
+        -0.0019018026532128252,
+        -0.0020511967009335663,
+        -0.002267264315914619,
+        -0.00250404144162375
+      ],
+      "rpu_yoy": [
+        0.002697129670611531,
+        0.0025391585937195593,
+        0.0024440604304429847,
+        0.0023684937331500677
+      ]
+    }
+  },
+  "new_tlf_shock": [
+    {
+      "tlf_shift_pp": -1.0,
+      "h1_delta_m": -74.4719180671832
+    },
+    {
+      "tlf_shift_pp": 1.0,
+      "h1_delta_m": 74.4719180671832
+    }
+  ],
+  "forecast_only_value_tests": [
+    {
+      "suv_value_ratio": 1.2,
+      "h1_delta_m": 59.02304535213466,
+      "meaning": "SUV pre-loss value changes only in forecast; car severity calibration fixed; constant recovery fraction; no insurer or demand response"
+    },
+    {
+      "suv_value_ratio": 1.8,
+      "h1_delta_m": -55.12853123254354,
+      "meaning": "SUV pre-loss value changes only in forecast; car severity calibration fixed; constant recovery fraction; no insurer or demand response"
+    }
+  ],
+  "selection": [
+    {
+      "nodes": 2001,
+      "recovery_slope": 0.0,
+      "suv_value_ratio": 1.2,
+      "car": {
+        "tlf": 0.36231884057971014,
+        "mean_recovery_given_total": 0.3000000000000035,
+        "rpu": 955.0,
+        "revenue_per_claim": 346.0144927536232
+      },
+      "suv": {
+        "tlf": 0.3213393303348326,
+        "mean_recovery_given_total": 0.3000000000000025,
+        "rpu": 1026.5,
+        "revenue_per_claim": 329.85482258870564
+      },
+      "suv_car_revenue_ratio": 0.9532977071673587
+    },
+    {
+      "nodes": 2001,
+      "recovery_slope": 0.0,
+      "suv_value_ratio": 1.5,
+      "car": {
+        "tlf": 0.36231884057971014,
+        "mean_recovery_given_total": 0.3000000000000035,
+        "rpu": 955.0,
+        "revenue_per_claim": 346.0144927536232
+      },
+      "suv": {
+        "tlf": 0.2723638180909545,
+        "mean_recovery_given_total": 0.3000000000000009,
+        "rpu": 1121.25,
+        "revenue_per_claim": 305.38793103448273
+      },
+      "suv_car_revenue_ratio": 0.8825871095865679
+    },
+    {
+      "nodes": 2001,
+      "recovery_slope": 0.2,
+      "suv_value_ratio": 1.2,
+      "car": {
+        "tlf": 0.35332333833083457,
+        "mean_recovery_given_total": 0.2353323338330834,
+        "rpu": 846.0954512135727,
+        "revenue_per_claim": 298.9452693693133
+      },
+      "suv": {
+        "tlf": 0.3103448275862069,
+        "mean_recovery_given_total": 0.23103448275862068,
+        "rpu": 908.664265089679,
+        "revenue_per_claim": 281.9992546830038
+      },
+      "suv_car_revenue_ratio": 0.9433139894735227
+    },
+    {
+      "nodes": 2001,
+      "recovery_slope": 0.2,
+      "suv_value_ratio": 1.5,
+      "car": {
+        "tlf": 0.35332333833083457,
+        "mean_recovery_given_total": 0.2353323338330834,
+        "rpu": 846.0954512135727,
+        "revenue_per_claim": 298.9452693693133
+      },
+      "suv": {
+        "tlf": 0.2593703148425787,
+        "mean_recovery_given_total": 0.22593703148425787,
+        "rpu": 991.520793071672,
+        "revenue_per_claim": 257.1710602719629
+      },
+      "suv_car_revenue_ratio": 0.8602613475520731
+    },
+    {
+      "nodes": 2001,
+      "recovery_slope": 0.4,
+      "suv_value_ratio": 1.2,
+      "car": {
+        "tlf": 0.34332833583208394,
+        "mean_recovery_given_total": 0.16866566716641676,
+        "rpu": 710.4120456147472,
+        "revenue_per_claim": 243.90458537597766
+      },
+      "suv": {
+        "tlf": 0.2983508245877061,
+        "mean_recovery_given_total": 0.15967016491754119,
+        "rpu": 757.5043257265839,
+        "revenue_per_claim": 226.00204020928066
+      },
+      "suv_car_revenue_ratio": 0.9266002107377346
+    },
+    {
+      "nodes": 2001,
+      "recovery_slope": 0.4,
+      "suv_value_ratio": 1.5,
+      "car": {
+        "tlf": 0.34332833583208394,
+        "mean_recovery_given_total": 0.16866566716641676,
+        "rpu": 710.4120456147472,
+        "revenue_per_claim": 243.90458537597766
+      },
+      "suv": {
+        "tlf": 0.24587706146926536,
+        "mean_recovery_given_total": 0.149175412293853,
+        "rpu": 817.0484384332225,
+        "revenue_per_claim": 200.89346912001272
+      },
+      "suv_car_revenue_ratio": 0.8236559751852819
+    },
+    {
+      "nodes": 8001,
+      "recovery_slope": 0.0,
+      "suv_value_ratio": 1.2,
+      "car": {
+        "tlf": 0.3624546931633546,
+        "mean_recovery_given_total": 0.299999999999986,
+        "rpu": 955.0,
+        "revenue_per_claim": 346.14423197100365
+      },
+      "suv": {
+        "tlf": 0.32145981752280967,
+        "mean_recovery_given_total": 0.29999999999999,
+        "rpu": 1026.5,
+        "revenue_per_claim": 329.9785026871641
+      },
+      "suv_car_revenue_ratio": 0.9532977071673587
+    },
+    {
+      "nodes": 8001,
+      "recovery_slope": 0.0,
+      "suv_value_ratio": 1.5,
+      "car": {
+        "tlf": 0.3624546931633546,
+        "mean_recovery_given_total": 0.299999999999986,
+        "rpu": 955.0,
+        "revenue_per_claim": 346.14423197100365
+      },
+      "suv": {
+        "tlf": 0.2723409573803275,
+        "mean_recovery_given_total": 0.29999999999999644,
+        "rpu": 1121.25,
+        "revenue_per_claim": 305.36229846269214
+      },
+      "suv_car_revenue_ratio": 0.8821822531142804
+    },
+    {
+      "nodes": 8001,
+      "recovery_slope": 0.2,
+      "suv_value_ratio": 1.2,
+      "car": {
+        "tlf": 0.35333083364579426,
+        "mean_recovery_given_total": 0.23533308336457928,
+        "rpu": 846.0920235828322,
+        "revenue_per_claim": 298.9504000335791
+      },
+      "suv": {
+        "tlf": 0.3102112235970504,
+        "mean_recovery_given_total": 0.23102112235970482,
+        "rpu": 908.6223103684356,
+        "revenue_per_claim": 281.86483868697127
+      },
+      "suv_car_revenue_ratio": 0.9428481736612871
+    },
+    {
+      "nodes": 8001,
+      "recovery_slope": 0.2,
+      "suv_value_ratio": 1.5,
+      "car": {
+        "tlf": 0.35333083364579426,
+        "mean_recovery_given_total": 0.23533308336457928,
+        "rpu": 846.0920235828322,
+        "revenue_per_claim": 298.9504000335791
+      },
+      "suv": {
+        "tlf": 0.259217597800275,
+        "mean_recovery_given_total": 0.22592175978002582,
+        "rpu": 991.5071301206685,
+        "revenue_per_claim": 257.0160964717243
+      },
+      "suv_car_revenue_ratio": 0.8597282239557311
+    },
+    {
+      "nodes": 8001,
+      "recovery_slope": 0.4,
+      "suv_value_ratio": 1.2,
+      "car": {
+        "tlf": 0.3433320834895638,
+        "mean_recovery_given_total": 0.16866641669791219,
+        "rpu": 710.3920308218659,
+        "revenue_per_claim": 243.90037603645365
+      },
+      "suv": {
+        "tlf": 0.2982127234095738,
+        "mean_recovery_given_total": 0.1596425446819146,
+        "rpu": 757.4687399720464,
+        "revenue_per_claim": 225.88681584468225
+      },
+      "suv_car_revenue_ratio": 0.9261437785193121
+    },
+    {
+      "nodes": 8001,
+      "recovery_slope": 0.4,
+      "suv_value_ratio": 1.5,
+      "car": {
+        "tlf": 0.3433320834895638,
+        "mean_recovery_given_total": 0.16866641669791219,
+        "rpu": 710.3920308218659,
+        "revenue_per_claim": 243.90037603645365
+      },
+      "suv": {
+        "tlf": 0.2458442694663167,
+        "mean_recovery_given_total": 0.14916885389326284,
+        "rpu": 817.0693092856275,
+        "revenue_per_claim": 200.8718074446731
+      },
+      "suv_car_revenue_ratio": 0.8235813765807829
+    }
+  ],
+  "input_sha256": "fb3d216b30ea8ee080b2a6ab9148da59625117756a1941997cbc6491a5c39132"
+}

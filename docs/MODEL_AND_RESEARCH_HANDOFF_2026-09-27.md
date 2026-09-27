@@ -108,6 +108,8 @@ Do not describe these numbers as contradictions without checking denominator, ho
 
 ## 6. What remains worth investigating
 
+**Subsequent cheap tests:** [27 September model diagnostics](model_tests_2026-09-27/README.md) quantify existing-input sensitivity, exact age/body counterfactual attribution, forecast-only versus permanent parameter changes and an illustrative damage/recovery selection model. In the current bridge, H1's -$0.684m fleet adjustment comprises -$0.885m age composition, +$0.082m body-within-age, +$0.061m fleet size and +$0.058m interaction. A +/-1pp US baseline growth change moves H1 services +/-$16.743m. Permanent economic-input changes mostly cancel through the relative growth bridge and calibration; newly introduced forecast-only changes can have much larger effects. Those scenarios are not empirical predictions and were not adopted into the workbook. Do not pitch the current negative incremental adjustment as demonstrated negative body-mix attribution.
+
 - Historical crossover/SUV/pickup/van birth cohorts and age-matched pre-loss values, particularly crossovers versus sedans.
 - Claim-population age weights and cohort transitions; an older average fleet does not itself prove a near-term total-loss supply cliff.
 - Carrier exposure/claim growth × Copart allocation, distinct from one-time contract losses and wins. Premium share is not insured-vehicle share. Market-share work can proceed independently using the older handoff and experiments.
