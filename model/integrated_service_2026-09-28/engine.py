@@ -12,6 +12,11 @@ def close(a,b):return math.isclose(a,b,rel_tol=1e-9,abs_tol=1e-7)
 def validate_config(c):
     if c['timing_mode']!='sale_equivalent_no_additional_lag':raise ValueError('Physical inventory requires assignment-based capture, opening cohorts and exits; not silently enabled.')
     if c['claims_mode']!='fleet_exposure_proxy_times_reported_frequency':raise ValueError('Unsupported claims convention')
+    if c.get('claims_frequency_convention')!='combined_baseline_relative_change_excluding_incremental_nonfiling':
+        raise ValueError('Claims multiplier must exclude separately modeled incremental nonfiling')
+    filing=c.get('incremental_repairable_nonfiling',[])
+    if len(filing)!=8 or any(v is None or not math.isfinite(v) or not 0<=v<1 for v in filing):
+        raise ValueError('Nonfiling requires eight fractions of baseline-reportable repairables in [0,1)')
     for key,vals in c['quarter_drivers'].items():
         if len(vals)!=8 or any(v is None or not math.isfinite(v) or v<=0 for v in vals):raise ValueError('Missing/invalid driver: '+key)
     for key in ['insurance_share_of_us_service_base','routing_fraction','insurance_consignment_fraction','preferred_buyer_fraction','seller_fee_fraction']:
@@ -86,17 +91,32 @@ def run(d,e,c):
             allocation=x['allocations'][p if p<4 or x['name']=='Progressive' else base]
             capture+=wi*allocation
             carrier_rows.append({'period':fq,'carrier':x['name'],'total_loss_weight_proxy':wi,'allocation':allocation,'capture_contribution':wi*allocation,'status':'Historical inherited path' if p<4 else 'PGR path only; other Q4 weights/allocations fixed'})
-        sold=core=buyer=seller=proceeds=losses=0.
+        sold=core=buyer=seller=proceeds=losses=reported_claims=removed_claims=0.
+        nonfiling=c['incremental_repairable_nonfiling'][p]
         for (b,k),weight in weights.items():
             x=eco[b,k];tl=claims*weight*x['probability'];units=tl*c['routing_fraction']*capture*c['insurance_consignment_fraction']
+            before=claims*weight
+            removed=(before-tl)*nonfiling
+            reported=before-removed
+            reported_claims+=reported;removed_claims+=removed
             losses+=tl;sold+=units;core+=units*x['core_RPU'];buyer+=units*x['buyer_RPU'];seller+=units*x['seller_RPU'];proceeds+=units*x['ASP']
             cohort_rows.append({'period':fq,'body':b,'age_bucket':e['cohorts'][k]['age_bucket'],'claim_weight':weight,'claim_equivalent_raw':claims*weight,'TLF':x['probability'],'total_losses_raw':tl,'fee_sales_raw':units,'selected_ACV':x['ACV'],'ASP':x['ASP'],'buyer_RPU':x['buyer_RPU'],'seller_RPU':x['seller_RPU'],'core_revenue_raw':units*x['core_RPU']})
+            cohort_rows[-1].update(baseline_claim_equivalent_raw=before,
+                baseline_TLF=x['probability'],removed_repairable_claims_raw=removed,
+                claim_equivalent_raw=reported,TLF=tl/reported)
+            assert close(reported*cohort_rows[-1]['TLF'],tl)
+        for row in cohort_rows[-24:]:
+            row['reported_claim_weight']=row['claim_equivalent_raw']/reported_claims
         title_jobs=sold*c['title']['adoption']*drivers['title_adoption_multiplier'][p]
         title=title_jobs*c['title']['net_incremental_fee']*(not c['title']['included_in_seller_fee'])
         delivery_jobs=sold*c['delivery']['adoption']*drivers['delivery_adoption_multiplier'][p]
         delivery_gross=delivery_jobs*c['delivery']['gross_external_revenue_per_job']
         waiver=delivery_jobs*c['delivery']['fee_waiver_per_job']
         quarters.append({'period':fq,'end':period['end'],'claims_raw':claims,'total_losses_raw':losses,'fee_sales_raw':sold,'effective_capture':capture,'TLF':losses/claims,'ASP':proceeds/sold,'core_RPU':core/sold,'title_jobs_raw':title_jobs,'delivery_jobs_raw':delivery_jobs,'buyer_raw':buyer,'seller_raw':seller,'title_raw':title,'delivery_gross_raw':delivery_gross,'delivery_waiver_raw':waiver,'insurance_raw':core+title+delivery_gross-waiver,'seasonality_proxy':seasonal_us[q-1]})
+        quarters[-1].update(baseline_claims_raw=claims,baseline_TLF=losses/claims,
+            incremental_repairable_nonfiling=nonfiling,removed_repairable_claims_raw=removed_claims,
+            claims_raw=reported_claims,TLF=losses/reported_claims)
+        assert close(reported_claims+removed_claims,claims)
     insurance_base=d['actuals'][base]['us_service']*1e6*c['insurance_share_of_us_service_base']
     scale=insurance_base/quarters[base]['insurance_raw']
     otherbase=d['actuals'][base]['us_service']*1e6*(1-c['insurance_share_of_us_service_base'])

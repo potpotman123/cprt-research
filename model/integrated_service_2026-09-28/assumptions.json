@@ -3,6 +3,8 @@
   "scope": "legacy_copart_service_revenue",
   "timing_mode": "sale_equivalent_no_additional_lag",
   "claims_mode": "fleet_exposure_proxy_times_reported_frequency",
+  "claims_frequency_convention": "combined_baseline_relative_change_excluding_incremental_nonfiling",
+  "incremental_repairable_nonfiling": [0,0,0,0,0,0,0,0],
   "base_period_index": 3,
   "insurance_share_of_us_service_base": 0.9,
   "routing_fraction": 1.0,
