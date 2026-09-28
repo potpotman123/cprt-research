@@ -1,0 +1,29 @@
+{
+  "checks_passed": 33,
+  "single_age_rows": 1472,
+  "selected_cell_rows": 192,
+  "FY27_H1_carrier_neutral": {
+    "activity_delta_musd": 1.8935262849903423,
+    "age_mix_delta_musd": 1.2792379415317447,
+    "within_age_body_delta_musd": -2.883121866483645,
+    "cohort_delta_musd": 0.2896423600387108,
+    "old_activity_convention_delta_musd": 1.6352228451203854
+  },
+  "sources": {
+    "model/linked_service_revenue_2026-09-28/inputs.json": "18e80a5aa8c34854b8bc1d9471d7530d7b827349ac51758f13a3d24987e7b591",
+    "docs/fleet_selection_2026-09-28/age_constrained_engine_results.json": "8e6f55a8792caf6aa2cb4f4c2d758936ff96e3b2a306c85244db59e4bfd6655b",
+    "model/integrated_service_2026-09-28/assumptions.json": "ed8d1da5ddc03e9a866efe6f944622e1301364694c45f5c46b77fc69f1507baf",
+    "model/integrated_service_2026-09-28/fleet_cohort_build.py": "4379fe1b41082b84f16d87018780d6e1c66747e0e0a162c7f052fabc763a0ba1"
+  },
+  "status": "Candidate cohort-activity adapter; not adopted forecast; no new source validation",
+  "interaction_order": "Activity, age composition, within-age body composition",
+  "limitations": [
+    "Fixed LT subtype shares across all vintages",
+    "2026/2027 sales repeat 2025",
+    "Quarterly interpolation of annual-age snapshots, not observed monthly registrations",
+    "Fitted claim propensities and age-cell correction, not measured covered exposures",
+    "Fixed repair/value/fee economics and ancillary adoption",
+    "No catastrophe, carrier or lag change",
+    "Dollar translation assumes 90% insurance share and persistent same-quarter base"
+  ]
+}

@@ -1,5 +1,7 @@
 # Integrated quarterly service-revenue research model
 
+**Fleet workstream:** [FLEET_COHORT_BUILD.md](FLEET_COHORT_BUILD.md) and `fleet_cohort_build.py` provide a parallel carrier-neutral build with explicit single-age claim activity, age/body selection and revenue attribution. It corrects the activity convention for evaluation but is not yet substituted into production. Historical light-truck subtype shares remain fixed, so a distinct crossover-transition thesis is not yet represented.
+
 **Current driver ownership:** [DRIVER_ATTRIBUTION.md](DRIVER_ATTRIBUTION.md) separates the inherited carrier comparison from additional forward runoff and non-capture changes. The provisional H1 decline is overwhelmingly capture-driven; do not attribute it to fleet economics or ancillary saturation. `driver_attribution.py` produces an exact, order-dependent quarterly bridge without changing inputs.
 
 **Current presentation baseline:** [HISTORY_REPAIR.md](HISTORY_REPAIR.md). Use `reconciled_quarterly_service.csv` for reported history and provisional same-quarter forecast bridges, plus `historical_operating_bridge.csv` for unit/RPU attribution. `quarterly_results.csv` is retained as the original absolute reconstruction and diagnostic. Its historical errors remain unresolved; its forecast dollars are superseded for presentation. The original integration description below documents that diagnostic engine.
