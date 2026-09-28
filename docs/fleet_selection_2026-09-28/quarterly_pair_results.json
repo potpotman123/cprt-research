@@ -1,0 +1,35 @@
+{
+  "source": "https://www.cccis.com/news-and-insights/posts/crash-course-2026-webinar-recap",
+  "published": "2026-05-20",
+  "accessed": "2026-09-28",
+  "qualification": "Requires claim counts and TLF for the same population and period. No matching quarterly TLF/count pair established. Claim-volume definition in recap not fully specified.",
+  "break_even": [
+    {
+      "scope": "all_categories",
+      "reported_Q1_2026_claim_volume_yoy_pct": -3.3000000000000003,
+      "required_relative_TLF_increase_for_flat_TL_count_pct": 3.412616339193386
+    },
+    {
+      "scope": "non_comprehensive",
+      "reported_Q1_2026_claim_volume_yoy_pct": -1.6,
+      "required_relative_TLF_increase_for_flat_TL_count_pct": 1.6260162601626105
+    }
+  ],
+  "illustrative_noncomp_examples_NOT_forecasts": [
+    {
+      "assumed_prior_TLF_pct": 24,
+      "assumed_current_TLF_pct": 24.0,
+      "conditional_TL_count_change_pct": -1.6000000000000014
+    },
+    {
+      "assumed_prior_TLF_pct": 24,
+      "assumed_current_TLF_pct": 24.5,
+      "conditional_TL_count_change_pct": 0.44999999999999485
+    },
+    {
+      "assumed_prior_TLF_pct": 24,
+      "assumed_current_TLF_pct": 25.0,
+      "conditional_TL_count_change_pct": 2.5000000000000133
+    }
+  ]
+}
