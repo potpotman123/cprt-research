@@ -1,0 +1,45 @@
+{
+  "status": "Structural diagnostics only; none validates an economic forecast.",
+  "findings": {
+    "allocation_changes_units_but_not_RPU": true,
+    "title_adoption_changes_no_raw_sale_units": true,
+    "different_insurance_split_same_Q4_US_revenue_different_normalized_units": true,
+    "physical_inventory_unavailable": true,
+    "forecast_multiplier_arrays_all_one": {
+      "reported_claim_frequency": true,
+      "repair_cost": true,
+      "vehicle_value": true,
+      "title_adoption_multiplier": true,
+      "delivery_adoption_multiplier": true,
+      "other_us_activity": true,
+      "other_us_fee": true,
+      "intl_activity": true,
+      "intl_fee": true,
+      "intl_fx": true
+    },
+    "quarter_driver_names": [
+      "reported_claim_frequency",
+      "repair_cost",
+      "vehicle_value",
+      "title_adoption_multiplier",
+      "delivery_adoption_multiplier",
+      "other_us_activity",
+      "other_us_fee",
+      "intl_activity",
+      "intl_fee",
+      "intl_fx"
+    ],
+    "no_independent_salvage_demand_quarter_driver": true,
+    "no_time_varying_buyer_mix_or_fee_schedule_driver": true
+  },
+  "normalized_units_ratio_80_vs_90pct_insurance_split": 0.888888888888889,
+  "source_hashes": {
+    "model/integrated_service_2026-09-28/engine.py": "8f06ed12586d0ee60fc916c295dbf376a1fcd7d03ab66901777a37435cfd76c8",
+    "model/integrated_service_2026-09-28/history_repair.py": "ac9c18b2e0b46881afdd8d6e64aa9776a4b7fc6e17da7c07efdf5b943671fda9",
+    "model/integrated_service_2026-09-28/assumptions.json": "a5247106423da9061fdebe1409e085ecfa94c2b0e60c9e50d086747d2ee003a2",
+    "model/linked_service_revenue_2026-09-28/inputs.json": "18e80a5aa8c34854b8bc1d9471d7530d7b827349ac51758f13a3d24987e7b591",
+    "docs/fleet_selection_2026-09-28/age_constrained_engine_results.json": "8e6f55a8792caf6aa2cb4f4c2d758936ff96e3b2a306c85244db59e4bfd6655b",
+    "docs/historical_body_births_2026-09-28/candidate_body_births.csv": "8c983b66db41ec3170c20a510fcd166b917d9b3d9f0a2f39d9b5a13871d6f0f4"
+  },
+  "no_model_inputs_or_existing_outputs_changed": true
+}
