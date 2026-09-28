@@ -1,0 +1,113 @@
+{
+  "passed": true,
+  "damage_nodes_independently_checked": 1728,
+  "formula_errors": [],
+  "data_tabs_values_only": true,
+  "external_links": false,
+  "quarter_results": [
+    {
+      "quarter": "Q1 FY26A",
+      "rawunits": 27174.988395509765,
+      "rpu": 871.7411532328043,
+      "asp": 2770.8630569765082,
+      "share": 0.6031466249999999,
+      "units": 899329.4717108733,
+      "insurance_m": 783.9825108054854,
+      "other_us_m": 81.7822,
+      "intl_m": 151.722,
+      "total_m": 1017.4867108054854
+    },
+    {
+      "quarter": "Q2 FY26A",
+      "rawunits": 27099.643931991268,
+      "rpu": 871.6474371386277,
+      "asp": 2770.657009265016,
+      "share": 0.6011299999999999,
+      "units": 896836.0209102236,
+      "insurance_m": 781.7248191600011,
+      "other_us_m": 81.7822,
+      "intl_m": 151.722,
+      "total_m": 1015.229019160001
+    },
+    {
+      "quarter": "Q3 FY26A",
+      "rawunits": 26266.649433782466,
+      "rpu": 871.4599437502004,
+      "asp": 2770.2156713524064,
+      "share": 0.5823929545454546,
+      "units": 869268.888549057,
+      "insurance_m": 757.5330167187603,
+      "other_us_m": 81.7822,
+      "intl_m": 151.722,
+      "total_m": 991.0372167187603
+    },
+    {
+      "quarter": "Q4 FY26A",
+      "rawunits": 25527.72861740785,
+      "rpu": 871.2437304067018,
+      "asp": 2769.7022596508514,
+      "share": 0.5657796044226044,
+      "units": 844815.0320191254,
+      "insurance_m": 736.0398000000001,
+      "other_us_m": 81.7822,
+      "intl_m": 151.722,
+      "total_m": 969.5440000000001
+    },
+    {
+      "quarter": "Q1 FY27E",
+      "rawunits": 25335.621547943723,
+      "rpu": 871.0276925192721,
+      "asp": 2769.1892645803796,
+      "share": 0.5612940349355037,
+      "units": 838457.4377939281,
+      "insurance_m": 730.3196473172663,
+      "other_us_m": 81.7822,
+      "intl_m": 151.722,
+      "total_m": 963.8238473172663
+    },
+    {
+      "quarter": "Q2 FY27E",
+      "rawunits": 25300.743833735665,
+      "rpu": 870.8128880996483,
+      "asp": 2768.70917922873,
+      "share": 0.5603044474815725,
+      "units": 837303.1941991673,
+      "insurance_m": 729.1344127556375,
+      "other_us_m": 81.7822,
+      "intl_m": 151.722,
+      "total_m": 962.6386127556375
+    },
+    {
+      "quarter": "Q3 FY27E",
+      "rawunits": 25043.82552653999,
+      "rpu": 870.6119530475279,
+      "asp": 2768.651712563321,
+      "share": 0.5545345830006143,
+      "units": 828800.7359047852,
+      "insurance_m": 721.5638273732934,
+      "other_us_m": 81.7822,
+      "intl_m": 151.722,
+      "total_m": 955.0680273732934
+    },
+    {
+      "quarter": "Q4 FY27E",
+      "rawunits": 24786.421623111426,
+      "rpu": 870.4152782272312,
+      "asp": 2768.7242028485366,
+      "share": 0.5487965405405405,
+      "units": 820282.2072814215,
+      "insurance_m": 713.9861656757058,
+      "other_us_m": 81.7822,
+      "intl_m": 151.722,
+      "total_m": 947.4903656757058
+    }
+  ],
+  "historical_us_residual_m": [
+    10.230710805485614,
+    44.04001916000118,
+    -56.14878328123973,
+    1.1368683772161603e-13
+  ],
+  "calibration": "One FY26Q4 dollar anchor; not observed absolute unit levels",
+  "engine": "Artifact Tool recalculation + independent Python; desktop Excel not tested"
+}
