@@ -1,0 +1,71 @@
+{
+  "source_url": "https://platform.vox.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24341429/39_07.pdf",
+  "source_sha256": "2897780581aaedc5872c64250f610d18730f926601b47d690c3218dc61f3e4a0",
+  "model_input_sha256": "18e80a5aa8c34854b8bc1d9471d7530d7b827349ac51758f13a3d24987e7b591",
+  "source_locator": "HLDI April 2022 Bulletin 39(7), printed p4 Figure5, all-vehicles black curve, CY2020",
+  "method": "Visual reading of rendered chart at ages13,20,25; \u00b10.15 claims per100 selected as reading allowance, not a statistical confidence interval. No interpolation or forecast adoption. Normalize at13 to avoid age0 half-year convention.",
+  "rows": [
+    {
+      "age": 13,
+      "approx_claims_per_100_insured_vehicle_years": 3.6,
+      "visual_reading_interval": [
+        3.45,
+        3.75
+      ],
+      "frequency_relative_to_age13": 1.0,
+      "frequency_ratio_interval": [
+        1,
+        1
+      ],
+      "model_claim_propensity_relative_to_age13": 1.0,
+      "hypothetical_residual_factor": 1.0,
+      "residual_interval": [
+        1.0,
+        1.0
+      ],
+      "status": "Illustrative comparability test; residual is NOT an observed coverage ratio"
+    },
+    {
+      "age": 20,
+      "approx_claims_per_100_insured_vehicle_years": 2.15,
+      "visual_reading_interval": [
+        2.0,
+        2.3
+      ],
+      "frequency_relative_to_age13": 0.5972222222222222,
+      "frequency_ratio_interval": [
+        0.5333333333333333,
+        0.6666666666666666
+      ],
+      "model_claim_propensity_relative_to_age13": 0.531586153139585,
+      "hypothetical_residual_factor": 0.8900977447918633,
+      "residual_interval": [
+        0.7973792297093776,
+        0.9967240371367219
+      ],
+      "status": "Illustrative comparability test; residual is NOT an observed coverage ratio"
+    },
+    {
+      "age": 25,
+      "approx_claims_per_100_insured_vehicle_years": 1.5,
+      "visual_reading_interval": [
+        1.35,
+        1.65
+      ],
+      "frequency_relative_to_age13": 0.41666666666666663,
+      "frequency_ratio_interval": [
+        0.36000000000000004,
+        0.47826086956521735
+      ],
+      "model_claim_propensity_relative_to_age13": 0.3384970166873364,
+      "hypothetical_residual_factor": 0.8123928400496074,
+      "residual_interval": [
+        0.707766489437158,
+        0.9402694907981566
+      ],
+      "status": "Illustrative comparability test; residual is NOT an observed coverage ratio"
+    }
+  ],
+  "checks_passed": 6,
+  "identification": "R(age)/R(13) divided by F_insured(age)/F_insured(13). Could represent relative collision coverage ONLY with compatible year, population, damage/coverage scope and exposure definitions; current model and HLDI are not matched."
+}
