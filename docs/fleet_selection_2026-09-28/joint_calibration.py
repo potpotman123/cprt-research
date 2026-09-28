@@ -11,18 +11,20 @@ weights={(b,k):sum(r['births'][2]*r['survival']*d['split'][b]*r['relative_claim_
 body={k:[weights[b,k]/sum(weights[z,k] for z in range(4)) for b in range(4)] for k in range(6)}
 inferred=[shares[c['age_bucket']]/c['target'] for c in d['calibration']]
 model=[sum(weights[b,k] for b in range(4)) for k in range(6)]
-def cutoff(mu,acv,sigma):
+def cutoff(mu,acv,sigma,recovery_center=.3):
     lo,hi=1e-12,1-1e-12
     for _ in range(42):
         u=(lo+hi)/2
         # recovery .4-.2u; repair threshold = ACV*(.616+.192u)
-        if mu+sigma*N.inv_cdf(u)<math.log(acv*(.616+.192*u)):lo=u
+        if mu+sigma*N.inv_cdf(u)<math.log(acv*(1-.96*(recovery_center+.1)+.192*u)):lo=u
         else:hi=u
     return (lo+hi)/2
-def fit(sigma,ageweights):
+continuous_cutoff=cutoff
+def fit(sigma,ageweights,value_slope=.1,recovery_center=.3):
+    cutoff=lambda mu,acv,sigma:continuous_cutoff(mu,acv,sigma,recovery_center)
     mus=[];means=[]; acvs=[]
     for k,c in enumerate(d['calibration']):
-        vals=[10000*math.exp(-.1*(c['representative_age']-10))*v for v in d['value_ratios']];acvs.append(vals)
+        vals=[10000*math.exp(-value_slope*(c['representative_age']-10))*v for v in d['value_ratios']];acvs.append(vals)
         lo,hi=0.,15.
         for _ in range(48):
             mu=(lo+hi)/2
@@ -46,7 +48,7 @@ def fit(sigma,ageweights):
             for b in range(4):
                 acv=acvs[k][b]*v;u=cutoff(mus[k]+math.log(d['repair_ratios'][b]*r),acv,sigma)
                 w=ageweights[k]*body[k][b]
-                units+=w*(1-u);proceeds+=w*(1-u)*acv*(.3-.1*u)
+                units+=w*(1-u);proceeds+=w*(1-u)*acv*(recovery_center-.1*u)
         return units,proceeds/units
     base=response(1,1)
     responses={name:{'units_pct':100*(response(r,v)[0]/base[0]-1),'ASP_pct':100*(response(r,v)[1]/base[1]-1)} for name,r,v in [('repair_plus_5pct',1.05,1),('value_plus_5pct',1,1.05)]}

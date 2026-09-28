@@ -1,0 +1,98 @@
+{
+  "status": "Conditional on CCC inferred age weights and unmatched noncomp value anchor. No fit adopted. Grid points not empirical ranges.",
+  "grid": [
+    {
+      "slope": 0.04,
+      "recovery_center": 0.3,
+      "status": "No equal-scale root in tested sigma interval [.35,3]"
+    },
+    {
+      "slope": 0.06,
+      "recovery_center": 0.3,
+      "status": "No equal-scale root in tested sigma interval [.35,3]"
+    },
+    {
+      "slope": 0.08,
+      "recovery_center": 0.3,
+      "sigma": 0.8918767184019087,
+      "scale": 0.9989850825759103,
+      "selected_ACV": 11934.083144197477,
+      "value_gap_pct": -12.313863745793707,
+      "repair_shock_units_pct": 7.434051248533269,
+      "status": "Both repair means and age TLF fitted"
+    },
+    {
+      "slope": 0.1,
+      "recovery_center": 0.3,
+      "sigma": 1.7948148816823966,
+      "scale": 1.6938221669206213,
+      "selected_ACV": 21316.274359267503,
+      "value_gap_pct": 56.62214812099562,
+      "repair_shock_units_pct": 3.490659889234715,
+      "status": "Both repair means and age TLF fitted"
+    },
+    {
+      "slope": 0.12,
+      "recovery_center": 0.3,
+      "status": "No equal-scale root in tested sigma interval [.35,3]"
+    },
+    {
+      "slope": 0.14,
+      "recovery_center": 0.3,
+      "status": "No equal-scale root in tested sigma interval [.35,3]"
+    },
+    {
+      "slope": 0.1,
+      "recovery_center": 0.1,
+      "sigma": 1.7274390608072276,
+      "scale": 1.3053993483485657,
+      "selected_ACV": 16425.866720796923,
+      "value_gap_pct": 20.68968935192448,
+      "repair_shock_units_pct": 3.5994051596222043,
+      "status": "Both repair means and age TLF fitted"
+    },
+    {
+      "slope": 0.1,
+      "recovery_center": 0.2,
+      "sigma": 1.757035532593727,
+      "scale": 1.4746017144099572,
+      "selected_ACV": 18556.05976891043,
+      "value_gap_pct": 36.341364944235345,
+      "repair_shock_units_pct": 3.550941301922106,
+      "status": "Both repair means and age TLF fitted"
+    },
+    {
+      "slope": 0.1,
+      "recovery_center": 0.4,
+      "sigma": 1.8447271794080735,
+      "scale": 1.9888742784593973,
+      "selected_ACV": 25031.809309969627,
+      "value_gap_pct": 83.92218449647044,
+      "repair_shock_units_pct": 3.413632945472078,
+      "status": "Both repair means and age TLF fitted"
+    },
+    {
+      "slope": 0.1,
+      "recovery_center": 0.5,
+      "sigma": 1.9137659221887584,
+      "scale": 2.406830455879323,
+      "selected_ACV": 30295.986589616936,
+      "value_gap_pct": 122.60093012209356,
+      "repair_shock_units_pct": 3.311742316262478,
+      "status": "Both repair means and age TLF fitted"
+    }
+  ],
+  "three_target_solutions": [
+    {
+      "changed_structural_assumption": "slope",
+      "slope": 0.08479341506958006,
+      "recovery_center": 0.3,
+      "sigma": 1.0687479227781296,
+      "scale": 1.125686867162071,
+      "selected_ACV": 13610.002100891877,
+      "value_gap_pct": 1.5436384104283718e-05,
+      "repair_shock_units_pct": 6.087531648643063,
+      "status": "Both repair means and age TLF fitted"
+    }
+  ]
+}
