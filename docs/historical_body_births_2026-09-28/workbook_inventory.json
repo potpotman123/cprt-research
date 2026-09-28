@@ -1,0 +1,1597 @@
+{
+  "path": "/Users/kwu/Library/Containers/com.apple.MobileSMS/Data/tmp/TemporaryItems/com.apple.MobileSMS/Media/6B7AB363-5EBE-4CCC-BA2F-CA9F98ABE187/CPRT_Intermediate (1).xlsx",
+  "sha256": "6da30d4a05a7ea1bded6e56c0adb8193afd7d89be04d2b00a82e8ec50edeb2b1",
+  "worksheets": [
+    {
+      "sheet": "Sheet1",
+      "rows": 95,
+      "columns": 5
+    },
+    {
+      "sheet": "README",
+      "rows": 27,
+      "columns": 2
+    },
+    {
+      "sheet": "Inputs",
+      "rows": 28,
+      "columns": 20
+    },
+    {
+      "sheet": "Data_Sales",
+      "rows": 65,
+      "columns": 6
+    },
+    {
+      "sheet": "Data_EPA_Survival",
+      "rows": 36,
+      "columns": 6
+    },
+    {
+      "sheet": "Data_CCC_Targets",
+      "rows": 25,
+      "columns": 8
+    },
+    {
+      "sheet": "Survival",
+      "rows": 100,
+      "columns": 20
+    },
+    {
+      "sheet": "Fleet",
+      "rows": 68,
+      "columns": 20
+    },
+    {
+      "sheet": "FleetByAge",
+      "rows": 59,
+      "columns": 20
+    },
+    {
+      "sheet": "Curves",
+      "rows": 56,
+      "columns": 11
+    },
+    {
+      "sheet": "Calibration",
+      "rows": 58,
+      "columns": 15
+    },
+    {
+      "sheet": "TLF_Roll",
+      "rows": 47,
+      "columns": 20
+    },
+    {
+      "sheet": "Spread_Reg",
+      "rows": 47,
+      "columns": 22
+    },
+    {
+      "sheet": "RPU_Reg",
+      "rows": 25,
+      "columns": 16
+    },
+    {
+      "sheet": "Checks",
+      "rows": 17,
+      "columns": 5
+    },
+    {
+      "sheet": "Data_ReportedUnits",
+      "rows": 20,
+      "columns": 8
+    },
+    {
+      "sheet": "Data_QuarterlyPL",
+      "rows": 23,
+      "columns": 9
+    },
+    {
+      "sheet": "Data_QuarterlyMargin",
+      "rows": 24,
+      "columns": 10
+    },
+    {
+      "sheet": "Data_Segments",
+      "rows": 7,
+      "columns": 8
+    },
+    {
+      "sheet": "Data_SegmentSvc8K",
+      "rows": 8,
+      "columns": 9
+    },
+    {
+      "sheet": "Data_FacilityOps",
+      "rows": 11,
+      "columns": 6
+    },
+    {
+      "sheet": "Data_SECAnnual",
+      "rows": 15,
+      "columns": 10
+    },
+    {
+      "sheet": "Data_Elasticity",
+      "rows": 21,
+      "columns": 8
+    },
+    {
+      "sheet": "Data_CCC_TLF_Annual",
+      "rows": 17,
+      "columns": 6
+    },
+    {
+      "sheet": "Data_CCC_TLF_Quarterly",
+      "rows": 35,
+      "columns": 6
+    },
+    {
+      "sheet": "Data_CPI",
+      "rows": 912,
+      "columns": 19
+    },
+    {
+      "sheet": "Data_Spread",
+      "rows": 290,
+      "columns": 6
+    },
+    {
+      "sheet": "Data_TLFCalibration",
+      "rows": 6,
+      "columns": 9
+    },
+    {
+      "sheet": "Data_UnitsPanel",
+      "rows": 10,
+      "columns": 17
+    },
+    {
+      "sheet": "Data_Decomposition",
+      "rows": 7,
+      "columns": 8
+    },
+    {
+      "sheet": "Data_FastTrack",
+      "rows": 29,
+      "columns": 8
+    },
+    {
+      "sheet": "Data_PGR_PIF",
+      "rows": 36,
+      "columns": 12
+    },
+    {
+      "sheet": "Data_GEICO",
+      "rows": 51,
+      "columns": 7
+    },
+    {
+      "sheet": "Data_RBA",
+      "rows": 22,
+      "columns": 8
+    },
+    {
+      "sheet": "Data_DuopolyCompare",
+      "rows": 12,
+      "columns": 9
+    },
+    {
+      "sheet": "Data_DuopolyDaily",
+      "rows": 9,
+      "columns": 11
+    },
+    {
+      "sheet": "Data_Yards",
+      "rows": 29,
+      "columns": 6
+    },
+    {
+      "sheet": "Data_Cadence",
+      "rows": 30,
+      "columns": 6
+    },
+    {
+      "sheet": "Data_LotsPerEvent",
+      "rows": 14,
+      "columns": 6
+    },
+    {
+      "sheet": "Data_BacktestInv",
+      "rows": 8,
+      "columns": 10
+    },
+    {
+      "sheet": "Data_FRED_TOTALNSA",
+      "rows": 612,
+      "columns": 6
+    },
+    {
+      "sheet": "Data_FRED_LTRUCKNSA",
+      "rows": 612,
+      "columns": 6
+    },
+    {
+      "sheet": "Data_FRED_HTRUCKSNSA",
+      "rows": 720,
+      "columns": 6
+    },
+    {
+      "sheet": "Data_EPA_Miles",
+      "rows": 35,
+      "columns": 6
+    },
+    {
+      "sheet": "Data_AgeCurvesPy",
+      "rows": 50,
+      "columns": 12
+    },
+    {
+      "sheet": "Data_AgeCurvesValid",
+      "rows": 41,
+      "columns": 6
+    },
+    {
+      "sheet": "Data_Capex",
+      "rows": 14,
+      "columns": 14
+    },
+    {
+      "sheet": "Data_OwnerEarnings",
+      "rows": 14,
+      "columns": 10
+    }
+  ],
+  "subtype_term_matches": [],
+  "comparison_count": 168,
+  "max_abs_sales_difference": 0.0,
+  "sales_comparison": [
+    {
+      "year": 1970,
+      "metric": "cars_k",
+      "workbook_cell": "B5",
+      "workbook_value": 8321,
+      "repo_value": 8321.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1970,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C5",
+      "workbook_value": 1457,
+      "repo_value": 1457.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1970,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D5",
+      "workbook_value": 334,
+      "repo_value": 334.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1971,
+      "metric": "cars_k",
+      "workbook_cell": "B6",
+      "workbook_value": 10144,
+      "repo_value": 10144.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1971,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C6",
+      "workbook_value": 1673,
+      "repo_value": 1673.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1971,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D6",
+      "workbook_value": 340,
+      "repo_value": 340.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1972,
+      "metric": "cars_k",
+      "workbook_cell": "B7",
+      "workbook_value": 10800.6,
+      "repo_value": 10800.6,
+      "difference": 0.0
+    },
+    {
+      "year": 1972,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C7",
+      "workbook_value": 2097,
+      "repo_value": 2097.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1972,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D7",
+      "workbook_value": 438,
+      "repo_value": 438.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1973,
+      "metric": "cars_k",
+      "workbook_cell": "B8",
+      "workbook_value": 11276,
+      "repo_value": 11276.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1973,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C8",
+      "workbook_value": 2512,
+      "repo_value": 2512.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1973,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D8",
+      "workbook_value": 497,
+      "repo_value": 497.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1974,
+      "metric": "cars_k",
+      "workbook_cell": "B9",
+      "workbook_value": 8720.3,
+      "repo_value": 8720.3,
+      "difference": 0.0
+    },
+    {
+      "year": 1974,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C9",
+      "workbook_value": 2163,
+      "repo_value": 2163.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1974,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D9",
+      "workbook_value": 424,
+      "repo_value": 424.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1975,
+      "metric": "cars_k",
+      "workbook_cell": "B10",
+      "workbook_value": 8485.8,
+      "repo_value": 8485.8,
+      "difference": 0.0
+    },
+    {
+      "year": 1975,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C10",
+      "workbook_value": 2053,
+      "repo_value": 2053.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1975,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D10",
+      "workbook_value": 298,
+      "repo_value": 298.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1976,
+      "metric": "cars_k",
+      "workbook_cell": "B11",
+      "workbook_value": 9956.8,
+      "repo_value": 9956.8,
+      "difference": 0.0
+    },
+    {
+      "year": 1976,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C11",
+      "workbook_value": 2719,
+      "repo_value": 2719.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1976,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D11",
+      "workbook_value": 324,
+      "repo_value": 324.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1977,
+      "metric": "cars_k",
+      "workbook_cell": "B12",
+      "workbook_value": 11003.6,
+      "repo_value": 11003.6,
+      "difference": 0.0
+    },
+    {
+      "year": 1977,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C12",
+      "workbook_value": 3109,
+      "repo_value": 3109.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1977,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D12",
+      "workbook_value": 376,
+      "repo_value": 376.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1978,
+      "metric": "cars_k",
+      "workbook_cell": "B13",
+      "workbook_value": 11107,
+      "repo_value": 11107.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1978,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C13",
+      "workbook_value": 3474,
+      "repo_value": 3474.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1978,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D13",
+      "workbook_value": 441,
+      "repo_value": 441.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1979,
+      "metric": "cars_k",
+      "workbook_cell": "B14",
+      "workbook_value": 10512,
+      "repo_value": 10512.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1979,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C14",
+      "workbook_value": 2845,
+      "repo_value": 2845.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1979,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D14",
+      "workbook_value": 391,
+      "repo_value": 391.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1980,
+      "metric": "cars_k",
+      "workbook_cell": "B15",
+      "workbook_value": 8948.8,
+      "repo_value": 8948.8,
+      "difference": 0.0
+    },
+    {
+      "year": 1980,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C15",
+      "workbook_value": 1960,
+      "repo_value": 1960.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1980,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D15",
+      "workbook_value": 271,
+      "repo_value": 271.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1981,
+      "metric": "cars_k",
+      "workbook_cell": "B16",
+      "workbook_value": 8488.4,
+      "repo_value": 8488.4,
+      "difference": 0.0
+    },
+    {
+      "year": 1981,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C16",
+      "workbook_value": 1746,
+      "repo_value": 1746.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1981,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D16",
+      "workbook_value": 226,
+      "repo_value": 226.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1982,
+      "metric": "cars_k",
+      "workbook_cell": "B17",
+      "workbook_value": 7956.5,
+      "repo_value": 7956.5,
+      "difference": 0.0
+    },
+    {
+      "year": 1982,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C17",
+      "workbook_value": 2063,
+      "repo_value": 2063.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1982,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D17",
+      "workbook_value": 184,
+      "repo_value": 184.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1983,
+      "metric": "cars_k",
+      "workbook_cell": "B18",
+      "workbook_value": 9148,
+      "repo_value": 9148.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1983,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C18",
+      "workbook_value": 2521,
+      "repo_value": 2521.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1983,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D18",
+      "workbook_value": 189,
+      "repo_value": 189.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1984,
+      "metric": "cars_k",
+      "workbook_cell": "B19",
+      "workbook_value": 10323.7,
+      "repo_value": 10323.7,
+      "difference": 0.0
+    },
+    {
+      "year": 1984,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C19",
+      "workbook_value": 3255,
+      "repo_value": 3255.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1984,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D19",
+      "workbook_value": 282,
+      "repo_value": 282.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1985,
+      "metric": "cars_k",
+      "workbook_cell": "B20",
+      "workbook_value": 10979.2,
+      "repo_value": 10979.2,
+      "difference": 0.0
+    },
+    {
+      "year": 1985,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C20",
+      "workbook_value": 3688,
+      "repo_value": 3688.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1985,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D20",
+      "workbook_value": 295,
+      "repo_value": 295.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1986,
+      "metric": "cars_k",
+      "workbook_cell": "B21",
+      "workbook_value": 11404.1,
+      "repo_value": 11404.1,
+      "difference": 0.0
+    },
+    {
+      "year": 1986,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C21",
+      "workbook_value": 4594,
+      "repo_value": 4594.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1986,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D21",
+      "workbook_value": 277,
+      "repo_value": 277.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1987,
+      "metric": "cars_k",
+      "workbook_cell": "B22",
+      "workbook_value": 10187.5,
+      "repo_value": 10187.5,
+      "difference": 0.0
+    },
+    {
+      "year": 1987,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C22",
+      "workbook_value": 4610,
+      "repo_value": 4610.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1987,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D22",
+      "workbook_value": 302,
+      "repo_value": 302.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1988,
+      "metric": "cars_k",
+      "workbook_cell": "B23",
+      "workbook_value": 10543.6,
+      "repo_value": 10543.6,
+      "difference": 0.0
+    },
+    {
+      "year": 1988,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C23",
+      "workbook_value": 4800,
+      "repo_value": 4800.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1988,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D23",
+      "workbook_value": 348,
+      "repo_value": 348.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1989,
+      "metric": "cars_k",
+      "workbook_cell": "B24",
+      "workbook_value": 9775.9,
+      "repo_value": 9775.9,
+      "difference": 0.0
+    },
+    {
+      "year": 1989,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C24",
+      "workbook_value": 4610,
+      "repo_value": 4610.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1989,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D24",
+      "workbook_value": 330,
+      "repo_value": 330.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1990,
+      "metric": "cars_k",
+      "workbook_cell": "B25",
+      "workbook_value": 9301.2,
+      "repo_value": 9301.2,
+      "difference": 0.0
+    },
+    {
+      "year": 1990,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C25",
+      "workbook_value": 4548,
+      "repo_value": 4548.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1990,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D25",
+      "workbook_value": 297,
+      "repo_value": 297.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1991,
+      "metric": "cars_k",
+      "workbook_cell": "B26",
+      "workbook_value": 8185,
+      "repo_value": 8185.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1991,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C26",
+      "workbook_value": 4122,
+      "repo_value": 4122.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1991,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D26",
+      "workbook_value": 242,
+      "repo_value": 242.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1992,
+      "metric": "cars_k",
+      "workbook_cell": "B27",
+      "workbook_value": 8213.1,
+      "repo_value": 8213.1,
+      "difference": 0.0
+    },
+    {
+      "year": 1992,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C27",
+      "workbook_value": 4629,
+      "repo_value": 4629.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1992,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D27",
+      "workbook_value": 276,
+      "repo_value": 276.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1993,
+      "metric": "cars_k",
+      "workbook_cell": "B28",
+      "workbook_value": 8517.9,
+      "repo_value": 8517.9,
+      "difference": 0.0
+    },
+    {
+      "year": 1993,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C28",
+      "workbook_value": 5351,
+      "repo_value": 5351.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1993,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D28",
+      "workbook_value": 330,
+      "repo_value": 330.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1994,
+      "metric": "cars_k",
+      "workbook_cell": "B29",
+      "workbook_value": 8990.5,
+      "repo_value": 8990.5,
+      "difference": 0.0
+    },
+    {
+      "year": 1994,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C29",
+      "workbook_value": 6033,
+      "repo_value": 6033.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1994,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D29",
+      "workbook_value": 387,
+      "repo_value": 387.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1995,
+      "metric": "cars_k",
+      "workbook_cell": "B30",
+      "workbook_value": 8620.2,
+      "repo_value": 8620.2,
+      "difference": 0.0
+    },
+    {
+      "year": 1995,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C30",
+      "workbook_value": 6053,
+      "repo_value": 6053.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1995,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D30",
+      "workbook_value": 428,
+      "repo_value": 428.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1996,
+      "metric": "cars_k",
+      "workbook_cell": "B31",
+      "workbook_value": 8478.5,
+      "repo_value": 8478.5,
+      "difference": 0.0
+    },
+    {
+      "year": 1996,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C31",
+      "workbook_value": 6519,
+      "repo_value": 6519.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1996,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D31",
+      "workbook_value": 411,
+      "repo_value": 411.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1997,
+      "metric": "cars_k",
+      "workbook_cell": "B32",
+      "workbook_value": 8217.5,
+      "repo_value": 8217.5,
+      "difference": 0.0
+    },
+    {
+      "year": 1997,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C32",
+      "workbook_value": 6797,
+      "repo_value": 6797.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1997,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D32",
+      "workbook_value": 430,
+      "repo_value": 430.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1998,
+      "metric": "cars_k",
+      "workbook_cell": "B33",
+      "workbook_value": 8085,
+      "repo_value": 8085.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1998,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C33",
+      "workbook_value": 7299,
+      "repo_value": 7299.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1998,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D33",
+      "workbook_value": 526,
+      "repo_value": 526.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1999,
+      "metric": "cars_k",
+      "workbook_cell": "B34",
+      "workbook_value": 8637.7,
+      "repo_value": 8637.7,
+      "difference": 0.0
+    },
+    {
+      "year": 1999,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C34",
+      "workbook_value": 8073,
+      "repo_value": 8073.0,
+      "difference": 0.0
+    },
+    {
+      "year": 1999,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D34",
+      "workbook_value": 641,
+      "repo_value": 641.0,
+      "difference": 0.0
+    },
+    {
+      "year": 2000,
+      "metric": "cars_k",
+      "workbook_cell": "B35",
+      "workbook_value": 8777.7,
+      "repo_value": 8777.7,
+      "difference": 0.0
+    },
+    {
+      "year": 2000,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C35",
+      "workbook_value": 8386,
+      "repo_value": 8386.0,
+      "difference": 0.0
+    },
+    {
+      "year": 2000,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D35",
+      "workbook_value": 579,
+      "repo_value": 579.0,
+      "difference": 0.0
+    },
+    {
+      "year": 2001,
+      "metric": "cars_k",
+      "workbook_cell": "B36",
+      "workbook_value": 8352,
+      "repo_value": 8352.0,
+      "difference": 0.0
+    },
+    {
+      "year": 2001,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C36",
+      "workbook_value": 8598,
+      "repo_value": 8598.0,
+      "difference": 0.0
+    },
+    {
+      "year": 2001,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D36",
+      "workbook_value": 452,
+      "repo_value": 452.0,
+      "difference": 0.0
+    },
+    {
+      "year": 2002,
+      "metric": "cars_k",
+      "workbook_cell": "B37",
+      "workbook_value": 8042.3,
+      "repo_value": 8042.3,
+      "difference": 0.0
+    },
+    {
+      "year": 2002,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C37",
+      "workbook_value": 8633,
+      "repo_value": 8633.0,
+      "difference": 0.0
+    },
+    {
+      "year": 2002,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D37",
+      "workbook_value": 402,
+      "repo_value": 402.0,
+      "difference": 0.0
+    },
+    {
+      "year": 2003,
+      "metric": "cars_k",
+      "workbook_cell": "B38",
+      "workbook_value": 7555.6,
+      "repo_value": 7555.6,
+      "difference": 0.0
+    },
+    {
+      "year": 2003,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C38",
+      "workbook_value": 8938,
+      "repo_value": 8938.0,
+      "difference": 0.0
+    },
+    {
+      "year": 2003,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D38",
+      "workbook_value": 420,
+      "repo_value": 420.0,
+      "difference": 0.0
+    },
+    {
+      "year": 2004,
+      "metric": "cars_k",
+      "workbook_cell": "B39",
+      "workbook_value": 7482.6,
+      "repo_value": 7482.6,
+      "difference": 0.0
+    },
+    {
+      "year": 2004,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C39",
+      "workbook_value": 9254,
+      "repo_value": 9254.0,
+      "difference": 0.0
+    },
+    {
+      "year": 2004,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D39",
+      "workbook_value": 538,
+      "repo_value": 538.0,
+      "difference": 0.0
+    },
+    {
+      "year": 2005,
+      "metric": "cars_k",
+      "workbook_cell": "B40",
+      "workbook_value": 7660,
+      "repo_value": 7660.0,
+      "difference": 0.0
+    },
+    {
+      "year": 2005,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C40",
+      "workbook_value": 9114,
+      "repo_value": 9114.0,
+      "difference": 0.0
+    },
+    {
+      "year": 2005,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D40",
+      "workbook_value": 664,
+      "repo_value": 664.0,
+      "difference": 0.0
+    },
+    {
+      "year": 2006,
+      "metric": "cars_k",
+      "workbook_cell": "B41",
+      "workbook_value": 7761.6,
+      "repo_value": 7761.6,
+      "difference": 0.0
+    },
+    {
+      "year": 2006,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C41",
+      "workbook_value": 8574,
+      "repo_value": 8574.0,
+      "difference": 0.0
+    },
+    {
+      "year": 2006,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D41",
+      "workbook_value": 694,
+      "repo_value": 694.0,
+      "difference": 0.0
+    },
+    {
+      "year": 2007,
+      "metric": "cars_k",
+      "workbook_cell": "B42",
+      "workbook_value": 7562.3,
+      "repo_value": 7562.3,
+      "difference": 0.0
+    },
+    {
+      "year": 2007,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C42",
+      "workbook_value": 8305,
+      "repo_value": 8305.0,
+      "difference": 0.0
+    },
+    {
+      "year": 2007,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D42",
+      "workbook_value": 537,
+      "repo_value": 537.0,
+      "difference": 0.0
+    },
+    {
+      "year": 2008,
+      "metric": "cars_k",
+      "workbook_cell": "B43",
+      "workbook_value": 6769.1,
+      "repo_value": 6769.1,
+      "difference": 0.0
+    },
+    {
+      "year": 2008,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C43",
+      "workbook_value": 6246,
+      "repo_value": 6246.0,
+      "difference": 0.0
+    },
+    {
+      "year": 2008,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D43",
+      "workbook_value": 432,
+      "repo_value": 432.0,
+      "difference": 0.0
+    },
+    {
+      "year": 2009,
+      "metric": "cars_k",
+      "workbook_cell": "B44",
+      "workbook_value": 5401.6,
+      "repo_value": 5401.6,
+      "difference": 0.0
+    },
+    {
+      "year": 2009,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C44",
+      "workbook_value": 4834,
+      "repo_value": 4834.0,
+      "difference": 0.0
+    },
+    {
+      "year": 2009,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D44",
+      "workbook_value": 312,
+      "repo_value": 312.0,
+      "difference": 0.0
+    },
+    {
+      "year": 2010,
+      "metric": "cars_k",
+      "workbook_cell": "B45",
+      "workbook_value": 5635.7,
+      "repo_value": 5635.7,
+      "difference": 0.0
+    },
+    {
+      "year": 2010,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C45",
+      "workbook_value": 5758,
+      "repo_value": 5758.0,
+      "difference": 0.0
+    },
+    {
+      "year": 2010,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D45",
+      "workbook_value": 378,
+      "repo_value": 378.0,
+      "difference": 0.0
+    },
+    {
+      "year": 2011,
+      "metric": "cars_k",
+      "workbook_cell": "B46",
+      "workbook_value": 6092.9,
+      "repo_value": 6092.9,
+      "difference": 0.0
+    },
+    {
+      "year": 2011,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C46",
+      "workbook_value": 6449,
+      "repo_value": 6449.0,
+      "difference": 0.0
+    },
+    {
+      "year": 2011,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D46",
+      "workbook_value": 500,
+      "repo_value": 500.0,
+      "difference": 0.0
+    },
+    {
+      "year": 2012,
+      "metric": "cars_k",
+      "workbook_cell": "B47",
+      "workbook_value": 7245.2,
+      "repo_value": 7245.2,
+      "difference": 0.0
+    },
+    {
+      "year": 2012,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C47",
+      "workbook_value": 6974.8,
+      "repo_value": 6974.8,
+      "difference": 0.0
+    },
+    {
+      "year": 2012,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D47",
+      "workbook_value": 569.2,
+      "repo_value": 569.2,
+      "difference": 0.0
+    },
+    {
+      "year": 2013,
+      "metric": "cars_k",
+      "workbook_cell": "B48",
+      "workbook_value": 7586.3,
+      "repo_value": 7586.3,
+      "difference": 0.0
+    },
+    {
+      "year": 2013,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C48",
+      "workbook_value": 7692.6,
+      "repo_value": 7692.6,
+      "difference": 0.0
+    },
+    {
+      "year": 2013,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D48",
+      "workbook_value": 605.5,
+      "repo_value": 605.5,
+      "difference": 0.0
+    },
+    {
+      "year": 2014,
+      "metric": "cars_k",
+      "workbook_cell": "B49",
+      "workbook_value": 7708,
+      "repo_value": 7708.0,
+      "difference": 0.0
+    },
+    {
+      "year": 2014,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C49",
+      "workbook_value": 8483.8,
+      "repo_value": 8483.8,
+      "difference": 0.0
+    },
+    {
+      "year": 2014,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D49",
+      "workbook_value": 670.6,
+      "repo_value": 670.6,
+      "difference": 0.0
+    },
+    {
+      "year": 2015,
+      "metric": "cars_k",
+      "workbook_cell": "B50",
+      "workbook_value": 7528.5,
+      "repo_value": 7528.5,
+      "difference": 0.0
+    },
+    {
+      "year": 2015,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C50",
+      "workbook_value": 9578.4,
+      "repo_value": 9578.4,
+      "difference": 0.0
+    },
+    {
+      "year": 2015,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D50",
+      "workbook_value": 732.1,
+      "repo_value": 732.1,
+      "difference": 0.0
+    },
+    {
+      "year": 2016,
+      "metric": "cars_k",
+      "workbook_cell": "B51",
+      "workbook_value": 6883.3,
+      "repo_value": 6883.3,
+      "difference": 0.0
+    },
+    {
+      "year": 2016,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C51",
+      "workbook_value": 10296,
+      "repo_value": 10296.0,
+      "difference": 0.0
+    },
+    {
+      "year": 2016,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D51",
+      "workbook_value": 697.1,
+      "repo_value": 697.1,
+      "difference": 0.0
+    },
+    {
+      "year": 2017,
+      "metric": "cars_k",
+      "workbook_cell": "B52",
+      "workbook_value": 6089.2,
+      "repo_value": 6089.2,
+      "difference": 0.0
+    },
+    {
+      "year": 2017,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C52",
+      "workbook_value": 10738,
+      "repo_value": 10738.0,
+      "difference": 0.0
+    },
+    {
+      "year": 2017,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D52",
+      "workbook_value": 732.3,
+      "repo_value": 732.3,
+      "difference": 0.0
+    },
+    {
+      "year": 2018,
+      "metric": "cars_k",
+      "workbook_cell": "B53",
+      "workbook_value": 5310.3,
+      "repo_value": 5310.3,
+      "difference": 0.0
+    },
+    {
+      "year": 2018,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C53",
+      "workbook_value": 11609.2,
+      "repo_value": 11609.2,
+      "difference": 0.0
+    },
+    {
+      "year": 2018,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D53",
+      "workbook_value": 788.6,
+      "repo_value": 788.6,
+      "difference": 0.0
+    },
+    {
+      "year": 2019,
+      "metric": "cars_k",
+      "workbook_cell": "B54",
+      "workbook_value": 4719.7,
+      "repo_value": 4719.7,
+      "difference": 0.0
+    },
+    {
+      "year": 2019,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C54",
+      "workbook_value": 11910.5,
+      "repo_value": 11910.5,
+      "difference": 0.0
+    },
+    {
+      "year": 2019,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D54",
+      "workbook_value": 854.5,
+      "repo_value": 854.5,
+      "difference": 0.0
+    },
+    {
+      "year": 2020,
+      "metric": "cars_k",
+      "workbook_cell": "B55",
+      "workbook_value": 3401.8,
+      "repo_value": 3401.8,
+      "difference": 0.0
+    },
+    {
+      "year": 2020,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C55",
+      "workbook_value": 10721.2,
+      "repo_value": 10721.2,
+      "difference": 0.0
+    },
+    {
+      "year": 2020,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D55",
+      "workbook_value": 758.4,
+      "repo_value": 758.4,
+      "difference": 0.0
+    },
+    {
+      "year": 2021,
+      "metric": "cars_k",
+      "workbook_cell": "B56",
+      "workbook_value": 3350.1,
+      "repo_value": 3350.1,
+      "difference": 0.0
+    },
+    {
+      "year": 2021,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C56",
+      "workbook_value": 11220.1,
+      "repo_value": 11220.1,
+      "difference": 0.0
+    },
+    {
+      "year": 2021,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D56",
+      "workbook_value": 841.5,
+      "repo_value": 841.5,
+      "difference": 0.0
+    },
+    {
+      "year": 2022,
+      "metric": "cars_k",
+      "workbook_cell": "B57",
+      "workbook_value": 2930.7,
+      "repo_value": 2930.7,
+      "difference": 0.0
+    },
+    {
+      "year": 2022,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C57",
+      "workbook_value": 10541.7,
+      "repo_value": 10541.7,
+      "difference": 0.0
+    },
+    {
+      "year": 2022,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D57",
+      "workbook_value": 867.8,
+      "repo_value": 867.8,
+      "difference": 0.0
+    },
+    {
+      "year": 2023,
+      "metric": "cars_k",
+      "workbook_cell": "B58",
+      "workbook_value": 3184.6,
+      "repo_value": 3184.6,
+      "difference": 0.0
+    },
+    {
+      "year": 2023,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C58",
+      "workbook_value": 11983.4,
+      "repo_value": 11983.4,
+      "difference": 0.0
+    },
+    {
+      "year": 2023,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D58",
+      "workbook_value": 923.9,
+      "repo_value": 923.9,
+      "difference": 0.0
+    },
+    {
+      "year": 2024,
+      "metric": "cars_k",
+      "workbook_cell": "B59",
+      "workbook_value": 3040.5,
+      "repo_value": 3040.5,
+      "difference": 0.0
+    },
+    {
+      "year": 2024,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C59",
+      "workbook_value": 12455.7,
+      "repo_value": 12455.7,
+      "difference": 0.0
+    },
+    {
+      "year": 2024,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D59",
+      "workbook_value": 878.8,
+      "repo_value": 878.8,
+      "difference": 0.0
+    },
+    {
+      "year": 2025,
+      "metric": "cars_k",
+      "workbook_cell": "B60",
+      "workbook_value": 2764.4,
+      "repo_value": 2764.4,
+      "difference": 0.0
+    },
+    {
+      "year": 2025,
+      "metric": "light_trucks_k",
+      "workbook_cell": "C60",
+      "workbook_value": 13090.5,
+      "repo_value": 13090.5,
+      "difference": 0.0
+    },
+    {
+      "year": 2025,
+      "metric": "heavy_trucks_k",
+      "workbook_cell": "D60",
+      "workbook_value": 758.9,
+      "repo_value": 758.9,
+      "difference": 0.0
+    }
+  ],
+  "conclusion": "Workbook contains existing aggregate sales/age data; no subtype-history table identified. Formula results were not recalculated or treated as fresh model validation. Workbook not modified.",
+  "period_warning": "Data_Sales title says model year; source note describes calendar-year sales for FRED. Preserve actual source basis rather than inheriting the header."
+}

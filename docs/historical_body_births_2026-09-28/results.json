@@ -1,0 +1,88 @@
+{
+  "source_rows": 408,
+  "final_years": 50,
+  "range": [
+    1975,
+    2024
+  ],
+  "missing_preliminary_years": [
+    2025
+  ],
+  "max_share_sum_rounding_error": 1.000000000139778e-06,
+  "candidate_birth_rows": 232,
+  "totals_preserved": true,
+  "source_hashes": {
+    "data/csv/light_vehicle_sales_by_year.csv": "747a2541882491c4cad1453882a48365e117b5593d6e66034ecd3b3d22bc5576",
+    "docs/historical_body_births_2026-09-28/epa_public_table.json": "d1da6f8c5e7343d969dfc1b7d92d61277a99f73155cb8f3264b3b63d515d32df",
+    "docs/historical_body_births_2026-09-28/build.py": "208d4c317c9eb03d1ccfabcf910c2f154b07b00fdde940e5590437d5944c8105"
+  },
+  "samples": [
+    {
+      "model_year": 2000,
+      "sedan_share": 0.550664,
+      "suv_share": 0.18965800000000002,
+      "pickup_share": 0.157633,
+      "van_share": 0.102045,
+      "suv_within_non_sedan": 0.4220850321363078,
+      "pickup_within_non_sedan": 0.35081319992166216,
+      "van_within_non_sedan": 0.22710176794203,
+      "status": "Final EPA model-year US-market production mix; SUV combines both regulatory classes"
+    },
+    {
+      "model_year": 2005,
+      "sedan_share": 0.505059,
+      "suv_share": 0.257011,
+      "pickup_share": 0.144749,
+      "van_share": 0.093181,
+      "suv_within_non_sedan": 0.519276034921334,
+      "pickup_within_non_sedan": 0.29245708074295723,
+      "van_within_non_sedan": 0.1882668843357087,
+      "status": "Final EPA model-year US-market production mix; SUV combines both regulatory classes"
+    },
+    {
+      "model_year": 2010,
+      "sedan_share": 0.545198,
+      "suv_share": 0.289691,
+      "pickup_share": 0.114812,
+      "van_share": 0.050298,
+      "suv_within_non_sedan": 0.636962099907432,
+      "pickup_within_non_sedan": 0.2524444757157526,
+      "van_within_non_sedan": 0.11059342437681537,
+      "status": "Final EPA model-year US-market production mix; SUV combines both regulatory classes"
+    },
+    {
+      "model_year": 2015,
+      "sedan_share": 0.471935,
+      "suv_share": 0.38224,
+      "pickup_share": 0.106699,
+      "van_share": 0.039126,
+      "suv_within_non_sedan": 0.7238502835825136,
+      "pickup_within_non_sedan": 0.2020565650062019,
+      "van_within_non_sedan": 0.0740931514112846,
+      "status": "Final EPA model-year US-market production mix; SUV combines both regulatory classes"
+    },
+    {
+      "model_year": 2020,
+      "sedan_share": 0.309383,
+      "suv_share": 0.517326,
+      "pickup_share": 0.144008,
+      "van_share": 0.029284,
+      "suv_within_non_sedan": 0.7490769137207545,
+      "pickup_within_non_sedan": 0.20852048455151764,
+      "van_within_non_sedan": 0.042402601727727925,
+      "status": "Final EPA model-year US-market production mix; SUV combines both regulatory classes"
+    },
+    {
+      "model_year": 2024,
+      "sedan_share": 0.236759,
+      "suv_share": 0.602384,
+      "pickup_share": 0.140749,
+      "van_share": 0.020108,
+      "suv_within_non_sedan": 0.7892448125821333,
+      "pickup_within_non_sedan": 0.18440964256375117,
+      "van_within_non_sedan": 0.02634554485411554,
+      "status": "Final EPA model-year US-market production mix; SUV combines both regulatory classes"
+    }
+  ],
+  "production_integration": false
+}

@@ -1,0 +1,409 @@
+model_year,source_year_label,regulatory_class,vehicle_type,production_share,source_status,source_url
+1975,1975,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1975,1975,Car,All Car,0.806646,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1975,1975,Car,Car SUV,0.001001,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1975,1975,Car,Sedan/Wagon,0.805645,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1975,1975,Truck,All Truck,0.193354,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1975,1975,Truck,Minivan/Van,0.0447,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1975,1975,Truck,Pickup,0.131322,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1975,1975,Truck,Truck SUV,0.017331,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1976,1976,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1976,1976,Car,All Car,0.789164,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1976,1976,Car,Car SUV,0.000925,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1976,1976,Car,Sedan/Wagon,0.788239,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1976,1976,Truck,All Truck,0.210836,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1976,1976,Truck,Minivan/Van,0.040716,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1976,1976,Truck,Pickup,0.151303,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1976,1976,Truck,Truck SUV,0.018816,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1977,1977,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1977,1977,Car,All Car,0.801419,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1977,1977,Car,Car SUV,0.001333,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1977,1977,Car,Sedan/Wagon,0.800086,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1977,1977,Truck,All Truck,0.198581,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1977,1977,Truck,Minivan/Van,0.036422,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1977,1977,Truck,Pickup,0.14345,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1977,1977,Truck,Truck SUV,0.01871,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1978,1978,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1978,1978,Car,All Car,0.774581,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1978,1978,Car,Car SUV,0.001122,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1978,1978,Car,Sedan/Wagon,0.773459,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1978,1978,Truck,All Truck,0.225419,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1978,1978,Truck,Minivan/Van,0.043273,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1978,1978,Truck,Pickup,0.156942,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1978,1978,Truck,Truck SUV,0.025204,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1979,1979,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1979,1979,Car,All Car,0.778704,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1979,1979,Car,Car SUV,0.001147,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1979,1979,Car,Sedan/Wagon,0.777556,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1979,1979,Truck,All Truck,0.221296,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1979,1979,Truck,Minivan/Van,0.034615,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1979,1979,Truck,Pickup,0.158977,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1979,1979,Truck,Truck SUV,0.027704,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1980,1980,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1980,1980,Car,All Car,0.835255,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1980,1980,Car,Car SUV,3.2e-05,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1980,1980,Car,Sedan/Wagon,0.835223,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1980,1980,Truck,All Truck,0.164745,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1980,1980,Truck,Minivan/Van,0.021373,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1980,1980,Truck,Pickup,0.127076,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1980,1980,Truck,Truck SUV,0.016297,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1981,1981,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1981,1981,Car,All Car,0.827505,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1981,1981,Car,Car SUV,2e-05,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1981,1981,Car,Sedan/Wagon,0.827485,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1981,1981,Truck,All Truck,0.172495,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1981,1981,Truck,Minivan/Van,0.023204,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1981,1981,Truck,Pickup,0.136419,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1981,1981,Truck,Truck SUV,0.012872,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1982,1982,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1982,1982,Car,All Car,0.804687,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1982,1982,Car,Car SUV,0.001303,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1982,1982,Car,Sedan/Wagon,0.803384,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1982,1982,Truck,All Truck,0.195313,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1982,1982,Truck,Minivan/Van,0.031904,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1982,1982,Truck,Pickup,0.148038,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1982,1982,Truck,Truck SUV,0.015371,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1983,1983,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1983,1983,Car,All Car,0.77997,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1983,1983,Car,Car SUV,0.003262,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1983,1983,Car,Sedan/Wagon,0.776709,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1983,1983,Truck,All Truck,0.22003,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1983,1983,Truck,Minivan/Van,0.037141,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1983,1983,Truck,Pickup,0.158063,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1983,1983,Truck,Truck SUV,0.024826,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1984,1984,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1984,1984,Car,All Car,0.765372,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1984,1984,Car,Car SUV,0.00394,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1984,1984,Car,Sedan/Wagon,0.761433,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1984,1984,Truck,All Truck,0.234628,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1984,1984,Truck,Minivan/Van,0.048234,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1984,1984,Truck,Pickup,0.14576,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1984,1984,Truck,Truck SUV,0.040634,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1985,1985,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1985,1985,Car,All Car,0.752349,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1985,1985,Car,Car SUV,0.006074,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1985,1985,Car,Sedan/Wagon,0.746275,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1985,1985,Truck,All Truck,0.247651,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1985,1985,Truck,Minivan/Van,0.059159,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1985,1985,Truck,Pickup,0.143697,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1985,1985,Truck,Truck SUV,0.044795,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1986,1986,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1986,1986,Car,All Car,0.720726,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1986,1986,Car,Car SUV,0.00386,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1986,1986,Car,Sedan/Wagon,0.716867,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1986,1986,Truck,All Truck,0.279274,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1986,1986,Truck,Minivan/Van,0.067977,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1986,1986,Truck,Pickup,0.164807,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1986,1986,Truck,Truck SUV,0.04649,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1987,1987,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1987,1987,Car,All Car,0.728276,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1987,1987,Car,Car SUV,0.006369,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1987,1987,Car,Sedan/Wagon,0.721907,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1987,1987,Truck,All Truck,0.271724,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1987,1987,Truck,Minivan/Van,0.074941,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1987,1987,Truck,Pickup,0.144401,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1987,1987,Truck,Truck SUV,0.052382,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1988,1988,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1988,1988,Car,All Car,0.709052,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1988,1988,Car,Car SUV,0.007141,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1988,1988,Car,Sedan/Wagon,0.701911,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1988,1988,Truck,All Truck,0.290948,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1988,1988,Truck,Minivan/Van,0.074067,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1988,1988,Truck,Pickup,0.160745,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1988,1988,Truck,Truck SUV,0.056136,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1989,1989,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1989,1989,Car,All Car,0.700602,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1989,1989,Car,Car SUV,0.00746,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1989,1989,Car,Sedan/Wagon,0.693142,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1989,1989,Truck,All Truck,0.299398,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1989,1989,Truck,Minivan/Van,0.088398,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1989,1989,Truck,Pickup,0.154396,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1989,1989,Truck,Truck SUV,0.056604,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1990,1990,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1990,1990,Car,All Car,0.703538,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1990,1990,Car,Car SUV,0.005181,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1990,1990,Car,Sedan/Wagon,0.698357,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1990,1990,Truck,All Truck,0.296462,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1990,1990,Truck,Minivan/Van,0.100071,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1990,1990,Truck,Pickup,0.145428,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1990,1990,Truck,Truck SUV,0.050964,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1991,1991,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1991,1991,Car,All Car,0.695754,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1991,1991,Car,Car SUV,0.01779,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1991,1991,Car,Sedan/Wagon,0.677964,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1991,1991,Truck,All Truck,0.304246,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1991,1991,Truck,Minivan/Van,0.082203,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1991,1991,Truck,Pickup,0.152737,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1991,1991,Truck,Truck SUV,0.069307,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1992,1992,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1992,1992,Car,All Car,0.686017,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1992,1992,Car,Car SUV,0.019931,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1992,1992,Car,Sedan/Wagon,0.666086,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1992,1992,Truck,All Truck,0.313983,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1992,1992,Truck,Minivan/Van,0.100328,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1992,1992,Truck,Pickup,0.151158,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1992,1992,Truck,Truck SUV,0.062497,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1993,1993,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1993,1993,Car,All Car,0.675907,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1993,1993,Car,Car SUV,0.035785,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1993,1993,Car,Sedan/Wagon,0.640123,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1993,1993,Truck,All Truck,0.324093,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1993,1993,Truck,Minivan/Van,0.109102,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1993,1993,Truck,Pickup,0.151559,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1993,1993,Truck,Truck SUV,0.063432,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1994,1994,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1994,1994,Car,All Car,0.619235,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1994,1994,Car,Car SUV,0.023492,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1994,1994,Car,Sedan/Wagon,0.595743,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1994,1994,Truck,All Truck,0.380765,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1994,1994,Truck,Minivan/Van,0.100378,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1994,1994,Truck,Pickup,0.188962,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1994,1994,Truck,Truck SUV,0.091424,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1995,1995,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1995,1995,Car,All Car,0.634935,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1995,1995,Car,Car SUV,0.014545,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1995,1995,Car,Sedan/Wagon,0.62039,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1995,1995,Truck,All Truck,0.365065,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1995,1995,Truck,Minivan/Van,0.109724,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1995,1995,Truck,Pickup,0.149951,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1995,1995,Truck,Truck SUV,0.10539,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1996,1996,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1996,1996,Car,All Car,0.62211,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1996,1996,Car,Car SUV,0.021835,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1996,1996,Car,Sedan/Wagon,0.600276,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1996,1996,Truck,All Truck,0.37789,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1996,1996,Truck,Minivan/Van,0.107208,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1996,1996,Truck,Pickup,0.148759,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1996,1996,Truck,Truck SUV,0.121923,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1997,1997,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1997,1997,Car,All Car,0.601421,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1997,1997,Car,Car SUV,0.024941,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1997,1997,Car,Sedan/Wagon,0.576479,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1997,1997,Truck,All Truck,0.398579,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1997,1997,Truck,Minivan/Van,0.08752,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1997,1997,Truck,Pickup,0.166543,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1997,1997,Truck,Truck SUV,0.144517,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1998,1998,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1998,1998,Car,All Car,0.582843,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1998,1998,Car,Car SUV,0.03144,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1998,1998,Car,Sedan/Wagon,0.551403,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1998,1998,Truck,All Truck,0.417157,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1998,1998,Truck,Minivan/Van,0.102995,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1998,1998,Truck,Pickup,0.167035,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1998,1998,Truck,Truck SUV,0.147127,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1999,1999,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1999,1999,Car,All Car,0.582653,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1999,1999,Car,Car SUV,0.032106,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1999,1999,Car,Sedan/Wagon,0.550547,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1999,1999,Truck,All Truck,0.417347,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1999,1999,Truck,Minivan/Van,0.096163,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1999,1999,Truck,Pickup,0.167236,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+1999,1999,Truck,Truck SUV,0.153947,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2000,2000,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2000,2000,Car,All Car,0.58789,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2000,2000,Car,Car SUV,0.037226,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2000,2000,Car,Sedan/Wagon,0.550664,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2000,2000,Truck,All Truck,0.41211,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2000,2000,Truck,Minivan/Van,0.102045,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2000,2000,Truck,Pickup,0.157633,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2000,2000,Truck,Truck SUV,0.152432,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2001,2001,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2001,2001,Car,All Car,0.586189,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2001,2001,Car,Car SUV,0.047619,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2001,2001,Car,Sedan/Wagon,0.53857,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2001,2001,Truck,All Truck,0.413811,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2001,2001,Truck,Minivan/Van,0.078973,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2001,2001,Truck,Pickup,0.1614,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2001,2001,Truck,Truck SUV,0.173438,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2002,2002,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2002,2002,Car,All Car,0.552494,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2002,2002,Car,Car SUV,0.037387,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2002,2002,Car,Sedan/Wagon,0.515107,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2002,2002,Truck,All Truck,0.447506,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2002,2002,Truck,Minivan/Van,0.077147,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2002,2002,Truck,Pickup,0.147705,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2002,2002,Truck,Truck SUV,0.222654,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2003,2003,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2003,2003,Car,All Car,0.538633,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2003,2003,Car,Car SUV,0.036447,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2003,2003,Car,Sedan/Wagon,0.502186,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2003,2003,Truck,All Truck,0.461367,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2003,2003,Truck,Minivan/Van,0.078106,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2003,2003,Truck,Pickup,0.156838,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2003,2003,Truck,Truck SUV,0.226424,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2004,2004,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2004,2004,Car,All Car,0.520447,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2004,2004,Car,Car SUV,0.040655,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2004,2004,Car,Sedan/Wagon,0.479792,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2004,2004,Truck,All Truck,0.479553,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2004,2004,Truck,Minivan/Van,0.060673,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2004,2004,Truck,Pickup,0.159491,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2004,2004,Truck,Truck SUV,0.259388,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2005,2005,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2005,2005,Car,All Car,0.556205,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2005,2005,Car,Car SUV,0.051146,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2005,2005,Car,Sedan/Wagon,0.505059,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2005,2005,Truck,All Truck,0.443795,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2005,2005,Truck,Minivan/Van,0.093181,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2005,2005,Truck,Pickup,0.144749,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2005,2005,Truck,Truck SUV,0.205865,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2006,2006,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2006,2006,Car,All Car,0.578934,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2006,2006,Car,Car SUV,0.049753,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2006,2006,Car,Sedan/Wagon,0.529181,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2006,2006,Truck,All Truck,0.421066,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2006,2006,Truck,Minivan/Van,0.077199,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2006,2006,Truck,Pickup,0.144862,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2006,2006,Truck,Truck SUV,0.199005,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2007,2007,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2007,2007,Car,All Car,0.589234,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2007,2007,Car,Car SUV,0.060173,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2007,2007,Car,Sedan/Wagon,0.529061,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2007,2007,Truck,All Truck,0.410766,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2007,2007,Truck,Minivan/Van,0.055462,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2007,2007,Truck,Pickup,0.138334,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2007,2007,Truck,Truck SUV,0.21697,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2008,2008,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2008,2008,Car,All Car,0.593057,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2008,2008,Car,Car SUV,0.066471,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2008,2008,Car,Sedan/Wagon,0.526586,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2008,2008,Truck,All Truck,0.406943,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2008,2008,Truck,Minivan/Van,0.056834,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2008,2008,Truck,Pickup,0.129071,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2008,2008,Truck,Truck SUV,0.221038,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2009,2009,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2009,2009,Car,All Car,0.670303,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2009,2009,Car,Car SUV,0.065289,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2009,2009,Car,Sedan/Wagon,0.605014,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2009,2009,Truck,All Truck,0.329697,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2009,2009,Truck,Minivan/Van,0.039511,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2009,2009,Truck,Pickup,0.106215,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2009,2009,Truck,Truck SUV,0.183972,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2010,2010,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2010,2010,Car,All Car,0.627501,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2010,2010,Car,Car SUV,0.082303,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2010,2010,Car,Sedan/Wagon,0.545198,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2010,2010,Truck,All Truck,0.372499,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2010,2010,Truck,Minivan/Van,0.050298,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2010,2010,Truck,Pickup,0.114812,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2010,2010,Truck,Truck SUV,0.207388,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2011,2011,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2011,2011,Car,All Car,0.578225,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2011,2011,Car,Car SUV,0.100397,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2011,2011,Car,Sedan/Wagon,0.477828,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2011,2011,Truck,All Truck,0.421775,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2011,2011,Truck,Minivan/Van,0.043347,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2011,2011,Truck,Pickup,0.123051,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2011,2011,Truck,Truck SUV,0.255377,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2012,2012,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2012,2012,Car,All Car,0.64382,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2012,2012,Car,Car SUV,0.094084,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2012,2012,Car,Sedan/Wagon,0.549736,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2012,2012,Truck,All Truck,0.35618,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2012,2012,Truck,Minivan/Van,0.049244,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2012,2012,Truck,Pickup,0.100867,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2012,2012,Truck,Truck SUV,0.206068,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2013,2013,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2013,2013,Car,All Car,0.640886,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2013,2013,Car,Car SUV,0.099623,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2013,2013,Car,Sedan/Wagon,0.541262,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2013,2013,Truck,All Truck,0.359114,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2013,2013,Truck,Minivan/Van,0.037577,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2013,2013,Truck,Pickup,0.103765,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2013,2013,Truck,Truck SUV,0.217773,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2014,2014,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2014,2014,Car,All Car,0.593428,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2014,2014,Car,Car SUV,0.100979,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2014,2014,Car,Sedan/Wagon,0.492449,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2014,2014,Truck,All Truck,0.406572,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2014,2014,Truck,Minivan/Van,0.043297,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2014,2014,Truck,Pickup,0.124349,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2014,2014,Truck,Truck SUV,0.238926,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2015,2015,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2015,2015,Car,All Car,0.573573,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2015,2015,Car,Car SUV,0.101638,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2015,2015,Car,Sedan/Wagon,0.471935,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2015,2015,Truck,All Truck,0.426427,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2015,2015,Truck,Minivan/Van,0.039126,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2015,2015,Truck,Pickup,0.106699,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2015,2015,Truck,Truck SUV,0.280602,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2016,2016,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2016,2016,Car,All Car,0.552937,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2016,2016,Car,Car SUV,0.114886,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2016,2016,Car,Sedan/Wagon,0.438051,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2016,2016,Truck,All Truck,0.447063,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2016,2016,Truck,Minivan/Van,0.0387,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2016,2016,Truck,Pickup,0.117136,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2016,2016,Truck,Truck SUV,0.291228,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2017,2017,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2017,2017,Car,All Car,0.526242,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2017,2017,Car,Car SUV,0.11606,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2017,2017,Car,Sedan/Wagon,0.410182,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2017,2017,Truck,All Truck,0.473758,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2017,2017,Truck,Minivan/Van,0.036237,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2017,2017,Truck,Pickup,0.120699,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2017,2017,Truck,Truck SUV,0.316822,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2018,2018,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2018,2018,Car,All Car,0.479743,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2018,2018,Car,Car SUV,0.113058,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2018,2018,Car,Sedan/Wagon,0.366685,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2018,2018,Truck,All Truck,0.520257,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2018,2018,Truck,Minivan/Van,0.031229,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2018,2018,Truck,Pickup,0.138948,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2018,2018,Truck,Truck SUV,0.35008,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2019,2019,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2019,2019,Car,All Car,0.444293,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2019,2019,Car,Car SUV,0.117172,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2019,2019,Car,Sedan/Wagon,0.327121,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2019,2019,Truck,All Truck,0.555707,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2019,2019,Truck,Minivan/Van,0.034381,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2019,2019,Truck,Pickup,0.156191,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2019,2019,Truck,Truck SUV,0.365134,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2020,2020,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2020,2020,Car,All Car,0.439464,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2020,2020,Car,Car SUV,0.130081,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2020,2020,Car,Sedan/Wagon,0.309383,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2020,2020,Truck,All Truck,0.560536,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2020,2020,Truck,Minivan/Van,0.029284,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2020,2020,Truck,Pickup,0.144008,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2020,2020,Truck,Truck SUV,0.387245,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2021,2021,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2021,2021,Car,All Car,0.370695,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2021,2021,Car,Car SUV,0.113801,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2021,2021,Car,Sedan/Wagon,0.256894,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2021,2021,Truck,All Truck,0.629305,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2021,2021,Truck,Minivan/Van,0.021576,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2021,2021,Truck,Pickup,0.161056,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2021,2021,Truck,Truck SUV,0.446674,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2022,2022,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2022,2022,Car,All Car,0.369234,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2022,2022,Car,Car SUV,0.103775,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2022,2022,Car,Sedan/Wagon,0.265459,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2022,2022,Truck,All Truck,0.630766,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2022,2022,Truck,Minivan/Van,0.029079,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2022,2022,Truck,Pickup,0.163664,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2022,2022,Truck,Truck SUV,0.438023,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2023,2023,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2023,2023,Car,All Car,0.375077,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2023,2023,Car,Car SUV,0.124678,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2023,2023,Car,Sedan/Wagon,0.250399,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2023,2023,Truck,All Truck,0.624923,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2023,2023,Truck,Minivan/Van,0.024694,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2023,2023,Truck,Pickup,0.146669,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2023,2023,Truck,Truck SUV,0.453559,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2024,2024,All,All,1,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2024,2024,Car,All Car,0.342976,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2024,2024,Car,Car SUV,0.106217,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2024,2024,Car,Sedan/Wagon,0.236759,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2024,2024,Truck,All Truck,0.657024,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2024,2024,Truck,Minivan/Van,0.020108,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2024,2024,Truck,Pickup,0.140749,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2024,2024,Truck,Truck SUV,0.496167,final,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2025,Prelim. 2025,All,All,,preliminary label; numeric value unavailable in retrieved table,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2025,Prelim. 2025,Car,All Car,,preliminary label; numeric value unavailable in retrieved table,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2025,Prelim. 2025,Car,Car SUV,,preliminary label; numeric value unavailable in retrieved table,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2025,Prelim. 2025,Car,Sedan/Wagon,,preliminary label; numeric value unavailable in retrieved table,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2025,Prelim. 2025,Truck,All Truck,,preliminary label; numeric value unavailable in retrieved table,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2025,Prelim. 2025,Truck,Minivan/Van,,preliminary label; numeric value unavailable in retrieved table,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2025,Prelim. 2025,Truck,Pickup,,preliminary label; numeric value unavailable in retrieved table,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
+2025,Prelim. 2025,Truck,Truck SUV,,preliminary label; numeric value unavailable in retrieved table,https://www.epa.gov/automotive-trends/explore-automotive-trends-data
