@@ -1,0 +1,82 @@
+{
+  "status": "Held-out age dollars, parameters fixed. Period/coverage mismatches remain; not formal statistical validation.",
+  "source": {
+    "report": "https://www.cccis.com/reports/crash-course-2025/q4",
+    "figure": 6,
+    "population": "National non-comprehensive total-loss valuations",
+    "period": "YTD through October 2025",
+    "method": "Visually read printed 2025 dollar labels and mix from one image; no OCR.",
+    "image_url": "https://cdn.prod.website-files.com/677e7ecbb3dbbe98615cde30/6930b1fd32ab4cfa6443fc96_Total%20Loss%20Values%20%26%20Mix%E2%80%8B.webp",
+    "image_sha256": "8e02d7577ebe459ea126315d5fe2b2d4e113f4b4ffa9e3a8ace7e2cddeef990e"
+  },
+  "observed_age_labels": [
+    "current_year",
+    "1-3",
+    "4-6",
+    "7_plus"
+  ],
+  "observed_values": [
+    40187,
+    30259,
+    20328,
+    9122
+  ],
+  "observed_mix": [
+    0.021,
+    0.107,
+    0.149,
+    0.723
+  ],
+  "observed_all_age_value": 13700,
+  "weighted_observed_value_from_rounded_labels": 13705.717999999999,
+  "observed_young_to_old_ratio": 4.405503179127384,
+  "models": [
+    {
+      "name": "original_curve_refitted_TLF",
+      "fixed_sigma": 1.5702059479932844,
+      "fixed_slope": 0.1,
+      "fixed_scale": 1.0,
+      "selected_values": [
+        31236.46013059326,
+        25423.016796913806,
+        18680.667660649793,
+        8970.660350705022
+      ],
+      "difference_pct": [
+        -22.27222701223466,
+        -15.981966367316147,
+        -8.103760032222585,
+        -1.6590621496928026
+      ],
+      "mean_using_observed_four_group_mix": 12645.435375008785,
+      "young_to_old_value_ratio": 3.4820692022007416
+    },
+    {
+      "name": "flatter_curve_candidate",
+      "fixed_sigma": 1.0687479227781296,
+      "fixed_slope": 0.08479341506958006,
+      "fixed_scale": 1.125686867162071,
+      "selected_values": [
+        30124.630349421896,
+        25272.349206306048,
+        19437.917106896937,
+        10288.336146711403
+      ],
+      "difference_pct": [
+        -25.03886742125091,
+        -16.479892903578943,
+        -4.378605337972563,
+        12.78596959780096
+      ],
+      "mean_using_observed_four_group_mix": 13671.475285412595,
+      "young_to_old_value_ratio": 2.9280371402961043
+    }
+  ],
+  "limitations": [
+    "Model CY2025 all-loss TLF and valuation-age weights versus noncomp YTD October benchmark.",
+    "Older within-group 7-9/10-12/13+ shares remain all-loss; observed chart only supplies 7+.",
+    "Current-year-or-newer model bucket versus current-year chart label.",
+    "Model body weights and representative ages remain assumptions.",
+    "Candidate was calibrated to related CCC annual aggregate, so held-out age detail is not an independent data provider."
+  ]
+}
