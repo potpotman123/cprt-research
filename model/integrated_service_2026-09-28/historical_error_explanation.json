@@ -1,0 +1,128 @@
+{
+  "bridge_order": [
+    "Q4 seasonal proxy",
+    "fleet exposure",
+    "cohort TLF",
+    "capture",
+    "RPU"
+  ],
+  "results": [
+    {
+      "period": "FY2026Q1",
+      "actual_us_service_musd": 855.534,
+      "modeled_us_service_musd": 902.5195042797563,
+      "US_error_musd": 46.985504279756356,
+      "US_error_pct": 5.491950557167377,
+      "actual_total_service_musd": 991.845,
+      "modeled_total_service_musd": 1048.410306221977,
+      "total_service_error_musd": 56.56530622197684,
+      "total_service_error_pct": 5.703038904463584,
+      "reported_total_company_revenue_musd": 1155.03,
+      "US_error_bridge_musd": {
+        "Q4_anchor_times_FY25_seasonal_proxy_less_actual": -2.833155347939396,
+        "fleet_exposure_proxy": -1.2213985258727007,
+        "cohort_TLF": 0.024318394296074075,
+        "carrier_capture": 50.60604777179776,
+        "insurance_RPU": 0.4096919874748437
+      },
+      "bridge_factors": {
+        "fleet_exposure_proxy": 0.998408457688645,
+        "cohort_TLF": 1.000031738576312,
+        "carrier_capture": 1.0660451884184299,
+        "insurance_RPU": 1.0005015573722946
+      },
+      "international_error_musd": 9.579801942220485,
+      "diagnostic_implied_other_US_if_insurance_unchanged_musd": 38.28458018544961,
+      "diagnostic_required_insurance_activity_change_pct_if_other_US_and_RPU_unchanged": -5.749224550127952,
+      "warning": "Sequential arithmetic attribution, order-dependent interaction allocation; not inferred real-world causality. Q4 calibrated."
+    },
+    {
+      "period": "FY2026Q2",
+      "actual_us_service_musd": 819.467,
+      "modeled_us_service_musd": 908.76526450896,
+      "US_error_musd": 89.29826450895996,
+      "US_error_pct": 10.897115382188662,
+      "actual_total_service_musd": 952.0509999999999,
+      "modeled_total_service_musd": 1050.9668233235357,
+      "total_service_error_musd": 98.91582332353576,
+      "total_service_error_pct": 10.389760981663354,
+      "reported_total_company_revenue_musd": 1121.674,
+      "US_error_bridge_musd": {
+        "Q4_anchor_times_FY25_seasonal_proxy_less_actual": 41.304851146865985,
+        "fleet_exposure_proxy": -0.8345583103756553,
+        "cohort_TLF": 0.1632209428612441,
+        "carrier_capture": 48.36164230831935,
+        "insurance_RPU": 0.30310842128972126
+      },
+      "bridge_factors": {
+        "fleet_exposure_proxy": 0.998922726143643,
+        "cohort_TLF": 1.000210917892307,
+        "carrier_capture": 1.0624808588027344,
+        "insurance_RPU": 1.0003685724228777
+      },
+      "international_error_musd": 9.617558814575801,
+      "diagnostic_implied_other_US_if_insurance_unchanged_musd": -3.2210793942733744,
+      "diagnostic_required_insurance_activity_change_pct_if_other_US_and_RPU_unchanged": -10.854449790339526,
+      "warning": "Sequential arithmetic attribution, order-dependent interaction allocation; not inferred real-world causality. Q4 calibrated."
+    },
+    {
+      "period": "FY2026Q3",
+      "actual_us_service_musd": 895.464,
+      "modeled_us_service_musd": 914.3839734315609,
+      "US_error_musd": 18.919973431560834,
+      "US_error_pct": 2.1128681255260773,
+      "actual_total_service_musd": 1056.0800000000002,
+      "modeled_total_service_musd": 1071.6658187084338,
+      "total_service_error_musd": 15.585818708433777,
+      "total_service_error_pct": 1.4758179975412633,
+      "reported_total_company_revenue_musd": 1237.0660000000003,
+      "US_error_bridge_musd": {
+        "Q4_anchor_times_FY25_seasonal_proxy_less_actual": -4.455620221795812,
+        "fleet_exposure_proxy": -0.4345425166560517,
+        "cohort_TLF": 0.1149047367679259,
+        "carrier_capture": 23.537540766116308,
+        "insurance_RPU": 0.15769066712857693
+      },
+      "bridge_factors": {
+        "fleet_exposure_proxy": 0.9994581139420632,
+        "cohort_TLF": 1.0001433669466977,
+        "carrier_capture": 1.0293636426498702,
+        "insurance_RPU": 1.0001911111433115
+      },
+      "international_error_musd": -3.3341547231270567,
+      "diagnostic_implied_other_US_if_insurance_unchanged_musd": 70.18086454625961,
+      "diagnostic_required_insurance_activity_change_pct_if_other_US_and_RPU_unchanged": -2.2925433246807514,
+      "warning": "Sequential arithmetic attribution, order-dependent interaction allocation; not inferred real-world causality. Q4 calibrated."
+    },
+    {
+      "period": "FY2026Q4",
+      "actual_us_service_musd": 817.822,
+      "modeled_us_service_musd": 817.822,
+      "US_error_musd": 0.0,
+      "US_error_pct": 0.0,
+      "actual_total_service_musd": 969.544,
+      "modeled_total_service_musd": 969.544,
+      "total_service_error_musd": 0.0,
+      "total_service_error_pct": 0.0,
+      "reported_total_company_revenue_musd": 1152.4389999999999,
+      "US_error_bridge_musd": {
+        "Q4_anchor_times_FY25_seasonal_proxy_less_actual": 0.0,
+        "fleet_exposure_proxy": 0.0,
+        "cohort_TLF": 0.0,
+        "carrier_capture": 0.0,
+        "insurance_RPU": 0.0
+      },
+      "bridge_factors": {
+        "fleet_exposure_proxy": 1.0,
+        "cohort_TLF": 1.0,
+        "carrier_capture": 1.0,
+        "insurance_RPU": 1.0
+      },
+      "international_error_musd": 0.0,
+      "diagnostic_implied_other_US_if_insurance_unchanged_musd": 81.78219999999999,
+      "diagnostic_required_insurance_activity_change_pct_if_other_US_and_RPU_unchanged": 0.0,
+      "warning": "Sequential arithmetic attribution, order-dependent interaction allocation; not inferred real-world causality. Q4 calibrated."
+    }
+  ],
+  "decision": "No assumptions changed or residual adjustments adopted. Investigate time-shape and historical capture convention before retuning damage economics."
+}

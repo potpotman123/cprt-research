@@ -55,6 +55,8 @@ Inputs: prior linked inputs.json (reported history, fleet, fee grid, friend allo
 
 ## Verification and historical limitation
 
+Follow-up: [historical error explanation](HISTORICAL_ERROR_EXPLANATION.md) quantifies percentage misses and an exact mechanical bridge. The Q2 US miss is 10.90%; its principal arithmetic contributions are the prior-year revenue seasonal proxy and inherited capture relative to Q4, not the small modeled intra-year cohort changes. This is not causal identification, and no inputs were changed to erase errors.
+
 74 structural checks passed: cohort/claim normalization, carrier aggregation, six TLF targets, four selected age-value targets, two repaired means, fee integration, revenue addition, units × RPU, missing-driver rejection, invalid adoption rejection, unsupported physical-timing rejection, acquisition classification gating, forecast-only propagation preserving history/scale, and title-bundling treatment. Increasing fee integration from1,024 to4,096 changes core RPU by less than0.001% in checked quarters.
 
 Historical US modeled minus reported revenue is +$46.986m, +$89.298m, +$18.920m, $0m. International: +$9.580m, +$9.618m, −$3.334m, $0m. Q4 ties by construction. These are reconstruction diagnostics using later calibration evidence/current schedules, not out-of-sample backtests. Do not publish FY27 totals as validated forecasts. Revised constraints can worsen historical fit; neither hide this nor select an older calibration solely for a better-looking error.
