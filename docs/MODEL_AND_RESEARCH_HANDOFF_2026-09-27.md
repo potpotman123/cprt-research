@@ -129,3 +129,6 @@ The research directories preserve scripts, numerical outputs, source logs, faile
 The workbook package includes compact input snapshots and the live-formula builder, so Fable can inspect both the formulas and the precise inputs without reconstructing the chat. Check annual reported service totals, quarter mappings, survival roll, repair mean reconstruction, CCC bucket calibration, nonlinear fee bands, actual-dollar scaling and input-response restoration. Arithmetic checks do not validate empirical assumptions.
 
 Only this research/model work is committed in this update. Concurrent nightly data collector modifications are left untouched. Licensed PDFs/table images, raw browser captures, dependencies, caches and credentials are excluded. No agent messages or external outreach were sent.
+# Current architecture status — 28 September 2026
+
+Read [the architecture completion audit](ARCHITECTURE_COMPLETION_AUDIT_2026-09-28.md) first for current implementation status and completion order. The quarterly prototype and newer age-constrained repair/value component are not yet integrated. User direction: complete the coherent model before running thesis-delta or consensus-impact tests. Preserve this file as historical context and the approved presentation structure.
