@@ -1,0 +1,22 @@
+{
+  "us_q4_conditional_prior_insurance_unit_weight": 0.7662337662337663,
+  "us_q4_conditional_current_insurance_unit_weight": 0.7516078831031112,
+  "insurance_to_other_rpu_needed_for_90pct_dollar_share_IF_fee_scope_matches": 2.9743289051763604,
+  "historical_us_residual_sum_musd": -1.8780533157531636,
+  "historical_us_absolute_residual_sum_musd": 110.4195132467263,
+  "historical_modeled_insurance_units_sum": 3510249.4131892794,
+  "flat_q4_international_fy27_yoy": 0.0441389253535156,
+  "flat_q4_international_h1_yoy": 0.12848509641309813,
+  "repeat_prior_year_intl_instead_of_flat_q4_h1_delta_musd": -34.549000000000035,
+  "repeat_prior_year_intl_instead_of_flat_q4_fy27_delta_musd": -25.654999999999973,
+  "note": "Repeat-prior-year international is a diagnostic, not adopted forecast or evidence of seasonality alone.",
+  "source_hashes": {
+    "data/csv/segment_service_rev_8k.csv": "f7d0d7d9ed2bda36fc69745ec8692647de80156921148a28cd5d77ab513d3394",
+    "model/linked_service_revenue_2026-09-28/validation.json": "4d8bafb0c71481e1fc0bab6e65d239f1c43e34769d22341cfdea0e8964b20745",
+    "raw/transcripts/call_2025-11-20.txt": "ad007210842018ed4d6a80789071b615a772caed2c2af5c4039376389aeb6f3a",
+    "raw/transcripts/call_2026-02-19.txt": "fe19557e0466cb1244f3ec9d23504c3fbd5f6cde85b08ed7da7fce7461280fcd",
+    "raw/transcripts/call_2026-05-21.txt": "ac6f45c47d1cb98853e8f6d8815a2f7267cb4bd3d332fa3b8555c62a3a7a4c6f",
+    "raw/transcripts/call_2026-09-10.txt": "81602b7efdc7e8713abe1515332785cb4e06314727bc5de2f66d388d5c23aa56"
+  },
+  "checks": "Service identities reconcile; Q4 international inferred fee-unit interval overlaps disclosed 11.5% rounded interval."
+}
