@@ -1,0 +1,16 @@
+{
+  "source": "/Users/kwu/Downloads/SPGlobal_Copart,Inc._Consensus_28-Sep-2026.xlsx",
+  "sha256": "559be91b31bd6c069e51ab0c3db78208d008d8cc3efaeaca6594f1e5a526101c",
+  "sheet": "Consensus",
+  "date_basis": "2026-09-28 filename; contributor-specific update dates absent",
+  "currency": "USD",
+  "scale": "millions",
+  "scope": "Consolidated total revenue; includes purchased vehicle sales",
+  "service_forecast_available": false,
+  "price_or_target_available": false,
+  "h1_fy27_revenue_m": 2350.0299999999997,
+  "h1_growth": 0.032208898844819256,
+  "fy27_sum_quarters_m": 4860.97,
+  "fy27_growth": 0.04173837011193249,
+  "note": "Sum of quarterly consensus means, not independently sourced annual consensus. Aggregated broker sets may differ across metrics/periods."
+}
