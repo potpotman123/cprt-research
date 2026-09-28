@@ -1,0 +1,205 @@
+{
+  "status": "Proxy falsification and transmission only; no forecast adoption or causal fit",
+  "weights": "Fixed CY2025 calibration age/body claims; vintage mix and carrier changes excluded to isolate within-group economics",
+  "baseline": {
+    "TLF": 0.2288379048986698,
+    "core_RPU": 851.5115405594113,
+    "core_revenue_per_reference_claim": 194.85811693865435,
+    "ASP": 3040.985780676717
+  },
+  "CPI_2025_vs_2024_matched_months": {
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      11,
+      12
+    ],
+    "ratios": {
+      "CUUR0000SETD": 1.0612948507020936,
+      "CUUR0000SETA02": 1.0268193464707491
+    },
+    "note": "Annual comparison uses only matched months; not full-year growth if any month missing"
+  },
+  "CPI_2026Q2_vs_2025Q2": {
+    "months": [
+      4,
+      5,
+      6
+    ],
+    "ratios": {
+      "CUUR0000SETD": 1.0610355296012322,
+      "CUUR0000SETA02": 0.9784995557610212
+    }
+  },
+  "CCC_repairable_mean_growth_by_age": [
+    0.996,
+    1.019,
+    1.023,
+    1.01,
+    1.01,
+    1.01
+  ],
+  "CCC_source": "raw/ccc/crash-course-2026.txt line 277; repairable-only, not constant-damage latent repair costs",
+  "CCC_older_value_proxy": {
+    "ratio": 0.995,
+    "source": "Saved CCC annual Figure22 footnote visually checked: 7+ adjusted valuations -0.5% CY2025 versus 2024, noncomprehensive",
+    "limitation": "Selected total-loss values, not unconditional matched vehicle values; applied equally within 7+ by assumption; younger cohorts held fixed in this diagnostic only"
+  },
+  "salvage_evidence": "No compatible within-age recovery history identified in current inputs; isolated 1% shock is explicitly hypothetical. Copart aggregate ASP is a selected outcome, not an exogenous recovery driver.",
+  "cases": {
+    "CY2024_backcast_broad_CPI": {
+      "direction": "2024 proxy to calibrated 2025",
+      "change_pct": {
+        "TLF": 4.45779789848999,
+        "core_RPU": 1.6469335736775559,
+        "core_revenue_per_reference_claim": 6.178148442404452,
+        "ASP": 3.326709469035638,
+        "TLF_change_pp": 0.9765792043055194
+      },
+      "repair_multipliers": [
+        0.9422452199202282,
+        0.9422452199202282,
+        0.9422452199202282,
+        0.9422452199202282,
+        0.9422452199202282,
+        0.9422452199202282
+      ],
+      "vehicle_value_multiplier": 0.9738811441730922,
+      "salvage_multiplier": 1,
+      "model_result": {
+        "TLF": 0.2190721128556146,
+        "core_RPU": 837.7149320910929,
+        "core_revenue_per_reference_claim": 183.51998014389343,
+        "ASP": 2943.078122107452
+      }
+    },
+    "CY2024_backcast_CCC_repairable_mean_proxy": {
+      "direction": "2024 proxy to calibrated 2025",
+      "change_pct": {
+        "TLF": -1.7988724008385693,
+        "core_RPU": 1.235652762512962,
+        "core_revenue_per_reference_claim": -0.5854474548406707,
+        "ASP": 2.571811054053663,
+        "TLF_change_pp": -0.4191909008094269
+      },
+      "repair_multipliers": [
+        1.0040160642570282,
+        0.9813542688910698,
+        0.9775171065493647,
+        0.9900990099009901,
+        0.9900990099009901,
+        0.9900990099009901
+      ],
+      "vehicle_value_multiplier": 0.9738811441730922,
+      "salvage_multiplier": 1,
+      "model_result": {
+        "TLF": 0.23302981390676406,
+        "core_RPU": 841.1182397934037,
+        "core_revenue_per_reference_claim": 196.00562689264183,
+        "ASP": 2964.738313018737
+      }
+    },
+    "CY2024_backcast_7plus_CCC_joint_proxy": {
+      "direction": "2024 proxy to calibrated 2025",
+      "change_pct": {
+        "TLF": 1.409339572922752,
+        "core_RPU": -0.22218849691304499,
+        "core_revenue_per_reference_claim": 1.1840196855962049,
+        "ASP": -0.48620835747107405,
+        "TLF_change_pp": 0.3180282176342475
+      },
+      "repair_multipliers": [
+        1,
+        1,
+        1,
+        0.9900990099009901,
+        0.9900990099009901,
+        0.9900990099009901
+      ],
+      "vehicle_value_multiplier": [
+        1,
+        1,
+        1,
+        1.0050251256281406,
+        1.0050251256281406,
+        1.0050251256281406
+      ],
+      "salvage_multiplier": 1,
+      "model_result": {
+        "TLF": 0.2256576227223273,
+        "core_RPU": 853.4077143324265,
+        "core_revenue_per_reference_claim": 192.57795602915039,
+        "ASP": 3055.8435473953937
+      }
+    },
+    "CY2026Q2_broad_CPI_transmission_only": {
+      "direction": "Apply observed broad-index ratios or hypothetical salvage shock to fixed calibration; not dated forecast",
+      "change_pct": {
+        "TLF": 10.875910818219413,
+        "core_RPU": -0.19460506506790987,
+        "core_revenue_per_reference_claim": 10.660140679826991,
+        "ASP": -0.5621604217585952,
+        "TLF_change_pp": 2.488820645506107
+      },
+      "repair_multipliers": [
+        1.0610355296012322,
+        1.0610355296012322,
+        1.0610355296012322,
+        1.0610355296012322,
+        1.0610355296012322,
+        1.0610355296012322
+      ],
+      "vehicle_value_multiplier": 0.9784995557610212,
+      "salvage_multiplier": 1,
+      "model_result": {
+        "TLF": 0.25372611135373085,
+        "core_RPU": 849.8544559718449,
+        "core_revenue_per_reference_claim": 215.63026633037668,
+        "ASP": 3023.8905621864455
+      }
+    },
+    "salvage_recovery_plus_1pct_unobserved_diagnostic": {
+      "direction": "Apply observed broad-index ratios or hypothetical salvage shock to fixed calibration; not dated forecast",
+      "change_pct": {
+        "TLF": 0.42978339059840387,
+        "core_RPU": 0.48086869824071066,
+        "core_revenue_per_reference_claim": 0.9127187826347471,
+        "ASP": 1.0334368084776946,
+        "TLF_change_pp": 0.09835073066478406
+      },
+      "repair_multipliers": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vehicle_value_multiplier": 1,
+      "salvage_multiplier": 1.01,
+      "model_result": {
+        "TLF": 0.22982141220531763,
+        "core_RPU": 855.6061930198688,
+        "core_revenue_per_reference_claim": 196.63662357144182,
+        "ASP": 3072.412447074803
+      }
+    }
+  },
+  "checks_passed": 13,
+  "sources": {
+    "data/csv/cprt_cpi_three_series.csv": "a68e3c4c18170b270b754d414e9420fa08099545b2ae964629232568fd67ef30",
+    "data/csv/ccc_tl_share_by_age_2020_2025.csv": "f8578c0aed0de5ff19d9dbe9a53cb83b6a97eae5e18d9651f4c35fb929e1fd53",
+    "docs/fleet_selection_2026-09-28/age_constrained_engine_results.json": "8e6f55a8792caf6aa2cb4f4c2d758936ff96e3b2a306c85244db59e4bfd6655b",
+    "model/integrated_service_2026-09-28/assumptions.json": "ed8d1da5ddc03e9a866efe6f944622e1301364694c45f5c46b77fc69f1507baf",
+    "model/integrated_service_2026-09-28/within_age_economics.py": "343e3b4d5840b8fd1a3e8083735bc0b55595f0b86bd72b5606c08d91c9e1b78d",
+    "raw/ccc/crash-course-2026.txt": "5760c3c8553159667c78ef08f17cea12a1926d0922b7603e523e8c42fc6f6320",
+    "docs/fleet_selection_2026-09-28/ccc_2026_figure22.webp": "52418f5bca4f8f7f3b4d1850b4c9dc9d349be80b1de6734730b0657fa46b1b51"
+  }
+}

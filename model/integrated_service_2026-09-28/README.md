@@ -1,5 +1,7 @@
 # Integrated quarterly service-revenue research model
 
+**Within-age evidence check:** [WITHIN_AGE_ECONOMICS.md](WITHIN_AGE_ECONOMICS.md) tests existing repair/value proxies against historical TLF, conditional repair costs and a pure filing-selection alternative. The mechanism can be material, but no tested input pairing jointly validates the observed outcomes; no FY27 economic drivers are adopted from this screen.
+
 **Vintage shares integrated in a parallel comparison:** [VINTAGE_BODY_INTEGRATION.md](VINTAGE_BODY_INTEGRATION.md) feeds the acquired historical subtype shares through frozen survival, damage selection and fees. H1 carrier-neutral fleet contribution is −$0.544m versus +$0.290m previously. Updated base calibration drift remains visible; production inputs are not silently replaced.
 
 **Fleet workstream:** [FLEET_COHORT_BUILD.md](FLEET_COHORT_BUILD.md) and `fleet_cohort_build.py` provide a parallel carrier-neutral build with explicit single-age claim activity, age/body selection and revenue attribution. It corrects the activity convention for evaluation but is not yet substituted into production. Historical light-truck subtype shares remain fixed, so a distinct crossover-transition thesis is not yet represented.
