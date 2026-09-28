@@ -1,0 +1,18 @@
+{
+  "FY27_H1": {
+    "prior_legacy_service_musd": 1943.896,
+    "forecast_legacy_service_musd": 1845.5634634391795,
+    "exposure_frequency_delta_musd": 3.240540259359064,
+    "total_loss_frequency_delta_musd": -0.5212269518094629,
+    "insurance_RPU_delta_musd": -1.0840904624294274,
+    "inherited_capture_comparison_delta_musd": -91.17323830857222,
+    "post_q4_capture_change_delta_musd": -8.794521097368639,
+    "capture_neutral_service_musd": 1945.5312228451203,
+    "q4_capture_frozen_service_musd": 1854.357984536548,
+    "change_musd": -98.33253656082067
+  },
+  "checks_passed": 12,
+  "method": "Exact sequential bridge: exposure, TLF, RPU, inherited capture comparison, post-Q4 capture; order-dependent interactions",
+  "evidence_status": "All capture paths are inherited assumptions; comparison case is not a forecast recommendation",
+  "scope": "Legacy service only; no stock-price or consensus conclusion"
+}
