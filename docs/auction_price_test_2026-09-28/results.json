@@ -1,0 +1,56 @@
+{
+  "source_sha256": "1a4d9f152c97f488c5657227ed8180c8d4149735d14d0f78dd6bf62eb9a8d95f",
+  "scenarios": 216,
+  "summary": [
+    {
+      "asp_change": 0.041,
+      "buyer_growth_range": [
+        0.015496587763480951,
+        0.020237264821116874
+      ],
+      "illustrative_rpu_range": [
+        0.014608423342959753,
+        0.024547581505265148
+      ],
+      "reference_rpu_growth": 0.019749499410500748
+    },
+    {
+      "asp_change": 0.06,
+      "buyer_growth_range": [
+        0.022569554723819163,
+        0.029563181861234744
+      ],
+      "illustrative_rpu_range": [
+        0.02124635228283256,
+        0.03588609814338195
+      ],
+      "reference_rpu_growth": 0.028809832218104514
+    },
+    {
+      "asp_change": 0.084,
+      "buyer_growth_range": [
+        0.03141347842472908,
+        0.04130054849875697
+      ],
+      "illustrative_rpu_range": [
+        0.029503287117310872,
+        0.0501780581367004
+      ],
+      "reference_rpu_growth": 0.040177126908310656
+    },
+    {
+      "asp_change": 0.1,
+      "buyer_growth_range": [
+        0.03725654583808291,
+        0.04911272417105006
+      ],
+      "illustrative_rpu_range": [
+        0.03493659972358576,
+        0.059688513292595724
+      ],
+      "reference_rpu_growth": 0.047709742698918145
+    }
+  ],
+  "check_exact_vs_deterministic_quadrature_usd": 0.05825965092299157,
+  "limits": "September schedule held fixed; distributions and seller/service terms assumed; no changes to units, damage selection, bidder budgets or buyer mix; insurance ASP versus all-US RPU not population matched."
+}
