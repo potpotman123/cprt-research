@@ -84,3 +84,5 @@ Historical US modeled minus reported revenue is +$46.986m, +$89.298m, +$18.920m,
 Highest-priority remaining validation is the historical claims/seasonality/allocation convention, service normalization, and population compatibility. Resolve these on the connected model before interpreting fine repair sensitivities. Expensive experiments remain subject to user review; ordinary local source checks and integration are authorized.
 
 Follow-up: [joint repair economics and claim-reporting check](JOINT_CLAIM_SELECTION.md) tests 2,873 inexpensive older-cohort cases against age TLF and conditional repair/value changes. No tight-screen joint fit; looser fits show the result is tolerance-dependent. Source populations remain mismatched and no forecast parameters are adopted.
+
+Follow-up: [within-13+ composition check](WITHIN_13PLUS.md) finds modeled claims-weighted age falls slightly in CY2025. Common monotone age-curve composition alone cannot explain the reported +1.70 pp TLF increase under these cohort assumptions; actual fine-age claims remain unobserved.
