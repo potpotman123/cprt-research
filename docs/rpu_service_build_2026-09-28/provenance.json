@@ -1,0 +1,16 @@
+{
+  "inputs": {
+    "raw/transcripts/call_2025-02-20.txt": "95c42a24aeba05ae7efe157d951451280b6585b1bf54397d165bf8f41d3c3aa2",
+    "raw/transcripts/call_2026-02-19.txt": "fe19557e0466cb1244f3ec9d23504c3fbd5f6cde85b08ed7da7fce7461280fcd",
+    "raw/transcripts/call_2026-05-21.txt": "ac6f45c47d1cb98853e8f6d8815a2f7267cb4bd3d332fa3b8555c62a3a7a4c6f",
+    "raw/transcripts/call_2026-09-10.txt": "81602b7efdc7e8713abe1515332785cb4e06314727bc5de2f66d388d5c23aa56"
+  },
+  "margin_change_example": {
+    "prior_revenue_ASSUMED": 40,
+    "prior_margin_ASSUMED": 0.2,
+    "current_margin_ASSUMED": 0.1,
+    "cost_increase": 15,
+    "delta_revenue": 12.222222222222221
+  },
+  "checks": "Constant margin arithmetic identities passed"
+}
