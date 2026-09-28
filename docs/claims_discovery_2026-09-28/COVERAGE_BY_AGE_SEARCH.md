@@ -52,3 +52,17 @@ The alternative is to keep age coverage as an explicit unmeasured component, use
 14. "insurance" "liability only" "vehicle age" data
 
 Sources accessed September28,2026 via web text extraction. No source PDF was transcribed into a workbook, and no historical/forecast input was overwritten. Above observations are preserved with direct source URLs and page/section locators; whole copyrighted publications are not copied into Git.
+
+## Bounded follow-up: current coverage-mix evidence
+
+28 September 2026. Six queries, two document opens, no OCR, paid collection or forecast changes. The targeted continuation found [Maryland Auto's January 22, 2026 Senate Finance briefing](https://mgaleg.maryland.gov/meeting_material/2026/fin%20-%20134135033962649181%20-%20Briefing%20Materials%20-%20MAIF%20and%20MIA%2001-22-26%202PM.pdf). Printed p.6 / PDF page7 reports liability-only policies at 62.75% of the book in2023 and78.7% in2025. This is a current within-insurer change in coverage composition, stronger temporal evidence than the earlier portfolio snapshot. It remains a residual-market portfolio, without a vehicle-age cross-tab or matched renewal panel.
+
+Interpretation: switching coverage, differential exits and incoming-customer mix can all change the share. The disclosure does not distinguish them. It cannot establish that individual customers dropped collision coverage, quantify collision-only penetration, or identify a national13+ coefficient. Preserve as observed portfolio composition only; do not map it directly into Copart units or TLF.
+
+Architecture implication (inference, not source finding): coverage selection and small-claim nonfiling are distinct filters. Dropping own-damage coverage can remove both repairable and total-loss claims from that coverage channel; omitting small claims selectively removes the repairable denominator. Therefore coverage loss alone does not prove higher TLF. The direction depends on which vehicles/risks leave the observed claims population, and alternative recovery routes must remain separate. Applying a coverage reduction on top of an already calibrated claims-per-fleet-vehicle rate would risk double counting.
+
+Stopping decision: no age-by-coverage time series identified in this pass. Keep the coverage decomposition unmeasured and retain the existing combined claims propensity provisionally; do not multiply in Maryland percentages. Next useful model check is to document exactly which filters the combined rate already contains before further calibration. Reopen empirical coverage estimation only with a concrete compatible dataset lead.
+
+Queries: `site.mymarylandauto.com "vehicle age" coverage`; `site.aipso.com "model year" "collision" exposures`; `site.verisk.com "older vehicles" "coverage" collision`; `"vehicle age" "collision coverage" study policy data`; `"Maryland Auto" "2025" "annual report" coverage`; `"Quality Planning" "coverage" "vehicle" 2024 2025`.
+
+Other opened candidate: [AIPSO Hawaii filing HI13-01](https://cca.hawaii.gov/ins/files/2013/12/AIPSO_Filing_HI_13-01.pdf). Search surfaced a model-year/coverage table, but targeted text lookup did not resolve it; no statistic accepted. Most other hits were prior sources, unrelated coverage studies or irrelevant results. Stop rather than expanding that low-yield branch.
