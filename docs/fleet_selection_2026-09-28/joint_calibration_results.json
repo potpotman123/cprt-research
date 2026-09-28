@@ -1,0 +1,333 @@
+{
+  "source_hashes": {
+    "model/linked_service_revenue_2026-09-28/inputs.json": "18e80a5aa8c34854b8bc1d9471d7530d7b827349ac51758f13a3d24987e7b591",
+    "data/csv/ccc_tl_valuation_share_by_age_2020_2025.csv": "577c30c3231582b7170a638f88a65e8dc11f708dad26c039fda5a1a6047a3aa5"
+  },
+  "status": "Conditional feasibility only. Inferred CCC age weights require compatible populations; 2025 model body weights remain assumptions. No empirical best fit selected.",
+  "cases": {
+    "conditional_CCC_age_weights": [
+      {
+        "sigma": 0.6,
+        "group_results": [
+          {
+            "model_repairable_mean_at_original_value_scale": 8759.710588965687,
+            "reference": 5721,
+            "required_common_ACV_and_repair_scale": 0.6531037688855328
+          },
+          {
+            "model_repairable_mean_at_original_value_scale": 4554.789358432119,
+            "reference": 3682,
+            "required_common_ACV_and_repair_scale": 0.8083798635349941
+          }
+        ],
+        "max_TLF_error": 5.490052856771399e-14,
+        "responses_at_original_scale": {
+          "repair_plus_5pct": {
+            "units_pct": 11.700482097862896,
+            "ASP_pct": 2.412366251061515
+          },
+          "value_plus_5pct": {
+            "units_pct": -10.918176321464657,
+            "ASP_pct": 2.5978986531237647
+          }
+        }
+      },
+      {
+        "sigma": 0.9,
+        "group_results": [
+          {
+            "model_repairable_mean_at_original_value_scale": 6551.270565879644,
+            "reference": 5721,
+            "required_common_ACV_and_repair_scale": 0.8732657188356923
+          },
+          {
+            "model_repairable_mean_at_original_value_scale": 3646.077666392979,
+            "reference": 3682,
+            "required_common_ACV_and_repair_scale": 1.009852322658436
+          }
+        ],
+        "max_TLF_error": 1.3242185126216555e-13,
+        "responses_at_original_scale": {
+          "repair_plus_5pct": {
+            "units_pct": 7.359305671838223,
+            "ASP_pct": 1.5598221404097945
+          },
+          "value_plus_5pct": {
+            "units_pct": -7.050691062460945,
+            "ASP_pct": 3.40967092831439
+          }
+        }
+      },
+      {
+        "sigma": 1.2,
+        "group_results": [
+          {
+            "model_repairable_mean_at_original_value_scale": 5090.724436821122,
+            "reference": 5721,
+            "required_common_ACV_and_repair_scale": 1.1238086191859267
+          },
+          {
+            "model_repairable_mean_at_original_value_scale": 3000.7484871979095,
+            "reference": 3682,
+            "required_common_ACV_and_repair_scale": 1.227027195284281
+          }
+        ],
+        "max_TLF_error": 1.2327638909681582e-13,
+        "responses_at_original_scale": {
+          "repair_plus_5pct": {
+            "units_pct": 5.36606162051898,
+            "ASP_pct": 1.1530041998820018
+          },
+          "value_plus_5pct": {
+            "units_pct": -5.202415671953398,
+            "ASP_pct": 3.8133604723947556
+          }
+        }
+      },
+      {
+        "sigma": 1.5702059479932844,
+        "group_results": [
+          {
+            "model_repairable_mean_at_original_value_scale": 3895.630397468503,
+            "reference": 5721,
+            "required_common_ACV_and_repair_scale": 1.4685684770602665
+          },
+          {
+            "model_repairable_mean_at_original_value_scale": 2434.0388208507698,
+            "reference": 3682,
+            "required_common_ACV_and_repair_scale": 1.512712109790028
+          }
+        ],
+        "max_TLF_error": 1.0821898932533713e-13,
+        "responses_at_original_scale": {
+          "repair_plus_5pct": {
+            "units_pct": 4.021432979748196,
+            "ASP_pct": 0.872349568043207
+          },
+          "value_plus_5pct": {
+            "units_pct": -3.9297306913125496,
+            "ASP_pct": 4.097015015609684
+          }
+        }
+      },
+      {
+        "sigma": 2.0,
+        "group_results": [
+          {
+            "model_repairable_mean_at_original_value_scale": 2997.5768099907395,
+            "reference": 5721,
+            "required_common_ACV_and_repair_scale": 1.9085415863013946
+          },
+          {
+            "model_repairable_mean_at_original_value_scale": 1975.818275606703,
+            "reference": 3682,
+            "required_common_ACV_and_repair_scale": 1.8635317050447817
+          }
+        ],
+        "max_TLF_error": 4.64628335805628e-14,
+        "responses_at_original_scale": {
+          "repair_plus_5pct": {
+            "units_pct": 3.115046879097627,
+            "ASP_pct": 0.6801658183274162
+          },
+          "value_plus_5pct": {
+            "units_pct": -3.0601179748086293,
+            "ASP_pct": 4.29339999815137
+          }
+        }
+      }
+    ],
+    "model_2025_age_weights": [
+      {
+        "sigma": 0.6,
+        "group_results": [
+          {
+            "model_repairable_mean_at_original_value_scale": 8719.013412178812,
+            "reference": 5721,
+            "required_common_ACV_and_repair_scale": 0.6561522192417831
+          },
+          {
+            "model_repairable_mean_at_original_value_scale": 4497.635624760286,
+            "reference": 3682,
+            "required_common_ACV_and_repair_scale": 0.8186523558578053
+          }
+        ],
+        "max_TLF_error": 5.490052856771399e-14,
+        "responses_at_original_scale": {
+          "repair_plus_5pct": {
+            "units_pct": 11.620495487652827,
+            "ASP_pct": 2.4462908453321885
+          },
+          "value_plus_5pct": {
+            "units_pct": -10.854461141448313,
+            "ASP_pct": 2.563745329530054
+          }
+        }
+      },
+      {
+        "sigma": 0.9,
+        "group_results": [
+          {
+            "model_repairable_mean_at_original_value_scale": 6523.406334665012,
+            "reference": 5721,
+            "required_common_ACV_and_repair_scale": 0.8769958065618157
+          },
+          {
+            "model_repairable_mean_at_original_value_scale": 3602.3236876415826,
+            "reference": 3682,
+            "required_common_ACV_and_repair_scale": 1.0221180324887964
+          }
+        ],
+        "max_TLF_error": 1.3242185126216555e-13,
+        "responses_at_original_scale": {
+          "repair_plus_5pct": {
+            "units_pct": 7.308253787387797,
+            "ASP_pct": 1.5818754267977075
+          },
+          "value_plus_5pct": {
+            "units_pct": -7.006105908968319,
+            "ASP_pct": 3.386988498308585
+          }
+        }
+      },
+      {
+        "sigma": 1.2,
+        "group_results": [
+          {
+            "model_repairable_mean_at_original_value_scale": 5070.746771166407,
+            "reference": 5721,
+            "required_common_ACV_and_repair_scale": 1.1282361865378692
+          },
+          {
+            "model_repairable_mean_at_original_value_scale": 2966.1844123640703,
+            "reference": 3682,
+            "required_common_ACV_and_repair_scale": 1.2413253824179526
+          }
+        ],
+        "max_TLF_error": 1.2327638909681582e-13,
+        "responses_at_original_scale": {
+          "repair_plus_5pct": {
+            "units_pct": 5.328532414683362,
+            "ASP_pct": 1.169347672586607
+          },
+          "value_plus_5pct": {
+            "units_pct": -5.168327922859461,
+            "ASP_pct": 3.7964232449021695
+          }
+        }
+      },
+      {
+        "sigma": 1.5702059479932844,
+        "group_results": [
+          {
+            "model_repairable_mean_at_original_value_scale": 3881.630554534576,
+            "reference": 5721,
+            "required_common_ACV_and_repair_scale": 1.4738651501278623
+          },
+          {
+            "model_repairable_mean_at_original_value_scale": 2407.232843369113,
+            "reference": 3682,
+            "required_common_ACV_and_repair_scale": 1.5295570638886553
+          }
+        ],
+        "max_TLF_error": 1.0821898932533713e-13,
+        "responses_at_original_scale": {
+          "repair_plus_5pct": {
+            "units_pct": 3.99314208696675,
+            "ASP_pct": 0.8847365331122514
+          },
+          "value_plus_5pct": {
+            "units_pct": -3.9033729698832564,
+            "ASP_pct": 4.084123050019728
+          }
+        }
+      },
+      {
+        "sigma": 2.0,
+        "group_results": [
+          {
+            "model_repairable_mean_at_original_value_scale": 2987.70303547532,
+            "reference": 5721,
+            "required_common_ACV_and_repair_scale": 1.9148489431747804
+          },
+          {
+            "model_repairable_mean_at_original_value_scale": 1955.0094569757214,
+            "reference": 3682,
+            "required_common_ACV_and_repair_scale": 1.8833668486165924
+          }
+        ],
+        "max_TLF_error": 4.64628335805628e-14,
+        "responses_at_original_scale": {
+          "repair_plus_5pct": {
+            "units_pct": 3.0930423030539833,
+            "ASP_pct": 0.6898353163516058
+          },
+          "value_plus_5pct": {
+            "units_pct": -3.0392732234152953,
+            "ASP_pct": 4.283311034173898
+          }
+        }
+      }
+    ]
+  },
+  "joint_fits_not_adopted": {
+    "conditional_CCC_age_weights": {
+      "sigma": 1.794814956188202,
+      "group_results": [
+        {
+          "model_repairable_mean_at_original_value_scale": 3377.5681102160224,
+          "reference": 5721,
+          "required_common_ACV_and_repair_scale": 1.6938222452704577
+        },
+        {
+          "model_repairable_mean_at_original_value_scale": 2173.7818429267195,
+          "reference": 3682,
+          "required_common_ACV_and_repair_scale": 1.6938222259887208
+        }
+      ],
+      "max_TLF_error": 1.2256862191861728e-13,
+      "responses_at_original_scale": {
+        "repair_plus_5pct": {
+          "units_pct": 3.4906597364187997,
+          "ASP_pct": 0.7601085172628474
+        },
+        "value_plus_5pct": {
+          "units_pct": -3.4216349794289003,
+          "ASP_pct": 4.211510327241008
+        }
+      },
+      "common_scale": 1.6938222356295891,
+      "implied_age10_car_ACV": 16938.22235629589,
+      "repaired_mean_max_error_usd": 3.256269064877415e-05
+    },
+    "model_2025_age_weights": {
+      "sigma": 1.8554311299324033,
+      "group_results": [
+        {
+          "model_repairable_mean_at_original_value_scale": 3246.1623165411797,
+          "reference": 5721,
+          "required_common_ACV_and_repair_scale": 1.762388766220349
+        },
+        {
+          "model_repairable_mean_at_original_value_scale": 2089.2098439038427,
+          "reference": 3682,
+          "required_common_ACV_and_repair_scale": 1.7623887857621383
+        }
+      ],
+      "max_TLF_error": 9.350853424905381e-14,
+      "responses_at_original_scale": {
+        "repair_plus_5pct": {
+          "units_pct": 3.3468126042861313,
+          "ASP_pct": 0.7450412129786477
+        },
+        "value_plus_5pct": {
+          "units_pct": -3.2838274141787527,
+          "ASP_pct": 4.226723157971191
+        }
+      },
+      "common_scale": 1.7623887759912438,
+      "implied_age10_car_ACV": 17623.88775991244,
+      "repaired_mean_max_error_usd": 3.1717910133011173e-05
+    }
+  }
+}
