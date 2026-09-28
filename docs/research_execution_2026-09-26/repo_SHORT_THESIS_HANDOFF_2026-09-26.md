@@ -1,5 +1,7 @@
 # Copart (CPRT) — direction decided: SHORT on a 3–6 month horizon. Full context for the next model
 
+**2026-09-28 clarification to section 3.3:** the approximately 20% delivery margin is JPMorgan's freight-forwarding industry analogy, not a disclosed Copart product margin. BNP's management follow-up concerns cost attribution. See [delivery evidence update](../rpu_service_build_2026-09-28/DELIVERY_EVIDENCE_UPDATE.md). This dated handoff does not supersede later evidence or the user's subsequent direction to test both long and short outcomes.
+
 *Written 2026-09-26 at the end of the third session. This file is the entry point for whoever continues the work (the owner's
 next model). It restates the business, the model, every experiment run and how it performed, the sell-side reference numbers,
 the decision to pitch a short, the weaknesses in the evidence, and the next steps in order with the reason for each. Terms

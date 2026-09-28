@@ -1,5 +1,7 @@
 # Compact delivery adoption build
 
+Status update: retained as a historical illustrative prototype. Future work is calculations and documentation for Fable, without Excel authoring. See [delivery evidence update](DELIVERY_EVIDENCE_UPDATE.md) for the fee-waiver treatment missing from this prototype and clarified margin provenance. Its scenario outputs are not forecasts.
+
 28 September 2026. User explicitly retained delivery as part of service-adoption thesis and authorized a practical build. Two tabs: Delivery Build and Inputs. Output: `outputs/cprt-delivery-20260928/CPRT_Delivery_Adoption.xlsx`. No original workbook modified. This is an executable conditional scenario schedule, not an empirically calibrated forecast.
 
 The schedule uses eligible transactions × average quarterly adoption × revenue per delivery. Quarter-average adoption is the mean of opening/closing adoption, assuming linear rollout during each quarter and uniform eligible activity. Forecast eligible volumes and prices have separate growth inputs. Rates are bounded0–100%; the historical implied starting adoption still requires a plausible source-based denominator before adoption as a forecast.

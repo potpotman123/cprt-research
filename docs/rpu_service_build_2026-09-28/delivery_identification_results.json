@@ -1,0 +1,42 @@
+{
+  "status": "Conditional arithmetic only; no adopted forecast or measured adoption",
+  "conditional_revenue_increase_usd": 21250000.0,
+  "price_identification_cases": [
+    {
+      "assumed_revenue_per_vehicle": 300,
+      "conditional_additional_deliveries": 70833.33333333333,
+      "penetration_change_pp_if_1m_eligible_and_other_factors_constant": 7.083333333333333
+    },
+    {
+      "assumed_revenue_per_vehicle": 600,
+      "conditional_additional_deliveries": 35416.666666666664,
+      "penetration_change_pp_if_1m_eligible_and_other_factors_constant": 3.5416666666666665
+    },
+    {
+      "assumed_revenue_per_vehicle": 900,
+      "conditional_additional_deliveries": 23611.11111111111,
+      "penetration_change_pp_if_1m_eligible_and_other_factors_constant": 2.361111111111111
+    }
+  ],
+  "separate_waiver_cases_do_not_automatically_overlay_cost_bridge": [
+    {
+      "assumed_waiver_fraction": 0,
+      "added_billings_usd": 3000000,
+      "waived_gate_usd": 0,
+      "net_addition_before_other_offsets_usd": 3000000
+    },
+    {
+      "assumed_waiver_fraction": 0.5,
+      "added_billings_usd": 3000000,
+      "waived_gate_usd": 475000.0,
+      "net_addition_before_other_offsets_usd": 2525000.0
+    },
+    {
+      "assumed_waiver_fraction": 1,
+      "added_billings_usd": 3000000,
+      "waived_gate_usd": 950000,
+      "net_addition_before_other_offsets_usd": 2050000
+    }
+  ],
+  "checks": "Revenue/job identities and waiver arithmetic passed"
+}
