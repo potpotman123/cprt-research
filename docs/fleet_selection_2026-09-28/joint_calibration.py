@@ -53,7 +53,12 @@ def fit(sigma,ageweights):
     # Verify the continuous implementation hits each total-loss target.
     error=max(abs(sum(body[k][b]*(1-cutoff(mus[k]+math.log(d['repair_ratios'][b]),acvs[k][b],sigma)) for b in range(4))-d['calibration'][k]['target']) for k in range(6))
     assert error<1e-9
-    return {'sigma':sigma,'group_results':groups,'max_TLF_error':error,'responses_at_original_scale':responses}
+    selected=[]
+    for k in range(6):
+        mass=[body[k][b]*(1-cutoff(mus[k]+math.log(d['repair_ratios'][b]),acvs[k][b],sigma)) for b in range(4)]
+        selected.append(sum(mass[b]*acvs[k][b] for b in range(4))/sum(mass))
+    selected_mean=sum(ageweights[k]*d['calibration'][k]['target']*selected[k] for k in range(6))/sum(ageweights[k]*d['calibration'][k]['target'] for k in range(6))
+    return {'sigma':sigma,'group_results':groups,'max_TLF_error':error,'responses_at_original_scale':responses,'selected_total_loss_ACV_at_original_scale':selected_mean,'selected_total_loss_ACV_by_age_at_original_scale':selected}
 out={'source_hashes':{str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in [src,sp]},'status':'Conditional feasibility only. Inferred CCC age weights require compatible populations; 2025 model body weights remain assumptions. No empirical best fit selected.', 'cases':{label:[fit(s,w) for s in [.6,.9,1.2,d['sigma'],2.0]] for label,w in [('conditional_CCC_age_weights',inferred),('model_2025_age_weights',model)]}}
 out['joint_fits_not_adopted']={}
 for label,w in [('conditional_CCC_age_weights',inferred),('model_2025_age_weights',model)]:
