@@ -1,0 +1,100 @@
+{
+  "status": "Conditional arithmetic, not validated investment forecast. Assumes purchased vehicle revenue flat YoY and CapIQ excludes ACV Auctions; latter not confirmed.",
+  "sources": [
+    "model/linked_service_revenue_2026-09-28/inputs.json",
+    "model/integrated_service_2026-09-28/connected_quarterly_bridge.csv",
+    "docs/consensus_review_2026-09-28/total_revenue_consensus.csv"
+  ],
+  "rows": [
+    {
+      "period": "FY2027Q1",
+      "consensus": 1183.1,
+      "provisional_total": 1102.7163788375576,
+      "fleet_only_total": 1154.8895494593335,
+      "purchased_flat": 163.185,
+      "prior_total": 1155.03,
+      "carrier": -52.17317062177574,
+      "fleet": -0.14045054066663157,
+      "gap": -80.3836211624423,
+      "gap_pct": -6.794321795490009,
+      "fleet_only_gap_pct": -2.3844519094469163,
+      "street_growth_pct": 2.4302399071885583,
+      "model_growth_pct": -4.529200207998263
+    },
+    {
+      "period": "FY2027Q2",
+      "consensus": 1166.93,
+      "provisional_total": 1073.620658846739,
+      "fleet_only_total": 1121.2709113964663,
+      "purchased_flat": 169.623,
+      "prior_total": 1121.674,
+      "carrier": -47.6502525497275,
+      "fleet": -0.4030886035336499,
+      "gap": -93.30934115326113,
+      "gap_pct": -7.996138684690694,
+      "fleet_only_gap_pct": -3.91275300176821,
+      "street_growth_pct": 4.0346838742807645,
+      "model_growth_pct": -4.284073728486271
+    },
+    {
+      "period": "FY2027Q3",
+      "consensus": 1286.52,
+      "provisional_total": 1208.4207866713955,
+      "fleet_only_total": 1236.237677990871,
+      "purchased_flat": 180.986,
+      "prior_total": 1237.0660000000003,
+      "carrier": -27.81689131947553,
+      "fleet": -0.8283220091290547,
+      "gap": -78.09921332860449,
+      "gap_pct": -6.070579029366391,
+      "fleet_only_gap_pct": -3.908398004627145,
+      "street_growth_pct": 3.997684844624283,
+      "model_growth_pct": -2.3155768025800327
+    },
+    {
+      "period": "FY2027Q4",
+      "consensus": 1224.42,
+      "provisional_total": 1146.7436049219905,
+      "fleet_only_total": 1151.3016332201541,
+      "purchased_flat": 182.89499999999998,
+      "prior_total": 1152.4389999999999,
+      "carrier": -4.5580282981634355,
+      "fleet": -1.1373667798459375,
+      "gap": -77.67639507800959,
+      "gap_pct": -6.343933868934646,
+      "fleet_only_gap_pct": -5.971673672420074,
+      "street_growth_pct": 6.245970502560239,
+      "model_growth_pct": -0.4942036045299858
+    },
+    {
+      "period": "H1",
+      "consensus": 2350.0299999999997,
+      "provisional_total": 2176.337037684297,
+      "fleet_only_total": 2276.1604608558,
+      "purchased_flat": 332.808,
+      "prior_total": 2276.7039999999997,
+      "carrier": -99.82342317150324,
+      "fleet": -0.5435391442002815,
+      "gap": -173.69296231570297,
+      "gap_pct": -7.391095531363557,
+      "fleet_only_gap_pct": -3.1433445166316965,
+      "street_growth_pct": 3.220708533037242,
+      "model_growth_pct": -4.408432642789883
+    },
+    {
+      "period": "FY",
+      "consensus": 4860.97,
+      "provisional_total": 4531.501429277682,
+      "fleet_only_total": 4663.699772066825,
+      "purchased_flat": 696.689,
+      "prior_total": 4666.209,
+      "carrier": -132.1983427891422,
+      "fleet": -2.5092279331752736,
+      "gap": -329.46857072231796,
+      "gap_pct": -6.7778359200389655,
+      "fleet_only_gap_pct": -4.0582482083447395,
+      "street_growth_pct": 4.173859336347774,
+      "model_growth_pct": -2.8868739210420657
+    }
+  ]
+}
