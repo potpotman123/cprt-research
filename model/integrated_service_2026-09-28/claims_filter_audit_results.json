@@ -1,0 +1,32 @@
+{
+  "checks": [
+    "CY2025 corrected claim mass equals one",
+    "Matched filing denominator and TLF preserve total-loss count",
+    "Holding TLF fixed falsely loses totals under repairable-only nonfiling",
+    "Same exposure shock applied twice produces 19%, rather than 10%, loss",
+    "Refitted cell corrections absorb baseline coverage multipliers; no identification",
+    "Production frequency multipliers are flat assumptions"
+  ],
+  "checks_passed": 6,
+  "synthetic_cases_not_forecasts": {
+    "baseline_relative_claim_mass": 1.0,
+    "baseline_model_TLF": 0.2288379048986698,
+    "remove_10pct_repairables_claim_factor": 0.922883790489867,
+    "remove_10pct_repairables_TLF": 0.2479596101446343,
+    "correct_total_loss_factor": 1.0,
+    "incorrect_fixed_TLF_total_loss_factor": 0.922883790489867,
+    "uniform_exposure_shock_once": 0.9,
+    "same_shock_twice": 0.81
+  },
+  "source_hashes": {
+    "model/linked_service_revenue_2026-09-28/inputs.json": "18e80a5aa8c34854b8bc1d9471d7530d7b827349ac51758f13a3d24987e7b591",
+    "docs/fleet_selection_2026-09-28/age_constrained_engine_results.json": "8e6f55a8792caf6aa2cb4f4c2d758936ff96e3b2a306c85244db59e4bfd6655b",
+    "model/integrated_service_2026-09-28/assumptions.json": "ed8d1da5ddc03e9a866efe6f944622e1301364694c45f5c46b77fc69f1507baf",
+    "model/integrated_service_2026-09-28/engine.py": "86bf4c3a0a3da47a276b55a37cbd9767193285f42480ccd3da1e7d6dd7d4368d",
+    "model/integrated_service_2026-09-28/fleet_cohort_build.py": "4379fe1b41082b84f16d87018780d6e1c66747e0e0a162c7f052fabc763a0ba1",
+    "model/integrated_service_2026-09-28/vintage_body_integration.py": "b90bf1bb361e12be57755053f6dffca4598e0ac0edf1853bc17ef03e6648cf87",
+    "model/integrated_service_2026-09-28/joint_claim_selection.py": "3c873640136b13e85e33e232c5f6070eeccef5b476c312dc487d04f7fdccfede",
+    "model/integrated_service_2026-09-28/claims_filter_audit.py": "8c29b3ed878c3e0b944ef4aa4f18ea4719a4f02b67390869a3ce60669bc4ebf6"
+  },
+  "status": "Identity audit, not empirical validation. No forecast input changed."
+}

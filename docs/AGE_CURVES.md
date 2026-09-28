@@ -249,16 +249,20 @@ comprehensive, and mileage is near its peak (the 4–6 bracket is the largest si
 
 ### 3.4 Decomposition — how much of the decline is exposure
 
-R(7+)/R(0–6) = **0.565** = miles ratio **0.653** × residual **0.865**. So about two-thirds of the age gradient is
-simply that old cars are driven less; the remaining 13–14% is coverage and filing behaviour. That residual is where the
-2024–25 deductible shift lives (CCC: $1,000+ deductibles +3.5pp in one year, +6pp in two) — it is a *level* effect on
-claims that the industry-claims term of the identity already carries; do not put it in R.
+R(7+)/R(0–6) = **0.565** = miles ratio **0.653** × residual **0.865** (rounded historical calculations).
+Correction, 28 September 2026: this is an arithmetic decomposition, not identification of coverage or filing.
+Accident risk per mile, driver/body/geographic mix, source-population differences and model error can also enter
+the residual. It does not establish how much coverage changed in 2024–25. The inherited R schedule bundles
+these mechanisms at its fitted baseline; a new time change must enter only once and use a compatible denominator.
+The integrated engine's reported_claim_frequency multipliers are currently all one, not an observed claims series.
 
 ### 3.5 What would upgrade R from fitted to measured
 
-HLDI publishes insurance claim frequencies by vehicle age (collision, property-damage liability, comprehensive) from
-insurer data covering most of the market. That is R measured directly, coverage included. `iihs.org` returned 404 on
-every HLDI URL tried from this environment; see §7.
+HLDI's collision claims per insured vehicle-year are conditional on collision-covered exposure. They are not
+R measured directly per registered vehicle and do not identify coverage penetration. The later bounded search
+obtained a historical exact-age reference; see [HLDI_FREQUENCY_REFERENCE.md](claims_discovery_2026-09-28/HLDI_FREQUENCY_REFERENCE.md).
+Replacing R would require compatible exposure denominators and coverage/claim-channel definitions, not simply
+multiplying that conditional frequency by the existing combined R curve.
 
 ---
 
