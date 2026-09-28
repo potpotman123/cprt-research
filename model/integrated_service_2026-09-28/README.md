@@ -82,3 +82,5 @@ Historical US modeled minus reported revenue is +$46.986m, +$89.298m, +$18.920m,
 - Stage E not presented as completed: predictive validation, evidence-supported driver forecasts, thesis attribution, consensus comparisons and valuation remain separate follow-up work. No thesis-materiality sweep was run to choose assumptions.
 
 Highest-priority remaining validation is the historical claims/seasonality/allocation convention, service normalization, and population compatibility. Resolve these on the connected model before interpreting fine repair sensitivities. Expensive experiments remain subject to user review; ordinary local source checks and integration are authorized.
+
+Follow-up: [joint repair economics and claim-reporting check](JOINT_CLAIM_SELECTION.md) tests 2,873 inexpensive older-cohort cases against age TLF and conditional repair/value changes. No tight-screen joint fit; looser fits show the result is tolerance-dependent. Source populations remain mismatched and no forecast parameters are adopted.

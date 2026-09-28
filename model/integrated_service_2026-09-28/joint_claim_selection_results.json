@@ -1,0 +1,145 @@
+{
+  "tolerance_robustness": {
+    "0.25": {
+      "accepted_count": 0,
+      "note": "Analyst tolerance, not a confidence interval",
+      "unit_growth_range_pct": null
+    },
+    "0.5": {
+      "accepted_count": 4,
+      "note": "Analyst tolerance, not a confidence interval",
+      "unit_growth_range_pct": [
+        2.6472810873281682,
+        3.9430677574123107
+      ]
+    }
+  },
+  "status": "Retrospective diagnostic, mismatched populations; no forecast adoption",
+  "grid_count": 2873,
+  "baseline": {
+    "TLF": 0.3182720293825869,
+    "totals": 0.3182720293825869,
+    "repairables": 0.6817279706174131,
+    "claims": 1.0,
+    "repair_mean": 3649.2125595933903,
+    "selected_ACV": 9140.660159982855,
+    "age_TLF": {
+      "3": 0.22799999999998527,
+      "4": 0.31499999999999884,
+      "5": 0.4360000000000164
+    }
+  },
+  "rebases": [
+    {
+      "age_bucket": "7-9",
+      "log_repair_shift": -0.0165676325334978,
+      "target_TLF": 0.228
+    },
+    {
+      "age_bucket": "10-12",
+      "log_repair_shift": -0.01848880732503133,
+      "target_TLF": 0.315
+    },
+    {
+      "age_bucket": "13+",
+      "log_repair_shift": -0.03496094240486869,
+      "target_TLF": 0.436
+    }
+  ],
+  "selected": [
+    {
+      "family": "economics_only",
+      "ri": 4,
+      "vi": -1,
+      "fi": 0,
+      "repair_input_pct": 2.0000000000000018,
+      "value_input_pct": -0.5000000000000004,
+      "low_rank_removed_pct": 0.0,
+      "TLF_7_9_residual_pp": 0.3022431690676064,
+      "TLF_10_12_residual_pp": 0.27590840555632434,
+      "TLF_13plus_residual_pp": -0.49460621711714947,
+      "repair_mean_growth_pct": 0.4519839403777759,
+      "selected_ACV_growth_pct": -0.30032628029698083,
+      "total_loss_growth_pct": 3.289225864299583,
+      "repairable_count_growth_pct": -1.5356104429457784,
+      "reported_claim_growth_pct": 0.0,
+      "score": 7.95455184802523,
+      "inside_screen": false,
+      "cases": 221,
+      "passing_cases": 0,
+      "RPU_growth_pct": 0.07767027077245636,
+      "revenue_growth_pct": 3.369450885707148,
+      "ASP_growth_pct": 0.12732508593609193
+    },
+    {
+      "family": "filing_only",
+      "ri": 0,
+      "vi": 0,
+      "fi": 4,
+      "repair_input_pct": 0.0,
+      "value_input_pct": 0.0,
+      "low_rank_removed_pct": 2.0,
+      "TLF_7_9_residual_pp": -0.13469387755252193,
+      "TLF_10_12_residual_pp": -0.15714285714296672,
+      "TLF_13plus_residual_pp": -0.8102040816309775,
+      "repair_mean_growth_pct": 2.5898715610827905,
+      "selected_ACV_growth_pct": 0.0,
+      "total_loss_growth_pct": 0.0,
+      "repairable_count_growth_pct": -2.933721493323349,
+      "reported_claim_growth_pct": -2.000000000000013,
+      "score": 22.299037876442263,
+      "inside_screen": false,
+      "cases": 13,
+      "passing_cases": 0,
+      "RPU_growth_pct": 0.0,
+      "revenue_growth_pct": 0.0,
+      "ASP_growth_pct": 0.0
+    },
+    {
+      "family": "combined",
+      "ri": 1,
+      "vi": -2,
+      "fi": 2,
+      "repair_input_pct": 0.49999999999998934,
+      "value_input_pct": -1.0000000000000009,
+      "low_rank_removed_pct": 1.0,
+      "TLF_7_9_residual_pp": 0.1799991817526797,
+      "TLF_10_12_residual_pp": 0.17470577286813338,
+      "TLF_13plus_residual_pp": -0.5225376560167694,
+      "repair_mean_growth_pct": 0.8996401638692086,
+      "selected_ACV_growth_pct": -0.8796541356795529,
+      "total_loss_growth_pct": 1.9874554417988355,
+      "repairable_count_growth_pct": -2.39472567817669,
+      "reported_claim_growth_pct": -1.000000000000023,
+      "score": 5.992316069156521,
+      "inside_screen": false,
+      "cases": 2873,
+      "passing_cases": 0,
+      "RPU_growth_pct": -0.26965107723496695,
+      "revenue_growth_pct": 1.7124451695554876,
+      "ASP_growth_pct": -0.6227761420325328
+    }
+  ],
+  "checks": [
+    "2024 age TLF anchor 7-9",
+    "2024 age TLF anchor 10-12",
+    "2024 age TLF anchor 13+",
+    "economics_only revenue identity",
+    "filing_only revenue identity",
+    "combined revenue identity",
+    "filing preserves totals and selected ACV",
+    "minor removal raises both conditional means",
+    "equal cost/value scale preserves totals",
+    "all grid count identities"
+  ],
+  "checks_passed": 10,
+  "sources": {
+    "data/csv/ccc_tl_share_by_age_2020_2025.csv": "f8578c0aed0de5ff19d9dbe9a53cb83b6a97eae5e18d9651f4c35fb929e1fd53",
+    "docs/fleet_selection_2026-09-28/age_constrained_engine_results.json": "8e6f55a8792caf6aa2cb4f4c2d758936ff96e3b2a306c85244db59e4bfd6655b",
+    "model/linked_service_revenue_2026-09-28/inputs.json": "18e80a5aa8c34854b8bc1d9471d7530d7b827349ac51758f13a3d24987e7b591",
+    "model/integrated_service_2026-09-28/assumptions.json": "ed8d1da5ddc03e9a866efe6f944622e1301364694c45f5c46b77fc69f1507baf",
+    "raw/ccc/crash-course-2026.txt": "5760c3c8553159667c78ef08f17cea12a1926d0922b7603e523e8c42fc6f6320",
+    "docs/fleet_selection_2026-09-28/ccc_2026_figure22.webp": "52418f5bca4f8f7f3b4d1850b4c9dc9d349be80b1de6734730b0657fa46b1b51",
+    "model/integrated_service_2026-09-28/joint_claim_selection.py": "3c873640136b13e85e33e232c5f6070eeccef5b476c312dc487d04f7fdccfede"
+  }
+}
