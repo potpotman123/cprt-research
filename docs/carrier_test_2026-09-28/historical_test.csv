@@ -1,0 +1,13 @@
+quarter,pool_case,actual_insurance_yoy,claims_proxy,tlf_relative_change,pool_proxy,carrier_share_yoy,modeled_yoy,error_pp,required_effective_capture_yoy,status,tlf_status
+FY26Q1,fasttrack_collision,-0.095,-0.105,0.041100000000000005,-0.0682155000000001,,,,-0.028745380503753637,Missing prior-year share; cannot backtest,CCC actual
+FY26Q1,ccc_all_coverage,-0.095,-0.077,0.041100000000000005,-0.03906470000000006,,,,-0.05820922594892697,Missing prior-year share; cannot backtest,CCC actual
+FY26Q1,ccc_non_comp,-0.095,-0.057,0.041100000000000005,-0.018242700000000167,,,,-0.07818357958733779,Missing prior-year share; cannot backtest,CCC actual
+FY26Q2,fasttrack_collision,-0.107,-0.115,0.0325,-0.08623749999999997,,,,-0.022721987387313458,Missing prior-year share; cannot backtest,model spread(3Q25)=+2.27
+FY26Q2,ccc_all_coverage,-0.107,-0.077,0.0325,-0.04700249999999995,,,,-0.06295661845912504,Missing prior-year share; cannot backtest,model spread(3Q25)=+2.27
+FY26Q2,ccc_non_comp,-0.107,-0.057,0.0325,-0.026352500000000112,,,,-0.08283028508777546,Missing prior-year share; cannot backtest,model spread(3Q25)=+2.27
+FY26Q3,fasttrack_collision,-0.042,-0.035,0.0388,0.002441999999999833,,,,-0.04433373701421117,Missing prior-year share; cannot backtest,model spread(4Q25)=+3.56 (2/3 mo)
+FY26Q3,ccc_all_coverage,-0.042,-0.035,0.0388,0.002441999999999833,,,,-0.04433373701421117,Missing prior-year share; cannot backtest,model spread(4Q25)=+3.56 (2/3 mo)
+FY26Q3,ccc_non_comp,-0.042,-0.035,0.0388,0.002441999999999833,,,,-0.04433373701421117,Missing prior-year share; cannot backtest,model spread(4Q25)=+3.56 (2/3 mo)
+FY26Q4,fasttrack_collision,-0.075,-0.045,0.04019999999999999,-0.006608999999999976,-0.0650793741645671,-0.07125826458071349,0.37417354192865043,-0.06884600323538259,Conditional retrospective diagnostic; pool populations not matched; Q4 allocation fitted to print,mgmt-cited CCC 2026-09-10
+FY26Q4,ccc_all_coverage,-0.075,-0.045,0.04019999999999999,-0.006608999999999976,-0.0650793741645671,-0.07125826458071349,0.37417354192865043,-0.06884600323538259,Conditional retrospective diagnostic; pool populations not matched; Q4 allocation fitted to print,mgmt-cited CCC 2026-09-10
+FY26Q4,ccc_non_comp,-0.075,-0.045,0.04019999999999999,-0.006608999999999976,-0.0650793741645671,-0.07125826458071349,0.37417354192865043,-0.06884600323538259,Conditional retrospective diagnostic; pool populations not matched; Q4 allocation fitted to print,mgmt-cited CCC 2026-09-10

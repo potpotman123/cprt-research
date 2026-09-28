@@ -1,0 +1,66 @@
+{
+  "source_sha256": "a6da3581569c037cfa6d86e3c3b9a89181d0aacf3ead2e0735e2327215a717bb",
+  "q4_history": [
+    {
+      "quarter": "FY26Q4",
+      "pool_case": "fasttrack_collision",
+      "actual_insurance_yoy": -0.075,
+      "claims_proxy": -0.045,
+      "tlf_relative_change": 0.04019999999999999,
+      "pool_proxy": -0.006608999999999976,
+      "carrier_share_yoy": -0.0650793741645671,
+      "modeled_yoy": -0.07125826458071349,
+      "error_pp": 0.37417354192865043,
+      "required_effective_capture_yoy": -0.06884600323538259,
+      "status": "Conditional retrospective diagnostic; pool populations not matched; Q4 allocation fitted to print",
+      "tlf_status": "mgmt-cited CCC 2026-09-10"
+    },
+    {
+      "quarter": "FY26Q4",
+      "pool_case": "ccc_all_coverage",
+      "actual_insurance_yoy": -0.075,
+      "claims_proxy": -0.045,
+      "tlf_relative_change": 0.04019999999999999,
+      "pool_proxy": -0.006608999999999976,
+      "carrier_share_yoy": -0.0650793741645671,
+      "modeled_yoy": -0.07125826458071349,
+      "error_pp": 0.37417354192865043,
+      "required_effective_capture_yoy": -0.06884600323538259,
+      "status": "Conditional retrospective diagnostic; pool populations not matched; Q4 allocation fitted to print",
+      "tlf_status": "mgmt-cited CCC 2026-09-10"
+    },
+    {
+      "quarter": "FY26Q4",
+      "pool_case": "ccc_non_comp",
+      "actual_insurance_yoy": -0.075,
+      "claims_proxy": -0.045,
+      "tlf_relative_change": 0.04019999999999999,
+      "pool_proxy": -0.006608999999999976,
+      "carrier_share_yoy": -0.0650793741645671,
+      "modeled_yoy": -0.07125826458071349,
+      "error_pp": 0.37417354192865043,
+      "required_effective_capture_yoy": -0.06884600323538259,
+      "status": "Conditional retrospective diagnostic; pool populations not matched; Q4 allocation fitted to print",
+      "tlf_status": "mgmt-cited CCC 2026-09-10"
+    }
+  ],
+  "h1_revenue_delta_musd": {
+    "Friend base": 0.0,
+    "Freeze all at FY26Q4": 12.961255860815527,
+    "PGR runoff only; fixed carrier mix": 3.829008676291892
+  },
+  "q1_q3_required_capture_range": {
+    "FY26Q1": [
+      -0.07818357958733779,
+      -0.028745380503753637
+    ],
+    "FY26Q2": [
+      -0.08283028508777546,
+      -0.022721987387313458
+    ],
+    "FY26Q3": [
+      -0.04433373701421117,
+      -0.04433373701421117
+    ]
+  }
+}

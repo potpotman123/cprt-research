@@ -1,0 +1,13 @@
+quarter,case,allocation_level,allocation_yoy,insurance_revenue_musd,service_revenue_delta_vs_friend_musd,scope
+FY27Q1,Friend base,0.5612940349355037,-0.06939040745605807,730.3196473172663,0.0,"Prototype frozen claim/damage/RPU and 90% dollar split; mechanical comparison, not forecast"
+FY27Q1,Freeze all at FY26Q4,0.5657796044226044,-0.06195346044984584,736.155981434398,5.836334117131628,"Prototype frozen claim/damage/RPU and 90% dollar split; mechanical comparison, not forecast"
+FY27Q1,PGR runoff only; fixed carrier mix,0.5622705135135135,-0.06777143366505023,731.5901783514809,1.270531034214514,"Prototype frozen claim/damage/RPU and 90% dollar split; mechanical comparison, not forecast"
+FY27Q2,Friend base,0.5603044474815725,-0.06791468154713198,729.1344127556375,0.0,"Prototype frozen claim/damage/RPU and 90% dollar split; mechanical comparison, not forecast"
+FY27Q2,Freeze all at FY26Q4,0.5657796044226044,-0.058806573582079635,736.2593344993214,7.124921743683899,"Prototype frozen claim/damage/RPU and 90% dollar split; mechanical comparison, not forecast"
+FY27Q2,PGR runoff only; fixed carrier mix,0.5622705135135135,-0.06464406448935578,731.6928903977149,2.558477642077378,"Prototype frozen claim/damage/RPU and 90% dollar split; mechanical comparison, not forecast"
+FY27Q3,Friend base,0.5545345830006143,-0.04783432101540985,721.5638273732934,0.0,"Prototype frozen claim/damage/RPU and 90% dollar split; mechanical comparison, not forecast"
+FY27Q3,Freeze all at FY26Q4,0.5657796044226044,-0.028526014940919886,736.1959187610669,14.632091387773471,"Prototype frozen claim/damage/RPU and 90% dollar split; mechanical comparison, not forecast"
+FY27Q3,PGR runoff only; fixed carrier mix,0.5622705135135135,-0.034551312605843876,731.6298679779696,10.066040604676232,"Prototype frozen claim/damage/RPU and 90% dollar split; mechanical comparison, not forecast"
+FY27Q4,Friend base,0.5487965405405405,-0.030017101622805353,713.9861656757058,0.0,"Prototype frozen claim/damage/RPU and 90% dollar split; mechanical comparison, not forecast"
+FY27Q4,Freeze all at FY26Q4,0.5657796044226044,0.0,736.0811895449108,22.095023869204965,"Prototype frozen claim/damage/RPU and 90% dollar split; mechanical comparison, not forecast"
+FY27Q4,PGR runoff only; fixed carrier mix,0.5622705135135135,-0.006202222352415854,731.5158503379225,17.52968466221671,"Prototype frozen claim/damage/RPU and 90% dollar split; mechanical comparison, not forecast"
