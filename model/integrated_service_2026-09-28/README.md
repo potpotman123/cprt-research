@@ -1,5 +1,7 @@
 # Integrated quarterly service-revenue research model
 
+**Vintage shares integrated in a parallel comparison:** [VINTAGE_BODY_INTEGRATION.md](VINTAGE_BODY_INTEGRATION.md) feeds the acquired historical subtype shares through frozen survival, damage selection and fees. H1 carrier-neutral fleet contribution is −$0.544m versus +$0.290m previously. Updated base calibration drift remains visible; production inputs are not silently replaced.
+
 **Fleet workstream:** [FLEET_COHORT_BUILD.md](FLEET_COHORT_BUILD.md) and `fleet_cohort_build.py` provide a parallel carrier-neutral build with explicit single-age claim activity, age/body selection and revenue attribution. It corrects the activity convention for evaluation but is not yet substituted into production. Historical light-truck subtype shares remain fixed, so a distinct crossover-transition thesis is not yet represented.
 
 **Current driver ownership:** [DRIVER_ATTRIBUTION.md](DRIVER_ATTRIBUTION.md) separates the inherited carrier comparison from additional forward runoff and non-capture changes. The provisional H1 decline is overwhelmingly capture-driven; do not attribute it to fleet economics or ancillary saturation. `driver_attribution.py` produces an exact, order-dependent quarterly bridge without changing inputs.

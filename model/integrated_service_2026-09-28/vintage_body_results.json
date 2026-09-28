@@ -1,0 +1,87 @@
+{
+  "H1_carrier_neutral": {
+    "fixed_split_service_delta_musd": 0.2896423600386289,
+    "vintage_split_service_delta_musd": -0.5435391442001105,
+    "vintage_minus_fixed_musd": -0.8331815042387394
+  },
+  "CY2025_level_comparison": {
+    "fixed_split": {
+      "fleet_thousands": 292831.74875551346,
+      "claim_mass": 1.0,
+      "total_loss_mass": 0.2288379048986698,
+      "TLF": 0.2288379048986698,
+      "ASP": 3040.985780676717,
+      "allin_RPU": 906.5115405594112,
+      "service_mass": 207.44420170808118
+    },
+    "vintage_split": {
+      "fleet_thousands": 292831.7487555137,
+      "claim_mass": 1.0,
+      "total_loss_mass": 0.22849456858211084,
+      "TLF": 0.22849456858211084,
+      "ASP": 3057.213051591362,
+      "allin_RPU": 908.7611783644611,
+      "service_mass": 207.64699339455822
+    }
+  },
+  "max_vintage_TLF_calibration_gap_pp": 0.0740845761307507,
+  "checks_passed": 40,
+  "checks": [
+    "fixed_splitFY2026Q1 units times RPU",
+    "fixed_splitFY2026Q2 units times RPU",
+    "fixed_splitFY2026Q3 units times RPU",
+    "fixed_splitFY2026Q4 units times RPU",
+    "fixed_splitFY2027Q1 units times RPU",
+    "fixed_splitFY2027Q2 units times RPU",
+    "fixed_splitFY2027Q3 units times RPU",
+    "fixed_splitFY2027Q4 units times RPU",
+    "vintage_splitFY2026Q1 units times RPU",
+    "vintage_splitFY2026Q2 units times RPU",
+    "vintage_splitFY2026Q3 units times RPU",
+    "vintage_splitFY2026Q4 units times RPU",
+    "vintage_splitFY2027Q1 units times RPU",
+    "vintage_splitFY2027Q2 units times RPU",
+    "vintage_splitFY2027Q3 units times RPU",
+    "vintage_splitFY2027Q4 units times RPU",
+    "0 total surviving fleet preserved",
+    "1 total surviving fleet preserved",
+    "2 total surviving fleet preserved",
+    "3 total surviving fleet preserved",
+    "4 total surviving fleet preserved",
+    "5 total surviving fleet preserved",
+    "6 total surviving fleet preserved",
+    "7 total surviving fleet preserved",
+    "Constant-share adapter reproduces original stock and claims",
+    "fixed_split4 growth identity",
+    "vintage_split4 growth identity",
+    "fixed_split5 growth identity",
+    "vintage_split5 growth identity",
+    "fixed_split6 growth identity",
+    "vintage_split6 growth identity",
+    "fixed_split7 growth identity",
+    "vintage_split7 growth identity",
+    "0 old TLF calibration reproduced",
+    "1 old TLF calibration reproduced",
+    "2 old TLF calibration reproduced",
+    "3 old TLF calibration reproduced",
+    "4 old TLF calibration reproduced",
+    "5 old TLF calibration reproduced",
+    "Fixed case reproduces previous cohort bridge"
+  ],
+  "source_hashes": {
+    "docs/historical_body_births_2026-09-28/candidate_body_births.csv": "8c983b66db41ec3170c20a510fcd166b917d9b3d9f0a2f39d9b5a13871d6f0f4",
+    "model/linked_service_revenue_2026-09-28/inputs.json": "18e80a5aa8c34854b8bc1d9471d7530d7b827349ac51758f13a3d24987e7b591",
+    "docs/fleet_selection_2026-09-28/age_constrained_engine_results.json": "8e6f55a8792caf6aa2cb4f4c2d758936ff96e3b2a306c85244db59e4bfd6655b",
+    "model/integrated_service_2026-09-28/assumptions.json": "ed8d1da5ddc03e9a866efe6f944622e1301364694c45f5c46b77fc69f1507baf",
+    "model/integrated_service_2026-09-28/vintage_body_integration.py": "b90bf1bb361e12be57755053f6dffca4598e0ac0edf1853bc17ef03e6648cf87"
+  },
+  "status": "Integrated candidate comparison; production forecast unchanged; fixed original calibration corrections and cell economics",
+  "limitations": [
+    "Model-year production shares transferred to existing sales births",
+    "SUV combines car/truck regulatory classes; not separate crossover vs traditional SUV",
+    "All vans mapped to inherited minivan economics",
+    "2025-27 subtype mix held at final 2024",
+    "No calibration refit; base-year target drift exposed",
+    "No carrier or adoption changes; 90% insurance revenue share assumed"
+  ]
+}
