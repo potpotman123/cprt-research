@@ -1,0 +1,116 @@
+{
+  "source_sha256": "18e80a5aa8c34854b8bc1d9471d7530d7b827349ac51758f13a3d24987e7b591",
+  "scope": "Fixed FY26Q4 claim weights and allocation; core auction service revenue only. Hypothetical uniform 5% shocks, not forecasts; no re-fitting or dollar re-anchoring.",
+  "baseline_2048": {
+    "raw_units": 45092.95755597923,
+    "raw_core_revenue": 36879166.708337225,
+    "core_rpu": 817.8475910025362,
+    "asp": 2761.1327425425943,
+    "tlf": 0.23284396062646368
+  },
+  "convergence": {
+    "9": {
+      "raw_units": 45119.56319715641,
+      "raw_core_revenue": 36828560.57836786,
+      "core_rpu": 816.2437304067014,
+      "asp": 2769.7022596508514,
+      "tlf": 0.2329813426746252
+    },
+    "512": {
+      "raw_units": 45093.79492103302,
+      "raw_core_revenue": 36877469.679574914,
+      "core_rpu": 817.7947707473655,
+      "asp": 2761.140269002992,
+      "tlf": 0.2328482844811448
+    },
+    "4096": {
+      "raw_units": 45093.109049760074,
+      "raw_core_revenue": 36878932.83112037,
+      "core_rpu": 817.8396568403525,
+      "asp": 2761.1212304226788,
+      "tlf": 0.232844742886352
+    }
+  },
+  "scenario_changes_pct": {
+    "repair_minus_5pct": {
+      "raw_units": -4.098078815209427,
+      "core_rpu": -0.4641992450235777,
+      "raw_core_revenue": -4.5432548093123355,
+      "asp": -0.9207451692453739
+    },
+    "repair_plus_5pct": {
+      "raw_units": 3.9926376741148406,
+      "core_rpu": 0.4433479787573136,
+      "raw_core_revenue": 4.453686931299461,
+      "asp": 0.8885797583276123
+    },
+    "value_minus_5pct": {
+      "raw_units": 4.200173518594141,
+      "core_rpu": -1.944746176411949,
+      "raw_core_revenue": 2.1737446282766637,
+      "asp": -4.112976465735196
+    },
+    "value_plus_5pct": {
+      "raw_units": -3.9019007747626455,
+      "core_rpu": 1.8210907114644126,
+      "raw_core_revenue": -2.1518672158779895,
+      "asp": 4.079922779545564
+    },
+    "both_plus_5pct": {
+      "raw_units": 2.220446049250313e-14,
+      "core_rpu": 2.2974034822259126,
+      "raw_core_revenue": 2.297403482225957,
+      "asp": 4.99999999999996
+    }
+  },
+  "car_cohort_inputs": [
+    {
+      "age_bucket": "current_year_or_newer",
+      "car_acv_assumed": 27182.818284590452,
+      "car_repair_median_fitted": 3054.4164160642013,
+      "car_repair_mean_latent_fitted": 10478.881101764735
+    },
+    {
+      "age_bucket": "1-3",
+      "car_acv_assumed": 22255.409284924677,
+      "car_repair_median_fitted": 2724.1262840424783,
+      "car_repair_mean_latent_fitted": 9345.744505084964
+    },
+    {
+      "age_bucket": "4-6",
+      "car_acv_assumed": 16487.212707001283,
+      "car_repair_median_fitted": 2851.455564465565,
+      "car_repair_mean_latent_fitted": 9782.577015318155
+    },
+    {
+      "age_bucket": "7-9",
+      "car_acv_assumed": 12214.027581601698,
+      "car_repair_median_fitted": 3173.903313315398,
+      "car_repair_mean_latent_fitted": 10888.808504894483
+    },
+    {
+      "age_bucket": "10-12",
+      "car_acv_assumed": 9048.374180359595,
+      "car_repair_median_fitted": 3458.414643210478,
+      "car_repair_mean_latent_fitted": 11864.890345731748
+    },
+    {
+      "age_bucket": "13+",
+      "car_acv_assumed": 4965.853037914095,
+      "car_repair_median_fitted": 3132.6567258722794,
+      "car_repair_mean_latent_fitted": 10747.302558489533
+    }
+  ],
+  "checks": "Nine-state baseline matches saved validator; units-times-RPU identity; common repair/value scale preserves units.",
+  "selected_repairable_mean_check": {
+    "age_0_to_6": {
+      "model_mean": 3897.292954351946,
+      "CCC_2025_reference": 5721
+    },
+    "age_7_plus": {
+      "model_mean": 2406.5177068347252,
+      "CCC_2025_reference": 3682
+    }
+  },
+  "selected_repairable_mean_caveat": "FY26Q4 model mixture versus CY2025 all-loss reference; directional cross-check, not matched-population error. CCC raw report line 277. No repair-cost scale refitted."
+}
