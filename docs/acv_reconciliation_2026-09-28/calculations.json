@@ -1,0 +1,12 @@
+{
+  "source_sha256": "a7ceba5f7c1d20253f0b6d5d31f8964368546d85979021d56dab3de1db96b19e",
+  "source": "/Users/kwu/cprt/data/csv/acv_14d9_projections.csv",
+  "first_consolidated_month_assumption": "2027-01",
+  "fy27_acv_revenue_musd": 562.3333333333334,
+  "fy28_acv_revenue_musd": 1052.6666666666667,
+  "fy27_acv_source_defined_ufcf_musd": -56.583333333333336,
+  "capiq_fy27_total_revenue_quarter_sum_musd": 4860.97,
+  "capiq_plus_acv_if_all_contributors_exclude_acv_musd": 5423.303333333333,
+  "warning": "CapIQ acquisition perimeter unverified; illustrative addition must not be labelled consensus.",
+  "checks": "Quarter mapping, fiscal sums, zero pre-close revenue, and missing CY26 FCF propagation passed."
+}
