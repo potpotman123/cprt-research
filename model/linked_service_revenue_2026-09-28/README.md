@@ -1,6 +1,6 @@
 # Linked service-revenue model: first working research version
 
-**Current completion status:** see [architecture audit](../../docs/ARCHITECTURE_COMPLETION_AUDIT_2026-09-28.md). This remains the original prototype; the newer age-constrained repair engine and proposed simplified carrier path are separate components. Complete integration and revenue-perimeter checks before thesis-delta tests. The implementation/default descriptions below describe this prototype, not adopted forecasts.
+**Current completion status:** this original prototype is superseded as the integration reference by the [new analytical model](../integrated_service_2026-09-28/README.md). That package connects the age-constrained engine and simplified carrier path, with explicit assumptions and historical residuals. Neither package is an adopted forecast. The implementation/default descriptions below describe this original prototype.
 
 Created 28 September 2026. User authorized data sourcing and implementation, retaining approval for expensive collection and analysis. Work here uses local source records and a small deterministic engine; no listing scrape, OCR, paid acquisition, or provider outreach. Browser connection to CapIQ found an expired session; user prefers attaching exports. No CapIQ estimates were obtained or inserted.
 

@@ -1,6 +1,6 @@
 # CPRT: current research and model handoff
 
-**28 September status:** Read [the architecture completion audit](ARCHITECTURE_COMPLETION_AUDIT_2026-09-28.md) first. The quarterly prototype and newer age-constrained repair/value component are not yet integrated. User direction: complete the coherent model before thesis-delta or consensus-impact tests. This handoff preserves historical context and the approved presentation structure.
+**28 September status:** The [architecture audit](ARCHITECTURE_COMPLETION_AUDIT_2026-09-28.md) has been followed by an [integrated analytical model](../model/integrated_service_2026-09-28/README.md) connecting the age-constrained engine and simplified carrier path. Read that package and its Fable handoff first. It is a provisional legacy-service build with structural checks, not a validated forecast; historical errors and missing acquired-service classification remain explicit. This older handoff preserves research context and the approved presentation structure.
 
 Updated 27 September 2026. Read this before the older `HANDOFF.md` and `MODEL_BLUEPRINT.md` for the current scope. This records research rationale, executed work, definitions, findings, corrections and remaining decisions. It does not elevate assumptions into evidence.
 

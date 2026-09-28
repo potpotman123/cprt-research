@@ -1,0 +1,81 @@
+period,carrier,total_loss_weight_proxy,allocation,capture_contribution,status
+FY2026Q1,State Farm,0.18706824324324323,0.5,0.09353412162162161,Historical inherited path
+FY2026Q1,Progressive,0.181325,0.25,0.04533125,Historical inherited path
+FY2026Q1,GEICO,0.11666621621621621,0.83,0.09683295945945945,Historical inherited path
+FY2026Q1,Allstate,0.1025858108108108,0.95,0.09745652027027026,Historical inherited path
+FY2026Q1,USAA,0.06235608108108108,0.95,0.059238277027027025,Historical inherited path
+FY2026Q1,Farmers,0.03821824324324324,0.9,0.03439641891891891,Historical inherited path
+FY2026Q1,Liberty Mutual,0.03318952702702703,0.7,0.023232668918918918,Historical inherited path
+FY2026Q1,Travelers,0.020114864864864867,0.85,0.017097635135135136,Historical inherited path
+FY2026Q1,Nationwide,0.015086148648648648,0.95,0.014331841216216215,Historical inherited path
+FY2026Q1,"Other (Erie, AAA, AmFam, regionals)",0.24338986486486486,0.5,0.12169493243243243,Historical inherited path
+FY2026Q2,State Farm,0.186,0.5,0.093,Historical inherited path
+FY2026Q2,Progressive,0.186,0.25,0.0465,Historical inherited path
+FY2026Q2,GEICO,0.116,0.83,0.09628,Historical inherited path
+FY2026Q2,Allstate,0.102,0.95,0.09689999999999999,Historical inherited path
+FY2026Q2,USAA,0.062,0.95,0.058899999999999994,Historical inherited path
+FY2026Q2,Farmers,0.038,0.9,0.0342,Historical inherited path
+FY2026Q2,Liberty Mutual,0.033,0.7,0.0231,Historical inherited path
+FY2026Q2,Travelers,0.02,0.85,0.017,Historical inherited path
+FY2026Q2,Nationwide,0.015,0.95,0.014249999999999999,Historical inherited path
+FY2026Q2,"Other (Erie, AAA, AmFam, regionals)",0.24199999999999997,0.5,0.12099999999999998,Historical inherited path
+FY2026Q3,State Farm,0.1852002457002457,0.5,0.09260012285012285,Historical inherited path
+FY2026Q3,Progressive,0.18950000000000003,0.1590909090909091,0.030147727272727277,Historical inherited path
+FY2026Q3,GEICO,0.11550122850122851,0.83,0.09586601965601967,Historical inherited path
+FY2026Q3,Allstate,0.10156142506142506,0.95,0.0964833538083538,Historical inherited path
+FY2026Q3,USAA,0.06173341523341523,0.95,0.05864674447174447,Historical inherited path
+FY2026Q3,Farmers,0.03783660933660934,0.9,0.0340529484029484,Historical inherited path
+FY2026Q3,Liberty Mutual,0.03285810810810812,0.7,0.02300067567567568,Historical inherited path
+FY2026Q3,Travelers,0.019914004914004916,0.85,0.01692690417690418,Historical inherited path
+FY2026Q3,Nationwide,0.014935503685503686,0.95,0.0141887285012285,Historical inherited path
+FY2026Q3,"Other (Erie, AAA, AmFam, regionals)",0.24095945945945946,0.5,0.12047972972972973,Historical inherited path
+FY2026Q4,State Farm,0.1844004914004914,0.5,0.0922002457002457,Historical inherited path
+FY2026Q4,Progressive,0.19300000000000003,0.06818181818181818,0.01315909090909091,Historical inherited path
+FY2026Q4,GEICO,0.11500245700245701,0.854,0.09821209828009829,Historical inherited path
+FY2026Q4,Allstate,0.1011228501228501,0.95,0.09606670761670759,Historical inherited path
+FY2026Q4,USAA,0.06146683046683046,0.95,0.05839348894348894,Historical inherited path
+FY2026Q4,Farmers,0.03767321867321867,0.9,0.033905896805896805,Historical inherited path
+FY2026Q4,Liberty Mutual,0.03271621621621622,0.7,0.02290135135135135,Historical inherited path
+FY2026Q4,Travelers,0.019828009828009828,0.85,0.016853808353808352,Historical inherited path
+FY2026Q4,Nationwide,0.014871007371007371,0.95,0.014127457002457001,Historical inherited path
+FY2026Q4,"Other (Erie, AAA, AmFam, regionals)",0.2399189189189189,0.5,0.11995945945945945,Historical inherited path
+FY2027Q1,State Farm,0.1844004914004914,0.5,0.0922002457002457,PGR path only; other Q4 weights/allocations fixed
+FY2027Q1,Progressive,0.19300000000000003,0.04999999999999999,0.009649999999999999,PGR path only; other Q4 weights/allocations fixed
+FY2027Q1,GEICO,0.11500245700245701,0.854,0.09821209828009829,PGR path only; other Q4 weights/allocations fixed
+FY2027Q1,Allstate,0.1011228501228501,0.95,0.09606670761670759,PGR path only; other Q4 weights/allocations fixed
+FY2027Q1,USAA,0.06146683046683046,0.95,0.05839348894348894,PGR path only; other Q4 weights/allocations fixed
+FY2027Q1,Farmers,0.03767321867321867,0.9,0.033905896805896805,PGR path only; other Q4 weights/allocations fixed
+FY2027Q1,Liberty Mutual,0.03271621621621622,0.7,0.02290135135135135,PGR path only; other Q4 weights/allocations fixed
+FY2027Q1,Travelers,0.019828009828009828,0.85,0.016853808353808352,PGR path only; other Q4 weights/allocations fixed
+FY2027Q1,Nationwide,0.014871007371007371,0.95,0.014127457002457001,PGR path only; other Q4 weights/allocations fixed
+FY2027Q1,"Other (Erie, AAA, AmFam, regionals)",0.2399189189189189,0.5,0.11995945945945945,PGR path only; other Q4 weights/allocations fixed
+FY2027Q2,State Farm,0.1844004914004914,0.5,0.0922002457002457,PGR path only; other Q4 weights/allocations fixed
+FY2027Q2,Progressive,0.19300000000000003,0.04999999999999999,0.009649999999999999,PGR path only; other Q4 weights/allocations fixed
+FY2027Q2,GEICO,0.11500245700245701,0.854,0.09821209828009829,PGR path only; other Q4 weights/allocations fixed
+FY2027Q2,Allstate,0.1011228501228501,0.95,0.09606670761670759,PGR path only; other Q4 weights/allocations fixed
+FY2027Q2,USAA,0.06146683046683046,0.95,0.05839348894348894,PGR path only; other Q4 weights/allocations fixed
+FY2027Q2,Farmers,0.03767321867321867,0.9,0.033905896805896805,PGR path only; other Q4 weights/allocations fixed
+FY2027Q2,Liberty Mutual,0.03271621621621622,0.7,0.02290135135135135,PGR path only; other Q4 weights/allocations fixed
+FY2027Q2,Travelers,0.019828009828009828,0.85,0.016853808353808352,PGR path only; other Q4 weights/allocations fixed
+FY2027Q2,Nationwide,0.014871007371007371,0.95,0.014127457002457001,PGR path only; other Q4 weights/allocations fixed
+FY2027Q2,"Other (Erie, AAA, AmFam, regionals)",0.2399189189189189,0.5,0.11995945945945945,PGR path only; other Q4 weights/allocations fixed
+FY2027Q3,State Farm,0.1844004914004914,0.5,0.0922002457002457,PGR path only; other Q4 weights/allocations fixed
+FY2027Q3,Progressive,0.19300000000000003,0.04999999999999999,0.009649999999999999,PGR path only; other Q4 weights/allocations fixed
+FY2027Q3,GEICO,0.11500245700245701,0.854,0.09821209828009829,PGR path only; other Q4 weights/allocations fixed
+FY2027Q3,Allstate,0.1011228501228501,0.95,0.09606670761670759,PGR path only; other Q4 weights/allocations fixed
+FY2027Q3,USAA,0.06146683046683046,0.95,0.05839348894348894,PGR path only; other Q4 weights/allocations fixed
+FY2027Q3,Farmers,0.03767321867321867,0.9,0.033905896805896805,PGR path only; other Q4 weights/allocations fixed
+FY2027Q3,Liberty Mutual,0.03271621621621622,0.7,0.02290135135135135,PGR path only; other Q4 weights/allocations fixed
+FY2027Q3,Travelers,0.019828009828009828,0.85,0.016853808353808352,PGR path only; other Q4 weights/allocations fixed
+FY2027Q3,Nationwide,0.014871007371007371,0.95,0.014127457002457001,PGR path only; other Q4 weights/allocations fixed
+FY2027Q3,"Other (Erie, AAA, AmFam, regionals)",0.2399189189189189,0.5,0.11995945945945945,PGR path only; other Q4 weights/allocations fixed
+FY2027Q4,State Farm,0.1844004914004914,0.5,0.0922002457002457,PGR path only; other Q4 weights/allocations fixed
+FY2027Q4,Progressive,0.19300000000000003,0.04999999999999999,0.009649999999999999,PGR path only; other Q4 weights/allocations fixed
+FY2027Q4,GEICO,0.11500245700245701,0.854,0.09821209828009829,PGR path only; other Q4 weights/allocations fixed
+FY2027Q4,Allstate,0.1011228501228501,0.95,0.09606670761670759,PGR path only; other Q4 weights/allocations fixed
+FY2027Q4,USAA,0.06146683046683046,0.95,0.05839348894348894,PGR path only; other Q4 weights/allocations fixed
+FY2027Q4,Farmers,0.03767321867321867,0.9,0.033905896805896805,PGR path only; other Q4 weights/allocations fixed
+FY2027Q4,Liberty Mutual,0.03271621621621622,0.7,0.02290135135135135,PGR path only; other Q4 weights/allocations fixed
+FY2027Q4,Travelers,0.019828009828009828,0.85,0.016853808353808352,PGR path only; other Q4 weights/allocations fixed
+FY2027Q4,Nationwide,0.014871007371007371,0.95,0.014127457002457001,PGR path only; other Q4 weights/allocations fixed
+FY2027Q4,"Other (Erie, AAA, AmFam, regionals)",0.2399189189189189,0.5,0.11995945945945945,PGR path only; other Q4 weights/allocations fixed

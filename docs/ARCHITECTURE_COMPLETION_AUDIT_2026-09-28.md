@@ -1,5 +1,7 @@
 # Architecture completion audit
 
+**Implementation follow-through:** [integrated model](../model/integrated_service_2026-09-28/README.md) now closes Stages A–D for a provisional legacy-service model, with explicit assumptions and sale-equivalent timing. See its [component closure ledger](../model/integrated_service_2026-09-28/COMPLETION_STATUS.md). The audit below records the pre-integration findings. Acquisition classification and predictive validation remain unresolved; historical errors are visible.
+
 28 September 2026. Governing priority: complete a coherent quarterly service-revenue model before testing thesis deltas, consensus gaps or stock-price implications. This audit is read-only inspection of existing research, prototype formulas and source inventories. No new model scenario, backtest, materiality screen or forecast was run. Excel design remains with Fable.
 
 ## Executive finding
