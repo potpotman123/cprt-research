@@ -2,6 +2,8 @@
 
 Follow-up: [delivery evidence update](DELIVERY_EVIDENCE_UPDATE.md) traces the 20% margin to a JPMorgan industry analogy, identifies possible automatic-delivery fee offsets, and records the user's analysis-in-Git / Excel-in-Fable workflow. Neither margin nor adoption is independently measured.
 
+Actual-disclosure search: [scope and result](DELIVERY_DISCLOSURE_SEARCH.md). No usable delivery revenue level, completed-vehicle count or adoption rate found in the checked filings, calls and supplied research. General logistics movement counts are not delivery-product counts.
+
 28 September 2026. Fee-band catalyst work is parked at the user's request. This pass resumes the operating model: existing local transcripts and small arithmetic only, no new collection or Excel changes.
 
 ## Findings and source attribution
