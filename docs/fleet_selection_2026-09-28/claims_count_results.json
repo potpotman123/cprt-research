@@ -1,0 +1,35 @@
+{
+  "source": "raw/ccc/crash-course-2026.txt",
+  "sha256": "5760c3c8553159667c78ef08f17cea12a1926d0922b7603e523e8c42fc6f6320",
+  "source_locations": "lines 183-184: valuations and TLF; line 264: repairables",
+  "period": "CY2025 versus CY2024",
+  "status": "Count proxies disclosed; common-population identities fail to reconcile. Do not adopt inferred counts as observed.",
+  "results": [
+    {
+      "scope": "all_categories",
+      "reported_tlf_start_pct": 22.3,
+      "reported_tlf_end_pct": 23.1,
+      "reported_valuation_count_change_pct": -2.9,
+      "reported_repairable_volume_change_pct": -9.7,
+      "conditional_tlf_from_count_proxies_pct": 23.583259635533523,
+      "tlf_gap_pp": 0.48325963553352,
+      "conditional_all_claim_count_change_pct": -8.183600000000002,
+      "conditional_repairable_change_from_valuations_and_tlf_pct": -7.227890042175766,
+      "conditional_total_loss_count_change_from_repairables_and_tlf_pct": -5.487435782304195,
+      "matched_claim_count_break_even_change_pct": -3.463203463203468
+    },
+    {
+      "scope": "non_comprehensive",
+      "reported_tlf_start_pct": 22.9,
+      "reported_tlf_end_pct": 23.9,
+      "reported_valuation_count_change_pct": -0.2,
+      "reported_repairable_volume_change_pct": -8,
+      "conditional_tlf_from_count_proxies_pct": 24.36840388031501,
+      "tlf_gap_pp": 0.4684038803150131,
+      "conditional_all_claim_count_change_pct": -6.213800000000003,
+      "conditional_repairable_change_from_valuations_and_tlf_pct": -5.615995094128701,
+      "conditional_total_loss_count_change_from_repairables_and_tlf_pct": -2.720805191973308,
+      "matched_claim_count_break_even_change_pct": -4.184100418410042
+    }
+  ]
+}

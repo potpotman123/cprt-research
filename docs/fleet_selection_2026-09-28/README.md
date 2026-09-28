@@ -2,6 +2,8 @@
 
 Completed next step: [age versus within-group historical recheck](AGE_VERSUS_WITHIN_BUCKET.md). Existing CCC data support changes within broad age groups as the dominant component of the recent conditional reconstruction; they do not isolate repair inflation or prove a demographic reversal.
 
+Count check completed: [claims counts and denominator](CLAIMS_COUNTS_AND_DENOMINATOR.md). CCC reports 2025 valuation volumes -2.9% all-category / -0.2% non-comprehensive despite higher TLF. Count-proxy and TLF populations do not reconcile exactly; retain independent validation targets.
+
 28 September 2026. Delivery research is parked at the user's instruction. It remains an explicitly assumed component pending evidence; no additional delivery sourcing, quote collection or adoption calibration is needed now. Spreadsheet construction remains with Fable.
 
 ## Question and method

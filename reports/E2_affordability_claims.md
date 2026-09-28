@@ -1,5 +1,7 @@
 # E2 — Insurance affordability → filing behaviour → the claims term
 
+**2026-09-28 interpretation update:** the claims that the industry decline is ending and that deductible effects reverse specifically in mid-2027 are not established by the descriptive carrier series/correlations below. Progressive frequency is not an industry claim count, and a selected lag is not a causal forecast. See [CCC count/population check](../docs/fleet_selection_2026-09-28/CLAIMS_COUNTS_AND_DENOMINATOR.md). Preserve these historical results as exploratory evidence rather than adopting the stated forward timing.
+
 *2026-09-26. Requests: 48 to sec.gov (Progressive CIK 80661: older filings index + 47 10-Q/10-K primary documents 2015–2026, ~150 MB,
 descriptive UA). Data: `data/csv/pgr_frequency_quarterly.csv` (every number with its source sentence), `claims_term_drivers.csv`.
 Scripts: `scripts/experiments/e2_pgr_frequency.py`, `e2_affordability_claims.py`. Usage: ~90k tokens.*
