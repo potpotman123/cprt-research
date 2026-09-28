@@ -77,7 +77,7 @@
     "Acquisition classification adapter works",
     "Bundled title not billed twice"
   ],
-  "max_fee_integration_relative_error": 1.6816294337029802e-06,
+  "max_fee_integration_relative_error": 2.007507666657027e-06,
   "not_tested": [
     "Predictive validity",
     "True service adoption and unit levels",
@@ -85,9 +85,9 @@
     "Economic thesis impact or consensus gap"
   ],
   "historical_US_residual_musd": [
-    46.985504279756356,
-    89.29826450895996,
-    18.919973431560834,
+    47.87911211204266,
+    89.88910213761017,
+    19.214478765770878,
     0.0
   ],
   "historical_international_residual_musd": [

@@ -7,11 +7,13 @@ HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[1];N=NormalDist()
 OLD=ROOT/'model/linked_service_revenue_2026-09-28/inputs.json'
 ECON=ROOT/'docs/fleet_selection_2026-09-28/age_constrained_engine_results.json'
 ACQ=ROOT/'data/csv/acv_14d9_projections.csv'
+BIRTHS=ROOT/'docs/historical_body_births_2026-09-28/candidate_body_births.csv'
 def load():return json.loads(OLD.read_text()),json.loads(ECON.read_text()),json.loads((HERE/'assumptions.json').read_text())
 def close(a,b):return math.isclose(a,b,rel_tol=1e-9,abs_tol=1e-7)
 def validate_config(c):
     if c['timing_mode']!='sale_equivalent_no_additional_lag':raise ValueError('Physical inventory requires assignment-based capture, opening cohorts and exits; not silently enabled.')
-    if c['claims_mode']!='fleet_exposure_proxy_times_reported_frequency':raise ValueError('Unsupported claims convention')
+    if c['claims_mode'] not in ['fleet_exposure_proxy_times_reported_frequency','corrected_cohort_mass_times_reported_frequency']:raise ValueError('Unsupported claims convention')
+    if c.get('fleet_body_mode','fixed_split') not in ['fixed_split','vintage_proxy']:raise ValueError('Unsupported body mapping')
     if c.get('claims_frequency_convention')!='combined_baseline_relative_change_excluding_incremental_nonfiling':
         raise ValueError('Claims multiplier must exclude separately modeled incremental nonfiling')
     filing=c.get('incremental_repairable_nonfiling',[])
@@ -67,21 +69,33 @@ def stock(d,weights):
         fleet+=qty;raw[r['body'],r['bucket']]+=qty*r['relative_claim_weight']
     return fleet,raw
 
+def fleet_data(d,c):
+    if c.get('fleet_body_mode','fixed_split')=='fixed_split':return d
+    import copy
+    with BIRTHS.open() as f:births={(int(r['year']),r['body']):float(r['births_thousands']) for r in csv.DictReader(f)}
+    out=copy.deepcopy(d);out['split']=[1,1,1,1]
+    for r in out['fleet']:
+        name=['Car','SUV','Pickup','Van'][r['body']]
+        r['births']=[births[y-r['age'],name] for y in range(2023,2028)]
+    return out
+
 def run(d,e,c):
     validate_config(c);drivers=c['quarter_drivers'];base=c['base_period_index'];historical=[]
     stock0,raw0=stock(d,[0,0,1,0,0])
+    active_fleet=fleet_data(d,c)
     cw0={(b,k):e['relative_claim_weights'][k]*e['body_weights'][str(k)][b] for b in range(4) for k in range(6)}
     norm=sum(cw0.values());cw0={key:v/norm for key,v in cw0.items()}
     seasonal_us=[r['us_service']/d['prior_actuals'][3]['us_service'] for r in d['prior_actuals']]
     seasonal_int=[r['intl_service']/d['prior_actuals'][3]['intl_service'] for r in d['prior_actuals']]
     cache={};quarters=[];cohort_rows=[];carrier_rows=[]
     for p,period in enumerate(d['periods']):
-        fy,q=period['fy'],period['q'];fq=f'FY{fy}Q{q}';sf,raw=stock(d,period['weights'])
+        fy,q=period['fy'],period['q'];fq=f'FY{fy}Q{q}';sf,raw=stock(active_fleet,period['weights'])
         adjusted={key:cw0[key]*raw[key]/raw0[key] for key in cw0}
         z=sum(adjusted.values());weights={key:v/z for key,v in adjusted.items()}
         assert close(sum(weights.values()),1)
-        # Scale is applied later once; fleet totals and composition are separate.
-        claims=sf/stock0*seasonal_us[q-1]*drivers['reported_claim_frequency'][p]
+        # Fixed original calibration corrections; no refit to the vintage mapping.
+        activity=z if c['claims_mode']=='corrected_cohort_mass_times_reported_frequency' else sf/stock0
+        claims=activity*seasonal_us[q-1]*drivers['reported_claim_frequency'][p]
         key=(drivers['repair_cost'][p],drivers['vehicle_value'][p])
         if key not in cache:cache[key]=economics(d,e,c,*key)
         eco=cache[key];carrier_total=sum(x['weights'][p if p<4 else base] for x in d['carriers'])
@@ -174,7 +188,7 @@ def main():
         for r in rows:
             controls.append({'period':f'FY{r["fy"]}Q{r["q"]}','end':r['end'],'us_service_musd':r['us_service'],'intl_service_musd':r['intl_service'],'legacy_service_musd':r['us_service']+r['intl_service'],'excluded_purchased_vehicle_revenue_musd':r['us_vehicle']+r['intl_vehicle'],'source':r['source'],'status':'Reported dollar control; insurance split not disclosed here'})
     save_csv('historical_controls.csv',controls)
-    paths=[OLD,ECON,HERE/'assumptions.json',ACQ,HERE/'engine.py']
+    paths=[OLD,ECON,HERE/'assumptions.json',ACQ,HERE/'engine.py',BIRTHS]
     manifest={'version':c['version'],'scope':c['scope'],'source_hashes':{str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in paths},'normalization':{'period':'FY26Q4','claim_scale':result['claim_scale'],'observed_absolute_units':False},'unresolved':['Claims/population compatibility','Coverage and true exposure','Service base decomposition','Within-old-age values and salvage recovery','Carrier path not observed assignment share','Acquired service classification'], 'structural_status':'Legacy model connected with explicit assumptions; no predictive validation claimed.'}
     (HERE/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
     print(json.dumps({'quarters':len(result['quarters']),'cohort_rows':len(result['cohorts']),'legacy_complete':True,'postclose_consolidated_available':False,'historical_us_residuals':[r['us_residual_musd'] for r in result['quarters'][:4]]}))

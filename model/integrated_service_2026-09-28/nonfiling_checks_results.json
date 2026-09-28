@@ -73,8 +73,8 @@
   ],
   "status": "Synthetic integration checks; no estimated nonfiling rates or forecast changes",
   "example_FY27Q1": {
-    "baseline_TLF": 0.22874497884526865,
-    "TLF": 0.24786141492652883,
+    "baseline_TLF": 0.22833208981858968,
+    "TLF": 0.24742509003387872,
     "incremental_repairable_nonfiling": 0.1
   }
 }

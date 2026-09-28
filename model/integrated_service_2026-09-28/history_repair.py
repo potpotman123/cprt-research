@@ -91,7 +91,7 @@ def main():
     rows=build(d,c,result);bridge=operating_bridge(d)
     m.save_csv('reconciled_quarterly_service.csv',rows)
     m.save_csv('historical_operating_bridge.csv',bridge)
-    paths=[m.OLD,m.ECON,m.HERE/'assumptions.json',m.HERE/'engine.py',m.HERE/'history_repair.py',m.ROOT/'docs/legacy_foundation_2026-09-28/HISTORICAL_BRIDGE.md']
+    paths=[m.OLD,m.ECON,m.BIRTHS,m.HERE/'assumptions.json',m.HERE/'engine.py',m.HERE/'history_repair.py',m.ROOT/'docs/legacy_foundation_2026-09-28/HISTORICAL_BRIDGE.md']
     (m.HERE/'history_repair_manifest.json').write_text(json.dumps({
         'version':'same-quarter-driver-bridge-v2',
         'source_hashes':{str(p.relative_to(m.ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in paths},

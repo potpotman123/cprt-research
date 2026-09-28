@@ -4,13 +4,14 @@
   "source_hashes": {
     "model/linked_service_revenue_2026-09-28/inputs.json": "18e80a5aa8c34854b8bc1d9471d7530d7b827349ac51758f13a3d24987e7b591",
     "docs/fleet_selection_2026-09-28/age_constrained_engine_results.json": "8e6f55a8792caf6aa2cb4f4c2d758936ff96e3b2a306c85244db59e4bfd6655b",
-    "model/integrated_service_2026-09-28/assumptions.json": "ed8d1da5ddc03e9a866efe6f944622e1301364694c45f5c46b77fc69f1507baf",
+    "model/integrated_service_2026-09-28/assumptions.json": "a5247106423da9061fdebe1409e085ecfa94c2b0e60c9e50d086747d2ee003a2",
     "data/csv/acv_14d9_projections.csv": "a7ceba5f7c1d20253f0b6d5d31f8964368546d85979021d56dab3de1db96b19e",
-    "model/integrated_service_2026-09-28/engine.py": "86bf4c3a0a3da47a276b55a37cbd9767193285f42480ccd3da1e7d6dd7d4368d"
+    "model/integrated_service_2026-09-28/engine.py": "8f06ed12586d0ee60fc916c295dbf376a1fcd7d03ab66901777a37435cfd76c8",
+    "docs/historical_body_births_2026-09-28/candidate_body_births.csv": "8c983b66db41ec3170c20a510fcd166b917d9b3d9f0a2f39d9b5a13871d6f0f4"
   },
   "normalization": {
     "period": "FY26Q4",
-    "claim_scale": 6268842.628679846,
+    "claim_scale": 6266819.06156912,
     "observed_absolute_units": false
   },
   "unresolved": [
