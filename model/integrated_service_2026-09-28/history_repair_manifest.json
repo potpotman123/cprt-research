@@ -1,0 +1,18 @@
+{
+  "version": "same-quarter-driver-bridge-v2",
+  "source_hashes": {
+    "model/linked_service_revenue_2026-09-28/inputs.json": "18e80a5aa8c34854b8bc1d9471d7530d7b827349ac51758f13a3d24987e7b591",
+    "docs/fleet_selection_2026-09-28/age_constrained_engine_results.json": "8e6f55a8792caf6aa2cb4f4c2d758936ff96e3b2a306c85244db59e4bfd6655b",
+    "model/integrated_service_2026-09-28/assumptions.json": "ed8d1da5ddc03e9a866efe6f944622e1301364694c45f5c46b77fc69f1507baf",
+    "model/integrated_service_2026-09-28/engine.py": "86bf4c3a0a3da47a276b55a37cbd9767193285f42480ccd3da1e7d6dd7d4368d",
+    "model/integrated_service_2026-09-28/history_repair.py": "3b79ab7fe7307452d1502fab611a5b3bd2a4fe7561ef33fea12c2b4720e8c293",
+    "docs/legacy_foundation_2026-09-28/HISTORICAL_BRIDGE.md": "09a4d8fdec98983acd32c0fbcaf758124bce417a681ad01b4c3751ce2e235d90"
+  },
+  "status": "Historical accounting controls repaired; causal reconstruction remains unresolved",
+  "assumption": "Same-quarter reported revenue is the base; unmodeled historical level differences persist proportionately for one year",
+  "historical_insurance_share": 0.9,
+  "insurance_share_status": "Same 90% assumption transferred to each historical quarter; not disclosed",
+  "absolute_unit_levels_identified": false,
+  "predictive_validation_passed": false,
+  "acquisition": "Excluded from revised legacy table; existing acquisition_gate.csv remains separate"
+}

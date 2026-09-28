@@ -1,5 +1,7 @@
 # Closure against the architecture audit
 
+**Historical repair update:** `HISTORY_REPAIR.md` separates reported history, accounting unit/RPU attribution, the original failed reconstruction, and the new same-quarter forecast bridge. This corrects the presentation and forward baseline convention. It does not complete empirical reconstruction, identify physical units, or validate the inherited carrier capture path. The closure table below describes the original raw engine; its seasonal-template and single-Q4-normalization conventions no longer govern headline forecast dollars.
+
 This is a completion ledger, not an evidence-quality score. “Integrated” can include a declared assumption. Review INPUT_REGISTER.md for measurement status.
 
 | Audit ID | Closure in this revision |

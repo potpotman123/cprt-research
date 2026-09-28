@@ -1,5 +1,7 @@
 # Fable handoff — integrated analytical model
 
+**Revision: historical baseline repair.** Read `HISTORY_REPAIR.md` first. For RPM Summary use `reconciled_quarterly_service.csv`: history is reported geography revenue; forward revenue applies modeled same-quarter driver ratios to reported bases. The old `quarterly_results.csv` is a separate diagnostic, not the current headline forecast. Use `historical_operating_bridge.csv` to display the available YoY fee-unit/RPU bridge. Do not convert those YoY observations into sequential levels or insurance-only units. Historical insurance revenue remains unknown; forecast base insurance shares are assumptions. Expose anchor-to-raw-base ratios and their persistence assumption. No claim of repaired causal reconstruction or newly measured downside is authorized by this adapter. The original four-view mapping below is retained for the raw engine; this paragraph overrides its summary forecast mapping and unique-normalization description.
+
 Read README.md and INPUT_REGISTER.md before presenting outputs. The delivered model is executable Python + JSON/CSV, not a redesigned workbook. Preserve formulas and assumptions if translating it; do not merely paste one forecast case as unexplained hardcodes. Source/model dollars are in millions; dollar-per-vehicle outputs are in dollars.
 
 ## Four primary views

@@ -1,5 +1,9 @@
 # Integrated quarterly service-revenue research model
 
+**Current presentation baseline:** [HISTORY_REPAIR.md](HISTORY_REPAIR.md). Use `reconciled_quarterly_service.csv` for reported history and provisional same-quarter forecast bridges, plus `historical_operating_bridge.csv` for unit/RPU attribution. `quarterly_results.csv` is retained as the original absolute reconstruction and diagnostic. Its historical errors remain unresolved; its forecast dollars are superseded for presentation. The original integration description below documents that diagnostic engine.
+
+After running the engine, run `history_repair.py` and `check_history_repair.py` from this directory using the same Python runtime shown below. The new adapter does not identify absolute operating units; see its explicit base-transfer assumption and manifest.
+
 28 September 2026. First integrated revision after the architecture audit. No Excel authoring, paid access, OCR, scraping or external outreach. Runs locally with Python standard library in seconds.
 
 ## Delivered

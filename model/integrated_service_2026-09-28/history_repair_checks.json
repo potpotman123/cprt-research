@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "checks_passed": 22,
+  "checks": [
+    "FY2026Q1US accounting attribution reconciles",
+    "FY2026Q2US accounting attribution reconciles",
+    "FY2026Q3US accounting attribution reconciles",
+    "FY2026Q4US accounting attribution reconciles",
+    "FY2026Q1International accounting attribution reconciles",
+    "FY2026Q2International accounting attribution reconciles",
+    "FY2026Q3International accounting attribution reconciles",
+    "FY2026Q4International accounting attribution reconciles",
+    "Missing US Q4 split remains missing",
+    "Original historical reconstruction errors preserved",
+    "No invented historical insurance revenue split",
+    "FY2027Q1 branch sum",
+    "FY2027Q1 units times RPU bridge",
+    "FY2027Q2 branch sum",
+    "FY2027Q2 units times RPU bridge",
+    "FY2027Q3 branch sum",
+    "FY2027Q3 units times RPU bridge",
+    "FY2027Q4 branch sum",
+    "FY2027Q4 units times RPU bridge",
+    "Old revenue seasonal proxy cannot drive revised forecasts",
+    "Unchanged operating drivers produce unchanged same-quarter revenue",
+    "Capture decline applied once to insurance, not other branches"
+  ],
+  "limitation": "Adapter correctness, not historical causal identification or predictive validation"
+}
