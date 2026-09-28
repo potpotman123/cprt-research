@@ -1,3 +1,5 @@
 # Standing research instructions
 
+For each substantive assignment, apply the bounded end-to-end workflow in section 4 of RESEARCH_PRINCIPLES.md. Preserve broad discovery and rigorous competing explanations while limiting unnecessary retrieval, repeated searches and documentation. New chats must recover current project state from relevant handoffs and evidence files; do not assume conversation history is available.
+
 Read [RESEARCH_PRINCIPLES.md](RESEARCH_PRINCIPLES.md) before planning or extending research. These user-requested principles apply to future work in this repository: explain the end-to-end pipeline and compare alternatives; deliberately broaden discovery across actors, disciplines and data-generating processes. Keep searches bounded, preserve provenance, and obtain user approval before expensive computation, bulk scraping, OCR or paid collection. Routine cheap work remains authorized. Do not mistake these instructions for permission to contact third parties or launch other agents.

@@ -36,3 +36,21 @@ Record exact queries, URLs/files, access/publication dates where known, relevant
 Separate validation of arithmetic from validation of the economic mechanism. Do not adopt a forecast coefficient merely because it makes a historical result fit. Preserve uncertainty and evidence that challenges the preferred long/short direction.
 
 Current division of work: analytical calculations and provenance here; spreadsheet presentation through Fable unless the user requests otherwise. Do not spend effort rebuilding presentation artifacts to perform calculations that are cheaper in small reproducible scripts.
+
+## 4. Bounded end-to-end execution and token efficiency
+
+Default assignment template, adopted by the user on 28 September 2026:
+
+> Investigate this missing input end-to-end. Check existing work first, run one bounded discovery pass across several plausible source types, assess the strongest evidence and competing explanations, and update the provenance. Stop the research expansion if further progress requires expensive collection or weak proxies. Report what changed, what remains uncertain, and whether the evidence can enter the model.
+
+This template complements sections 1–3; efficiency must not become narrow or confirmation-seeking research. Use abductive reasoning: generate plausible explanations, ask which evidence differentiates them, and update confidence without forcing a long or short conclusion.
+
+- Batch related retrieval, assessment, calculation and documentation into one coherent assignment. Do not require the user to authorize each routine step. Avoid bundling unrelated research directions merely to make a larger prompt.
+- Begin with a bounded pass, typically 4–6 well-chosen queries spanning different source families, then selectively open the strongest evidence. These are defaults, not rigid quotas. Additional work should follow a concrete lead or necessary verification, not a repeating search loop with low information gain.
+- Inventory local work first. Read relevant sections, filter large tool outputs, and avoid pulling whole documents or scripts into context unnecessarily. Retain exact provenance and sufficient calculation detail to reproduce material findings.
+- Distinguish cheap machine computation from low usage: searches, returned text, repeated reasoning, generated code and lengthy writeups all consume model resources. Do not describe a task as low-usage solely because its numerical calculation is small.
+- Use compact incremental provenance entries for small updates rather than duplicative multi-page reports. Keep necessary definitions, denominators, population/period mismatches, failure modes and competing interpretations explicit.
+- Higher reasoning is most useful for architecture, conflicting evidence, identifying selection effects or double counting, and challenging an integrated thesis. Routine collection and extraction do not automatically justify Ultra. Do not silently change settings or launch agents.
+- When further progress requires expensive work, explain the proposed end-to-end steps, alternatives, uncertain cost, expected information gain and stopping rule, then obtain approval. Do not invent precision about token costs. If only weak proxies remain, identify the gap rather than promote them into facts; a user-authorized assumption or sensitivity must remain labeled.
+
+New-chat continuity: read AGENTS.md and this file, inspect the relevant current handoff and latest evidence/results, and identify the unresolved question before doing new work. Durable files preserve the workflow and research state; they are not proof that a new chat remembers the full conversation. The general workflow is also installed locally in `/Users/kwu/.codex/AGENTS.md`; that local file does not travel with a Git clone.
