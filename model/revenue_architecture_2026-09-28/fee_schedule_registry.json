@@ -1,0 +1,10 @@
+{
+  "sep2026_snapshot": {
+    "path": "data/csv/copart_fee_grid_2026-09.csv",
+    "status": "observed",
+    "source": "raw/fees/live_2026-09/README.txt",
+    "observed_on": "2026-09-26",
+    "effective_from": null,
+    "warning": "Observation date is not an effective date. Historical use is a proxy. Search-engine page extraction mixes $79 and $95 gate sections; retain saved selection-specific evidence pending a new verified vintage."
+  }
+}

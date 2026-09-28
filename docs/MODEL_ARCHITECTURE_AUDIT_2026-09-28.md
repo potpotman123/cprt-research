@@ -2,6 +2,8 @@
 
 28 September 2026. Current decision document; supersedes earlier statements that the provisional engine's structural closure meant the investment-model architecture was finished. Read alongside the standing research principles. This is an audit and implementation specification, not a forecast revision or investment recommendation.
 
+**Implementation update:** the six work packages have now received a bounded execution pass in [revenue_architecture_2026-09-28/README.md](../model/revenue_architecture_2026-09-28/README.md). It documents implemented relationships, 43 checks, new named service-revenue benchmarks, complete conditional scenarios, and the evidence gaps that could not be resolved. The audit below is the original specification; consult that implementation report for current closure and the two prioritized thesis directions. No validated point forecast is claimed.
+
 ## 1. Answer and scope
 
 **The model is not finished. The central gap is not a shortage of equations: several relationships needed to test the theses are missing, and several quantities the model treats as known are only calibrated or assumed.** A connected spreadsheet or a zero accounting residual cannot resolve those problems.

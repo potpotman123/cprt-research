@@ -1,5 +1,7 @@
 # Closure against the architecture audit
 
+**Executed follow-up:** the successor's [implementation/closure table](../revenue_architecture_2026-09-28/README.md) records the new structural repairs and remaining empirical gaps. The audit specification is no longer merely a plan; current results and limitations are in that successor directory.
+
 **Current status: architecture is not yet complete for thesis attribution.** The governing audit is [MODEL_ARCHITECTURE_AUDIT_2026-09-28.md](../../docs/MODEL_ARCHITECTURE_AUDIT_2026-09-28.md). It documents missing carrier-to-economics, salvage-demand, event-timing and dated-fee relationships, as well as unidentified levels. The closure ledger below records implementation of an earlier provisional specification; it does not supersede the new completion gates. No operating forecast was changed by the audit.
 
 **Historical repair update:** `HISTORY_REPAIR.md` separates reported history, accounting unit/RPU attribution, the original failed reconstruction, and the new same-quarter forecast bridge. This corrects the presentation and forward baseline convention. It does not complete empirical reconstruction, identify physical units, or validate the inherited carrier capture path. The closure table below describes the original raw engine; its seasonal-template and single-Q4-normalization conventions no longer govern headline forecast dollars.

@@ -1,0 +1,21 @@
+{
+  "jpm_source": "/Users/kwu/Documents/ChatGPT/HFAC x Citadel/research/cprt_discovery_plan_2026-09-26/sources/2026-09-11-CPRT.OQ-JPMorgan-Copart, Inc. F4Q Miss Amidst Ongoing Cost Investments but Re...-124345098.txt",
+  "jpm_sha256": "e8c2dbaabb435ccdf6b80eaa2ca9fd9cd43d48ab52873f6608f93aed9582905c",
+  "jpm_agency_row": 276,
+  "jpm_principal_row": 277,
+  "jpm_total_row": 278,
+  "jpm_quarter_row": 359,
+  "jpm_fy27_service_musd": 4061.0,
+  "jpm_fy27_purchased_musd": 721.0,
+  "jpm_fy27_total_musd": 4782.0,
+  "jpm_quarter_sum_musd": 4783.0,
+  "rounding_difference_musd": 1.0,
+  "service_growth_vs_reported_FY26": 0.0230456075293739,
+  "capiq_minus_jpm_fy27_musd": 78.97000000000025,
+  "quarterly_jpm_service": "Not disclosed in extracted summary; do not allocate annual agency forecast as observed quarters",
+  "absolute_insurance_units_identified": false,
+  "insurance_service_fraction_identified": false,
+  "title_delivery_levels_identified": false,
+  "independent_equations": "Observed US service total alone cannot identify core insurance, other core, title and delivery levels",
+  "external_research": "See EVIDENCE_UPDATE.md for bounded primary-source pass and disconfirming observations"
+}

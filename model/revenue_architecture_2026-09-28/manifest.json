@@ -1,0 +1,16 @@
+{
+  "status": "Executable conditional architecture; evidence limitations remain",
+  "sources": {
+    "model/revenue_architecture_2026-09-28/model.py": "4ee1fa7ac8e13f15eb4ecc8350520d0bc9c147333cedddd60f3855799f9ecd41",
+    "model/revenue_architecture_2026-09-28/run.py": "5391e0b24152c455c506423a70399861dde3b0d0679bcc3151b9c8ee37ee1681",
+    "model/revenue_architecture_2026-09-28/evidence.py": "6fb68b30446fb5592ec6e931c117af50ddbfdbd66ea6a0594a2a5081a0a0f2c6",
+    "model/revenue_architecture_2026-09-28/fee_schedule_registry.json": "15874cfbf5861048f8171fd95c5fd488ef6288ec80236254cd54af1810f0f630",
+    "model/linked_service_revenue_2026-09-28/inputs.json": "18e80a5aa8c34854b8bc1d9471d7530d7b827349ac51758f13a3d24987e7b591",
+    "docs/fleet_selection_2026-09-28/age_constrained_engine_results.json": "8e6f55a8792caf6aa2cb4f4c2d758936ff96e3b2a306c85244db59e4bfd6655b",
+    "docs/historical_body_births_2026-09-28/candidate_body_births.csv": "8c983b66db41ec3170c20a510fcd166b917d9b3d9f0a2f39d9b5a13871d6f0f4",
+    "model/integrated_service_2026-09-28/assumptions.json": "a5247106423da9061fdebe1409e085ecfa94c2b0e60c9e50d086747d2ee003a2",
+    "docs/consensus_review_2026-09-28/total_revenue_consensus.csv": "5ef545dca2928267b7f366da91c316a080df33e1efb2d7c29e3ca5ccd13133bb"
+  },
+  "scenarios": 15,
+  "no_legacy_outputs_overwritten": true
+}

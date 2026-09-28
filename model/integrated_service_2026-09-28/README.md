@@ -1,5 +1,7 @@
 # Integrated quarterly service-revenue research model
 
+**Successor implementation:** [../revenue_architecture_2026-09-28/README.md](../revenue_architecture_2026-09-28/README.md) contains the executed audit repairs and conditional scenario outputs. This directory is preserved for reproducibility and comparison. Its original historical reconstruction and evidence limitations remain visible; the successor does not claim to have independently validated those inputs.
+
 **Current governing audit:** [MODEL_ARCHITECTURE_AUDIT_2026-09-28.md](../../docs/MODEL_ARCHITECTURE_AUDIT_2026-09-28.md) separates missing architecture from missing evidence and specifies the six completion work packages. Current outputs remain provisional, not thesis-supported forecasts. Earlier progress notes below are historical: consult `CONNECTED_ARCHITECTURE.md` and the governing audit for the implemented cohort state and remaining limitations.
 
 **Within-age evidence check:** [WITHIN_AGE_ECONOMICS.md](WITHIN_AGE_ECONOMICS.md) tests existing repair/value proxies against historical TLF, conditional repair costs and a pure filing-selection alternative. The mechanism can be material, but no tested input pairing jointly validates the observed outcomes; no FY27 economic drivers are adopted from this screen.
