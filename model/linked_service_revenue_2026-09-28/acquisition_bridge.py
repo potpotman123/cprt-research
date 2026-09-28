@@ -27,7 +27,7 @@ for start in [(2026, 11), (2027, 1), (2027, 4)]:
             fcf = None if any(not projections[y]['unlevered_fcf_musd'] for y, m in active) else sum(float(projections[y]['unlevered_fcf_musd']) / 12 for y, m in active)
             rows.append(dict(first_consolidated_month=f'{start[0]}-{start[1]:02}', fiscal_period=f'FY{fy}Q{q}', consolidated_months=len(active), revenue_musd=revenue, adjusted_ebitda_ex_sbc_musd=ebitda, source_defined_ufcf_musd=fcf, status='Management standalone projection; uniform monthly timing assumption'))
 with (OUT / 'acquisition_timing.csv').open('w') as f:
-    writer = csv.DictWriter(f, fieldnames=rows[0].keys()); writer.writeheader(); writer.writerows(rows)
+    writer = csv.DictWriter(f, fieldnames=rows[0].keys(), lineterminator='\n'); writer.writeheader(); writer.writerows(rows)
 
 jan = [r for r in rows if r['first_consolidated_month']=='2027-01']
 assert abs(sum(r['revenue_musd'] for r in jan[:4]) - 964*7/12) < 1e-8
