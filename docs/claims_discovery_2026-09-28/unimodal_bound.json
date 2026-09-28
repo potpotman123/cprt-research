@@ -1,0 +1,56 @@
+{
+  "status": "Shape-only ceiling, not empirical fit; no baseline TLF constraint",
+  "results": [
+    {
+      "assumed_peak_age": 18,
+      "unimodal_0_to_1_upper_pp": 0.014129212886478115,
+      "maximizing_interval": [
+        13,
+        33
+      ]
+    },
+    {
+      "assumed_peak_age": 19,
+      "unimodal_0_to_1_upper_pp": 0.04423411912536368,
+      "maximizing_interval": [
+        19,
+        33
+      ]
+    },
+    {
+      "assumed_peak_age": 20,
+      "unimodal_0_to_1_upper_pp": 0.22715312323019904,
+      "maximizing_interval": [
+        20,
+        33
+      ]
+    },
+    {
+      "assumed_peak_age": 21,
+      "unimodal_0_to_1_upper_pp": 0.22715312323019904,
+      "maximizing_interval": [
+        20,
+        33
+      ]
+    },
+    {
+      "assumed_peak_age": 22,
+      "unimodal_0_to_1_upper_pp": 0.22715312323019904,
+      "maximizing_interval": [
+        20,
+        33
+      ]
+    }
+  ],
+  "method": "A bounded nonnegative curve increasing to a fixed peak then decreasing is a layer-cake mixture of interval indicators containing the peak. Max interval mass change bounds any such fixed common curve.",
+  "inputs": "model/integrated_service_2026-09-28/within_13plus_single_age.csv",
+  "sha256": "f72e01cca72236e4afe43d940825e24bd52fcd82501f3c046c0732f2c691f746",
+  "checks_passed": 22,
+  "limitations": [
+    "CY2020 source motivates shape but cannot establish CY2024-25 curve",
+    "Single common age curve, no body-specific shape changes",
+    "No digitized HLDI chart values adopted",
+    "Fitted claim weights and survival unchanged",
+    "Age tail to 45 is modeled; HLDI comparison curve extends only to 30"
+  ]
+}

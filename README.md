@@ -6,6 +6,9 @@ reference model) is gitignored and never committed.**
 
 ## Start here
 
+**Standing research instructions:** read [RESEARCH_PRINCIPLES.md](RESEARCH_PRINCIPLES.md) for end-to-end method explanations, explicit alternatives, broader discovery and cost gates.
+
+
 | Read | For |
 |---|---|
 | **`NEXT_STEPS_FOR_OTHER_CLAUDE_FABLE.md`** | **For a second Fable session with a fresh budget:** the expensive experiments, each specified end to end (goal, the explanation being tested, steps and why, cost, cheaper alternatives, kill criteria, deliverable). Start here if you were sent this repo to run them. |

@@ -1,0 +1,3 @@
+# Standing research instructions
+
+Read [RESEARCH_PRINCIPLES.md](RESEARCH_PRINCIPLES.md) before planning or extending research. These user-requested principles apply to future work in this repository: explain the end-to-end pipeline and compare alternatives; deliberately broaden discovery across actors, disciplines and data-generating processes. Keep searches bounded, preserve provenance, and obtain user approval before expensive computation, bulk scraping, OCR or paid collection. Routine cheap work remains authorized. Do not mistake these instructions for permission to contact third parties or launch other agents.

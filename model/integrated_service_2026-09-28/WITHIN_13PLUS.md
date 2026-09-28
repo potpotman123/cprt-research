@@ -2,6 +2,10 @@
 
 28 September 2026. Cheap existing-data check, no new data collection or forecast changes. Annual CY2024 and CY2025 cohort snapshots; not observed CCC claim microdata.
 
+## Subsequent evidence qualification
+
+The next broader search found a historical HLDI collision curve that falls beyond about age 20. Thus the common monotone ceiling below is not an empirically established universal restriction. A separate fixed hump-shaped bound still produces a small ceiling under the modeled weights. See [follow-up and qualification](../../docs/claims_discovery_2026-09-28/FOLLOWUP_BREADTH_AND_AGE_SHAPE.md). Neither result validates the actual 2024–25 claim-age distribution.
+
 ## Finding
 
 The existing fleet-cohort assumptions do not support a simple story that the 13+ claim population got older and therefore had higher TLF. Its modeled claims-weighted average age falls from 17.542 to 17.442 years. The fraction aged exactly 13 rises from 15.33% to 17.42%. The unweighted surviving fleet's average age is nearly flat, 19.359 to 19.347.
