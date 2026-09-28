@@ -1,0 +1,38 @@
+{
+  "source": "raw/ccc/crash-course-2024-q4.txt",
+  "source_sha256": "cebbbe843680def25e119802be0964652c5c3b01ca90f7758c1f5a83c38ffc09",
+  "source_location": "line 105; Q4 2024 report, through Q2 2024, annualized exposures",
+  "warning": "Arithmetic within the reported aggregate; not an accident/filing decomposition or a current forecast.",
+  "coverage_rows": [
+    {
+      "coverage": "collision",
+      "exposure_change_pct": -2.0,
+      "paid_claim_count_change_pct": -5.7,
+      "implied_paid_frequency_change_pct": -3.7755102040816335
+    },
+    {
+      "coverage": "property_damage",
+      "exposure_change_pct": -2.7,
+      "paid_claim_count_change_pct": -3.6,
+      "implied_paid_frequency_change_pct": -0.9249743062692661
+    },
+    {
+      "coverage": "comprehensive",
+      "exposure_change_pct": -2.4,
+      "paid_claim_count_change_pct": -2.8,
+      "implied_paid_frequency_change_pct": -0.4098360655737654
+    }
+  ],
+  "collision_to_property_damage_exposure_ratio_change_pct": 0.7194244604316502,
+  "deductible_identification": {
+    "source": "data/csv/ccc_deductible_share_quarterly.csv, 2024Q4 and 2025Q4",
+    "observed_high_deductible_repairable_claim_share_start": 0.245,
+    "observed_high_deductible_repairable_claim_share_end": 0.281,
+    "relative_claim_share_odds_change_pct": 20.436547358860114,
+    "interpretation": "Observed claim odds = covered exposure odds times relative repairable-claim incidence. Neither factor separately identified.",
+    "example_exposure_odds_factor_if_relative_claim_incidence_unchanged": 1.2043654735886011,
+    "example_exposure_odds_factor_if_relative_claim_incidence_falls_10pct": 1.33818385954289,
+    "example_relative_claim_incidence_factor_if_exposure_odds_unchanged": 1.2043654735886011,
+    "status": "Illustrative identification examples, not estimated behavioral changes."
+  }
+}
