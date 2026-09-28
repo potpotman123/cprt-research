@@ -1,0 +1,46 @@
+{
+  "quarterly": [
+    {
+      "period": "Q1 FY27E",
+      "baseline_TLF_pct": 22.83320898185897,
+      "plus5_crossing_share_all_claims_pct": 1.4816177209677317,
+      "plus5_crossing_share_repairables_pct": 1.920019870489911,
+      "plus5_total_loss_growth_pct": 6.48887207288682,
+      "minus5_total_loss_growth_pct": -6.588992592531717
+    },
+    {
+      "period": "Q2 FY27E",
+      "baseline_TLF_pct": 22.826913310673508,
+      "plus5_crossing_share_all_claims_pct": 1.4814235701048144,
+      "plus5_crossing_share_repairables_pct": 1.9196116595265125,
+      "plus5_total_loss_growth_pct": 6.489811171325233,
+      "minus5_total_loss_growth_pct": -6.58996443057619
+    },
+    {
+      "period": "Q3 FY27E",
+      "baseline_TLF_pct": 22.813236342101337,
+      "plus5_crossing_share_all_claims_pct": 1.4798667457145642,
+      "plus5_crossing_share_repairables_pct": 1.9172545596982375,
+      "plus5_total_loss_growth_pct": 6.486877720998763,
+      "minus5_total_loss_growth_pct": -6.587180439029661
+    },
+    {
+      "period": "Q4 FY27E",
+      "baseline_TLF_pct": 22.79729167079471,
+      "plus5_crossing_share_all_claims_pct": 1.4778911354614537,
+      "plus5_crossing_share_repairables_pct": 1.9142995983502005,
+      "plus5_total_loss_growth_pct": 6.482748726484733,
+      "minus5_total_loss_growth_pct": -6.583236997184305
+    }
+  ],
+  "checks_passed": 24,
+  "source_hashes": {
+    "model/linked_service_revenue_2026-09-28/inputs.json": "18e80a5aa8c34854b8bc1d9471d7530d7b827349ac51758f13a3d24987e7b591",
+    "docs/fleet_selection_2026-09-28/age_constrained_engine_results.json": "8e6f55a8792caf6aa2cb4f4c2d758936ff96e3b2a306c85244db59e4bfd6655b",
+    "docs/historical_body_births_2026-09-28/candidate_body_births.csv": "8c983b66db41ec3170c20a510fcd166b917d9b3d9f0a2f39d9b5a13871d6f0f4",
+    "model/integrated_service_2026-09-28/assumptions.json": "a5247106423da9061fdebe1409e085ecfa94c2b0e60c9e50d086747d2ee003a2",
+    "model/integrated_service_2026-09-28/engine.py": "8f06ed12586d0ee60fc916c295dbf376a1fcd7d03ab66901777a37435cfd76c8",
+    "model/integrated_service_2026-09-28/threshold_validation.py": "fde6ec69d132c7ca514424158c96c2cc2c77f1be5fdb5e18152f5d82c4fa82e7"
+  },
+  "status": "Assumed threshold density exposed. External response validation not achieved. No forecast change."
+}
