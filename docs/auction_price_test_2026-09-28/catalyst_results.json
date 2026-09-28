@@ -1,0 +1,315 @@
+{
+  "reference_distribution": {
+    "median": 3500,
+    "log_sigma": 0.8,
+    "preferred_fraction": 0.5,
+    "seller_rate_ASSUMED": 0.04,
+    "fixed_services_ASSUMED": 55
+  },
+  "reference_buyer_fee": 835.5950652136303,
+  "reference_rpu": 1083.3929522206643,
+  "aggregate_tests": [
+    {
+      "price_shift": 0.01,
+      "buyer_fee_delta_usd": 3.3189251240027033,
+      "buyer_growth": 0.0039719300199004635,
+      "jump_component_usd": 2.8128150541774755,
+      "continuous_percentage_component_usd": 0.5061100698252279,
+      "top_five": [
+        {
+          "price_shift": 0.01,
+          "threshold_usd": 3500.0,
+          "buyer_fee_jump_usd": 50.0,
+          "assumed_crossing_fraction": 0.004961881666059875,
+          "mean_buyer_fee_contribution_usd": 0.24809408330299376
+        },
+        {
+          "price_shift": 0.01,
+          "threshold_usd": 3000.0,
+          "buyer_fee_jump_usd": 45.0,
+          "assumed_crossing_fraction": 0.0048647852417422754,
+          "mean_buyer_fee_contribution_usd": 0.2189153358784024
+        },
+        {
+          "price_shift": 0.01,
+          "threshold_usd": 4000.0,
+          "buyer_fee_jump_usd": 42.5,
+          "assumed_crossing_fraction": 0.004898323744923161,
+          "mean_buyer_fee_contribution_usd": 0.20817875915923434
+        },
+        {
+          "price_shift": 0.01,
+          "threshold_usd": 2500.0,
+          "buyer_fee_jump_usd": 37.5,
+          "assumed_crossing_fraction": 0.004530002446669346,
+          "mean_buyer_fee_contribution_usd": 0.16987509175010046
+        },
+        {
+          "price_shift": 0.01,
+          "threshold_usd": 6000.0,
+          "buyer_fee_jump_usd": 40.0,
+          "assumed_crossing_fraction": 0.003970973662388744,
+          "mean_buyer_fee_contribution_usd": 0.15883894649554975
+        }
+      ]
+    },
+    {
+      "price_shift": 0.03,
+      "buyer_fee_delta_usd": 9.901576659734246,
+      "buyer_growth": 0.011849730894716073,
+      "jump_component_usd": 8.354188600435116,
+      "continuous_percentage_component_usd": 1.5473880592991307,
+      "top_five": [
+        {
+          "price_shift": 0.03,
+          "threshold_usd": 3500.0,
+          "buyer_fee_jump_usd": 50.0,
+          "assumed_crossing_fraction": 0.014736966757778913,
+          "mean_buyer_fee_contribution_usd": 0.7368483378889457
+        },
+        {
+          "price_shift": 0.03,
+          "threshold_usd": 3000.0,
+          "buyer_fee_jump_usd": 45.0,
+          "assumed_crossing_fraction": 0.014414540099869921,
+          "mean_buyer_fee_contribution_usd": 0.6486543044941464
+        },
+        {
+          "price_shift": 0.03,
+          "threshold_usd": 4000.0,
+          "buyer_fee_jump_usd": 42.5,
+          "assumed_crossing_fraction": 0.01457800302119372,
+          "mean_buyer_fee_contribution_usd": 0.6195651284007331
+        },
+        {
+          "price_shift": 0.03,
+          "threshold_usd": 2500.0,
+          "buyer_fee_jump_usd": 37.5,
+          "assumed_crossing_fraction": 0.013385229716436797,
+          "mean_buyer_fee_contribution_usd": 0.5019461143663799
+        },
+        {
+          "price_shift": 0.03,
+          "threshold_usd": 6000.0,
+          "buyer_fee_jump_usd": 40.0,
+          "assumed_crossing_fraction": 0.011891975538854571,
+          "mean_buyer_fee_contribution_usd": 0.47567902155418285
+        }
+      ]
+    },
+    {
+      "price_shift": 0.05,
+      "buyer_fee_delta_usd": 16.41373397757286,
+      "buyer_growth": 0.01964316767880443,
+      "jump_component_usd": 13.786172693120056,
+      "continuous_percentage_component_usd": 2.6275612844528045,
+      "top_five": [
+        {
+          "price_shift": 0.05,
+          "threshold_usd": 3500.0,
+          "buyer_fee_jump_usd": 50.0,
+          "assumed_crossing_fraction": 0.024315499675850172,
+          "mean_buyer_fee_contribution_usd": 1.2157749837925085
+        },
+        {
+          "price_shift": 0.05,
+          "threshold_usd": 3000.0,
+          "buyer_fee_jump_usd": 45.0,
+          "assumed_crossing_fraction": 0.023728606795446583,
+          "mean_buyer_fee_contribution_usd": 1.0677873057950962
+        },
+        {
+          "price_shift": 0.05,
+          "threshold_usd": 4000.0,
+          "buyer_fee_jump_usd": 42.5,
+          "assumed_crossing_fraction": 0.024101556173121597,
+          "mean_buyer_fee_contribution_usd": 1.024316137357668
+        },
+        {
+          "price_shift": 0.05,
+          "threshold_usd": 2500.0,
+          "buyer_fee_jump_usd": 37.5,
+          "assumed_crossing_fraction": 0.021974262085830865,
+          "mean_buyer_fee_contribution_usd": 0.8240348282186574
+        },
+        {
+          "price_shift": 0.05,
+          "threshold_usd": 6000.0,
+          "buyer_fee_jump_usd": 40.0,
+          "assumed_crossing_fraction": 0.019781684466403493,
+          "mean_buyer_fee_contribution_usd": 0.7912673786561397
+        }
+      ]
+    }
+  ],
+  "concentration_stress": [
+    {
+      "threshold_usd": 100.0,
+      "jump_usd": 69.5,
+      "crossing_fraction_for_1pct_reference_rpu": 0.15588387801736178
+    },
+    {
+      "threshold_usd": 200.0,
+      "jump_usd": 42.5,
+      "crossing_fraction_for_1pct_reference_rpu": 0.25491598875780336
+    },
+    {
+      "threshold_usd": 400.0,
+      "jump_usd": 27.5,
+      "crossing_fraction_for_1pct_reference_rpu": 0.39396107353478704
+    },
+    {
+      "threshold_usd": 500.0,
+      "jump_usd": 30.0,
+      "crossing_fraction_for_1pct_reference_rpu": 0.36113098407355476
+    },
+    {
+      "threshold_usd": 700.0,
+      "jump_usd": 27.5,
+      "crossing_fraction_for_1pct_reference_rpu": 0.39396107353478704
+    },
+    {
+      "threshold_usd": 1000.0,
+      "jump_usd": 57.5,
+      "crossing_fraction_for_1pct_reference_rpu": 0.1884161656035938
+    },
+    {
+      "threshold_usd": 1500.0,
+      "jump_usd": 25.0,
+      "crossing_fraction_for_1pct_reference_rpu": 0.43335718088826575
+    },
+    {
+      "threshold_usd": 2000.0,
+      "jump_usd": 37.5,
+      "crossing_fraction_for_1pct_reference_rpu": 0.28890478725884383
+    },
+    {
+      "threshold_usd": 2400.0,
+      "jump_usd": 35.0,
+      "crossing_fraction_for_1pct_reference_rpu": 0.30954084349161837
+    },
+    {
+      "threshold_usd": 2500.0,
+      "jump_usd": 37.5,
+      "crossing_fraction_for_1pct_reference_rpu": 0.28890478725884383
+    },
+    {
+      "threshold_usd": 3000.0,
+      "jump_usd": 45.0,
+      "crossing_fraction_for_1pct_reference_rpu": 0.24075398938236986
+    },
+    {
+      "threshold_usd": 3500.0,
+      "jump_usd": 50.0,
+      "crossing_fraction_for_1pct_reference_rpu": 0.21667859044413287
+    },
+    {
+      "threshold_usd": 4000.0,
+      "jump_usd": 42.5,
+      "crossing_fraction_for_1pct_reference_rpu": 0.25491598875780336
+    },
+    {
+      "threshold_usd": 4500.0,
+      "jump_usd": 25.0,
+      "crossing_fraction_for_1pct_reference_rpu": 0.43335718088826575
+    },
+    {
+      "threshold_usd": 5000.0,
+      "jump_usd": 25.0,
+      "crossing_fraction_for_1pct_reference_rpu": 0.43335718088826575
+    },
+    {
+      "threshold_usd": 5500.0,
+      "jump_usd": 25.0,
+      "crossing_fraction_for_1pct_reference_rpu": 0.43335718088826575
+    },
+    {
+      "threshold_usd": 6000.0,
+      "jump_usd": 40.0,
+      "crossing_fraction_for_1pct_reference_rpu": 0.2708482380551661
+    },
+    {
+      "threshold_usd": 7000.0,
+      "jump_usd": 35.0,
+      "crossing_fraction_for_1pct_reference_rpu": 0.30954084349161837
+    },
+    {
+      "threshold_usd": 8000.0,
+      "jump_usd": 40.0,
+      "crossing_fraction_for_1pct_reference_rpu": 0.2708482380551661
+    },
+    {
+      "threshold_usd": 10000.0,
+      "jump_usd": 42.5,
+      "crossing_fraction_for_1pct_reference_rpu": 0.25491598875780336
+    },
+    {
+      "threshold_usd": 15000.0,
+      "jump_usd": 67.5,
+      "crossing_fraction_for_1pct_reference_rpu": 0.16050265958824658
+    }
+  ],
+  "prototype_node_tests": [
+    {
+      "within_node_uniform_halfwidth": 0,
+      "price_shift": 0.01,
+      "buyer_fee_growth": 0.0041394124411306965
+    },
+    {
+      "within_node_uniform_halfwidth": 0,
+      "price_shift": 0.03,
+      "buyer_fee_growth": 0.011692951706394838
+    },
+    {
+      "within_node_uniform_halfwidth": 0,
+      "price_shift": 0.05,
+      "buyer_fee_growth": 0.02703262960236641
+    },
+    {
+      "within_node_uniform_halfwidth": 0.025,
+      "price_shift": 0.01,
+      "buyer_fee_growth": 0.0029161958463668203
+    },
+    {
+      "within_node_uniform_halfwidth": 0.025,
+      "price_shift": 0.03,
+      "buyer_fee_growth": 0.012581813347879667
+    },
+    {
+      "within_node_uniform_halfwidth": 0.025,
+      "price_shift": 0.05,
+      "buyer_fee_growth": 0.02275617598946189
+    },
+    {
+      "within_node_uniform_halfwidth": 0.05,
+      "price_shift": 0.01,
+      "buyer_fee_growth": 0.004071352323006483
+    },
+    {
+      "within_node_uniform_halfwidth": 0.05,
+      "price_shift": 0.03,
+      "buyer_fee_growth": 0.011390567649143701
+    },
+    {
+      "within_node_uniform_halfwidth": 0.05,
+      "price_shift": 0.05,
+      "buyer_fee_growth": 0.019346358033647038
+    },
+    {
+      "within_node_uniform_halfwidth": 0.1,
+      "price_shift": 0.01,
+      "buyer_fee_growth": 0.003894092841339347
+    },
+    {
+      "within_node_uniform_halfwidth": 0.1,
+      "price_shift": 0.03,
+      "buyer_fee_growth": 0.011488560509029133
+    },
+    {
+      "within_node_uniform_halfwidth": 0.1,
+      "price_shift": 0.05,
+      "buyer_fee_growth": 0.019074017574082447
+    }
+  ],
+  "interpretation": "Thresholds are real. Aggregate timing/concentration and within-node price dispersion are assumptions, not measured catalysts."
+}
