@@ -1,0 +1,194 @@
+{
+  "status": "Revised research component; constrained hybrid-population calibration, not independently validated forecast.",
+  "source_sha256": "18e80a5aa8c34854b8bc1d9471d7530d7b827349ac51758f13a3d24987e7b591",
+  "age_value_source": "age_value_holdout_results.json; CCC Figure 6 through October 2025 noncomp",
+  "TLmix": [
+    0.021,
+    0.107,
+    0.149,
+    0.20813636363636362,
+    0.19817768595041324,
+    0.31668595041322317
+  ],
+  "relative_claim_weights": [
+    0.21875,
+    1.0,
+    0.949044585987261,
+    0.8894716394716394,
+    0.6135532072768213,
+    0.6990859832521483
+  ],
+  "body_weights": {
+    "0": [
+      0.1743561927227545,
+      0.5976784374803423,
+      0.15928349556322083,
+      0.06868187423368238
+    ],
+    "1": [
+      0.20931485740746125,
+      0.5723720766731829,
+      0.15253925759749862,
+      0.06577380832185721
+    ],
+    "2": [
+      0.2599977820468359,
+      0.5356830214917595,
+      0.14276148983521217,
+      0.06155770662619241
+    ],
+    "3": [
+      0.37407707641489996,
+      0.4531017269846123,
+      0.12075327198367418,
+      0.052067924616813636
+    ],
+    "4": [
+      0.5022207209334799,
+      0.3603393365277995,
+      0.09603175472256759,
+      0.041408187816153
+    ],
+    "5": [
+      0.5256933795801602,
+      0.3433476243393177,
+      0.09150340110754433,
+      0.039455594972977834
+    ]
+  },
+  "value_ratios": [
+    1,
+    1.128,
+    1.493,
+    1.0
+  ],
+  "repair_ratios": [
+    1.0,
+    1.0067837414016483,
+    1.30986050700456,
+    0.9811785795166831
+  ],
+  "cohorts": [
+    {
+      "age_bucket": "current_year_or_newer",
+      "sigma": 1.2515377186238767,
+      "car_ACV": 35020.15636931588,
+      "log_car_repair_median": 8.683313425063911,
+      "TLF": 0.09600000000003014,
+      "repairable_mean": 7853.298382582536,
+      "selected_ACV": 40187.0
+    },
+    {
+      "age_bucket": "1-3",
+      "sigma": 1.2515377186238767,
+      "car_ACV": 26527.09272941605,
+      "log_car_repair_median": 8.476648409808707,
+      "TLF": 0.10700000000000026,
+      "repairable_mean": 6147.427351366393,
+      "selected_ACV": 30259.0
+    },
+    {
+      "age_bucket": "4-6",
+      "sigma": 1.2515377186238767,
+      "car_ACV": 17966.408695343034,
+      "log_car_repair_median": 8.364390293924131,
+      "TLF": 0.15699999999999653,
+      "repairable_mean": 4717.978982604927,
+      "selected_ACV": 20328.0
+    },
+    {
+      "age_bucket": "7-9",
+      "sigma": 0.9150901399552822,
+      "car_ACV": 12463.49079437784,
+      "log_car_repair_median": 8.562783928845604,
+      "TLF": 0.23399999999999843,
+      "repairable_mean": 4608.05354675811,
+      "selected_ACV": 13804.353985327261
+    },
+    {
+      "age_bucket": "10-12",
+      "sigma": 0.9150901399552822,
+      "car_ACV": 9233.18107377396,
+      "log_car_repair_median": 8.470428518126226,
+      "TLF": 0.3230000000000051,
+      "repairable_mean": 3603.7218680384253,
+      "selected_ACV": 10017.430041101903
+    },
+    {
+      "age_bucket": "13+",
+      "sigma": 0.9150901399552822,
+      "car_ACV": 5067.277211450287,
+      "log_car_repair_median": 8.146856854108279,
+      "TLF": 0.4530000000000126,
+      "repairable_mean": 2117.046786342136,
+      "selected_ACV": 5484.2560971299545
+    }
+  ],
+  "repair_checks": [
+    {
+      "age_group": "0-6",
+      "sigma": 1.2515377186238767,
+      "target": 5721,
+      "fitted": 5721.000050416638
+    },
+    {
+      "age_group": "7+",
+      "sigma": 0.9150901399552822,
+      "target": 3682,
+      "fitted": 3681.9999787389447
+    }
+  ],
+  "selected_value_checks": [
+    40187.0,
+    30259.0,
+    20328.0,
+    9122.000000000002
+  ],
+  "baseline_core": {
+    "units": 1.0000000000000142,
+    "ASP": 3040.9857806767172,
+    "core_RPU": 851.5099791627215,
+    "core_revenue": 851.5099791627335
+  },
+  "scenario_changes_pct_NOT_forecasts": {
+    "repair_plus_5pct": {
+      "units": 6.4848036787842345,
+      "ASP": 0.9620942349529482,
+      "core_RPU": 0.530938044006457,
+      "core_revenue": 7.050172012600497
+    },
+    "value_plus_5pct": {
+      "units": -6.269279472836342,
+      "ASP": 4.0401548359100925,
+      "core_RPU": 1.7859212331140295,
+      "core_revenue": -4.595322632990939
+    },
+    "both_plus_5pct": {
+      "units": 0.0,
+      "ASP": 5.000000000000004,
+      "core_RPU": 2.3046312034991523,
+      "core_revenue": 2.3046312034991523
+    }
+  },
+  "single_dispersion_crosschecks": [
+    {
+      "sigma": 1.2515377186238767,
+      "younger_mean": 5721.000050416638,
+      "older_mean": 2961.6699663456843
+    },
+    {
+      "sigma": 0.9150901399552822,
+      "younger_mean": 7588.816067247944,
+      "older_mean": 3681.9999787389447
+    }
+  ],
+  "fee_integration_4096_vs_2048_revenue_pct": 0.00034735012717224123,
+  "free_assumptions": [
+    "All-loss TLF and repair targets versus noncomp value/mix, periods differ",
+    "7+ internal age split and original .10 log value slope retained",
+    "Body weights, body repair/value ratios, single ACV per cohort",
+    "Recovery .4-.2u; seller 4%; fee mix and fixed fees inherited",
+    "Two fitted dispersions replace single shared dispersion; no new empirical damage data"
+  ],
+  "handoff": "Use cohort car_ACV, log_car_repair_median and sigma with inherited body ratios. Damage cutoff equation in script. Keep service adoption and allocation separate. Do not dollar-reanchor legacy workbook without review."
+}
