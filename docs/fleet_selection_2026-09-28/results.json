@@ -1,0 +1,176 @@
+{
+  "source_sha256": "18e80a5aa8c34854b8bc1d9471d7530d7b827349ac51758f13a3d24987e7b591",
+  "status": "Conditional core US insurance diagnostic; not observed volume, dollar forecast or consensus delta",
+  "checks": "All eight quarters reproduce prior validated units and RPU; composition worlds preserve stock totals; attribution reconciles",
+  "h1_revenue_change_pct_vs_frozen_Q4_mix": {
+    "age_only": -0.03409273216748998,
+    "body_only": -0.02695116172702905,
+    "both": -0.060909942974440856
+  },
+  "quarters": [
+    {
+      "quarter": "Q1 FY27E",
+      "worlds": {
+        "frozen_mix": {
+          "raw_units": 45144.012859393115,
+          "raw_core_revenue": 36848517.46187913,
+          "core_rpu": 816.2437304067013,
+          "asp": 2769.702259650852,
+          "claim_weighted_tlf": 0.23298134267462522
+        },
+        "age_only": {
+          "raw_units": 45160.035815179275,
+          "raw_core_revenue": 36840361.05542426,
+          "core_rpu": 815.7735128066796,
+          "asp": 2767.0285686820184,
+          "claim_weighted_tlf": 0.23314931763740668
+        },
+        "body_only": {
+          "raw_units": 45121.83042046956,
+          "raw_core_revenue": 36841895.90075029,
+          "core_rpu": 816.4982572169087,
+          "asp": 2771.869802157839,
+          "claim_weighted_tlf": 0.23286686250157754
+        },
+        "both": {
+          "raw_units": 45137.87778068041,
+          "raw_core_revenue": 36833758.25058558,
+          "core_rpu": 816.0276925192726,
+          "asp": 2769.1892645803796,
+          "claim_weighted_tlf": 0.23303492156728947
+        }
+      },
+      "attribution": {
+        "age_pp": -0.022134965031650466,
+        "body_within_age_pp": -0.017969681238028112,
+        "interaction_pp": 5.090107133760121e-05
+      },
+      "combined_revenue_change_pct": -0.04005374519834293,
+      "units_change_pct": -0.013590016314712905,
+      "core_rpu_change_pct": -0.026467325797530084
+    },
+    {
+      "quarter": "Q2 FY27E",
+      "worlds": {
+        "frozen_mix": {
+          "raw_units": 45168.443522736314,
+          "raw_core_revenue": 36868458.83766273,
+          "core_rpu": 816.2437304067021,
+          "asp": 2769.702259650852,
+          "claim_weighted_tlf": 0.23298134267462509
+        },
+        "age_only": {
+          "raw_units": 45199.647270309586,
+          "raw_core_revenue": 36851483.112825826,
+          "core_rpu": 815.3046613935096,
+          "asp": 2764.39531035347,
+          "claim_weighted_tlf": 0.2333109502966309
+        },
+        "body_only": {
+          "raw_units": 45124.0408087852,
+          "raw_core_revenue": 36855212.8172888,
+          "core_rpu": 816.7533792787782,
+          "asp": 2774.0441285640195,
+          "claim_weighted_tlf": 0.23275231100764895
+        },
+        "both": {
+          "raw_units": 45155.35071594762,
+          "raw_core_revenue": 36838317.080729745,
+          "core_rpu": 815.8128880996481,
+          "asp": 2768.7091792287283,
+          "claim_weighted_tlf": 0.23308230091954077
+        }
+      },
+      "attribution": {
+        "age_pp": -0.04604403159798043,
+        "body_within_age_pp": -0.03592778432168764,
+        "interaction_pp": 0.00021695584889318232
+      },
+      "combined_revenue_change_pct": -0.08175486007077071,
+      "units_change_pct": -0.028986623774407416,
+      "core_rpu_change_pct": -0.05278353646149814
+    },
+    {
+      "quarter": "Q3 FY27E",
+      "worlds": {
+        "frozen_mix": {
+          "raw_units": 45192.627200464296,
+          "raw_core_revenue": 36888198.61298636,
+          "core_rpu": 816.243730406702,
+          "asp": 2769.702259650853,
+          "claim_weighted_tlf": 0.23298134267462517
+        },
+        "age_only": {
+          "raw_units": 45228.06360783743,
+          "raw_core_revenue": 36853785.71471514,
+          "core_rpu": 814.8433245841827,
+          "asp": 2762.2291100113866,
+          "claim_weighted_tlf": 0.23339084904827118
+        },
+        "body_only": {
+          "raw_units": 45126.24618836989,
+          "raw_core_revenue": 36868806.27879573,
+          "core_rpu": 817.0146952816496,
+          "asp": 2776.175597518952,
+          "claim_weighted_tlf": 0.2326391289489825
+        },
+        "both": {
+          "raw_units": 45161.882223876106,
+          "raw_core_revenue": 36834570.963918015,
+          "core_rpu": 815.6119530475278,
+          "asp": 2768.651712563321,
+          "claim_weighted_tlf": 0.23304933256134303
+        }
+      },
+      "attribution": {
+        "age_pp": -0.09328972290642001,
+        "body_within_age_pp": -0.05257056435336027,
+        "interaction_pp": 0.0004814097738338427
+      },
+      "combined_revenue_change_pct": -0.14537887748594658,
+      "units_change_pct": -0.06803095658017844,
+      "core_rpu_change_pct": -0.07740057725887928
+    },
+    {
+      "quarter": "Q4 FY27E",
+      "worlds": {
+        "frozen_mix": {
+          "raw_units": 45216.73488261842,
+          "raw_core_revenue": 36907876.357399255,
+          "core_rpu": 816.2437304067009,
+          "asp": 2769.702259650848,
+          "claim_weighted_tlf": 0.2329813426746253
+        },
+        "age_only": {
+          "raw_units": 45253.03529379528,
+          "raw_core_revenue": 36853374.63798535,
+          "core_rpu": 814.3845909721415,
+          "asp": 2760.20771323248,
+          "claim_weighted_tlf": 0.23344557951371359
+        },
+        "body_only": {
+          "raw_units": 45128.356361339866,
+          "raw_core_revenue": 36882414.42390617,
+          "core_rpu": 817.2780353131196,
+          "asp": 2778.303625778876,
+          "claim_weighted_tlf": 0.23252596820752766
+        },
+        "both": {
+          "raw_units": 45165.04713877726,
+          "raw_core_revenue": 36828269.4788121,
+          "core_rpu": 815.4152782272317,
+          "asp": 2768.7242028485402,
+          "claim_weighted_tlf": 0.2329916774559804
+        }
+      },
+      "attribution": {
+        "age_pp": -0.14766961633374542,
+        "body_within_age_pp": -0.06898780424677842,
+        "interaction_pp": 0.0009666617401125042
+      },
+      "combined_revenue_change_pct": -0.21569075884041444,
+      "units_change_pct": -0.11431109295116926,
+      "core_rpu_change_pct": -0.10149568671803388
+    }
+  ]
+}

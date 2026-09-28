@@ -1,5 +1,7 @@
 # Core RPU build: service evidence and conditional delivery bridge
 
+**Research priority update:** delivery investigation is parked by user direction. Retain explicit assumptions and the existing evidence limitations; do not spend further effort on this component now. Active work resumes at [fleet and damage-selection foundation](../fleet_selection_2026-09-28/README.md).
+
 Follow-up: [delivery evidence update](DELIVERY_EVIDENCE_UPDATE.md) traces the 20% margin to a JPMorgan industry analogy, identifies possible automatic-delivery fee offsets, and records the user's analysis-in-Git / Excel-in-Fable workflow. Neither margin nor adoption is independently measured.
 
 Actual-disclosure search: [scope and result](DELIVERY_DISCLOSURE_SEARCH.md). No usable delivery revenue level, completed-vehicle count or adoption rate found in the checked filings, calls and supplied research. General logistics movement counts are not delivery-product counts.
