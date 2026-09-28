@@ -1,0 +1,39 @@
+{
+  "rows": [
+    {
+      "scope": "all_coverages",
+      "p0": 0.223,
+      "p1": 0.231,
+      "reported_claim_growth": -0.077,
+      "reported_repairable_growth": -0.097,
+      "reported_valuation_growth": -0.029,
+      "same_population_implied_total_loss_growth": -0.04388789237668156,
+      "same_population_implied_repairable_growth": -0.08650321750321743,
+      "implied_minus_reported_repairable_pp": 1.0496782496782568,
+      "hypothetical_combined_claim_growth": -0.08183600000000002,
+      "hypothetical_combined_TLF": 0.2358325963553352,
+      "hypothetical_TLF_gap_pp": 0.48325963553352
+    },
+    {
+      "scope": "non_comprehensive",
+      "p0": 0.229,
+      "p1": 0.239,
+      "reported_claim_growth": -0.057,
+      "reported_repairable_growth": -0.08,
+      "reported_valuation_growth": -0.002,
+      "same_population_implied_total_loss_growth": -0.0158209606986901,
+      "same_population_implied_repairable_growth": -0.06923086900129705,
+      "implied_minus_reported_repairable_pp": 1.0769130998702956,
+      "hypothetical_combined_claim_growth": -0.062137999999999916,
+      "hypothetical_combined_TLF": 0.24368403880315012,
+      "hypothetical_TLF_gap_pp": 0.4684038803150131
+    }
+  ],
+  "status": "Compatibility diagnostic only; valuation counts are not confirmed flagged-total-loss counts. No nonfiling estimate or forecast input.",
+  "sources": {
+    "annual": "https://www.cccis.com/reports/crash-course-2026",
+    "recap": "https://www.cccis.com/news-and-insights/posts/crash-course-2026-webinar-recap"
+  },
+  "accessed": "2026-09-28",
+  "baseline_TLF": "Derived from published 2025 level less stated percentage-point increase"
+}
