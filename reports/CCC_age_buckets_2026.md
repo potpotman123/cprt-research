@@ -1,5 +1,7 @@
 # CCC's own age-bucket data: total-loss propensity by age 2020–2025, and the ageing-vs-propensity decomposition
 
+**Interpretation update, 2026-09-28:** see [recent-period recheck](../docs/fleet_selection_2026-09-28/AGE_VERSUS_WITHIN_BUCKET.md). Close numerical reconciliation does not validate population compatibility. Within broad age groups is not the same as holding exact vehicle age/damage/coverage constant. The claims below that aging is “over” or provides a measured zero forward contribution are not established by these data and should not be used as forecast conclusions.
+
 *2026-09-26. Source: CCC Crash Course 2026 report page (`cccis.com`, robots `Allow: /`), chart images fetched from the page's
 CDN with data labels read at 4400 px (`raw/ccc/img/`). Requests: 6 pages + 6 images + 1 robots. Scripts:
 `scripts/experiments/ccc_age_decomposition.py`. Data: `ccc_tl_share_by_age_2020_2025.csv`, `ccc_tl_valuation_share_by_age_2020_2025.csv`,

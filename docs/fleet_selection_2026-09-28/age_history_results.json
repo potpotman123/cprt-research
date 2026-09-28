@@ -1,0 +1,253 @@
+{
+  "status": "Reported within-bucket rates; aggregate attribution conditional on compatible chart populations",
+  "source_hashes": {
+    "data/csv/ccc_tl_share_by_age_2020_2025.csv": "f8578c0aed0de5ff19d9dbe9a53cb83b6a97eae5e18d9651f4c35fb929e1fd53",
+    "data/csv/ccc_tl_valuation_share_by_age_2020_2025.csv": "577c30c3231582b7170a638f88a65e8dc11f708dad26c039fda5a1a6047a3aa5"
+  },
+  "years_used": [
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "note": "2020 excluded; prior notes disagree about its 10-12 rate. No source edits or override needed here.",
+  "levels": [
+    {
+      "year": 2022,
+      "reconstructed_pct": 18.857301806254334,
+      "chart_total_pct": 18.8,
+      "residual_pp": 0.05730180625433334
+    },
+    {
+      "year": 2023,
+      "reconstructed_pct": 20.24399064044945,
+      "chart_total_pct": 20.2,
+      "residual_pp": 0.04399064044945078
+    },
+    {
+      "year": 2024,
+      "reconstructed_pct": 22.309952040671106,
+      "chart_total_pct": 22.3,
+      "residual_pp": 0.009952040671105777
+    },
+    {
+      "year": 2025,
+      "reconstructed_pct": 23.020354197645094,
+      "chart_total_pct": 23.1,
+      "residual_pp": -0.07964580235490715
+    }
+  ],
+  "decompositions": [
+    {
+      "start": 2022,
+      "end": 2025,
+      "mix_pp": 0.32900530105849335,
+      "within_bucket_pp": 3.8340470903322665,
+      "reconstructed_change_pp": 4.16305239139076,
+      "reported_change_pp": 4.300000000000001,
+      "rows": [
+        {
+          "age_bucket": "current_year_or_newer",
+          "rate_start_pct": 9.2,
+          "rate_end_pct": 9.6,
+          "rate_change_pp": 0.40000000000000036,
+          "claim_weight_start_pct": 3.4879894101310405,
+          "claim_weight_end_pct": 4.7959071245093945,
+          "mix_pp": 0.12294426515156526,
+          "within_bucket_pp": 0.016567793069280884
+        },
+        {
+          "age_bucket": "1-3",
+          "rate_start_pct": 8.9,
+          "rate_end_pct": 10.7,
+          "rate_change_pp": 1.799999999999999,
+          "claim_weight_start_pct": 23.118015733505665,
+          "claim_weight_end_pct": 22.159780208948085,
+          "mix_pp": -0.0939070814066428,
+          "within_bucket_pp": 0.40750016348208346
+        },
+        {
+          "age_bucket": "4-6",
+          "rate_start_pct": 13.3,
+          "rate_end_pct": 15.7,
+          "rate_change_pp": 2.3999999999999995,
+          "claim_weight_start_pct": 25.68863319659535,
+          "claim_weight_end_pct": 22.140595438499425,
+          "mix_pp": -0.5144654749239094,
+          "within_bucket_pp": 0.5739507436211372
+        },
+        {
+          "age_bucket": "7-9",
+          "rate_start_pct": 19.1,
+          "rate_end_pct": 23.4,
+          "rate_change_pp": 4.299999999999998,
+          "claim_weight_start_pct": 19.864459554093997,
+          "claim_weight_end_pct": 20.560914646614638,
+          "mix_pp": 0.14799670716063595,
+          "within_bucket_pp": 0.8691455453152351
+        },
+        {
+          "age_bucket": "10-12",
+          "rate_start_pct": 26.5,
+          "rate_end_pct": 32.3,
+          "rate_change_pp": 5.799999999999994,
+          "claim_weight_start_pct": 11.1120142095895,
+          "claim_weight_end_pct": 14.182818840035214,
+          "mix_pp": 0.9028165613510399,
+          "within_bucket_pp": 0.7335501584391158
+        },
+        {
+          "age_bucket": "13+",
+          "rate_start_pct": 37.8,
+          "rate_end_pct": 45.3,
+          "rate_change_pp": 7.500000000000001,
+          "claim_weight_start_pct": 16.72888789608445,
+          "claim_weight_end_pct": 16.159983741393248,
+          "mix_pp": -0.23637967627419562,
+          "within_bucket_pp": 1.233332686405414
+        }
+      ]
+    },
+    {
+      "start": 2023,
+      "end": 2024,
+      "mix_pp": 0.16196904688631852,
+      "within_bucket_pp": 1.9039923533353391,
+      "reconstructed_change_pp": 2.0659614002216573,
+      "reported_change_pp": 2.1000000000000014,
+      "rows": [
+        {
+          "age_bucket": "current_year_or_newer",
+          "rate_start_pct": 9.0,
+          "rate_end_pct": 9.7,
+          "rate_change_pp": 0.6999999999999993,
+          "claim_weight_start_pct": 3.8200448538976652,
+          "claim_weight_end_pct": 4.3699906059046505,
+          "mix_pp": 0.05141992781265308,
+          "within_bucket_pp": 0.028665124109308073
+        },
+        {
+          "age_bucket": "1-3",
+          "rate_start_pct": 9.3,
+          "rate_end_pct": 10.2,
+          "rate_change_pp": 0.899999999999998,
+          "claim_weight_start_pct": 21.528526026709798,
+          "claim_weight_end_pct": 21.435051960644792,
+          "mix_pp": -0.009113721441338277,
+          "within_bucket_pp": 0.19333610094309522
+        },
+        {
+          "age_bucket": "4-6",
+          "rate_start_pct": 14.099999999999998,
+          "rate_end_pct": 15.4,
+          "rate_change_pp": 1.3000000000000012,
+          "claim_weight_start_pct": 25.53071279075536,
+          "claim_weight_end_pct": 23.613780406684352,
+          "mix_pp": -0.28274752665047354,
+          "within_bucket_pp": 0.31943920578335844
+        },
+        {
+          "age_bucket": "7-9",
+          "rate_start_pct": 20.5,
+          "rate_end_pct": 22.8,
+          "rate_change_pp": 2.300000000000002,
+          "claim_weight_start_pct": 20.519724437579423,
+          "claim_weight_end_pct": 21.135744038530525,
+          "mix_pp": 0.13336824360591337,
+          "within_bucket_pp": 0.4790378874752648
+        },
+        {
+          "age_bucket": "10-12",
+          "rate_start_pct": 28.4,
+          "rate_end_pct": 31.5,
+          "rate_change_pp": 3.1000000000000028,
+          "claim_weight_start_pct": 12.461828179140063,
+          "claim_weight_end_pct": 13.173495490681988,
+          "mix_pp": 0.21314435980680646,
+          "within_bucket_pp": 0.3973475168822422
+        },
+        {
+          "age_bucket": "13+",
+          "rate_start_pct": 40.6,
+          "rate_end_pct": 43.6,
+          "rate_change_pp": 2.9999999999999973,
+          "claim_weight_start_pct": 16.139163711917693,
+          "claim_weight_end_pct": 16.271937497553697,
+          "mix_pp": 0.055897763752757436,
+          "within_bucket_pp": 0.4861665181420704
+        }
+      ]
+    },
+    {
+      "start": 2024,
+      "end": 2025,
+      "mix_pp": 0.02717989773808476,
+      "within_bucket_pp": 0.6832222592359026,
+      "reconstructed_change_pp": 0.7104021569739865,
+      "reported_change_pp": 0.8000000000000007,
+      "rows": [
+        {
+          "age_bucket": "current_year_or_newer",
+          "rate_start_pct": 9.7,
+          "rate_end_pct": 9.6,
+          "rate_change_pp": -0.0999999999999987,
+          "claim_weight_start_pct": 4.3699906059046505,
+          "claim_weight_end_pct": 4.7959071245093945,
+          "mix_pp": 0.04110094404535783,
+          "within_bucket_pp": -0.004582948865206962
+        },
+        {
+          "age_bucket": "1-3",
+          "rate_start_pct": 10.2,
+          "rate_end_pct": 10.7,
+          "rate_change_pp": 0.5000000000000004,
+          "claim_weight_start_pct": 21.435051960644792,
+          "claim_weight_end_pct": 22.159780208948085,
+          "mix_pp": 0.07573410194769423,
+          "within_bucket_pp": 0.1089870804239823
+        },
+        {
+          "age_bucket": "4-6",
+          "rate_start_pct": 15.4,
+          "rate_end_pct": 15.7,
+          "rate_change_pp": 0.30000000000000027,
+          "claim_weight_start_pct": 23.613780406684352,
+          "claim_weight_end_pct": 22.140595438499425,
+          "mix_pp": -0.22908026255275646,
+          "within_bucket_pp": 0.06863156376777574
+        },
+        {
+          "age_bucket": "7-9",
+          "rate_start_pct": 22.8,
+          "rate_end_pct": 23.4,
+          "rate_change_pp": 0.5999999999999978,
+          "claim_weight_start_pct": 21.135744038530525,
+          "claim_weight_end_pct": 20.560914646614638,
+          "mix_pp": -0.13278558953257003,
+          "within_bucket_pp": 0.125089976055435
+        },
+        {
+          "age_bucket": "10-12",
+          "rate_start_pct": 31.5,
+          "rate_end_pct": 32.3,
+          "rate_change_pp": 0.7999999999999952,
+          "claim_weight_start_pct": 13.173495490681988,
+          "claim_weight_end_pct": 14.182818840035214,
+          "mix_pp": 0.3219741484436787,
+          "within_bucket_pp": 0.10942525732286815
+        },
+        {
+          "age_bucket": "13+",
+          "rate_start_pct": 43.6,
+          "rate_end_pct": 45.3,
+          "rate_change_pp": 1.699999999999996,
+          "claim_weight_start_pct": 16.271937497553697,
+          "claim_weight_end_pct": 16.159983741393248,
+          "mix_pp": -0.04976344461331953,
+          "within_bucket_pp": 0.27567133053104836
+        }
+      ]
+    }
+  ],
+  "checks": "Weights sum to one; symmetric attribution reconciles; no calibration or workbook changes"
+}
