@@ -75,3 +75,7 @@ The next acquisition decision should be schema-led: an existing insurer/estimati
 ## Reproduction
 
 `calculate.py` reuses the existing model, freezes the historical ledger and writes parts/decision hurdles, quarterly cases, interaction and timing cases. `results.json` records model/source hashes and checks; `scenario_inputs.json` records all forward assumptions. Arithmetic, root, historical-base, revenue identity and incremental-timing conservation checks passed. These checks are not predictive validation. Prior empirical failures and unrelated repository changes remain untouched.
+
+## Subsequent parts-mix segmentation
+
+See [MIX_SEGMENTATION.md](MIX_SEGMENTATION.md): CCC aftermarket usage rose while recycled usage fell in 2025; Mitchell repaired-part share rose. Separate sourcing, operation counts and labor-dollar shares. These observations do not validate a positive salvage-demand coefficient or the prior illustrative repair/salvage shocks.
