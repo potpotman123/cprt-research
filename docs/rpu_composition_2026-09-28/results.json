@@ -1,0 +1,45 @@
+{
+  "source": "/Users/kwu/Documents/ChatGPT/HFAC x Citadel/research/cprt_discovery_plan_2026-09-26/sources/2026-08-20-CPRT.OQ-Stephens Inc.-F4Q26 Preview Expect a Slight Miss to Consensus and an Even...-123970131.txt",
+  "sha256": "c3eb7427825d2fafe5e5df11a9ba7cafe5d55d6f205523defef4c69c5a1e564d",
+  "source_date": "2026-08-20",
+  "table": "Supplemental Financial Data, printed page 10; Income Statement, printed page 9",
+  "locators": {
+    "us_service": 632,
+    "rpu": 635,
+    "fee_units": 634,
+    "total_revenue": 565
+  },
+  "quarterly_us_service_musd": [
+    863.9,
+    852.6,
+    931.6,
+    845.4
+  ],
+  "quarterly_fee_unit_growth_pct": [
+    -1.0,
+    2.0,
+    2.0,
+    2.0
+  ],
+  "quarterly_rpu_growth_pct": [
+    2.0,
+    2.0,
+    2.0,
+    2.0
+  ],
+  "h1_total_musd": 2361.5,
+  "fy_total_musd": 4846.7,
+  "rounded_identity_error_pp": [
+    0.0019009498845719008,
+    -0.0009331371352709894,
+    -0.008561325144238907,
+    -0.00350364118082247
+  ],
+  "required_rpu_growth_for_h1_total_miss": {
+    "0.02": -0.008065598601806005,
+    "0.03": -0.022098397902709,
+    "0.05": -0.050163996504515
+  },
+  "caveat": "Named pre-results broker, not current consensus. Hold units, all other revenues and accounting fixed. No ACV added. RPU changes are scenarios, not measured service deterioration.",
+  "checks": "Column counts, forecast rates, quarterly revenue identity within rounding, zero shock, linear scaling passed."
+}
