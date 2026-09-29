@@ -1,0 +1,4 @@
+pre_loss_value,expected_net_salvage_share,threshold_repair_cost,repair_saving,required_net_salvage_increase,required_net_salvage_growth,change_in_margin_if_both_three_pct
+10000,0.2,8000.0,240.0,240.0,0.12,-180.0
+10000,0.3,7000.0,210.0,210.0,0.07,-120.0
+10000,0.4,6000.0,180.0,180.0,0.045,-60.0

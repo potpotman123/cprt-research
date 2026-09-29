@@ -1,0 +1,14 @@
+source,access_route,result,decision
+PartsTrader price article,web tool,readable,directional evidence
+PartsTrader scope article,web tool,readable,mechanism evidence
+PartsTrader price article,direct HTTP,403,no retry
+PartsTrader scope article,direct HTTP,403,no retry
+VinAssessment schema,web tool,readable,sample field audit only
+VinAssessment schema,direct HTTP,403,no retry
+PartsTrader FlowPaper viewer,direct HTTP,200,saved HTML
+PartsTrader configured PDF,direct HTTP,404,no PDF extraction
+PartsTrader configured page1 data,direct HTTP,404,stop viewer troubleshooting
+CCC TVR PDF,web tool,403,no new field verification
+Rebrowser IAA README,web tool,readable,no accepted-sale field admitted
+LKQ2025 10K,web tool,readable,operational sections only
+LKQ2026Q2 release,web tool,readable,previous evidence reused

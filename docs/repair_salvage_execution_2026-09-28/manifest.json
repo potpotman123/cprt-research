@@ -1,0 +1,19 @@
+{
+  "files": {
+    "timing_cases.csv": "1e422c973c2beda2fbd636406ee4b931bc85e98ee7582be14acc9719e1f00081",
+    "quarterly_cases.csv": "dab04616ac70152b88c302a9bd6bb9abb8d5ab9f9783a54cc8d57a1d68411856",
+    "parts_substitution_hurdles.csv": "c5191e2124c63273b6cc37c05388004e07581c89405b48655d736a5d9e645821",
+    "calculate.py": "782c2f3a06c8046bc7f56afb5dacadeda1fafea06474ec7ef6151569b96dc4dc",
+    "interaction.csv": "827b0cd39adb8a62af0d94a5d5244e118a2bc011209b5b1ee6d89d65acab136a",
+    "EVIDENCE.md": "52c5519029bfecb18a7a349f7f4c029d5417a49dab9b195f202666cf1ecde1f7",
+    "results.json": "f470ebbc4f72793ab74b8230fc74622f27b60efd1582e6c876f47670f7982b28",
+    "README.md": "e59bfe28bb6426869dd905b524e750010bf60354fcab23f8827212391e3f45a0",
+    "scenario_inputs.json": "a99a6f6d727d9ac8df961164406fda5be05354b1a7bccda60acd809aa8916cec",
+    "access_attempts.csv": "93c8218d11ffd8cf86242cc5493876e7def9b035a018320af8ecbc8fd02f6187",
+    "decision_margin_hurdles.csv": "f381f355700c974b0edc9d888f6e45d7edb2ee014e8e102d80adbc9590e2fafb",
+    "raw/parts_report_viewer.txt": "e38fb94199824190b5e730c242d2781e796bd1c8d2a8a8ca64004cb63700276f",
+    "raw/parts_report_viewer.html": "5d330e113b2549dd4766974d20a5fe19522019596d154f66d2e7d2f77b3e4f9c",
+    "raw/acquisition.jsonl": "005335a4a3ee1d9c68af5c5a9c74c6cd1bcfc46dadf8d8e3169535c47bf59f1a"
+  },
+  "note": "Saved source snapshots limited to successful public viewer retrieval; web-read source locators and failures in EVIDENCE.md."
+}

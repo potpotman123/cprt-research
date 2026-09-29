@@ -1,0 +1,154 @@
+{
+  "status": "Conditional mechanism tests; new evidence did not identify a forecast coefficient",
+  "unit_neutral_expected_salvage_growth": 0.09149025692604473,
+  "first_quarter": [
+    {
+      "scenario": "reference",
+      "period": "FY2027Q1",
+      "insurance_unit_growth": 0.0006310787851373512,
+      "insurance_selected_ASP_growth": 0.03694401539017922,
+      "insurance_core_RPU_growth": 0.016192349559904562,
+      "insurance_RPU_with_assumed_services_growth": 0.015212551053417567,
+      "title_musd": 21.19131914889538,
+      "delivery_musd": 25.429582978674464,
+      "us_service_musd": 867.7406796680652,
+      "global_legacy_service_musd": 1025.137994213409,
+      "legacy_total_musd": 1188.322994213409,
+      "jpm_total_gap_musd": 8.322994213408947,
+      "capiq_gap_CONDITIONAL_musd": 5.222994213409038,
+      "delta_service_vs_reference_musd": 0.0
+    },
+    {
+      "scenario": "repair_only",
+      "period": "FY2027Q1",
+      "insurance_unit_growth": -0.03881587466020875,
+      "insurance_selected_ASP_growth": 0.03090709712773565,
+      "insurance_core_RPU_growth": 0.01281268842871408,
+      "insurance_RPU_with_assumed_services_growth": 0.01203739309926899,
+      "title_musd": 20.35591337584379,
+      "delivery_musd": 24.427096051012555,
+      "us_service_musd": 834.5553214699441,
+      "global_legacy_service_musd": 991.952636015288,
+      "legacy_total_musd": 1155.137636015288,
+      "jpm_total_gap_musd": -24.86236398471192,
+      "capiq_gap_CONDITIONAL_musd": -27.96236398471183,
+      "delta_service_vs_reference_musd": -33.18535819812098
+    },
+    {
+      "scenario": "salvage_only",
+      "period": "FY2027Q1",
+      "insurance_unit_growth": 0.01365057824032645,
+      "insurance_selected_ASP_growth": 0.06912505885795084,
+      "insurance_core_RPU_growth": 0.031129397495005318,
+      "insurance_RPU_with_assumed_services_growth": 0.029245758739517402,
+      "title_musd": 21.46704551195094,
+      "delivery_musd": 25.760454614341132,
+      "us_service_musd": 888.870740109406,
+      "global_legacy_service_musd": 1046.26805465475,
+      "legacy_total_musd": 1209.4530546547498,
+      "jpm_total_gap_musd": 29.45305465474985,
+      "capiq_gap_CONDITIONAL_musd": 26.35305465474994,
+      "delta_service_vs_reference_musd": 21.130060441340902
+    },
+    {
+      "scenario": "joint",
+      "period": "FY2027Q1",
+      "insurance_unit_growth": -0.026203614867600256,
+      "insurance_selected_ASP_growth": 0.06284038600970221,
+      "insurance_core_RPU_growth": 0.027847493855212457,
+      "insurance_RPU_with_assumed_services_growth": 0.0261624429743752,
+      "title_musd": 20.623015235980336,
+      "delivery_musd": 24.747618283176404,
+      "us_service_musd": 854.9744377942668,
+      "global_legacy_service_musd": 1012.3717523396107,
+      "legacy_total_musd": 1175.5567523396107,
+      "jpm_total_gap_musd": -4.443247660389261,
+      "capiq_gap_CONDITIONAL_musd": -7.54324766038917,
+      "delta_service_vs_reference_musd": -12.766241873798322
+    },
+    {
+      "scenario": "repair_salvage_unit_neutral",
+      "period": "FY2027Q1",
+      "insurance_unit_growth": 0.0006310787347569846,
+      "insurance_selected_ASP_growth": 0.12853747310822694,
+      "insurance_core_RPU_growth": 0.057388378540070395,
+      "insurance_RPU_with_assumed_services_growth": 0.053915809758421585,
+      "title_musd": 21.19131914782843,
+      "delivery_musd": 25.42958297739412,
+      "us_service_musd": 897.5602446131979,
+      "global_legacy_service_musd": 1054.9575591585417,
+      "legacy_total_musd": 1218.1425591585416,
+      "jpm_total_gap_musd": 38.142559158541644,
+      "capiq_gap_CONDITIONAL_musd": 35.042559158541735,
+      "delta_service_vs_reference_musd": 29.819564945132697
+    }
+  ],
+  "joint_timing_q1": [
+    {
+      "scenario": "joint_incremental_timing",
+      "same_quarter_fraction": 1.0,
+      "period": "FY2027Q1",
+      "global_legacy_service_musd": 1012.3717523396107,
+      "delta_vs_reference_musd": -12.766241873798322,
+      "delta_deferred_beyond_fy_units": 0
+    },
+    {
+      "scenario": "joint_incremental_timing",
+      "same_quarter_fraction": 0.5,
+      "period": "FY2027Q1",
+      "global_legacy_service_musd": 1022.9731358292266,
+      "delta_vs_reference_musd": -2.1648583841823665,
+      "delta_deferred_beyond_fy_units": 0
+    },
+    {
+      "scenario": "joint_incremental_timing",
+      "same_quarter_fraction": 0.0,
+      "period": "FY2027Q1",
+      "global_legacy_service_musd": 1033.5745193188425,
+      "delta_vs_reference_musd": 8.436525105433475,
+      "delta_deferred_beyond_fy_units": 0
+    }
+  ],
+  "interaction": [
+    {
+      "period": "FY2027Q1",
+      "repair_delta": -33.18535819812098,
+      "salvage_delta": 21.130060441340902,
+      "joint_delta": -12.766241873798322,
+      "interaction": -0.7109441170182436
+    },
+    {
+      "period": "FY2027Q2",
+      "repair_delta": -31.785255570071854,
+      "salvage_delta": 20.247788762085293,
+      "joint_delta": -12.220402590931826,
+      "interaction": -0.6829357829452647
+    },
+    {
+      "period": "FY2027Q3",
+      "repair_delta": -34.70436392650163,
+      "salvage_delta": 22.11435627757237,
+      "joint_delta": -13.337657900307022,
+      "interaction": -0.7476502513777632
+    },
+    {
+      "period": "FY2027Q4",
+      "repair_delta": -31.661412099499103,
+      "salvage_delta": 20.1809130375799,
+      "joint_delta": -12.16436853921914,
+      "interaction": -0.6838694772999361
+    }
+  ],
+  "checks": [
+    "Parts-basket arithmetic",
+    "Dollar cancellation",
+    "Unit-neutral root",
+    "Frozen historical base",
+    "Revenue identity",
+    "Timing identity/conservation"
+  ],
+  "source_hashes": {
+    "model/revenue_architecture_2026-09-28/model.py": "4ee1fa7ac8e13f15eb4ecc8350520d0bc9c147333cedddd60f3855799f9ecd41",
+    "model/revenue_architecture_2026-09-28/manifest.json": "3d9519d39cc9a46d9e041fab911b08347bcbca3330bde6a9a6671fba455b89da"
+  }
+}

@@ -1,5 +1,7 @@
 # Next-quarter negative RPU: price, selection and offset hurdles
 
+Follow-through: [repair/salvage evidence and joint quarterly tests](../repair_salvage_execution_2026-09-28/README.md). The conditional negative-price mechanism below remains unvalidated; subsequent discovery did not establish weakening matched salvage bids.
+
 28 September 2026. Target: FY27Q1 (August–October 2026), compared with FY26Q1. Existing data and small local calculations only. These are conditional tests, not an adopted −2% forecast. They test what would have to change before collecting more evidence.
 
 ## Results

@@ -1,5 +1,7 @@
 # Repair economics and salvage demand: prior-work inventory and next plan
 
+**Executed bounded follow-through:** [evidence, offset calculations and quarterly timing results](repair_salvage_execution_2026-09-28/README.md). New provider schemas did not clear the accepted-sale/claims-threshold gates; no expensive collection or empirical forecast coefficient was adopted.
+
 28 September 2026. User requested an end-to-end plan and explicitly required checking prior work first. This pass reviewed relevant research indexes, methods/results and source audits; it did not reread every raw document, collect new evidence or run new experiments. No new forecast is adopted.
 
 ## What exists and how it constrains the plan
