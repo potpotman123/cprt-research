@@ -1,0 +1,128 @@
+{
+  "price_hurdle_range": [
+    -0.054659886585783114,
+    -0.033253860876668276
+  ],
+  "reference": {
+    "median": 3500,
+    "sigma": 0.8,
+    "preferred_fraction": 0.5,
+    "seller_fraction": 0.04,
+    "price_change_for_minus2_rpu": -0.04090809905682278,
+    "rpu_at_price_minus5": -0.02448828667853764,
+    "rpu_at_price_flat": 0.0,
+    "rpu_at_price_plus3p7": 0.01783488271758693
+  },
+  "selection": [
+    {
+      "scenario": "fleet_only",
+      "insurance_sale_equivalent_unit_growth": 0.0006310787851373512,
+      "selected_insurance_ASP_growth": -5.39870875795323e-05,
+      "insurance_core_RPU_growth": -0.0008653350219904876,
+      "insurance_RPU_with_assumed55_services_growth": -0.0008129736300244161,
+      "insurance_service_revenue_growth": -0.00018240789529788692,
+      "insurance_RPU_delta_vs_fleet": 0.0
+    },
+    {
+      "scenario": "price_down5",
+      "insurance_sale_equivalent_unit_growth": 0.0006310787851373512,
+      "selected_insurance_ASP_growth": -0.05005128773320133,
+      "insurance_core_RPU_growth": -0.026034341087552204,
+      "insurance_RPU_with_assumed55_services_growth": -0.024459004017376884,
+      "insurance_service_revenue_growth": -0.023843360790780532,
+      "insurance_RPU_delta_vs_fleet": -0.023646030387352468
+    },
+    {
+      "scenario": "repair_down3",
+      "insurance_sale_equivalent_unit_growth": -0.03881587466020875,
+      "selected_insurance_ASP_growth": -0.005875509037862714,
+      "insurance_core_RPU_growth": -0.003946299897555794,
+      "insurance_RPU_with_assumed55_services_growth": -0.003707509428546363,
+      "insurance_service_revenue_growth": -0.04237947386747509,
+      "insurance_RPU_delta_vs_fleet": -0.0028945357985219466
+    },
+    {
+      "scenario": "expected_and_realized_salvage_down5",
+      "insurance_sale_equivalent_unit_growth": -0.020392315109749037,
+      "selected_insurance_ASP_growth": -0.051603536857835364,
+      "insurance_core_RPU_growth": -0.026925234004114507,
+      "insurance_RPU_with_assumed55_services_growth": -0.0252959890346649,
+      "insurance_service_revenue_growth": -0.04517246036500633,
+      "insurance_RPU_delta_vs_fleet": -0.024483015404640485
+    },
+    {
+      "scenario": "price_up3p7",
+      "insurance_sale_equivalent_unit_growth": 0.0006310787851373512,
+      "selected_insurance_ASP_growth": 0.03694401539017922,
+      "insurance_core_RPU_growth": 0.016192349559904562,
+      "insurance_RPU_with_assumed55_services_growth": 0.015212551053417567,
+      "insurance_service_revenue_growth": 0.01585323015679263,
+      "insurance_RPU_delta_vs_fleet": 0.016025524683441983
+    }
+  ],
+  "offsets": [
+    {
+      "price_growth": 0,
+      "assumed_service_share": 0.05,
+      "price_only_RPU_growth": 0.0,
+      "required_service_revenue_per_unit_growth": -0.39999999999999997
+    },
+    {
+      "price_growth": 0,
+      "assumed_service_share": 0.1,
+      "price_only_RPU_growth": 0.0,
+      "required_service_revenue_per_unit_growth": -0.19999999999999998
+    },
+    {
+      "price_growth": 0,
+      "assumed_service_share": 0.15,
+      "price_only_RPU_growth": 0.0,
+      "required_service_revenue_per_unit_growth": -0.13333333333333333
+    },
+    {
+      "price_growth": 0.037,
+      "assumed_service_share": 0.05,
+      "price_only_RPU_growth": 0.0178492830860836,
+      "required_service_revenue_per_unit_growth": -0.7569856617216719
+    },
+    {
+      "price_growth": 0.037,
+      "assumed_service_share": 0.1,
+      "price_only_RPU_growth": 0.016909847134184464,
+      "required_service_revenue_per_unit_growth": -0.36909847134184465
+    },
+    {
+      "price_growth": 0.037,
+      "assumed_service_share": 0.15,
+      "price_only_RPU_growth": 0.015970411182285326,
+      "required_service_revenue_per_unit_growth": -0.2398027412152355
+    }
+  ],
+  "refinement": [
+    {
+      "scenario": "fleet_only",
+      "RPU_growth_difference_pp": -2.8723897238513985e-05
+    },
+    {
+      "scenario": "repair_down3",
+      "RPU_growth_difference_pp": 0.00014310645654047605
+    },
+    {
+      "scenario": "expected_and_realized_salvage_down5",
+      "RPU_growth_difference_pp": -3.2949682127192403e-05
+    }
+  ],
+  "all_US_scale": {
+    "base_musd": 855.534,
+    "assumed_unit_growth": -0.01,
+    "revenue_at_minus2": 830.0390868,
+    "revenue_at_plus2": 863.9182332,
+    "delta_musd": -33.87914640000008
+  },
+  "scope": "FY27Q1 vs FY26Q1. Price-grid scenarios hypothetical compatible pool; engine insurance only. No adopted forecast.",
+  "source_hashes": {
+    "docs/auction_price_test_2026-09-28/run.py": "9cf6e8cc9ef15b8926ad42ea3d54deea224994dd8bde63a34412ce1c27f758f5",
+    "data/csv/copart_fee_grid_2026-09.csv": "1a4d9f152c97f488c5657227ed8180c8d4149735d14d0f78dd6bf62eb9a8d95f",
+    "model/revenue_architecture_2026-09-28/model.py": "4ee1fa7ac8e13f15eb4ecc8350520d0bc9c147333cedddd60f3855799f9ecd41"
+  }
+}
