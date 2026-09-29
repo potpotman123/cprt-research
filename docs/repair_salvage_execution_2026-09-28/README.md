@@ -79,3 +79,6 @@ The next acquisition decision should be schema-led: an existing insurer/estimati
 ## Subsequent parts-mix segmentation
 
 See [MIX_SEGMENTATION.md](MIX_SEGMENTATION.md): CCC aftermarket usage rose while recycled usage fell in 2025; Mitchell repaired-part share rose. Separate sourcing, operation counts and labor-dollar shares. These observations do not validate a positive salvage-demand coefficient or the prior illustrative repair/salvage shocks.
+
+### Cohort test follow-up
+[COHORT_TEST.md](COHORT_TEST.md): source-reported declines within age groups rule out between-age composition alone. Full age × damage/component test remains unperformed for lack of joint data; total-loss selection within age remains viable. Mitchell provides a competing shop-utilization/margin mechanism, not a calibrated coefficient.
