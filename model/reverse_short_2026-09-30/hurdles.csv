@@ -1,0 +1,4 @@
+target_miss_pct,target_service_musd,terminal_unit_shortfall_pct,q1_unit_shortfall_pct,q2_unit_shortfall_pct,q3_unit_shortfall_pct,q4_unit_shortfall_pct,own_reference_delta_musd,named_benchmark_gap_musd,status
+2.0,3979.7799999999997,4.3225091966659,0.0,2.16125459833295,4.3225091966659,4.3225091966659,-113.29773024389533,-81.22000000000025,"ASSUMED target; reverse-solved operating hurdle, NOT a forecast"
+3.0,3939.17,6.4558702370587655,0.0,3.2279351185293828,6.4558702370587655,6.4558702370587655,-153.907730243895,-121.82999999999993,"ASSUMED target; reverse-solved operating hurdle, NOT a forecast"
+5.0,3857.95,10.722592317844546,0.0,5.361296158922273,10.722592317844546,10.722592317844546,-235.12773024389526,-203.05000000000018,"ASSUMED target; reverse-solved operating hurdle, NOT a forecast"

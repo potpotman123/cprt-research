@@ -1,0 +1,16 @@
+{
+  "status": "USER-REQUESTED REVERSE STRESS; NOT AN EVIDENCE-BACKED FORECAST OR VERIFIED CATALYST",
+  "reference": "model/ccc_age_body_2026-09-29/reference_config.json",
+  "benchmark": "model/revenue_architecture_2026-09-28/evidence_manifest.json",
+  "benchmark_field": "jpm_fy27_service_musd",
+  "target_miss_fractions": [0.02, 0.03, 0.05],
+  "display_target_miss_fraction": 0.03,
+  "price_driver_fy27": [1.037, 1.0185, 1.0, 1.0],
+  "unit_shortfall_ramp_fy27": [0.0, 0.5, 1.0, 1.0],
+  "quarter_starts": ["2026-08-01", "2026-11-01", "2027-02-01", "2027-05-01"],
+  "unit_shock_implementation": "Uniform proportional reduction to each carrier's reference allocation; NOT a named carrier award or estimate of market share",
+  "price_shock_implementation": "Realized auction-price driver at fixed expected salvage; no aftermarket adoption or recycled-displacement coefficient inferred",
+  "evidence_status": "All new forward paths and target sizes ASSUMED; terminal unit shortfall reverse-solved to chosen target, not estimated from evidence",
+  "forecast_admission": false,
+  "catalyst_verified": false
+}

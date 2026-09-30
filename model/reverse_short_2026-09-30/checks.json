@@ -1,0 +1,14 @@
+{
+  "reference_reproduced": true,
+  "historical_levels_preserved": true,
+  "targets_match_full_engine": true,
+  "exact_four_case_interaction": true,
+  "first_quarter_unchanged": true,
+  "price_only_preserves_units": true,
+  "selection_and_other_branches_unchanged": true,
+  "source_hashes_unchanged": true,
+  "selected_joint_case": "joint_target_3pct",
+  "interaction_musd": 1.8071295578165518,
+  "forecast_admission": false,
+  "catalyst_verified": false
+}

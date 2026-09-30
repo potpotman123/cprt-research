@@ -10,6 +10,7 @@ This Markdown file is the recovery index, not a replacement for the model files 
 
 | Subject | Authoritative entry point |
 |---|---|
+| User-requested reverse stress: explicit assumptions producing 2%/3%/5% JPM misses, with catalyst gates still open | [Conditional short hurdles](model/reverse_short_2026-09-30/README.md) |
 | Latest one-page investment decision and conditional model-admission result | [PM brief](reports/pitch_decision_2026-10.md) |
 | Named quarterly expectations, missing operating inputs and source locators | [Expectations sheet](reports/expectations_sheet_2026-10.md) |
 | Ranked surprise/kill tests, new filing facts, carrier comparisons and bounded search failures | [Catalyst scorecard](reports/catalyst_scorecard_2026-10.md) |
@@ -45,3 +46,5 @@ Important distinctions to preserve:
 The original 30 September publication snapshot included the nonignored artifacts then present. Subsequent working updates are indexed above; this note does not assert they have been pushed. Raw licensed/private source material, large collection caches/databases and environment files remain local under the existing repository rules; extracted analytical datasets and source provenance are the publication boundary. A GitHub clone is therefore an analytical archive, not a byte-for-byte backup of the research computer or a verbatim chat transcript.
 
 **Change log — 2026-09-30:** recovered named quarterly fee-unit/RPU expectations, checked new filings and completed the approved bounded catalyst pass; no evidence-backed surprise admitted, no model integration triggered.
+
+**Subsequent user-requested scenario change — 2026-09-30:** separate engine configurations now reverse-solve 2%/3%/5% FY27 service misses versus JPM. With the assumed price driver fading to zero by Q3, the 3% miss requires insurance units 3.23% below reference in Q2 and 6.46% below in Q3/Q4; services $3,939.17m. This is a reverse stress, not a supported forecast or verified catalyst. Reference/history/workbook remain unchanged; the earlier investment conclusion stands pending evidence.
