@@ -1,0 +1,47 @@
+[
+  {
+    "name": "rba_leadership",
+    "url": "https://investor.rbglobal.com/news/news-details/2023/RB-Global-Announces-Leadership-Changes/default.aspx",
+    "status": 403,
+    "bytes": 3638,
+    "challenge": false,
+    "path": null
+  },
+  {
+    "name": "rba_executives",
+    "url": "https://investor.rbglobal.com/governance/executive-management/default.aspx",
+    "status": 403,
+    "bytes": 3589,
+    "challenge": false,
+    "path": null
+  },
+  {
+    "name": "ccc_annual",
+    "url": "https://ir.cccis.com/news-releases/news-release-details/ccc-crash-course-2026-report-finds-higher-severity-and-record",
+    "status": null,
+    "result": "Not fetched: robots unavailable or disallowed",
+    "robots_status": -1
+  },
+  {
+    "name": "lkq_event",
+    "url": "https://investor.lkqcorp.com/events-and-presentations/event-details/2026/Third-Quarter-2026-Earnings-Conference-Call/default.aspx",
+    "status": 403,
+    "bytes": 3676,
+    "challenge": false,
+    "path": null
+  },
+  {
+    "name": "mitchell_index",
+    "url": "https://www.mitchell.com/news-insights",
+    "status": 200,
+    "bytes": 98468,
+    "challenge": false,
+    "path": "raw/catalyst_2026_10/mitchell_index.html"
+  },
+  {
+    "name": "rba_leadership_syndicated",
+    "url": "https://www.prnewswire.com/news-releases/rb-global-announces-leadership-changes-301891412.html",
+    "status": 200,
+    "path": "raw/catalyst_2026_10/rba_leadership_syndicated.html"
+  }
+]

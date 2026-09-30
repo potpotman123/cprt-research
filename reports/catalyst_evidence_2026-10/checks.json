@@ -1,0 +1,69 @@
+{
+  "as_of": "2026-09-30",
+  "status": "MEASURED arithmetic; forecast shocks remain ASSUMED",
+  "inventory": {
+    "observations": [
+      {
+        "day": "2026-09-11",
+        "copart_share_pct_recomputed": 57.053787028889104,
+        "copart_snapshot": "2026-09-10T04:25:18Z"
+      },
+      {
+        "day": "2026-09-17",
+        "copart_share_pct_recomputed": 57.454675278842444,
+        "copart_snapshot": "2026-09-17T22:58:46Z"
+      },
+      {
+        "day": "2026-09-18",
+        "copart_share_pct_recomputed": 56.75115207373272,
+        "copart_snapshot": "2026-09-18T22:48:28Z"
+      },
+      {
+        "day": "2026-09-27",
+        "copart_share_pct_recomputed": 57.56636598974161,
+        "copart_snapshot": "2026-09-27T22:50:49Z"
+      }
+    ],
+    "n": 4,
+    "mean_pct": 57.206495092801475,
+    "min_pct": 56.75115207373272,
+    "max_pct": 57.56636598974161,
+    "denominator": "listed US inventory of two platforms; stock, not flow"
+  },
+  "rba_owned_acreage_pct": 41.49834493008174,
+  "rba_us_owned_acreage_pct": 36.31967213114754,
+  "rba_2025_automotive_lots_thousands": 2447.7,
+  "rba_2025_quarter_sum_thousands": 2447.7,
+  "stephens_iaa_lots_difference_thousands": 68.30000000000018,
+  "rba_q2_2026_automotive_lot_growth_pct": 10.555462325893593,
+  "carrier_runoff_minus_flat_musd": {
+    "FY27Q1": -4.565803082917114,
+    "FY27Q2": -4.566444101606521,
+    "FY27Q3": -4.566050783097239,
+    "FY27Q4": -4.565339206988256
+  },
+  "carrier_runoff_minus_flat_H1_musd": -9.132247184523635,
+  "carrier_runoff_minus_flat_FY_musd": -18.26363717460913,
+  "stephens_Q2_flat_units_hypothetical": {
+    "us_service_delta_musd": -16.717647058823566,
+    "global_service_after_musd": 987.5823529411764,
+    "annual_service_if_other_quarters_unchanged_musd": 4133.882352941177,
+    "annual_gap_to_JPM_4061_musd": 72.88235294117658,
+    "limit": "One-quarter driver sensitivity to dated Stephens forecast; no evidence-supported shock or JPM quarterly comparison"
+  },
+  "stephens_minus_jpm_service_musd": 89.60000000000036,
+  "jpm_service_growth_vs_reported_fy26_pct": 2.30456075293739,
+  "stephens_sums": {
+    "service": 4150.6,
+    "purchased": 696.0999999999999,
+    "total": 4846.7
+  },
+  "checks": {
+    "inventory_rounding": true,
+    "new_contract_sentence": true,
+    "competition_body_identical": true,
+    "facilities_and_insurer_mix": true,
+    "rba_source_values": true,
+    "stephens_quarter_sums": true
+  }
+}

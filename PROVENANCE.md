@@ -191,6 +191,24 @@ See [repair research audit index](docs/repair_research_2026-09-26/README.md) for
 
 2026-09-26: `docs/repair_research_2026-09-26/contract_scope_screen/` reconstructs supplied Barclays 25-Aug Figure 1 from a visually inspected embedded table. $59.595m gain matches rounded $60m with discounts on 621.9k carrier units rather than 125k incremental units. Not actual-contract verification. Pre/post-award base ambiguity preserved; no double-counting against existing analyst estimates or model updates.
 
+## 30 September 2026 — named expectations and bounded catalyst follow-up
+
+[Decision](reports/pitch_decision_2026-10.md), [expectations](reports/expectations_sheet_2026-10.md), [scorecard](reports/catalyst_scorecard_2026-10.md). Local-first review of four held analyst reports, September call excerpts, Copart FY25/FY26 10-Ks, RB Global FY25 10-K/Q2 10-Q/earnings exhibit and local 2026 8-Ks. Native PDF page checks used no OCR. Licensed originals and renders remain in private/local source paths. No agents, outreach, paid work, fitting, model or workbook changes.
+
+The owner approved six search queries and up to five primary-content requests plus robots checks. All 17 HTTP requests in this pass (six queries, five content requests, six robots policies) used `scripts/prov.py`; no web-provider bypass. Per-request URLs, statuses, timestamps and hashes are in the existing provenance log. Exact queries and page-access results are also preserved under `reports/catalyst_evidence_2026-10/`.
+
+| Host touched | Access and outcome | Evidentiary use |
+|---|---|---|
+| `html.duckduckgo.com` | Fresh robots 200, Allow `/`; six queries: first three 200, last three 202 without usable results | Discovery only; no snippet promoted to a causal coefficient. No challenge solution or retry |
+| `investor.rbglobal.com` | Fresh robots 200; 2023 leadership and current executives pages each 403 | Failures preserved; original issuer release on separate public syndication host used below |
+| `ir.cccis.com` | Robots request status −1, transport failure; content not requested | Annual-format search lead remains unverified; no refreshed adoption series or release date |
+| `investor.lkqcorp.com` | Fresh robots 200; Q3 event page 403 | Date retained as prior verified evidence, not newly reconfirmed |
+| `www.mitchell.com` | Fresh robots 200; news/insights index 200 | 31-Aug PartsTrader discussion identifies cost/availability/delivery records; no quantitative forecast input |
+| `www.prnewswire.com` | Fresh robots 200 and URL permitted; issuer's 2-Aug-2023 leadership release 200 | Verifies Kessler appointment date; same issuer evidence, not independent corroboration |
+| `www.sec.gov` (cached only) | No new request; prior successful downloads and request hashes inspected | Corporate/acquisition/acreage/volume/contract facts; exact local versions fingerprinted |
+
+`scripts/catalyst_checks_2026_10.py` reproduces clean inventory shares, saved runoff-versus-flat differences, filing-text comparisons, analyst rounding checks and the explicitly hypothetical $16.718m Q2 recovery sensitivity. This is arithmetic/source validation, not economic validation. Raw failure-body hashes remain in the request log; successful raw pages remain local. Retrieval stopped at the authorized bound. See the scorecard for remaining IAA-only acreage/leadership, renewal, adoption and transmission gaps.
+
 ## 2026-09-27 research consolidation and quarterly model redesign
 
 Consolidated the repair research, execution plan v2 and bounded local experiments into docs, with a current MODEL_AND_RESEARCH_HANDOFF_2026-09-27.md. Restored live repair, CCC calibration, cohort and nonlinear fee equations behind four main reading tabs. The reproducible package is model/service_revenue_2026-09-27/. Validation independently reconstructed 920 stock cells, body repair means, calibrated probabilities, fee calculations and quarterly dollar forecasts. Input-change/restoration tests passed. Data tabs contain only values; section markers alone have colored tabs. Artifact-tool recalculation and rendered views were checked; desktop Excel was not tested. No new scrape, OCR or paid data acquisition. Licensed raw sources remain local, and concurrent nightly collector changes are excluded.

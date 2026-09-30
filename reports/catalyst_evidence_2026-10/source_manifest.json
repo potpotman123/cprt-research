@@ -1,0 +1,157 @@
+[
+  {
+    "path": "data/csv/duopoly_daily.csv",
+    "sha256": "f77ec5fbd278f3191662f116834f4568b6f9c5e9cdebfda13ce0b59d830c8efa",
+    "bytes": 2508
+  },
+  {
+    "path": "raw/sec/10k/cprt_2025-07-31.htm",
+    "sha256": "bc5f78bd9812699603d3201bce9142fcaf957e590212384e3363854fd734e0b9",
+    "bytes": 2029406
+  },
+  {
+    "path": "raw/sec/10k/cprt_2026-07-31.htm",
+    "sha256": "75b8f83930d76c5f136e33370ef6c1f6f3417c57be8df7913ff381d76eaf9cca",
+    "bytes": 4477111
+  },
+  {
+    "path": "raw/sec/rba/10k_2025-12-31.htm",
+    "sha256": "df2b0589426099c5c835ea3713a7da275c04fa39723ce145909ff7e914482213",
+    "bytes": 2536921
+  },
+  {
+    "path": "raw/sec/rba/8k_2026-08-04_ex99_1.htm",
+    "sha256": "563280281825868d36cdb47ab0505a16745dadc992d39e2078f279bee08b13ba",
+    "bytes": 535343
+  },
+  {
+    "path": "docs/carrier_test_2026-09-28/forward_comparison.csv",
+    "sha256": "da9d6a558171a29db4c98ed4c2ebdc4b44ed25a1d4c4745d7c1adf64353fbb91",
+    "bytes": 2441
+  },
+  {
+    "path": "raw/sec/rba/10q_2026-06-30.htm",
+    "sha256": "8c7f642c7a0c1e580f201af142c687646edbed5aeed7946e90ab62b0c00f52cb",
+    "bytes": 1574166
+  },
+  {
+    "path": "raw/transcripts/call_2026-09-10.txt",
+    "sha256": "81602b7efdc7e8713abe1515332785cb4e06314727bc5de2f66d388d5c23aa56",
+    "bytes": 53206
+  },
+  {
+    "path": "raw/sec/rba/8k_2026-01-20.htm",
+    "sha256": "f7e5c3bab8d6602649ec3424dd6823ca095a774e13a8093e44b6b379c1c566c9",
+    "bytes": 29970
+  },
+  {
+    "path": "raw/sec/rba/8k_2026-03-04.htm",
+    "sha256": "0a4be40b8b5c12c4420bf4d8afbcd2336b687284e99257a6373e6296556caa9a",
+    "bytes": 30185
+  },
+  {
+    "path": "raw/sec/rba/8k_2026-03-09.htm",
+    "sha256": "d8573e44c8a502396547e509fc6eb634ab8ae60ae1d5cfe396fef55d5f906272",
+    "bytes": 30282
+  },
+  {
+    "path": "raw/sec/rba/8k_2026-03-16a.htm",
+    "sha256": "eef5a9b25ba21dbb96e6df3f0fde5706d6dc68bfd46fc91d486229bc651e238f",
+    "bytes": 29855
+  },
+  {
+    "path": "raw/sec/rba/8k_2026-03-16b.htm",
+    "sha256": "7364c6257c5f23011c7851c611b142cdd6c9603276b3bd5ae5e4c78ee726d657",
+    "bytes": 28455
+  },
+  {
+    "path": "raw/sec/rba/8k_2026-04-23.htm",
+    "sha256": "506d61d193b54fcb123d982e6e22c2be920edb13c405f94ca5d92639a7910ae9",
+    "bytes": 30736
+  },
+  {
+    "path": "raw/sec/rba/8k_2026-05-01.htm",
+    "sha256": "13a7ab53d6a03148237a55a580dae33ca0f539e812cf64cab649e5f9ee53eec6",
+    "bytes": 49858
+  },
+  {
+    "path": "raw/sec/rba/8k_2026-05-18.htm",
+    "sha256": "85e536caf863529c78cd103d66f2c3bdeb7878582f75273bb496949c147196fc",
+    "bytes": 30705
+  },
+  {
+    "path": "raw/sec/rba/8k_2026-08-04_index.htm",
+    "sha256": "ebbe04d86594a88a8177a464da0a8754dbf7226b7931be55f79263af1ec49a36",
+    "bytes": 13423
+  },
+  {
+    "path": "raw/sec/rba/8k_2026-09-15.htm",
+    "sha256": "c55b87b52b10ef4375072253cd2619351aa35b5031741a16f0970a7a7590d3da",
+    "bytes": 31066
+  },
+  {
+    "path": "/Users/kwu/Documents/ChatGPT/HFAC x Citadel/research/cprt_discovery_plan_2026-09-26/sources/2026-09-11-CPRT.OQ-JPMorgan-Copart, Inc. F4Q Miss Amidst Ongoing Cost Investments but Re...-124345098.txt",
+    "sha256": "e8c2dbaabb435ccdf6b80eaa2ca9fd9cd43d48ab52873f6608f93aed9582905c",
+    "bytes": 53291
+  },
+  {
+    "path": "/Users/kwu/Documents/ChatGPT/HFAC x Citadel/research/cprt_discovery_plan_2026-09-26/sources/2026-09-11-CPRT.OQ-JPMorgan-Copart, Inc. F4Q Miss Amidst Ongoing Cost Investments but Re...-124345098.pdf",
+    "sha256": "9f8e93ca98189ac3c4829dc2c896863c69aa3bbff11b59cd0255d10a43de7977",
+    "bytes": 1043372
+  },
+  {
+    "path": "/Users/kwu/Documents/ChatGPT/HFAC x Citadel/research/cprt_discovery_plan_2026-09-26/sources/2026-08-20-CPRT.OQ-Stephens Inc.-F4Q26 Preview Expect a Slight Miss to Consensus and an Even...-123970131.txt",
+    "sha256": "c3eb7427825d2fafe5e5df11a9ba7cafe5d55d6f205523defef4c69c5a1e564d",
+    "bytes": 55221
+  },
+  {
+    "path": "/Users/kwu/Documents/ChatGPT/HFAC x Citadel/research/cprt_discovery_plan_2026-09-26/sources/2026-08-20-CPRT.OQ-Stephens Inc.-F4Q26 Preview Expect a Slight Miss to Consensus and an Even...-123970131.pdf",
+    "sha256": "c5fa437d69f4acebb48b1057396d14b71310f9adf7f467f68ceefa0a76e56862",
+    "bytes": 460945
+  },
+  {
+    "path": "/Users/kwu/Documents/ChatGPT/HFAC x Citadel/research/cprt_discovery_plan_2026-09-26/sources/2026-09-11-CPRT.OQ-Barclays-Copart Inc. F4Q26 Review CPRT to acquire ACVA - Accretive ...-124339246.txt",
+    "sha256": "ab35494a7e90374c9c9cde8231aa91cb183127ec22ac2d02f680a965c6f3be95",
+    "bytes": 52829
+  },
+  {
+    "path": "/Users/kwu/Documents/ChatGPT/HFAC x Citadel/research/cprt_discovery_plan_2026-09-26/sources/2026-09-11-CPRT.OQ-Barclays-Copart Inc. F4Q26 Review CPRT to acquire ACVA - Accretive ...-124339246.pdf",
+    "sha256": "631fcdfbb1713ad40210a4812f9e64c62202d52248754666cd8c5dd3071d1d55",
+    "bytes": 386656
+  },
+  {
+    "path": "/Users/kwu/Documents/ChatGPT/HFAC x Citadel/research/cprt_discovery_plan_2026-09-26/sources/2026-08-25-RBA.TO-Barclays-U.S. Auto Retail CPRT vs. RBA Salvage Auction Wars-124041014.txt",
+    "sha256": "4ced5c8ba9a8b93dd6d4e1a63b1c149cbdc960021465dc3bef62d7173ce7f17c",
+    "bytes": 63110
+  },
+  {
+    "path": "/Users/kwu/Documents/ChatGPT/HFAC x Citadel/research/cprt_discovery_plan_2026-09-26/sources/2026-08-25-RBA.TO-Barclays-U.S. Auto Retail CPRT vs. RBA Salvage Auction Wars-124041014.pdf",
+    "sha256": "ad3f745310321d11faef0c6a231b36b47a65df0ae06cefaed285df16a979ec31",
+    "bytes": 586739
+  },
+  {
+    "path": "raw/catalyst_2026_10/query2.html",
+    "sha256": "a01faa96567f840e5d83c2cc064995fc28c82a02f886d75cced66ec5dda38882",
+    "bytes": 37075
+  },
+  {
+    "path": "raw/catalyst_2026_10/query3.html",
+    "sha256": "9d724802127d2ba4597bc39e4d5f23f6f481c620b5ed49b3700352fdcb80d147",
+    "bytes": 37590
+  },
+  {
+    "path": "raw/catalyst_2026_10/rba_leadership_syndicated.html",
+    "sha256": "587f7671ac2cfb2b504d012f9b8080f41d8f2e77b7eff31bb5cd53a59e3713e0",
+    "bytes": 288189
+  },
+  {
+    "path": "raw/catalyst_2026_10/query1.html",
+    "sha256": "2bc3cbe48594298b88a4b177c7a893b712d3d12243647818b6d220d8d40814cd",
+    "bytes": 38348
+  },
+  {
+    "path": "raw/catalyst_2026_10/mitchell_index.html",
+    "sha256": "36274f036d1d6b474b6cb012ffffe22bb4a5dbcd349ad42ce0bc2c909f9240e6",
+    "bytes": 98468
+  }
+]

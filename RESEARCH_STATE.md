@@ -1,13 +1,19 @@
-# Copart research state — publication snapshot, 30 September 2026
+# Copart research state — updated 30 September 2026
 
 **Agreed investment conclusion:** We have an intellectually interesting structural pitch, but have not established one measurable forecast error supported by evidence and tied to an observable near-term catalyst. There is not yet a demonstrated actionable reason for investors to adopt the view within twelve months. An earnings date is an observation window; a catalyst requires an identifiable surprise that changes a forecast or valuation assumption.
 
 The revenue architecture is coherent for conditional scenarios. The magnitude, benchmark gap and timing of the two competition theses remain insufficiently established for a high-conviction 12-month short. The absence of a catalyst is central to the pitch audit and must remain visible in the Excel/Fable handoff.
 
+**30 September expectations/catalyst follow-up:** the held reports now supply a named operating hurdle: Stephens 20 August assumes US fee units −1% in FY27 Q1, then +2% in Q2–Q4, with +2% US fee RPU. Barclays already incorporates net contract volume losses and 25–50 bp take-rate pressure. Neither thesis establishes evidence that those assumptions will be missed; JPM's quarterly operating drivers remain undisclosed. The new filings verify contractual contestability, but do not identify another award, renewal date or IAA-only land parity. Clean listed-inventory share is 57.2065% across four nights, not an equilibrium flow share. RB Global's 2025 automotive lots are 2,447.7k, differing from Stephens' illustrative 2,516k. No central forecast or workbook was changed. The approved public pass was completed with access failures preserved; it cannot prove the absence of a catalyst. **Recommendation: structural research; do not pitch either mechanism as an established catalyst-backed short.**
+
 This Markdown file is the recovery index, not a replacement for the model files and datasets. Equations are preserved in the implementation and model notes; numeric inputs, calibrations, outputs and evidence records remain in their original directories. Publication preserves the work; it does not validate the assumptions.
 
 | Subject | Authoritative entry point |
 |---|---|
+| Latest one-page investment decision and conditional model-admission result | [PM brief](reports/pitch_decision_2026-10.md) |
+| Named quarterly expectations, missing operating inputs and source locators | [Expectations sheet](reports/expectations_sheet_2026-10.md) |
+| Ranked surprise/kill tests, new filing facts, carrier comparisons and bounded search failures | [Catalyst scorecard](reports/catalyst_scorecard_2026-10.md) |
+| Follow-up recovery, source fingerprints and reproducible local checks | [Recovery checkpoint](reports/recovery_checkpoint_2026-10.md), [evidence directory](reports/catalyst_evidence_2026-10/README.md) |
 | Self-contained prompt for a new high-reasoning session: two theses → catalyst search → decision → model integration, with the load-bearing unsourced assumptions listed | [Prompt](PROMPT_HIGH_REASONING_FABLE_2026-09-30.md) |
 | PM assessment of both competition theses, opposing evidence, missing proof, additions and comparison with prior successful pitches | [Full pitch audit](docs/pitch_audit_2026-09-29/README.md) |
 | Catalyst windows, what each would need to reveal, limits of earnings revisions | [Catalyst assessment](docs/catalyst_assessment_2026-09-29/README.md) |
@@ -36,4 +42,6 @@ Important distinctions to preserve:
 - Global FY26 unit growth of −5.5%, versus −3.1% excluding CAT, supports a catastrophe comparison effect at that scope. It is not an available adjustment to Q4 US insurance's −7.5% sold-unit figure. Assignments and sold units remain distinct.
 - Earnings, cash flow, WACC and valuation remain the user's planned subsequent work. Those models have not been silently completed.
 
-All nonignored research artifacts in this repository are included in this publication snapshot. Raw licensed/private source material, large collection caches/databases and environment files remain local under the existing repository rules; extracted analytical datasets and source provenance are published. The snapshot inventory records this boundary explicitly. A GitHub clone is therefore an analytical archive, not a byte-for-byte backup of the research computer or a verbatim chat transcript.
+The original 30 September publication snapshot included the nonignored artifacts then present. Subsequent working updates are indexed above; this note does not assert they have been pushed. Raw licensed/private source material, large collection caches/databases and environment files remain local under the existing repository rules; extracted analytical datasets and source provenance are the publication boundary. A GitHub clone is therefore an analytical archive, not a byte-for-byte backup of the research computer or a verbatim chat transcript.
+
+**Change log — 2026-09-30:** recovered named quarterly fee-unit/RPU expectations, checked new filings and completed the approved bounded catalyst pass; no evidence-backed surprise admitted, no model integration triggered.
