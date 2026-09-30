@@ -1,0 +1,21 @@
+{
+  "ccc_parts_bill_share_2025_rounded": {
+    "current_or_newer": 0.44,
+    "age_1_3": 0.43,
+    "age_4_6": 0.41,
+    "age_7plus": 0.36
+  },
+  "ccc_2025_approximate_count_shares": {
+    "oem": 0.676923076923077,
+    "aftermarket": 0.25384615384615383,
+    "recycled": 0.038461538461538464,
+    "reconditioned": 0.007692307692307693,
+    "optional_oem": 0.023076923076923075
+  },
+  "lkq_2021_equinox_hood_illustrative_march_2025": {
+    "oem_usd": 1117,
+    "salvage_usd": 625,
+    "salvage_to_oem": 0.5595344673231871
+  },
+  "status": "Descriptive constraints; incompatible populations are not pooled or used as calibrated forecast inputs"
+}

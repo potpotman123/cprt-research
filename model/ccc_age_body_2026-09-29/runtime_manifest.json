@@ -1,0 +1,20 @@
+{
+  "status": "Conditional CCC composition/level case. Not a measured aftermarket forecast; old exact repair/value calibration does not transfer.",
+  "dependencies": {
+    "model/ccc_age_body_2026-09-29/source_cells.csv": "ecee8dad938bd220350a243a900632136969831eb11893776f8a2a9b0167c8c4",
+    "model/ccc_age_body_2026-09-29/source_manifest.json": "311e18c22156e228a91b2ada2cc653b2cdfa584eced8b74e40be43f40c7bedea",
+    "model/ccc_age_body_2026-09-29/cohort_anchor.json": "5ccf5deac6325e19a6d932cfcc751d6a4c745f2a61ba38a00cbd0d4504fd150e",
+    "model/ccc_age_body_2026-09-29/integrate.py": "8afe9ed6aee4ce5a9fac3a42f91c692e1ede2c1bf13b49410a4ea43da297a6f8",
+    "model/revenue_architecture_2026-09-28/model.py": "5da44a2feceaeeacba8a3f38f939e019155c38cf69358221661d3ddb5e13ae82",
+    "model/revenue_architecture_2026-09-28/scenario_configs.json": "9217344ef7277b773586fc22556fb743cfdc78b899e4ddc6e0ee9ae59dccf34c",
+    "model/revenue_architecture_2026-09-28/evidence_manifest.json": "70155f13bd219c49b0311d1b758b67457ef1c25c1eccd804be3e80fe38f6cbbf",
+    "model/aftermarket_bridge_2026-09-29/bridge.py": "aa117019d99db6b7a8671d4652e23f4094168a2a519193e520a583c3b8257aef",
+    "model/aftermarket_bridge_2026-09-29/inputs.json": "335f3230b5485b2fe6f53f872cb3cd9fbd3bd91196dd05f0bc183d77881e3758",
+    "model/integrated_service_2026-09-28/engine.py": "8f06ed12586d0ee60fc916c295dbf376a1fcd7d03ab66901777a37435cfd76c8",
+    "model/integrated_service_2026-09-28/assumptions.json": "a5247106423da9061fdebe1409e085ecfa94c2b0e60c9e50d086747d2ee003a2",
+    "model/linked_service_revenue_2026-09-28/inputs.json": "18e80a5aa8c34854b8bc1d9471d7530d7b827349ac51758f13a3d24987e7b591",
+    "docs/fleet_selection_2026-09-28/age_constrained_engine_results.json": "8e6f55a8792caf6aa2cb4f4c2d758936ff96e3b2a306c85244db59e4bfd6655b",
+    "docs/historical_body_births_2026-09-28/candidate_body_births.csv": "8c983b66db41ec3170c20a510fcd166b917d9b3d9f0a2f39d9b5a13871d6f0f4",
+    "docs/consensus_review_2026-09-28/total_revenue_consensus.csv": "5ef545dca2928267b7f366da91c316a080df33e1efb2d7c29e3ca5ccd13133bb"
+  }
+}

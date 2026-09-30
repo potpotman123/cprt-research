@@ -6,6 +6,8 @@ reference model) is gitignored and never committed.**
 
 ## Start here
 
+**Current research state, published 30 September 2026:** start with [RESEARCH_STATE.md](RESEARCH_STATE.md), the [latest pitch audit](docs/pitch_audit_2026-09-29/README.md), and the [current revenue architecture](model/revenue_architecture_2026-09-28/README.md). The pitch remains intellectually interesting but lacks an established measurable forecast error tied to an observable near-term catalyst. The index below and earlier headline results retain historical context; the current audits govern interpretation. [Publication inventory and local-only exclusions](docs/repository_snapshot_2026-09-30/README.md) specify what a GitHub clone contains.
+
 **Standing research instructions:** read [RESEARCH_PRINCIPLES.md](RESEARCH_PRINCIPLES.md) for end-to-end method explanations, explicit alternatives, broader discovery and cost gates.
 
 
@@ -23,7 +25,7 @@ reference model) is gitignored and never committed.**
 | `scripts/README.md`, `data/csv/README.md` | One line per script and per dataset: what it is and whether it is live, analysis, dead-end or legacy. |
 | `docs/archive/` | Superseded documents, each with a header saying why. |
 
-## The results that carry the pitch (details, caveats and confidence in `HANDOFF.md` §3)
+## Earlier results — historical snapshot, subject to the current audits
 
 1. **Revenue per unit is a fee-and-mix engine, not a price pass-through.** Service-RPU elasticity to ASP 0.514
    (95% CI 0.29–0.73) with a +4.1pp intercept, n = 17; effective n ≈ 6. Used-car CPI → ASP → RPU is the nowcast chain; its FY26Q4 miss is ~0.8pp on service RPU,

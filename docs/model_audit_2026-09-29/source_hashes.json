@@ -1,0 +1,82 @@
+[
+  {
+    "path": "/Users/kwu/Documents/ChatGPT/HFAC x Citadel/research/cprt_discovery_plan_2026-09-26/sources/2026-09-11-CPRT.OQ-JPMorgan-Copart, Inc. F4Q Miss Amidst Ongoing Cost Investments but Re...-124345098.txt",
+    "exists": true,
+    "sha256": "e8c2dbaabb435ccdf6b80eaa2ca9fd9cd43d48ab52873f6608f93aed9582905c"
+  },
+  {
+    "path": "/Users/kwu/Library/Messages/Attachments/53/03/CDE4DBC0-6774-4ABD-860B-E12504CAF220/CPRT_share_sidebuild.xlsx",
+    "exists": true,
+    "sha256": "a6da3581569c037cfa6d86e3c3b9a89181d0aacf3ead2e0735e2327215a717bb"
+  },
+  {
+    "path": "data/csv/ccc_tl_share_by_age_2020_2025.csv",
+    "exists": true,
+    "sha256": "f8578c0aed0de5ff19d9dbe9a53cb83b6a97eae5e18d9651f4c35fb929e1fd53"
+  },
+  {
+    "path": "data/csv/copart_fee_grid_2026-09.csv",
+    "exists": true,
+    "sha256": "1a4d9f152c97f488c5657227ed8180c8d4149735d14d0f78dd6bf62eb9a8d95f"
+  },
+  {
+    "path": "docs/fleet_selection_2026-09-28/age_constrained_engine_results.json",
+    "exists": true,
+    "sha256": "8e6f55a8792caf6aa2cb4f4c2d758936ff96e3b2a306c85244db59e4bfd6655b"
+  },
+  {
+    "path": "docs/historical_body_births_2026-09-28/candidate_body_births.csv",
+    "exists": true,
+    "sha256": "8c983b66db41ec3170c20a510fcd166b917d9b3d9f0a2f39d9b5a13871d6f0f4"
+  },
+  {
+    "path": "model/integrated_service_2026-09-28/assumptions.json",
+    "exists": true,
+    "sha256": "a5247106423da9061fdebe1409e085ecfa94c2b0e60c9e50d086747d2ee003a2"
+  },
+  {
+    "path": "model/integrated_service_2026-09-28/engine.py",
+    "exists": true,
+    "sha256": "8f06ed12586d0ee60fc916c295dbf376a1fcd7d03ab66901777a37435cfd76c8"
+  },
+  {
+    "path": "model/linked_service_revenue_2026-09-28/inputs.json",
+    "exists": true,
+    "sha256": "18e80a5aa8c34854b8bc1d9471d7530d7b827349ac51758f13a3d24987e7b591"
+  },
+  {
+    "path": "model/revenue_architecture_2026-09-28/model.py",
+    "exists": true,
+    "sha256": "4ee1fa7ac8e13f15eb4ecc8350520d0bc9c147333cedddd60f3855799f9ecd41"
+  },
+  {
+    "path": "model/revenue_architecture_2026-09-28/scenario_configs.json",
+    "exists": true,
+    "sha256": "a15051cc89cf230f63159b2ebfaffff34986df054028ccf5509850426b7b0276"
+  },
+  {
+    "path": "model/service_revenue_2026-09-27/model_inputs.json",
+    "exists": true,
+    "sha256": "fb3d216b30ea8ee080b2a6ab9148da59625117756a1941997cbc6491a5c39132"
+  },
+  {
+    "path": "raw/sec/8k/er_2025-11-20_cprt-ex99_1.htm",
+    "exists": true,
+    "sha256": "c52eb56e5835419e5e97ddec6aa94ecc0a552e3247980f7b35f81110f4ec5a01"
+  },
+  {
+    "path": "raw/sec/8k/er_2026-02-19_cprt-ex99_1.htm",
+    "exists": true,
+    "sha256": "f483599452de5ff11611dfb7e862c690ef5877efc759004820b1a5fb7bf68e83"
+  },
+  {
+    "path": "raw/sec/8k/er_2026-05-21_cprt-ex99_1.htm",
+    "exists": true,
+    "sha256": "d786ac941b28dd018e6feeb4e9ff48a97ae316f707ef5fc3c451a21e9cda2136"
+  },
+  {
+    "path": "raw/sec/8k/er_2026-09-10_cprt-ex99_1.htm",
+    "exists": true,
+    "sha256": "552d2a51bbdf3b28efa644f30ed509597993177748a87a00603a70bae26414bd"
+  }
+]

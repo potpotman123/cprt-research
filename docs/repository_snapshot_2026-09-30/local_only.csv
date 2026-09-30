@@ -1,0 +1,1219 @@
+path,bytes,reason
+data/carrier/brk_sub.json,161265,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/datasec_robots.txt,281,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/ex/brk_10k_2025.htm,10396820,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/ex/brk_10q_2026Q2.htm,6344310,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/ex/m2025-06.htm,292268,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/ex/m2025-07.htm,280627,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/ex/m2025-08.htm,281453,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/ex/m2025-09.htm,299536,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/ex/m2025-10.htm,284823,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/ex/m2025-11.htm,284628,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/ex/m2025-12.htm,301941,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/ex/m2026-01.htm,194741,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/ex/m2026-02.htm,277883,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/ex/m2026-03.htm,290766,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/ex/m2026-04.htm,277574,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/ex/m2026-05.htm,279588,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/ex/m2026-06.htm,296995,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/ex/m2026-07.htm,283871,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/ex/news-2025-12.htm,6548,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/ex/news-2026-05.htm,6997,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/ex/pgr_10k_2025.htm,1313315,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/ex/pgr_10q_2026Q2.htm,2966769,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/ex/pgr_ar2024.htm,3685440,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/ex/pgr_ar2025.htm,3439558,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/ex/reinsurance-2026-08.htm,50739,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/idx/0000080661-25-000038.json,1782,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/idx/0000080661-25-000056.json,1783,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/idx/0000080661-25-000079.json,1782,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/idx/0000080661-25-000126.json,1783,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/idx/0000080661-25-000134.json,1782,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/idx/0000080661-25-000142.json,1782,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/idx/0000080661-26-000071.json,1895,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/idx/0000080661-26-000075.json,1783,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/idx/0000080661-26-000096.json,1782,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/idx/0000080661-26-000173.json,1782,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/idx/0000080661-26-000200.json,1561,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/idx/0000080661-26-000204.json,1783,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/idx/0000080661-26-000210.json,1895,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/idx/0000080661-26-000262.json,1782,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/idx/0000080661-26-000310.json,1991,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/idx/0000080661-26-000315.json,1783,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/idx/10k2024.json,13265,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/idx/10k2025.json,12855,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/parse.py,2634,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/pgr_monthly.json,6958,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/pgr_monthly_table.txt,1695,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/pgr_submissions.json,155782,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/sec_robots.txt,2736,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/t.py,603,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/txt_10k_2025.txt,289112,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/txt_10q_2026Q2.txt,222367,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/txt_ar2024.txt,297996,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/txt_ar2025.txt,276068,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/txt_brk_10k.txt,623201,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/txt_brk_10k_c.txt,493828,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/txt_brk_10q_2026Q2.txt,246908,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/txt_brk_clean.txt,183773,Bulk collection/database or regenerable export excluded by existing rules
+data/carrier/txt_m2026-07.txt,18924,Bulk collection/database or regenerable export excluded by existing rules
+data/cprt.db,700002304,Bulk collection/database or regenerable export excluded by existing rules
+data/cprt.db-shm,32768,Bulk collection/database or regenerable export excluded by existing rules
+data/cprt.db-wal,0,Bulk collection/database or regenerable export excluded by existing rules
+data/csv/lot_anchors.csv,10324191,Bulk collection/database or regenerable export excluded by existing rules
+data/csv/lot_snapshots.csv,601815942,Bulk collection/database or regenerable export excluded by existing rules
+data/lots.csv,28004023,Bulk collection/database or regenerable export excluded by existing rules
+data/sales.csv,95343,Bulk collection/database or regenerable export excluded by existing rules
+docs/repair_research_2026-09-26/auction_recovery_pilot/raw/f150_front.html,484216,Existing ignored artifact; retained locally
+docs/repair_research_2026-09-26/auction_recovery_pilot/raw/f150_front.txt,6800,Existing ignored artifact; retained locally
+docs/repair_research_2026-09-26/auction_recovery_pilot/raw/f150_side.html,429645,Existing ignored artifact; retained locally
+docs/repair_research_2026-09-26/auction_recovery_pilot/raw/f150_side.txt,6776,Existing ignored artifact; retained locally
+docs/repair_research_2026-09-26/contract_scope_screen/barclays_figure1.png,129642,Licensed source material; local only
+docs/repair_research_2026-09-26/repair_cost_reference/raw/ccc2018_figure32.txt,2449,Existing ignored artifact; retained locally
+docs/repair_research_2026-09-26/repair_cost_reference/raw/ccc2026.html,373646,Existing ignored artifact; retained locally
+docs/repair_research_2026-09-26/repair_cost_reference/raw/mitchell2026q2.html,82003,Existing ignored artifact; retained locally
+docs/repair_research_2026-09-26/value_recovery_audit/raw/manheim2014.pdf,5136703,Existing ignored artifact; retained locally
+docs/repair_research_2026-09-26/value_recovery_audit/raw/manheim2014_page40.txt,10120,Existing ignored artifact; retained locally
+docs/repair_research_2026-09-26/value_recovery_audit/raw/manheim2016.pdf,0,Existing ignored artifact; retained locally
+docs/repair_salvage_execution_2026-09-28/raw/acquisition.jsonl,281,Existing ignored artifact; retained locally
+docs/repair_salvage_execution_2026-09-28/raw/ccc_figure37.webp,82674,Existing ignored artifact; retained locally
+docs/repair_salvage_execution_2026-09-28/raw/ccc_figure38.webp,111560,Existing ignored artifact; retained locally
+docs/repair_salvage_execution_2026-09-28/raw/ccc_figure39.webp,144714,Existing ignored artifact; retained locally
+docs/repair_salvage_execution_2026-09-28/raw/ccc_figure41.webp,147186,Existing ignored artifact; retained locally
+docs/repair_salvage_execution_2026-09-28/raw/parts_report_viewer.html,5208,Existing ignored artifact; retained locally
+docs/repair_salvage_execution_2026-09-28/raw/parts_report_viewer.txt,194,Existing ignored artifact; retained locally
+model/linked_service_revenue_2026-09-28/node_modules,2112,Existing ignored artifact; retained locally
+outputs/cprt-delivery-20260928/CPRT_Delivery_Adoption.xlsx.inspect.ndjson,54196,Existing ignored artifact; retained locally
+outputs/cprt-delivery-20260928/Delivery_Build.png,283364,Existing ignored artifact; retained locally
+outputs/cprt-delivery-20260928/Inputs.png,266500,Existing ignored artifact; retained locally
+outputs/cprt-historical-20260928/CPRT_Historical_Service_Bridge.xlsx.inspect.ndjson,126844,Existing ignored artifact; retained locally
+outputs/cprt-historical-20260928/Historical_Bridge.png,433560,Existing ignored artifact; retained locally
+outputs/cprt-historical-20260928/Source_Data.png,292078,Existing ignored artifact; retained locally
+outputs/cprt-historical-20260928/error_scan.json,236,Existing ignored artifact; retained locally
+outputs/cprt-linked-20260928/Assumptions.png,69708,Existing ignored artifact; retained locally
+outputs/cprt-linked-20260928/CPRT_Linked_Service_Revenue.xlsx.inspect.ndjson,21910299,Existing ignored artifact; retained locally
+outputs/cprt-linked-20260928/Carrier_Engine.png,38426,Existing ignored artifact; retained locally
+outputs/cprt-linked-20260928/Checks.png,59178,Existing ignored artifact; retained locally
+outputs/cprt-linked-20260928/Damage_Engine.png,90196,Existing ignored artifact; retained locally
+outputs/cprt-linked-20260928/Evidence.png,95944,Existing ignored artifact; retained locally
+outputs/cprt-linked-20260928/Fee_Data.png,33771,Existing ignored artifact; retained locally
+outputs/cprt-linked-20260928/Fleet_Engine.png,55116,Existing ignored artifact; retained locally
+outputs/cprt-linked-20260928/RPM_Summary.png,89450,Existing ignored artifact; retained locally
+outputs/cprt-linked-20260928/Revenue_Bridge.png,80726,Existing ignored artifact; retained locally
+outputs/cprt-linked-20260928/Source_Data.png,35504,Existing ignored artifact; retained locally
+outputs/cprt-linked-20260928/Vehicle_Economics.png,73458,Existing ignored artifact; retained locally
+outputs/cprt-linked-20260928/Volume_Build.png,100225,Existing ignored artifact; retained locally
+raw/aftermarket_parameter_audit_2026-09-29/ccc_figure35.webp,150024,Raw source/cache excluded by existing blanket raw/ rule
+raw/aftermarket_parameter_audit_2026-09-29/lkq_2024_sustainability.pdf,14765228,Raw source/cache excluded by existing blanket raw/ rule
+raw/aftermarket_parameter_audit_2026-09-29/lkq_page16.png,632188,Raw source/cache excluded by existing blanket raw/ rule
+raw/aftermarket_transition_2026-09-29/capa_2017_supply.pdf,324985,Raw source/cache excluded by existing blanket raw/ rule
+raw/aftermarket_transition_2026-09-29/capa_sensors_2023.pdf,115624,Raw source/cache excluded by existing blanket raw/ rule
+raw/aftermarket_transition_2026-09-29/maplev_tesla_prices.html,32881,Raw source/cache excluded by existing blanket raw/ rule
+raw/aftermarket_transition_2026-09-29/mitchell-09.png,411744,Raw source/cache excluded by existing blanket raw/ rule
+raw/aftermarket_transition_2026-09-29/mitchell-10.png,254736,Raw source/cache excluded by existing blanket raw/ rule
+raw/aftermarket_transition_2026-09-29/mitchell_2017_q2.pdf,3821730,Raw source/cache excluded by existing blanket raw/ rule
+raw/aftermarket_transition_2026-09-29/state_farm_parts.html,31056,Raw source/cache excluded by existing blanket raw/ rule
+raw/aftermarket_transition_2026-09-29/tong_yang_2025_annual.pdf,595346,Raw source/cache excluded by existing blanket raw/ rule
+raw/aftermarket_transition_2026-09-29/tong_yang_august_2026.html,113156,Raw source/cache excluded by existing blanket raw/ rule
+raw/bidmate_adoption_2026-09-29/advanced_2014.html,30499,Raw source/cache excluded by existing blanket raw/ rule
+raw/bidmate_adoption_2026-09-29/apr2007.html,16146,Raw source/cache excluded by existing blanket raw/ rule
+raw/bidmate_adoption_2026-09-29/apr2007.jpg,379040,Raw source/cache excluded by existing blanket raw/ rule
+raw/bidmate_adoption_2026-09-29/bidmate.html,22416,Raw source/cache excluded by existing blanket raw/ rule
+raw/bidmate_adoption_2026-09-29/collision_20_2024.html,38279,Raw source/cache excluded by existing blanket raw/ rule
+raw/bidmate_adoption_2026-09-29/may2008.html,16182,Raw source/cache excluded by existing blanket raw/ rule
+raw/bidmate_adoption_2026-09-29/may2008.jpg,339320,Raw source/cache excluded by existing blanket raw/ rule
+raw/bidmate_adoption_2026-09-29/new_features.pdf,8590358,Raw source/cache excluded by existing blanket raw/ rule
+raw/bidmate_adoption_2026-09-29/newsletters.html,78929,Raw source/cache excluded by existing blanket raw/ rule
+raw/bidmate_adoption_2026-09-29/reports.html,38758,Raw source/cache excluded by existing blanket raw/ rule
+raw/bidmate_adoption_2026-09-29/training.html,114,Raw source/cache excluded by existing blanket raw/ rule
+raw/bls/ce.data.05b.TotalPrivate.AllEmployeeHoursAndEarnings,583061,Raw source/cache excluded by existing blanket raw/ rule
+raw/bls/ce.data.80a.OtherServices.Employment,5013985,Raw source/cache excluded by existing blanket raw/ rule
+raw/bls/ce.data.80b.OtherServices.AllEmployeeHoursAndEarnings,7505447,Raw source/cache excluded by existing blanket raw/ rule
+raw/bls/ce.series,3941924,Raw source/cache excluded by existing blanket raw/ rule
+raw/bls/ce_index.html,10805,Raw source/cache excluded by existing blanket raw/ rule
+raw/bls/cu.data.14.USTransportation,2239806,Raw source/cache excluded by existing blanket raw/ rule
+raw/bls/pc.data.22.TransportationEquipment,3946685,Raw source/cache excluded by existing blanket raw/ rule
+raw/bls/pc.series,853221,Raw source/cache excluded by existing blanket raw/ rule
+raw/bls/pc_index.html,9829,Raw source/cache excluded by existing blanket raw/ rule
+raw/ccc/chart_alt_texts.txt,132464,Raw source/cache excluded by existing blanket raw/ rule
+raw/ccc/crash-course-2024-q4.html,361764,Raw source/cache excluded by existing blanket raw/ rule
+raw/ccc/crash-course-2024-q4.txt,43078,Raw source/cache excluded by existing blanket raw/ rule
+raw/ccc/crash-course-2025-q1.html,366220,Raw source/cache excluded by existing blanket raw/ rule
+raw/ccc/crash-course-2025-q1.txt,39188,Raw source/cache excluded by existing blanket raw/ rule
+raw/ccc/crash-course-2025-q2.html,336693,Raw source/cache excluded by existing blanket raw/ rule
+raw/ccc/crash-course-2025-q2.txt,26987,Raw source/cache excluded by existing blanket raw/ rule
+raw/ccc/crash-course-2025-q3.html,351332,Raw source/cache excluded by existing blanket raw/ rule
+raw/ccc/crash-course-2025-q3.txt,42587,Raw source/cache excluded by existing blanket raw/ rule
+raw/ccc/crash-course-2025-q4.html,297851,Raw source/cache excluded by existing blanket raw/ rule
+raw/ccc/crash-course-2025-q4.txt,32817,Raw source/cache excluded by existing blanket raw/ rule
+raw/ccc/crash-course-2026.html,373646,Raw source/cache excluded by existing blanket raw/ rule
+raw/ccc/crash-course-2026.txt,54302,Raw source/cache excluded by existing blanket raw/ rule
+raw/ccc/img/cc2026_fig12_theft_by_type_age.png,4567852,Raw source/cache excluded by existing blanket raw/ rule
+raw/ccc/img/cc2026_fig12_theft_by_type_age.webp,455886,Raw source/cache excluded by existing blanket raw/ rule
+raw/ccc/img/cc2026_fig13_theft_pct_by_type.png,858536,Raw source/cache excluded by existing blanket raw/ rule
+raw/ccc/img/cc2026_fig13_theft_pct_by_type.webp,103058,Raw source/cache excluded by existing blanket raw/ rule
+raw/ccc/img/cc2026_fig18_tl_valuations_by_age.png,1243081,Raw source/cache excluded by existing blanket raw/ rule
+raw/ccc/img/cc2026_fig18_tl_valuations_by_age.webp,133428,Raw source/cache excluded by existing blanket raw/ rule
+raw/ccc/img/cc2026_fig19_tl_share_by_age.png,2122066,Raw source/cache excluded by existing blanket raw/ rule
+raw/ccc/img/cc2026_fig19_tl_share_by_age.webp,242130,Raw source/cache excluded by existing blanket raw/ rule
+raw/ccc/img/cc2026_fig2_deductibles.png,1416643,Raw source/cache excluded by existing blanket raw/ rule
+raw/ccc/img/cc2026_fig2_deductibles.webp,182294,Raw source/cache excluded by existing blanket raw/ rule
+raw/ccc/img/cc2026_fig46_labor_by_age.png,1541302,Raw source/cache excluded by existing blanket raw/ rule
+raw/ccc/img/cc2026_fig46_labor_by_age.webp,144862,Raw source/cache excluded by existing blanket raw/ rule
+raw/ccc_direct_2026-09-29/Data for Harvard Research (Daniella Biblin)_9.29.2026.xlsx,14393,Original private/source workbook; extracted model inputs published separately
+raw/cdx/fees.txt,87661,Raw source/cache excluded by existing blanket raw/ rule
+raw/cdx/lot_pages.txt,266135,Raw source/cache excluded by existing blanket raw/ rule
+raw/cdx/lot_pages_full.txt,21016078,Raw source/cache excluded by existing blanket raw/ rule
+raw/cdx/lotsearch_full.txt,561395,Raw source/cache excluded by existing blanket raw/ rule
+raw/cdx/salelist.txt,437231,Raw source/cache excluded by existing blanket raw/ rule
+raw/cdx/salelist_full.txt,429719,Raw source/cache excluded by existing blanket raw/ rule
+raw/cdx/sitemaps.txt,36109,Raw source/cache excluded by existing blanket raw/ rule
+raw/collisionweek/losses_page2.html,56959,Raw source/cache excluded by existing blanket raw/ rule
+raw/collisionweek/losses_page3.html,57711,Raw source/cache excluded by existing blanket raw/ rule
+raw/cox/august-2026-atp-data-tables.pdf,262565,Raw source/cache excluded by existing blanket raw/ rule
+raw/cox/august-2026-atp-report.html,374164,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260908122543/location.xml,20926,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260908122543/lot1.xml,6779580,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260908122543/lot2.xml,6727172,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260908122543/lot3.xml,6019494,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260908122543/models.xml,538946,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260908122543/salelist.xml,74469,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260908122715/location.xml,20926,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260908122715/lot1.xml,6779580,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260908122715/lot2.xml,6727172,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260908122715/lot3.xml,6019494,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260908122715/models.xml,538946,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260908122715/salelist.xml,74469,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260908131949/location.xml,20926,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260908131949/lot1.xml,6779580,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260908131949/lot2.xml,6727172,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260908131949/lot3.xml,6019494,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260908131949/models.xml,538946,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260908131949/salelist.xml,74469,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260909133053/location.xml,925,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260909133053/lot1.xml,6773072,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260909133053/lot2.xml,6717678,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260909133053/lot3.xml,5392691,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260909133053/models.xml,919,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260909133053/salelist.xml,74002,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260910042518/lot1.xml,6773072,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260910042518/lot2.xml,6701576,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260910042518/lot3.xml,5392691,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260910042518/lot4.xml,0,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260910042518/salelist.xml,72842,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260910225223/lot1.xml,6766878,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260910225223/lot2.xml,6701576,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260910225223/lot3.xml,6294979,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260910225223/lot4.xml,0,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260910225223/salelist.xml,72842,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260911224709/lot1.xml,6750863,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260911224709/lot2.xml,6714714,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260911224709/lot3.xml,6198074,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260911224709/lot4.xml,0,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260911224709/salelist.xml,74297,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260912224527/lot1.xml,6768709,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260912224527/lot2.xml,6722562,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260912224527/lot3.xml,6635845,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260912224527/lot4.xml,0,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260912224527/salelist.xml,75622,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260913224926/lot1.xml,6754189,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260913224926/lot2.xml,6722705,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260913224926/lot3.xml,6574049,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260913224926/lot4.xml,0,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260913224926/salelist.xml,75499,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260914224504/lot1.xml,6754189,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260914224504/lot2.xml,6716392,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260914224504/lot3.xml,6704164,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260914224504/lot4.xml,7521,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260914224504/salelist.xml,75767,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260915225901/lot1.xml,6759789,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260915225901/lot2.xml,6726871,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260915225901/lot3.xml,5018200,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260915225901/lot4.xml,0,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260915225901/salelist.xml,74350,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260916224729/lot1.xml,6759789,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260916224729/lot2.xml,6726871,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260916224729/lot3.xml,5018200,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260916224729/lot4.xml,0,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260916224729/salelist.xml,74350,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260917225846/lot1.xml,6769238,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260917225846/lot2.xml,6708065,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260917225846/lot3.xml,5917057,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260917225846/lot4.xml,0,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260917225846/salelist.xml,74472,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260918224828/lot1.xml,6755032,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260918224828/lot2.xml,6726987,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260918224828/lot3.xml,5342389,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260918224828/lot4.xml,0,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260918224828/salelist.xml,75166,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260919225412/lot1.xml,6755362,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260919225412/lot2.xml,6732452,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260919225412/lot3.xml,6243358,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260919225412/lot4.xml,0,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260920224505/lot1.xml,6763144,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260920224505/lot2.xml,6722510,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260920224505/lot3.xml,6287416,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260920224505/lot4.xml,0,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260920224505/salelist.xml,75612,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260921225950/lot1.xml,6756732,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260921225950/lot2.xml,6719074,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260921225950/lot3.xml,5663938,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260921225950/lot4.xml,0,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260921225950/salelist.xml,75482,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260922224505/lot1.xml,6762629,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260922224505/lot2.xml,6714834,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260922224505/lot3.xml,5137665,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260922224505/lot4.xml,0,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260922224505/salelist.xml,75482,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260923225308/lot1.xml,6766542,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260923225308/lot2.xml,6706371,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260923225308/lot3.xml,5105424,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260923225308/lot4.xml,0,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260923225308/salelist.xml,74998,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260924225450/lot1.xml,6764325,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260924225450/lot2.xml,6710901,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260924225450/lot3.xml,6289353,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260924225450/lot4.xml,0,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260924225450/salelist.xml,74226,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260925224511/lot1.xml,6762556,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260925224511/lot2.xml,6730063,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260925224511/lot3.xml,6051543,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260925224511/lot4.xml,0,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260925224511/salelist.xml,74328,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260926224505/lot1.xml,6762556,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260926224505/lot2.xml,6730063,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260926224505/lot3.xml,6051543,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260926224505/lot4.xml,0,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260926224505/salelist.xml,74456,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260927225049/lot1.xml,6768888,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260927225049/lot2.xml,6716997,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260927225049/lot3.xml,6406873,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260927225049/lot4.xml,0,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260927225049/salelist.xml,74356,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260928224505/lot1.xml,6754797,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260928224505/lot2.xml,6717173,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260928224505/lot3.xml,6413433,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260928224505/lot4.xml,0,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260928224505/salelist.xml,76347,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260929224505/lot1.xml,6772334,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260929224505/lot2.xml,6716217,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260929224505/lot3.xml,6450027,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260929224505/lot4.xml,0,Raw source/cache excluded by existing blanket raw/ rule
+raw/daily/20260929224505/salelist.xml,75840,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20170216114841.html,141967,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20170303012700.html,143589,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20170407040120.html,144880,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20170506021536.html,144913,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20170603035814.html,145774,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20170701054431.html,145797,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20170828202455.html,146532,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20170904212212.html,146532,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20171003233726.html,143668,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20171101202146.html,130719,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20171206225343.html,131555,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20180104005659.html,142431,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20180201025035.html,142431,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20180301044325.html,142094,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20180405072557.html,146102,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20180503083740.html,146663,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20180607103046.html,146574,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20180717203011.html,146320,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20180802020405.html,146320,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20180906045830.html,146800,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20181004072029.html,133865,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20181101093656.html,142567,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20181206121520.html,142788,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20190103212015.html,144672,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20190203213241.html,145777,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20190303224053.html,146015,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20190401011856.html,146467,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20190505165904.html,146008,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20190602201049.html,146531,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20190707223221.html,146533,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20190805010911.html,147708,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20191011183457.html,142942,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20191101195647.html,142942,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20191202212012.html,142806,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20200106221228.html,141199,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20200201200824.html,141331,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20200307223124.html,143734,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20200412012740.html,143754,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20200503034433.html,143754,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/copart_com_content_us_en_premier_member_fees_20200607071710.html,143754,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/README.txt,382,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/copart_licensed-less_clean_standard.txt,3485,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/copart_licensed-less_nonclean_standard.txt,3890,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/copart_licensed-more_clean_heavy.txt,2941,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/copart_licensed-more_clean_standard.txt,3617,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/copart_licensed-more_nonclean_heavy.txt,2999,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/copart_licensed-more_nonclean_standard.txt,3428,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/copart_non-licensed_clean_heavy.txt,2539,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/copart_non-licensed_clean_standard.txt,2962,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/copart_non-licensed_clean_standard_parsed.txt,2415,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/copart_non-licensed_nonclean_heavy.txt,2610,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/copart_non-licensed_nonclean_standard.txt,3720,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/iaa_heavy_high_20241023.svg,253408,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/iaa_heavy_high_20241023.svg.png,508228,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/iaa_heavy_internet_20241023.svg,86110,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/iaa_heavy_internet_20241023.svg.png,259519,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/iaa_heavy_standard_20241023.svg,223616,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/iaa_heavy_standard_20241023.svg.png,492778,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/iaa_internet_bid_20241023.svg,86110,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/iaa_internet_bid_20241023.svg.png,259519,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/iaa_internet_nonlicensed_20241023.svg,86110,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/iaa_internet_nonlicensed_20241023.svg.png,259519,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/iaa_licensed_high_20241023.svg,302509,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/iaa_licensed_high_20241023.svg.png,508607,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/iaa_licensed_low_standard_20241023.svg,287344,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/iaa_licensed_low_standard_20241023.svg.png,452365,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/iaa_public_20241031_v2.svg,31298,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/iaa_public_20241031_v2.svg.png,391454,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/iaa_recrides_fees_0926_v1.svg,280258,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/iaa_recrides_fees_0926_v1.svg.png,501102,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/iaa_recrides_internet_20241023.svg,86110,Raw source/cache excluded by existing blanket raw/ rule
+raw/fees/live_2026-09/iaa_recrides_internet_20241023.svg.png,259519,Raw source/cache excluded by existing blanket raw/ rule
+raw/fred/CUSR0000SETA02.csv,16442,Raw source/cache excluded by existing blanket raw/ rule
+raw/fred/CUSR0000SETD.csv,13411,Raw source/cache excluded by existing blanket raw/ rule
+raw/fred/CUSR0000SETE.csv,28934,Raw source/cache excluded by existing blanket raw/ rule
+raw/fred/HTRUCKSNSA.csv,12916,Raw source/cache excluded by existing blanket raw/ rule
+raw/fred/HTRUCKSSAAR.csv,12201,Raw source/cache excluded by existing blanket raw/ rule
+raw/fred/LTRUCKNSA.csv,11637,Raw source/cache excluded by existing blanket raw/ rule
+raw/fred/TRFVOLUSM227NFWA.csv,12231,Raw source/cache excluded by existing blanket raw/ rule
+raw/hldi/Collision_size_2025.pdf,278634,Raw source/cache excluded by existing blanket raw/ rule
+raw/hldi/Collision_summary_2025.pdf,325125,Raw source/cache excluded by existing blanket raw/ rule
+raw/hldi/Comp_summary_2025.pdf,408581,Raw source/cache excluded by existing blanket raw/ rule
+raw/hldi/hldi.html,18737,Raw source/cache excluded by existing blanket raw/ rule
+raw/hldi/hldi_39_07_2022.pdf,668344,Raw source/cache excluded by existing blanket raw/ rule
+raw/hldi/hldi_bulletin_42-07.pdf,1298169,Raw source/cache excluded by existing blanket raw/ rule
+raw/hldi/hldi_bulletin_42-10.pdf,690812,Raw source/cache excluded by existing blanket raw/ rule
+raw/hldi/hldi_index.html,18737,Raw source/cache excluded by existing blanket raw/ rule
+raw/hldi/hldi_losses_bundle_js.js,687058,Raw source/cache excluded by existing blanket raw/ rule
+raw/hldi/hldi_losses_by_make_model.html,27872,Raw source/cache excluded by existing blanket raw/ rule
+raw/hldi/iihs_auto_insurance_topic.html,43834,Raw source/cache excluded by existing blanket raw/ rule
+raw/hldi/iihs_fact_sheets.html,21625,Raw source/cache excluded by existing blanket raw/ rule
+raw/hldi/research-areas_hldi.html,18737,Raw source/cache excluded by existing blanket raw/ rule
+raw/hldi/topics_vehicle-age.html,170,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260911143342/robots.txt,177,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260911143342/sitemap1.xml,6795151,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260911143342/sitemap2.xml,6795238,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260911143342/sitemap3.xml,1959765,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260911143342/sitemap_index.xml,1588,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260911143342/sitemapauctions1.xml,6058,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260911143342/sitemapbranches1.xml,28780,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260911143620/robots.txt,177,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260911143620/sitemap_index.xml,6058,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260911224720/robots.txt,177,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260911224720/sitemap1.xml,6795151,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260911224720/sitemap2.xml,6795238,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260911224720/sitemap3.xml,6058,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260911224720/sitemap_index.xml,1588,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260911224720/sitemapauctions1.xml,48320,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260911224720/sitemapbranches1.xml,28780,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260912224540/robots.txt,177,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260912224540/sitemap1.xml,6795151,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260912224540/sitemap2.xml,6795238,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260912224540/sitemap3.xml,6058,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260912224540/sitemap_index.xml,1588,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260912224540/sitemapauctions1.xml,55568,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260912224540/sitemapbranches1.xml,28780,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260913225011/robots.txt,177,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260913225011/sitemap1.xml,6795151,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260913225011/sitemap2.xml,6795238,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260913225011/sitemap3.xml,6058,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260913225011/sitemap_index.xml,1588,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260913225011/sitemapauctions1.xml,55568,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260913225011/sitemapbranches1.xml,28780,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260914224515/robots.txt,177,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260914224515/sitemap1.xml,6795151,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260914224515/sitemap2.xml,6795238,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260914224515/sitemap3.xml,6058,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260914224515/sitemap_index.xml,1588,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260914224515/sitemapauctions1.xml,50736,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260914224515/sitemapbranches1.xml,28780,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260916203812/robots.txt,177,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260916203812/sitemap1.xml,6795151,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260916203812/sitemap2.xml,6795238,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260916203812/sitemap3.xml,6058,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260916203812/sitemap_index.xml,1588,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260916203812/sitemapauctions1.xml,47565,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260916203812/sitemapbranches1.xml,28780,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260916225122/robots.txt,177,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260916225122/sitemap1.xml,6795151,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260916225122/sitemap2.xml,6795238,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260916225122/sitemap3.xml,2400987,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260916225122/sitemap_index.xml,1588,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260916225122/sitemapauctions1.xml,47565,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260916225122/sitemapbranches1.xml,28780,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260917230429/robots.txt,177,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260917230429/sitemap1.xml,6795151,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260917230429/sitemap2.xml,6795238,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260917230429/sitemap3.xml,2065616,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260917230429/sitemap_index.xml,1588,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260917230429/sitemapauctions1.xml,45753,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260917230429/sitemapbranches1.xml,28780,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260918225943/robots.txt,177,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260918225943/sitemap1.xml,6795151,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260918225943/sitemap2.xml,6795238,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260918225943/sitemap3.xml,1998874,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260918225943/sitemap_index.xml,1588,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260918225943/sitemapauctions1.xml,48773,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260918225943/sitemapbranches1.xml,28780,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260920001439/robots.txt,177,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260920001439/sitemap1.xml,6795151,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260920001439/sitemap2.xml,6795238,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260920001439/sitemap3.xml,6058,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260920001439/sitemap_index.xml,1588,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260920001439/sitemapauctions1.xml,55266,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260920001439/sitemapbranches1.xml,28780,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260920224516/robots.txt,177,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260920224516/sitemap1.xml,6795151,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260920224516/sitemap2.xml,6795238,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260920224516/sitemap3.xml,6058,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260920224516/sitemap_index.xml,1588,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260920224516/sitemapauctions1.xml,55719,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260920224516/sitemapbranches1.xml,28780,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260921235821/robots.txt,177,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260921235821/sitemap1.xml,6795151,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260921235821/sitemap2.xml,6795238,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260921235821/sitemap3.xml,6058,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260921235821/sitemap_index.xml,1588,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260921235821/sitemapauctions1.xml,50887,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260921235821/sitemapbranches1.xml,28780,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260922224516/robots.txt,177,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260922224516/sitemap1.xml,6795151,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260922224516/sitemap2.xml,6795238,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260922224516/sitemap3.xml,6058,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260922224516/sitemap_index.xml,1588,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260922224516/sitemapauctions1.xml,47867,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260922224516/sitemapbranches1.xml,28780,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260923225352/robots.txt,177,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260923225352/sitemap1.xml,6795151,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260923225352/sitemap2.xml,6795238,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260923225352/sitemap3.xml,6058,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260923225352/sitemap_index.xml,1588,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260923225352/sitemapauctions1.xml,45451,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260923225352/sitemapbranches1.xml,28780,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260924230553/robots.txt,177,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260924230553/sitemap1.xml,6795151,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260924230553/sitemap2.xml,6795238,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260924230553/sitemap3.xml,6058,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260924230553/sitemap_index.xml,1588,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260924230553/sitemapauctions1.xml,44847,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260924230553/sitemapbranches1.xml,28780,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260925230604/robots.txt,177,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260925230604/sitemap1.xml,6795151,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260925230604/sitemap2.xml,6795238,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260925230604/sitemap3.xml,1952064,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260925230604/sitemap_index.xml,1588,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260925230604/sitemapauctions1.xml,48471,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260925230604/sitemapbranches1.xml,28780,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260926224516/robots.txt,177,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260926224516/sitemap1.xml,6795151,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260926224516/sitemap2.xml,6795238,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260926224516/sitemap3.xml,6058,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260926224516/sitemap_index.xml,1588,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260926224516/sitemapauctions1.xml,54511,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260926224516/sitemapbranches1.xml,28780,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260927225107/robots.txt,177,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260927225107/sitemap1.xml,6795151,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260927225107/sitemap2.xml,6795238,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260927225107/sitemap3.xml,2350402,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260927225107/sitemap_index.xml,1588,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260927225107/sitemapauctions1.xml,55115,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260927225107/sitemapbranches1.xml,28780,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260928224517/robots.txt,177,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260928224517/sitemap1.xml,6795151,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260928224517/sitemap2.xml,6795238,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260928224517/sitemap3.xml,6058,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260928224517/sitemap_index.xml,1588,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260928224517/sitemapauctions1.xml,50283,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260928224517/sitemapbranches1.xml,28780,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260929224516/robots.txt,177,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260929224516/sitemap1.xml,6795151,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260929224516/sitemap2.xml,6795238,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260929224516/sitemap3.xml,6058,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260929224516/sitemap_index.xml,1588,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260929224516/sitemapauctions1.xml,47867,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/daily/20260929224516/sitemapbranches1.xml,28780,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/robots_20260911.txt,177,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/sitemap1_20260911.xml,6795151,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/sitemap2_20260911.xml,6795238,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/sitemap3_20260911.xml,1959765,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/sitemap_index_20260911.xml,1588,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/sitemapauctions1_20260911.xml,50887,Raw source/cache excluded by existing blanket raw/ rule
+raw/iaai/sitemapbranches1_20260911.xml,28780,Raw source/cache excluded by existing blanket raw/ rule
+raw/iseecars/iseecars_hold_value.html,352570,Raw source/cache excluded by existing blanket raw/ rule
+raw/iseecars/iseecars_hold_value.txt,29759,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p0_20220802102241.xml,6650895,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p1_20220802203538.xml,6649817,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p1_20220901002227.xml,6624119,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p1_20221101124135.xml,6647317,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p1_20221205054815.xml,6646575,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p1_20230102185722.xml,6663724,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p1_20230306154032.xml,6627148,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p1_20230601081549.xml,6632494,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p1_20230701033041.xml,6658302,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p1_20230805013338.xml,6641567,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p1_20231101235122.xml,6640420,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p1_20231202010133.xml,6638284,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p1_20240101120531.xml,6670186,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p1_20240311062622.xml,6654079,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p1_20240401060905.xml,6657763,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p1_20240502004838.xml,6632981,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p1_20240601175052.xml,6651558,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p1_20240706043331.xml,6660158,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p1_20241003020453.xml,6677707,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p1_20241107033338.xml,6638159,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p1_20250104001416.xml,6660371,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p1_20250601171842.xml,6687360,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p1_20250901120916.xml,6703070,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p1_20251101042556.xml,6719634,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p1_20251227174826.xml,6701653,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p1_20260101133708.xml,6696968,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p2_20220802101716.xml,6583843,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p2_20220901002153.xml,6611968,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p2_20221101114017.xml,6619397,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p2_20221204233010.xml,6619709,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p2_20230102185740.xml,6596298,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p2_20230306154111.xml,6627356,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p2_20230601125456.xml,6610253,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p2_20230701021703.xml,6615698,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p2_20230805015846.xml,6633744,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p2_20231101221743.xml,6624647,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p2_20231202022200.xml,6634780,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p2_20240101131618.xml,6616038,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p2_20240201081401.xml,6627792,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p2_20240308234544.xml,6646137,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p2_20240401070330.xml,6637069,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p2_20240501232042.xml,6635378,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p2_20240601175121.xml,6639722,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p2_20241002223825.xml,6642398,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p2_20241107073436.xml,6644011,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p2_20250104001343.xml,6651346,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p2_20250601171558.xml,6660997,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p2_20250802154356.xml,6655643,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p2_20250901150129.xml,6672171,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p2_20251227022855.xml,6724705,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p2_20260101133242.xml,6677213,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p3_20220901002229.xml,6607024,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p3_20221101133014.xml,6615065,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p3_20221205145936.xml,6607263,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p3_20230102185715.xml,6596654,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p3_20230306154125.xml,6598965,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p3_20230601083029.xml,6605179,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p3_20230701035357.xml,6603549,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p3_20230805012757.xml,6619115,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p3_20240101125304.xml,6612146,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p3_20240202003919.xml,6614465,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p3_20240401031306.xml,6612676,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p3_20240501235402.xml,6623911,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p3_20240601175103.xml,6603552,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p3_20240705234429.xml,6615051,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p3_20241003104911.xml,6658387,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p3_20250601171518.xml,6680846,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p3_20250901115655.xml,6659021,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p3_20251101052205.xml,6678376,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p3_20251227022842.xml,6662226,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p3_20260101133253.xml,6665589,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p4_20220802103641.xml,591017,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p4_20220901002203.xml,1154585,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p4_20221101115406.xml,2853077,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p4_20221205143014.xml,2852315,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p4_20230102185825.xml,2346094,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p4_20230306154234.xml,4040600,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p4_20230601112330.xml,653572,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p4_20230701054330.xml,1791961,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p4_20230805011508.xml,2632266,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p4_20231010163831.xml,212,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p4_20231202033658.xml,4499668,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p4_20231214094120.xml,5227365,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p4_20240101133526.xml,3907096,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p4_20240201154856.xml,1010,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p4_20240311095541.xml,6600308,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p4_20240401032721.xml,6148579,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p4_20240502021058.xml,5045827,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p4_20240601175056.xml,4582228,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p4_20240706032729.xml,6610830,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p4_20241003122646.xml,6382849,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p4_20241107095655.xml,6621971,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p4_20250601171544.xml,1796822,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p4_20250802125521.xml,1892169,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p4_20250901104435.xml,434361,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p4_20251001133712.xml,1043,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p4_20251101035123.xml,1043,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p4_20251227022819.xml,1567625,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p4_20260101133249.xml,1270618,Raw source/cache excluded by existing blanket raw/ rule
+raw/lotxml/lotxml_p5_20241107100311.xml,0,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/TEDB_40_Spreadsheets_06012022.zip,11863958,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Appendix_A_Sources_and_Methodologies_01312022.xlsx,12422,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Appendix_B_Conversions_01312022.xlsx,11883,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Ch_11_Adjusting_Dollar_Amounts_for_Inflation_01312022.xlsx,10833,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Ch_12_Carbon_Footprint_01312022.xlsx,22360,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Ch_13_Emission_Standards_01312022.xlsx,120273,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Ch_3_Vehicles_In_Use_01312022.xlsx,11734,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Ch_4_Definition_of_Light_Truck_01312022.xlsx,12369,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Ch_5_Commodity_Flow_Survey_01312022.xlsx,11346,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Ch_5_Freight_Analysis_Framework_01312022.xlsx,11127,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Ch_5_Fuel_Economy_Study_for_Class_8_Trucks_01312022.xlsx,11506,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Ch_5_Vehicle_Inventory_and_Use_Survey_01312022.xlsx,11581,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Ch_6_Alternative_Fuels_01312022.xlsx,12126,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Ch_6_The_2019_California_Vehicle_Survey_01312022.xlsx,11349,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Ch_7_Shared_Micromobility_01312022.xlsx,11726,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Ch_9_2017_National_Household_Travel_Survey_Daily_Trip_Data_01312022.xlsx,11914,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Ch_9_Long_Distance_Trips-2001_National_Household_Travel_Survey_01312022.xlsx,10980,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure11_01_06012022.xlsx,140650,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure11_02_01312022.xlsx,236553,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure11_03_01312022.xlsx,218484,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure11_04_01312022.xlsx,233589,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure11_05_01312022.xlsx,138278,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure11_06_01312022.xlsx,242073,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure11_07_01312022.xlsx,58520,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure12_01_01312022.xlsx,77065,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure12_02_01312022.xlsx,172701,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure12_03_01312022.xlsx,264651,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure12_04_01312022.xlsx,185778,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure12_05_01312022.xlsx,143457,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure1_01_01312022.xlsx,155141,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure1_02_01312022.xlsx,162261,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure1_03_01312022.xlsx,171485,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure1_04_01312022.xlsx,470770,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure1_05_01312022.xlsx,167663,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure1_06_01312022.xlsx,339482,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure2_01_01312022.xlsx,65154,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure2_02_01312022.xlsx,45341,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure2_03_01312022.xlsx,48556,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure2_04_01312022.xlsx,50207,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure2_05_01312022.xlsx,51262,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure2_06_01312022.xlsx,184305,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure3_01_01312022.xlsx,288402,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure3_02_01312022.xlsx,195324,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure3_03_01312022.xlsx,135532,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure4_01_01312022.xlsx,145844,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure4_02_01312022.xlsx,119212,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure4_03_01312022.xlsx,184650,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure4_04_01312022.xlsx,131166,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure4_05_01312022.xlsx,229176,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure4_06_01301022.xlsx,118263,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure4_07_01312022.xlsx,136222,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure4_08_01312022.xlsx,39389,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure4_09_01312022.xlsx,29837,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure4_10_01312022.xlsx,27028,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure4_11_01312022.xlsx,39231,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure4_12_01312022.xlsx,47835,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure4_13_01312022.xlsx,25999,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure4_14_01312022.xlsx,41487,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure5_01_01312022.xlsx,75061,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure5_02_01312022.xlsx,58803,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure5_03_01312022.xlsx,53035,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure5_04_01312022.xlsx,30570,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure5_05_01312022.xlsx,27461,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure5_06_01312022.xlsx,26172,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure5_07_01312022.xlsx,80306,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure5_08_01312022.xlsx,428531,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure6_01_01312022.xlsx,203516,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure6_01_08312021.xlsx,409316,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure6_02_01312022.xlsx,21891,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure6_03_01312022.xlsx,18976,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure7_01_01312022.xlsx,125057,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure7_02_01312022.xlsx,100043,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure7_03_01312022.xlsx,114697,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure7_04_01312022.xlsx,71262,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure7_05_01312022.xlsx,128412,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure7_06_01312022.xlsx,62129,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure7_07_01312022.xlsx,74731,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure7_08_01312022.xlsx,72404,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure7_09_01312022.xlsx,110426,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure8_01_06012022.xlsx,63800,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure8_02_06012022.xlsx,69291,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure9_01_01312022.xlsx,130895,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure9_02_01312022.xlsx,103399,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure9_03_01312022.xlsx,84780,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure9_04_01312022.xlsx,94035,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure9_05_01312022.xlsx,66906,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure9_06_01312022.xlsx,80894,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure9_07_01312022.xlsx,79856,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure9_08_01312022.xlsx,90578,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Figure9_09_01312022.xlsx,162972,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table10_01_01312022.xlsx,14215,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table10_02_01312022.xlsx,17761,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table10_03_01312022.xlsx,15394,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table10_04_01312022.xlsx,16209,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table10_05_01312022.xlsx,15742,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table10_06_01312022.xlsx,13983,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table10_07_01312022.xlsx,11678,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table10_08_01312022.xlsx,18770,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table10_09_01312022.xlsx,16445,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table10_10_01312022.xlsx,17800,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table11_01_06012022.xlsx,15334,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table11_02_06012022.xlsx,17348,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table11_03_01312022.xlsx,21085,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table11_04_01312022.xlsx,19761,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table11_05_06012022.xlsx,16189,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table11_06_06012022.xlsx,19057,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table11_07_06012022.xlsx,17866,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table11_08_06012022.xlsx,17762,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table11_09_01312022.xlsx,13976,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table11_10_01312022.xlsx,12924,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table11_11_01312022.xlsx,14257,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table11_12_01312022.xlsx,13788,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table11_13_01312022.xlsx,20975,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table11_14_01312022.xlsx,17432,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table11_15_01312022.xlsx,15152,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table11_16_01312022.xlsx,17968,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table11_17_01312022.xlsx,17893,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table11_18_01312022.xlsx,14992,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table11_19_01312022.xlsx,13540,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table11_20_01312022.xlsx,14113,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table12_01_01312022.xlsx,15033,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table12_02_01312022.xlsx,13685,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table12_03_01312022.xlsx,14919,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table12_04_01312022.xlsx,14057,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table12_05_01312022.xlsx,15902,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table12_06_01312022.xlsx,14734,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table12_07_01312022.xlsx,14140,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table12_08_01312022.xlsx,14185,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table12_09_01312022.xlsx,13369,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table12_10_01312022.xlsx,14821,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table12_11_01312022.xlsx,13427,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table12_12_01312022.xlsx,11762,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table13_01_01312022.xlsx,13096,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table13_02_01312022.xlsx,15970,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table13_03_01312022.xlsx,14272,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table13_04_01312022.xlsx,15613,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table13_05_01312022.xlsx,14148,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table13_06_01312022.xlsx,16416,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table13_07_01312022.xlsx,14163,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table13_08_01312022.xlsx,16581,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table13_09_01312022.xlsx,14318,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table13_10_01312022.xlsx,15032,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table13_11_01312022.xlsx,14072,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table13_12_01312022.xlsx,15816,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table13_13_01312022.xlsx,12372,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table13_14_01312022.xlsx,11448,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table13_15_01312022.xlsx,10886,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table13_16_01312022.xlsx,13977,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table13_17_01312022.xlsx,12855,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table13_18_01312022.xlsx,17485,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table13_19_01312022.xlsx,17002,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table13_20_01312022.xlsx,14284,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table13_21_01312022.xlsx,12667,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table13_22_01312022.xlsx,14238,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table13_23_01312022.xlsx,17842,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table13_24_01312022.xlsx,14715,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table13_25_01312022.xlsx,15600,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table13_26_01312022.xlsx,39678,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table13_27_01312022.xlsx,15999,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table13_28_01312022.xlsx,14773,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table13_29_01312022.xlsx,14513,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table13_30_01312022.xlsx,13941,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table1_01_01312022.xlsx,15809,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table1_02_06012022.xlsx,19034,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table1_03_06012022.xlsx,18180,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table1_04_06012022.xlsx,16730,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table1_05_01312022.xlsx,12620,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table1_06_06012022.xlsx,17543,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table1_07_06012022.xlsx,20109,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table1_08_06012022.xlsx,15816,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table1_09_06012022.xlsx,15688,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table1_10_06012022.xlsx,14269,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table1_11_06012022.xlsx,22840,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table1_12_06012022.xlsx,22468,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table1_13_06012022.xlsx,19287,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table1_14_01312022.xlsx,16427,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table1_15_01312022.xlsx,18634,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table1_16_01312022.xlsx,17067,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table1_17_01312022.xlsx,17152,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table2_01_01312022.xlsx,12341,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table2_02_06012022.xlsx,19537,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table2_03_06012022.xlsx,13158,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table2_04_06012022.xlsx,18795,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table2_05_06012022.xlsx,16271,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table2_06_06012022.xlsx,17162,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table2_07_01312022.xlsx,15487,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table2_08_01312022.xlsx,15227,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table2_09_01312022.xlsx,20288,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table2_10_01312022.xlsx,17796,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table2_11_01312022.xlsx,13931,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table2_12_06012022.xlsx,15522,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table2_13_06012022.xlsx,17327,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table2_14_01312022.xlsx,17677,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table2_15_01312022.xlsx,15610,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table2_16_01312022.xlsx,13762,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table3_01_01312022.xlsx,13224,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table3_02_01312022.xlsx,19478,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table3_03_01312022.xlsx,19917,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table3_04_01312022.xlsx,16754,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table3_05_01312022.xlsx,17748,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table3_06_06012022.xlsx,14577,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table3_07_01312022.xlsx,12150,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table3_08_01312022.xlsx,13180,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table3_09_01312022.xlsx,17678,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table3_10_06012022.xlsx,16456,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table3_11_01312022.xlsx,14496,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table3_12_01312022.xlsx,14694,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table3_13_01312022.xlsx,15183,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table3_14_01312022.xlsx,13065,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table3_15_01312022.xlsx,12253,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table3_16_01312022.xlsx,13893,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_01_06012022.xlsx,16843,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_02_06012022.xlsx,15828,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_03_06012022.xlsx,15961,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_04_01312022.xlsx,12029,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_05_01312022.xlsx,11344,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_06_06012022.xlsx,18291,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_07_06012022.xlsx,18126,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_08_01312022.xlsx,15751,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_09_01312022.xlsx,16325,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_10_01312022.xlsx,12124,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_11_01312022.xlsx,18112,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_12_01312022.xlsx,15922,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_13_01312022.xlsx,15662,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_14_01312022.xlsx,14046,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_15_01312022.xlsx,13688,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_16_01312022.xlsx,14502,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_17_01312022.xlsx,14661,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_18_01312022.xlsx,13428,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_19_01312022.xlsx,14317,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_20_01312022.xlsx,13347,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_21_01312022.xlsx,12720,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_22_01312022.xlsx,14050,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_23_06012022.xlsx,14632,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_24_01312022.xlsx,14319,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_25_01312022.xlsx,12537,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_26_01312022.xlsx,13299,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_27_01312022.xlsx,15525,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_28_01312022.xlsx,15480,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_29_01312022.xlsx,14127,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_30_01312022.xlsx,12339,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_31_06012022.xlsx,14364,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_32_01312022.xlsx,13948,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_33_01312022.xlsx,12012,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_34_01312022.xlsx,14385,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_35_01312022.xlsx,13219,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_36_01312022.xlsx,12994,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table4_37_01312022.xlsx,12096,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table5_01_06012022.xlsx,15226,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table5_02_06012022.xlsx,16160,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table5_03_06012022.xlsx,17893,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table5_04_01312022.xlsx,15279,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table5_05_01312022.xlsx,11987,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table5_06_01312022.xlsx,11825,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table5_07_01312022.xlsx,12605,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table5_08_01312022.xlsx,13943,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table5_09_01312022.xlsx,11790,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table5_10_01312022.xlsx,12557,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table5_11_01312022.xlsx,11699,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table5_12_01312022.xlsx,16047,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table5_13_01312022.xlsx,11954,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table5_14_01312022.xlsx,12524,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table5_15_01312022.xlsx,16393,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table5_16_01312022.xlsx,15072,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table5_17_01312022.xlsx,15177,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table5_18_01312022.xlsx,15057,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table5_19_01312022.xlsx,15509,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table5_20_01312022.xlsx,12015,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table5_21_01312022.xlsx,13957,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table6_01_01312022.xlsx,13680,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table6_02_06012022.xlsx,14413,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table6_03_01312022.xlsx,13492,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table6_04_01312022.xlsx,12421,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table6_05_01312022.xlsx,12357,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table6_06_01312022.xlsx,15646,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table6_07_01312022.xlsx,13088,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table6_08_01312022.xlsx,13729,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table6_09_01312022.xlsx,13926,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table6_10_01312022.xlsx,11544,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table6_11_01312022.xlsx,13729,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table6_12_01312022.xlsx,16915,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table6_13_01312022.xlsx,14734,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table6_14_01312022.xlsx,12140,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table6_15_01312022.xlsx,10396,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table6_16_01312022.xlsx,13897,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table6_17_01312022.xlsx,12351,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table6_18_01312022.xlsx,12320,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table7_01_09312022.xlsx,13389,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table7_02_09312022.xlsx,15036,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table7_03_09312022.xlsx,14908,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table7_04_01312022.xlsx,17772,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table7_05_01312022.xlsx,11724,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table7_06_01312022.xlsx,13652,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table7_07_01312022.xlsx,11474,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table7_08_01312022.xlsx,13363,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table7_09_01312022.xlsx,11941,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table8_01_06012022.xlsx,13887,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table8_02_01312022.xlsx,11421,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table8_03_01312022.xlsx,11380,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table8_04_06012022.xlsx,14888,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table8_05_06012022.xlsx,13292,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table8_06_06012022.xlsx,13948,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table8_07_06012022.xlsx,14354,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table9_01_01312022.xlsx,18300,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table9_02_01312022.xlsx,19541,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table9_03_01312022.xlsx,17973,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table9_04_06012022.xlsx,13104,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table9_05_01312022.xlsx,12021,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table9_06_01312022.xlsx,13478,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table9_07_01312022.xlsx,13610,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table9_08_01312022.xlsx,13142,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table9_09_01312022.xlsx,12284,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table9_10_01312022.xlsx,11863,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table9_11_01312022.xlsx,12469,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table9_12_01312022.xlsx,11430,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table9_13_01312022.xlsx,11135,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table9_14_01312022.xlsx,11589,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table9_15_01312022.xlsx,11554,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table9_16_01312022.xlsx,14210,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table9_17_01312022.xlsx,11979,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table9_18_06012022.xlsx,11930,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table9_19_06012022.xlsx,15425,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/Table9_20_01312022.xlsx,14239,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableA_01_01312022.xlsx,17135,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableA_02_01312022.xlsx,12135,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableA_03_01312022 .xlsx,15146,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableA_04_01312022.xlsx,12994,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableA_05_01312022.xlsx,15468,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableA_06_01312022.xlsx,13596,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableA_07_01312022.xlsx,10831,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableA_08_01312022.xlsx,12223,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableA_09_01312022.xlsx,12912,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableA_10_01312022.xlsx,12522,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableA_11_01312022.xlsx,12644,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableA_12_01312022.xlsx,14086,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableA_13_01312022.xlsx,11928,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableA_14_01312022.xlsx,11965,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableA_15_01312022.xlsx,12511,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableA_16_01312022.xlsx,11911,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableA_17_01312022.xlsx,12122,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableA_18_01312022.xlsx,11602,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableA_19_01312022.xlsx,11640,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableA_20_06012022.xlsx,12017,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableA_21_06012022.xlsx,12066,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableB_01_01312022.xlsx,10398,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableB_02_01312022.xlsx,11378,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableB_03_01312022.xlsx,10558,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableB_04_01312022.xlsx,12233,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableB_05_01312022.xlsx,11769,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableB_06_01312022.xlsx,11705,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableB_07_01312022.xlsx,12466,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableB_08_01312022.xlsx,11394,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableB_09_01312022.xlsx,10776,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableB_10_01312022.xlsx,12133,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableB_11_01312022.xlsx,11147,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableB_12_01312022.xlsx,10992,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableB_13_01312022.xlsx,12413,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableB_14_01312022.xlsx,12449,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableB_15_01312022.xlsx,11108,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableB_16_01312022.xlsx,11454,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableB_17_06012022.xlsx,46488,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/TableB_18_06012022.xlsx,49695,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/extracts/ornl_tedb40_avg_age.csv,1147,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb40/extracts/ornl_tedb40_vehicles_in_operation_by_age.csv,1022,Raw source/cache excluded by existing blanket raw/ rule
+raw/ornl/tedb_data_index.html,39081,Raw source/cache excluded by existing blanket raw/ rule
+raw/probe/manheim.html,131295,Raw source/cache excluded by existing blanket raw/ rule
+raw/probe_salelist_309.html,264784,Raw source/cache excluded by existing blanket raw/ rule
+raw/reference/TeamBDCModel.xlsx,2613265,Original private/source workbook; extracted model inputs published separately
+raw/robots/api.census.gov.txt,247,Raw source/cache excluded by existing blanket raw/ rule
+raw/robots/www.cccis.com.txt,82,Raw source/cache excluded by existing blanket raw/ rule
+raw/robots/www.coxautoinc.com.txt,1348,Raw source/cache excluded by existing blanket raw/ rule
+raw/robots/www.experian.com.txt,1246,Raw source/cache excluded by existing blanket raw/ rule
+raw/robots/www.iihs.org.txt,115,Raw source/cache excluded by existing blanket raw/ rule
+raw/robots/www.iseecars.com.txt,2015,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/10k/cprt_2016-07-31.htm,2459880,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/10k/cprt_2017-07-31.htm,2653326,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/10k/cprt_2018-07-31.htm,2629238,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/10k/cprt_2019-07-31.htm,3161935,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/10k/cprt_2020-07-31.htm,3698028,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/10k/cprt_2021-07-31.htm,2615406,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/10k/cprt_2022-07-31.htm,2612806,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/10k/cprt_2023-07-31.htm,2084850,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/10k/cprt_2024-07-31.htm,2048063,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/10k/cprt_2025-07-31.htm,2029406,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/8k/er_2021-09-08_cprt07312021ex99-1.htm,225474,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/8k/er_2021-11-17_cprt10312021ex99-1.htm,172232,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/8k/er_2022-02-16_cprt01312022ex99-1.htm,218525,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/8k/er_2022-05-19_cprt04302022ex99-1.htm,223973,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/8k/er_2022-09-07_cprt07312022ex99-1.htm,233145,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/8k/er_2022-11-17_cprt10312022ex99-1.htm,176659,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/8k/er_2023-02-21_cprt1312023ex99-1.htm,221301,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/8k/er_2023-05-17_cprt4302023ex99-1.htm,224693,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/8k/er_2023-09-14_cprt07312023ex99-1.htm,234572,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/8k/er_2023-11-16_cprt10312023ex99-1.htm,164425,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/8k/er_2024-02-22_cprt1312024ex99-1.htm,200077,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/8k/er_2024-05-16_cprt4302024ex99-1.htm,201179,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/8k/er_2024-09-04_cprt07312024ex99-1.htm,206060,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/8k/er_2024-11-21_cprt10312024ex99-1.htm,161924,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/8k/er_2025-02-20_cprt1312025ex99-1.htm,202714,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/8k/er_2025-05-22_cprt4302025ex99-1.htm,201817,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/8k/er_2025-09-04_cprt07312025ex99-1.htm,203692,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/8k/er_2025-11-20_cprt-ex99_1.htm,492405,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/8k/er_2026-02-19_cprt-ex99_1.htm,716030,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/8k/er_2026-05-21_cprt-ex99_1.htm,715377,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/8k/er_2026-09-10_cprt-ex99_1.htm,742871,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/acv/offer_to_purchase_2026-09-17.htm,442228,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/acv/offer_to_purchase_2026-09-17.txt,246341,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/acv/sc14d9_2026-09-17.htm,408296,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/acv/sc14d9_2026-09-17.txt,195644,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/acv/sctot_index.json,3208,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/company_tickers.json,798244,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/companyfacts_CIK0000900075.json,3416768,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/job5/RBA_2024-02-23_rbaq420238kex991.htm,700597,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/job5/RBA_2024-05-09_rbaq120248kex991.htm,381506,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/job5/RBA_2024-08-06_rbaq220248kex991.htm,476352,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/job5/RBA_2024-11-08_rbaq320248kex991.htm,505002,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/job5/RBA_2025-02-18_rbaq420248kex991.htm,517811,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/job5/RBA_2025-05-07_rbaq120258kex991.htm,337062,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/job5/RBA_2025-11-06_rbaq320258kex991.htm,545586,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/job5/RBA_2026-02-17_rbaq420258kex991.htm,492959,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/job5/RBA_2026-05-04_rbaq120268kex991.htm,361727,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/job5/RBA_2026-08-04_rbaq220268kex991.htm,535234,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/job5/RBA_2026Q2_rbaq220268kex991.htm,535234,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2015-03-02_10-K_pgr-20141231x10k.htm,1421114,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2015-05-11_10-Q_pgr-20150331x10q.htm,2998786,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2015-08-05_10-Q_pgr-201563010q2ndquarter.htm,4062809,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2015-11-05_10-Q_pgr-201593010q3rdquarter.htm,4054971,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2016-02-29_10-K_pgr-20151231x10k.htm,1437755,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2016-05-05_10-Q_pgr-201633110q1stquarter.htm,3137599,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2016-08-03_10-Q_pgr-201663010q2ndquarter.htm,4044201,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2016-11-03_10-Q_pgr-201693010q3rdquarter.htm,4079683,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2017-03-01_10-K_pgr-20161231x10k.htm,1172964,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2017-05-03_10-Q_pgr-201733110q1stquarter.htm,3211985,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2017-08-02_10-Q_pgr-201763010q2ndquarter.htm,4040586,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2017-11-02_10-Q_pgr-201793010q3rdquarter.htm,4157445,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2018-02-27_10-K_pgr-20171231x10k.htm,1227829,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2018-05-02_10-Q_pgr-201833110q1stquarter.htm,2875794,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2018-07-31_10-Q_pgr-201863010q2ndquarter.htm,3593465,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2018-10-31_10-Q_pgr-201893010q3rdquarter.htm,3575436,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2019-02-27_10-K_pgr-20181231x10k.htm,1075815,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2019-05-01_10-Q_pgr-201933110q1stquart.htm,4228016,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2019-08-07_10-Q_pgr-201963010q2ndquart.htm,5192763,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2019-11-06_10-Q_pgr-201993010q3rdquart.htm,5218964,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2020-03-02_10-K_pgr-20191231x10k.htm,1986068,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2020-05-05_10-Q_pgr-202033110q1stquart.htm,4085812,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2020-08-04_10-Q_pgr-202063010q2ndquart.htm,5054134,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2020-11-03_10-Q_pgr-20200930.htm,4447176,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2021-03-01_10-K_pgr-20201231.htm,1591145,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2021-05-04_10-Q_pgr-20210331.htm,3613543,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2021-08-03_10-Q_pgr-20210630.htm,4560073,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2021-11-02_10-Q_pgr-20210930.htm,4535993,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2022-02-28_10-K_pgr-20211231.htm,1649569,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2022-05-02_10-Q_pgr-20220331.htm,3750875,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2022-08-02_10-Q_pgr-20220630.htm,4499675,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2022-11-01_10-Q_pgr-20220930.htm,4599647,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2023-02-27_10-K_pgr-20221231.htm,1679086,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2023-05-02_10-Q_pgr-20230331.htm,3833360,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2023-08-01_10-Q_pgr-20230630.htm,3581040,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2023-10-31_10-Q_pgr-20230930.htm,3580350,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2024-02-26_10-K_pgr-20231231.htm,1474325,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2024-05-06_10-Q_pgr-20240331.htm,2913744,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2024-08-05_10-Q_pgr-20240630.htm,3449811,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2024-11-04_10-Q_pgr-20240930.htm,3262560,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2025-03-03_10-K_pgr-20241231.htm,1358962,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2025-05-05_10-Q_pgr-20250331.htm,2685356,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2025-08-04_10-Q_pgr-20250630.htm,3188555,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2025-11-03_10-Q_pgr-20250930.htm,3217836,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2026-03-02_10-K_pgr-20251231.htm,1313421,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2026-05-04_10-Q_pgr-20260331.htm,2443452,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/2026-08-03_10-Q_pgr-20260630.htm,2966875,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/pgr/submissions-001.json,314548,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/submissions_CIK0000080661.json,155782,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/submissions_CIK0000900075.json,159889,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/submissions_CIK0001046102.json,155290,Raw source/cache excluded by existing blanket raw/ rule
+raw/sec/submissions_CIK0001637873.json,121108,Raw source/cache excluded by existing blanket raw/ rule
+raw/sellside/stephens_2026-08-20.txt,57212,Licensed source material; local only
+raw/sellside/stephens_2026-08-20_F4Q26_preview.pdf,460945,Licensed source material; local only
+raw/sitemaps/post_c-cn_city_m.xml,0,Raw source/cache excluded by existing blanket raw/ rule
+raw/sitemaps/post_c-cn_state_m.xml,0,Raw source/cache excluded by existing blanket raw/ rule
+raw/sitemaps/robots.copart-sitemaps.txt,4670,Raw source/cache excluded by existing blanket raw/ rule
+raw/sitemaps/robots.copart.com.txt,1272,Raw source/cache excluded by existing blanket raw/ rule
+raw/sitemaps/sitemap-index.xml,1684,Raw source/cache excluded by existing blanket raw/ rule
+raw/sitemaps/sitemapindex-copartcom.xml,0,Raw source/cache excluded by existing blanket raw/ rule
+raw/transcripts/Copart Inc._Earnings Call_2022-09-08_English.pdf,414301,Licensed source material; local only
+raw/transcripts/Copart Inc._Earnings Call_2022-11-17_English.pdf,401918,Licensed source material; local only
+raw/transcripts/Copart Inc._Earnings Call_2023-02-21_English.pdf,397786,Licensed source material; local only
+raw/transcripts/Copart Inc._Earnings Call_2023-05-17_English.pdf,359843,Licensed source material; local only
+raw/transcripts/Copart Inc._Earnings Call_2023-09-14_English.pdf,387331,Licensed source material; local only
+raw/transcripts/Copart Inc._Earnings Call_2023-11-16_English.pdf,374501,Licensed source material; local only
+raw/transcripts/Copart Inc._Earnings Call_2024-02-22_English.pdf,363921,Licensed source material; local only
+raw/transcripts/Copart Inc._Earnings Call_2024-05-16_English.pdf,345476,Licensed source material; local only
+raw/transcripts/Copart Inc._Earnings Call_2024-09-04_English.pdf,370334,Licensed source material; local only
+raw/transcripts/Copart Inc._Earnings Call_2024-11-21_English.pdf,405573,Licensed source material; local only
+raw/transcripts/Copart Inc._Earnings Call_2025-02-20_English.pdf,363837,Licensed source material; local only
+raw/transcripts/Copart Inc._Earnings Call_2025-05-22_English.pdf,401227,Licensed source material; local only
+raw/transcripts/Copart Inc._Earnings Call_2025-09-04_English.pdf,392355,Licensed source material; local only
+raw/transcripts/Copart Inc._Earnings Call_2025-11-20_English.pdf,379805,Licensed source material; local only
+raw/transcripts/Copart Inc._Earnings Call_2026-02-19_English.pdf,380416,Licensed source material; local only
+raw/transcripts/Copart Inc._Earnings Call_2026-05-21_English.pdf,354269,Licensed source material; local only
+raw/transcripts/Copart Inc._Earnings Call_2026-09-10_English.pdf,391246,Licensed source material; local only
+raw/transcripts/call_2022-09-08.txt,53216,Licensed source material; local only
+raw/transcripts/call_2022-11-17.txt,40276,Licensed source material; local only
+raw/transcripts/call_2023-02-21.txt,38565,Licensed source material; local only
+raw/transcripts/call_2023-05-17.txt,44484,Licensed source material; local only
+raw/transcripts/call_2023-09-14.txt,52356,Licensed source material; local only
+raw/transcripts/call_2023-11-16.txt,51349,Licensed source material; local only
+raw/transcripts/call_2024-02-22.txt,39149,Licensed source material; local only
+raw/transcripts/call_2024-05-16.txt,43259,Licensed source material; local only
+raw/transcripts/call_2024-09-04.txt,45669,Licensed source material; local only
+raw/transcripts/call_2024-11-21.txt,44451,Licensed source material; local only
+raw/transcripts/call_2025-02-20.txt,42802,Licensed source material; local only
+raw/transcripts/call_2025-05-22.txt,41690,Licensed source material; local only
+raw/transcripts/call_2025-09-04.txt,49941,Licensed source material; local only
+raw/transcripts/call_2025-11-20.txt,51947,Licensed source material; local only
+raw/transcripts/call_2026-02-19.txt,49134,Licensed source material; local only
+raw/transcripts/call_2026-05-21.txt,48296,Licensed source material; local only
+raw/transcripts/call_2026-09-10.txt,53206,Licensed source material; local only
+raw/wayback/copart_com_CMS_en_content_location_xml_20220802133735.xml,20914,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_CMS_en_content_location_xml_20220901002212.xml,20914,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_CMS_en_content_location_xml_20221101141521.xml,20914,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_CMS_en_content_location_xml_20221205040819.xml,20914,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_CMS_en_content_location_xml_20230102185800.xml,20914,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_CMS_en_content_location_xml_20230306154055.xml,20914,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_CMS_en_content_location_xml_20230601142203.xml,20914,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_CMS_en_content_location_xml_20230805015432.xml,20914,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_CMS_en_content_location_xml_20231010170727.xml,20914,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_CMS_en_content_location_xml_20231202010036.xml,20914,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_CMS_en_content_location_xml_20240101120736.xml,20914,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_CMS_en_content_location_xml_20240201085215.xml,20914,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_CMS_en_content_location_xml_20240314010011.xml,20914,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_CMS_en_content_location_xml_20240401032328.xml,20914,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_CMS_en_content_location_xml_20240502011208.xml,20914,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_CMS_en_content_location_xml_20240601175058.xml,20914,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_CMS_en_content_location_xml_20240706003105.xml,20926,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_CMS_en_content_location_xml_20240801090828.xml,20926,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_CMS_en_content_location_xml_20241002221645.xml,20926,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_CMS_en_content_location_xml_20241103000236.xml,20926,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_CMS_en_content_location_xml_20250104001111.xml,20926,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_CMS_en_content_location_xml_20250601171555.xml,20926,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_CMS_en_content_location_xml_20250801210715.xml,20926,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_CMS_en_content_location_xml_20250901094107.xml,20926,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_CMS_en_content_location_xml_20251001143643.xml,1041,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_CMS_en_content_location_xml_20251101041331.xml,1041,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_CMS_en_content_location_xml_20251227022825.xml,20926,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_CMS_en_content_location_xml_20260101133705.xml,20926,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_sale_list_results_xml_20220802102002.xml,68544,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_sale_list_results_xml_20220901002154.xml,68255,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_sale_list_results_xml_20221101114629.xml,68739,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_sale_list_results_xml_20221205161031.xml,68840,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_sale_list_results_xml_20230102185822.xml,69982,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_sale_list_results_xml_20230306154056.xml,70244,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_sale_list_results_xml_20230601075712.xml,70007,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_sale_list_results_xml_20230701031831.xml,72192,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_sale_list_results_xml_20230805020708.xml,71266,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_sale_list_results_xml_20231010171906.xml,1016,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_sale_list_results_xml_20231102042056.xml,72209,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_sale_list_results_xml_20231201235230.xml,72367,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_sale_list_results_xml_20240204212650.xml,73332,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_sale_list_results_xml_20240306235710.xml,73219,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_sale_list_results_xml_20240401033452.xml,73966,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_sale_list_results_xml_20240601175050.xml,74327,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_sale_list_results_xml_20240706010708.xml,1016,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_sale_list_results_xml_20240801074308.xml,71730,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_sale_list_results_xml_20241003062642.xml,71535,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_sale_list_results_xml_20241102234243.xml,71815,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_sale_list_results_xml_20250104001122.xml,73679,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_sale_list_results_xml_20250601171736.xml,71425,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_sale_list_results_xml_20250801220014.xml,70776,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_sale_list_results_xml_20250901095211.xml,72171,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_sale_list_results_xml_20251001141338.xml,1027,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_sale_list_results_xml_20251101053849.xml,71847,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_sale_list_results_xml_20251227022854.xml,75465,Raw source/cache excluded by existing blanket raw/ rule
+raw/wayback/copart_com_sale_list_results_xml_20260101133648.xml,72192,Raw source/cache excluded by existing blanket raw/ rule

@@ -1,0 +1,159 @@
+{
+  "status": "CCC 2025 frequency/claim-mix calibration case; population and body mapping provisional, response shape inherited.",
+  "fleet_reference_weights": [
+    0,
+    0,
+    1,
+    0,
+    0
+  ],
+  "cells": [
+    {
+      "body": 0,
+      "age": 0,
+      "claim_weight": 0.01593130178343029,
+      "repair_multiplier": 1.0596335820086935
+    },
+    {
+      "body": 0,
+      "age": 1,
+      "claim_weight": 0.06094522059338143,
+      "repair_multiplier": 1.12586789939437
+    },
+    {
+      "body": 0,
+      "age": 2,
+      "claim_weight": 0.0693534815042696,
+      "repair_multiplier": 1.1131235889578437
+    },
+    {
+      "body": 0,
+      "age": 3,
+      "claim_weight": 0.07886666468402466,
+      "repair_multiplier": 1.0153305962997987
+    },
+    {
+      "body": 0,
+      "age": 4,
+      "claim_weight": 0.07303770728748123,
+      "repair_multiplier": 1.0153305962997987
+    },
+    {
+      "body": 0,
+      "age": 5,
+      "claim_weight": 0.08710906984070785,
+      "repair_multiplier": 1.0153305962997987
+    },
+    {
+      "body": 2,
+      "age": 0,
+      "claim_weight": 0.006134221765749301,
+      "repair_multiplier": 0.9188939735447921
+    },
+    {
+      "body": 2,
+      "age": 1,
+      "claim_weight": 0.03425588828501813,
+      "repair_multiplier": 0.8406645976928742
+    },
+    {
+      "body": 2,
+      "age": 2,
+      "claim_weight": 0.032737757627281656,
+      "repair_multiplier": 0.7654177531488167
+    },
+    {
+      "body": 2,
+      "age": 3,
+      "claim_weight": 0.034356190102415175,
+      "repair_multiplier": 0.918421599541726
+    },
+    {
+      "body": 2,
+      "age": 4,
+      "claim_weight": 0.018846950052752536,
+      "repair_multiplier": 0.918421599541726
+    },
+    {
+      "body": 2,
+      "age": 5,
+      "claim_weight": 0.020461704843068643,
+      "repair_multiplier": 0.918421599541726
+    },
+    {
+      "body": 1,
+      "age": 0,
+      "claim_weight": 0.031211883354007507,
+      "repair_multiplier": 0.9534463782637166
+    },
+    {
+      "body": 1,
+      "age": 1,
+      "claim_weight": 0.12016776687458064,
+      "repair_multiplier": 0.9724109665656389
+    },
+    {
+      "body": 1,
+      "age": 2,
+      "claim_weight": 0.10674265822289522,
+      "repair_multiplier": 0.9909819917198179
+    },
+    {
+      "body": 1,
+      "age": 3,
+      "claim_weight": 0.08183840424579261,
+      "repair_multiplier": 1.0238396974362347
+    },
+    {
+      "body": 1,
+      "age": 4,
+      "claim_weight": 0.04489450991566717,
+      "repair_multiplier": 1.0238396974362347
+    },
+    {
+      "body": 1,
+      "age": 5,
+      "claim_weight": 0.048740947919816806,
+      "repair_multiplier": 1.0238396974362347
+    },
+    {
+      "body": 3,
+      "age": 0,
+      "claim_weight": 0.0014603109183721592,
+      "repair_multiplier": 0.7168168612368286
+    },
+    {
+      "body": 3,
+      "age": 1,
+      "claim_weight": 0.006164163291097801,
+      "repair_multiplier": 0.8186560039688775
+    },
+    {
+      "body": 3,
+      "age": 2,
+      "claim_weight": 0.00698900010691186,
+      "repair_multiplier": 0.9190923149676858
+    },
+    {
+      "body": 3,
+      "age": 3,
+      "claim_weight": 0.009213064114291495,
+      "repair_multiplier": 1.0757436729683219
+    },
+    {
+      "body": 3,
+      "age": 4,
+      "claim_weight": 0.005054057469039681,
+      "repair_multiplier": 1.0757436729683219
+    },
+    {
+      "body": 3,
+      "age": 5,
+      "claim_weight": 0.005487075197946583,
+      "repair_multiplier": 1.0757436729683219
+    }
+  ],
+  "source_sha256": "2a127900b3522166896779cc4b24b45b9e1da1de5bf4a31310fed2071a0669e9",
+  "source": "model/ccc_age_body_2026-09-29/source_cells.csv",
+  "older_age_split": "Inherited relative claims weights conditional on body and 7+; not observed in this workbook."
+}

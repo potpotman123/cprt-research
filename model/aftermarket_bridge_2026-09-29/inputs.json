@@ -1,0 +1,30 @@
+{
+  "status": "Illustrative structural scenarios; no causal forecast coefficient identified",
+  "horizon": "FY2027 relative to the saved price_3p7_intl_continuation reference",
+  "eligible_parts_bill_share": 0.4,
+  "source_quantity_shares": {"oem": 0.65, "aftermarket": 0.25, "recycled": 0.1},
+  "source_relative_prices": {"oem": 1.0, "aftermarket": 0.5, "recycled": 0.6},
+  "donor_contribution_exposed_fraction": 0.25,
+  "donor_contribution_to_hammer_bid": 1.5,
+  "recycler_price_transmission_weight": 0.5,
+  "rebuilder_repair_bill_to_hammer_bid": 1.0,
+  "repair_job_recapture": 1.0,
+  "supply_price_response": 0.25,
+  "expected_salvage_pass_through": 1.0,
+  "threshold_responsive_fraction": 1.0,
+  "cases": [
+    {"name": "small_shift", "oem_to_aftermarket": 0.02, "recycled_to_aftermarket": 0.005},
+    {"name": "larger_shift", "oem_to_aftermarket": 0.04, "recycled_to_aftermarket": 0.015},
+    {"name": "large_stress", "oem_to_aftermarket": 0.06, "recycled_to_aftermarket": 0.025}
+  ],
+  "input_admission": {
+    "all_numeric_bridge_inputs": "Assumed. Source shares refer to a hypothetical fungible component basket, NOT CCC spending shares or national physical shares.",
+    "source_prices": "Assumed fixed delivered, equivalent-quality prices. Existing retail snapshots do not establish this basket or a recycled discount.",
+    "recycler_price_transmission_weight": "Assumed reduced-form influence on marginal auction prices, NOT recycler buyer share, domestic share, or winning-bid share.",
+    "donor_contribution": "Expected net parts contribution after variable fulfillment costs, before donor acquisition. Exposure applies only to the eligible collision basket; mechanical parts, scrap and other demand are held constant.",
+    "supply_price_response": "Assumed fractional price support per log decline in total-loss supply; zero and 0.5 tested. Not estimated equilibrium elasticity.",
+    "threshold_responsive_fraction": "Mixture of claims following the inherited switching rule and otherwise identical claims whose disposition remains at reference. It attenuates an unvalidated derivative without refitting historical levels.",
+    "expected_salvage_pass_through": "Scenario share of price shock reflected in insurer expected salvage; timing is unobserved.",
+    "period_and_population": "Uniform full-year incremental US insurance shock. International, other US and purchased revenue remain at reference; no global extension inferred. All figures are counterfactual differences, not proof of outright year-over-year deflation."
+  }
+}

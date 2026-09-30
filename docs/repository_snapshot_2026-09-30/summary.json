@@ -1,0 +1,44 @@
+{
+  "publication_date": "2026-09-30",
+  "base_commit": "7635484aa19336ef01406da0b96c269b6981f35a",
+  "payload_files": 621,
+  "payload_bytes": 12526320,
+  "categories": {
+    "data": 82,
+    "docs": 287,
+    "model": 160,
+    "outputs": 7,
+    "reports": 10,
+    "root": 12,
+    "scripts": 63
+  },
+  "payload_extensions": {
+    ".csv": 165,
+    ".html": 2,
+    ".json": 130,
+    ".jsonl": 3,
+    ".log": 5,
+    ".md": 146,
+    ".mjs": 5,
+    ".plist": 2,
+    ".png": 5,
+    ".py": 137,
+    ".sh": 1,
+    ".swift": 1,
+    ".txt": 4,
+    ".webp": 2,
+    ".xlsx": 6,
+    ".zip": 1,
+    "[none]": 6
+  },
+  "ignored_research_files": 1218,
+  "ignored_research_bytes": 3094052855,
+  "ignored_runtime_files_omitted": {
+    "environment_bytecode_editor": 3037,
+    "logs": 14
+  },
+  "staged_bytes_match": true,
+  "common_credential_scan": "no matches",
+  "inventory_directory_excluded_from_self_hashes": "docs/repository_snapshot_2026-09-30/",
+  "scope": "Repository publication payload only; local exclusions listed separately; no claim of full raw-source or external-file backup"
+}

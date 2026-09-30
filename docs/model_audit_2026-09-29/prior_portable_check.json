@@ -1,0 +1,23 @@
+{
+  "zip_sha256": "5ac42fdd2f28511c411dcfa1e6672d912357c0c8c7a4e4c102b5439bf31346fe",
+  "relocated": true,
+  "raw_materials_absent": true,
+  "status": "pass",
+  "manifest_verified": true,
+  "files_checked": 82,
+  "steps": [
+    {
+      "script": "REPRODUCE.py",
+      "returncode": 0
+    }
+  ],
+  "ccc_outputs_identical": [
+    "scenario_summary.csv",
+    "quarterly_results.csv",
+    "calibration_cells.csv",
+    "economic_crosschecks.csv"
+  ],
+  "scope": "Full packaged reproduction including 71 existing tests and CCC integration; no empirical validation or source refresh.",
+  "tested_pre_documentation_zip_sha256": "a21a1e3ef07e9f465feeb95e55e0798ac5368e3265acbd6e733a993dfbc53295",
+  "post_test_changes": "FABLE_HANDOFF.md documentation only; all executable files, inputs and outputs byte-identical to tested package. New manifest reverified."
+}

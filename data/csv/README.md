@@ -99,3 +99,7 @@ The IHS-sourced ORNL tables (3.11, 3.12, 3.13 — census by age, average age) ar
 | `state_yoy_for_rates.csv` | the proxy attempt at that test (r = −0.115) |
 
 If a file is missing from this index it is new; add it here with its status when you commit it.
+
+## CCC direct age/body extract, received 29 September 2026
+
+The normalized 2020–2025 panel and source-cell provenance live in `model/ccc_age_body_2026-09-29/source_cells.csv`; body controls, annual derivations and executable revenue integration are adjacent. See that directory’s README. Frequencies and TL shares are observed within an unspecified CCC sample; claim weights are derived, within-7+ splits and Utility/Van mappings remain proxies. The raw supplied workbook is preserved locally and excluded from Git.

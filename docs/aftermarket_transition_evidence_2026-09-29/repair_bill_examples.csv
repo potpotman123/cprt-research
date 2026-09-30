@@ -1,0 +1,6 @@
+discount_source,assumed_bill_fraction_switching_from_oe,historical_discount,implied_bill_saving
+six_parts_asian,0.06,0.299,0.017939999999999998
+six_parts_european,0.06,0.27699999999999997,0.01662
+six_parts_domestic,0.06,0.233,0.01398
+radiators_domestic,0.06,0.258,0.01548
+bumper_covers_domestic,0.06,0.205,0.0123

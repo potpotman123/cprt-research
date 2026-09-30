@@ -1,0 +1,27 @@
+small_shift -33.86
+larger_shift -90.66
+large_stress -146.28
+larger_shift_half_switching -62.82
+larger_shift_no_switching -31.55
+larger_shift_no_scarcity -104.27
+larger_shift_stronger_scarcity -79.42
+larger_shift_weak_recycler_transmission -27.38
+larger_shift_no_expected_update -70.74
+larger_shift_no_repair_recapture -92.99
+oem_substitution_only -20.99
+{
+  "scenario": "materiality_hurdle",
+  "repair_change": -0.01110006549401197,
+  "auction_price_change_at_fixed_selection": -0.04428249392658472,
+  "expected_salvage_change": -0.04428249392658472,
+  "FY_insurance_unit_delta": -0.03297533228186755,
+  "FY_insurance_allin_RPU_delta": -0.021572437325911187,
+  "FY_legacy_service_musd": 3939.135670282428,
+  "FY_delta_vs_reference_musd": -166.66836896425866,
+  "FY_delta_vs_reference_pct": -0.04059335695788302,
+  "FY_gap_to_dated_JPM_service_musd": -121.86432971757222,
+  "FY_gap_to_dated_JPM_service_pct": -0.030008453513315048,
+  "H1_delta_vs_reference_musd": -82.44009794877547,
+  "threshold_responsive_fraction": 1.0,
+  "status": "Conditional scenario; not an empirically identified forecast"
+}

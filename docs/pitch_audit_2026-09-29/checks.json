@@ -1,0 +1,205 @@
+{
+  "as_of": "2026-09-29",
+  "scope": "Pitch audit; saved outputs and dependency checks; no model rerun or fit",
+  "manifest_checks": [
+    {
+      "manifest": "model/aftermarket_bridge_2026-09-29/manifest.json",
+      "count": 12,
+      "files": [
+        {
+          "file": "model/aftermarket_bridge_2026-09-29/bridge.py",
+          "matches": true,
+          "sha256": "aa117019d99db6b7a8671d4652e23f4094168a2a519193e520a583c3b8257aef"
+        },
+        {
+          "file": "model/aftermarket_bridge_2026-09-29/inputs.json",
+          "matches": true,
+          "sha256": "335f3230b5485b2fe6f53f872cb3cd9fbd3bd91196dd05f0bc183d77881e3758"
+        },
+        {
+          "file": "model/revenue_architecture_2026-09-28/model.py",
+          "matches": true,
+          "sha256": "5da44a2feceaeeacba8a3f38f939e019155c38cf69358221661d3ddb5e13ae82"
+        },
+        {
+          "file": "model/revenue_architecture_2026-09-28/scenario_configs.json",
+          "matches": true,
+          "sha256": "9217344ef7277b773586fc22556fb743cfdc78b899e4ddc6e0ee9ae59dccf34c"
+        },
+        {
+          "file": "model/revenue_architecture_2026-09-28/manifest.json",
+          "matches": true,
+          "sha256": "c2f73789eb496b0461f5f5a5b0f29df2bfe6f0cb7b094354dda050ad30c6fe7e"
+        },
+        {
+          "file": "model/revenue_architecture_2026-09-28/evidence_manifest.json",
+          "matches": true,
+          "sha256": "70155f13bd219c49b0311d1b758b67457ef1c25c1eccd804be3e80fe38f6cbbf"
+        },
+        {
+          "file": "model/integrated_service_2026-09-28/engine.py",
+          "matches": true,
+          "sha256": "8f06ed12586d0ee60fc916c295dbf376a1fcd7d03ab66901777a37435cfd76c8"
+        },
+        {
+          "file": "docs/repair_salvage_execution_2026-09-28/MIX_SEGMENTATION.md",
+          "matches": true,
+          "sha256": "90972594b61b7d1404c3fb3343dde6698daa69097a259b4eb33976f3a6251569"
+        },
+        {
+          "file": "model/linked_service_revenue_2026-09-28/inputs.json",
+          "matches": true,
+          "sha256": "18e80a5aa8c34854b8bc1d9471d7530d7b827349ac51758f13a3d24987e7b591"
+        },
+        {
+          "file": "docs/fleet_selection_2026-09-28/age_constrained_engine_results.json",
+          "matches": true,
+          "sha256": "8e6f55a8792caf6aa2cb4f4c2d758936ff96e3b2a306c85244db59e4bfd6655b"
+        },
+        {
+          "file": "docs/historical_body_births_2026-09-28/candidate_body_births.csv",
+          "matches": true,
+          "sha256": "8c983b66db41ec3170c20a510fcd166b917d9b3d9f0a2f39d9b5a13871d6f0f4"
+        },
+        {
+          "file": "model/integrated_service_2026-09-28/assumptions.json",
+          "matches": true,
+          "sha256": "a5247106423da9061fdebe1409e085ecfa94c2b0e60c9e50d086747d2ee003a2"
+        }
+      ]
+    },
+    {
+      "manifest": "model/ccc_age_body_2026-09-29/runtime_manifest.json",
+      "count": 15,
+      "files": [
+        {
+          "file": "model/ccc_age_body_2026-09-29/source_cells.csv",
+          "matches": true,
+          "sha256": "ecee8dad938bd220350a243a900632136969831eb11893776f8a2a9b0167c8c4"
+        },
+        {
+          "file": "model/ccc_age_body_2026-09-29/source_manifest.json",
+          "matches": true,
+          "sha256": "311e18c22156e228a91b2ada2cc653b2cdfa584eced8b74e40be43f40c7bedea"
+        },
+        {
+          "file": "model/ccc_age_body_2026-09-29/cohort_anchor.json",
+          "matches": true,
+          "sha256": "5ccf5deac6325e19a6d932cfcc751d6a4c745f2a61ba38a00cbd0d4504fd150e"
+        },
+        {
+          "file": "model/ccc_age_body_2026-09-29/integrate.py",
+          "matches": true,
+          "sha256": "8afe9ed6aee4ce5a9fac3a42f91c692e1ede2c1bf13b49410a4ea43da297a6f8"
+        },
+        {
+          "file": "model/revenue_architecture_2026-09-28/model.py",
+          "matches": true,
+          "sha256": "5da44a2feceaeeacba8a3f38f939e019155c38cf69358221661d3ddb5e13ae82"
+        },
+        {
+          "file": "model/revenue_architecture_2026-09-28/scenario_configs.json",
+          "matches": true,
+          "sha256": "9217344ef7277b773586fc22556fb743cfdc78b899e4ddc6e0ee9ae59dccf34c"
+        },
+        {
+          "file": "model/revenue_architecture_2026-09-28/evidence_manifest.json",
+          "matches": true,
+          "sha256": "70155f13bd219c49b0311d1b758b67457ef1c25c1eccd804be3e80fe38f6cbbf"
+        },
+        {
+          "file": "model/aftermarket_bridge_2026-09-29/bridge.py",
+          "matches": true,
+          "sha256": "aa117019d99db6b7a8671d4652e23f4094168a2a519193e520a583c3b8257aef"
+        },
+        {
+          "file": "model/aftermarket_bridge_2026-09-29/inputs.json",
+          "matches": true,
+          "sha256": "335f3230b5485b2fe6f53f872cb3cd9fbd3bd91196dd05f0bc183d77881e3758"
+        },
+        {
+          "file": "model/integrated_service_2026-09-28/engine.py",
+          "matches": true,
+          "sha256": "8f06ed12586d0ee60fc916c295dbf376a1fcd7d03ab66901777a37435cfd76c8"
+        },
+        {
+          "file": "model/integrated_service_2026-09-28/assumptions.json",
+          "matches": true,
+          "sha256": "a5247106423da9061fdebe1409e085ecfa94c2b0e60c9e50d086747d2ee003a2"
+        },
+        {
+          "file": "model/linked_service_revenue_2026-09-28/inputs.json",
+          "matches": true,
+          "sha256": "18e80a5aa8c34854b8bc1d9471d7530d7b827349ac51758f13a3d24987e7b591"
+        },
+        {
+          "file": "docs/fleet_selection_2026-09-28/age_constrained_engine_results.json",
+          "matches": true,
+          "sha256": "8e6f55a8792caf6aa2cb4f4c2d758936ff96e3b2a306c85244db59e4bfd6655b"
+        },
+        {
+          "file": "docs/historical_body_births_2026-09-28/candidate_body_births.csv",
+          "matches": true,
+          "sha256": "8c983b66db41ec3170c20a510fcd166b917d9b3d9f0a2f39d9b5a13871d6f0f4"
+        },
+        {
+          "file": "docs/consensus_review_2026-09-28/total_revenue_consensus.csv",
+          "matches": true,
+          "sha256": "5ef545dca2928267b7f366da91c316a080df33e1efb2d7c29e3ca5ccd13133bb"
+        }
+      ]
+    }
+  ],
+  "annual_rollups": [
+    {
+      "scenario": "ccc_reference",
+      "quarter_count": 4,
+      "sum_minus_saved_annual_musd": 0.0
+    },
+    {
+      "scenario": "ccc_small_shift",
+      "quarter_count": 4,
+      "sum_minus_saved_annual_musd": 0.0
+    },
+    {
+      "scenario": "ccc_larger_shift",
+      "quarter_count": 4,
+      "sum_minus_saved_annual_musd": 0.0
+    },
+    {
+      "scenario": "ccc_large_stress",
+      "quarter_count": 4,
+      "sum_minus_saved_annual_musd": 0.0
+    },
+    {
+      "scenario": "ccc_larger_half_switching",
+      "quarter_count": 4,
+      "sum_minus_saved_annual_musd": 0.0
+    }
+  ],
+  "larger_case_benchmark_check": {
+    "service_musd": 4002.414465896287,
+    "dated_jpm_service_musd": 4061.0,
+    "gap_musd": -58.585534103713144,
+    "gap_pct": -1.4426381212438555
+  },
+  "illustrative_linear_36_month_ramp": {
+    "terminal_shift_pp": 5.5,
+    "month12_shift_pp": 1.8333333333333333,
+    "first12months_mean_shift_pp": 0.9166666666666666,
+    "status": "Arithmetic illustration only; not an implemented adoption or revenue forecast"
+  },
+  "source_hashes": {
+    "model/ccc_age_body_2026-09-29/scenario_summary.csv": "99a223417c1e495f7c10c6288a4208e85ca00cb8481cee31dbdf0d501d7e1a6b",
+    "model/ccc_age_body_2026-09-29/quarterly_results.csv": "f1e513d77df08eee97cc073940c54fba0d5163a873bdbdcfd71c853f8c2f1464",
+    "docs/aftermarket_parameter_audit_2026-09-29/diagnostic_sensitivities.csv": "0ec0253c257636d4040b9bb4ef0c57f1140482cf390fb59dbaf70fe87a24aa2d",
+    "docs/carrier_test_2026-09-28/README.md": "3db368b8e76d206aaa68cd642ea3cc25c19a4e5ba631eb4e524287a7bad9bc92",
+    "docs/repair_research_2026-09-26/contract_scope_screen/README.md": "9206fe79d93be82a88f5efe711991460149d7d4fc9b7739c1f46c590cfe8ffc4",
+    "docs/model_audit_2026-09-29/audit_checks.json": "13f7c5824db6aef09f51c14cf3b3fe6ad89aefeaf9037d937ef7d70058064f98",
+    "docs/model_audit_2026-09-29/portable_check.json": "dc4768d57c3d5ea28d901ea1d298113d6a2b5743ea15bc74176c29e5b6020953"
+  },
+  "local_document_links_valid": true,
+  "report_sha256": "6ffd5b3d4365c531ee1cc27f73ed9acc0af26acc87749fb1a5cb8607e4752541",
+  "limits": "Matching hashes and sums do not independently validate sources, calibrated sensitivities, thesis probabilities or catalyst timing.",
+  "publication_note": "30 September: user-confirmed catalyst conclusion added; prior comparison review archived in repository. No model assumption change."
+}

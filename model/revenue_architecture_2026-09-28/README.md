@@ -1,5 +1,13 @@
 # Revised Copart architecture: implementation and thesis triage
 
+**29 September pitch audit:** [PM review of both competition theses and the 12-month catalyst](../../docs/pitch_audit_2026-09-29/README.md). Retain the scenario architecture; a combined forecast and catalyst-backed short remain unvalidated. The review flags adoption timing, dated carrier terms, benchmark materiality and the required evidence before adopting a pitch case.
+
+**CCC data update:** [New age/body calibration and connected revenue scenarios](../ccc_age_body_2026-09-29/README.md) incorporate the user-supplied September 29 workbook. Original scenarios below remain the prior comparison; do not mix their reference with the new outputs.
+
+**29 September follow-up:** [Aftermarket source-to-revenue bridge](../aftermarket_bridge_2026-09-29/README.md) adds explicit OEM/recycled substitution, donor economics, competing bids, feedback and a materiality hurdle. Existing history and scenarios are unchanged. Material joint downside is conditional; new causal coefficients remain unvalidated.
+
+**Revenue-only audit and Fable handoff:** [Audit](../../docs/model_audit_2026-09-29/AUDIT.md) and [implementation contract](../../docs/model_audit_2026-09-29/FABLE_HANDOFF.md). Reproduce with `python3 model/revenue_architecture_2026-09-28/run.py --reuse-saved-evidence` when the licensed source report is unavailable. This preserves the dated benchmark; it does not refresh evidence.
+
 28 September 2026. Working analytical successor to the integrated prototype. No Excel design, legacy-output overwrite, paid collection or expensive fitting. **Most of the structural defects identified in the audit now have executable implementations and guards. The evidence gaps are not all solved, and there is still no independently validated point forecast.**
 
 ## What changed

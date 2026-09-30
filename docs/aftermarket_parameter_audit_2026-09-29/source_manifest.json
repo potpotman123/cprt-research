@@ -1,0 +1,45 @@
+{
+  "access_date": "2026-09-29",
+  "queries": [
+    "site.cccis.com 2025 crash course parts labor total repair cost parts percent 2024 2025",
+    "site.mitchell.com 2025 collision repair parts labor percentage total cost",
+    "site.a-r-a.org auto recycler parts sales dismantling vehicle acquisition gross margin collision mechanical",
+    "site.lkqcorp.com 2025 annual report salvage procurement parts gross margin aftermarket recycled",
+    "site.cccis.com \"parts\" \"40\" \"repair\" cost",
+    "site.mitchell.com \"parts\" \"42\" \"2025\""
+  ],
+  "sources": [
+    {
+      "url": "https://www.cccis.com/reports/crash-course-2026",
+      "locator": "Figure 35 visually checked; Figure 39 prior verified extraction reused"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/677e7ecbb3dbbe98615cde30/69caddd8251d01f254e90c9f_Picture35.webp",
+      "locator": "2025 rounded labels in left panel"
+    },
+    {
+      "url": "https://www.lkqcorp.com/wp-content/uploads/2025/05/LKQ_2024_Sustainability-Report_Final.pdf",
+      "locator": "PDF and printed p16, full page rendered and checked; illustrative prices as of March2025"
+    },
+    {
+      "url": "https://s205.q4cdn.com/926050515/files/doc_financials/2025/ar/LKQ-Corporations-Full-Year-Form-10K.pdf",
+      "locator": "Printed pp38 and56; segment scope and delivery expense classification"
+    }
+  ],
+  "failures_and_exclusions": [
+    "Web renderer could not open CCC image or large LKQ sustainability PDF; ordinary single-file retrieval succeeded.",
+    "CCC estimating glossary search surfaced definition but full page failed; not relied on for a numeric coefficient.",
+    "ARA operational material supplied no numeric donor exposure or bid multiplier; generic industry size was not used.",
+    "LKQ aggregate segment gross margins not admissible as donor contribution/hammer ratio.",
+    "pymupdf absent; pypdf extraction and pypdfium2 rendering succeeded."
+  ],
+  "checks": "Original scenario details inspected; three bounded new CCC-family sensitivity runs; no new empirical calibration",
+  "hashes": {
+    "raw/aftermarket_parameter_audit_2026-09-29/ccc_figure35.webp": "7ea705824645e9d4fb2f42acde167f9c01ae91669d73d34dcbed8a62750c242e",
+    "raw/aftermarket_parameter_audit_2026-09-29/lkq_2024_sustainability.pdf": "652f7910a11ff2d2ec8523f0ad6a456b05ca4363a036765117b1a7213dad5d0f",
+    "raw/aftermarket_parameter_audit_2026-09-29/lkq_page16.png": "910bfce7315c6d4222160ec50c0b335954e989a34d3afcbc8f7dab8344140afe",
+    "model/aftermarket_bridge_2026-09-29/inputs.json": "335f3230b5485b2fe6f53f872cb3cd9fbd3bd91196dd05f0bc183d77881e3758",
+    "model/aftermarket_bridge_2026-09-29/bridge.py": "aa117019d99db6b7a8671d4652e23f4094168a2a519193e520a583c3b8257aef",
+    "model/ccc_age_body_2026-09-29/aftermarket_inputs.json": "aff91094ac13135a0f7f84dfdd0c961153df132fb0f50f7598d8942480703bae"
+  }
+}

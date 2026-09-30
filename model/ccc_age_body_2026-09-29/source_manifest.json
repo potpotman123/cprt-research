@@ -1,0 +1,29 @@
+{
+  "source_filename": "Data for Harvard Research (Daniella Biblin)_9.29.2026.xlsx",
+  "source_sha256": "2a127900b3522166896779cc4b24b45b9e1da1de5bf4a31310fed2071a0669e9",
+  "raw_copy": "raw/ccc_direct_2026-09-29/Data for Harvard Research (Daniella Biblin)_9.29.2026.xlsx",
+  "received": "2026-09-29",
+  "sheet": "Vehicle Type, Age",
+  "source_cells": 96,
+  "provenance": "User supplied as CCC contact data; workbook has no explanatory footnotes or formula cells.",
+  "definitions_unknown": [
+    "Geography and coverage/loss exclusions",
+    "Sample/estimate maturity and revision policy",
+    "Whether Van includes commercial vans",
+    "Completeness of each year"
+  ],
+  "mapping_status": "Car and Pickup direct label mapping; Utility Vehicle to SUV and Van to existing Van/minivan economics are proxies.",
+  "claim_weight_method": "Normalize total_loss_mix / cell_total_loss_frequency, conditional on common population and partition.",
+  "max_body_tlf_residual_pp": 0.00535401925000345,
+  "source_checks": {
+    "six_mix_totals_equal_one": true,
+    "24_body_mix_controls_match": true,
+    "96_rates_valid": true
+  },
+  "decomposition_2024_to_2025": {
+    "tlf_change_pp": 0.8853616748264931,
+    "within_cell_rate_pp": 1.0043063669652472,
+    "composition_pp": -0.11894469213875795,
+    "interpretation": "Symmetric arithmetic decomposition. Within-cell includes severity and within-7+ aging, not aftermarket causality."
+  }
+}

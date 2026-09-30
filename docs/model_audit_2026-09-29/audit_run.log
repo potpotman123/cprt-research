@@ -1,0 +1,74 @@
+{
+  "as_of": "2026-09-29",
+  "scope": "Revenue only",
+  "passed": 42,
+  "checks": [
+    "Q1 primary filing Service revenues",
+    "Q1 primary filing Vehicle sales",
+    "Q2 primary filing Service revenues",
+    "Q2 primary filing Vehicle sales",
+    "Q3 primary filing Service revenues",
+    "Q3 primary filing Vehicle sales",
+    "Q4 primary filing Service revenues",
+    "Q4 primary filing Vehicle sales",
+    "32 quarterly geography/revenue controls checked",
+    "FY26 service sum equals annual release",
+    "FY25 service sum equals annual release",
+    "Quarter weights normalized",
+    "Eight fiscal dates and four forecast comparisons",
+    "All six TLF targets match source CSV",
+    "Saved parameters reproduce six TLFs",
+    "Saved parameters reproduce four selected-value targets",
+    "Saved parameters reproduce two repaired-mean targets",
+    "Repair target source text includes 5721 and 2039 gap",
+    "58 four-body birth years complete",
+    "Birth mapping preserves old totals",
+    "184 age/body fleet cells unique",
+    "Survival and relative claim weights valid",
+    "Carrier weights and allocation fractions valid",
+    "Saved extraction source hash: model_inputs.json",
+    "Saved extraction source hash: CPRT_share_sidebuild.xlsx",
+    "Embedded fee grid equals saved CSV",
+    "Selected fee grid 0 lower bounds unique",
+    "Selected fee grid 0 ordered and no cent gaps",
+    "Selected fee grid 1 lower bounds unique",
+    "Selected fee grid 1 ordered and no cent gaps",
+    "Selected fee grid 2 lower bounds unique",
+    "Selected fee grid 2 ordered and no cent gaps",
+    "Active manifest revenue_architecture_2026-09-28",
+    "Active manifest aftermarket_bridge_2026-09-29",
+    "Named JPM extraction source hash",
+    "Annual benchmark identity and rounding retained",
+    "Four aftermarket output files reproduce byte for byte",
+    "Pre-audit core snapshot equals recorded Git source quarterly_scenarios.csv",
+    "Core output rows/columns unchanged quarterly_scenarios.csv",
+    "Pre-audit core snapshot equals recorded Git source scenario_summary.csv",
+    "Core output rows/columns unchanged scenario_summary.csv",
+    "All core scenario values reproduce within numerical tolerance"
+  ],
+  "details": {
+    "Saved parameters reproduce four selected-value targets": [
+      40187.000000000444,
+      30258.999999999865,
+      20327.999999999738,
+      9122.000000000024
+    ],
+    "Saved parameters reproduce two repaired-mean targets": [
+      5721.000050416737,
+      3681.999978738945
+    ],
+    "calibration_caveat": "Twelve in-sample targets; mixed coverage/periods. Reproduction does not validate local switching density.",
+    "Embedded fee grid equals saved CSV": {
+      "rows": 996
+    },
+    "All core scenario values reproduce within numerical tolerance": {
+      "largest_absolute_numeric_difference": 4.656612873077393e-10,
+      "note": "Includes both units and USD-million fields; no material difference"
+    },
+    "primary_sources_visual_review": [
+      "CCC 2026 Figure 19: six CY2025 TLF labels",
+      "CCC Q4 2025 Figure 6: four selected values and age mix"
+    ],
+    "scope_limit": "All live input families traced; no exhaustive re-verification of every upstream raw observation or archived experiment. Carrier workbook hash, not independent formula recomputation. No new independent causal validation."
+  }
+}

@@ -1,0 +1,7 @@
+metric,group,new_implied,previous_target,status
+repairable_mean,0-6,5644.702707794477,5721,Cross-population diagnostic; no longer calibration target in CCC case
+repairable_mean,7+,3735.824644930323,3682,Cross-population diagnostic; no longer calibration target in CCC case
+selected_vehicle_value,0,38989.23192350421,40187.0,Cross-population diagnostic; inherited values not refitted
+selected_vehicle_value,1,29689.543541072842,30259.0,Cross-population diagnostic; inherited values not refitted
+selected_vehicle_value,2,19907.60666282704,20328.0,Cross-population diagnostic; inherited values not refitted
+selected_vehicle_value,3,9157.546961930157,9122.000000000002,Cross-population diagnostic; inherited values not refitted

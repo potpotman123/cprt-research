@@ -23,8 +23,15 @@ def totals(r):
         'FY_'+k:sum(x[k] for x in r['quarters']) for k in keys}
 
 
-def main():
-    ev=evidence.build()
+def main(reuse_saved_evidence=False):
+    # Explicit offline mode preserves dated benchmark provenance without needing
+    # the author's local licensed report. It does not refresh/verify that source.
+    if reuse_saved_evidence:
+        ev=json.loads((m.HERE/'evidence_manifest.json').read_text())
+        for name in ['benchmark_perimeter.csv','historical_metric_controls.csv']:
+            if not (m.HERE/name).is_file(): raise ValueError('Missing saved evidence: '+name)
+    else:
+        ev=evidence.build()
     cases={}
     cases['flat_branches']=reference('flat_branches')
     cases['intl_continuation']=reference('intl_continuation',True)
@@ -107,4 +114,9 @@ def main():
         'scenarios':summary,'interaction':interaction},indent=2))
 
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    import argparse
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--reuse-saved-evidence',action='store_true',
+                        help='Use the dated saved evidence snapshot; no source refresh or licensed-report access')
+    main(parser.parse_args().reuse_saved_evidence)

@@ -1,0 +1,62 @@
+{
+  "tong_yang_august_2026.html": {
+    "url": "https://www.tyg.com.tw/en/latest-news-en/3711/",
+    "resolved_url": "https://www.tyg.com.tw/en/latest-news-en/3711/",
+    "sha256": "ca27cbdc65e82ffdfab3eaac42067e61dea5617569973f1b2b467854ac82257b",
+    "bytes": 113156,
+    "access_date": "2026-09-29",
+    "status": "saved"
+  },
+  "state_farm_parts.html": {
+    "url": "https://www.statefarm.com/claims/auto/replacement-parts",
+    "resolved_url": "https://www.statefarm.com/claims/auto/replacement-parts",
+    "sha256": "e7a422d23af3dfa44b47a6184f5d61ed5c2481988a72e7e2f8db3e941f0513d3",
+    "bytes": 31056,
+    "access_date": "2026-09-29",
+    "status": "saved"
+  },
+  "maplev_tesla_prices.html": {
+    "url": "https://maplev.ca/guides/tesla-collision-part-prices-canada/",
+    "resolved_url": "https://maplev.ca/guides/tesla-collision-part-prices-canada/",
+    "sha256": "3bd83274bddc591e53c96ca8d86db00d839bcb63ac88a56907549b24d08913df",
+    "bytes": 32881,
+    "access_date": "2026-09-29",
+    "status": "saved"
+  },
+  "capa_2017_supply.pdf": {
+    "url": "https://www.capacertified.org/uploads/2018/02/CAPAs_Market_%20Presence_%20Increases_Dramatically-021318.pdf",
+    "resolved_url": "https://www.capacertified.org/uploads/2018/02/CAPAs_Market_%20Presence_%20Increases_Dramatically-021318.pdf",
+    "sha256": "08bcb89b0c0efede80caba16a2abb95f4fdd35c1966bfb4040de0a7152d4a287",
+    "bytes": 324985,
+    "access_date": "2026-09-29",
+    "status": "saved"
+  },
+  "capa_sensors_2023.pdf": {
+    "url": "https://www.capacertified.org/uploads/2023/08/CAPA%20Press%20Release_Hushan%20Certified%20Sensors.pdf",
+    "resolved_url": "https://www.capacertified.org/uploads/2023/08/CAPA%20Press%20Release_Hushan%20Certified%20Sensors.pdf",
+    "sha256": "7eccb9a12dfba78b82f9c5388fa6e83e5b3053686af44e24dca5a380a38ae577",
+    "bytes": 115624,
+    "access_date": "2026-09-29",
+    "status": "saved"
+  },
+  "partstrader_april_2026.html": {
+    "url": "https://www.partstrader.com/your-best-hedge-against-parts-price-inflation-the-partstrader-marketplace/",
+    "access_date": "2026-09-29",
+    "status": "retrieval_failed",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  "mitchell_2017_q2.pdf": {
+    "url": "https://www.mitchell.com/industry-trends-report/itr-2017-q2-apd/offline/download.pdf",
+    "access_date": "2026-09-29",
+    "sha256": "2b6b4855caf67012ba535c33d991ef06d27f89a2532e39609ff518b0cbc8c12a",
+    "bytes": 3821730,
+    "status": "saved"
+  },
+  "tong_yang_2025_annual.pdf": {
+    "url": "https://www.tyg.com.tw/?sdm_process_download=1&download_id=3637",
+    "access_date": "2026-09-29",
+    "sha256": "82a0a9abb84ca045528c6f7a4374a8dc6e3621454dae8cff0551f01063297abe",
+    "bytes": 595346,
+    "status": "saved"
+  }
+}

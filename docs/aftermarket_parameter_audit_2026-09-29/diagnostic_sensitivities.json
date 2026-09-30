@@ -1,0 +1,175 @@
+{
+  "status": "Hypothetical diagnostics, not new calibrated parameters",
+  "reference": "CCC-based FY27 legacy service case",
+  "cases": {
+    "half_eligible_bill_exposure": {
+      "parameter_changes": {
+        "eligible_parts_bill_share": 0.2
+      },
+      "oem_to_aftermarket": 0.04,
+      "recycled_to_aftermarket": 0.015,
+      "solution": {
+        "repair_change": -0.005149700598802376,
+        "recycled_retention": 0.85,
+        "after_quantity_shares": {
+          "oem": 0.61,
+          "aftermarket": 0.305,
+          "recycled": 0.085
+        },
+        "price_change": -0.02090232688933611,
+        "expected_salvage_change": -0.02090232688933611,
+        "equilibrium_residual": 5.508491926486947e-11,
+        "feedback": [
+          {
+            "supply_ratio": 0.9844973004407555,
+            "repair_jobs_ratio": 1.0046605974003218,
+            "recycled_demand_ratio": 0.8539615077902735,
+            "recycler_bid_change": -0.05476443457864745,
+            "rebuilder_bid_change": 0.005149700598802376,
+            "scarcity_price_support": 0.0039060307419773294,
+            "implied_price_change": -0.02090133624794521
+          },
+          {
+            "supply_ratio": 0.98449282075176,
+            "repair_jobs_ratio": 1.004660917508263,
+            "recycled_demand_ratio": 0.8539617798820236,
+            "recycler_bid_change": -0.05476433254424115,
+            "rebuilder_bid_change": 0.005149700598802376,
+            "scarcity_price_support": 0.003907168302025805,
+            "implied_price_change": -0.02090014767069358
+          },
+          {
+            "supply_ratio": 0.9844983351499027,
+            "repair_jobs_ratio": 1.0046561283116906,
+            "recycled_demand_ratio": 0.853957709064937,
+            "recycler_bid_change": -0.05476585910064864,
+            "rebuilder_bid_change": 0.005149700598802376,
+            "scarcity_price_support": 0.0039057679914845022,
+            "implied_price_change": -0.02090231125943863
+          },
+          {
+            "supply_ratio": 0.9845069447823155,
+            "repair_jobs_ratio": 1.0046497621334005,
+            "recycled_demand_ratio": 0.8539522978133904,
+            "recycler_bid_change": -0.054767888319978586,
+            "rebuilder_bid_change": 0.005149700598802376,
+            "scarcity_price_support": 0.003903581701660756,
+            "implied_price_change": -0.020905512158927348
+          }
+        ]
+      }
+    },
+    "zero_exposed_donor_contribution": {
+      "parameter_changes": {
+        "donor_contribution_exposed_fraction": 0
+      },
+      "oem_to_aftermarket": 0.04,
+      "recycled_to_aftermarket": 0.015,
+      "solution": {
+        "repair_change": -0.010299401197604752,
+        "recycled_retention": 0.85,
+        "after_quantity_shares": {
+          "oem": 0.61,
+          "aftermarket": 0.305,
+          "recycled": 0.085
+        },
+        "price_change": 0.007692564837634564,
+        "expected_salvage_change": 0.007692564837634564,
+        "equilibrium_residual": -1.6122996774475817e-10,
+        "feedback": [
+          {
+            "supply_ratio": 0.9898764546603319,
+            "repair_jobs_ratio": 1.0030434550390266,
+            "recycled_demand_ratio": 0.8525869367831725,
+            "recycler_bid_change": -0.0,
+            "rebuilder_bid_change": 0.010299401197604752,
+            "scarcity_price_support": 0.0025437842283054348,
+            "implied_price_change": 0.007693484827107811
+          },
+          {
+            "supply_ratio": 0.9898754358307484,
+            "repair_jobs_ratio": 1.003043091051221,
+            "recycled_demand_ratio": 0.8525866273935377,
+            "recycler_bid_change": -0.0,
+            "rebuilder_bid_change": 0.010299401197604752,
+            "scarcity_price_support": 0.002544041540746547,
+            "implied_price_change": 0.007693742139548923
+          },
+          {
+            "supply_ratio": 0.9898806662030997,
+            "repair_jobs_ratio": 1.0030394746011362,
+            "recycled_demand_ratio": 0.8525835534109657,
+            "recycler_bid_change": -0.0,
+            "rebuilder_bid_change": 0.010299401197604752,
+            "scarcity_price_support": 0.002542720576930381,
+            "implied_price_change": 0.007692421175732757
+          },
+          {
+            "supply_ratio": 0.9898878353903071,
+            "repair_jobs_ratio": 1.0030348539670337,
+            "recycled_demand_ratio": 0.8525796258719787,
+            "recycler_bid_change": -0.0,
+            "rebuilder_bid_change": 0.010299401197604752,
+            "scarcity_price_support": 0.0025409099644265183,
+            "implied_price_change": 0.007690610563228895
+          }
+        ]
+      }
+    },
+    "oem_displacement_only": {
+      "parameter_changes": {},
+      "oem_to_aftermarket": 0.04,
+      "recycled_to_aftermarket": 0,
+      "solution": {
+        "repair_change": -0.009580838323353325,
+        "recycled_retention": 1.0,
+        "after_quantity_shares": {
+          "oem": 0.61,
+          "aftermarket": 0.29,
+          "recycled": 0.1
+        },
+        "price_change": 0.007622979022562505,
+        "expected_salvage_change": 0.007622979022562505,
+        "equilibrium_residual": -1.463940869569913e-10,
+        "feedback": [
+          {
+            "supply_ratio": 0.9907846480639186,
+            "repair_jobs_ratio": 1.002770423635717,
+            "recycled_demand_ratio": 1.002770423635717,
+            "recycler_bid_change": 0.0010389088633938337,
+            "rebuilder_bid_change": 0.009580838323353325,
+            "scarcity_price_support": 0.0023145189930799718,
+            "implied_price_change": 0.007624392586453551
+          },
+          {
+            "supply_ratio": 0.990783777634358,
+            "repair_jobs_ratio": 1.0027700751694697,
+            "recycled_demand_ratio": 1.0027700751694697,
+            "recycler_bid_change": 0.0010387781885511371,
+            "rebuilder_bid_change": 0.009580838323353325,
+            "scarcity_price_support": 0.0023147386245469864,
+            "implied_price_change": 0.007624546880499217
+          },
+          {
+            "supply_ratio": 0.9907885883344895,
+            "repair_jobs_ratio": 1.0027667682833532,
+            "recycled_demand_ratio": 1.0027667682833532,
+            "recycler_bid_change": 0.0010375381062574518,
+            "rebuilder_bid_change": 0.009580838323353325,
+            "scarcity_price_support": 0.0023135247652365464,
+            "implied_price_change": 0.007622712980041935
+          },
+          {
+            "supply_ratio": 0.9907951617113672,
+            "repair_jobs_ratio": 1.0027625479879336,
+            "recycled_demand_ratio": 1.0027625479879336,
+            "recycler_bid_change": 0.0010359554954751105,
+            "rebuilder_bid_change": 0.009580838323353325,
+            "scarcity_price_support": 0.0023118661482647487,
+            "implied_price_change": 0.007620263057678966
+          }
+        ]
+      }
+    }
+  }
+}

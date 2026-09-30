@@ -32,6 +32,7 @@ def configuration():
         'status': 'Conditional reference, not an adopted forecast',
         'claims_convention': 'combined_propensity_per_fleet_excluding_incremental_nonfiling',
         'insurance_service_fraction': .9,
+        'cohort_anchor_path': None,
         'claims': vector(1.), 'repair': vector(1.), 'value': vector(1.),
         'expected_salvage': vector(1.), 'realized_salvage': vector(1.),
         'routing': vector(1.), 'cat_total_loss_activity': vector(0.),
@@ -207,6 +208,21 @@ def operating(c):
     _, raw0 = old.stock(d, [0,0,1,0,0])
     cw = {(b,k):e['relative_claim_weights'][k]*e['body_weights'][str(k)][b] for b in range(4) for k in range(6)}
     z = sum(cw.values()); cw = {key:v/z for key,v in cw.items()}
+    repair_calibration = {key:1. for key in cw}
+    if c.get('cohort_anchor_path'):
+        anchor = json.loads((ROOT/c['cohort_anchor_path']).read_text())
+        mapped = {(int(r['body']),int(r['age'])):r for r in anchor['cells']}
+        if len(anchor['cells']) != 24 or set(mapped) != set(cw):
+            raise ValueError('Cohort anchor must contain each of the 24 cells once')
+        cw = {key:r['claim_weight'] for key,r in mapped.items()}
+        repair_calibration = {key:r['repair_multiplier'] for key,r in mapped.items()}
+        if abs(sum(cw.values())-1)>1e-8 or any(not math.isfinite(v) or v<=0 for v in [*cw.values(),*repair_calibration.values()]):
+            raise ValueError('Invalid cohort anchor weights or repair calibration')
+        # Observed claims weights refer to the active fleet in the anchor year.
+        # Using the predecessor fixed-body denominator here would distort them twice.
+        if anchor['fleet_reference_weights'] != [0,0,1,0,0]:
+            raise ValueError('Unsupported cohort anchor fleet reference')
+        _, raw0 = old.stock(active, anchor['fleet_reference_weights'])
     quarters, cells = [], []
     for p, period in enumerate(d['periods']):
         _, raw = old.stock(active, period['weights'])
@@ -225,7 +241,7 @@ def operating(c):
                 if p >= 4 and c['carrier_mode']=='inherited_runoff': allocation_index = p if name=='Progressive' else 3
                 alloc = c['allocation_overrides'].get(name, carrier['allocations'])[allocation_index if name not in c['allocation_overrides'] else p]
                 if not 0 <= alloc <= 1: raise ValueError('Allocation outside [0,1]')
-                ec = cell_economics(b,k,c['repair'][p]*terms.get('repair_factor',1),c['value'][p]*terms.get('value_factor',1),
+                ec = cell_economics(b,k,c['repair'][p]*repair_calibration[b,k]*terms.get('repair_factor',1),c['value'][p]*terms.get('value_factor',1),
                     c['expected_salvage'][p],c['realized_salvage'][p],terms.get('preferred_fraction',c['preferred_buyer_fraction'][p]),
                     terms.get('seller_pct',c['seller_fee_fraction'][p]),terms.get('seller_fixed',c['seller_fixed_fee'][p]),
                     c['fixed_buyer_fee'][p],c['buyer_fee_multiplier'][p],c['schedule_ids'][p],c['nodes'])

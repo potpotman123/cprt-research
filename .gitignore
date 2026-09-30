@@ -5,6 +5,8 @@
 raw/
 **/transcripts/
 **/sellside/
+# Image excerpt of licensed Barclays research; extracted arithmetic is committed.
+docs/repair_research_2026-09-26/contract_scope_screen/barclays_figure1.png
 # (the Stephens PDF itself is already covered by raw/ above; the transcribed
 #  NUMERIC table and its comparison script are our own work and ARE committed)
 

@@ -1,0 +1,1146 @@
+{
+  "small_shift": {
+    "oem_to_aftermarket": 0.02,
+    "recycled_to_aftermarket": 0.005,
+    "parameters": {
+      "status": "Illustrative structural scenarios; no causal forecast coefficient identified",
+      "horizon": "FY2027 relative to the saved price_3p7_intl_continuation reference",
+      "eligible_parts_bill_share": 0.4,
+      "source_quantity_shares": {
+        "oem": 0.65,
+        "aftermarket": 0.25,
+        "recycled": 0.1
+      },
+      "source_relative_prices": {
+        "oem": 1.0,
+        "aftermarket": 0.5,
+        "recycled": 0.6
+      },
+      "donor_contribution_exposed_fraction": 0.25,
+      "donor_contribution_to_hammer_bid": 1.5,
+      "recycler_price_transmission_weight": 0.5,
+      "rebuilder_repair_bill_to_hammer_bid": 1.0,
+      "repair_job_recapture": 1.0,
+      "supply_price_response": 0.25,
+      "expected_salvage_pass_through": 1.0,
+      "threshold_responsive_fraction": 1.0,
+      "cases": [
+        {
+          "name": "small_shift",
+          "oem_to_aftermarket": 0.02,
+          "recycled_to_aftermarket": 0.005
+        },
+        {
+          "name": "larger_shift",
+          "oem_to_aftermarket": 0.04,
+          "recycled_to_aftermarket": 0.015
+        },
+        {
+          "name": "large_stress",
+          "oem_to_aftermarket": 0.06,
+          "recycled_to_aftermarket": 0.025
+        }
+      ],
+      "input_admission": {
+        "all_numeric_bridge_inputs": "Assumed. Source shares refer to a hypothetical fungible component basket, NOT CCC spending shares or national physical shares.",
+        "source_prices": "Assumed fixed delivered, equivalent-quality prices. Existing retail snapshots do not establish this basket or a recycled discount.",
+        "recycler_price_transmission_weight": "Assumed reduced-form influence on marginal auction prices, NOT recycler buyer share, domestic share, or winning-bid share.",
+        "donor_contribution": "Expected net parts contribution after variable fulfillment costs, before donor acquisition. Exposure applies only to the eligible collision basket; mechanical parts, scrap and other demand are held constant.",
+        "supply_price_response": "Assumed fractional price support per log decline in total-loss supply; zero and 0.5 tested. Not estimated equilibrium elasticity.",
+        "threshold_responsive_fraction": "Mixture of claims following the inherited switching rule and otherwise identical claims whose disposition remains at reference. It attenuates an unvalidated derivative without refitting historical levels.",
+        "expected_salvage_pass_through": "Scenario share of price shock reflected in insurer expected salvage; timing is unobserved.",
+        "period_and_population": "Uniform full-year incremental US insurance shock. International, other US and purchased revenue remain at reference; no global extension inferred. All figures are counterfactual differences, not proof of outright year-over-year deflation."
+      }
+    },
+    "solution": {
+      "repair_change": -0.005029940119760479,
+      "recycled_retention": 0.95,
+      "after_quantity_shares": {
+        "oem": 0.63,
+        "aftermarket": 0.275,
+        "recycled": 0.095
+      },
+      "price_change": -0.004304199106991293,
+      "expected_salvage_change": -0.004304199106991293,
+      "equilibrium_residual": -8.63304566722789e-12,
+      "feedback": [
+        {
+          "supply_ratio": 0.9915829680014069,
+          "repair_jobs_ratio": 1.002490551286313,
+          "recycled_demand_ratio": 0.9523660237219972,
+          "recycler_bid_change": -0.017862741104251054,
+          "rebuilder_bid_change": 0.005029940119760479,
+          "scarcity_price_support": 0.002113163811988789,
+          "implied_price_change": -0.004303236680256498
+        },
+        {
+          "supply_ratio": 0.9915814853373096,
+          "repair_jobs_ratio": 1.0024901000161297,
+          "recycled_demand_ratio": 0.9523655950153231,
+          "recycler_bid_change": -0.017862901869253822,
+          "rebuilder_bid_change": 0.005029940119760479,
+          "scarcity_price_support": 0.002113537624683641,
+          "implied_price_change": -0.00430294325006303
+        },
+        {
+          "supply_ratio": 0.9915849573709574,
+          "repair_jobs_ratio": 1.0024871408934317,
+          "recycled_demand_ratio": 0.95236278384876,
+          "recycler_bid_change": -0.01786395605671498,
+          "rebuilder_bid_change": 0.005029940119760479,
+          "scarcity_price_support": 0.002112662248423474,
+          "implied_price_change": -0.004304345720053776
+        },
+        {
+          "supply_ratio": 0.9915899587564746,
+          "repair_jobs_ratio": 1.002483412400178,
+          "recycled_demand_ratio": 0.9523592417801691,
+          "recycler_bid_change": -0.0178652843324366,
+          "rebuilder_bid_change": 0.005029940119760479,
+          "scarcity_price_support": 0.00211140129421401,
+          "implied_price_change": -0.004306270812124051
+        }
+      ]
+    }
+  },
+  "larger_shift": {
+    "oem_to_aftermarket": 0.04,
+    "recycled_to_aftermarket": 0.015,
+    "parameters": {
+      "status": "Illustrative structural scenarios; no causal forecast coefficient identified",
+      "horizon": "FY2027 relative to the saved price_3p7_intl_continuation reference",
+      "eligible_parts_bill_share": 0.4,
+      "source_quantity_shares": {
+        "oem": 0.65,
+        "aftermarket": 0.25,
+        "recycled": 0.1
+      },
+      "source_relative_prices": {
+        "oem": 1.0,
+        "aftermarket": 0.5,
+        "recycled": 0.6
+      },
+      "donor_contribution_exposed_fraction": 0.25,
+      "donor_contribution_to_hammer_bid": 1.5,
+      "recycler_price_transmission_weight": 0.5,
+      "rebuilder_repair_bill_to_hammer_bid": 1.0,
+      "repair_job_recapture": 1.0,
+      "supply_price_response": 0.25,
+      "expected_salvage_pass_through": 1.0,
+      "threshold_responsive_fraction": 1.0,
+      "cases": [
+        {
+          "name": "small_shift",
+          "oem_to_aftermarket": 0.02,
+          "recycled_to_aftermarket": 0.005
+        },
+        {
+          "name": "larger_shift",
+          "oem_to_aftermarket": 0.04,
+          "recycled_to_aftermarket": 0.015
+        },
+        {
+          "name": "large_stress",
+          "oem_to_aftermarket": 0.06,
+          "recycled_to_aftermarket": 0.025
+        }
+      ],
+      "input_admission": {
+        "all_numeric_bridge_inputs": "Assumed. Source shares refer to a hypothetical fungible component basket, NOT CCC spending shares or national physical shares.",
+        "source_prices": "Assumed fixed delivered, equivalent-quality prices. Existing retail snapshots do not establish this basket or a recycled discount.",
+        "recycler_price_transmission_weight": "Assumed reduced-form influence on marginal auction prices, NOT recycler buyer share, domestic share, or winning-bid share.",
+        "donor_contribution": "Expected net parts contribution after variable fulfillment costs, before donor acquisition. Exposure applies only to the eligible collision basket; mechanical parts, scrap and other demand are held constant.",
+        "supply_price_response": "Assumed fractional price support per log decline in total-loss supply; zero and 0.5 tested. Not estimated equilibrium elasticity.",
+        "threshold_responsive_fraction": "Mixture of claims following the inherited switching rule and otherwise identical claims whose disposition remains at reference. It attenuates an unvalidated derivative without refitting historical levels.",
+        "expected_salvage_pass_through": "Scenario share of price shock reflected in insurer expected salvage; timing is unobserved.",
+        "period_and_population": "Uniform full-year incremental US insurance shock. International, other US and purchased revenue remain at reference; no global extension inferred. All figures are counterfactual differences, not proof of outright year-over-year deflation."
+      }
+    },
+    "solution": {
+      "repair_change": -0.010299401197604752,
+      "recycled_retention": 0.85,
+      "after_quantity_shares": {
+        "oem": 0.61,
+        "aftermarket": 0.305,
+        "recycled": 0.085
+      },
+      "price_change": -0.01680986750870943,
+      "expected_salvage_change": -0.01680986750870943,
+      "equilibrium_residual": 1.246907750662718e-10,
+      "feedback": [
+        {
+          "supply_ratio": 0.979425559009121,
+          "repair_jobs_ratio": 1.0060878585805029,
+          "recycled_demand_ratio": 0.8551746797934274,
+          "recycler_bid_change": -0.054309495077464714,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": 0.00519726086384218,
+          "implied_price_change": -0.0168077860760878
+        },
+        {
+          "supply_ratio": 0.9794215805758754,
+          "repair_jobs_ratio": 1.006086860282733,
+          "recycled_demand_ratio": 0.8551738312403231,
+          "recycler_bid_change": -0.05430981328487884,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": 0.005198276367595696,
+          "implied_price_change": -0.01680692967604135
+        },
+        {
+          "supply_ratio": 0.9794297178592216,
+          "repair_jobs_ratio": 1.006079730330205,
+          "recycled_demand_ratio": 0.8551677707806742,
+          "recycler_bid_change": -0.05431208595724718,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": 0.0051961993127031675,
+          "implied_price_change": -0.016810143067118047
+        },
+        {
+          "supply_ratio": 0.9794415945179685,
+          "repair_jobs_ratio": 1.006070719229976,
+          "recycled_demand_ratio": 0.8551601113454796,
+          "recycler_bid_change": -0.05431495824544513,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": 0.005193167807092764,
+          "implied_price_change": -0.016814610716827424
+        }
+      ]
+    }
+  },
+  "large_stress": {
+    "oem_to_aftermarket": 0.06,
+    "recycled_to_aftermarket": 0.025,
+    "parameters": {
+      "status": "Illustrative structural scenarios; no causal forecast coefficient identified",
+      "horizon": "FY2027 relative to the saved price_3p7_intl_continuation reference",
+      "eligible_parts_bill_share": 0.4,
+      "source_quantity_shares": {
+        "oem": 0.65,
+        "aftermarket": 0.25,
+        "recycled": 0.1
+      },
+      "source_relative_prices": {
+        "oem": 1.0,
+        "aftermarket": 0.5,
+        "recycled": 0.6
+      },
+      "donor_contribution_exposed_fraction": 0.25,
+      "donor_contribution_to_hammer_bid": 1.5,
+      "recycler_price_transmission_weight": 0.5,
+      "rebuilder_repair_bill_to_hammer_bid": 1.0,
+      "repair_job_recapture": 1.0,
+      "supply_price_response": 0.25,
+      "expected_salvage_pass_through": 1.0,
+      "threshold_responsive_fraction": 1.0,
+      "cases": [
+        {
+          "name": "small_shift",
+          "oem_to_aftermarket": 0.02,
+          "recycled_to_aftermarket": 0.005
+        },
+        {
+          "name": "larger_shift",
+          "oem_to_aftermarket": 0.04,
+          "recycled_to_aftermarket": 0.015
+        },
+        {
+          "name": "large_stress",
+          "oem_to_aftermarket": 0.06,
+          "recycled_to_aftermarket": 0.025
+        }
+      ],
+      "input_admission": {
+        "all_numeric_bridge_inputs": "Assumed. Source shares refer to a hypothetical fungible component basket, NOT CCC spending shares or national physical shares.",
+        "source_prices": "Assumed fixed delivered, equivalent-quality prices. Existing retail snapshots do not establish this basket or a recycled discount.",
+        "recycler_price_transmission_weight": "Assumed reduced-form influence on marginal auction prices, NOT recycler buyer share, domestic share, or winning-bid share.",
+        "donor_contribution": "Expected net parts contribution after variable fulfillment costs, before donor acquisition. Exposure applies only to the eligible collision basket; mechanical parts, scrap and other demand are held constant.",
+        "supply_price_response": "Assumed fractional price support per log decline in total-loss supply; zero and 0.5 tested. Not estimated equilibrium elasticity.",
+        "threshold_responsive_fraction": "Mixture of claims following the inherited switching rule and otherwise identical claims whose disposition remains at reference. It attenuates an unvalidated derivative without refitting historical levels.",
+        "expected_salvage_pass_through": "Scenario share of price shock reflected in insurer expected salvage; timing is unobserved.",
+        "period_and_population": "Uniform full-year incremental US insurance shock. International, other US and purchased revenue remain at reference; no global extension inferred. All figures are counterfactual differences, not proof of outright year-over-year deflation."
+      }
+    },
+    "solution": {
+      "repair_change": -0.015568862275449026,
+      "recycled_retention": 0.7500000000000001,
+      "after_quantity_shares": {
+        "oem": 0.5900000000000001,
+        "aftermarket": 0.335,
+        "recycled": 0.07500000000000001
+      },
+      "price_change": -0.029427578486502168,
+      "expected_salvage_change": -0.029427578486502168,
+      "equilibrium_residual": -2.8472696422809918e-11,
+      "feedback": [
+        {
+          "supply_ratio": 0.9673208648864013,
+          "repair_jobs_ratio": 1.0096695678484258,
+          "recycled_demand_ratio": 0.7572521758863194,
+          "recycler_bid_change": -0.09103043404263021,
+          "rebuilder_bid_change": 0.015568862275449026,
+          "scarcity_price_support": 0.008306255948312182,
+          "implied_price_change": -0.029424529935278408
+        },
+        {
+          "supply_ratio": 0.9673144107954091,
+          "repair_jobs_ratio": 1.0096680221472167,
+          "recycled_demand_ratio": 0.7572510166104127,
+          "recycler_bid_change": -0.09103086877109523,
+          "rebuilder_bid_change": 0.015568862275449026,
+          "scarcity_price_support": 0.008307923986487997,
+          "implied_price_change": -0.029423079261335104
+        },
+        {
+          "supply_ratio": 0.967327113984533,
+          "repair_jobs_ratio": 1.0096567628350501,
+          "recycled_demand_ratio": 0.7572425721262878,
+          "recycler_bid_change": -0.09103403545264209,
+          "rebuilder_bid_change": 0.015568862275449026,
+          "scarcity_price_support": 0.008304640900458543,
+          "implied_price_change": -0.029427945688137988
+        },
+        {
+          "supply_ratio": 0.9673457296852969,
+          "repair_jobs_ratio": 1.009642523439552,
+          "recycled_demand_ratio": 0.7572318925796642,
+          "recycler_bid_change": -0.09103804028262594,
+          "rebuilder_bid_change": 0.015568862275449026,
+          "scarcity_price_support": 0.008299829828440507,
+          "implied_price_change": -0.02943475917514795
+        }
+      ]
+    }
+  },
+  "larger_shift_half_switching": {
+    "oem_to_aftermarket": 0.04,
+    "recycled_to_aftermarket": 0.015,
+    "parameters": {
+      "status": "Illustrative structural scenarios; no causal forecast coefficient identified",
+      "horizon": "FY2027 relative to the saved price_3p7_intl_continuation reference",
+      "eligible_parts_bill_share": 0.4,
+      "source_quantity_shares": {
+        "oem": 0.65,
+        "aftermarket": 0.25,
+        "recycled": 0.1
+      },
+      "source_relative_prices": {
+        "oem": 1.0,
+        "aftermarket": 0.5,
+        "recycled": 0.6
+      },
+      "donor_contribution_exposed_fraction": 0.25,
+      "donor_contribution_to_hammer_bid": 1.5,
+      "recycler_price_transmission_weight": 0.5,
+      "rebuilder_repair_bill_to_hammer_bid": 1.0,
+      "repair_job_recapture": 1.0,
+      "supply_price_response": 0.25,
+      "expected_salvage_pass_through": 1.0,
+      "threshold_responsive_fraction": 0.5,
+      "cases": [
+        {
+          "name": "small_shift",
+          "oem_to_aftermarket": 0.02,
+          "recycled_to_aftermarket": 0.005
+        },
+        {
+          "name": "larger_shift",
+          "oem_to_aftermarket": 0.04,
+          "recycled_to_aftermarket": 0.015
+        },
+        {
+          "name": "large_stress",
+          "oem_to_aftermarket": 0.06,
+          "recycled_to_aftermarket": 0.025
+        }
+      ],
+      "input_admission": {
+        "all_numeric_bridge_inputs": "Assumed. Source shares refer to a hypothetical fungible component basket, NOT CCC spending shares or national physical shares.",
+        "source_prices": "Assumed fixed delivered, equivalent-quality prices. Existing retail snapshots do not establish this basket or a recycled discount.",
+        "recycler_price_transmission_weight": "Assumed reduced-form influence on marginal auction prices, NOT recycler buyer share, domestic share, or winning-bid share.",
+        "donor_contribution": "Expected net parts contribution after variable fulfillment costs, before donor acquisition. Exposure applies only to the eligible collision basket; mechanical parts, scrap and other demand are held constant.",
+        "supply_price_response": "Assumed fractional price support per log decline in total-loss supply; zero and 0.5 tested. Not estimated equilibrium elasticity.",
+        "threshold_responsive_fraction": "Mixture of claims following the inherited switching rule and otherwise identical claims whose disposition remains at reference. It attenuates an unvalidated derivative without refitting historical levels.",
+        "expected_salvage_pass_through": "Scenario share of price shock reflected in insurer expected salvage; timing is unobserved.",
+        "period_and_population": "Uniform full-year incremental US insurance shock. International, other US and purchased revenue remain at reference; no global extension inferred. All figures are counterfactual differences, not proof of outright year-over-year deflation."
+      }
+    },
+    "solution": {
+      "repair_change": -0.010299401197604752,
+      "recycled_retention": 0.85,
+      "after_quantity_shares": {
+        "oem": 0.61,
+        "aftermarket": 0.305,
+        "recycled": 0.085
+      },
+      "price_change": -0.01972358282655478,
+      "expected_salvage_change": -0.01972358282655478,
+      "equilibrium_residual": -1.173132146981004e-10,
+      "feedback": [
+        {
+          "supply_ratio": 0.9891039775990482,
+          "repair_jobs_ratio": 1.003224070267396,
+          "recycled_demand_ratio": 0.8527404597272866,
+          "recycler_bid_change": -0.055222327602267515,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": 0.0027389547029409165,
+          "implied_price_change": -0.019722508499390466
+        },
+        {
+          "supply_ratio": 0.9891018171088877,
+          "repair_jobs_ratio": 1.003223557418414,
+          "recycled_demand_ratio": 0.852740023805652,
+          "recycler_bid_change": -0.05522249107288052,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": 0.002739500776096281,
+          "implied_price_change": -0.019722044161541604
+        },
+        {
+          "supply_ratio": 0.989106079649207,
+          "repair_jobs_ratio": 1.003219795310452,
+          "recycled_demand_ratio": 0.8527368260138842,
+          "recycler_bid_change": -0.055223690244793414,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": 0.0027384234018914843,
+          "implied_price_change": -0.019723721121702845
+        },
+        {
+          "supply_ratio": 0.9891123245328903,
+          "repair_jobs_ratio": 1.0032150363453864,
+          "recycled_demand_ratio": 0.8527327808935784,
+          "recycler_bid_change": -0.0552252071649081,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": 0.002736844990814603,
+          "implied_price_change": -0.01972605799283707
+        }
+      ]
+    }
+  },
+  "larger_shift_no_switching": {
+    "oem_to_aftermarket": 0.04,
+    "recycled_to_aftermarket": 0.015,
+    "parameters": {
+      "status": "Illustrative structural scenarios; no causal forecast coefficient identified",
+      "horizon": "FY2027 relative to the saved price_3p7_intl_continuation reference",
+      "eligible_parts_bill_share": 0.4,
+      "source_quantity_shares": {
+        "oem": 0.65,
+        "aftermarket": 0.25,
+        "recycled": 0.1
+      },
+      "source_relative_prices": {
+        "oem": 1.0,
+        "aftermarket": 0.5,
+        "recycled": 0.6
+      },
+      "donor_contribution_exposed_fraction": 0.25,
+      "donor_contribution_to_hammer_bid": 1.5,
+      "recycler_price_transmission_weight": 0.5,
+      "rebuilder_repair_bill_to_hammer_bid": 1.0,
+      "repair_job_recapture": 1.0,
+      "supply_price_response": 0.25,
+      "expected_salvage_pass_through": 1.0,
+      "threshold_responsive_fraction": 0.0,
+      "cases": [
+        {
+          "name": "small_shift",
+          "oem_to_aftermarket": 0.02,
+          "recycled_to_aftermarket": 0.005
+        },
+        {
+          "name": "larger_shift",
+          "oem_to_aftermarket": 0.04,
+          "recycled_to_aftermarket": 0.015
+        },
+        {
+          "name": "large_stress",
+          "oem_to_aftermarket": 0.06,
+          "recycled_to_aftermarket": 0.025
+        }
+      ],
+      "input_admission": {
+        "all_numeric_bridge_inputs": "Assumed. Source shares refer to a hypothetical fungible component basket, NOT CCC spending shares or national physical shares.",
+        "source_prices": "Assumed fixed delivered, equivalent-quality prices. Existing retail snapshots do not establish this basket or a recycled discount.",
+        "recycler_price_transmission_weight": "Assumed reduced-form influence on marginal auction prices, NOT recycler buyer share, domestic share, or winning-bid share.",
+        "donor_contribution": "Expected net parts contribution after variable fulfillment costs, before donor acquisition. Exposure applies only to the eligible collision basket; mechanical parts, scrap and other demand are held constant.",
+        "supply_price_response": "Assumed fractional price support per log decline in total-loss supply; zero and 0.5 tested. Not estimated equilibrium elasticity.",
+        "threshold_responsive_fraction": "Mixture of claims following the inherited switching rule and otherwise identical claims whose disposition remains at reference. It attenuates an unvalidated derivative without refitting historical levels.",
+        "expected_salvage_pass_through": "Scenario share of price shock reflected in insurer expected salvage; timing is unobserved.",
+        "period_and_population": "Uniform full-year incremental US insurance shock. International, other US and purchased revenue remain at reference; no global extension inferred. All figures are counterfactual differences, not proof of outright year-over-year deflation."
+      }
+    },
+    "solution": {
+      "repair_change": -0.010299401197604752,
+      "recycled_retention": 0.85,
+      "after_quantity_shares": {
+        "oem": 0.61,
+        "aftermarket": 0.305,
+        "recycled": 0.085
+      },
+      "price_change": -0.022975299321115018,
+      "expected_salvage_change": -0.022975299321115018,
+      "equilibrium_residual": -8.008261068170874e-11,
+      "feedback": [
+        {
+          "supply_ratio": 1.0,
+          "repair_jobs_ratio": 1.0,
+          "recycled_demand_ratio": 0.85,
+          "recycler_bid_change": -0.05625000000000001,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": -0.0,
+          "implied_price_change": -0.02297529940119763
+        },
+        {
+          "supply_ratio": 1.0,
+          "repair_jobs_ratio": 1.0,
+          "recycled_demand_ratio": 0.85,
+          "recycler_bid_change": -0.05625000000000001,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": -0.0,
+          "implied_price_change": -0.02297529940119763
+        },
+        {
+          "supply_ratio": 1.0,
+          "repair_jobs_ratio": 1.0,
+          "recycled_demand_ratio": 0.85,
+          "recycler_bid_change": -0.05625000000000001,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": -0.0,
+          "implied_price_change": -0.02297529940119763
+        },
+        {
+          "supply_ratio": 1.0,
+          "repair_jobs_ratio": 1.0,
+          "recycled_demand_ratio": 0.85,
+          "recycler_bid_change": -0.05625000000000001,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": -0.0,
+          "implied_price_change": -0.02297529940119763
+        }
+      ]
+    }
+  },
+  "larger_shift_no_scarcity": {
+    "oem_to_aftermarket": 0.04,
+    "recycled_to_aftermarket": 0.015,
+    "parameters": {
+      "status": "Illustrative structural scenarios; no causal forecast coefficient identified",
+      "horizon": "FY2027 relative to the saved price_3p7_intl_continuation reference",
+      "eligible_parts_bill_share": 0.4,
+      "source_quantity_shares": {
+        "oem": 0.65,
+        "aftermarket": 0.25,
+        "recycled": 0.1
+      },
+      "source_relative_prices": {
+        "oem": 1.0,
+        "aftermarket": 0.5,
+        "recycled": 0.6
+      },
+      "donor_contribution_exposed_fraction": 0.25,
+      "donor_contribution_to_hammer_bid": 1.5,
+      "recycler_price_transmission_weight": 0.5,
+      "rebuilder_repair_bill_to_hammer_bid": 1.0,
+      "repair_job_recapture": 1.0,
+      "supply_price_response": 0.0,
+      "expected_salvage_pass_through": 1.0,
+      "threshold_responsive_fraction": 1.0,
+      "cases": [
+        {
+          "name": "small_shift",
+          "oem_to_aftermarket": 0.02,
+          "recycled_to_aftermarket": 0.005
+        },
+        {
+          "name": "larger_shift",
+          "oem_to_aftermarket": 0.04,
+          "recycled_to_aftermarket": 0.015
+        },
+        {
+          "name": "large_stress",
+          "oem_to_aftermarket": 0.06,
+          "recycled_to_aftermarket": 0.025
+        }
+      ],
+      "input_admission": {
+        "all_numeric_bridge_inputs": "Assumed. Source shares refer to a hypothetical fungible component basket, NOT CCC spending shares or national physical shares.",
+        "source_prices": "Assumed fixed delivered, equivalent-quality prices. Existing retail snapshots do not establish this basket or a recycled discount.",
+        "recycler_price_transmission_weight": "Assumed reduced-form influence on marginal auction prices, NOT recycler buyer share, domestic share, or winning-bid share.",
+        "donor_contribution": "Expected net parts contribution after variable fulfillment costs, before donor acquisition. Exposure applies only to the eligible collision basket; mechanical parts, scrap and other demand are held constant.",
+        "supply_price_response": "Assumed fractional price support per log decline in total-loss supply; zero and 0.5 tested. Not estimated equilibrium elasticity.",
+        "threshold_responsive_fraction": "Mixture of claims following the inherited switching rule and otherwise identical claims whose disposition remains at reference. It attenuates an unvalidated derivative without refitting historical levels.",
+        "expected_salvage_pass_through": "Scenario share of price shock reflected in insurer expected salvage; timing is unobserved.",
+        "period_and_population": "Uniform full-year incremental US insurance shock. International, other US and purchased revenue remain at reference; no global extension inferred. All figures are counterfactual differences, not proof of outright year-over-year deflation."
+      }
+    },
+    "solution": {
+      "repair_change": -0.010299401197604752,
+      "recycled_retention": 0.85,
+      "after_quantity_shares": {
+        "oem": 0.61,
+        "aftermarket": 0.305,
+        "recycled": 0.085
+      },
+      "price_change": -0.021905850060284147,
+      "expected_salvage_change": -0.021905850060284147,
+      "equilibrium_residual": -9.699267430884895e-11,
+      "feedback": [
+        {
+          "supply_ratio": 0.9772978412918347,
+          "repair_jobs_ratio": 1.0067174379974022,
+          "recycled_demand_ratio": 0.8557098222977918,
+          "recycler_bid_change": -0.054108816638328075,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": 0.0,
+          "implied_price_change": -0.02190470772036166
+        },
+        {
+          "supply_ratio": 0.9772932645757151,
+          "repair_jobs_ratio": 1.0067163917284423,
+          "recycled_demand_ratio": 0.8557089329691759,
+          "recycler_bid_change": -0.05410915013655902,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": 0.0,
+          "implied_price_change": -0.021904874469477136
+        },
+        {
+          "supply_ratio": 0.9773020790645286,
+          "repair_jobs_ratio": 1.0067085729500236,
+          "recycled_demand_ratio": 0.85570228700752,
+          "recycler_bid_change": -0.05411164237217998,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": 0.0,
+          "implied_price_change": -0.021906120587287616
+        },
+        {
+          "supply_ratio": 0.9773150264169972,
+          "repair_jobs_ratio": 1.0066986763872423,
+          "recycled_demand_ratio": 0.8556938749291559,
+          "recycler_bid_change": -0.05411479690156652,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": 0.0,
+          "implied_price_change": -0.021907697851980885
+        }
+      ]
+    }
+  },
+  "larger_shift_stronger_scarcity": {
+    "oem_to_aftermarket": 0.04,
+    "recycled_to_aftermarket": 0.015,
+    "parameters": {
+      "status": "Illustrative structural scenarios; no causal forecast coefficient identified",
+      "horizon": "FY2027 relative to the saved price_3p7_intl_continuation reference",
+      "eligible_parts_bill_share": 0.4,
+      "source_quantity_shares": {
+        "oem": 0.65,
+        "aftermarket": 0.25,
+        "recycled": 0.1
+      },
+      "source_relative_prices": {
+        "oem": 1.0,
+        "aftermarket": 0.5,
+        "recycled": 0.6
+      },
+      "donor_contribution_exposed_fraction": 0.25,
+      "donor_contribution_to_hammer_bid": 1.5,
+      "recycler_price_transmission_weight": 0.5,
+      "rebuilder_repair_bill_to_hammer_bid": 1.0,
+      "repair_job_recapture": 1.0,
+      "supply_price_response": 0.5,
+      "expected_salvage_pass_through": 1.0,
+      "threshold_responsive_fraction": 1.0,
+      "cases": [
+        {
+          "name": "small_shift",
+          "oem_to_aftermarket": 0.02,
+          "recycled_to_aftermarket": 0.005
+        },
+        {
+          "name": "larger_shift",
+          "oem_to_aftermarket": 0.04,
+          "recycled_to_aftermarket": 0.015
+        },
+        {
+          "name": "large_stress",
+          "oem_to_aftermarket": 0.06,
+          "recycled_to_aftermarket": 0.025
+        }
+      ],
+      "input_admission": {
+        "all_numeric_bridge_inputs": "Assumed. Source shares refer to a hypothetical fungible component basket, NOT CCC spending shares or national physical shares.",
+        "source_prices": "Assumed fixed delivered, equivalent-quality prices. Existing retail snapshots do not establish this basket or a recycled discount.",
+        "recycler_price_transmission_weight": "Assumed reduced-form influence on marginal auction prices, NOT recycler buyer share, domestic share, or winning-bid share.",
+        "donor_contribution": "Expected net parts contribution after variable fulfillment costs, before donor acquisition. Exposure applies only to the eligible collision basket; mechanical parts, scrap and other demand are held constant.",
+        "supply_price_response": "Assumed fractional price support per log decline in total-loss supply; zero and 0.5 tested. Not estimated equilibrium elasticity.",
+        "threshold_responsive_fraction": "Mixture of claims following the inherited switching rule and otherwise identical claims whose disposition remains at reference. It attenuates an unvalidated derivative without refitting historical levels.",
+        "expected_salvage_pass_through": "Scenario share of price shock reflected in insurer expected salvage; timing is unobserved.",
+        "period_and_population": "Uniform full-year incremental US insurance shock. International, other US and purchased revenue remain at reference; no global extension inferred. All figures are counterfactual differences, not proof of outright year-over-year deflation."
+      }
+    },
+    "solution": {
+      "repair_change": -0.010299401197604752,
+      "recycled_retention": 0.85,
+      "after_quantity_shares": {
+        "oem": 0.61,
+        "aftermarket": 0.305,
+        "recycled": 0.085
+      },
+      "price_change": -0.012597167305648329,
+      "expected_salvage_change": -0.012597167305648329,
+      "equilibrium_residual": -1.1171947915389335e-10,
+      "feedback": [
+        {
+          "supply_ratio": 0.9811909447979119,
+          "repair_jobs_ratio": 1.0055654910942147,
+          "recycled_demand_ratio": 0.8547306674300824,
+          "recycler_bid_change": -0.054475999713719095,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": 0.009494097671033605,
+          "implied_price_change": -0.012594201587023566
+        },
+        {
+          "supply_ratio": 0.9811874638487887,
+          "repair_jobs_ratio": 1.0055645322780256,
+          "recycled_demand_ratio": 0.8547298524363217,
+          "recycler_bid_change": -0.05447630533637936,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": 0.009495871512973484,
+          "implied_price_change": -0.012592580556413819
+        },
+        {
+          "supply_ratio": 0.9811950376291377,
+          "repair_jobs_ratio": 1.00555797432928,
+          "recycled_demand_ratio": 0.8547242781798879,
+          "recycler_bid_change": -0.05447839568254202,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": 0.00949201203076585,
+          "implied_price_change": -0.012597485211702786
+        },
+        {
+          "supply_ratio": 0.9812060234700938,
+          "repair_jobs_ratio": 1.005549698629475,
+          "recycled_demand_ratio": 0.8547172438350537,
+          "recycler_bid_change": -0.05448103356185488,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": 0.009486413867794002,
+          "implied_price_change": -0.012604402314331062
+        }
+      ]
+    }
+  },
+  "larger_shift_weak_recycler_transmission": {
+    "oem_to_aftermarket": 0.04,
+    "recycled_to_aftermarket": 0.015,
+    "parameters": {
+      "status": "Illustrative structural scenarios; no causal forecast coefficient identified",
+      "horizon": "FY2027 relative to the saved price_3p7_intl_continuation reference",
+      "eligible_parts_bill_share": 0.4,
+      "source_quantity_shares": {
+        "oem": 0.65,
+        "aftermarket": 0.25,
+        "recycled": 0.1
+      },
+      "source_relative_prices": {
+        "oem": 1.0,
+        "aftermarket": 0.5,
+        "recycled": 0.6
+      },
+      "donor_contribution_exposed_fraction": 0.25,
+      "donor_contribution_to_hammer_bid": 1.5,
+      "recycler_price_transmission_weight": 0.1,
+      "rebuilder_repair_bill_to_hammer_bid": 1.0,
+      "repair_job_recapture": 1.0,
+      "supply_price_response": 0.25,
+      "expected_salvage_pass_through": 1.0,
+      "threshold_responsive_fraction": 1.0,
+      "cases": [
+        {
+          "name": "small_shift",
+          "oem_to_aftermarket": 0.02,
+          "recycled_to_aftermarket": 0.005
+        },
+        {
+          "name": "larger_shift",
+          "oem_to_aftermarket": 0.04,
+          "recycled_to_aftermarket": 0.015
+        },
+        {
+          "name": "large_stress",
+          "oem_to_aftermarket": 0.06,
+          "recycled_to_aftermarket": 0.025
+        }
+      ],
+      "input_admission": {
+        "all_numeric_bridge_inputs": "Assumed. Source shares refer to a hypothetical fungible component basket, NOT CCC spending shares or national physical shares.",
+        "source_prices": "Assumed fixed delivered, equivalent-quality prices. Existing retail snapshots do not establish this basket or a recycled discount.",
+        "recycler_price_transmission_weight": "Assumed reduced-form influence on marginal auction prices, NOT recycler buyer share, domestic share, or winning-bid share.",
+        "donor_contribution": "Expected net parts contribution after variable fulfillment costs, before donor acquisition. Exposure applies only to the eligible collision basket; mechanical parts, scrap and other demand are held constant.",
+        "supply_price_response": "Assumed fractional price support per log decline in total-loss supply; zero and 0.5 tested. Not estimated equilibrium elasticity.",
+        "threshold_responsive_fraction": "Mixture of claims following the inherited switching rule and otherwise identical claims whose disposition remains at reference. It attenuates an unvalidated derivative without refitting historical levels.",
+        "expected_salvage_pass_through": "Scenario share of price shock reflected in insurer expected salvage; timing is unobserved.",
+        "period_and_population": "Uniform full-year incremental US insurance shock. International, other US and purchased revenue remain at reference; no global extension inferred. All figures are counterfactual differences, not proof of outright year-over-year deflation."
+      }
+    },
+    "solution": {
+      "repair_change": -0.010299401197604752,
+      "recycled_retention": 0.85,
+      "after_quantity_shares": {
+        "oem": 0.61,
+        "aftermarket": 0.305,
+        "recycled": 0.085
+      },
+      "price_change": 0.006447992287576199,
+      "expected_salvage_change": 0.006447992287576199,
+      "equilibrium_residual": -7.809808182102085e-11,
+      "feedback": [
+        {
+          "supply_ratio": 0.9892459939130209,
+          "repair_jobs_ratio": 1.0031820484581049,
+          "recycled_demand_ratio": 0.8527047411893891,
+          "recycler_bid_change": -0.055235722053979086,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": 0.002703062086300368,
+          "implied_price_change": 0.006448950958746737
+        },
+        {
+          "supply_ratio": 0.9892447953137334,
+          "repair_jobs_ratio": 1.0031812661064121,
+          "recycled_demand_ratio": 0.8527040761904503,
+          "recycler_bid_change": -0.05523597142858114,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": 0.0027033649937725722,
+          "implied_price_change": 0.006449228928758736
+        },
+        {
+          "supply_ratio": 0.9892497792517105,
+          "repair_jobs_ratio": 1.003177323611435,
+          "recycled_demand_ratio": 0.8527007250697197,
+          "recycler_bid_change": -0.055237228098855104,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": 0.0027021054659373232,
+          "implied_price_change": 0.00644784373389609
+        },
+        {
+          "supply_ratio": 0.9892566721756554,
+          "repair_jobs_ratio": 1.0031724117356373,
+          "recycled_demand_ratio": 0.8526965499752917,
+          "recycler_bid_change": -0.05523879375926563,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": 0.0027003635145931913,
+          "implied_price_change": 0.006445945216510906
+        }
+      ]
+    }
+  },
+  "larger_shift_no_expected_update": {
+    "oem_to_aftermarket": 0.04,
+    "recycled_to_aftermarket": 0.015,
+    "parameters": {
+      "status": "Illustrative structural scenarios; no causal forecast coefficient identified",
+      "horizon": "FY2027 relative to the saved price_3p7_intl_continuation reference",
+      "eligible_parts_bill_share": 0.4,
+      "source_quantity_shares": {
+        "oem": 0.65,
+        "aftermarket": 0.25,
+        "recycled": 0.1
+      },
+      "source_relative_prices": {
+        "oem": 1.0,
+        "aftermarket": 0.5,
+        "recycled": 0.6
+      },
+      "donor_contribution_exposed_fraction": 0.25,
+      "donor_contribution_to_hammer_bid": 1.5,
+      "recycler_price_transmission_weight": 0.5,
+      "rebuilder_repair_bill_to_hammer_bid": 1.0,
+      "repair_job_recapture": 1.0,
+      "supply_price_response": 0.25,
+      "expected_salvage_pass_through": 0.0,
+      "threshold_responsive_fraction": 1.0,
+      "cases": [
+        {
+          "name": "small_shift",
+          "oem_to_aftermarket": 0.02,
+          "recycled_to_aftermarket": 0.005
+        },
+        {
+          "name": "larger_shift",
+          "oem_to_aftermarket": 0.04,
+          "recycled_to_aftermarket": 0.015
+        },
+        {
+          "name": "large_stress",
+          "oem_to_aftermarket": 0.06,
+          "recycled_to_aftermarket": 0.025
+        }
+      ],
+      "input_admission": {
+        "all_numeric_bridge_inputs": "Assumed. Source shares refer to a hypothetical fungible component basket, NOT CCC spending shares or national physical shares.",
+        "source_prices": "Assumed fixed delivered, equivalent-quality prices. Existing retail snapshots do not establish this basket or a recycled discount.",
+        "recycler_price_transmission_weight": "Assumed reduced-form influence on marginal auction prices, NOT recycler buyer share, domestic share, or winning-bid share.",
+        "donor_contribution": "Expected net parts contribution after variable fulfillment costs, before donor acquisition. Exposure applies only to the eligible collision basket; mechanical parts, scrap and other demand are held constant.",
+        "supply_price_response": "Assumed fractional price support per log decline in total-loss supply; zero and 0.5 tested. Not estimated equilibrium elasticity.",
+        "threshold_responsive_fraction": "Mixture of claims following the inherited switching rule and otherwise identical claims whose disposition remains at reference. It attenuates an unvalidated derivative without refitting historical levels.",
+        "expected_salvage_pass_through": "Scenario share of price shock reflected in insurer expected salvage; timing is unobserved.",
+        "period_and_population": "Uniform full-year incremental US insurance shock. International, other US and purchased revenue remain at reference; no global extension inferred. All figures are counterfactual differences, not proof of outright year-over-year deflation."
+      }
+    },
+    "solution": {
+      "repair_change": -0.010299401197604752,
+      "recycled_retention": 0.85,
+      "after_quantity_shares": {
+        "oem": 0.61,
+        "aftermarket": 0.305,
+        "recycled": 0.085
+      },
+      "price_change": -0.018943856470286843,
+      "expected_salvage_change": -0.0,
+      "equilibrium_residual": -1.0438264141932052e-10,
+      "feedback": [
+        {
+          "supply_ratio": 0.9865051911020943,
+          "repair_jobs_ratio": 1.0039930362228449,
+          "recycled_demand_ratio": 0.8533940807894181,
+          "recycler_bid_change": -0.0549772197039682,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": 0.003396672848078556,
+          "implied_price_change": -0.018942236405103167
+        },
+        {
+          "supply_ratio": 0.986503213624517,
+          "repair_jobs_ratio": 1.0039921945043626,
+          "recycled_demand_ratio": 0.8533933653287082,
+          "recycler_bid_change": -0.05497748800173441,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": 0.0033971739806567588,
+          "implied_price_change": -0.018941869421408068
+        },
+        {
+          "supply_ratio": 0.9865090822314319,
+          "repair_jobs_ratio": 1.003987361057011,
+          "recycled_demand_ratio": 0.8533892568984592,
+          "recycler_bid_change": -0.054979028663077786,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": 0.0033956867606006005,
+          "implied_price_change": -0.018944126972135916
+        },
+        {
+          "supply_ratio": 0.9865173730301701,
+          "repair_jobs_ratio": 1.0039813030678804,
+          "recycled_demand_ratio": 0.8533841076076982,
+          "recycler_bid_change": -0.054980959647113165,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": 0.0033935857247234208,
+          "implied_price_change": -0.018947193500030785
+        }
+      ]
+    }
+  },
+  "larger_shift_no_repair_recapture": {
+    "oem_to_aftermarket": 0.04,
+    "recycled_to_aftermarket": 0.015,
+    "parameters": {
+      "status": "Illustrative structural scenarios; no causal forecast coefficient identified",
+      "horizon": "FY2027 relative to the saved price_3p7_intl_continuation reference",
+      "eligible_parts_bill_share": 0.4,
+      "source_quantity_shares": {
+        "oem": 0.65,
+        "aftermarket": 0.25,
+        "recycled": 0.1
+      },
+      "source_relative_prices": {
+        "oem": 1.0,
+        "aftermarket": 0.5,
+        "recycled": 0.6
+      },
+      "donor_contribution_exposed_fraction": 0.25,
+      "donor_contribution_to_hammer_bid": 1.5,
+      "recycler_price_transmission_weight": 0.5,
+      "rebuilder_repair_bill_to_hammer_bid": 1.0,
+      "repair_job_recapture": 0.0,
+      "supply_price_response": 0.25,
+      "expected_salvage_pass_through": 1.0,
+      "threshold_responsive_fraction": 1.0,
+      "cases": [
+        {
+          "name": "small_shift",
+          "oem_to_aftermarket": 0.02,
+          "recycled_to_aftermarket": 0.005
+        },
+        {
+          "name": "larger_shift",
+          "oem_to_aftermarket": 0.04,
+          "recycled_to_aftermarket": 0.015
+        },
+        {
+          "name": "large_stress",
+          "oem_to_aftermarket": 0.06,
+          "recycled_to_aftermarket": 0.025
+        }
+      ],
+      "input_admission": {
+        "all_numeric_bridge_inputs": "Assumed. Source shares refer to a hypothetical fungible component basket, NOT CCC spending shares or national physical shares.",
+        "source_prices": "Assumed fixed delivered, equivalent-quality prices. Existing retail snapshots do not establish this basket or a recycled discount.",
+        "recycler_price_transmission_weight": "Assumed reduced-form influence on marginal auction prices, NOT recycler buyer share, domestic share, or winning-bid share.",
+        "donor_contribution": "Expected net parts contribution after variable fulfillment costs, before donor acquisition. Exposure applies only to the eligible collision basket; mechanical parts, scrap and other demand are held constant.",
+        "supply_price_response": "Assumed fractional price support per log decline in total-loss supply; zero and 0.5 tested. Not estimated equilibrium elasticity.",
+        "threshold_responsive_fraction": "Mixture of claims following the inherited switching rule and otherwise identical claims whose disposition remains at reference. It attenuates an unvalidated derivative without refitting historical levels.",
+        "expected_salvage_pass_through": "Scenario share of price shock reflected in insurer expected salvage; timing is unobserved.",
+        "period_and_population": "Uniform full-year incremental US insurance shock. International, other US and purchased revenue remain at reference; no global extension inferred. All figures are counterfactual differences, not proof of outright year-over-year deflation."
+      }
+    },
+    "solution": {
+      "repair_change": -0.010299401197604752,
+      "recycled_retention": 0.85,
+      "after_quantity_shares": {
+        "oem": 0.61,
+        "aftermarket": 0.305,
+        "recycled": 0.085
+      },
+      "price_change": -0.017685579322278495,
+      "expected_salvage_change": -0.017685579322278495,
+      "equilibrium_residual": 1.423785013499046e-10,
+      "feedback": [
+        {
+          "supply_ratio": 0.9790593166216778,
+          "repair_jobs_ratio": 1.0061962275933927,
+          "recycled_demand_ratio": 0.85,
+          "recycler_bid_change": -0.05625000000000001,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": 0.005290762324146901,
+          "implied_price_change": -0.017684537077050727
+        },
+        {
+          "supply_ratio": 0.9790552351047095,
+          "repair_jobs_ratio": 1.0061952210684786,
+          "recycled_demand_ratio": 0.85,
+          "recycler_bid_change": -0.05625000000000001,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": 0.005291804530019049,
+          "implied_price_change": -0.017683494871178578
+        },
+        {
+          "supply_ratio": 0.9790634891068524,
+          "repair_jobs_ratio": 1.006187972503955,
+          "recycled_demand_ratio": 0.85,
+          "recycler_bid_change": -0.05625000000000001,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": 0.0052896968942457755,
+          "implied_price_change": -0.017685602506951854
+        },
+        {
+          "supply_ratio": 0.9790755502935081,
+          "repair_jobs_ratio": 1.006178808921776,
+          "recycled_demand_ratio": 0.85,
+          "recycler_bid_change": -0.05625000000000001,
+          "rebuilder_bid_change": 0.010299401197604752,
+          "scarcity_price_support": 0.005286617136778808,
+          "implied_price_change": -0.01768868226441882
+        }
+      ]
+    }
+  },
+  "oem_substitution_only": {
+    "oem_to_aftermarket": 0.04,
+    "recycled_to_aftermarket": 0.0,
+    "parameters": {
+      "status": "Illustrative structural scenarios; no causal forecast coefficient identified",
+      "horizon": "FY2027 relative to the saved price_3p7_intl_continuation reference",
+      "eligible_parts_bill_share": 0.4,
+      "source_quantity_shares": {
+        "oem": 0.65,
+        "aftermarket": 0.25,
+        "recycled": 0.1
+      },
+      "source_relative_prices": {
+        "oem": 1.0,
+        "aftermarket": 0.5,
+        "recycled": 0.6
+      },
+      "donor_contribution_exposed_fraction": 0.25,
+      "donor_contribution_to_hammer_bid": 1.5,
+      "recycler_price_transmission_weight": 0.5,
+      "rebuilder_repair_bill_to_hammer_bid": 1.0,
+      "repair_job_recapture": 1.0,
+      "supply_price_response": 0.25,
+      "expected_salvage_pass_through": 1.0,
+      "threshold_responsive_fraction": 1.0,
+      "cases": [
+        {
+          "name": "small_shift",
+          "oem_to_aftermarket": 0.02,
+          "recycled_to_aftermarket": 0.005
+        },
+        {
+          "name": "larger_shift",
+          "oem_to_aftermarket": 0.04,
+          "recycled_to_aftermarket": 0.015
+        },
+        {
+          "name": "large_stress",
+          "oem_to_aftermarket": 0.06,
+          "recycled_to_aftermarket": 0.025
+        }
+      ],
+      "input_admission": {
+        "all_numeric_bridge_inputs": "Assumed. Source shares refer to a hypothetical fungible component basket, NOT CCC spending shares or national physical shares.",
+        "source_prices": "Assumed fixed delivered, equivalent-quality prices. Existing retail snapshots do not establish this basket or a recycled discount.",
+        "recycler_price_transmission_weight": "Assumed reduced-form influence on marginal auction prices, NOT recycler buyer share, domestic share, or winning-bid share.",
+        "donor_contribution": "Expected net parts contribution after variable fulfillment costs, before donor acquisition. Exposure applies only to the eligible collision basket; mechanical parts, scrap and other demand are held constant.",
+        "supply_price_response": "Assumed fractional price support per log decline in total-loss supply; zero and 0.5 tested. Not estimated equilibrium elasticity.",
+        "threshold_responsive_fraction": "Mixture of claims following the inherited switching rule and otherwise identical claims whose disposition remains at reference. It attenuates an unvalidated derivative without refitting historical levels.",
+        "expected_salvage_pass_through": "Scenario share of price shock reflected in insurer expected salvage; timing is unobserved.",
+        "period_and_population": "Uniform full-year incremental US insurance shock. International, other US and purchased revenue remain at reference; no global extension inferred. All figures are counterfactual differences, not proof of outright year-over-year deflation."
+      }
+    },
+    "solution": {
+      "repair_change": -0.009580838323353325,
+      "recycled_retention": 1.0,
+      "after_quantity_shares": {
+        "oem": 0.61,
+        "aftermarket": 0.29,
+        "recycled": 0.1
+      },
+      "price_change": 0.007640903256833552,
+      "expected_salvage_change": 0.007640903256833552,
+      "equilibrium_residual": 1.3851377943935317e-10,
+      "feedback": [
+        {
+          "supply_ratio": 0.9906999092789046,
+          "repair_jobs_ratio": 1.0027518432758866,
+          "recycled_demand_ratio": 1.0027518432758866,
+          "recycler_bid_change": 0.0010319412284574836,
+          "rebuilder_bid_change": 0.009580838323353325,
+          "scarcity_price_support": 0.002335901643969596,
+          "implied_price_change": 0.007642291419875
+        },
+        {
+          "supply_ratio": 0.9906989944236541,
+          "repair_jobs_ratio": 1.002751130699852,
+          "recycled_demand_ratio": 1.002751130699852,
+          "recycler_bid_change": 0.0010316740124445,
+          "rebuilder_bid_change": 0.009580838323353325,
+          "scarcity_price_support": 0.002336132504915579,
+          "implied_price_change": 0.007642388672814492
+        },
+        {
+          "supply_ratio": 0.9907034036028618,
+          "repair_jobs_ratio": 1.002747691971191,
+          "recycled_demand_ratio": 1.002747691971191,
+          "recycler_bid_change": 0.0010303844891966507,
+          "rebuilder_bid_change": 0.009580838323353325,
+          "scarcity_price_support": 0.0023350198638861386,
+          "implied_price_change": 0.007640631270161126
+        },
+        {
+          "supply_ratio": 0.9907094568029141,
+          "repair_jobs_ratio": 1.0027434170073535,
+          "recycled_demand_ratio": 1.0027434170073535,
+          "recycler_bid_change": 0.0010287813777575538,
+          "rebuilder_bid_change": 0.009580838323353325,
+          "scarcity_price_support": 0.0023334923679832675,
+          "implied_price_change": 0.007638302218538707
+        }
+      ]
+    }
+  }
+}

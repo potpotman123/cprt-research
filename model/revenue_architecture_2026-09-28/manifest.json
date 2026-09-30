@@ -1,8 +1,8 @@
 {
   "status": "Executable conditional architecture; evidence limitations remain",
   "sources": {
-    "model/revenue_architecture_2026-09-28/model.py": "4ee1fa7ac8e13f15eb4ecc8350520d0bc9c147333cedddd60f3855799f9ecd41",
-    "model/revenue_architecture_2026-09-28/run.py": "5391e0b24152c455c506423a70399861dde3b0d0679bcc3151b9c8ee37ee1681",
+    "model/revenue_architecture_2026-09-28/model.py": "5da44a2feceaeeacba8a3f38f939e019155c38cf69358221661d3ddb5e13ae82",
+    "model/revenue_architecture_2026-09-28/run.py": "9be9647918858d51d510572c624bcc32254e1de1a74dc73983fe23658399f760",
     "model/revenue_architecture_2026-09-28/evidence.py": "6fb68b30446fb5592ec6e931c117af50ddbfdbd66ea6a0594a2a5081a0a0f2c6",
     "model/revenue_architecture_2026-09-28/fee_schedule_registry.json": "15874cfbf5861048f8171fd95c5fd488ef6288ec80236254cd54af1810f0f630",
     "model/linked_service_revenue_2026-09-28/inputs.json": "18e80a5aa8c34854b8bc1d9471d7530d7b827349ac51758f13a3d24987e7b591",

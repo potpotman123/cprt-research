@@ -1,0 +1,29 @@
+{
+  "status": "Observed rounded CCC dollar shares; conditional quantities below are hurdles, not forecasts",
+  "ccc_figure38_am_spending_share_pct": {
+    "2020": 21.3,
+    "2021": 19.0,
+    "2022": 18.0,
+    "2023": 19.7,
+    "2024": 21.0,
+    "2025": 22.7
+  },
+  "ccc_figure38_recycled_spending_share_pct": {
+    "2020": 10.4,
+    "2021": 10.1,
+    "2022": 9.9,
+    "2023": 10.4,
+    "2024": 10.7,
+    "2025": 10.5
+  },
+  "conditional_all_parts_quantity_change_pp_if_eligible_increase_5p5": {
+    "0.25": 1.375,
+    "0.35": 1.9249999999999998,
+    "0.5": 2.75,
+    "0.75": 4.125,
+    "1.0": 5.5
+  },
+  "required_assumptions": "Fixed quantity weights; zero adoption change outside eligible subset; do not confuse quantity fraction with repair-bill dollar fraction",
+  "source": "https://www.cccis.com/reports/crash-course-2026",
+  "figure38_sha256": "09034800b9d68ff88297774a83568ce78ca683e9f0f4fe972b19a12e2cd21f6f"
+}

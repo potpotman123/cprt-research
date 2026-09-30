@@ -1,0 +1,30 @@
+{
+  "publication_date": "2026-09-30",
+  "zip_sha256": "c168ee7c03953df106a371319a6094e6e3c50fa24aea78125c52f3d7e115e232",
+  "status": "pass",
+  "validation_method": "Refreshed archive integrity checked; all previously packaged non-Markdown files other than FILE_MANIFEST.json byte-identical to prior reproduced archive. Full model reproduction not repeated for documentation/evidence additions.",
+  "files_checked": 99,
+  "previous_non_markdown_files_identical": 69,
+  "added_files": [
+    "cprt_revenue_model/RESEARCH_STATE.md",
+    "cprt_revenue_model/docs/aftermarket_parameter_audit_2026-09-29/CCC_INTERVIEW.md",
+    "cprt_revenue_model/docs/aftermarket_parameter_audit_2026-09-29/FORWARD_ASSUMPTIONS.md",
+    "cprt_revenue_model/docs/aftermarket_parameter_audit_2026-09-29/README.md",
+    "cprt_revenue_model/docs/aftermarket_parameter_audit_2026-09-29/calculate.py",
+    "cprt_revenue_model/docs/aftermarket_parameter_audit_2026-09-29/diagnostic_sensitivities.csv",
+    "cprt_revenue_model/docs/aftermarket_parameter_audit_2026-09-29/diagnostic_sensitivities.json",
+    "cprt_revenue_model/docs/aftermarket_parameter_audit_2026-09-29/observations.json",
+    "cprt_revenue_model/docs/aftermarket_parameter_audit_2026-09-29/source_manifest.json",
+    "cprt_revenue_model/docs/bidmate_adoption_2026-09-29/README.md",
+    "cprt_revenue_model/docs/bidmate_adoption_2026-09-29/observations_and_hurdles.json",
+    "cprt_revenue_model/docs/bidmate_adoption_2026-09-29/source_manifest.json",
+    "cprt_revenue_model/docs/catalyst_assessment_2026-09-29/README.md",
+    "cprt_revenue_model/docs/catalyst_assessment_2026-09-29/checks.json",
+    "cprt_revenue_model/docs/pitch_audit_2026-09-29/README.md",
+    "cprt_revenue_model/docs/pitch_audit_2026-09-29/checks.json",
+    "cprt_revenue_model/docs/pitch_audit_2026-09-29/competition_anatomy_prior_review.md"
+  ],
+  "prior_zip_sha256": "5ac42fdd2f28511c411dcfa1e6672d912357c0c8c7a4e4c102b5439bf31346fe",
+  "prior_full_reproduction_record": "prior_portable_check.json",
+  "limitations": "New ancillary diagnostic scripts are archived with their existing outputs; this check does not rerun them or establish empirical validation."
+}

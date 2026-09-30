@@ -1,0 +1,63 @@
+{
+  "checks": {
+    "all_16_source_tlfs_reproduce": true,
+    "claim_weights_sum_one": true,
+    "all_16_total_loss_mix_cells_reproduce": true,
+    "prior_reference_reproduces": true,
+    "historical_reported_dollars_preserved": true,
+    "zero_shift_matches_own_reference": true,
+    "ccc_reference_used_for_thesis_deltas": true,
+    "price_only_preserves_units": true,
+    "cheaper_repairs_reduce_totals": true,
+    "forward_changes_preserve_new_base": true
+  },
+  "anchor_tlf": 0.23123582173201346,
+  "previous_reference_service_musd": 4105.804039246686,
+  "ccc_reference_service_musd": 4093.077730243895,
+  "economic_crosschecks": [
+    {
+      "metric": "repairable_mean",
+      "group": "0-6",
+      "new_implied": 5644.702707794477,
+      "previous_target": 5721,
+      "status": "Cross-population diagnostic; no longer calibration target in CCC case"
+    },
+    {
+      "metric": "repairable_mean",
+      "group": "7+",
+      "new_implied": 3735.824644930323,
+      "previous_target": 3682,
+      "status": "Cross-population diagnostic; no longer calibration target in CCC case"
+    },
+    {
+      "metric": "selected_vehicle_value",
+      "group": "0",
+      "new_implied": 38989.23192350421,
+      "previous_target": 40187.0,
+      "status": "Cross-population diagnostic; inherited values not refitted"
+    },
+    {
+      "metric": "selected_vehicle_value",
+      "group": "1",
+      "new_implied": 29689.543541072842,
+      "previous_target": 30259.0,
+      "status": "Cross-population diagnostic; inherited values not refitted"
+    },
+    {
+      "metric": "selected_vehicle_value",
+      "group": "2",
+      "new_implied": 19907.60666282704,
+      "previous_target": 20328.0,
+      "status": "Cross-population diagnostic; inherited values not refitted"
+    },
+    {
+      "metric": "selected_vehicle_value",
+      "group": "3",
+      "new_implied": 9157.546961930157,
+      "previous_target": 9122.000000000002,
+      "status": "Cross-population diagnostic; inherited values not refitted"
+    }
+  ],
+  "status": "Conditional CCC composition/level case. Not a measured aftermarket forecast; old exact repair/value calibration does not transfer.",
+  "source_manifest_sha256": "311e18c22156e228a91b2ada2cc653b2cdfa584eced8b74e40be43f40c7bedea"
+}

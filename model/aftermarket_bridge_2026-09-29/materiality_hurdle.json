@@ -1,0 +1,77 @@
+{
+  "target": "3% below dated JPM FY27 ex-ACV service revenue",
+  "target_service_musd": 3939.17,
+  "oem_to_aftermarket": 0.04,
+  "recycled_to_aftermarket": 0.0317138671875,
+  "recycled_quantity_displacement": 0.317138671875,
+  "source_shift_bracket": [
+    0.031689453125,
+    0.03173828125
+  ],
+  "solution": {
+    "repair_change": -0.01110006549401197,
+    "recycled_retention": 0.6828613281250001,
+    "after_quantity_shares": {
+      "oem": 0.61,
+      "aftermarket": 0.3217138671875,
+      "recycled": 0.06828613281250001
+    },
+    "price_change": -0.04428249392658472,
+    "expected_salvage_change": -0.04428249392658472,
+    "equilibrium_residual": 1.0266482108889363e-10,
+    "feedback": [
+      {
+        "supply_ratio": 0.9670195954018699,
+        "repair_jobs_ratio": 1.0097587117535876,
+        "recycled_demand_ratio": 0.6895251749938439,
+        "recycler_bid_change": -0.11642805937730853,
+        "rebuilder_bid_change": 0.01110006549401197,
+        "scarcity_price_support": 0.00838412990410034,
+        "implied_price_change": -0.04427986703754794
+      },
+      {
+        "supply_ratio": 0.967012285568391,
+        "repair_jobs_ratio": 1.0097573873218126,
+        "recycled_demand_ratio": 0.6895242705906032,
+        "recycler_bid_change": -0.11642839852852381,
+        "rebuilder_bid_change": 0.01110006549401197,
+        "scarcity_price_support": 0.008386019695460765,
+        "implied_price_change": -0.04427814682179515
+      },
+      {
+        "supply_ratio": 0.9670244527615968,
+        "repair_jobs_ratio": 1.009746217058588,
+        "recycled_demand_ratio": 0.6895166428498221,
+        "recycler_bid_change": -0.11643125893131673,
+        "rebuilder_bid_change": 0.01110006549401197,
+        "scarcity_price_support": 0.0083828741520063,
+        "implied_price_change": -0.04428272256664608
+      },
+      {
+        "supply_ratio": 0.9670426304144136,
+        "repair_jobs_ratio": 1.0097320260312757,
+        "recycled_demand_ratio": 0.6895069523460641,
+        "recycler_bid_change": -0.11643489287022597,
+        "rebuilder_bid_change": 0.01110006549401197,
+        "scarcity_price_support": 0.008378174818416602,
+        "implied_price_change": -0.0442892388696904
+      }
+    ]
+  },
+  "summary": {
+    "scenario": "materiality_hurdle",
+    "repair_change": -0.01110006549401197,
+    "auction_price_change_at_fixed_selection": -0.04428249392658472,
+    "expected_salvage_change": -0.04428249392658472,
+    "FY_insurance_unit_delta": -0.03297533228186755,
+    "FY_insurance_allin_RPU_delta": -0.021572437325911187,
+    "FY_legacy_service_musd": 3939.135670282428,
+    "FY_delta_vs_reference_musd": -166.66836896425866,
+    "FY_delta_vs_reference_pct": -0.04059335695788302,
+    "FY_gap_to_dated_JPM_service_musd": -121.86432971757222,
+    "FY_gap_to_dated_JPM_service_pct": -0.030008453513315048,
+    "H1_delta_vs_reference_musd": -82.44009794877547,
+    "threshold_responsive_fraction": 1.0,
+    "status": "Conditional scenario; not an empirically identified forecast"
+  }
+}

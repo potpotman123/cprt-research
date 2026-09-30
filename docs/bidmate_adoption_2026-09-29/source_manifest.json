@@ -1,0 +1,52 @@
+{
+  "advanced_2014": {
+    "url": "https://products.car-part.com/newsletters/scoop/cps20140407.html",
+    "sha256": "3099fa9e79ffdc5bd5ab0ae743b344b37101c5f3a2733da250cfa6bc1e80e08f",
+    "bytes": 30499
+  },
+  "collision_20_2024": {
+    "url": "https://products.car-part.com/newsletters/scoop/cps20240910.html",
+    "sha256": "b3750207341b4fd36ffafbb033dade4a30518451398de9be1628059bede9edf4",
+    "bytes": 38279
+  },
+  "bidmate": {
+    "url": "https://products.car-part.com/bidmate/",
+    "sha256": "3db9615158bf1114c1960e77dcf248dfb84ce95d0558a95efc20bec719ad0435",
+    "bytes": 22416
+  },
+  "new_features": {
+    "url": "https://products.car-part.com/trainingdocs/checkmate/Checkmate_2025R3_NewFeatures.pdf",
+    "sha256": "bbfe4f50a380b8d0d20cd126237dbd4c71e36e689a14e42a36c8108e1da65dde",
+    "bytes": 8590358
+  },
+  "earlier_retrievals": {
+    "raw/bidmate_adoption_2026-09-29/new_features.pdf": "bbfe4f50a380b8d0d20cd126237dbd4c71e36e689a14e42a36c8108e1da65dde",
+    "raw/bidmate_adoption_2026-09-29/bidmate.html": "3db9615158bf1114c1960e77dcf248dfb84ce95d0558a95efc20bec719ad0435",
+    "raw/bidmate_adoption_2026-09-29/may2008.html": "ab6b4f39715f7a53eaab62d8ed3a9c78bc079095988cec489777197f9e6990fc",
+    "raw/bidmate_adoption_2026-09-29/may2008.jpg": "b6daea7b5e308dd5370d145bda6752bb8933f9ea4a4e8a657c5bc913cdc92cfe",
+    "raw/bidmate_adoption_2026-09-29/collision_20_2024.html": "b3750207341b4fd36ffafbb033dade4a30518451398de9be1628059bede9edf4",
+    "raw/bidmate_adoption_2026-09-29/newsletters.html": "82cc44a084d17f87ec6b862e7f447dcc1327752f0a118733285d89269e409fc8",
+    "raw/bidmate_adoption_2026-09-29/apr2007.jpg": "1994bb17347249fde35103e55c8e3a6e1a621dec203084c611391759696b510b",
+    "raw/bidmate_adoption_2026-09-29/apr2007.html": "abde57a21dc4ea2f5aee9db1ab6518ced157c39d5680b1a432d6fabe8a16cc52",
+    "raw/bidmate_adoption_2026-09-29/training.html": "14c196c4475c961b93508f05209af14c8e5c0fe4a4ef77a26649b1334f76a8dc",
+    "raw/bidmate_adoption_2026-09-29/advanced_2014.html": "3099fa9e79ffdc5bd5ab0ae743b344b37101c5f3a2733da250cfa6bc1e80e08f",
+    "raw/bidmate_adoption_2026-09-29/reports.html": "6a082d87c48537d450c8e1815dcb7d5b4b4510414587878226f5931c00da0956"
+  },
+  "failed_access": {
+    "projected_sales_detail": "https://products.car-part.com/support/cmi/projsalescomparison.html returned HTTP401; stopped without authentication or bypass",
+    "training_root": "training root gave no usable training list; public report index used instead"
+  },
+  "queries": [
+    "site.products.car-part.com Bidmate projected sales cost goods guide pdf",
+    "site.car-part.com Bidmate \"percent\" OR \"sales\" \"vehicle\"",
+    "site.cccis.com aftermarket utilization 2023 2024 2025 State Farm",
+    "site.mitchell.com aftermarket parts utilization 2025 2024 percentage",
+    "site.products.car-part.com/trainingdocs \"Bidmate\" \"cost\"",
+    "site.lkqcorp.com \"2023\" \"2025\" \"utilization\"",
+    "site.cccis.com \"aftermarket\" \"2023\" \"2022\" \"percent\"",
+    "site.statefarm.com replacement parts non OEM 2023 bumper certified",
+    "site.products.car-part.com \"Projected Sales Comparison Report\"",
+    "site.products.car-part.com \"Inventory Analysis\" \"projected\""
+  ],
+  "as_of": "2026-09-29"
+}
