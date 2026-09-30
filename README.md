@@ -13,6 +13,7 @@ reference model) is gitignored and never committed.**
 
 | Read | For |
 |---|---|
+| **`PROMPT_HIGH_REASONING_FABLE_2026-09-30.md`** | **Paste into a fresh high-reasoning session:** the full context, the claim-to-sale engine in 14 steps, the ten unsourced load-bearing assumptions, and a phased assignment — expectations sheet, catalyst scorecard for both theses, decision, model integration. |
 | **`NEXT_STEPS_FOR_OTHER_CLAUDE_FABLE.md`** | **For a second Fable session with a fresh budget:** the expensive experiments, each specified end to end (goal, the explanation being tested, steps and why, cost, cheaper alternatives, kill criteria, deliverable). Start here if you were sent this repo to run them. |
 | **`HANDOFF.md`** | **The whole project by research thread: what was tried, why, what was found, where it led, what is still open.** Confidence labelled on every result. Read §0–§3 first. |
 | **`MODEL_BLUEPRINT.md`** | The model architecture — mechanisms A–E, the units identity, the RPU chain, tab map, build order, checks. |

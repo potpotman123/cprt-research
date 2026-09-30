@@ -8,6 +8,7 @@ This Markdown file is the recovery index, not a replacement for the model files 
 
 | Subject | Authoritative entry point |
 |---|---|
+| Self-contained prompt for a new high-reasoning session: two theses → catalyst search → decision → model integration, with the load-bearing unsourced assumptions listed | [Prompt](PROMPT_HIGH_REASONING_FABLE_2026-09-30.md) |
 | PM assessment of both competition theses, opposing evidence, missing proof, additions and comparison with prior successful pitches | [Full pitch audit](docs/pitch_audit_2026-09-29/README.md) |
 | Catalyst windows, what each would need to reveal, limits of earnings revisions | [Catalyst assessment](docs/catalyst_assessment_2026-09-29/README.md) |
 | Current revenue architecture, assumptions, equations/code, scenarios, fee and timing guards | [Revenue architecture](model/revenue_architecture_2026-09-28/README.md) |
