@@ -1,0 +1,77 @@
+{
+  "as_of": "2026-10-01",
+  "scope": "User-supplied three public sources and CCC call; subsequent primary-source premiums, loan, tariff and CCC evidence. Reuses prior retrievals; no refresh implied.",
+  "publication_boundary": "Extracted analytical facts and provenance in Git; licensed/private originals and raw retrieval caches stay local under .gitignore.",
+  "records": [
+    {
+      "path": "docs/affordability_2026-10-01/README.md",
+      "sha256": "04397b2e3510ea478fcedef6817cd59d8067396ee5b445d1a0d7999590269211",
+      "bytes": 16289
+    },
+    {
+      "path": "docs/affordability_2026-10-01/finance_observations.csv",
+      "sha256": "5bd8525e6f984c8707b68e606b4867f989f8c70a7c1539e78fc0e203096bb17b",
+      "bytes": 771
+    },
+    {
+      "path": "docs/affordability_2026-10-01/source_manifest.json",
+      "sha256": "06b200292016058d843ff7f308c90bd0b79f1773f03df20522dc1b331980c5d7",
+      "bytes": 15489
+    },
+    {
+      "path": "docs/affordability_2026-10-01/search_ledger.json",
+      "sha256": "ef7168ce2f7c2070eb3af4e6b00ad705a49ad952e960a6c788de3d26b11c4a1b",
+      "bytes": 5832
+    },
+    {
+      "path": "docs/memo_theses_2026-10-01/README.md",
+      "sha256": "0511f31f15143b406afc8e4530f3926e30b5840d38f27b1b1b08f9e01379e9c8",
+      "bytes": 15006
+    },
+    {
+      "path": "docs/memo_theses_2026-10-01/checks.json",
+      "sha256": "3f4af622d4c16cd8ef84760f4567d2247153e2fde56f53e75d8091876802db55",
+      "bytes": 2077
+    },
+    {
+      "path": "docs/memo_theses_2026-10-01/source_manifest.json",
+      "sha256": "57ea856c3a20f638eda91b037364d4340478c5d75ffa90bc7e390fe9cc2b22e3",
+      "bytes": 8836
+    },
+    {
+      "path": "docs/memo_theses_2026-10-01/loan_origination_followup.json",
+      "sha256": "d9ad1297e2de55c8e25c9aa1751f00b311f209edeb9118404d7a87f4a42c7941",
+      "bytes": 2240
+    },
+    {
+      "path": "docs/memo_theses_2026-10-01/premium_level_followup.json",
+      "sha256": "e2272969ea5e30f6e4f7041eeb4b6921b47955aa53033aef581e2ff9a4ce4cc0",
+      "bytes": 526
+    },
+    {
+      "path": "docs/tariff_counterfactual_2026-10-01/README.md",
+      "sha256": "f82da5372bcf6d4a7c8a7d6b2f6baa34a39dc77a4864b6750a2c27c56ff0a4f3",
+      "bytes": 9498
+    },
+    {
+      "path": "docs/tariff_counterfactual_2026-10-01/source_manifest.json",
+      "sha256": "ac2dbb7c17e276c5e4675fabdd203ad2b921fb10f630de703d314431ec256890",
+      "bytes": 4334
+    },
+    {
+      "path": "model/ccc_age_body_2026-09-29/source_cells.csv",
+      "sha256": "ecee8dad938bd220350a243a900632136969831eb11893776f8a2a9b0167c8c4",
+      "bytes": 18251
+    },
+    {
+      "path": "model/ccc_age_body_2026-09-29/source_manifest.json",
+      "sha256": "311e18c22156e228a91b2ada2cc653b2cdfa584eced8b74e40be43f40c7bedea",
+      "bytes": 1432
+    },
+    {
+      "path": "reports/catalyst_evidence_2026-10/README.md",
+      "sha256": "7414ac20875f1d0d387a0468772fb1438879e1bf51fccef564f011170b925ff6",
+      "bytes": 2393
+    }
+  ]
+}

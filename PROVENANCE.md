@@ -247,3 +247,7 @@ Four targeted web queries and primary-source review. Philadelphia Fed 2023 auto 
 ## 2026-10-01 premium architecture implementation
 
 Local architecture audit confirmed no explicit premium input in the existing revenue engine. Added optional premium_assumptions compilation with reference-relative premium/income, premium/value, deductible/income and excess-payoff channels; probabilities remain bounded, behavioral changes lag, filing is conditional on remaining exposure. Optional coverage/repairable-filing multipliers preserve old configurations. Observed CPI and loan figures reused in observed_context.json; behavioral slopes/exposure/lag remain assumed, no regression or central forecast change. Core43 tests and scenario invariants pass, including neutral, filing-only, recovery, historical preservation and double-counting rejection. New module and example runner live under model/revenue_architecture_2026-09-28/premium_channels.py and model/premium_scenarios_2026-10-01/. No outside collection, agents or workbook change.
+
+## 2026-10-01 — memo source publication index
+
+Created `docs/source_index_2026-10-01/` linking and fingerprinting already committed supplied-source assessments, CCC extraction, premium/loan facts, tariffs and filings. Source originals remain under existing raw/licensed/private exclusions. No new retrieval, inferred behavioral coefficient or forecast change.
