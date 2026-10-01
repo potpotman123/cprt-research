@@ -1,0 +1,510 @@
+{
+  "checks": "PASS",
+  "forecast_admission": false,
+  "cases": {
+    "same_as_reference": {
+      "service_musd": 4093.077730243895,
+      "delta_musd": 0.0,
+      "quarters": [
+        {
+          "period": "FY2027Q1",
+          "units_vs_reference": 0.0,
+          "tlf": 0.231142625616621
+        },
+        {
+          "period": "FY2027Q2",
+          "units_vs_reference": 0.0,
+          "tlf": 0.23110348807505088
+        },
+        {
+          "period": "FY2027Q3",
+          "units_vs_reference": 0.0,
+          "tlf": 0.23098403055931077
+        },
+        {
+          "period": "FY2027Q4",
+          "units_vs_reference": 0.0,
+          "tlf": 0.2308397108684518
+        }
+      ],
+      "premium_diagnostics": {
+        "status": "Conditional behavioral sensitivity; not an estimated causal forecast",
+        "forecast_admission": false,
+        "quarters": [
+          {
+            "quarter": 1,
+            "premium_income_log_deviation": 0.0,
+            "premium_value_log_deviation": 0.0,
+            "deductible_income_log_deviation": 0.0,
+            "coverage_probability": 0.8,
+            "repairable_filing_probability": 0.8999999999999999,
+            "coverage_multiplier": 1.0,
+            "repairable_filing_multiplier": 1.0
+          },
+          {
+            "quarter": 2,
+            "premium_income_log_deviation": 0.0,
+            "premium_value_log_deviation": 0.0,
+            "deductible_income_log_deviation": 0.0,
+            "coverage_probability": 0.8,
+            "repairable_filing_probability": 0.8999999999999999,
+            "coverage_multiplier": 1.0,
+            "repairable_filing_multiplier": 1.0
+          },
+          {
+            "quarter": 3,
+            "premium_income_log_deviation": 0.0,
+            "premium_value_log_deviation": 0.0,
+            "deductible_income_log_deviation": 0.0,
+            "coverage_probability": 0.8,
+            "repairable_filing_probability": 0.8999999999999999,
+            "coverage_multiplier": 1.0,
+            "repairable_filing_multiplier": 1.0
+          },
+          {
+            "quarter": 4,
+            "premium_income_log_deviation": 0.0,
+            "premium_value_log_deviation": 0.0,
+            "deductible_income_log_deviation": 0.0,
+            "coverage_probability": 0.8,
+            "repairable_filing_probability": 0.8999999999999999,
+            "coverage_multiplier": 1.0,
+            "repairable_filing_multiplier": 1.0
+          }
+        ]
+      }
+    },
+    "premiums_10pct_above_reference": {
+      "service_musd": 4046.045288178826,
+      "delta_musd": -47.03244206506906,
+      "quarters": [
+        {
+          "period": "FY2027Q1",
+          "units_vs_reference": -0.009803921568626972,
+          "tlf": 0.2315707422251263
+        },
+        {
+          "period": "FY2027Q2",
+          "units_vs_reference": -0.0149106505193205,
+          "tlf": 0.23174890556804736
+        },
+        {
+          "period": "FY2027Q3",
+          "units_vs_reference": -0.017515113145320504,
+          "tlf": 0.2317386244174256
+        },
+        {
+          "period": "FY2027Q4",
+          "units_vs_reference": -0.018830090512926723,
+          "tlf": 0.2316488416355879
+        }
+      ],
+      "premium_diagnostics": {
+        "status": "Conditional behavioral sensitivity; not an estimated causal forecast",
+        "forecast_admission": false,
+        "quarters": [
+          {
+            "quarter": 1,
+            "premium_income_log_deviation": 0.09531017980432477,
+            "premium_value_log_deviation": 0.09531017980432477,
+            "deductible_income_log_deviation": 0.0,
+            "coverage_probability": 0.7843137254901962,
+            "repairable_filing_probability": 0.8956285402561782,
+            "coverage_multiplier": 0.9901960784313726,
+            "repairable_filing_multiplier": 0.9975954566865667
+          },
+          {
+            "quarter": 2,
+            "premium_income_log_deviation": 0.09531017980432477,
+            "premium_value_log_deviation": 0.09531017980432477,
+            "deductible_income_log_deviation": 0.0,
+            "coverage_probability": 0.7761429591690868,
+            "repairable_filing_probability": 0.8933800982620308,
+            "coverage_multiplier": 0.9850893494806792,
+            "repairable_filing_multiplier": 0.9963779440927641
+          },
+          {
+            "quarter": 3,
+            "premium_income_log_deviation": 0.09531017980432477,
+            "premium_value_log_deviation": 0.09531017980432477,
+            "deductible_income_log_deviation": 0.0,
+            "coverage_probability": 0.7719758189674881,
+            "repairable_filing_probability": 0.8922399564857427,
+            "coverage_multiplier": 0.98248488685468,
+            "repairable_filing_multiplier": 0.9957657208810723
+          },
+          {
+            "quarter": 4,
+            "premium_income_log_deviation": 0.09531017980432477,
+            "premium_value_log_deviation": 0.09531017980432477,
+            "deductible_income_log_deviation": 0.0,
+            "coverage_probability": 0.7698718551793178,
+            "repairable_filing_probability": 0.8916658752207999,
+            "coverage_multiplier": 0.9811699094870736,
+            "repairable_filing_multiplier": 0.9954587885035255
+          }
+        ]
+      }
+    },
+    "filing_only": {
+      "service_musd": 4093.077730243895,
+      "delta_musd": 0.0,
+      "quarters": [
+        {
+          "period": "FY2027Q1",
+          "units_vs_reference": 0.0,
+          "tlf": 0.23157503140012364
+        },
+        {
+          "period": "FY2027Q2",
+          "units_vs_reference": 0.0,
+          "tlf": 0.23175885310178532
+        },
+        {
+          "period": "FY2027Q3",
+          "units_vs_reference": 0.0,
+          "tlf": 0.23175236656872122
+        },
+        {
+          "period": "FY2027Q4",
+          "units_vs_reference": 0.0,
+          "tlf": 0.23166473047096994
+        }
+      ],
+      "premium_diagnostics": {
+        "status": "Conditional behavioral sensitivity; not an estimated causal forecast",
+        "forecast_admission": false,
+        "quarters": [
+          {
+            "quarter": 1,
+            "premium_income_log_deviation": 0.09531017980432477,
+            "premium_value_log_deviation": 0.09531017980432477,
+            "deductible_income_log_deviation": 0.0,
+            "coverage_probability": 0.8,
+            "repairable_filing_probability": 0.8956285402561782,
+            "coverage_multiplier": 1.0,
+            "repairable_filing_multiplier": 0.9975714112534324
+          },
+          {
+            "quarter": 2,
+            "premium_income_log_deviation": 0.09531017980432477,
+            "premium_value_log_deviation": 0.09531017980432477,
+            "deductible_income_log_deviation": 0.0,
+            "coverage_probability": 0.8,
+            "repairable_filing_probability": 0.8933800982620308,
+            "coverage_multiplier": 1.0,
+            "repairable_filing_multiplier": 0.9963222768122393
+          },
+          {
+            "quarter": 3,
+            "premium_income_log_deviation": 0.09531017980432477,
+            "premium_value_log_deviation": 0.09531017980432477,
+            "deductible_income_log_deviation": 0.0,
+            "coverage_probability": 0.8,
+            "repairable_filing_probability": 0.8922399564857427,
+            "coverage_multiplier": 1.0,
+            "repairable_filing_multiplier": 0.9956888647143015
+          },
+          {
+            "quarter": 4,
+            "premium_income_log_deviation": 0.09531017980432477,
+            "premium_value_log_deviation": 0.09531017980432477,
+            "deductible_income_log_deviation": 0.0,
+            "coverage_probability": 0.8,
+            "repairable_filing_probability": 0.8916658752207999,
+            "coverage_multiplier": 1.0,
+            "repairable_filing_multiplier": 0.9953699306782222
+          }
+        ]
+      }
+    },
+    "premiums_5pct_below_reference": {
+      "service_musd": 4116.682023074879,
+      "delta_musd": 23.604292830983923,
+      "quarters": [
+        {
+          "period": "FY2027Q1",
+          "units_vs_reference": 0.005050505050506304,
+          "tlf": 0.2309161499901453
+        },
+        {
+          "period": "FY2027Q2",
+          "units_vs_reference": 0.007516784118202446,
+          "tlf": 0.23076489907003148
+        },
+        {
+          "period": "FY2027Q3",
+          "units_vs_reference": 0.008735231141700162,
+          "tlf": 0.23058979161779872
+        },
+        {
+          "period": "FY2027Q4",
+          "units_vs_reference": 0.009340789004174788,
+          "tlf": 0.23041784048534084
+        }
+      ],
+      "premium_diagnostics": {
+        "status": "Conditional behavioral sensitivity; not an estimated causal forecast",
+        "forecast_admission": false,
+        "quarters": [
+          {
+            "quarter": 1,
+            "premium_income_log_deviation": -0.051293294387551036,
+            "premium_value_log_deviation": -0.051293294387551036,
+            "deductible_income_log_deviation": 0.0,
+            "coverage_probability": 0.8080808080808082,
+            "repairable_filing_probability": 0.9022846357235719,
+            "coverage_multiplier": 1.0050505050505052,
+            "repairable_filing_multiplier": 1.0012756201694983
+          },
+          {
+            "quarter": 2,
+            "premium_income_log_deviation": -0.051293294387551036,
+            "premium_value_log_deviation": -0.051293294387551036,
+            "deductible_income_log_deviation": 0.0,
+            "coverage_probability": 0.8120268545891214,
+            "repairable_filing_probability": 0.9034094128988501,
+            "coverage_multiplier": 1.007516784118201,
+            "repairable_filing_multiplier": 1.0019082497322251
+          },
+          {
+            "quarter": 3,
+            "premium_income_log_deviation": -0.051293294387551036,
+            "premium_value_log_deviation": -0.051293294387551036,
+            "deductible_income_log_deviation": 0.0,
+            "coverage_probability": 0.8139763698267212,
+            "repairable_filing_probability": 0.9039674546285262,
+            "coverage_multiplier": 1.0087352311417006,
+            "repairable_filing_multiplier": 1.0022232284164434
+          },
+          {
+            "quarter": 4,
+            "premium_income_log_deviation": -0.051293294387551036,
+            "premium_value_log_deviation": -0.051293294387551036,
+            "deductible_income_log_deviation": 0.0,
+            "coverage_probability": 0.8149452624066803,
+            "repairable_filing_probability": 0.9042453935732896,
+            "coverage_multiplier": 1.0093407890041752,
+            "repairable_filing_multiplier": 1.0023803788415493
+          }
+        ]
+      }
+    },
+    "income_catches_up": {
+      "service_musd": 4093.077730243895,
+      "delta_musd": 0.0,
+      "quarters": [
+        {
+          "period": "FY2027Q1",
+          "units_vs_reference": 0.0,
+          "tlf": 0.231142625616621
+        },
+        {
+          "period": "FY2027Q2",
+          "units_vs_reference": 0.0,
+          "tlf": 0.23110348807505088
+        },
+        {
+          "period": "FY2027Q3",
+          "units_vs_reference": 0.0,
+          "tlf": 0.23098403055931077
+        },
+        {
+          "period": "FY2027Q4",
+          "units_vs_reference": 0.0,
+          "tlf": 0.2308397108684518
+        }
+      ],
+      "premium_diagnostics": {
+        "status": "Conditional behavioral sensitivity; not an estimated causal forecast",
+        "forecast_admission": false,
+        "quarters": [
+          {
+            "quarter": 1,
+            "premium_income_log_deviation": 0.0,
+            "premium_value_log_deviation": 0.0,
+            "deductible_income_log_deviation": 0.0,
+            "coverage_probability": 0.8,
+            "repairable_filing_probability": 0.8999999999999999,
+            "coverage_multiplier": 1.0,
+            "repairable_filing_multiplier": 1.0
+          },
+          {
+            "quarter": 2,
+            "premium_income_log_deviation": 0.0,
+            "premium_value_log_deviation": 0.0,
+            "deductible_income_log_deviation": 0.0,
+            "coverage_probability": 0.8,
+            "repairable_filing_probability": 0.8999999999999999,
+            "coverage_multiplier": 1.0,
+            "repairable_filing_multiplier": 1.0
+          },
+          {
+            "quarter": 3,
+            "premium_income_log_deviation": 0.0,
+            "premium_value_log_deviation": 0.0,
+            "deductible_income_log_deviation": 0.0,
+            "coverage_probability": 0.8,
+            "repairable_filing_probability": 0.8999999999999999,
+            "coverage_multiplier": 1.0,
+            "repairable_filing_multiplier": 1.0
+          },
+          {
+            "quarter": 4,
+            "premium_income_log_deviation": 0.0,
+            "premium_value_log_deviation": 0.0,
+            "deductible_income_log_deviation": 0.0,
+            "coverage_probability": 0.8,
+            "repairable_filing_probability": 0.8999999999999999,
+            "coverage_multiplier": 1.0,
+            "repairable_filing_multiplier": 1.0
+          }
+        ]
+      }
+    },
+    "payoff_10pp_above_reference": {
+      "service_musd": 4068.9195286582476,
+      "delta_musd": -24.158201585647475,
+      "quarters": [
+        {
+          "period": "FY2027Q1",
+          "units_vs_reference": -0.0050750687696013985,
+          "tlf": 0.2311426256166209
+        },
+        {
+          "period": "FY2027Q2",
+          "units_vs_reference": -0.007668957046910063,
+          "tlf": 0.23110348807505068
+        },
+        {
+          "period": "FY2027Q3",
+          "units_vs_reference": -0.00897999620672929,
+          "tlf": 0.23098403055931058
+        },
+        {
+          "period": "FY2027Q4",
+          "units_vs_reference": -0.009639039167383179,
+          "tlf": 0.23083971086845168
+        }
+      ],
+      "premium_diagnostics": {
+        "status": "Conditional behavioral sensitivity; not an estimated causal forecast",
+        "forecast_admission": false,
+        "quarters": [
+          {
+            "quarter": 1,
+            "premium_income_log_deviation": 0.0,
+            "premium_value_log_deviation": 0.0,
+            "deductible_income_log_deviation": 0.0,
+            "coverage_probability": 0.7918798899686367,
+            "repairable_filing_probability": 0.8999999999999999,
+            "coverage_multiplier": 0.9949249312303978,
+            "repairable_filing_multiplier": 1.0
+          },
+          {
+            "quarter": 2,
+            "premium_income_log_deviation": 0.0,
+            "premium_value_log_deviation": 0.0,
+            "deductible_income_log_deviation": 0.0,
+            "coverage_probability": 0.7877296687249452,
+            "repairable_filing_probability": 0.8999999999999999,
+            "coverage_multiplier": 0.9923310429530907,
+            "repairable_filing_multiplier": 1.0
+          },
+          {
+            "quarter": 3,
+            "premium_income_log_deviation": 0.0,
+            "premium_value_log_deviation": 0.0,
+            "deductible_income_log_deviation": 0.0,
+            "coverage_probability": 0.7856320060692341,
+            "repairable_filing_probability": 0.8999999999999999,
+            "coverage_multiplier": 0.9910200037932713,
+            "repairable_filing_multiplier": 1.0
+          },
+          {
+            "quarter": 4,
+            "premium_income_log_deviation": 0.0,
+            "premium_value_log_deviation": 0.0,
+            "deductible_income_log_deviation": 0.0,
+            "coverage_probability": 0.7845775373321875,
+            "repairable_filing_probability": 0.8999999999999999,
+            "coverage_multiplier": 0.9903609608326172,
+            "repairable_filing_multiplier": 1.0
+          }
+        ]
+      }
+    },
+    "shock_then_relief": {
+      "service_musd": 4065.6867408940925,
+      "delta_musd": -27.390989349802567,
+      "quarters": [
+        {
+          "period": "FY2027Q1",
+          "units_vs_reference": -0.009803921568626972,
+          "tlf": 0.2315707422251263
+        },
+        {
+          "period": "FY2027Q2",
+          "units_vs_reference": -0.0149106505193205,
+          "tlf": 0.23174890556804736
+        },
+        {
+          "period": "FY2027Q3",
+          "units_vs_reference": -0.007301738827130921,
+          "tlf": 0.23130411152610722
+        },
+        {
+          "period": "FY2027Q4",
+          "units_vs_reference": -0.003612481645561272,
+          "tlf": 0.23099902859552357
+        }
+      ],
+      "premium_diagnostics": {
+        "status": "Conditional behavioral sensitivity; not an estimated causal forecast",
+        "forecast_admission": false,
+        "quarters": [
+          {
+            "quarter": 1,
+            "premium_income_log_deviation": 0.09531017980432477,
+            "premium_value_log_deviation": 0.09531017980432477,
+            "deductible_income_log_deviation": 0.0,
+            "coverage_probability": 0.7843137254901962,
+            "repairable_filing_probability": 0.8956285402561782,
+            "coverage_multiplier": 0.9901960784313726,
+            "repairable_filing_multiplier": 0.9975954566865667
+          },
+          {
+            "quarter": 2,
+            "premium_income_log_deviation": 0.09531017980432477,
+            "premium_value_log_deviation": 0.09531017980432477,
+            "deductible_income_log_deviation": 0.0,
+            "coverage_probability": 0.7761429591690868,
+            "repairable_filing_probability": 0.8933800982620308,
+            "coverage_multiplier": 0.9850893494806792,
+            "repairable_filing_multiplier": 0.9963779440927641
+          },
+          {
+            "quarter": 3,
+            "premium_income_log_deviation": 0.0,
+            "premium_value_log_deviation": 0.0,
+            "deductible_income_log_deviation": 0.0,
+            "coverage_probability": 0.7883172178765916,
+            "repairable_filing_probability": 0.8967369789152173,
+            "coverage_multiplier": 0.9926982611728697,
+            "repairable_filing_multiplier": 0.9982005443843492
+          },
+          {
+            "quarter": 4,
+            "premium_income_log_deviation": 0.0,
+            "premium_value_log_deviation": 0.0,
+            "deductible_income_log_deviation": 0.0,
+            "coverage_probability": 0.7942200293671025,
+            "repairable_filing_probability": 0.8983801043857852,
+            "coverage_multiplier": 0.9963875183544391,
+            "repairable_filing_multiplier": 0.9991033208029326
+          }
+        ]
+      }
+    }
+  }
+}

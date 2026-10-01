@@ -1,0 +1,471 @@
+{
+  "same_as_reference": {
+    "premium": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "reference_premium": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "income": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "reference_income": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "vehicle_value": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "reference_vehicle_value": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "deductible": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "reference_deductible": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "baseline_coverage_probability": 0.8,
+    "baseline_repairable_filing_probability": 0.9,
+    "affected_baseline_claim_fraction": 0.5,
+    "quarterly_adjustment_fraction": 0.5,
+    "coverage_income_slope": 1.0,
+    "coverage_value_slope": 1.0,
+    "coverage_payoff_slope": 1.0,
+    "filing_income_slope": 1.0,
+    "filing_deductible_slope": 1.0,
+    "excess_lien_free_fraction": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "claims_excludes_premium_channels": false,
+    "status": "All behavioral inputs ASSUMED; indices relative to explicit reference"
+  },
+  "premiums_10pct_above_reference": {
+    "premium": [
+      110.0,
+      110.0,
+      110.0,
+      110.0
+    ],
+    "reference_premium": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "income": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "reference_income": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "vehicle_value": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "reference_vehicle_value": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "deductible": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "reference_deductible": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "baseline_coverage_probability": 0.8,
+    "baseline_repairable_filing_probability": 0.9,
+    "affected_baseline_claim_fraction": 0.5,
+    "quarterly_adjustment_fraction": 0.5,
+    "coverage_income_slope": 1.0,
+    "coverage_value_slope": 1.0,
+    "coverage_payoff_slope": 1.0,
+    "filing_income_slope": 1.0,
+    "filing_deductible_slope": 1.0,
+    "excess_lien_free_fraction": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "claims_excludes_premium_channels": false,
+    "status": "All behavioral inputs ASSUMED; indices relative to explicit reference"
+  },
+  "filing_only": {
+    "premium": [
+      110.0,
+      110.0,
+      110.0,
+      110.0
+    ],
+    "reference_premium": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "income": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "reference_income": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "vehicle_value": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "reference_vehicle_value": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "deductible": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "reference_deductible": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "baseline_coverage_probability": 0.8,
+    "baseline_repairable_filing_probability": 0.9,
+    "affected_baseline_claim_fraction": 0.5,
+    "quarterly_adjustment_fraction": 0.5,
+    "coverage_income_slope": 0.0,
+    "coverage_value_slope": 0.0,
+    "coverage_payoff_slope": 1.0,
+    "filing_income_slope": 1.0,
+    "filing_deductible_slope": 1.0,
+    "excess_lien_free_fraction": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "claims_excludes_premium_channels": false,
+    "status": "All behavioral inputs ASSUMED; indices relative to explicit reference"
+  },
+  "premiums_5pct_below_reference": {
+    "premium": [
+      95.0,
+      95.0,
+      95.0,
+      95.0
+    ],
+    "reference_premium": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "income": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "reference_income": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "vehicle_value": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "reference_vehicle_value": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "deductible": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "reference_deductible": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "baseline_coverage_probability": 0.8,
+    "baseline_repairable_filing_probability": 0.9,
+    "affected_baseline_claim_fraction": 0.5,
+    "quarterly_adjustment_fraction": 0.5,
+    "coverage_income_slope": 1.0,
+    "coverage_value_slope": 1.0,
+    "coverage_payoff_slope": 1.0,
+    "filing_income_slope": 1.0,
+    "filing_deductible_slope": 1.0,
+    "excess_lien_free_fraction": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "claims_excludes_premium_channels": false,
+    "status": "All behavioral inputs ASSUMED; indices relative to explicit reference"
+  },
+  "income_catches_up": {
+    "premium": [
+      110.0,
+      110.0,
+      110.0,
+      110.0
+    ],
+    "reference_premium": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "income": [
+      110.0,
+      110.0,
+      110.0,
+      110.0
+    ],
+    "reference_income": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "vehicle_value": [
+      110.0,
+      110.0,
+      110.0,
+      110.0
+    ],
+    "reference_vehicle_value": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "deductible": [
+      110.0,
+      110.0,
+      110.0,
+      110.0
+    ],
+    "reference_deductible": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "baseline_coverage_probability": 0.8,
+    "baseline_repairable_filing_probability": 0.9,
+    "affected_baseline_claim_fraction": 0.5,
+    "quarterly_adjustment_fraction": 0.5,
+    "coverage_income_slope": 1.0,
+    "coverage_value_slope": 1.0,
+    "coverage_payoff_slope": 1.0,
+    "filing_income_slope": 1.0,
+    "filing_deductible_slope": 1.0,
+    "excess_lien_free_fraction": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "claims_excludes_premium_channels": false,
+    "status": "All behavioral inputs ASSUMED; indices relative to explicit reference"
+  },
+  "payoff_10pp_above_reference": {
+    "premium": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "reference_premium": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "income": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "reference_income": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "vehicle_value": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "reference_vehicle_value": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "deductible": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "reference_deductible": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "baseline_coverage_probability": 0.8,
+    "baseline_repairable_filing_probability": 0.9,
+    "affected_baseline_claim_fraction": 0.5,
+    "quarterly_adjustment_fraction": 0.5,
+    "coverage_income_slope": 1.0,
+    "coverage_value_slope": 1.0,
+    "coverage_payoff_slope": 1.0,
+    "filing_income_slope": 1.0,
+    "filing_deductible_slope": 1.0,
+    "excess_lien_free_fraction": [
+      0.1,
+      0.1,
+      0.1,
+      0.1
+    ],
+    "claims_excludes_premium_channels": false,
+    "status": "All behavioral inputs ASSUMED; indices relative to explicit reference"
+  },
+  "shock_then_relief": {
+    "premium": [
+      110.0,
+      110.0,
+      100.0,
+      100.0
+    ],
+    "reference_premium": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "income": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "reference_income": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "vehicle_value": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "reference_vehicle_value": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "deductible": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "reference_deductible": [
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ],
+    "baseline_coverage_probability": 0.8,
+    "baseline_repairable_filing_probability": 0.9,
+    "affected_baseline_claim_fraction": 0.5,
+    "quarterly_adjustment_fraction": 0.5,
+    "coverage_income_slope": 1.0,
+    "coverage_value_slope": 1.0,
+    "coverage_payoff_slope": 1.0,
+    "filing_income_slope": 1.0,
+    "filing_deductible_slope": 1.0,
+    "excess_lien_free_fraction": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "claims_excludes_premium_channels": false,
+    "status": "All behavioral inputs ASSUMED; indices relative to explicit reference"
+  }
+}

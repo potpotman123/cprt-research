@@ -83,6 +83,10 @@ def validate(c):
             raise ValueError('Invalid eight-quarter driver: '+k)
     for k in ['claims', 'repair', 'value', 'expected_salvage', 'realized_salvage']:
         if min(c[k]) <= 0: raise ValueError(k+' must be positive')
+    for k in ['coverage_exposure', 'repairable_filing']:
+        v = c.get(k, [1.] * 8)
+        if len(v) != 8 or any(not isinstance(x, (float, int)) or not math.isfinite(x) or x <= 0 for x in v):
+            raise ValueError('Invalid positive eight-quarter driver: ' + k)
     for k in ['routing', 'nonfiling', 'preferred_buyer_fraction', 'seller_fee_fraction']:
         if max(c[k]) > 1: raise ValueError(k+' out of range')
     if max(c['nonfiling']) >= 1: raise ValueError('Nonfiling must be <1')
@@ -231,7 +235,7 @@ def operating(c):
         norm = sum(weights.values()); weights = {k:v/norm for k,v in weights.items()}
         q = dict(claims=0., totals=0., assignments=0., buyer=0., seller=0., proceeds=0.)
         for (b,k), w in cw.items():
-            cl = w*raw[b,k]/raw0[b,k]*c['claims'][p]
+            cl = w*raw[b,k]/raw0[b,k]*c['claims'][p]*c.get('coverage_exposure', [1.] * 8)[p]
             conditional = c['carrier_claim_weights_by_cell'].get(f'{b}:{k}', weights)
             if set(conditional) != set(weights) or any(v < 0 for v in conditional.values()) or abs(sum(conditional.values())-1)>1e-8:
                 raise ValueError('Carrier weights must span all carriers and sum to one per cell')
@@ -246,7 +250,7 @@ def operating(c):
                     terms.get('seller_pct',c['seller_fee_fraction'][p]),terms.get('seller_fixed',c['seller_fixed_fee'][p]),
                     c['fixed_buyer_fee'][p],c['buyer_fee_multiplier'][p],c['schedule_ids'][p],c['nodes'])
                 claims = cl*conditional[name]; tl = claims*ec['TLF']
-                reported = claims-(claims-tl)*c['nonfiling'][p]
+                reported = tl+(claims-tl)*(1-c['nonfiling'][p])*c.get('repairable_filing', [1.] * 8)[p]
                 units = tl*alloc*c['routing'][p]
                 for key, val in [('claims',reported),('totals',tl),('assignments',units),('buyer',units*ec['buyer']),('seller',units*ec['seller']),('proceeds',units*ec['ASP'])]: q[key] += val
                 cells.append(dict(period=p,body=b,age=k,carrier=name,claims=reported,totals=tl,assignments=units,core_RPU=ec['core_RPU']))
@@ -281,6 +285,10 @@ def service_revenue(spec, sales, assignments):
 
 
 def run(c):
+    premium_diagnostics = None
+    if c.get('premium_assumptions') is not None:
+        from premium_channels import compile_channels
+        c, premium_diagnostics = compile_channels(c, c['premium_assumptions'])
     d, _, _ = old.load()
     ops, cells = operating(c)
     # Components are allocated by explicit assumptions, never called disclosures.
@@ -339,6 +347,7 @@ def run(c):
             consolidated_total_musd=None if acq is None else total+acq,
             consolidated_service_musd=None if acqs is None else service+acqs))
     return dict(quarters=rows,base_ledger=bases,base_modeled_units=prior_units,operating=ops,
+                premium_diagnostics=premium_diagnostics,
                 cells=cells,inventory=inventory,title_recognition=title_flow,delivery_recognition=delivery_flow,
                 limitations=['Absolute units and component split are conditional, not observed',
                     'Carrier total-loss weights transferred to claim weights under common economics; cohort-specific weights unmeasured',
