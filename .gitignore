@@ -36,3 +36,4 @@ __pycache__/
 *.pyc
 *.bak
 .DS_Store
+model/CPRT_Model_v2_recalc.xlsx

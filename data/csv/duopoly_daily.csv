@@ -16,3 +16,4 @@ snapshot_utc,day,copart_snapshot,copart_us_lots,copart_total_lots,iaa_vehicles,i
 2026-09-27T22:51:07Z,2026-09-27,2026-09-27T22:50:49Z,143209,147521,105563,201,363,57.57,94.4,,1,0.02,1
 2026-09-28T22:45:17Z,2026-09-28,2026-09-28T22:45:05Z,143452,147581,89999,201,331,,82.2,iaa incomplete: sitemap3 failed,0,0.02,0
 2026-09-29T22:45:16Z,2026-09-29,2026-09-29T22:45:05Z,138659,142831,89999,201,315,,77.1,iaa incomplete: sitemap3 failed; copart overlap 3.42% > 1 (ungated),0,3.42,0
+2026-09-30T22:45:18Z,2026-09-30,2026-09-30T22:45:03Z,137064,141182,89999,201,305,,81.3,iaa incomplete: sitemap3 failed; copart overlap 3.59% > 1 (ungated),0,3.59,0
