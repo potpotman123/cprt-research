@@ -108,3 +108,7 @@ The curated ZIP includes current engines, saved inputs, calibration, output tabl
 Raw licensed transcripts, sell-side reports, private workbook attachments, unrelated scraper data and abandoned models are excluded. Extracted numeric facts and provenance remain. The underlying public financial releases and source chart images were inspected during the audit; the source-audit script requires the original local/raw sources and Git baseline, and is not a portable source revalidation command.
 
 Fable may proceed with layout and formula translation while evidence gaps remain visible. The decision to adopt a revenue forecast requires the outstanding sourcing, switching, applicability, baseline and perimeter work in `AUDIT.md`.
+
+## 1 October successor audit and combined scenarios
+
+Read `docs/thesis_architecture_audit_2026-10-01/README.md` and `model/thesis_audit_2026-10-01/README.md` before extending the workbook. The new package integrates premium scenarios, explicit carrier paths/dated terms, fleet isolation and a quarterly sourcing ramp. It contains two clearly labeled comparisons and exact contribution attribution. The saved CCC reference remains $4,093.077730m; the new illustrative combined case is $3,904.623888m, with −$132.820456m allocation and −$55.633386m aftermarket contributions versus that reference. Premium non-recovery and fleet roll are already in the reference: do not add their diagnostic-comparator effects again. The earlier ZIP remains a dated snapshot and does not contain these additions. No workbook was edited by this audit.

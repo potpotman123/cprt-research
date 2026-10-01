@@ -97,3 +97,11 @@ The code now represents the audited relationships and refuses several invalid sh
 - `model.py`, `run.py`, `test_model.py`, `evidence.py`: reproducible local calculations. Run the test script, then run.py. No spreadsheet dependencies.
 
 Fable should retain the approved RPM Summary / Volume Build / Vehicle Economics / Revenue Bridge organization. Display separate scenario columns and evidence status, keep reported history distinct from allocated components, and do not label the most bearish case the forecast. Acquisition-null outputs remain unavailable. Start the next data pass with the three narrow fields for direction 1; pursue direction 2 only when a concrete source can constrain the marginal decision, with approval before expensive collection.
+
+## 1 October thesis integration audit
+
+Use [the combined audit package](../thesis_audit_2026-10-01/README.md) for joint premium, carrier, fleet and quarterly aftermarket scenarios and contribution attribution. The earlier reference remains reproducible; its `same_quarter_neutral` mode repeats previous-year carrier conditions, which can imply a rebound after an account loss. It is not a verified latest-allocation forecast.
+
+New optional interfaces: `carrier_claim_weights_by_period` is eight dictionaries of carrier fractions summing to one, mutually exclusive with static cell-specific weights; `carrier_terms_by_period` maps a carrier to eight term dictionaries that override its static terms; `fleet_period_weights` supplies eight normalized five-year calendar-weight rows for composition comparisons. Allocation overrides require eight fractions and exact carrier names. Future-only changes preserve historical normalization. Both `run` and `operating` honor `premium_assumptions`.
+
+Operating/cell outputs now expose baseline-compatible claims before incremental filing adjustments, reported claims, selected TLF, allocation and fee components. `prefiling_claims` is the calibrated baseline-compatible pool before the incremental filing multiplier, **not** an observed all-crash census. Direct period carrier weights are claim shares; premium-dollar shares require a measured conversion before being treated as such.

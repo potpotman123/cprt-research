@@ -1,0 +1,338 @@
+{
+  "as_of": "2026-10-01",
+  "forecast_admission": false,
+  "status": "ILLUSTRATIVE AUDIT SCENARIOS; not an adopted bear forecast or a measured bull forecast",
+  "saved_CCC_reference": {
+    "service_musd": 4093.077730243895,
+    "insurance_musd": 3083.1035370325344,
+    "modeled_insurance_units": 3367160.8485672576,
+    "insurance_allin_RPU": 915.6389242124887
+  },
+  "recovery_comparator": {
+    "service_musd": 4132.662422084255,
+    "insurance_musd": 3122.6882288728943,
+    "modeled_insurance_units": 3404057.1632314785,
+    "insurance_allin_RPU": 917.3430642123882
+  },
+  "combined_case": {
+    "service_musd": 3904.623888263005,
+    "insurance_musd": 2894.6496950516434,
+    "modeled_insurance_units": 3179559.9534600265,
+    "insurance_allin_RPU": 910.3931793774352
+  },
+  "combined_vs_comparator": {
+    "service_musd": 3904.623888263005,
+    "insurance_musd": 2894.6496950516434,
+    "modeled_insurance_units": 3179559.9534600265,
+    "insurance_allin_RPU": 910.3931793774352,
+    "delta_service_musd": -228.03853382124998,
+    "unit_change": -0.06594989420164032,
+    "allin_RPU_change": -0.007576102230543391,
+    "units_contribution_musd": -205.94095831887506,
+    "RPU_contribution_musd": -23.657805256055475,
+    "product_interaction_musd": 1.5602297536798695
+  },
+  "combined_vs_saved_reference": {
+    "service_musd": 3904.623888263005,
+    "insurance_musd": 2894.6496950516434,
+    "modeled_insurance_units": 3179559.9534600265,
+    "insurance_allin_RPU": 910.3931793774352,
+    "delta_service_musd": -188.45384198089005,
+    "unit_change": -0.05571485995005443,
+    "allin_RPU_change": -0.00572905399316137,
+    "units_contribution_musd": -171.77468177728505,
+    "RPU_contribution_musd": -17.663266630166145,
+    "product_interaction_musd": 0.9841064265601764
+  },
+  "factor_attribution": [
+    {
+      "factor": "market_allocation",
+      "service_contribution_musd": -133.6116774172641,
+      "share_of_net_shortfall": 0.5859171043521828,
+      "modeled_unit_contribution": -146054.39604532305,
+      "allin_RPU_contribution_usd": -0.0403077390013209,
+      "standalone_service_delta_musd": -135.33811339436988
+    },
+    {
+      "factor": "premium_recovery",
+      "service_contribution_musd": -22.97373334992725,
+      "share_of_net_shortfall": 0.10074496167360651,
+      "modeled_unit_contribution": -25146.535526333064,
+      "allin_RPU_contribution_usd": 0.0025574931524943167,
+      "standalone_service_delta_musd": -23.726736295984665
+    },
+    {
+      "factor": "aftermarket",
+      "service_contribution_musd": -55.966964517980344,
+      "share_of_net_shortfall": 0.24542766338714728,
+      "modeled_unit_contribution": -42514.94092617533,
+      "allin_RPU_contribution_usd": -5.200532173195521,
+      "standalone_service_delta_musd": -57.23480143914503
+    },
+    {
+      "factor": "fleet_mix",
+      "service_contribution_musd": -15.486158536078277,
+      "share_of_net_shortfall": 0.06791027058706332,
+      "modeled_unit_contribution": -10781.337273620535,
+      "allin_RPU_contribution_usd": -1.7116024159086198,
+      "standalone_service_delta_musd": -15.980399009376015
+    }
+  ],
+  "sequential_bridge": [
+    {
+      "step": "market_allocation",
+      "from_mask": 0,
+      "to_mask": 1,
+      "delta_musd": -135.33811339436988,
+      "ending_service_musd": 3997.324308689885
+    },
+    {
+      "step": "premium_recovery",
+      "from_mask": 1,
+      "to_mask": 3,
+      "delta_musd": -22.80420514541629,
+      "ending_service_musd": 3974.520103544469
+    },
+    {
+      "step": "aftermarket",
+      "from_mask": 3,
+      "to_mask": 7,
+      "delta_musd": -54.90050973276493,
+      "ending_service_musd": 3919.619593811704
+    },
+    {
+      "step": "fleet_mix",
+      "from_mask": 7,
+      "to_mask": 15,
+      "delta_musd": -14.99570554869888,
+      "ending_service_musd": 3904.623888263005
+    }
+  ],
+  "diagnostics": {
+    "10pct_repairable_nonfiling_only": {
+      "service_musd": 4093.077730243895,
+      "insurance_musd": 3083.1035370325344,
+      "modeled_insurance_units": 3367160.8485672576,
+      "insurance_allin_RPU": 915.6389242124887,
+      "delta_service_musd": 0.0,
+      "unit_change": 0.0,
+      "allin_RPU_change": 0.0,
+      "units_contribution_musd": 0.0,
+      "RPU_contribution_musd": 0.0,
+      "product_interaction_musd": 0.0,
+      "quarterly_TLF": [
+        0.2503943823543523,
+        0.2503530464950323,
+        0.2502268769988495,
+        0.2500744440363961
+      ]
+    },
+    "repair_plus5pct": {
+      "service_musd": 4308.413283309624,
+      "insurance_musd": 3298.4390900982626,
+      "modeled_insurance_units": 3583751.7822539425,
+      "insurance_allin_RPU": 920.3871502573103,
+      "delta_service_musd": 215.33555306572862,
+      "unit_change": 0.06432449871791701,
+      "allin_RPU_change": 0.005185697024517877,
+      "units_contribution_musd": 198.31908951505457,
+      "RPU_contribution_musd": 15.988040838270436,
+      "product_interaction_musd": 1.028422712403331,
+      "quarterly_TLF": [
+        0.24601496033888348,
+        0.24597575486159037,
+        0.24584149810886377,
+        0.24567782542649363
+      ]
+    },
+    "expected_salvage_plus5pct": {
+      "service_musd": 4163.756299051307,
+      "insurance_musd": 3153.782105839946,
+      "modeled_insurance_units": 3440587.405673112,
+      "insurance_allin_RPU": 916.6406005671419,
+      "delta_service_musd": 70.67856880741192,
+      "unit_change": 0.02180666751845184,
+      "allin_RPU_change": 0.001093964365390665,
+      "units_contribution_musd": 67.23221375703118,
+      "RPU_contribution_musd": 3.372805404323536,
+      "product_interaction_musd": 0.07354964605652067,
+      "quarterly_TLF": [
+        0.23618296712523196,
+        0.2361449164353417,
+        0.2360213975804127,
+        0.23587142609860115
+      ]
+    },
+    "realized_salvage_plus5pct": {
+      "service_musd": 4161.789887045327,
+      "insurance_musd": 3151.815693833966,
+      "modeled_insurance_units": 3367160.8485672576,
+      "insurance_allin_RPU": 936.0454803265719,
+      "delta_service_musd": 68.71215680143223,
+      "unit_change": 0.0,
+      "allin_RPU_change": 0.022286684821349434,
+      "units_contribution_musd": 0.0,
+      "RPU_contribution_musd": 68.71215680143166,
+      "product_interaction_musd": 0.0,
+      "quarterly_TLF": [
+        0.231142625616621,
+        0.23110348807505088,
+        0.23098403055931077,
+        0.2308397108684518
+      ]
+    },
+    "reference_expected_salvage_catches_up_to_realized": {
+      "service_musd": 4145.143741807226,
+      "insurance_musd": 3135.1695485958653,
+      "modeled_insurance_units": 3421210.4771254333,
+      "insurance_allin_RPU": 916.3918939094607,
+      "delta_service_musd": 52.06601156333136,
+      "unit_change": 0.016051988897760605,
+      "allin_RPU_change": 0.0008223434773915184,
+      "units_contribution_musd": 49.48994374709255,
+      "RPU_contribution_musd": 2.535370083801486,
+      "product_interaction_musd": 0.040697732436895714,
+      "quarterly_TLF": [
+        0.23485284324836547,
+        0.23481450157066058,
+        0.2346920592184088,
+        0.23454358670174616
+      ]
+    },
+    "hold_all_Q4_allocations_and_carrier_mix": {
+      "service_musd": 3977.7366681196536,
+      "insurance_musd": 2967.7624749082925,
+      "modeled_insurance_units": 3241228.49627164,
+      "insurance_allin_RPU": 915.6288975991931,
+      "delta_service_musd": -115.34106212424149,
+      "unit_change": -0.0374001593506299,
+      "allin_RPU_change": -1.095040089549304e-05,
+      "units_contribution_musd": -115.3085635795074,
+      "RPU_contribution_musd": -0.03376121973274284,
+      "product_interaction_musd": 0.0012626749978762125,
+      "quarterly_TLF": [
+        0.23114262561662113,
+        0.23110348807505093,
+        0.23098403055931083,
+        0.2308397108684518
+      ]
+    },
+    "inherited_PGR_runoff_only": {
+      "service_musd": 3959.3299453611157,
+      "insurance_musd": 2949.355752149755,
+      "modeled_insurance_units": 3221125.676442777,
+      "insurance_allin_RPU": 915.6288975991931,
+      "delta_service_musd": -133.74778488277934,
+      "unit_change": -0.04337041759873739,
+      "allin_RPU_change": -1.095040089549304e-05,
+      "units_contribution_musd": -133.71548790124524,
+      "RPU_contribution_musd": -0.03376121973274284,
+      "product_interaction_musd": 0.0014642381984517894,
+      "quarterly_TLF": [
+        0.23114262561662113,
+        0.23110348807505093,
+        0.23098403055931083,
+        0.2308397108684518
+      ]
+    },
+    "PGR_remaining_runoff_vs_Q4_hold": {
+      "service_musd": 3959.3299453611157,
+      "insurance_musd": 2949.355752149755,
+      "modeled_insurance_units": 3221125.676442777,
+      "insurance_allin_RPU": 915.6288975991931,
+      "delta_service_musd": -18.406722758537853,
+      "unit_change": -0.006202222352415854,
+      "allin_RPU_change": 0.0,
+      "units_contribution_musd": -18.406722758537263,
+      "RPU_contribution_musd": 0.0,
+      "product_interaction_musd": -0.0
+    },
+    "assumed_PGR_25bp_seller_concession_vs_runoff": {
+      "service_musd": 3958.959404078893,
+      "insurance_musd": 2948.9852108675323,
+      "modeled_insurance_units": 3221187.277767843,
+      "insurance_allin_RPU": 915.496354782285,
+      "delta_service_musd": -0.3705412822228027,
+      "unit_change": 1.912416069838052e-05,
+      "allin_RPU_change": -0.00014475604391217534,
+      "units_contribution_musd": 0.056403953361100795,
+      "RPU_contribution_musd": -0.42693707077068677,
+      "product_interaction_musd": -8.16481314955731e-06,
+      "quarterly_TLF": [
+        0.23119233407591738,
+        0.23115320705107112,
+        0.23103370970835777,
+        0.2308893346375436
+      ]
+    },
+    "existing_fleet_roll_vs_frozen": {
+      "service_musd": 4093.077730243895,
+      "insurance_musd": 3083.1035370325344,
+      "modeled_insurance_units": 3367160.8485672576,
+      "insurance_allin_RPU": 915.6389242124887,
+      "delta_service_musd": -15.857955544375272,
+      "unit_change": -0.003264706378436566,
+      "allin_RPU_change": -0.0018585450246294544,
+      "units_contribution_musd": -10.117199351345008,
+      "RPU_contribution_musd": -5.759559463547166,
+      "product_interaction_musd": 0.018803270517626886
+    },
+    "inherited_international_continuation_musd": 89.91249321136047,
+    "aftermarket_OEM_only_vs_same_context": {
+      "service_musd": 3946.9651845148237,
+      "insurance_musd": 2936.9909913034626,
+      "modeled_insurance_units": 3202433.312799757,
+      "insurance_allin_RPU": 917.1123031866574,
+      "delta_service_musd": -12.364760846292029,
+      "unit_change": -0.005803053193398688,
+      "allin_RPU_change": 0.0016200947691296097,
+      "units_contribution_musd": -17.11526831598157,
+      "RPU_contribution_musd": 4.778235826359905,
+      "product_interaction_musd": -0.02772835667097011
+    },
+    "aftermarket_weak_recycler_transmission_vs_same_context": {
+      "service_musd": 3943.0818826449913,
+      "insurance_musd": 2933.10768943363,
+      "modeled_insurance_units": 3199499.1598344124,
+      "insurance_allin_RPU": 916.739634207446,
+      "delta_service_musd": -16.248062716124423,
+      "unit_change": -0.0067139623785953395,
+      "allin_RPU_change": 0.0012130860124284215,
+      "units_contribution_musd": -19.801863561027346,
+      "RPU_contribution_musd": 3.5778222086082625,
+      "product_interaction_musd": -0.024021363705898927
+    },
+    "aftermarket_no_threshold_switching_vs_same_context": {
+      "service_musd": 3940.0092803106627,
+      "insurance_musd": 2930.0350870993016,
+      "modeled_insurance_units": 3221125.676442777,
+      "insurance_allin_RPU": 909.630787934689,
+      "delta_service_musd": -19.320665050453044,
+      "unit_change": 0.0,
+      "allin_RPU_change": -0.006550808608412617,
+      "units_contribution_musd": 0.0,
+      "RPU_contribution_musd": -19.32066505045377,
+      "product_interaction_musd": -0.0
+    },
+    "aftermarket_full_shift_all_year_vs_same_context": {
+      "service_musd": 3872.6023026586304,
+      "insurance_musd": 2862.6281094472693,
+      "modeled_insurance_units": 3155239.2115286957,
+      "insurance_allin_RPU": 907.261832633077,
+      "delta_service_musd": -86.72764270248535,
+      "unit_change": -0.020454484404607953,
+      "allin_RPU_change": -0.009138052532040919,
+      "units_contribution_musd": -60.32755123598805,
+      "RPU_contribution_musd": -26.951367798821437,
+      "product_interaction_musd": 0.5512763323238472
+    }
+  },
+  "attribution_note": "Shapley averages each factor over all 24 orders; negative net-share values are offsets. No allocation of this accounting identity establishes causation.",
+  "attribution_vs_saved_reference": {
+    "market_allocation_musd": -132.82045620663484,
+    "aftermarket_musd": -55.6333857742552,
+    "premium_recovery_musd": 0.0,
+    "fleet_mix_musd": 0.0,
+    "interpretation": "Premium non-recovery and fleet roll are already in the saved reference. Their diagnostic comparator contributions must not be added again."
+  }
+}

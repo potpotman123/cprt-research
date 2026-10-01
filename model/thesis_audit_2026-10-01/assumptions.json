@@ -1,0 +1,17 @@
+{
+  "as_of": "2026-10-01",
+  "status": "ILLUSTRATIVE AUDIT SCENARIOS; not an adopted bear forecast or a measured bull forecast",
+  "reference_config": "model/ccc_age_body_2026-09-29/reference_config.json",
+  "recovery_premium_index": [95, 95, 95, 95],
+  "no_relief_premium_index": [100, 100, 100, 100],
+  "premium_interpretation": "Assumed 5% additional premium relief versus no additional relief; all other burden indices 100. Does not reapply the already observed 48.54% rise. Slopes/exposure/lag remain the prior illustrative premium assumptions.",
+  "oem_to_aftermarket": [0.01, 0.02, 0.03, 0.04],
+  "recycled_to_aftermarket": [0.00375, 0.0075, 0.01125, 0.015],
+  "aftermarket_interpretation": "Cumulative percentage-point transfers in the same eligible hypothetical basket, relative to a fixed reference basket. A 5.5pp endpoint reached in Q4, not a measured national forecast or a three-year path. Existing tariffs are embedded in the assumed delivered prices; no separate tariff haircut.",
+  "factors": ["market_allocation", "premium_recovery", "aftermarket", "fleet_mix"],
+  "market_interpretation": "Retain prior simplified inherited_runoff: Q4 carrier claim-weight proxies and non-PGR allocations held; PGR 5% allocation endpoint inherited. Comparator repeats prior-year quarterly allocations. Neither is disclosed account-level allocation.",
+  "fleet_interpretation": "Existing calibrated 2025 age/body mix rolls with birth/survival/claim-propensity proxies versus frozen same-quarter age/body mass. This isolates the existing fleet channel; no new coverage haircut or causal age trend is added.",
+  "scope": "FY27 legacy service revenue; common US insurance population and historical ledger; other US/international/purchased settings unchanged",
+  "attribution": "Exact four-factor Shapley attribution over all 16 combinations; interaction shared over all factor orders; also report standalone and explicit sequential bridges",
+  "forecast_admission": false
+}

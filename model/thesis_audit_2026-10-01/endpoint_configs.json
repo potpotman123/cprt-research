@@ -1,0 +1,862 @@
+{
+  "recovery_comparator": {
+    "name": "recovery_comparator",
+    "status": "Illustrative comparison; behavioral magnitudes and recovery path are assumed",
+    "claims_convention": "combined_propensity_per_fleet_excluding_incremental_nonfiling",
+    "insurance_service_fraction": 0.9,
+    "cohort_anchor_path": "model/ccc_age_body_2026-09-29/cohort_anchor.json",
+    "claims": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "repair": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "value": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "expected_salvage": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "realized_salvage": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.037,
+      1.037,
+      1.037,
+      1.037
+    ],
+    "routing": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "cat_total_loss_activity": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "nonfiling": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "carrier_mode": "same_quarter_neutral",
+    "carrier_claim_weights_by_cell": {},
+    "carrier_terms": {},
+    "allocation_overrides": {},
+    "preferred_buyer_fraction": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "seller_fee_fraction": [
+      0.04,
+      0.04,
+      0.04,
+      0.04,
+      0.04,
+      0.04,
+      0.04,
+      0.04
+    ],
+    "seller_fixed_fee": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "fixed_buyer_fee": [
+      110.0,
+      110.0,
+      110.0,
+      110.0,
+      110.0,
+      110.0,
+      110.0,
+      110.0
+    ],
+    "buyer_fee_multiplier": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "schedule_ids": [
+      "sep2026_snapshot",
+      "sep2026_snapshot",
+      "sep2026_snapshot",
+      "sep2026_snapshot",
+      "sep2026_snapshot",
+      "sep2026_snapshot",
+      "sep2026_snapshot",
+      "sep2026_snapshot"
+    ],
+    "schedule_status": "Historical use of Sep2026 schedule is a proxy, not verified history",
+    "sales_timing": {
+      "mode": "sale_equivalent",
+      "input_stage": "sale_equivalent",
+      "kernels": null,
+      "opening_release": null,
+      "withdrawal_fraction": 0.0,
+      "without_title_kernel": null,
+      "with_title_kernel": null,
+      "rpu_by_vintage": null,
+      "opening_rpu": null
+    },
+    "title": {
+      "base_adoption": 0.5,
+      "base_charge": 50.0,
+      "basis": "sales",
+      "eligible_external": null,
+      "adoption": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "charge": [
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0
+      ],
+      "waiver": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bundled": false,
+      "accounting": "incremental_fee",
+      "recognition_kernel": [
+        1.0
+      ],
+      "opening_release": null,
+      "status": "Inherited assumption; not observed adoption or contract terms"
+    },
+    "delivery": {
+      "base_adoption": 0.1,
+      "base_charge": 300.0,
+      "basis": "sales",
+      "eligible_external": null,
+      "adoption": [
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1
+      ],
+      "charge": [
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0
+      ],
+      "waiver": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bundled": false,
+      "accounting": "assumed_gross",
+      "recognition_kernel": [
+        1.0
+      ],
+      "opening_release": null,
+      "status": "Inherited assumption; gross/net and product levels unknown"
+    },
+    "other_us_units": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "other_us_fee": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "intl_units": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.1156451059988592,
+      1.1156451059988592,
+      1.1156451059988592,
+      1.1156451059988592
+    ],
+    "intl_rpu": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.035,
+      1.035,
+      1.035,
+      1.035
+    ],
+    "intl_fx": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "intl_rpu_basis": "reported_currency",
+    "purchased_units": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "purchased_asp": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "acquired_total": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "acquired_service": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "acquisition_first_fiscal_quarter": 2,
+    "nodes": 1024,
+    "fleet_period_weights": [
+      [
+        0,
+        0.2916666666666667,
+        0.7083333333333334,
+        0,
+        0
+      ],
+      [
+        0,
+        0.05555555555555554,
+        0.9305555555555556,
+        0.013888888888888888,
+        0
+      ],
+      [
+        0,
+        0,
+        0.7916666666666666,
+        0.20833333333333331,
+        0
+      ],
+      [
+        0,
+        0,
+        0.5416666666666667,
+        0.45833333333333337,
+        0
+      ],
+      [
+        0,
+        0.2916666666666667,
+        0.7083333333333334,
+        0,
+        0
+      ],
+      [
+        0,
+        0.05555555555555554,
+        0.9305555555555556,
+        0.013888888888888888,
+        0
+      ],
+      [
+        0,
+        0,
+        0.7916666666666666,
+        0.20833333333333331,
+        0
+      ],
+      [
+        0,
+        0,
+        0.5416666666666667,
+        0.45833333333333337,
+        0
+      ]
+    ],
+    "premium_assumptions": {
+      "premium": [
+        95,
+        95,
+        95,
+        95
+      ],
+      "reference_premium": [
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "income": [
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "reference_income": [
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "vehicle_value": [
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "reference_vehicle_value": [
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "deductible": [
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "reference_deductible": [
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "baseline_coverage_probability": 0.8,
+      "baseline_repairable_filing_probability": 0.9,
+      "affected_baseline_claim_fraction": 0.5,
+      "quarterly_adjustment_fraction": 0.5,
+      "coverage_income_slope": 1.0,
+      "coverage_value_slope": 1.0,
+      "coverage_payoff_slope": 1.0,
+      "filing_income_slope": 1.0,
+      "filing_deductible_slope": 1.0,
+      "excess_lien_free_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "claims_excludes_premium_channels": false,
+      "status": "All behavioral inputs ASSUMED; indices relative to explicit reference"
+    }
+  },
+  "combined_before_aftermarket": {
+    "name": "market_allocation+premium_recovery+aftermarket+fleet_mix",
+    "status": "Illustrative comparison; behavioral magnitudes and recovery path are assumed",
+    "claims_convention": "combined_propensity_per_fleet_excluding_incremental_nonfiling",
+    "insurance_service_fraction": 0.9,
+    "cohort_anchor_path": "model/ccc_age_body_2026-09-29/cohort_anchor.json",
+    "claims": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "repair": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "value": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "expected_salvage": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "realized_salvage": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.037,
+      1.037,
+      1.037,
+      1.037
+    ],
+    "routing": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "cat_total_loss_activity": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "nonfiling": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "carrier_mode": "inherited_runoff",
+    "carrier_claim_weights_by_cell": {},
+    "carrier_terms": {},
+    "allocation_overrides": {},
+    "preferred_buyer_fraction": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "seller_fee_fraction": [
+      0.04,
+      0.04,
+      0.04,
+      0.04,
+      0.04,
+      0.04,
+      0.04,
+      0.04
+    ],
+    "seller_fixed_fee": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "fixed_buyer_fee": [
+      110.0,
+      110.0,
+      110.0,
+      110.0,
+      110.0,
+      110.0,
+      110.0,
+      110.0
+    ],
+    "buyer_fee_multiplier": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "schedule_ids": [
+      "sep2026_snapshot",
+      "sep2026_snapshot",
+      "sep2026_snapshot",
+      "sep2026_snapshot",
+      "sep2026_snapshot",
+      "sep2026_snapshot",
+      "sep2026_snapshot",
+      "sep2026_snapshot"
+    ],
+    "schedule_status": "Historical use of Sep2026 schedule is a proxy, not verified history",
+    "sales_timing": {
+      "mode": "sale_equivalent",
+      "input_stage": "sale_equivalent",
+      "kernels": null,
+      "opening_release": null,
+      "withdrawal_fraction": 0.0,
+      "without_title_kernel": null,
+      "with_title_kernel": null,
+      "rpu_by_vintage": null,
+      "opening_rpu": null
+    },
+    "title": {
+      "base_adoption": 0.5,
+      "base_charge": 50.0,
+      "basis": "sales",
+      "eligible_external": null,
+      "adoption": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "charge": [
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0
+      ],
+      "waiver": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bundled": false,
+      "accounting": "incremental_fee",
+      "recognition_kernel": [
+        1.0
+      ],
+      "opening_release": null,
+      "status": "Inherited assumption; not observed adoption or contract terms"
+    },
+    "delivery": {
+      "base_adoption": 0.1,
+      "base_charge": 300.0,
+      "basis": "sales",
+      "eligible_external": null,
+      "adoption": [
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1
+      ],
+      "charge": [
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0
+      ],
+      "waiver": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bundled": false,
+      "accounting": "assumed_gross",
+      "recognition_kernel": [
+        1.0
+      ],
+      "opening_release": null,
+      "status": "Inherited assumption; gross/net and product levels unknown"
+    },
+    "other_us_units": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "other_us_fee": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "intl_units": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.1156451059988592,
+      1.1156451059988592,
+      1.1156451059988592,
+      1.1156451059988592
+    ],
+    "intl_rpu": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.035,
+      1.035,
+      1.035,
+      1.035
+    ],
+    "intl_fx": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "intl_rpu_basis": "reported_currency",
+    "purchased_units": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "purchased_asp": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "acquired_total": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "acquired_service": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "acquisition_first_fiscal_quarter": 2,
+    "nodes": 1024,
+    "premium_assumptions": {
+      "premium": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "reference_premium": [
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "income": [
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "reference_income": [
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "vehicle_value": [
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "reference_vehicle_value": [
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "deductible": [
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "reference_deductible": [
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "baseline_coverage_probability": 0.8,
+      "baseline_repairable_filing_probability": 0.9,
+      "affected_baseline_claim_fraction": 0.5,
+      "quarterly_adjustment_fraction": 0.5,
+      "coverage_income_slope": 1.0,
+      "coverage_value_slope": 1.0,
+      "coverage_payoff_slope": 1.0,
+      "filing_income_slope": 1.0,
+      "filing_deductible_slope": 1.0,
+      "excess_lien_free_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "claims_excludes_premium_channels": false,
+      "status": "All behavioral inputs ASSUMED; indices relative to explicit reference"
+    }
+  }
+}

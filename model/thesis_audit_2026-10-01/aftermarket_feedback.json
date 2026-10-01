@@ -1,0 +1,370 @@
+{
+  "aftermarket": [
+    {
+      "quarter": 1,
+      "repair_change": -0.002574850299401188,
+      "price_change": -0.004183817096054555,
+      "supply_ratio": 0.9948837481706999,
+      "repair_jobs_ratio": 1.0015385583493095,
+      "recycler_bid_change": -0.013507176595796103,
+      "rebuilder_bid_change": 0.002574850299401188,
+      "scarcity_price_support": 0.0012823461646873304,
+      "residual": 1.1254442777025586e-10
+    },
+    {
+      "quarter": 2,
+      "repair_change": -0.005149700598802376,
+      "price_change": -0.008382917381823063,
+      "supply_ratio": 0.9897686549419348,
+      "repair_jobs_ratio": 1.0030773096749763,
+      "recycler_bid_change": -0.02705755820649261,
+      "rebuilder_bid_change": 0.005149700598802376,
+      "scarcity_price_support": 0.0025710112595497743,
+      "residual": -1.6247228042109985e-10
+    },
+    {
+      "quarter": 3,
+      "repair_change": -0.007724550898203564,
+      "price_change": -0.012598047219216826,
+      "supply_ratio": 0.9846566726605566,
+      "repair_jobs_ratio": 1.0046143935821596,
+      "recycler_bid_change": -0.04065177213593747,
+      "rebuilder_bid_change": 0.007724550898203564,
+      "scarcity_price_support": 0.0038655635610645813,
+      "residual": 1.614144529843431e-10
+    },
+    {
+      "quarter": 4,
+      "repair_change": -0.010299401197604752,
+      "price_change": -0.016829208843410017,
+      "supply_ratio": 0.9795480653622427,
+      "repair_jobs_ratio": 1.006149631861436,
+      "recycler_bid_change": -0.05428980484416729,
+      "rebuilder_bid_change": 0.010299401197604752,
+      "scarcity_price_support": 0.0051659928692767264,
+      "residual": -1.1059452312278673e-10
+    }
+  ],
+  "market_allocation+aftermarket": [
+    {
+      "quarter": 1,
+      "repair_change": -0.002574850299401188,
+      "price_change": -0.004183817096054555,
+      "supply_ratio": 0.9948837481707002,
+      "repair_jobs_ratio": 1.00153855834931,
+      "recycler_bid_change": -0.013507176595795936,
+      "rebuilder_bid_change": 0.002574850299401188,
+      "scarcity_price_support": 0.0012823461646872467,
+      "residual": 1.1254442777025586e-10
+    },
+    {
+      "quarter": 2,
+      "repair_change": -0.005149700598802376,
+      "price_change": -0.008382917381823063,
+      "supply_ratio": 0.9897686549419356,
+      "repair_jobs_ratio": 1.003077309674978,
+      "recycler_bid_change": -0.027057558206491986,
+      "rebuilder_bid_change": 0.005149700598802376,
+      "scarcity_price_support": 0.0025710112595495782,
+      "residual": -1.6247216419462696e-10
+    },
+    {
+      "quarter": 3,
+      "repair_change": -0.007724550898203564,
+      "price_change": -0.012598047219216826,
+      "supply_ratio": 0.9846566726605556,
+      "repair_jobs_ratio": 1.00461439358216,
+      "recycler_bid_change": -0.040651772135937306,
+      "rebuilder_bid_change": 0.007724550898203564,
+      "scarcity_price_support": 0.003865563561064835,
+      "residual": 1.614147912554209e-10
+    },
+    {
+      "quarter": 4,
+      "repair_change": -0.010299401197604752,
+      "price_change": -0.016829208843410017,
+      "supply_ratio": 0.9795480653622427,
+      "repair_jobs_ratio": 1.006149631861436,
+      "recycler_bid_change": -0.05428980484416729,
+      "rebuilder_bid_change": 0.010299401197604752,
+      "scarcity_price_support": 0.0051659928692767264,
+      "residual": -1.1059452312278673e-10
+    }
+  ],
+  "premium_recovery+aftermarket": [
+    {
+      "quarter": 1,
+      "repair_change": -0.002574850299401188,
+      "price_change": -0.004183817096054555,
+      "supply_ratio": 0.9948837481707006,
+      "repair_jobs_ratio": 1.0015385583493097,
+      "recycler_bid_change": -0.01350717659579602,
+      "rebuilder_bid_change": 0.002574850299401188,
+      "scarcity_price_support": 0.001282346164687163,
+      "residual": 1.1254430287016559e-10
+    },
+    {
+      "quarter": 2,
+      "repair_change": -0.005149700598802376,
+      "price_change": -0.008382917381823063,
+      "supply_ratio": 0.9897686549419349,
+      "repair_jobs_ratio": 1.0030773096749774,
+      "recycler_bid_change": -0.027057558206492235,
+      "rebuilder_bid_change": 0.005149700598802376,
+      "scarcity_price_support": 0.002571011259549746,
+      "residual": -1.6247212082654006e-10
+    },
+    {
+      "quarter": 3,
+      "repair_change": -0.007724550898203564,
+      "price_change": -0.012598047219216826,
+      "supply_ratio": 0.9846566726605553,
+      "repair_jobs_ratio": 1.0046143935821612,
+      "recycler_bid_change": -0.04065177213593693,
+      "rebuilder_bid_change": 0.007724550898203564,
+      "scarcity_price_support": 0.0038655635610648914,
+      "residual": 1.6141503411670755e-10
+    },
+    {
+      "quarter": 4,
+      "repair_change": -0.010299401197604752,
+      "price_change": -0.016829208843410017,
+      "supply_ratio": 0.9795480653622425,
+      "repair_jobs_ratio": 1.0061496318614354,
+      "recycler_bid_change": -0.0542898048441675,
+      "rebuilder_bid_change": 0.010299401197604752,
+      "scarcity_price_support": 0.005165992869276783,
+      "residual": -1.1059457169504405e-10
+    }
+  ],
+  "market_allocation+premium_recovery+aftermarket": [
+    {
+      "quarter": 1,
+      "repair_change": -0.002574850299401188,
+      "price_change": -0.004183817096054555,
+      "supply_ratio": 0.9948837481706998,
+      "repair_jobs_ratio": 1.00153855834931,
+      "recycler_bid_change": -0.013507176595795936,
+      "rebuilder_bid_change": 0.002574850299401188,
+      "scarcity_price_support": 0.0012823461646873581,
+      "residual": 1.1254453879255832e-10
+    },
+    {
+      "quarter": 2,
+      "repair_change": -0.005149700598802376,
+      "price_change": -0.008382917381823063,
+      "supply_ratio": 0.989768654941936,
+      "repair_jobs_ratio": 1.003077309674977,
+      "recycler_bid_change": -0.027057558206492402,
+      "rebuilder_bid_change": 0.005149700598802376,
+      "scarcity_price_support": 0.002571011259549466,
+      "residual": -1.6247248338374654e-10
+    },
+    {
+      "quarter": 3,
+      "repair_change": -0.007724550898203564,
+      "price_change": -0.012598047219216826,
+      "supply_ratio": 0.9846566726605547,
+      "repair_jobs_ratio": 1.0046143935821614,
+      "recycler_bid_change": -0.04065177213593689,
+      "rebuilder_bid_change": 0.007724550898203564,
+      "scarcity_price_support": 0.0038655635610650605,
+      "residual": 1.614152249362899e-10
+    },
+    {
+      "quarter": 4,
+      "repair_change": -0.010299401197604752,
+      "price_change": -0.016829208843410017,
+      "supply_ratio": 0.9795480653622425,
+      "repair_jobs_ratio": 1.0061496318614354,
+      "recycler_bid_change": -0.0542898048441675,
+      "rebuilder_bid_change": 0.010299401197604752,
+      "scarcity_price_support": 0.005165992869276783,
+      "residual": -1.1059457169504405e-10
+    }
+  ],
+  "aftermarket+fleet_mix": [
+    {
+      "quarter": 1,
+      "repair_change": -0.002574850299401188,
+      "price_change": -0.004181962646543981,
+      "supply_ratio": 0.9948774112176058,
+      "repair_jobs_ratio": 1.0015400107491539,
+      "recycler_bid_change": -0.013506652370227273,
+      "rebuilder_bid_change": 0.002574850299401188,
+      "scarcity_price_support": 0.001283938555076568,
+      "residual": 1.6620750609153134e-10
+    },
+    {
+      "quarter": 2,
+      "repair_change": -0.005149700598802376,
+      "price_change": -0.00838004071265459,
+      "supply_ratio": 0.9897580055867092,
+      "repair_jobs_ratio": 1.0030783864890096,
+      "recycler_bid_change": -0.027057184686624824,
+      "rebuilder_bid_change": 0.005149700598802376,
+      "scarcity_price_support": 0.002573701133709591,
+      "residual": -1.9754704295993353e-10
+    },
+    {
+      "quarter": 3,
+      "repair_change": -0.007724550898203564,
+      "price_change": -0.012597128935158252,
+      "supply_ratio": 0.9846504613619496,
+      "repair_jobs_ratio": 1.0046104352090661,
+      "recycler_bid_change": -0.04065308953198264,
+      "rebuilder_bid_change": 0.007724550898203564,
+      "scarcity_price_support": 0.003867140587446022,
+      "residual": 2.0571473517694283e-10
+    },
+    {
+      "quarter": 4,
+      "repair_change": -0.010299401197604752,
+      "price_change": -0.016833330504596237,
+      "supply_ratio": 0.9795555566241816,
+      "repair_jobs_ratio": 1.0061357684014984,
+      "recycler_bid_change": -0.05429422382202238,
+      "rebuilder_bid_change": 0.010299401197604752,
+      "scarcity_price_support": 0.005164080958682807,
+      "residual": 1.5107022924287783e-10
+    }
+  ],
+  "market_allocation+aftermarket+fleet_mix": [
+    {
+      "quarter": 1,
+      "repair_change": -0.002574850299401188,
+      "price_change": -0.004181962646543981,
+      "supply_ratio": 0.9948774112176055,
+      "repair_jobs_ratio": 1.0015400107491539,
+      "recycler_bid_change": -0.013506652370227273,
+      "rebuilder_bid_change": 0.002574850299401188,
+      "scarcity_price_support": 0.0012839385550766236,
+      "residual": 1.6620756160268257e-10
+    },
+    {
+      "quarter": 2,
+      "repair_change": -0.005149700598802376,
+      "price_change": -0.00838004071265459,
+      "supply_ratio": 0.9897580055867102,
+      "repair_jobs_ratio": 1.0030783864890105,
+      "recycler_bid_change": -0.027057184686624533,
+      "rebuilder_bid_change": 0.005149700598802376,
+      "scarcity_price_support": 0.0025737011337093386,
+      "residual": -1.9754715051278904e-10
+    },
+    {
+      "quarter": 3,
+      "repair_change": -0.007724550898203564,
+      "price_change": -0.012597128935158252,
+      "supply_ratio": 0.9846504613619491,
+      "repair_jobs_ratio": 1.0046104352090637,
+      "recycler_bid_change": -0.040653089531983475,
+      "rebuilder_bid_change": 0.007724550898203564,
+      "scarcity_price_support": 0.003867140587446135,
+      "residual": 2.0571443160033454e-10
+    },
+    {
+      "quarter": 4,
+      "repair_change": -0.010299401197604752,
+      "price_change": -0.016833330504596237,
+      "supply_ratio": 0.9795555566241816,
+      "repair_jobs_ratio": 1.0061357684014984,
+      "recycler_bid_change": -0.05429422382202238,
+      "rebuilder_bid_change": 0.010299401197604752,
+      "scarcity_price_support": 0.005164080958682807,
+      "residual": 1.5107022924287783e-10
+    }
+  ],
+  "premium_recovery+aftermarket+fleet_mix": [
+    {
+      "quarter": 1,
+      "repair_change": -0.002574850299401188,
+      "price_change": -0.004181962646543981,
+      "supply_ratio": 0.9948774112176058,
+      "repair_jobs_ratio": 1.001540010749154,
+      "recycler_bid_change": -0.01350665237022719,
+      "rebuilder_bid_change": 0.002574850299401188,
+      "scarcity_price_support": 0.001283938555076568,
+      "residual": 1.6620754772489477e-10
+    },
+    {
+      "quarter": 2,
+      "repair_change": -0.005149700598802376,
+      "price_change": -0.00838004071265459,
+      "supply_ratio": 0.9897580055867089,
+      "repair_jobs_ratio": 1.00307838648901,
+      "recycler_bid_change": -0.027057184686624658,
+      "rebuilder_bid_change": 0.005149700598802376,
+      "scarcity_price_support": 0.002573701133709675,
+      "residual": -1.9754687642647983e-10
+    },
+    {
+      "quarter": 3,
+      "repair_change": -0.007724550898203564,
+      "price_change": -0.012597128935158252,
+      "supply_ratio": 0.9846504613619482,
+      "repair_jobs_ratio": 1.0046104352090657,
+      "recycler_bid_change": -0.04065308953198281,
+      "rebuilder_bid_change": 0.007724550898203564,
+      "scarcity_price_support": 0.0038671405874463605,
+      "residual": 2.057149901812938e-10
+    },
+    {
+      "quarter": 4,
+      "repair_change": -0.010299401197604752,
+      "price_change": -0.016833330504596237,
+      "supply_ratio": 0.9795555566241818,
+      "repair_jobs_ratio": 1.006135768401498,
+      "recycler_bid_change": -0.05429422382202251,
+      "rebuilder_bid_change": 0.010299401197604752,
+      "scarcity_price_support": 0.005164080958682751,
+      "residual": 1.5107011128168146e-10
+    }
+  ],
+  "market_allocation+premium_recovery+aftermarket+fleet_mix": [
+    {
+      "quarter": 1,
+      "repair_change": -0.002574850299401188,
+      "price_change": -0.004181962646543981,
+      "supply_ratio": 0.9948774112176054,
+      "repair_jobs_ratio": 1.0015400107491543,
+      "recycler_bid_change": -0.013506652370227107,
+      "rebuilder_bid_change": 0.002574850299401188,
+      "scarcity_price_support": 0.0012839385550766516,
+      "residual": 1.6620767262498504e-10
+    },
+    {
+      "quarter": 2,
+      "repair_change": -0.005149700598802376,
+      "price_change": -0.00838004071265459,
+      "supply_ratio": 0.9897580055867087,
+      "repair_jobs_ratio": 1.0030783864890103,
+      "recycler_bid_change": -0.027057184686624575,
+      "rebuilder_bid_change": 0.005149700598802376,
+      "scarcity_price_support": 0.002573701133709731,
+      "residual": -1.975467775472417e-10
+    },
+    {
+      "quarter": 3,
+      "repair_change": -0.007724550898203564,
+      "price_change": -0.012597128935158252,
+      "supply_ratio": 0.9846504613619487,
+      "repair_jobs_ratio": 1.0046104352090655,
+      "recycler_bid_change": -0.04065308953198289,
+      "rebuilder_bid_change": 0.007724550898203564,
+      "scarcity_price_support": 0.0038671405874462477,
+      "residual": 2.0571483579090444e-10
+    },
+    {
+      "quarter": 4,
+      "repair_change": -0.010299401197604752,
+      "price_change": -0.016833330504596237,
+      "supply_ratio": 0.9795555566241818,
+      "repair_jobs_ratio": 1.006135768401498,
+      "recycler_bid_change": -0.05429422382202251,
+      "rebuilder_bid_change": 0.010299401197604752,
+      "scarcity_price_support": 0.005164080958682751,
+      "residual": 1.5107011128168146e-10
+    }
+  ]
+}

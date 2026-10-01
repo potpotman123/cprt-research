@@ -98,6 +98,36 @@ def validate(c):
         raise ValueError('Unknown RPU/FX convention')
     if c['carrier_mode'] not in ['same_quarter_neutral', 'inherited_runoff']:
         raise ValueError('Unknown allocation convention')
+    d, _, _ = old.load()
+    names = {x['name'] for x in d['carriers']}
+    for key in ['allocation_overrides', 'carrier_terms', 'carrier_terms_by_period']:
+        if not set(c.get(key, {})) <= names:
+            raise ValueError('Unknown carrier in ' + key)
+    for name, values in c['allocation_overrides'].items():
+        if len(values) != 8 or any(not math.isfinite(x) or not 0 <= x <= 1 for x in values):
+            raise ValueError('Allocation override needs eight fractions: ' + name)
+    period_weights = c.get('carrier_claim_weights_by_period')
+    if period_weights is not None:
+        if c['carrier_claim_weights_by_cell']:
+            raise ValueError('Specify either period or static cell carrier weights, not both')
+        if len(period_weights) != 8:
+            raise ValueError('Carrier claim weights need eight periods')
+        for row in period_weights:
+            if set(row) != names or any(not math.isfinite(x) or x < 0 for x in row.values()) or abs(sum(row.values())-1) > 1e-8:
+                raise ValueError('Carrier claim weights must be finite fractions summing to one')
+    allowed_terms = {'repair_factor', 'value_factor', 'preferred_fraction', 'seller_pct', 'seller_fixed'}
+    term_rows = list(c['carrier_terms'].values())
+    for name, rows in c.get('carrier_terms_by_period', {}).items():
+        if len(rows) != 8:
+            raise ValueError('Carrier terms need eight periods: ' + name)
+        term_rows.extend(rows)
+    for terms in term_rows:
+        if not set(terms) <= allowed_terms or any(not math.isfinite(x) for x in terms.values()):
+            raise ValueError('Unknown or nonfinite carrier term')
+    fleet_weights = c.get('fleet_period_weights')
+    if fleet_weights is not None:
+        if len(fleet_weights) != 8 or any(len(row) != 5 or any(not math.isfinite(x) or x < 0 for x in row) or abs(sum(row)-1) > 1e-8 for row in fleet_weights):
+            raise ValueError('Fleet calendar weights require eight normalized five-year rows')
     if len(c['acquired_total'])!=4 or len(c['acquired_service'])!=4:
         raise ValueError('Acquisition requires four quarterly values')
     for q,(total,service) in enumerate(zip(c['acquired_total'],c['acquired_service'])):
@@ -145,6 +175,8 @@ def flow(arrivals, kernels, opening_release, withdrawal_fraction=0.):
 @functools.lru_cache(maxsize=512)
 def cell_economics(b, k, repair, value, expected, realized, preferred, seller_pct,
                    seller_fixed, fixed_buyer, buyer_multiplier, schedule_id, nodes):
+    if any(not math.isfinite(x) for x in [repair,value,expected,realized,preferred,seller_pct,seller_fixed,fixed_buyer,buyer_multiplier]) or not isinstance(nodes, int) or nodes < 1:
+        raise ValueError('Cell economics must be finite with positive integration nodes')
     if min(repair,value,expected,realized)<=0 or not 0<=preferred<=1 or not 0<=seller_pct<=1 or min(seller_fixed,fixed_buyer,buyer_multiplier)<0:
         raise ValueError('Invalid cell economics or carrier terms')
     d, e, _ = old.load()
@@ -206,6 +238,9 @@ def timed_core(arrivals, timing, adoption):
 
 
 def operating(c):
+    if c.get('premium_assumptions') is not None:
+        from premium_channels import compile_channels
+        c, _ = compile_channels(c, c['premium_assumptions'])
     validate(c)
     d, e, inherited = old.load()
     active = old.fleet_data(d, inherited)
@@ -229,18 +264,23 @@ def operating(c):
         _, raw0 = old.stock(active, anchor['fleet_reference_weights'])
     quarters, cells = [], []
     for p, period in enumerate(d['periods']):
-        _, raw = old.stock(active, period['weights'])
+        fleet_weights = c['fleet_period_weights'][p] if c.get('fleet_period_weights') is not None else period['weights']
+        _, raw = old.stock(active, fleet_weights)
         hist_idx = p if p < 4 else (p-4 if c['carrier_mode']=='same_quarter_neutral' else 3)
         weights = {x['name']:x['weights'][hist_idx] for x in d['carriers']}
         norm = sum(weights.values()); weights = {k:v/norm for k,v in weights.items()}
-        q = dict(claims=0., totals=0., assignments=0., buyer=0., seller=0., proceeds=0.)
+        if c.get('carrier_claim_weights_by_period') is not None:
+            weights = c['carrier_claim_weights_by_period'][p]
+        q = dict(claims=0., prefiling_claims=0., totals=0., assignments=0., buyer=0., seller=0., proceeds=0.)
         for (b,k), w in cw.items():
             cl = w*raw[b,k]/raw0[b,k]*c['claims'][p]*c.get('coverage_exposure', [1.] * 8)[p]
             conditional = c['carrier_claim_weights_by_cell'].get(f'{b}:{k}', weights)
-            if set(conditional) != set(weights) or any(v < 0 for v in conditional.values()) or abs(sum(conditional.values())-1)>1e-8:
+            if set(conditional) != set(weights) or any(not math.isfinite(v) or v < 0 for v in conditional.values()) or abs(sum(conditional.values())-1)>1e-8:
                 raise ValueError('Carrier weights must span all carriers and sum to one per cell')
             for carrier in d['carriers']:
-                name = carrier['name']; terms = c['carrier_terms'].get(name,{})
+                name = carrier['name']; terms = dict(c['carrier_terms'].get(name,{}))
+                if name in c.get('carrier_terms_by_period', {}):
+                    terms.update(c['carrier_terms_by_period'][name][p])
                 allocation_index = p if p < 4 else p-4
                 if p >= 4 and c['carrier_mode']=='inherited_runoff': allocation_index = p if name=='Progressive' else 3
                 alloc = c['allocation_overrides'].get(name, carrier['allocations'])[allocation_index if name not in c['allocation_overrides'] else p]
@@ -252,10 +292,14 @@ def operating(c):
                 claims = cl*conditional[name]; tl = claims*ec['TLF']
                 reported = tl+(claims-tl)*(1-c['nonfiling'][p])*c.get('repairable_filing', [1.] * 8)[p]
                 units = tl*alloc*c['routing'][p]
-                for key, val in [('claims',reported),('totals',tl),('assignments',units),('buyer',units*ec['buyer']),('seller',units*ec['seller']),('proceeds',units*ec['ASP'])]: q[key] += val
-                cells.append(dict(period=p,body=b,age=k,carrier=name,claims=reported,totals=tl,assignments=units,core_RPU=ec['core_RPU']))
+                for key, val in [('claims',reported),('prefiling_claims',claims),('totals',tl),('assignments',units),('buyer',units*ec['buyer']),('seller',units*ec['seller']),('proceeds',units*ec['ASP'])]: q[key] += val
+                cells.append(dict(period=p,body=b,age=k,carrier=name,claims=reported,prefiling_claims=claims,
+                    totals=tl,assignments=units,allocation=alloc,selection_TLF=ec['TLF'],
+                    ASP=ec['ASP'],buyer_RPU=ec['buyer'],seller_RPU=ec['seller'],core_RPU=ec['core_RPU']))
         if q['assignments'] <= 0: raise ValueError('No fee units for RPU comparison')
-        q.update(core_RPU=(q['buyer']+q['seller'])/q['assignments'],ASP=q['proceeds']/q['assignments'],TLF=q['totals']/q['claims'])
+        q.update(core_RPU=(q['buyer']+q['seller'])/q['assignments'],ASP=q['proceeds']/q['assignments'],
+                 TLF=q['totals']/q['claims'],TLF_prefiling=q['totals']/q['prefiling_claims'],
+                 capture_including_routing=q['assignments']/q['totals'])
         quarters.append(q)
     return quarters, cells
 

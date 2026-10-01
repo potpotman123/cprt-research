@@ -1,0 +1,30 @@
+{
+  "passed": 24,
+  "checks": [
+    "Null optional period controls preserve the reference",
+    "Frozen fleet produces unchanged inferred units",
+    "Fleet override preserves historical ledger",
+    "Explicit quarter weights preserve original result",
+    "Quarter carrier weights change units without rewriting history",
+    "Dated carrier concession preserves historical normalization",
+    "Dated carrier concession changes seller economics",
+    "Invalid allocation_overrides 7",
+    "Invalid allocation_overrides 8",
+    "Invalid carrier_terms_by_period 9",
+    "Invalid fleet_period_weights 10",
+    "Ambiguous cell and period weights rejected",
+    "Nonfinite carrier weight rejected",
+    "Direct operating interface applies premium channels",
+    "Zero sourcing preserves combined premium model",
+    "Zero disposition response preserves total-loss units",
+    "Quarterly sourcing converges",
+    "Quarterly sourcing respects adoption ramp",
+    "Sourcing preserves historical ledger",
+    "Reported TLF reconstructed from additive totals",
+    "All 24 orderings independently reconcile factor attribution",
+    "Four contributions sum to total shortfall",
+    "Repairable nonfiling has zero revenue effect",
+    "Expected recovery and repair inflation increase totals"
+  ],
+  "scope": "Arithmetic and economic invariants only; does not validate behavioral response magnitudes"
+}
