@@ -1,0 +1,59 @@
+{
+  "checks": "PASS",
+  "decomposition": [
+    {
+      "start": 2020,
+      "end": 2025,
+      "tlf_start": 0.20835274455788655,
+      "tlf_end": 0.2312358217319763,
+      "within_group_pp": 1.3602828223054266,
+      "composition_pp": 0.9280248951035424,
+      "composition_fraction_of_change": 0.40555074304182076,
+      "status": "Derived symmetric decomposition; common-population assumption and broad age buckets; not causal"
+    },
+    {
+      "start": 2024,
+      "end": 2025,
+      "tlf_start": 0.22238220498371145,
+      "tlf_end": 0.2312358217319763,
+      "within_group_pp": 1.0043063669652472,
+      "composition_pp": -0.11894469213875795,
+      "composition_fraction_of_change": -0.13434587866260306,
+      "status": "Derived symmetric decomposition; common-population assumption and broad age buckets; not causal"
+    }
+  ],
+  "cpi": [
+    {
+      "series": "CUSR0000SETE",
+      "jan2020": 572.109,
+      "aug2025": 895.769,
+      "aug2026": 849.837,
+      "change_since_jan2020_pct": 48.54459552288113,
+      "aug2026_yoy_pct": -5.12766126088311,
+      "adjustment": "Seasonally adjusted; saved BLS vintage; index is not a household premium quote or income-relative affordability measure"
+    },
+    {
+      "series": "CUSR0000SETA01",
+      "jan2020": 147.877,
+      "aug2025": 178.245,
+      "aug2026": 179.259,
+      "change_since_jan2020_pct": 21.221690999952635,
+      "aug2026_yoy_pct": 0.5688799124800026,
+      "adjustment": "Seasonally adjusted; saved BLS vintage; index is not a household premium quote or income-relative affordability measure"
+    },
+    {
+      "series": "CUSR0000SETA02",
+      "jan2020": 139.424,
+      "aug2025": 185.259,
+      "aug2026": 180.965,
+      "change_since_jan2020_pct": 29.794726876291033,
+      "aug2026_yoy_pct": -2.317836110526339,
+      "adjustment": "Seasonally adjusted; saved BLS vintage; index is not a household premium quote or income-relative affordability measure"
+    }
+  ],
+  "car_age4to6_tlf": {
+    "2020": 0.19247970048815136,
+    "2025": 0.19775890612545222
+  },
+  "forecast_inputs_changed": false
+}

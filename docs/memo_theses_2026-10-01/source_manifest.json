@@ -1,0 +1,197 @@
+{
+  "as_of": "2026-10-01",
+  "queries": [
+    {
+      "query": "site.bls.gov 2026 August motor vehicle insurance index 2020",
+      "url": "https://html.duckduckgo.com/html/?q=site.bls.gov%202026%20August%20motor%20vehicle%20insurance%20index%202020",
+      "status": 202
+    },
+    {
+      "query": "site.bea.gov August 2026 real disposable personal income",
+      "url": "https://html.duckduckgo.com/html/?q=site.bea.gov%20August%202026%20real%20disposable%20personal%20income",
+      "status": 202
+    },
+    {
+      "query": "site.newyorkfed.org 2026 auto loan delinquency second quarter",
+      "url": "https://html.duckduckgo.com/html/?q=site.newyorkfed.org%202026%20auto%20loan%20delinquency%20second%20quarter",
+      "status": 202
+    },
+    {
+      "query": "site.cccis.com 2026 claims frequency deductible insurance affordability",
+      "url": "https://html.duckduckgo.com/html/?q=site.cccis.com%202026%20claims%20frequency%20deductible%20insurance%20affordability",
+      "status": 202
+    },
+    {
+      "query": "site.coxautoinc.com September 2026 Manheim SUVs pickups prices",
+      "url": "https://html.duckduckgo.com/html/?q=site.coxautoinc.com%20September%202026%20Manheim%20SUVs%20pickups%20prices",
+      "status": 202
+    },
+    {
+      "query": "site.iii.org 2026 collision coverage premium affordability",
+      "url": "https://html.duckduckgo.com/html/?q=site.iii.org%202026%20collision%20coverage%20premium%20affordability",
+      "status": 202
+    }
+  ],
+  "primary_access": [
+    {
+      "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-august-2026",
+      "robots_status": 200,
+      "allowed": true,
+      "status": 200
+    },
+    {
+      "url": "https://www.bls.gov/news.release/cpi.nr0.htm",
+      "robots_status": 403,
+      "allowed": false
+    }
+  ],
+  "requests": [
+    {
+      "fetched_utc": "2026-10-01T05:06:49Z",
+      "url": "https://html.duckduckgo.com/robots.txt",
+      "method": "GET",
+      "http_status": 200,
+      "bytes": 148,
+      "sha256": "10b7e57b7b9c00d68f28721ada0912cc9b828877a60302dcb5423775ea57814d",
+      "robots_status": "unknown",
+      "robots_basis": "robots bootstrap",
+      "note": "",
+      "saved_path": "/Users/kwu/cprt/raw/memo_theses_2026_10/search_robots.txt"
+    },
+    {
+      "fetched_utc": "2026-10-01T05:06:51Z",
+      "url": "https://html.duckduckgo.com/html/?q=site.bls.gov%202026%20August%20motor%20vehicle%20insurance%20index%202020",
+      "method": "GET",
+      "http_status": 202,
+      "bytes": 14313,
+      "sha256": "ec50668a934e11003a0036383fd1209f8f2217623baf84413e8ed81e9afe7355",
+      "robots_status": "allowed",
+      "robots_basis": "https://html.duckduckgo.com/robots.txt",
+      "note": "Memo thesis bounded discovery",
+      "saved_path": ""
+    },
+    {
+      "fetched_utc": "2026-10-01T05:06:53Z",
+      "url": "https://html.duckduckgo.com/html/?q=site.bea.gov%20August%202026%20real%20disposable%20personal%20income",
+      "method": "GET",
+      "http_status": 202,
+      "bytes": 14295,
+      "sha256": "e0970a0a59bbf7e03478299d2e6190d4f409f62fd717517afc3e874ae4231a20",
+      "robots_status": "allowed",
+      "robots_basis": "https://html.duckduckgo.com/robots.txt",
+      "note": "Memo thesis bounded discovery",
+      "saved_path": ""
+    },
+    {
+      "fetched_utc": "2026-10-01T05:06:55Z",
+      "url": "https://html.duckduckgo.com/html/?q=site.newyorkfed.org%202026%20auto%20loan%20delinquency%20second%20quarter",
+      "method": "GET",
+      "http_status": 202,
+      "bytes": 14299,
+      "sha256": "23ba21c89a040f25dd5e3cc4320c793347fb8a2e7ab59ff1e1cbc3123c6bb8ed",
+      "robots_status": "allowed",
+      "robots_basis": "https://html.duckduckgo.com/robots.txt",
+      "note": "Memo thesis bounded discovery",
+      "saved_path": ""
+    },
+    {
+      "fetched_utc": "2026-10-01T05:06:57Z",
+      "url": "https://html.duckduckgo.com/html/?q=site.cccis.com%202026%20claims%20frequency%20deductible%20insurance%20affordability",
+      "method": "GET",
+      "http_status": 202,
+      "bytes": 14331,
+      "sha256": "7f53c6c25b17f68e00cdaa036822ed6764e58b213267b86b8f2fb9a23fd2840b",
+      "robots_status": "allowed",
+      "robots_basis": "https://html.duckduckgo.com/robots.txt",
+      "note": "Memo thesis bounded discovery",
+      "saved_path": ""
+    },
+    {
+      "fetched_utc": "2026-10-01T05:07:00Z",
+      "url": "https://html.duckduckgo.com/html/?q=site.coxautoinc.com%20September%202026%20Manheim%20SUVs%20pickups%20prices",
+      "method": "GET",
+      "http_status": 202,
+      "bytes": 14307,
+      "sha256": "0173d12e2def098aca26a9d0b375e2fbf525c1328bf8ac307caaa07d88f3001c",
+      "robots_status": "allowed",
+      "robots_basis": "https://html.duckduckgo.com/robots.txt",
+      "note": "Memo thesis bounded discovery",
+      "saved_path": ""
+    },
+    {
+      "fetched_utc": "2026-10-01T05:07:02Z",
+      "url": "https://html.duckduckgo.com/html/?q=site.iii.org%202026%20collision%20coverage%20premium%20affordability",
+      "method": "GET",
+      "http_status": 202,
+      "bytes": 14323,
+      "sha256": "d307aa502cab7d78b44fb5751da88b7ed867b870610774de3e0a475d17adbfef",
+      "robots_status": "allowed",
+      "robots_basis": "https://html.duckduckgo.com/robots.txt",
+      "note": "Memo thesis bounded discovery",
+      "saved_path": ""
+    },
+    {
+      "fetched_utc": "2026-10-01T05:08:10Z",
+      "url": "https://www.bea.gov/robots.txt",
+      "method": "GET",
+      "http_status": 200,
+      "bytes": 2027,
+      "sha256": "773fb8d35bb9a39d35335ee6db8dc5c912d2aacbfb823152d9c61cd647dd902d",
+      "robots_status": "unknown",
+      "robots_basis": "robots bootstrap",
+      "note": "",
+      "saved_path": "/Users/kwu/cprt/raw/memo_theses_2026_10/bea_robots.txt"
+    },
+    {
+      "fetched_utc": "2026-10-01T05:08:27Z",
+      "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-august-2026",
+      "method": "GET",
+      "http_status": 200,
+      "bytes": 52779,
+      "sha256": "7a06cbfde94686fdf46bb8910131542ba23358928338e6ab00ecd6691721256d",
+      "robots_status": "allowed",
+      "robots_basis": "https://www.bea.gov/robots.txt",
+      "note": "Memo thesis primary verification",
+      "saved_path": "/Users/kwu/cprt/raw/memo_theses_2026_10/bea.html"
+    },
+    {
+      "fetched_utc": "2026-10-01T05:08:59Z",
+      "url": "https://www.bls.gov/robots.txt",
+      "method": "GET",
+      "http_status": 403,
+      "bytes": 1323,
+      "sha256": "99ea502a5c5c830a67a619b8e8a8366afba2d19b3dc0b9383a644bf4c7898ebf",
+      "robots_status": "unknown",
+      "robots_basis": "robots bootstrap",
+      "note": "",
+      "saved_path": ""
+    }
+  ],
+  "sha256": {
+    "/Users/kwu/.codex/attachments/41a414ef-dcd1-4d8c-accd-43c63ebe36bc/Pasted text.txt": "845388ef65ff9f5c76adef18745e1c6c29efcdb7993849933833e7b1ec49a608",
+    "raw/bls/cu.data.14.USTransportation": "c124062eeb463405a84ff06d82e5e8a2c47886716b57e07ea859bf8376cfc35e",
+    "model/ccc_age_body_2026-09-29/source_cells.csv": "ecee8dad938bd220350a243a900632136969831eb11893776f8a2a9b0167c8c4",
+    "reports/expectations_sheet_2026-10.md": "3e3493e7e6c914ec98d704bf029547a28a1ca987b5e5da82f8b9c05992f7d52b",
+    "docs/fleet_selection_2026-09-28/COVERAGE_RECOVERY_SCREEN.md": "b163553a4bcd0e2d02e81b37628bae08cc59f174481a0a90113f63203d5aaaa9",
+    "/Users/kwu/Documents/ChatGPT/HFAC x Citadel/research/cprt_discovery_plan_2026-09-26/sources/2026-08-20-CPRT.OQ-Stephens Inc.-F4Q26 Preview Expect a Slight Miss to Consensus and an Even...-123970131.txt": "c3eb7427825d2fafe5e5df11a9ba7cafe5d55d6f205523defef4c69c5a1e564d",
+    "raw/memo_theses_2026_10/bea.txt": "1912aece675d20c258be61dcfc38b11219729350f6841aff617059eef6b985ef",
+    "raw/memo_theses_2026_10/bea.html": "7a06cbfde94686fdf46bb8910131542ba23358928338e6ab00ecd6691721256d",
+    "raw/memo_theses_2026_10/bea_robots.txt": "773fb8d35bb9a39d35335ee6db8dc5c912d2aacbfb823152d9c61cd647dd902d",
+    "raw/memo_theses_2026_10/search_robots.txt": "10b7e57b7b9c00d68f28721ada0912cc9b828877a60302dcb5423775ea57814d",
+    "raw/memo_theses_2026_10/queries.json": "c7f89aca436d3f419d0b8782e8543b7c6c77b07054ec6b74726e7f001e3f32e5",
+    "raw/memo_theses_2026_10/access.json": "d9493e4142fc6bb6f90cf432dcb3a8485a403daae5c0fce655e0d3fc8a333433"
+  },
+  "new_results": [
+    "Saved BLS vintage level/yoy arithmetic",
+    "Full 2020\u20132025 and2024\u20132025 symmetric CCC rate/mix decomposition",
+    "Four-to-six-year-car draft cell correction",
+    "BEA Aug2026 real DPI flat, July+0.3%; no identified purchasing-power trough"
+  ],
+  "limitations": [
+    "Six search202 failures, not null evidence",
+    "BLS news robots403, cached primary flat file used",
+    "CCC panel populations not fully documented; broad age bins",
+    "No causal elasticity or new forecast input",
+    "Analyst claims are dated named estimates, not a buy-side consensus survey"
+  ]
+}
