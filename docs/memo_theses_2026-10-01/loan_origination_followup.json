@@ -1,0 +1,36 @@
+{
+  "as_of": "2026-10-01",
+  "source": "https://www.philadelphiafed.org/-/media/FRBP/Assets/Events/2023/Consumer-Finance/Auto-Lending/Current-State-of-Auto-Lending-Market.pdf",
+  "source_page": 4,
+  "source_population": "FRBNY Consumer Credit Panel/Equifax auto origination series; do not equate counts to surviving six/seven-year insurance-covered vehicles",
+  "annual_originations_millions": {
+    "2019": 23.3,
+    "2020": 22.3,
+    "2021": 24.6,
+    "2022": 22.6
+  },
+  "derived": {
+    "2021_vs_2019_pct": 5.579399141630903,
+    "2021_vs_2020_pct": 10.313901345291487,
+    "2020_vs_2019_pct": -4.29184549356223,
+    "2022_vs_2019_pct": -3.0042918454935563
+  },
+  "conflicting_vintage": {
+    "url": "https://libertystreeteconomics.newyorkfed.org/2022/02/car-prices-drive-up-borrowing/",
+    "finding": "Contemporaneous article reports2021 count1% below2019 and balances roughly20% larger. Includes loans/leases new/used. Definition/vintage difference versus2023chart unresolved; do not merge series. Both reject a large count boom."
+  },
+  "interpretation": "No2020 origination influx; modest2021 bump in later chart, substantially inflated lending-dollar headline. Maturity timing, term distribution, prepayments and actual coverage changes still unknown. No forecast changed.",
+  "additional_source": "https://www.prnewswire.com/news-releases/auto-loan-interest-rates-see-a-slight-lift-in-june-according-to-edmunds-301086819.html",
+  "edmunds_June2020": {
+    "new_finance_average_APR": 0.042,
+    "zero_percent_share_of_financed_new_purchases": 0.194
+  },
+  "search_queries": [
+    "site.newyorkfed.org 2021 auto loan originations 2020 record 2021 734 billion",
+    "site.consumerfinance.gov auto loan originations number loans 2020 2021 2019",
+    "site.equifax.com \"2021\" \"2020\" \"NUMBER OF AUTO LOAN ACCOUNTS\" \"2022\"",
+    "site.equifax.com \"2022\" \"2021\" \"auto loans\" \"million\" originations"
+  ],
+  "access_limit": "Equifax Jan2024 report returned404; not relied on. Philadelphia Fed PDF retrieved200 after robots200 via scripts/prov.py; page4 rendered and visually checked. Earlier NY Fed count difference remains unresolved.",
+  "pdf_sha256": "460c3b875cc06290896adddedce5933db4a0fbb193dbb11f34b710b4aa5fc3f9"
+}

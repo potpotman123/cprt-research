@@ -1,0 +1,17 @@
+{
+  "source": "https://download.bls.gov/pub/time.series/cu/cu.data.14.USTransportation",
+  "series": "CUSR0000SETE",
+  "seasonally_adjusted": true,
+  "saved_vintage": "September2026 download; latest available month August2026; no fresh fetch claimed",
+  "jan2020": 572.109,
+  "peak": [
+    "2025-12",
+    897.307
+  ],
+  "aug2025": 895.769,
+  "aug2026": 849.837,
+  "vs_jan2020_pct": 48.54459552288113,
+  "vs_peak_pct": -5.290274120228644,
+  "yoy_pct": -5.12766126088311,
+  "remaining_drop_to_jan2020_pct": 32.680149252150706
+}
