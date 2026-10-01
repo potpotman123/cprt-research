@@ -1,0 +1,6 @@
+scenario,exposed_unit_weight,excess_coverage_drop,alternate_route_recapture,repairable_nonfiling,net_unit_loss,legacy_service_musd,delta_vs_reference_musd,q1_reported_tlf,status
+reference,0,0,0,0,0,4093.077730243895,0.0,0.231142625616621,"HYPOTHETICAL; flat effect all four FY27 quarters, no maturity timing inferred"
+repairable_nonfiling_only,0,0,0,0.1,0,4093.077730243895,0.0,0.2503943823543523,"HYPOTHETICAL; flat effect all four FY27 quarters, no maturity timing inferred"
+coverage_example,0.1,0.2,0.25,0,0.015000000000000003,4046.8311771884055,-46.246553055489585,0.23114262561662097,"HYPOTHETICAL; flat effect all four FY27 quarters, no maturity timing inferred"
+coverage_plus_nonfiling,0.1,0.2,0.25,0.1,0.015000000000000003,4046.8311771884055,-46.246553055489585,0.25039438235435263,"HYPOTHETICAL; flat effect all four FY27 quarters, no maturity timing inferred"
+severe_coverage_example,0.2,0.4,0.25,0,0.06000000000000001,3908.091518021943,-184.98621222195197,0.23114262561662077,"HYPOTHETICAL; flat effect all four FY27 quarters, no maturity timing inferred"

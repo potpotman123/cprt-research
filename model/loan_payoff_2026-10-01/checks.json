@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "reference_sha256": "c9daffab417e503f98a1ffa5c59e01a44acb7d71ae0276184d4fd3f6964acec0",
+  "reference_service_musd": 4093.077730243895,
+  "history_unchanged": true,
+  "uniform_unit_multiplier_checked": true,
+  "nonfiling_identity_checked": true,
+  "nonfiling_revenue_invariant": true,
+  "forecast_admission": false,
+  "catalyst_verified": false,
+  "amortization_example": {
+    "status": "ILLUSTRATIVE fixed-rate fully amortizing loan; no fees/arrears/balloon",
+    "principal": 40000,
+    "apr": 0.06,
+    "term_months": 72,
+    "monthly_payment": 662.9155157389,
+    "first_month_interest": 200.0,
+    "first_month_principal": 462.9155157389,
+    "ending_balance": -1.2814780347980559e-09
+  }
+}

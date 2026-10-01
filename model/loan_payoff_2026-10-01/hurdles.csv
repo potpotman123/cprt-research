@@ -1,0 +1,7 @@
+exposed_unit_weight,alternate_route_recapture,required_excess_coverage_drop,feasible_probability,terminal_unit_loss_target,status
+0.05,0,1.291174047411753,False,0.06455870237058765,Reverse-solved hurdle only; NOT evidence or annual timing forecast
+0.05,0.25,1.7215653965490039,False,0.06455870237058765,Reverse-solved hurdle only; NOT evidence or annual timing forecast
+0.1,0,0.6455870237058765,True,0.06455870237058765,Reverse-solved hurdle only; NOT evidence or annual timing forecast
+0.1,0.25,0.8607826982745019,True,0.06455870237058765,Reverse-solved hurdle only; NOT evidence or annual timing forecast
+0.2,0,0.32279351185293825,True,0.06455870237058765,Reverse-solved hurdle only; NOT evidence or annual timing forecast
+0.2,0.25,0.43039134913725097,True,0.06455870237058765,Reverse-solved hurdle only; NOT evidence or annual timing forecast

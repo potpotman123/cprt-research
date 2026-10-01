@@ -1,0 +1,13 @@
+origination_year,assumed_term_months,earliest_scheduled_maturity,latest_scheduled_maturity,status
+2020,60,2025-01,2025-12,Calendar arithmetic only; no origination weights or survival estimate
+2020,70,2025-11,2026-10,Calendar arithmetic only; no origination weights or survival estimate
+2020,72,2026-01,2026-12,Calendar arithmetic only; no origination weights or survival estimate
+2020,84,2027-01,2027-12,Calendar arithmetic only; no origination weights or survival estimate
+2021,60,2026-01,2026-12,Calendar arithmetic only; no origination weights or survival estimate
+2021,70,2026-11,2027-10,Calendar arithmetic only; no origination weights or survival estimate
+2021,72,2027-01,2027-12,Calendar arithmetic only; no origination weights or survival estimate
+2021,84,2028-01,2028-12,Calendar arithmetic only; no origination weights or survival estimate
+2022,60,2027-01,2027-12,Calendar arithmetic only; no origination weights or survival estimate
+2022,70,2027-11,2028-10,Calendar arithmetic only; no origination weights or survival estimate
+2022,72,2028-01,2028-12,Calendar arithmetic only; no origination weights or survival estimate
+2022,84,2029-01,2029-12,Calendar arithmetic only; no origination weights or survival estimate
