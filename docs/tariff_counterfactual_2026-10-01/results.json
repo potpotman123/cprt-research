@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "forecast_admission": false,
+  "central_illustration": {
+    "case": "central_illustration",
+    "initial_tariff": 0.15,
+    "remaining_tariff": 0,
+    "customs_value_over_untaxed_delivered_price": 0.3,
+    "tariff_dollar_pass_through": 0.5,
+    "odds_elasticity": 2,
+    "affected_market_fraction": 1,
+    "competitor_price_cut": 0,
+    "aftermarket_price_cut": 0.022004889975550057,
+    "relative_price_factor": 0.9779951100244499,
+    "initial_physical_share": 0.25,
+    "counterfactual_physical_share": 0.2584364441409527,
+    "share_gain_pp": 0.8436444140952681,
+    "relative_quantity_gain_fixed_market": 0.033745776563810725,
+    "status": "HYPOTHETICAL static counterfactual, not forecast or fitted elasticity"
+  },
+  "fixed_quantity_dollar_share_example": {
+    "initial": 0.227,
+    "counterfactual": 0.22311939590669286,
+    "note": "Separate spending identity, holding quantities and other prices fixed"
+  },
+  "source_numeric_example": {
+    "untaxed_delivered_price": 200,
+    "customs_value": 60,
+    "tariff": 0.15,
+    "tax_dollars": 9,
+    "full_pass_taxed_price": 209,
+    "full_pass_removal_price_cut": 0.0430622009569378
+  },
+  "limitations": [
+    "No causal adoption elasticity",
+    "No current customs-value/import weights",
+    "No mapped China tariff rate",
+    "No timing or policy-repeal forecast",
+    "OEM/recycled prices and eligibility can change",
+    "Physical share gain is not annual growth or revenue impact"
+  ],
+  "hurdles": [
+    {
+      "target_physical_share_gain_pp": 5,
+      "tariff_dollar_pass_through": 0.5,
+      "required_odds_elasticity": 11.294721372215006,
+      "status": "Reverse solved assumption, not measured"
+    },
+    {
+      "target_physical_share_gain_pp": 5,
+      "tariff_dollar_pass_through": 1,
+      "required_odds_elasticity": 5.709500476949553,
+      "status": "Reverse solved assumption, not measured"
+    }
+  ]
+}

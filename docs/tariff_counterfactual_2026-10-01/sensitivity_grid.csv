@@ -1,0 +1,13 @@
+case,initial_tariff,remaining_tariff,customs_value_over_untaxed_delivered_price,tariff_dollar_pass_through,odds_elasticity,affected_market_fraction,competitor_price_cut,aftermarket_price_cut,relative_price_factor,initial_physical_share,counterfactual_physical_share,share_gain_pp,relative_quantity_gain_fixed_market,status
+pass0_elasticity1,0.15,0,0.3,0,1,1,0,0.0,1.0,0.25,0.25,0.0,0.0,"HYPOTHETICAL static counterfactual, not forecast or fitted elasticity"
+pass0_elasticity2,0.15,0,0.3,0,2,1,0,0.0,1.0,0.25,0.25,0.0,0.0,"HYPOTHETICAL static counterfactual, not forecast or fitted elasticity"
+pass0_elasticity4,0.15,0,0.3,0,4,1,0,0.0,1.0,0.25,0.25,0.0,0.0,"HYPOTHETICAL static counterfactual, not forecast or fitted elasticity"
+pass0.25_elasticity1,0.15,0,0.3,0.25,1,1,0,0.011124845488257096,0.9888751545117429,0.25,0.252103459021502,0.21034590215019966,0.008413836086007986,"HYPOTHETICAL static counterfactual, not forecast or fitted elasticity"
+pass0.25_elasticity2,0.15,0,0.3,0.25,2,1,0,0.011124845488257096,0.9888751545117429,0.25,0.25421861726693645,0.4218617266936453,0.016874469067745812,"HYPOTHETICAL static counterfactual, not forecast or fitted elasticity"
+pass0.25_elasticity4,0.15,0,0.3,0.25,4,1,0,0.011124845488257096,0.9888751545117429,0.25,0.2584838872291163,0.8483887229116305,0.03393554891646522,"HYPOTHETICAL static counterfactual, not forecast or fitted elasticity"
+pass0.5_elasticity1,0.15,0,0.3,0.5,1,1,0,0.022004889975550057,0.9779951100244499,0.25,0.25419515226848977,0.4195152268489766,0.016780609073959063,"HYPOTHETICAL static counterfactual, not forecast or fitted elasticity"
+pass0.5_elasticity2,0.15,0,0.3,0.5,2,1,0,0.022004889975550057,0.9779951100244499,0.25,0.2584364441409527,0.8436444140952681,0.033745776563810725,"HYPOTHETICAL static counterfactual, not forecast or fitted elasticity"
+pass0.5_elasticity4,0.15,0,0.3,0.5,4,1,0,0.022004889975550057,0.9779951100244499,0.25,0.2670562101121486,1.7056210112148584,0.06822484044859434,"HYPOTHETICAL static counterfactual, not forecast or fitted elasticity"
+pass1_elasticity1,0.15,0,0.3,1,1,1,0,0.04306220095693769,0.9569377990430623,0.25,0.2583436341161928,0.8343634116192822,0.03337453646477129,"HYPOTHETICAL static counterfactual, not forecast or fitted elasticity"
+pass1_elasticity2,0.15,0,0.3,1,2,1,0,0.04306220095693769,0.9569377990430623,0.25,0.26686664915292546,1.6866649152925461,0.06746659661170185,"HYPOTHETICAL static counterfactual, not forecast or fitted elasticity"
+pass1_elasticity4,0.15,0,0.3,1,4,1,0,0.04306220095693769,0.9569377990430623,0.25,0.2844396684244227,3.44396684244227,0.1377586736976908,"HYPOTHETICAL static counterfactual, not forecast or fitted elasticity"

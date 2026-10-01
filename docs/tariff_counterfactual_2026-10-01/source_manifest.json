@@ -1,0 +1,87 @@
+{
+  "as_of": "2026-10-01",
+  "search_queries": [
+    "site.lkqcorp.com 2026 tariffs Taiwan aftermarket collision parts pricing",
+    "site.autobpa.com 2026 Taiwan tariffs 15% aftermarket",
+    "site.whitehouse.gov Taiwan 2026 automobile parts tariffs 15 percent",
+    "site.autobpa.com tariffs 2026 15 percent Taiwan",
+    "site.investor.lkqcorp.com \"2026\" \"tariff\" \"200\"",
+    "site.partstrader.com tariffs aftermarket prices 2026"
+  ],
+  "search_method": "Web search discovery; two batches of three. Search snippets not used to calibrate effect. Primary downloads subsequently checked with robots and scripts/prov.py.",
+  "primary_requests": [
+    {
+      "fetched_utc": "2026-10-01T04:54:45Z",
+      "url": "https://www.partstrader.com/robots.txt",
+      "method": "GET",
+      "http_status": 200,
+      "bytes": 196,
+      "sha256": "550c321334c8da4506547b2c2ba52ffbb457a95d4972493b5531ec40b8bc8cb9",
+      "robots_status": "unknown",
+      "robots_basis": "robots bootstrap",
+      "note": "",
+      "saved_path": "/Users/kwu/cprt/raw/tariff_counterfactual_2026_10/partstrader_robots.txt"
+    },
+    {
+      "fetched_utc": "2026-10-01T04:55:28Z",
+      "url": "https://www.partstrader.com/why-parts-inflation-looks-so-uneven/",
+      "method": "GET",
+      "http_status": 200,
+      "bytes": 84506,
+      "sha256": "7710189a4ff0e34a2dcb03ab77c06eaa4cc98c60350213f5f2faf53325e2e761",
+      "robots_status": "allowed",
+      "robots_basis": "https://www.partstrader.com/robots.txt",
+      "note": "Tariff counterfactual primary-source verification",
+      "saved_path": "/Users/kwu/cprt/raw/tariff_counterfactual_2026_10/partstrader.html"
+    },
+    {
+      "fetched_utc": "2026-10-01T04:56:08Z",
+      "url": "https://content.govdelivery.com/robots.txt",
+      "method": "GET",
+      "http_status": 404,
+      "bytes": 196,
+      "sha256": "80c3fe2ae1062abf56456f52518bd670f9ec3917b7f85e152b347ac6b6faf880",
+      "robots_status": "unknown",
+      "robots_basis": "robots bootstrap",
+      "note": "",
+      "saved_path": ""
+    },
+    {
+      "fetched_utc": "2026-10-01T04:56:51Z",
+      "url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/4193d0a",
+      "method": "GET",
+      "http_status": 200,
+      "bytes": 81025,
+      "sha256": "cdcf0a223c79064727dbceb722784dd4338f34bfe727e7df3900f23ca3c01a1d",
+      "robots_status": "allowed",
+      "robots_basis": "https://content.govdelivery.com/robots.txt",
+      "note": "Tariff counterfactual primary-source verification",
+      "saved_path": "/Users/kwu/cprt/raw/tariff_counterfactual_2026_10/cbp_taiwan.html"
+    }
+  ],
+  "files_sha256": {
+    "raw/tariff_counterfactual_2026_10/partstrader.html": "7710189a4ff0e34a2dcb03ab77c06eaa4cc98c60350213f5f2faf53325e2e761",
+    "raw/tariff_counterfactual_2026_10/cbp_taiwan.txt": "4c32fb2d331437e2104ee91bd986c6d1323232679d633446876553c57095f0bf",
+    "raw/tariff_counterfactual_2026_10/access.json": "2811b602c9499027db717facb0506ec84b1229e73ccd97a793ab507e43dd4aa2",
+    "raw/tariff_counterfactual_2026_10/partstrader.txt": "ba7772720f6dcd288e934734a6be203bb11f3dadbe5567bb9948e49b7e605cd7",
+    "raw/tariff_counterfactual_2026_10/partstrader_robots.txt": "550c321334c8da4506547b2c2ba52ffbb457a95d4972493b5531ec40b8bc8cb9",
+    "raw/tariff_counterfactual_2026_10/cbp_taiwan.html": "cdcf0a223c79064727dbceb722784dd4338f34bfe727e7df3900f23ca3c01a1d"
+  },
+  "existing_evidence": [
+    "docs/aftermarket_transition_evidence_2026-09-29/README.md",
+    "docs/repair_salvage_execution_2026-09-28/MIX_SEGMENTATION.md",
+    "model/aftermarket_bridge_2026-09-29/inputs.json"
+  ],
+  "new_source_admission": {
+    "partstrader": "Feb11,2026: vendor basket direction and pricing example. Hypothetical customs/list ratio; not observed national pass-through. Tariff dates superseded for purposes of this analysis by official implementation guidance.",
+    "cbp_taiwan": "May27 bulletin; May1 effective entries. Qualifying tariff categories only; does not map all AM products or China rates."
+  },
+  "not_admitted": [
+    "National weighted duty rate",
+    "Empirical demand/substitution elasticity",
+    "Measured tariff-suppressed adoption",
+    "Current origin exposure weights",
+    "Policy repeal date or Copart revenue forecast"
+  ],
+  "code_sha256": "eabe92f2e16a8f8d6b97cc87f5dd2a288ae0e022cbb46cc986a2d6ffcbe47f38"
+}
