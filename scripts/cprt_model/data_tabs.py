@@ -36,12 +36,13 @@ def build(wb, ctx):
     for r_ in read_csv('docs/historical_body_births_2026-09-28/candidate_body_births.csv'):
         if r_['year'] == 'year': continue
         bb.setdefault(int(r_['year']), {})[r_['body']] = float(r_['births_thousands'])
+    if 2028 not in bb and 2027 in bb: bb[2028] = dict(bb[2027])   # hold 2027 (ASSUMED, build): the births file ends at 2027
     years = sorted(bb); rows = [[y, bb[y].get('Car'), bb[y].get('SUV'), bb[y].get('Pickup'), bb[y].get('Van'), sum(bb[y].values())] for y in years]
     r = write_table(ws, 4, 2, ['Year', 'Car', 'SUV', 'Pickup', 'Van', 'Total'], rows, fmt_by_col={1: F_MONEY, 2: F_MONEY, 3: F_MONEY, 4: F_MONEY, 5: F_MONEY})
     ctx['births'] = (5, r - 1)   # rows holding years in column B, bodies in C..F
     surv = [[int(float(s['age'])), float(s['survival_cars']), float(s['survival_light_trucks'])] for s in read_csv('data/csv/ornl_tedb40_survival_by_age.csv')]
     write_table(ws, 4, 9, ['Age', 'S cars', 'S light trucks'], surv, fmt_by_col={1: '0.000', 2: '0.000'}); ctx['surv'] = (5, 4 + len(surv))
-    ws.cell(r + 1, 2, 'Births 2026–2028 hold the final model-year mix and the existing 2025 total (ASSUMED). Survival beyond the table is zero (age_curves.py convention).').font = font(C_NOTE, i=True, sz=10)
+    ws.cell(r + 1, 2, 'Births 2026–2027 hold the final model-year mix and the existing 2025 total (candidate_body_births.csv, ASSUMED); 2028 repeats 2027 (ASSUMED, added at build because the file ends at 2027). Survival beyond the table is zero (age_curves.py convention).').font = font(C_NOTE, i=True, sz=10)
     # ---------------- D Fees
     ws = wb.create_sheet('D Fees'); tab_color(ws, 'BFBFBF'); setup(ws, label_w=14, ncols=12)
     title(ws, 'D Fees — Copart posted buyer fee schedule, read 26 Sep 2026', 'VERIFIED page text (owner-driven browser reads; raw/fees/live_2026-09/). One dated snapshot; its use for history is a proxy. IAA grid and fixed fees alongside.')

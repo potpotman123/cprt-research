@@ -75,7 +75,7 @@ def build(wb, ctx):
         r += 1
     label(ws, r, 'Largest single-cell gap, |model − CCC|', 'pp', b=True)
     for y in range(2020, 2026):
-        c = CYCOL[y]; put(ws, f'{c}{r}', f"=SUMPRODUCT(MAX(ABS({c}{mrows[('Car',0)]}:{c}{mrows[('Van',3)]}-{c}{crows[('Car',0)]}:{c}{crows[('Van',3)]})))", fmt=F_PCT, b=True)
+        c = CYCOL[y]; terms = ','.join(f'ABS({c}{mrows[k]}-{c}{crows[k]})' for k in mrows); put(ws, f'{c}{r}', f'=MAX({terms})', fmt=F_PCT, b=True)
     gap_row = r; ctx['e1'] = dict(cell_rows=cell_rows, mrows=mrows, crows=crows, tot_row=tot_row, s7_row=s7_row, gap_row=gap_row)
     group(ws, 80, 'E. Checks')
     label(ws, 81, 'Total vehicles on the road, 2024 vs Experian anchor', '000s', note='Anchor in Inputs; the roll is fitted to it via m(2024), so this is a reproduction check, not validation')
@@ -84,7 +84,7 @@ def build(wb, ctx):
     label(ws, 83, 'Largest cell gap vs CCC claim mix, 2020–2025 (out of sample except body factors at 2025)', 'pp', note='PASS if every cell within 3.5 points and 2025 within 2.5; see docs/source_trace_2026-10-01/FLEET_VS_CCC.md')
     put(ws, 'D83', f'=MAX({CYCOL[2020]}{gap_row}:{CYCOL[2025]}{gap_row})', fmt=F_PCT); put(ws, 'G83', '=IF(D83<0.035,"PASS","FAIL")', b=True)
     label(ws, 84, 'Largest body-total gap, 2020–2024 (body factors fitted on 2025 only)', 'pp')
-    put(ws, 'D84', f'=SUMPRODUCT(MAX(ABS({CYCOL[2020]}{gap_row-4}:{CYCOL[2024]}{gap_row-1})))', fmt=F_PCT); put(ws, 'G84', '=IF(D84<0.015,"PASS","FAIL")', b=True)
+    terms = ','.join(f'ABS({CYCOL[y]}{rr})' for y in range(2020, 2025) for rr in range(gap_row - 4, gap_row)); put(ws, 'D84', f'=MAX({terms})', fmt=F_PCT); put(ws, 'G84', '=IF(D84<0.015,"PASS","FAIL")', b=True)
     put(ws, 'B86', 'Feeds →  E2 Claims & Totals (vehicles by band × body, rows 19–34, mapped to fiscal quarters)', 'note')
     section(ws, 88, 'Inputs  (blue = typed value; every number here carries a label and a source)', ['Value', 'Label'])
     inputs = [(89, 'k_cars(2013): survival stretch, cars', 1.064, 'FITTED', 'docs/AGE_CURVES.md §2.3 — reproduces IHS 2013 census of cars by age (ORNL Table 3.11)'),
