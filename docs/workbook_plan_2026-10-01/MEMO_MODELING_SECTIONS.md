@@ -1,0 +1,23 @@
+# Memo: short modeling sections for the three theses (draft, 2 October 2026)
+
+Workbook: `model/CPRT_Model_v2.xlsx`. Every number below is a cell with a label and a source on the Sources tab.
+
+## Thesis 1 — modeling
+
+We model coverage explicitly rather than as a claims haircut. Insured total losses equal the fleet roll's crashes multiplied by a physical-damage coverage index: the share of drivers with insurance (IRC: 87.6% in 2017, 84.6% in 2023) times the share of insured drivers carrying collision (NAIC via III: 76%, 77%, 77% for 2021–23). The index fell 2.2% from 2017 to 2023, all of it from drivers leaving insurance; collision take-up held through the premium spike. Three forward paths run FQ1 FY27–FQ4 FY28. *Sticky* holds coverage at today's level; this is our thesis and our base case. *Street-implied* reverse-solves the coverage recovery JPMorgan's FY27 legacy service revenue of $4,061m requires: +3.5% insured volume in one year, more than the entire measured 2017–23 decline. *Premium-response* lets coverage return at the 2017–23 response to premiums-over-earnings (0.37) as premiums fall; it lands $13m short of JPM. The sticky path is worth $104m of FY27 legacy service revenue against JPM (−2.6%). (Tabs: D Coverage, E2 rows 103–124, Scenarios cases 0–1b.)
+
+## Thesis 2 — modeling
+
+The aftermarket channel is a sourcing shift applied to a measured repair-parts basket. Basket shares are CCC's 2025 replacement-part dollar shares (OEM 66.8%, aftermarket 22.7%, recycled 10.5%); parts are 40% of the bill (CCC range 36–44%); the aftermarket price is 0.73 of OEM (Mitchell's matched 2016 discounts, mean 27%); the recycled price, 0.60, is the one assumed input. The default path continues the observed trend (aftermarket +1.7 points a year, recycled −0.2) through FY28; the memo's 5.5-point stress case is a selector. The bill saving becomes fewer total losses through the engine's selection response (about 2 units per 1% of bill) and lower prices through the engine's recycled-displacement endpoint, scaled. On the observed trend the effect is −$9m of FY27 legacy service revenue (units −0.4%, prices −0.2% by FQ4 FY27); the stress case is worth about 0.4% of the bill at sourced prices. The dismantler-bid coefficients (25% donor exposure, 1.5× contribution-to-bid, 50% transmission) remain assumptions shown as sensitivities, with a no-displacement countercase visible; the tariff effect is an input, zero by default, because its price-response coefficient is unsourced. (Tabs: E4, Scenarios thesis-2 case.)
+
+## Thesis 3 — modeling
+
+Copart's share of the insured total-loss pool is the sum over ten carriers of pool weight times allocation to Copart. Weights are premium shares frozen at FQ4 FY26 (a proxy, labelled). Progressive's realised move, 25% to 5% over FQ3 FY26–FQ1 FY27, is fitted to the FQ4 FY26 print and always on; its FQ4 FY26 effect is derived in-model at −5.0% of service revenue. Further moves are probability-weighted from dated expert evidence: State Farm −5 points at 45% from FQ3 FY27, regional carriers −5 points at 45% from FQ1 FY27, each phased over its ramp; the GEICO win (+12 points at 60%) is off in the bear variant. Share falls from 56.6% at FQ4 FY26 to 55.3% at FQ4 FY27, worth −$26m of FY27 legacy service revenue against the known-facts case. Seller concessions (20% of a 4% commission on a chosen share of volume) are a toggle, zero by default. The parity evidence sits beside the model with sources: IAA 14,803 acres and 333 locations (RB Global 10-K) versus Copart's 286 locations; insurer contracts cancellable on 30–90 days' notice; a former Progressive executive on RB Global's board; Copart's FY2026 10-K newly describing seller arrangements as non-exclusive and terminable on limited notice. (Tabs: E3 rows 6–96, D Carriers.)
+
+## Evidence points to reconcile before these go in
+
+1. Thesis 1 says premiums are not falling and cites an S&P forecast of rising rates; the BLS motor-vehicle-insurance CPI is down 5.1% year on year as of August 2026. Reframe as "coverage stays lapsed even as premiums ease" and treat the S&P forecast as the alternative.
+2. IRC's release implies 12.4% uninsured in 2017 (15.4% less "an increase of 3%"); the memo's 12.6% needs its own citation or should be changed.
+3. "Recycled and OEM have both continuously decreased": recycled fell 10.7% to 10.5% in 2024–25; give the size.
+4. "Suppressed 0.84–1.69 points via a price-response coefficient of 2": the coefficient has no source in the repository; label it an illustration or drop the range.
+5. The 22.4% lapse surcharge is a nine-insurer quote comparison by MoneyGeek, not a filing; cite it as such.
