@@ -23,7 +23,7 @@ def build(wb, ctx):
     betas = [('Business & Consumer Services (155 firms)', 0.89, 0.77, 0.81), ('Retail (Automotive) (34 firms)', 0.94, 0.70, 0.71), ('Auto Parts (35 firms)', 1.34, 1.02, 1.13), ('Transportation (19 firms)', 0.86, 0.68, 0.71), ('Total market (5,994 firms)', 0.91, 0.72, 0.76)]
     for i, (n, lv, ul, cc) in enumerate(betas):
         r = 14 + i; lab(r, n); put(rd, f'S{r}', lv, 'input', '0.00'); put(rd, f'T{r}', ul, 'input', '0.00'); put(rd, f'U{r}', cc, 'input', '0.00')
-    lab(19, 'Peer company betas (5-year monthly): RB Global, OPENLANE, ACV Auctions, Carvana, Copart', note='NOT OBTAINED — price downloads refused by the only permitted free source\\'s robots file; paste CapIQ or Bloomberg values here (dated) to override the industry beta')
+    lab(19, 'Peer company betas (5-year monthly): RB Global, OPENLANE, ACV Auctions, Carvana, Copart', note='NOT OBTAINED — price downloads refused by the only permitted free source\'s robots file; paste CapIQ or Bloomberg values here (dated) to override the industry beta')
     for j, n in enumerate(['RBA', 'KAR', 'ACVA', 'CVNA', 'CPRT']): put(rd, f'{L(19+j)}19', n, 'label', i=True)
     lab(20, 'Selected unlevered beta (default: average of the two closest industries, cash-corrected)', b=True, note='ASSUMED choice of industries; Copart is an auction-services business with retail-automotive exposure'); put(rd, 'S20', '=AVERAGE(U14,U15)', fmt='0.00', b=True); put(rd, 'T20', 'ASSUMED', 'note')
     lab(21, 'Relevered beta = βu × (1 + (1 − t) × D/E)'); put(rd, 'S21', '=S20*(1+(1-S33)*S8/S7)', fmt='0.00')
@@ -31,7 +31,7 @@ def build(wb, ctx):
     lab(23, 'Pre-tax cost of debt (revolver pricing proxy; weight ≈ 0)', note='ASSUMED: 10-K describes the $1,250m unsecured revolver maturing 23 Jan 2031 without the margin; SOFR + 1.0–1.5% proxy'); put(rd, 'S23', 0.0575, 'input', F_PCT2); put(rd, 'T23', 'ASSUMED', 'note')
     lab(24, 'After-tax cost of debt'); put(rd, 'S24', '=S23*(1-S33)', fmt=F_PCT2)
     lab(25, 'WACC = E/V × Ke + D/V × Kd(1 − t)   → DCF!H88', b=True); put(rd, 'S25', '=S9*S22+T9*S24', fmt=F_PCT2, b=True)
-    lab(26, 'Memo: DCF\\'s previous inputs — risk-free 4.21%, beta 1.05, ERP 4.30% → 8.725%', i=True)
+    lab(26, 'Memo: DCF\'s previous inputs — risk-free 4.21%, beta 1.05, ERP 4.30% → 8.725%', i=True)
     bar(28, 'Effective tax rate build (feeds the DCF tax-rate row)'); put(rd, 'S28', 'Value', 'label', b=True); put(rd, 'T28', 'Label', 'label', b=True)
     lab(29, 'US federal statutory rate', note='10-K MD&A'); put(rd, 'S29', 0.21, 'input', F_PCT2); put(rd, 'T29', 'VERIFIED', 'note')
     lab(30, '(+) State income taxes: $21.5m ÷ pre-tax income $1,835m', note='10-K MD&A Income Taxes; pre-tax income from the income statement'); put(rd, 'S30', f"='D 10-K FY26'!E{d['Tax reconciliation FY2026 ($m): FDII benefit / excess stock-option benefit / state taxes']}/1834.977", fmt=F_PCT2); put(rd, 'T30', 'VERIFIED', 'note')
