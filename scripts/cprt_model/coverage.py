@@ -23,7 +23,7 @@ def build(wb, ctx):
             ('   y/y', [None] + [cpi[y] / cpi[y - 1] - 1 if y in cpi and (y - 1) in cpi else None for y in years[1:]], F_PCT, ''),
             ('Average hourly earnings, total private, annual average ($)', [ahe.get(y) for y in years], '0.00', 'VERIFIED — raw/bls/ce.data.05b.TotalPrivate.AllEmployeeHoursAndEarnings, series CES0500000003 (2026 = months to date)'),
             ('Uninsured-motorist rate (share of drivers), IRC', [0.124, None, None, None, None, None, 0.154, None, None, None], F_PCT, 'VERIFIED endpoints — IRC release 20 Feb 2025: 15.4% in 2023, "an increase of 3% over the six years"; 2017 = 15.4 − 3.0 = 12.4% (derived); yearly path not in the release'),
-            ('Share of insured drivers buying collision coverage, NAIC via III', [None, None, None, None, None, None, 0.77, None, None, None], F_PCT, 'VERIFIED republication — III Facts + Statistics, Triple-I analysis of 2023 NAIC data (77% collision, 80% comprehensive). NAIC history refused the fetch (HTTP 403); earlier years not obtained'),
+            ('Share of insured drivers buying collision coverage, NAIC via III', [None, None, None, None, 0.76, 0.77, 0.77, None, None, None], F_PCT, 'VERIFIED republication — III Facts + Statistics: 2021 NAIC data 76% (Wayback snapshot 2 Jun 2024, raw/wayback/iii_auto_20240602004547.html); 2022 data 77% (snapshot 27 Sep 2025); 2023 data 77% (live page, raw/discovery_2026-10-02). Comprehensive 80% in all three. NAIC\'s own report refused the fetch (403); pre-2021 pages rate-limited (429), not pursued'),
             ('CCC total claim volume, y/y', [None, None, None, None, None, None, None, -0.077, -0.033, None], F_PCT, 'VERIFIED — owner\'s v1 Volume Build row 10 ("all from CCC reports"); calendar 2024 and 2025'),
             ('CCC claim volume excluding comprehensive, y/y', [None, None, None, None, None, None, None, -0.057, -0.016, None], F_PCT, 'VERIFIED — v1 Volume Build row 11'),
             ('CCC repairable claim volume, y/y', [None, None, None, None, None, None, None, -0.097, None, None], F_PCT, 'VERIFIED — v1 Volume Build row 12')]
@@ -45,7 +45,7 @@ def build(wb, ctx):
     put(e2, 'B104', 'Calendar year', 'label', b=True)
     for y in years: put(e2, f'{cy[y]}104', y, 'label', b=True)
     label(e2, 105, 'Uninsured-motorist rate (IRC; endpoints verified, path interpolated)', '%', note='UNVERIFIED path: linear between 2017 and 2023; 2024–26 held at 2023 (IRC notes UM "continues to tick upward")')
-    label(e2, 106, 'Share of insured drivers with collision coverage (NAIC via III; 2023 only)', '%', note='Held flat at the 2023 value in every year because NAIC history was not obtained; the index therefore understates any collision-share decline')
+    label(e2, 106, 'Share of insured drivers with collision coverage (NAIC via III: 76% 2021, 77% 2022, 77% 2023)', '%', note='2017–2020 held at the 2021 value and 2024–26 at the 2023 value (archive pages before 2024 were rate-limited). Collision take-up did not fall through the premium spike, so the index decline comes from the uninsured leg')
     label(e2, 107, 'Physical-damage coverage index  (1 − uninsured) × collision share, 2025 = 1', 'x', b=True)
     label(e2, 108, 'Premium burden: insurance CPI ÷ average hourly earnings, 2025 = 1', 'x')
     label(e2, 109, '   premium burden y/y', '%', i=True)
@@ -54,10 +54,14 @@ def build(wb, ctx):
         if y <= 2017: um = f"='D Coverage'!D8"
         elif y >= 2023: um = f"='D Coverage'!J8"
         else: um = f"='D Coverage'!$D$8+('D Coverage'!$J$8-'D Coverage'!$D$8)*({y}-2017)/6"
-        put(e2, f'{c}105', um, 'link', F_PCT); put(e2, f'{c}106', "='D Coverage'!$J$9", 'link', F_PCT)
+        coll = "='D Coverage'!$H$9" if y <= 2021 else ("='D Coverage'!$I$9" if y == 2022 else "='D Coverage'!$J$9")
+        put(e2, f'{c}105', um, 'link', F_PCT); put(e2, f'{c}106', coll, 'link', F_PCT)
         put(e2, f'{c}107', f'=(1-{c}105)*{c}106/((1-$L$105)*$L$106)', fmt='0.0000', b=True)
         put(e2, f'{c}108', f"=('D Coverage'!{c}5/'D Coverage'!{c}7)/('D Coverage'!$L$5/'D Coverage'!$L$7)", fmt='0.0000')
         if j: put(e2, f'{c}109', f'={c}108/{cy[years[j-1]]}108-1', fmt=F_PCT, i=True)
+    for j, y in enumerate((2027, 2028)):
+        c = L(14 + j); put(e2, f'{c}104', y, 'label', b=True); put(e2, f'{c}107', '=$M$107', fmt='0.0000', b=True)
+    put(e2, 'P107', 'sticky path shown for 2027–28 (flat); the premium-response and recovery paths are the quarterly ratios in rows 117–118', 'note')
     label(e2, 110, 'Two-point coverage response ε = −ln(C₂₀₂₃ ÷ C₂₀₁₇) ÷ ln(B₂₀₂₃ ÷ B₂₀₁₇)', 'x', note='UNVERIFIED: two observations only; sign and scale indicative. Used solely in the premium-response path below')
     put(e2, 'D110', '=-LN(J107/D107)/LN(J108/D108)', fmt='0.000')
     label(e2, 111, 'Context: CCC total claim volume y/y (2024, 2025) and ex-comprehensive', '%', i=True, note='Coverage explains only part of the claim-volume decline; frequency and non-filing explain the rest')

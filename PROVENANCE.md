@@ -274,3 +274,5 @@ Rechecked CCC original Figures38–39 and historical-high wording; separated rep
 - `insurance-research.org` press release PDF, Uninsured and Underinsured Motorists 2017–2023 (200) → `raw/irc/`. `www.moneygeek.com` lapse study (200) → `raw/discovery_2026-10-02/moneygeek_lapse.html`.
 - `www.sec.gov` / `data.sec.gov`: RB Global 2026 DEF 14A (200) → `raw/sec/rba/def14a_2026.htm`; LKQ EDGAR submissions and FY2025 10-K `lkq-20251231.htm` (200) → `raw/sec/lkq/10k_latest.htm`.
 - `docs.google.com` (1 Oct): export hung on sign-in; stopped. All requests robots-checked and logged through `scripts/fetch_logged.py`.
+
+- 2026-10-02 (later): `archive.org/wayback/available` (9 lookups, 200) and `web.archive.org` snapshots of the III auto-insurance facts page: 20240602004547 and 20250927192909 fetched (200) → `raw/wayback/`; six older snapshots returned HTTP 429 at 25–60 s spacing and were not retried further (owner: 2024–25 suffice). Yields the NAIC collision-coverage share for 2021 (76%), 2022 (77%) alongside the live page's 2023 (77%).
