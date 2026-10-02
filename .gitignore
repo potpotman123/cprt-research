@@ -39,3 +39,4 @@ __pycache__/
 model/CPRT_Model_v2_recalc.xlsx
 model/CPRT_Model_v2_prebuild.xlsx
 model/backups/
+model/*_backup_*.xlsx
