@@ -28,7 +28,7 @@ def main():
     cover(wb)
     for s in STEPS: importlib.import_module(f'cprt_model.{s}').build(wb, ctx)
     divider(wb, 'RPM ENGINES ----->', '7030A0'); divider(wb, 'DATA ----->', 'BFBFBF')
-    order = ['Cover', 'RPM', 'DCF', 'Reverse DCF', 'Reverse DCF (Barclays)', 'RPM ENGINES ----->', 'E1 Fleet', 'E1a Fleet (roll)', 'E2 Claims & Totals', 'E3 Carriers', 'E4 Aftermarket', 'E5 Prices & Fees', 'E6 Other Branches', 'Key Drivers', 'Scenarios', 'Street', 'Sources', 'Checks', 'DATA ----->', 'D Reported', 'D Facts', 'D Barclays', 'D Coverage', 'D CCC', 'D Fleet', 'D Fees', 'D Carriers', 'D Engine', 'D Street']
+    order = ['Cover', 'RPM', 'DCF', 'Reverse DCF', 'RPM ENGINES ----->', 'E1 Fleet', 'E1a Fleet (roll)', 'E2 Claims & Totals', 'E3 Carriers', 'E4 Aftermarket', 'E5 Prices & Fees', 'E6 Other Branches', 'Key Drivers', 'Scenarios', 'Street', 'Sources', 'Checks', 'DATA ----->', 'D Reported', 'D Facts', 'D Barclays', 'D Coverage', 'D CCC', 'D Fleet', 'D Fees', 'D Carriers', 'D Engine', 'D Street']
     have = {ws.title: ws for ws in wb.worksheets}
     wb._sheets = [have[n] for n in order if n in have] + [ws for ws in wb.worksheets if ws.title not in order]
     for n in ('Volume Build', 'RPU Build'):
