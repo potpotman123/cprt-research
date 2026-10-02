@@ -9,7 +9,7 @@ BACKUP = ROOT / 'model/CPRT_Model_v2_prebuild.xlsx'
 GENERATED = ['Cover', 'Key Drivers', 'Summary', 'E1 Fleet', 'E1a Fleet (roll)', 'E2 Claims & Totals', 'E3 Carriers', 'E4 Aftermarket', 'E5 Prices & Fees', 'E6 Other Branches', 'Scenarios', 'Street', 'Sources', 'Checks', 'D Reported', 'D Facts', 'D Barclays', 'D 10-K FY26', 'D Coverage', 'D CCC', 'D Fleet', 'D Fees', 'D Carriers', 'D Engine', 'RPM ENGINES ----->', 'DATA ----->', '3SM']
 OWNER_EDITED = ['RPM', 'Reverse DCF', 'DCF']   # owner tabs the steps write specific cells into; never recreated
 HIDE = ['Volume Build', 'RPU Build', 'PB IS (Annual)', 'PB BS (Annual)', 'PB CF (Annual)', 'PB IS (Qtr)', 'PB BS (Qtr)', 'PB CF (Qtr)']
-STEPS = ['data_tabs', 'facts', 'e1_fleet', 'e2_claims', 'e3_carriers', 'e4_aftermarket', 'e5_fees', 'e6_branches', 'coverage', 'scenarios', 'rpm', 'street', 'key_drivers', 'd_barclays', 'd10k', 'wacc', 'sources', 'checks']
+STEPS = ['data_tabs', 'facts', 'e1_fleet', 'e2_claims', 'e3_carriers', 'e4_aftermarket', 'e5_fees', 'e6_branches', 'coverage', 'scenarios', 'rpm', 'street', 'key_drivers', 'd_barclays', 'd10k', 'wacc', 'cover', 'sources', 'checks']
 def cover(wb):
     ws = wb.create_sheet('Cover', 0); tab_color(ws, NAVY); setup(ws, label_w=44, ncols=6, notes_col='H')
     title(ws, 'Copart, Inc. (NASDAQ: CPRT) — revenue architecture, DCF and reverse DCF', 'Fiscal year ends 31 July. $ millions unless stated. Built by scripts/build_cprt_model.py from the repository data; see docs/workbook_plan_2026-10-01.')
@@ -34,7 +34,6 @@ def main():
     before = list(wb.sheetnames); positions = {n: i for i, n in enumerate(before)}
     for n in GENERATED:
         if n in wb.sheetnames: wb.remove(wb[n])
-    cover(wb)
     for s in STEPS: importlib.import_module(f'cprt_model.{s}').build(wb, ctx)
     if 'RPM ENGINES ----->' not in wb.sheetnames: divider(wb, 'RPM ENGINES ----->', '7030A0')
     if 'DATA ----->' not in wb.sheetnames: divider(wb, 'DATA ----->', 'BFBFBF')
