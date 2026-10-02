@@ -4,7 +4,11 @@ Steps are modules in scripts/cprt_model/; each adds tabs. The skeleton's DCF, Re
 import sys, pathlib, importlib, openpyxl
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from cprt_model.common import *
-SRC = pathlib.Path('/Users/kwu/Downloads/CPRT_Model_v1.xlsx'); OUT = ROOT / 'model/CPRT_Model_v2.xlsx'
+SRC = ROOT / 'model/CPRT_Model_v2.xlsx'; OUT = SRC   # 2 Oct: the build now takes the owner's current workbook as its base
+BACKUP = ROOT / 'model/CPRT_Model_v2_prebuild.xlsx'
+GENERATED = ['Cover', 'Key Drivers', 'Summary', 'E1 Fleet', 'E1a Fleet (roll)', 'E2 Claims & Totals', 'E3 Carriers', 'E4 Aftermarket', 'E5 Prices & Fees', 'E6 Other Branches', 'Scenarios', 'Street', 'Sources', 'Checks', 'D Reported', 'D Facts', 'D Barclays', 'D 10-K FY26', 'D Coverage', 'D CCC', 'D Fleet', 'D Fees', 'D Carriers', 'D Engine', 'RPM ENGINES ----->', 'DATA ----->', '3SM']
+OWNER_EDITED = ['RPM', 'Reverse DCF', 'DCF']   # owner tabs the steps write specific cells into; never recreated
+HIDE = ['Volume Build', 'RPU Build', 'PB IS (Annual)', 'PB BS (Annual)', 'PB CF (Annual)', 'PB IS (Qtr)', 'PB BS (Qtr)', 'PB CF (Qtr)']
 STEPS = ['data_tabs', 'facts', 'e1_fleet', 'e2_claims', 'e3_carriers', 'e4_aftermarket', 'e5_fees', 'e6_branches', 'coverage', 'scenarios', 'rpm', 'street', 'key_drivers', 'sources', 'checks']
 def cover(wb):
     ws = wb.create_sheet('Cover', 0); tab_color(ws, NAVY); setup(ws, label_w=44, ncols=6, notes_col='H')
@@ -24,16 +28,24 @@ def cover(wb):
     section(ws, 30, 'Dated benchmarks')
     for r, t in enumerate(['JPMorgan 11 Sep 2026: FY27 service revenue $4,061m (ex-ACV), purchased $721m, total $4,782m — VERIFIED, licensed report held locally', 'CapIQ 28 Sep 2026: FY27 total revenue $4,860.97m, acquisition perimeter unresolved — VERIFIED export', 'Engine reference (CCC family, 29 Sep): FY27 legacy service $4,093.08m; combined thesis case (1 Oct): $3,904.62m — ENGINE'], start=31): put(ws, f'B{r}', t, 'note')
 def main():
+    import shutil
+    shutil.copy(SRC, BACKUP)
     wb = openpyxl.load_workbook(SRC); ctx = {}
+    before = list(wb.sheetnames); positions = {n: i for i, n in enumerate(before)}
+    for n in GENERATED:
+        if n in wb.sheetnames: wb.remove(wb[n])
     cover(wb)
     for s in STEPS: importlib.import_module(f'cprt_model.{s}').build(wb, ctx)
-    divider(wb, 'RPM ENGINES ----->', '7030A0'); divider(wb, 'DATA ----->', 'BFBFBF')
-    order = ['Cover', 'RPM', 'DCF', 'Reverse DCF', 'RPM ENGINES ----->', 'E1 Fleet', 'E1a Fleet (roll)', 'E2 Claims & Totals', 'E3 Carriers', 'E4 Aftermarket', 'E5 Prices & Fees', 'E6 Other Branches', 'Key Drivers', 'Scenarios', 'Street', 'Sources', 'Checks', 'DATA ----->', 'D Reported', 'D Facts', 'D Barclays', 'D Coverage', 'D CCC', 'D Fleet', 'D Fees', 'D Carriers', 'D Engine', 'D Street']
-    have = {ws.title: ws for ws in wb.worksheets}
-    wb._sheets = [have[n] for n in order if n in have] + [ws for ws in wb.worksheets if ws.title not in order]
-    for n in ('Volume Build', 'RPU Build'):
-        if n in have: have[n].sheet_state = 'hidden'   # superseded by the engines; kept for reference until RPM is rewired
-    for ws in wb.worksheets:
-        if ws.title.startswith('PB '): ws.sheet_state = 'hidden'
-    wb.active = 0; wb.save(OUT); print('saved', OUT, 'sheets', len(wb.worksheets))
+    if 'RPM ENGINES ----->' not in wb.sheetnames: divider(wb, 'RPM ENGINES ----->', '7030A0')
+    if 'DATA ----->' not in wb.sheetnames: divider(wb, 'DATA ----->', 'BFBFBF')
+    # order: owner's existing order for everything that existed; new generated tabs by default placement
+    default_after = {'Summary': 'Key Drivers', '3SM': 'RPM', 'D Barclays': 'D Facts', 'D 10-K FY26': 'D Barclays'}
+    order = [n for n in before if n in wb.sheetnames]
+    for n in wb.sheetnames:
+        if n in order: continue
+        anchor = default_after.get(n); idx = order.index(anchor) + 1 if anchor in order else len(order); order.insert(idx, n)
+    have = {ws.title: ws for ws in wb.worksheets}; wb._sheets = [have[n] for n in order]
+    for n in HIDE:
+        if n in have: have[n].sheet_state = 'hidden'
+    wb.active = 0; wb.save(OUT); print('saved', OUT, 'sheets', len(wb.worksheets), '| order preserved from owner file; backup at', BACKUP.name)
 if __name__ == '__main__': main()
