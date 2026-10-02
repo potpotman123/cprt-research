@@ -44,6 +44,7 @@ def main():
         if n in order: continue
         anchor = default_after.get(n); idx = order.index(anchor) + 1 if anchor in order else len(order); order.insert(idx, n)
     have = {ws.title: ws for ws in wb.worksheets}; wb._sheets = [have[n] for n in order]
+    rc = recolor(wb, [n for n in GENERATED if n in wb.sheetnames], OWNER_EDITED); print('recoloured by content:', rc)
     for n in HIDE:
         if n in have: have[n].sheet_state = 'hidden'
     wb.active = 0; wb.save(OUT); print('saved', OUT, 'sheets', len(wb.worksheets), '| order preserved from owner file; backup at', BACKUP.name)

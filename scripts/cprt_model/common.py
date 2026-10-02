@@ -57,9 +57,10 @@ def section(ws, row, label, period_labels=None, first_col=4):
 def group(ws, row, label):
     ws.cell(row, 2, label).font = font(b=True)
     for c in range(2, 20): ws.cell(row, c).fill = fill(GREY); ws.cell(row, c).border = TB
+WRITTEN = set()   # (sheet, cell) written by the build; the recolour pass may touch these on owner tabs
 def put(ws, ref, value, kind='formula', fmt=None, b=False, i=False, indent=0):
-    c = ws[ref]; c.value = value
-    color = {'input': C_INPUT, 'formula': C_BLACK, 'link': C_LINK, 'toggle': C_TOGGLE, 'engine': C_ENGINE, 'note': C_NOTE, 'label': C_BLACK}[kind]
+    c = ws[ref]; c.value = value; WRITTEN.add((ws.title, ref))
+    color = {'input': C_INPUT, 'formula': C_BLACK, 'link': C_LINK, 'toggle': C_TOGGLE, 'engine': C_INPUT, 'note': C_NOTE, 'label': C_BLACK}[kind]
     c.font = font(color, b=b, i=i or kind == 'note', sz=10 if kind == 'note' else 11)
     if fmt: c.number_format = fmt
     if indent: c.alignment = Alignment(indent=indent)
@@ -80,7 +81,7 @@ def write_table(ws, r0, c0, headers, rows, kind='input', fmt_by_col=None, header
         cell = ws.cell(r0, c0 + j, h); cell.font = font(b=True); cell.fill = fill(header_fill); cell.border = BOT; cell.alignment = Alignment(horizontal='right' if j else 'left')
     for i, row in enumerate(rows):
         for j, v in enumerate(row):
-            cell = ws.cell(r0 + 1 + i, c0 + j, v); cell.font = font(C_INPUT if (kind == 'input' and isinstance(v, (int, float))) else (C_ENGINE if kind == 'engine' and isinstance(v, (int, float)) else C_BLACK))
+            cell = ws.cell(r0 + 1 + i, c0 + j, v); cell.font = font(C_INPUT if (kind == 'input' and isinstance(v, (int, float))) else (C_INPUT if kind == 'engine' and isinstance(v, (int, float)) else C_BLACK))
             if fmt_by_col and j in fmt_by_col and isinstance(v, (int, float)): cell.number_format = fmt_by_col[j]
     return r0 + 1 + len(rows)
 def num(x):
@@ -109,3 +110,29 @@ NOTES_COL = {}   # sheet title -> notes column letter, recorded by setup()
 _setup = setup
 def setup(ws, label_w=56, ncols=16, zoom=90, notes_col='S'):
     NOTES_COL[ws.title] = notes_col; return _setup(ws, label_w, ncols, zoom, notes_col)
+
+KEY_COLS = {'E1a Fleet (roll)': (2, 3), 'D Engine': (2,)}
+def recolor(wb, full_sheets, owner_sheets=()):
+    """Colour by content: formula referencing another tab = green; other formula = black; typed number = blue (red toggles kept);
+    typed integers in label columns B–C and year-like headers in rows 1–5 are labels (black / unchanged). Full pass on generated tabs;
+    on owner tabs only cells the build wrote. Returns a count of recoloured cells by sheet."""
+    out = {}
+    for ws in wb.worksheets:
+        if ws.title not in full_sheets and ws.title not in owner_sheets: continue
+        n = 0
+        for row in ws.iter_rows():
+            for c in row:
+                v = c.value
+                if v is None or isinstance(v, bool) or (ws.title in owner_sheets and (ws.title, c.coordinate) not in WRITTEN): continue
+                cur = c.font.color.rgb[-6:] if (c.font and c.font.color is not None and isinstance(c.font.color.rgb, str)) else None
+                if isinstance(v, str) and v.startswith('='): new = C_LINK if '!' in v else C_BLACK
+                elif isinstance(v, (int, float)):
+                    if c.row <= 5 and isinstance(v, int) and 1900 <= v <= 2100: continue          # year header
+                    if c.column in KEY_COLS.get(ws.title, ()): new = C_BLACK                           # table keys (body/age index, engine mask)
+                    elif cur == C_TOGGLE: continue
+                    else: new = C_INPUT
+                else: continue
+                if cur != new:
+                    f = c.font; c.font = Font(name=f.name, size=f.size, bold=f.bold, italic=f.italic, underline=f.underline, color=new); n += 1
+        if n: out[ws.title] = n
+    return out
