@@ -35,8 +35,8 @@ def build(wb, ctx):
     put(ws, 'B28', 'Feeds →  Scenarios (FY26 units row 11; ASP path row 15; fee parameters Inputs rows 45–51; attached services row 24)', 'note')
     section(ws, 38, 'Inputs', ['Value', 'Label'])
     items = [(39, 'Insurance share of US service dollars', 0.90, 'toggle', 'ASSUMED', '0.80 alternative; carry both'),
-             (40, 'Title service: adoption (share of sales)', 0.50, 'input', 'ASSUMED', 'Undisclosed'), (41, 'Title service: charge per job', 50, 'input', 'ASSUMED', ''),
-             (42, 'Delivery service: adoption', 0.10, 'input', 'ASSUMED', 'Undisclosed; gross/net unknown'), (43, 'Delivery service: charge per job', 300, 'input', 'ASSUMED', ''),
+             (40, 'Title service: adoption (share of sales)', 0.50, 'input', 'ASSUMED', 'Undisclosed'), (41, 'Title service: charge per job', 50, 'input', 'ASSUMED', 'Inherited with the adoption rate above; product price undisclosed'),
+             (42, 'Delivery service: adoption', 0.10, 'input', 'ASSUMED', 'Undisclosed; gross/net unknown'), (43, 'Delivery service: charge per job', 300, 'input', 'ASSUMED', 'Inherited; gross charge per delivered vehicle, product price undisclosed'),
              (44, 'US insurance ASP growth, FY27+ (continuation)', 0.037, 'input', 'ASSUMED', 'FQ4 FY26 disclosed +3.7% continued; not guidance (6% alternative)'),
              (45, 'ASP₀: modeled selected-vehicle price at the FY26 anchor', 3040.99, 'input', 'ENGINE', 'age_constrained_engine_results.json baseline_core.ASP'),
              (46, 'Core RPU at the anchor (buyer fees + seller commission + fixed fees)', 851.51, 'input', 'ENGINE', 'baseline_core.core_RPU'),

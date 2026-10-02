@@ -5,7 +5,7 @@ import sys, pathlib, importlib, openpyxl
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from cprt_model.common import *
 SRC = pathlib.Path('/Users/kwu/Downloads/CPRT_Model_v1.xlsx'); OUT = ROOT / 'model/CPRT_Model_v2.xlsx'
-STEPS = ['data_tabs', 'e1_fleet', 'e2_claims', 'e3_carriers', 'e4_aftermarket', 'e5_fees', 'e6_branches', 'scenarios', 'rpm', 'street', 'checks']
+STEPS = ['data_tabs', 'e1_fleet', 'e2_claims', 'e3_carriers', 'e4_aftermarket', 'e5_fees', 'e6_branches', 'coverage', 'scenarios', 'rpm', 'street', 'sources', 'checks']
 def cover(wb):
     ws = wb.create_sheet('Cover', 0); tab_color(ws, NAVY); setup(ws, label_w=44, ncols=6, notes_col='H')
     title(ws, 'Copart, Inc. (NASDAQ: CPRT) — revenue architecture, DCF and reverse DCF', 'Fiscal year ends 31 July. $ millions unless stated. Built by scripts/build_cprt_model.py from the repository data; see docs/workbook_plan_2026-10-01.')
@@ -28,7 +28,7 @@ def main():
     cover(wb)
     for s in STEPS: importlib.import_module(f'cprt_model.{s}').build(wb, ctx)
     divider(wb, 'RPM ENGINES ----->', '7030A0'); divider(wb, 'DATA ----->', 'BFBFBF')
-    order = ['Cover', 'RPM', 'DCF', 'Reverse DCF', 'RPM ENGINES ----->', 'E1 Fleet', 'E1a Fleet (roll)', 'E2 Claims & Totals', 'E3 Carriers', 'E4 Aftermarket', 'E5 Prices & Fees', 'E6 Other Branches', 'Scenarios', 'Street', 'Checks', 'DATA ----->', 'D Reported', 'D CCC', 'D Fleet', 'D Fees', 'D Carriers', 'D Engine', 'D Street']
+    order = ['Cover', 'RPM', 'DCF', 'Reverse DCF', 'RPM ENGINES ----->', 'E1 Fleet', 'E1a Fleet (roll)', 'E2 Claims & Totals', 'E3 Carriers', 'E4 Aftermarket', 'E5 Prices & Fees', 'E6 Other Branches', 'Scenarios', 'Street', 'Sources', 'Checks', 'DATA ----->', 'D Reported', 'D Coverage', 'D CCC', 'D Fleet', 'D Fees', 'D Carriers', 'D Engine', 'D Street']
     have = {ws.title: ws for ws in wb.worksheets}
     wb._sheets = [have[n] for n in order if n in have] + [ws for ws in wb.worksheets if ws.title not in order]
     for n in ('Volume Build', 'RPU Build'):

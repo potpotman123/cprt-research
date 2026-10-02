@@ -41,8 +41,8 @@ if 'E3 Carriers' in wb.sheetnames:
     check('E3 weights sum', e3['D16'].value, 1.0, 1e-6)
     print('E3 share ratio y/y base FY27:', [round(e3[f'{c}48'].value, 4) for c in 'HIJK'], 'thesis A:', [round(e3[f'{c}49'].value, 4) for c in 'HIJK'])
 if 'E4 Aftermarket' in wb.sheetnames:
-    e4 = wb['E4 Aftermarket']; check('E4 bill change FQ4 FY27 (documented -1.03%)', e4['K14'].value, -0.0103, 0.0003)
-    check('E4 unit change FQ4 FY27 vs engine larger-shift FY delta (-2.057%)', e4['K40'].value, -0.02057, 0.001)
+    e4 = wb['E4 Aftermarket']; check('E4 engine-basket parity (documented -1.03%)', e4['D30'].value, -0.0103, 0.0003); print('E4 sourced-basket stress endpoint bill change / units:', e4['D31'].value, e4['E31'].value)
+    check('E4 engine-basket unit change vs engine larger-shift FY delta (-2.057%)', e4['E30'].value, -0.02057, 0.001)
     print('E4 price change FY27 quarters:', [round(e4[f'{c}41'].value or 0, 4) for c in 'HIJK'], 'engine dService FY27:', e4['Q26'].value)
 if 'E5 Prices & Fees' in wb.sheetnames:
     e5 = wb['E5 Prices & Fees']; check('E5 FY26 insurance $ = 0.9 x US service', e5['P8'].value, 0.9 * e5['P6'].value, 0.01)
@@ -50,11 +50,19 @@ if 'E5 Prices & Fees' in wb.sheetnames:
 if 'E6 Other Branches' in wb.sheetnames:
     e6 = wb['E6 Other Branches']; print('E6 FY26A/FY27E other-US, intl, purchased:', [round(e6[f'{c}{r}'].value, 1) for r in (8, 12, 16) for c in 'PQ'])
 if 'Scenarios' in wb.sheetnames:
-    sc = wb['Scenarios']; rep = 3969.52  # FY26 global service revenue, 8-K (RPM H10)
-    check('Scenarios FY26 legacy service (case 1) vs 8-K service total', sc['P16'].value, rep, 0.5)
-    for k in range(1, 6): print(f'Scenarios case {k}: FY27 legacy', round(sc[f"Q{7+(k-1)*13+9}"].value, 1), 'FY28', round(sc[f"R{7+(k-1)*13+9}"].value, 1), 'FY27 units y/y', round(sc[f"Q{7+(k-1)*13+2}"].value, 4))
-    s0 = 75 + 9; print('Summary dvsNeither / dvsJPM:', [(round(sc[f'E{s0+k}'].value, 1), round(sc[f'F{s0+k}'].value, 1)) for k in range(1, 6)], 'engine mask10/15:', sc[f'D{s0+7}'].value, sc[f'D{s0+8}'].value)
-    rpm = wb['RPM']; print('RPM I10/J10/K10 service, I6 total, I21 units y/y, I33 RPU, D50 delta JPM:', [rpm[c].value for c in ('I10', 'J10', 'K10', 'I6', 'I21', 'I33', 'D50')])
-    ck = wb['Checks']; print('Checks:', [(ck[f'B{r}'].value[:40], ck[f'G{r}'].value) for r in range(5, 15) if ck[f'B{r}'].value])
-    print('Street brokers:', [wb['Street'][f'{c}4'].value for c in 'DEFGHIJKLMN' if wb['Street'][f'{c}4'].value]); print('Street B4:', wb['Street']['B4'].value); print('Street FY27 service row:', [wb['Street'][f'{c}7'].value for c in 'DEFGHIJKLMN'])
+    sc = wb['Scenarios']; N = 7; s0 = 100 + 11
+    num = lambda v: v if isinstance(v, (int, float)) else float('nan')
+    check('Scenarios FY26 legacy service (case 1 = block 2) vs 8-K service total', sc['P29'].value, 3969.52, 0.5)
+    for k in range(1, N + 1):
+        lr = 7 + (k - 1) * 13 + 9; print(f'block {k}: FY27 legacy', round(num(sc[f"Q{lr}"].value), 1), 'FY28', round(num(sc[f"R{lr}"].value), 1), 'FY27 units y/y', round(num(sc[f"Q{lr-7}"].value), 4))
+    print('Summary dvsCase1 / dvsCase0 / dvsJPM:', [(round(num(sc[f'E{s0+k}'].value), 1), round(num(sc[f'F{s0+k}'].value), 1), round(num(sc[f'G{s0+k}'].value), 1)) for k in range(1, N + 1)])
+    check('Thesis 1: case 0 FY27 legacy = JPM 4061', sc[f'D{s0+1}'].value, 4061, 1.0)
+    e2 = wb['E2 Claims & Totals']; print('E2 coverage index 2017..2026:', [round(e2.cell(107, c).value or 0, 4) for c in range(4, 14)]); print('E2 burden 2017..2026:', [round(e2.cell(108, c).value or 0, 3) for c in range(4, 14)], 'eps:', e2['D110'].value)
+    print('E2 forward ratios FQ1 FY27 sticky/premium/recovery:', e2['H116'].value, e2['H117'].value, e2['H118'].value, 'r=', e2['D124'].value, 'prem growth', e2['D121'].value, 'earn growth', e2['D122'].value)
+    rpm = wb['RPM']; print('RPM selector', rpm['D3'].value, 'I10/J10 service:', rpm['I10'].value, rpm['J10'].value, 'D50 delta JPM:', rpm['D50'].value)
+    ck = wb['Checks']; print('Checks:', [(ck[f'B{r}'].value[:36], ck[f'G{r}'].value) for r in range(5, 20) if ck[f'B{r}'].value and ck[f'G{r}'].value])
+    print('Checks tail:', [(ck[f'B{r}'].value[:50], ck[f'D{r}'].value) for r in range(17, 23) if ck[f'B{r}'].value])
+    e3 = wb['E3 Carriers']; print('E3 expected moves check (F77:F80 vs path):', [(e3[f'F{r}'].value, e3[f'G{r}'].value) for r in range(77, 81)], 'PGR FQ4 FY26 effect:', e3['D83'].value, e3['E83'].value)
+    e4 = wb['E4 Aftermarket']; print('E4 observed-trend path: AM shift FQ4 FY27/FQ4 FY28', e4['K7'].value, e4['O7'].value, 'bill change FQ4 FY27', e4['K14'].value, 'd units', e4['K40'].value, 'd price', e4['K41'].value)
+    so = wb['Sources']; print('Sources:', so[f'B{so.max_row}'].value)
 print('FAILS', fails); sys.exit(1 if fails else 0)

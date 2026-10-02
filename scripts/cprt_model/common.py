@@ -64,7 +64,8 @@ def put(ws, ref, value, kind='formula', fmt=None, b=False, i=False, indent=0):
     if fmt: c.number_format = fmt
     if indent: c.alignment = Alignment(indent=indent)
     return c
-def label(ws, row, text, units='', b=False, i=False, indent=0, note='', notes_col=NOTE_COL):
+def label(ws, row, text, units='', b=False, i=False, indent=0, note='', notes_col=None):
+    notes_col = notes_col or NOTES_COL.get(ws.title, NOTE_COL)
     put(ws, f'B{row}', text, 'label', b=b, i=i, indent=indent)
     if units: put(ws, f'C{row}', units, 'label', i=True).alignment = Alignment(horizontal='center')
     if note: put(ws, f'{notes_col}{row}', note, 'note')
@@ -101,3 +102,10 @@ def annual_sum(ws, row, fmt=F_MONEY, b=False):
 def annual_avg(ws, row, fmt=F_PCT):
     for fy, col in ACOL.items():
         cols = [QCOL[(fy, q)] for q in (1, 2, 3, 4)]; put(ws, f'{col}{row}', f'=AVERAGE({cols[0]}{row}:{cols[3]}{row})', fmt=fmt, i=True)
+
+# ---- thesis-1 coverage rows published by E2 (year-over-year coverage ratios by path)
+E2_COV_STICKY_ROW, E2_COV_PREMIUM_ROW, E2_COV_RECOVERY_ROW = 116, 117, 118
+NOTES_COL = {}   # sheet title -> notes column letter, recorded by setup()
+_setup = setup
+def setup(ws, label_w=56, ncols=16, zoom=90, notes_col='S'):
+    NOTES_COL[ws.title] = notes_col; return _setup(ws, label_w, ncols, zoom, notes_col)

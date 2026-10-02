@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 720" font-family="Garamond, 'EB Garamond', Georgia, serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#595959"/></marker>
+    <marker id="ap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#7030A0"/></marker>
+    <style>
+      .box{rx:6;ry:6;stroke-width:1.2}
+      .data{fill:#F2F2F2;stroke:#BFBFBF}
+      .eng{fill:#F4EEFB;stroke:#7030A0}
+      .scen{fill:#E8EEF6;stroke:#215E99}
+      .rpm{fill:#0E2841;stroke:#0E2841}
+      .t{font-size:13px;fill:#000}
+      .h{font-size:14px;font-weight:bold;fill:#000}
+      .hw{font-size:15px;font-weight:bold;fill:#fff}
+      .tw{font-size:12.5px;fill:#fff}
+      .s{font-size:11.5px;fill:#595959;font-style:italic}
+      .eq{font-size:12px;fill:#333}
+      .lab{font-size:11.5px;fill:#595959}
+      .ln{stroke:#595959;stroke-width:1.3;fill:none;marker-end:url(#a)}
+      .lnp{stroke:#7030A0;stroke-width:1.3;fill:none;marker-end:url(#ap)}
+    </style>
+  </defs>
+  <rect width="1180" height="720" fill="#FFFFFF"/>
+  <text x="24" y="34" font-size="20" font-weight="bold" fill="#0E2841">How the RPM is built — CPRT_Model_v2.xlsx</text>
+  <text x="24" y="54" class="s">Grey = data tabs (values with sources) · Purple = engines (live formulas, Inputs block at the foot) · Blue = Scenarios · Navy = the one-page RPM and the owner's DCF. Quarterly FQ1 FY26–FQ4 FY28; annual roll-ups feed the RPM.</text>
+
+  <!-- DATA column -->
+  <text x="24" y="92" class="h">Data (D tabs)</text>
+  <rect x="24" y="100" width="190" height="58" class="box data"/><text x="34" y="120" class="h">D Fleet</text><text x="34" y="137" class="t">births by body 1970–2028,</text><text x="34" y="151" class="t">EPA survival schedule</text>
+  <rect x="24" y="170" width="190" height="58" class="box data"/><text x="34" y="190" class="h">D CCC</text><text x="34" y="207" class="t">16 body × age cells, 2020–25:</text><text x="34" y="221" class="t">total-loss rate and mix</text>
+  <rect x="24" y="240" width="190" height="58" class="box data"/><text x="34" y="260" class="h">D Carriers</text><text x="34" y="277" class="t">premium-share weights,</text><text x="34" y="291" class="t">allocation paths (UNVERIFIED)</text>
+  <rect x="24" y="310" width="190" height="58" class="box data"/><text x="34" y="330" class="h">D Engine</text><text x="34" y="347" class="t">Python outputs: calibrated</text><text x="34" y="361" class="t">TLF, η, price response, parity</text>
+  <rect x="24" y="380" width="190" height="58" class="box data"/><text x="34" y="400" class="h">D Reported</text><text x="34" y="417" class="t">8-K service and vehicle</text><text x="34" y="431" class="t">revenue by geography, FY25–26</text>
+  <rect x="24" y="450" width="190" height="58" class="box data"/><text x="34" y="470" class="h">D Fees</text><text x="34" y="487" class="t">posted buyer-fee grid,</text><text x="34" y="501" class="t">fixed fees (26 Sep 2026)</text>
+
+  <!-- ENGINES column -->
+  <text x="270" y="92" class="h">Engines (E tabs)</text>
+  <rect x="270" y="100" width="300" height="76" class="box eng"/><text x="280" y="120" class="h">E1 Fleet (+ E1a roll)</text>
+  <text x="280" y="138" class="eq">Fleet(a,b,Y) = Births(Y−a,b) × S_b(a ÷ k_b(Y))</text><text x="280" y="154" class="eq">× R(age) × body factor → claims mix</text><text x="280" y="169" class="s">checked against the CCC mix 2020–25, out of sample</text>
+
+  <rect x="270" y="190" width="300" height="76" class="box eng"/><text x="280" y="210" class="h">E2 Claims &amp; Totals</text>
+  <text x="280" y="228" class="eq">Claims(cell,q) = Σ_CY w(q,CY) × claims mass(cell,CY)</text><text x="280" y="244" class="eq">Pool(q) = Σ Claims × TLF₂₀₂₅(cell) × routing</text><text x="280" y="259" class="s">publishes: pool ratio to same quarter a year ago</text>
+
+  <rect x="270" y="280" width="300" height="76" class="box eng"/><text x="280" y="300" class="h">E3 Carriers — thesis A</text>
+  <text x="280" y="318" class="eq">S(q) = Σ_i w_i × a_i(q)   (Progressive runoff always on)</text><text x="280" y="334" class="eq">events, drift, concession via toggles</text><text x="280" y="349" class="s">publishes: share ratio y/y (base, A); seller rate (base, A)</text>
+
+  <rect x="270" y="370" width="300" height="76" class="box eng"/><text x="280" y="390" class="h">E4 Aftermarket — thesis B</text>
+  <text x="280" y="408" class="eq">bill Δ = e × [Σ(q_s+Δq_s)p_s ÷ Σq_s p_s − 1];  Δunits = η × bill Δ</text><text x="280" y="424" class="eq">Δprice scaled from the engine endpoint</text><text x="280" y="439" class="s">publishes: Δunits(q), Δprice(q) — every coefficient ASSUMED</text>
+
+  <rect x="270" y="460" width="300" height="76" class="box eng"/><text x="280" y="480" class="h">E5 Prices &amp; Fees</text>
+  <text x="280" y="498" class="eq">RPU = β(ASP÷ASP₀)^ε + s×ASP + fixed + services</text><text x="280" y="514" class="eq">FY26 units = US service $ × 90% ÷ RPU  (ledger)</text><text x="280" y="529" class="s">publishes: FY26 units, ASP path, fee parameters</text>
+
+  <rect x="270" y="550" width="300" height="60" class="box eng"/><text x="280" y="570" class="h">E6 Other Branches</text>
+  <text x="280" y="588" class="eq">non-insurance, international (+3.5% RPU), purchased, ACV gate</text><text x="280" y="603" class="s">publishes: branch revenues by quarter</text>
+
+  <!-- SCENARIOS -->
+  <text x="630" y="92" class="h">Scenarios</text>
+  <rect x="630" y="100" width="300" height="236" class="box scen"/>
+  <text x="640" y="122" class="h">Five cases on one common base</text>
+  <text x="640" y="142" class="eq">Units_q = Units_{q−4} × pool ratio × share ratio_k</text>
+  <text x="640" y="158" class="eq">              × (1 + b_k·Δunits)</text>
+  <text x="640" y="178" class="eq">ASP_q = ASP₀(1+g_k)^t × (1 + b_k·Δprice)</text>
+  <text x="640" y="198" class="eq">RPU_q = f(ASP_q, seller rate_k)  ·  Rev = Units × RPU</text>
+  <text x="640" y="218" class="eq">Legacy = US insurance + non-insurance + international</text>
+  <text x="640" y="244" class="t">1 Neither   2 A only   3 B only   4 Both   5 Bull</text>
+  <text x="640" y="264" class="t">Summary: Δ vs case 1 (own reference) and Δ vs JPM $4,061m</text>
+  <text x="640" y="282" class="t">Engine parity: case 1 ≈ mask 11; case 3−1 ≈ mask 14−10</text>
+  <text x="640" y="306" class="s">selected case (RPM cell D3) → annual roll-ups FY26A, FY27E, FY28E</text>
+  <text x="640" y="322" class="s">a_k = thesis A on/off · b_k = thesis B on/off · g_k = ASP growth</text>
+
+  <rect x="630" y="360" width="300" height="70" class="box scen"/><text x="640" y="380" class="h">Street</text>
+  <text x="640" y="398" class="t">ten broker columns; FY27 service disclosed by JPM only</text><text x="640" y="414" class="t">(3,932 Jul → 4,061 Sep); "not disclosed" preserved</text>
+
+  <rect x="630" y="450" width="300" height="70" class="box scen"/><text x="640" y="470" class="h">Checks</text>
+  <text x="640" y="488" class="t">8-K tie ≤ $0.1m · identities · engine parity ≤ $25m/$15m</text><text x="640" y="504" class="t">· typed numbers outside Inputs blocks = reference rows only</text>
+
+  <!-- RPM / DCF -->
+  <text x="990" y="92" class="h">Output</text>
+  <rect x="990" y="100" width="170" height="236" class="box rpm"/>
+  <text x="1000" y="124" class="hw">RPM (one page)</text>
+  <text x="1000" y="146" class="tw">Total revenue, y/y</text>
+  <text x="1000" y="164" class="tw">Service revenue</text>
+  <text x="1000" y="180" class="tw">  FY27–28 ← Scenarios</text>
+  <text x="1000" y="196" class="tw">  FY29–31 ← fade rows</text>
+  <text x="1000" y="214" class="tw">Vehicle sales ← E6</text>
+  <text x="1000" y="232" class="tw">Units by channel, y/y</text>
+  <text x="1000" y="250" class="tw">RPU (implied)</text>
+  <text x="1000" y="268" class="tw">Δ to JPM, Δ to engine</text>
+  <text x="1000" y="292" class="tw">selector D3: case 1–5</text>
+  <text x="1000" y="318" class="s" fill="#BFBFBF">history FY22–26 unchanged</text>
+
+  <rect x="990" y="360" width="170" height="70" class="box rpm"/><text x="1000" y="384" class="hw">DCF · Reverse DCF</text><text x="1000" y="404" class="tw">read RPM rows 6, 10, 12, 29</text><text x="1000" y="420" class="tw">(owner's, untouched)</text>
+
+  <!-- arrows data -> engines -->
+  <path d="M214 129 H270 V138" class="ln"/>
+  <path d="M214 199 H250 V150 H270" class="ln"/>
+  <path d="M214 212 H250 V228 H270" class="ln"/>
+  <path d="M214 269 H270 V318" class="ln"/>
+  <path d="M214 339 H240 V236 H270" class="lnp"/>
+  <path d="M214 349 H245 V408 H270" class="lnp"/>
+  <path d="M214 359 H250 V498 H270" class="lnp"/>
+  <path d="M214 409 H258 V514 H270" class="ln"/>
+  <path d="M214 419 H262 V580 H270" class="ln"/>
+  <path d="M214 479 H270 V498" class="ln"/>
+
+  <!-- engines -> engines -->
+  <path d="M420 176 V190" class="ln"/>
+  <path d="M570 335 H600 V498 H570" class="ln"/><text x="582" y="420" class="lab" transform="rotate(90 582 420)">seller rate</text>
+
+  <!-- engines -> scenarios -->
+  <path d="M570 240 H630 V150" class="ln"/>
+  <path d="M570 320 H610 V165 H630" class="ln"/>
+  <path d="M570 410 H615 V178 H630" class="lnp"/>
+  <path d="M570 505 H620 V198 H630" class="ln"/>
+  <path d="M570 585 H625 V218 H630" class="ln"/>
+
+  <!-- scenarios -> rpm -->
+  <path d="M930 180 H990" class="ln"/><text x="936" y="172" class="lab">selected case</text>
+  <path d="M930 395 H990" class="ln"/>
+  <path d="M1075 336 V360" class="ln"/>
+
+  <!-- legend / footer -->
+  <text x="24" y="560" class="h">Reading the chain for one quarter (FQ1 FY27, case 4 "Both")</text>
+  <text x="24" y="582" class="t">1. E1 gives the fleet by age and body for CY2026–27; E2 weights it into the quarter, applies the 2025 CCC total-loss rates → pool ratio 0.992 vs FQ1 FY26.</text>
+  <text x="24" y="600" class="t">2. E3 gives Copart's share ratio 0.938 (Progressive at 5% vs 25% a year earlier; State Farm and "other" events on). E4 gives Δunits −0.5% and Δprice −0.4% at the first ramp step.</text>
+  <text x="24" y="618" class="t">3. Scenarios: units = FQ1 FY26 units (849k, from the E5 ledger) × 0.992 × 0.938 × 0.995; ASP = $3,041 × 1.037 × 0.996; RPU from the fee parameters with the concession seller rate.</text>
+  <text x="24" y="636" class="t">4. Revenue = units × RPU + E6 branches → legacy service for the quarter; four quarters sum to FY27E $3,880.5m (case 4), shown on the RPM beside JPM's $4,061m.</text>
+  <text x="24" y="664" class="s">Labels on every input: VERIFIED · MEASURED · FITTED · CALIBRATED · ASSUMED · UNVERIFIED · ENGINE. Twenty-one inputs have no source today (docs/source_trace_2026-10-01); they appear only as labelled sensitivities, never inside case 1.</text>
+  <text x="24" y="700" class="s">File: docs/workbook_plan_2026-10-01/rpm_schematic.svg · 1 October 2026</text>
+</svg>
