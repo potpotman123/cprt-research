@@ -91,11 +91,11 @@ def build(wb, ctx):
         put(e2, f'{c}{E2_COV_PREMIUM_ROW}', f'=IF({c}119>=$J$108,1,({c}119/{prev})^(-$D$110))', fmt='0.0000', b=True)
         put(e2, f'{c}{E2_COV_RECOVERY_ROW}', '=1+$D$126' if fy == 2027 else 1.0, 'formula', '0.0000', b=True)
     section(e2, 122, 'Coverage inputs', ['Value', 'Label'])
-    items = [(123, 'Premium growth, FY27 (selected path)', '=IF($D$127=1,$D$128,$D$129)', 'formula', 'selected', 'Row 127 selects: 1 = BLS observed trend (row 128); 2 = S&P-consistent path (rows 129–130)'),
+    items = [(123, 'Premium growth, FY27 (selected path)', '=IF($F$127=1,$D$128,$D$129)', 'formula', 'selected', 'Row 127 selects: 1 = BLS observed trend (row 128); 2 = S&P-consistent path (rows 129–130)'),
              (124, 'Earnings growth, FY27 and FY28 (CES average hourly earnings, latest year y/y)', f"='D Coverage'!M7/'D Coverage'!L7-1", 'link', 'VERIFIED', 'raw/bls CES0500000003'),
-             (125, 'Premium growth, FY28 (selected path)', '=IF($D$127=1,$D$128,$D$130)', 'formula', 'selected', 'BLS trend continued, or the S&P-consistent FY28 step'),
+             (125, 'Premium growth, FY28 (selected path)', '=IF($F$127=1,$D$128,$D$130)', 'formula', 'selected', 'BLS trend continued, or the S&P-consistent FY28 step'),
              (126, 'r: Street-implied FY27 coverage recovery (reverse-solved, live)', None, 'formula', 'MEASURED', 'Identity from Scenarios case 1 and the JPM benchmark; recomputes with every input change'),
-             (127, 'Premium path selector: 1 = BLS observed trend; 2 = S&P-consistent', 1, 'toggle', 'TOGGLE', 'Both shown on Key Drivers'),
+             (127, 'Premium path selector (click D127 to choose; index in F127): BLS observed trend or S&P-consistent', 1, 'toggle', 'TOGGLE', 'Both paths shown on Key Drivers'),
              (128, 'BLS CPI motor vehicle insurance, latest month y/y (Aug 2026)', "='D Coverage'!Q17", 'link', 'VERIFIED', 'raw/bls CUUR0000SETE'),
              (129, 'S&P-consistent premium growth, FY27', 0.0, 'input', 'ASSUMED', 'S&P (Dec 2025): 2026 private auto pricing with "rate decreases matching rate increases"; no percentage published. Flat is our reading, not an S&P number'),
              (130, 'S&P-consistent premium growth, FY28', 0.03, 'input', 'ASSUMED', 'S&P projects auto combined ratios rising to 98.9 in 2027 and above 100 in 2028, implying renewed rate increases; +3% is our reading of that path, not an S&P number'),
@@ -105,3 +105,4 @@ def build(wb, ctx):
         if val is not None: put(e2, f'D{row}', val, kind, F_PCT if row != 131 else '@')
         put(e2, f'E{row}', lbl, 'note')
     ctx['cov_r_cell'] = "'E2 Claims & Totals'!$D$126"
+    dropdown(e2, 'D127', ['1 · BLS trend', '2 · S&P path'], index_cell='F127', default_index=1, list_col='U', list_row=123, title='Premium-path options (list source for D127)')

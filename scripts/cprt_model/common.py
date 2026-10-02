@@ -136,3 +136,30 @@ def recolor(wb, full_sheets, owner_sheets=()):
                     f = c.font; c.font = Font(name=f.name, size=f.size, bold=f.bold, italic=f.italic, underline=f.underline, color=new); n += 1
         if n: out[ws.title] = n
     return out
+
+from openpyxl.worksheet.datavalidation import DataValidation
+def dropdown(ws, cell, options, index_cell=None, default_index=1, list_col='U', list_row=4, title='Selector options (list source; do not edit)'):
+    """Clickable data-validation list on `cell` (red, bold). The option texts live in `list_col` below `list_row` on the same tab and the list
+    points at that range; `index_cell` gets =MATCH(cell, range, 0) so dependent formulas keep a 1..n index."""
+    r0, r1 = list_row + 1, list_row + len(options); rng = f'${list_col}${r0}:${list_col}${r1}'
+    put(ws, f'{list_col}{list_row}', title, 'note')
+    for i, o in enumerate(options): put(ws, f'{list_col}{r0 + i}', o, 'note')
+    ws.data_validations.dataValidation = [d for d in ws.data_validations.dataValidation if cell not in str(d.sqref)]
+    dv = DataValidation(type='list', formula1=rng, allow_blank=False); dv.showErrorMessage = True; dv.errorTitle = 'Selector'; dv.error = 'Choose a value from the list'
+    dv.showInputMessage = True; dv.promptTitle = 'Selector'; dv.prompt = 'Click the arrow and choose a case'; ws.add_data_validation(dv); dv.add(cell)
+    put(ws, cell, options[default_index - 1], 'toggle', b=True)
+    if index_cell: put(ws, index_cell, f'=MATCH({cell},{rng},0)', 'formula', '0')
+    ws.column_dimensions[list_col].width = max(ws.column_dimensions[list_col].width or 0, 46)
+def toggle_lists(wb, sheets):
+    """Attach a clickable 0/1 list to every red integer toggle (1/2/3 for the Scenarios coverage-path codes in column H)."""
+    n = 0
+    for name in sheets:
+        ws = wb[name]; dv01 = DataValidation(type='list', formula1='"0,1"', allow_blank=False); dv123 = DataValidation(type='list', formula1='"1,2,3"', allow_blank=False)
+        for row in ws.iter_rows():
+            for c in row:
+                if isinstance(c.value, (int, float)) and not isinstance(c.value, bool) and c.font.color is not None and isinstance(c.font.color.rgb, str) and c.font.color.rgb[-6:] == C_TOGGLE:
+                    if name == 'Scenarios' and c.column == 8 and c.value in (1, 2, 3): dv123.add(c.coordinate); n += 1
+                    elif c.value in (0, 1): dv01.add(c.coordinate); n += 1
+        for dv in (dv01, dv123):
+            if str(dv.sqref): dv.showErrorMessage = True; dv.error = 'Choose 0 or 1' if dv is dv01 else 'Choose 1, 2 or 3'; ws.add_data_validation(dv)
+    return n

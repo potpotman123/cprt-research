@@ -216,8 +216,8 @@ def build(wb, ctx):
     line('dnwc_days', 'Change in working capital, days basis (cash effect)', '$M', lambda fy, c, p: f'=-({c}{{nwc_days}}-{p}{{nwc_days}})' if p else None, lambda fy, c, p: f'=-({c}{{nwc_days}}-{p}{{nwc_days}})', hk='formula',
          note='FY2026 days held produce only a small outflow (the lines grow with revenue); Copart\'s reported outflows have been larger (FY22–26 average −102)')
     line('b_nwc_s', 'Barclays change in working capital (FY30–31 held at FY29)', '$M', par('Change in working capital'), lambda fy, c, p: (f"={B('Change in working capital', fy)}" if fy in BC else f'={p}{{b_nwc_s}}'), pk='link')
-    r = nxt(); R['nwc_sel'] = r; label(ws, r, 'ΔNWC method: 1 = days schedule, 2 = Barclays (default)', note='Selector. 2 keeps the cash flow on Barclays\' −83 a year; 1 lets the days schedule drive it'); cells.append((f'D{r}', 2, 'toggle', '0', True))
-    line('dnwc_sel', 'Change in working capital, selected (to the cash flow statement)', '$M', None, lambda fy, c, p: f'=IF($D${{nwc_sel}}=1,{c}{{dnwc_days}},{c}{{b_nwc_s}})', bold=True)
+    r = nxt(); R['nwc_sel'] = r; label(ws, r, 'ΔNWC method (click D to choose; index in F): days schedule or Barclays', note='Selector. Barclays keeps the cash flow on −83 a year; the days schedule lets the lines above drive it')
+    line('dnwc_sel', 'Change in working capital, selected (to the cash flow statement)', '$M', None, lambda fy, c, p: f'=IF($F${{nwc_sel}}=1,{c}{{dnwc_days}},{c}{{b_nwc_s}})', bold=True)
     grp('7. Tax (rates; the build lives on the Reverse DCF tab, columns R–X)')
     memo('etr_s', 'Structural effective tax rate applied FY27+ (Reverse DCF S33)', "='Reverse DCF'!S33", note='21% statutory + state − FDII − excess option benefit (10-K tax note)')
     memo('etr_b', 'Barclays-implied FY2027E rate (Reverse DCF S36)', "='Reverse DCF'!S36", note='1 − Barclays adj. net income ÷ adj. pre-tax')
@@ -234,6 +234,7 @@ def build(wb, ctx):
     # ------------------------------------------------------------------ write deferred cells
     for ref, v, kind, fmt, bold in cells:
         put(ws, ref, v.format_map(R) if isinstance(v, str) else v, kind, fmt, b=bold)
+    ws.merge_cells(f"D{R['nwc_sel']}:E{R['nwc_sel']}"); dropdown(ws, f"D{R['nwc_sel']}", ['1 · Days schedule', '2 · Barclays ΔNWC (−83 a year)'], index_cell=f"F{R['nwc_sel']}", default_index=2, list_col='Q', list_row=R['nwc_sel'] - 1, title='ΔNWC options (list source)')
     ws.freeze_panes = 'D6'; ctx['tsm_rows'] = R
     # ------------------------------------------------------------------ DCF: D&A, SBC, capex and ΔNWC now read the 3SM (no longer % of revenue)
     dcf = wb['DCF']

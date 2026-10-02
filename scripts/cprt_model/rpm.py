@@ -2,7 +2,10 @@
 from .common import *
 def build(wb, ctx):
     ws = wb['RPM']; S = ctx['sel_rows']; NOTES_COL['RPM'] = 'P'
-    put(ws, 'B3', 'Scenario selector: 1 Street-implied (case 0) · 2 Known facts / T1 sticky (case 1) · 3 Premium-response · 4 Thesis 2 · 5 Thesis 3 · 6 All three · 7 Bull   (drives rows 10, 12, 21 for FY27–28)', 'label', b=True); put(ws, 'D3', 2, 'toggle', '0')
+    put(ws, 'B3', 'Scenario selector — click D3 and choose a case (drives rows 10, 12, 21 for FY27–28; case index in I3)', 'label', b=True)
+    for m in [str(m) for m in ws.merged_cells.ranges]:
+        if m.startswith('D3:'): ws.unmerge_cells(m)
+    ws.merge_cells('D3:H3'); dropdown(ws, 'D3', ctx['case_names'], index_cell='I3', default_index=2, list_col='U', list_row=4, title='Scenario options (list source for the D3 dropdown; do not edit)')
     for fy, col in (('FY27', 'I'), ('FY28', 'J')):
         a = ACOL[2027 if fy == 'FY27' else 2028]
         put(ws, f'{col}10', f"=Scenarios!{a}{S['legacy']}", 'link', F_MONEY); put(ws, f'{col}12', f"=Scenarios!{a}{S['purchased']}", 'link', F_MONEY)

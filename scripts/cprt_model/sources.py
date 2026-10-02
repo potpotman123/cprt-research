@@ -16,7 +16,7 @@ def build(wb, ctx):
                     lab = t[f'B{c.row}'].value or t[f'B{c.row - 1}'].value or ''; ev = t[f'E{c.row}'].value if isinstance(t[f'E{c.row}'].value, str) and t[f'E{c.row}'].value.isupper() else ''
                     note = t[f'{ncol}{c.row}'].value or ''
                     if not note and name == 'Scenarios': note = 'Case parameter (toggle) — see Scenarios case definitions'
-                    if not note and name == 'RPM' and c.coordinate == 'D3': note = 'Scenario selector (1–7), see label in B3'
+                    if not note and name == 'RPM' and c.coordinate in ('D3', 'I3'): note = 'Scenario selector (dropdown in D3; index in I3)'
                     NOTES_COL.setdefault('RPM', 'P')
                     if not note and name == 'E2 Claims & Totals' and 7 <= c.row <= 12: note = 'Fiscal-quarter interpolation weight, MEASURED by rule (common.py cy_weights)'
                     if not note and name == 'E4 Aftermarket' and c.row in (7, 8): note = 'Sourcing path value; see Inputs rows'

@@ -9,7 +9,7 @@ def build(wb, ctx):
     for fy, q in QUARTERS:
         c = QCOL[(fy, q)]; nq = 0 if fy == 2026 else (q if fy == 2027 else 4 + q)
         hold = '*$D$56' if fy == 2028 else ''
-        put(ws, f'{c}7', f'=IF($D$64=1,$D$65*{nq},$D$54*MIN({nq},4){hold})', fmt='0.0000'); put(ws, f'{c}8', f'=IF($D$64=1,$D$66*{nq},$D$55*MIN({nq},4){hold})', fmt='0.0000')
+        put(ws, f'{c}7', f'=IF($F$64=1,$D$65*{nq},$D$54*MIN({nq},4){hold})', fmt='0.0000'); put(ws, f'{c}8', f'=IF($F$64=1,$D$66*{nq},$D$55*MIN({nq},4){hold})', fmt='0.0000')
     label(ws, 9, 'Aftermarket price relative to OEM, drifting: p_AM × (1 + drift)^(years since FQ4 FY26)', 'x', note='Drift = −(OEM inflation − aftermarket inflation) from PartsTrader (Inputs row 68); recycled stays at its anchor because it is priced off the OE list')
     for fy, q in QUARTERS:
         c = QCOL[(fy, q)]; nq = 0 if fy == 2026 else (q if fy == 2027 else 4 + q)
@@ -60,7 +60,7 @@ def build(wb, ctx):
              (52, 'x: donor contribution exposed to collision-part substitution', 0.25, 'ASSUMED', 'No supporting record (FORWARD_ASSUMPTIONS.md)'), (53, 'κ: contribution-to-hammer bid ratio', 1.5, 'ASSUMED', 'Sturgeon 2018 margins make the scale interpretable, not the value'),
              (54, 'Stress path: OEM → aftermarket shift per quarter through FY27 (points)', 0.01, 'ASSUMED', 'model/thesis_audit_2026-10-01/assumptions.json (memo stress; 5.5-pt endpoint)'), (55, 'Stress path: recycled → aftermarket shift per quarter (points)', 0.00375, 'ASSUMED', 'same'), (56, 'Stress path: hold FY27 endpoint through FY28 (1) or revert (0)', 1, 'toggle', 'Convention for the stress path only'),
              (57, 'τ: recycler bid transmission to the marginal price', 0.5, 'ASSUMED', 'The 10% case removes most of the price effect (AUDIT.md)'), (58, 'Endpoint recycled displacement used by the engine (points)', 0.015, 'ASSUMED', 'ccc_larger_shift case')]
-    items += [(64, 'Sourcing path selector: 1 = observed CCC trend continued; 2 = memo stress (5.5 pts by FQ4 FY27)', 1, 'toggle', 'Default is the evidence; the stress is shown for the memo\'s larger case'),
+    items += [(64, 'Sourcing path selector (click D64 to choose; index in F64): observed CCC trend continued, or memo stress (5.5 pts by FQ4 FY27)', 1, 'toggle', 'Default is the evidence; the stress is shown for the memo\'s larger case'),
               (65, 'Observed path: aftermarket dollar-share gain per quarter (points)', '=(' + F('ccc_am_dollar_share_2025')[1:] + '-' + F('ccc_am_dollar_share_2024')[1:] + ')/4', 'VERIFIED (trend)', 'CCC 2024→25 +1.7 pts a year ÷ 4; a one-year trend, so a continuation assumption'),
               (66, 'Observed path: recycled dollar-share loss per quarter (points)', '=(' + F('ccc_rec_dollar_share_2024')[1:] + '-' + F('ccc_rec_dollar_share_2025')[1:] + ')/4', 'VERIFIED (trend)', 'CCC 2024→25 −0.2 pt a year ÷ 4'),
               (68, 'Aftermarket relative-price drift per year  (−(OEM inflation − aftermarket inflation), PartsTrader Apr 2025–Mar 2026)', '=-(' + F('partstrader_oem_inflation')[1:] + '-' + F('partstrader_am_inflation')[1:] + ')', 'VERIFIED (trend, one year)', 'Aftermarket flat under tariffs while OEM and recycled (priced off OE) rose 4.3%; continued through FY28 as an assumption. Incremental to a reference that holds general repair cost neutral'),
@@ -70,3 +70,4 @@ def build(wb, ctx):
     label(ws, 61, 'η: selection response, Δ units per unit of bill change (ENGINE-derived: ccc_larger_shift unit delta ÷ repair change)', note='D Engine CCC scenario summary; the engine\'s derivative is calibrated to levels only (AUDIT.md priority 1)')
     put(ws, 'D61', f"=SUMIFS('D Engine'!$F${e0}:$F${e1},'D Engine'!$B${e0}:$B${e1},\"ccc_larger_shift\")/SUMIFS('D Engine'!$C${e0}:$C${e1},'D Engine'!$B${e0}:$B${e1},\"ccc_larger_shift\")", 'engine', '0.000'); put(ws, 'E61', 'ENGINE', 'note')
     ws.freeze_panes = 'D6'
+    dropdown(ws, 'D64', ['1 · CCC trend', '2 · Memo stress'], index_cell='F64', default_index=1, list_col='U', list_row=60, title='Sourcing-path options (list source for D64)')

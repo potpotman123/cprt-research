@@ -9,12 +9,14 @@ CASES = [(1, 'Case 0 — Street-implied: known runoff, coverage recovery reverse
          (6, 'All three — sticky coverage + aftermarket + carrier moves', 1, 1, G, 1),
          (7, 'Bull — premium-response coverage, ASP +6%', 0, 0, 0.06, 2)]
 NCASES = len(CASES)
+CASE_SHORT = ['1 · Case 0 — Street-implied (coverage recovers to JPM)', '2 · Case 1 — Known facts, sticky coverage (thesis 1)', '3 · Case 1b — Premium-response coverage', '4 · Thesis 2 — aftermarket substitution on case 1',
+              '5 · Thesis 3 — carrier moves on case 1', '6 · All three — sticky coverage + aftermarket + carriers', '7 · Bull — premium-response coverage, ASP +6%']
 ROWS = ['Insurance units', 'y/y', 'US insurance ASP', 'Core RPU', 'All-in insurance RPU', 'US insurance service revenue', 'US non-insurance service revenue', 'International service revenue', 'Legacy service revenue', 'Purchased-vehicle revenue', 'Total revenue (legacy + purchased + ACV)']
 def block_row(k, i): return 7 + (k - 1) * 13 + 1 + i   # row of item i in case k's block
 def build(wb, ctx):
     ws = wb.create_sheet('Scenarios'); tab_color(ws, NAVY); setup(ws)
     std_header(ws, 'Units_q = Units_{q−4} × pool ratio (E2) × share ratio (E3, base or A) × (1 + b·Δunits (E4));  ASP_q = ASP₀ (1+g)^t × (1 + b·Δprice);  RPU from E5 parameters with the case\'s seller rate.  Four common-base cases with exact interaction; never quote the own-reference delta as a Street miss.', 'Scenarios — the two theses on one common base')
-    put(ws, 'B3', 'Selected case (set on RPM, cell D3)', 'label', b=True); put(ws, 'D3', '=RPM!$D$3', 'link', '0')
+    put(ws, 'B3', 'Selected case index (choose the case from the dropdown on RPM D3)', 'label', b=True); put(ws, 'D3', '=RPM!$I$3', 'link', '0'); put(ws, 'E3', '=RPM!$D$3', 'link', '@'); ctx['case_names'] = CASE_SHORT
     section(ws, 5, 'Cases (each block is a complete quarterly path)', quarter_labels())
     P0 = 100
     for k, name, a, b, g, cov in CASES:
