@@ -37,7 +37,14 @@ def build(wb, ctx):
         prior = [x for x in cpi_m if x[0] == y - 1 and x[1] == per]
         if prior: put(ws, f'{L(4+j)}{r+3}', v / prior[0][2] - 1, 'input', F_PCT)
     put(ws, f'B{r+2}', 'index', 'label'); put(ws, f'B{r+3}', '   y/y', 'label', i=True)
-    put(ws, f'B{r+5}', 'MoneyGeek lapse study (raw/discovery_2026-10-02/moneygeek_lapse.html): a coverage gap longer than 30 days raises quoted premiums by 22.4% on average across nine insurers; a gap of 30 days or less by 10.6%. Rate-comparison estimate, not a filing.', 'note')
+    put(ws, f'B{r+5}', 'S&P Global Market Intelligence, 2025 US Auto Insurance Market Report (data compiled 3 Dec 2025), as published by Carrier Management 6 Jan 2026 (raw/discovery_2026-10-02/carriermanagement_spgmi_outlook_2026.html and three chart images). S&P\'s own page refused the fetch (403).', 'label', b=True)
+    for k, (lab, val, note) in enumerate([('Auto (private + commercial) combined ratio, 2025P', 94.5, 'VERIFIED (republication) — article text'), ('Auto combined ratio, 2026P', 97.1, 'VERIFIED (republication) — article text; "matching 2024"'), ('Auto combined ratio, 2027P', 98.9, 'VERIFIED (republication) — article text; breaches 100 in 2028'),
+                                            ('Auto share of total US P&C direct premiums written, 2024A (peak)', 0.412, 'VERIFIED (republication) — chart spgmi_premium_growth_2015_2029.jpg'), ('Auto share of P&C premiums, 2026P / 2027P', 0.4037, 'VERIFIED (republication) — chart: 40.37% 2026P, 40.09% 2027P, 39.90% 2029P: auto premiums grow slower than other lines'),
+                                            ('Private auto direct premiums written growth outlook, 2025 (revised)', 0.046, 'VERIFIED (republication) — chart spgmi_premium_outlook_by_line.jpg, read from the bar (about 4.6%)'),
+                                            ('S&P on 2026 private auto pricing: "rate decreases matching rate increases and increased advertising spending"', None, 'VERIFIED (republication) — media statement quoted in the article. S&P publishes no 2026–27 premium-growth percentage in the accessible material')]):
+        rr = r + 6 + k; label(ws, rr, lab, note=note)
+        if val is not None: put(ws, f'D{rr}', val, 'input', F_PCT if val < 1 else '0.0')
+    put(ws, f'B{r+14}', 'MoneyGeek lapse study (raw/discovery_2026-10-02/moneygeek_lapse.html): a coverage gap longer than 30 days raises quoted premiums by 22.4% on average across nine insurers; a gap of 30 days or less by 10.6%. Rate-comparison estimate, not a filing.', 'note')
     ctx['cov_years'] = years; ctx['cov_rows'] = {'cpi': 5, 'ahe': 7, 'um': 8, 'coll': 9}
     # ---------------- E2 block F
     e2 = wb['E2 Claims & Totals']; cy = {y: L(4 + j) for j, y in enumerate(years)}
@@ -70,21 +77,31 @@ def build(wb, ctx):
     put(e2, 'B115', 'Path', 'label', b=True)
     for fy, q in QUARTERS: put(e2, f'{QCOL[(fy,q)]}115', qlabel(fy, q), 'label', b=True)
     label(e2, E2_COV_STICKY_ROW, 'Sticky (thesis 1): coverage stays at the 2025 level', 'x', b=True, note='The thesis: lapsed physical-damage coverage does not return because price and friction (lapse surcharges) have not improved')
-    label(e2, E2_COV_PREMIUM_ROW, 'Premium-response: coverage ratio = (1 + premium growth − earnings growth)^(−ε)', 'x', b=True, note='Mechanistic bull path: what falling premiums would restore if coverage responded as in 2017–2023')
+    label(e2, E2_COV_PREMIUM_ROW, 'Premium-response (threshold): no recovery while the burden is at or above its 2023 level; below it, ratio = (B_q ÷ B_{q−4})^(−ε)', 'x', b=True, note='Mechanistic bull path with hysteresis: coverage returns only once premiums relative to pay fall back below the level at which households left (2023 = 0.867)')
+    label(e2, 119, 'Premium burden path (2025 = 1): FY27 = 2026 × (1 + premium growth − earnings growth); FY28 steps again', 'x', note='Inputs rows 123–125; selector row 127 chooses the BLS observed trend or the S&P-consistent path')
+    label(e2, 120, '   below the 2023 level? (1 = yes)', 'flag', i=True)
     label(e2, E2_COV_RECOVERY_ROW, 'Street-implied recovery: FY27 ratio reverse-solved so case 0 reaches JPM $4,061m; FY28 held', 'x', b=True, note='r = (JPM − case 1 legacy FY27) ÷ case 1 US insurance service FY27 (identity; RPU unchanged)')
     for fy, q in QUARTERS:
         c = QCOL[(fy, q)]
         if fy == 2026: continue
         put(e2, f'{c}{E2_COV_STICKY_ROW}', 1.0, 'formula', '0.0000', b=True)
-        put(e2, f'{c}{E2_COV_PREMIUM_ROW}', f'=(1+$D$121-$D$122)^(-$D$110)' if fy == 2027 else f'=(1+$D$123-$D$122)^(-$D$110)', fmt='0.0000', b=True)
-        put(e2, f'{c}{E2_COV_RECOVERY_ROW}', '=1+$D$124' if fy == 2027 else 1.0, 'formula', '0.0000', b=True)
-    section(e2, 120, 'Coverage inputs', ['Value', 'Label'])
-    items = [(121, 'Premium growth, FY27 (default: BLS CPI motor vehicle insurance, Aug 2026 vs Aug 2025)', "='D Coverage'!Q17", 'link', 'VERIFIED', 'raw/bls series CUUR0000SETE, latest month y/y; the owner\'s S&P forecast can replace it (licensed; paraphrase with date)'),
-             (122, 'Earnings growth, FY27 and FY28 (default: CES average hourly earnings, latest year y/y)', f"='D Coverage'!M7/'D Coverage'!L7-1", 'link', 'VERIFIED', 'raw/bls CES0500000003'),
-             (123, 'Premium growth, FY28', 0.0, 'input', 'ASSUMED', 'Flat; replace with the S&P 2027 forecast if the owner supplies it'),
-             (124, 'r: Street-implied FY27 coverage recovery (reverse-solved, live)', None, 'formula', 'MEASURED', 'Identity from Scenarios case 1 and the JPM benchmark; recomputes with every input change')]
+        prev = '$M$108' if fy == 2027 else f'{QCOL[(fy-1,q)]}119'
+        put(e2, f'{c}119', f'={prev}*(1+$D$123-$D$124)' if fy == 2027 else f'={prev}*(1+$D$125-$D$124)', fmt='0.0000')
+        put(e2, f'{c}120', f'=IF({c}119<$J$108,1,0)', fmt='0')
+        put(e2, f'{c}{E2_COV_PREMIUM_ROW}', f'=IF({c}119>=$J$108,1,({c}119/{prev})^(-$D$110))', fmt='0.0000', b=True)
+        put(e2, f'{c}{E2_COV_RECOVERY_ROW}', '=1+$D$126' if fy == 2027 else 1.0, 'formula', '0.0000', b=True)
+    section(e2, 122, 'Coverage inputs', ['Value', 'Label'])
+    items = [(123, 'Premium growth, FY27 (selected path)', '=IF($D$127=1,$D$128,$D$129)', 'formula', 'selected', 'Row 127 selects: 1 = BLS observed trend (row 128); 2 = S&P-consistent path (rows 129–130)'),
+             (124, 'Earnings growth, FY27 and FY28 (CES average hourly earnings, latest year y/y)', f"='D Coverage'!M7/'D Coverage'!L7-1", 'link', 'VERIFIED', 'raw/bls CES0500000003'),
+             (125, 'Premium growth, FY28 (selected path)', '=IF($D$127=1,$D$128,$D$130)', 'formula', 'selected', 'BLS trend continued, or the S&P-consistent FY28 step'),
+             (126, 'r: Street-implied FY27 coverage recovery (reverse-solved, live)', None, 'formula', 'MEASURED', 'Identity from Scenarios case 1 and the JPM benchmark; recomputes with every input change'),
+             (127, 'Premium path selector: 1 = BLS observed trend; 2 = S&P-consistent', 1, 'toggle', 'TOGGLE', 'Both shown on Key Drivers'),
+             (128, 'BLS CPI motor vehicle insurance, latest month y/y (Aug 2026)', "='D Coverage'!Q17", 'link', 'VERIFIED', 'raw/bls CUUR0000SETE'),
+             (129, 'S&P-consistent premium growth, FY27', 0.0, 'input', 'ASSUMED', 'S&P (Dec 2025): 2026 private auto pricing with "rate decreases matching rate increases"; no percentage published. Flat is our reading, not an S&P number'),
+             (130, 'S&P-consistent premium growth, FY28', 0.03, 'input', 'ASSUMED', 'S&P projects auto combined ratios rising to 98.9 in 2027 and above 100 in 2028, implying renewed rate increases; +3% is our reading of that path, not an S&P number'),
+             (131, 'First quarter in which the burden falls below its 2023 level (selected path)', '=IFERROR(INDEX($D$115:$O$115,MATCH(1,$D$120:$O$120,0)),"beyond FQ4 FY28")', 'formula', 'MEASURED', 'Row 120 flags; the date the bull mechanism could start, on the selected path')]
     for row, lab, val, kind, lbl, src in items:
         label(e2, row, lab, note=src)
-        if val is not None: put(e2, f'D{row}', val, kind, F_PCT)
+        if val is not None: put(e2, f'D{row}', val, kind, F_PCT if row != 131 else '@')
         put(e2, f'E{row}', lbl, 'note')
-    ctx['cov_r_cell'] = "'E2 Claims & Totals'!$D$124"
+    ctx['cov_r_cell'] = "'E2 Claims & Totals'!$D$126"

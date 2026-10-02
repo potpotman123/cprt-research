@@ -57,7 +57,7 @@ def build(wb, ctx):
         r = S0 + k; label(ws, r, name); lr = block_row(k, 8)
         put(ws, f'D{r}', f'={ACOL[2027]}{lr}', fmt=F_MONEY, b=True); put(ws, f'E{r}', f'=D{r}-$D${S0+2}', fmt=F_MONEY); put(ws, f'F{r}', f'=D{r}-$D${S0+1}', fmt=F_MONEY); put(ws, f'G{r}', f'=D{r}-$D${P0+8}', fmt=F_MONEY); put(ws, f'H{r}', f'=G{r}/$D${P0+8}', fmt=F_PCT); put(ws, f'I{r}', f'={ACOL[2028]}{lr}', fmt=F_MONEY)
     # thesis-1 recovery r, written to E2 (identity: (JPM − case 1 legacy) ÷ case 1 US insurance service)
-    wb['E2 Claims & Totals']['D124'] = f"=(Scenarios!$D${P0+8}-Scenarios!{ACOL[2027]}{block_row(2, 8)})/Scenarios!{ACOL[2027]}{block_row(2, 5)}"
+    wb['E2 Claims & Totals']['D126'] = f"=(Scenarios!$D${P0+8}-Scenarios!{ACOL[2027]}{block_row(2, 8)})/Scenarios!{ACOL[2027]}{block_row(2, 5)}"
     e0, e1 = ctx['eng_ss']; r = S0 + NCASES + 2
     label(ws, r, 'Engine parity — saved reference (mask 10) FY27 service revenue', '$M', note='ENGINE: D Engine; the engine reference repeats prior-year carrier conditions (implies a rebound after the account loss), so it sits above case 1 by design')
     put(ws, f'D{r}', f"=SUMIFS('D Engine'!$D${e0}:$D${e1},'D Engine'!$B${e0}:$B${e1},10)", 'engine', F_MONEY)

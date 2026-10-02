@@ -8,13 +8,16 @@ def build(wb, ctx):
     blocks = [
      ('Thesis 1 — coverage persistence (E2 block F, D Coverage)', [
       ('Motor-vehicle-insurance CPI, latest month y/y (Aug 2026)', "='D Coverage'!Q17", '%', 'VERIFIED', 'BLS CUUR0000SETE, raw/bls; the premium index is falling'),
-      ('Premium growth used for FY27 (input)', "='E2 Claims & Totals'!D121", '%', 'VERIFIED default', 'E2 D121; replace with the S&P forecast if supplied'),
-      ('Average hourly earnings growth, latest year', "='E2 Claims & Totals'!D122", '%', 'VERIFIED', 'BLS CES0500000003'),
+      ('Premium growth used for FY27 (selected path; E2 row 127 selects BLS trend or S&P-consistent)', "='E2 Claims & Totals'!D123", '%', 'selected', 'E2 D123'),
+      ('Average hourly earnings growth, latest year', "='E2 Claims & Totals'!D124", '%', 'VERIFIED', 'BLS CES0500000003'),
+      ('Premium burden 2023 (level at which households left) / 2026 to date (2025 = 1)', "='E2 Claims & Totals'!J108", 'x', 'MEASURED', 'E2 row 108; 2026 value in M108 (0.956): still 10% above 2023 after the 2026 premium decline'),
+      ('First quarter the burden falls below its 2023 level, selected path', "='E2 Claims & Totals'!D131", '', 'MEASURED', 'E2 D131; "beyond FQ4 FY28" on the S&P-consistent path'),
+      ('S&P auto combined ratio path 2025P / 2026P / 2027P', "='D Coverage'!D20", 'ratio', 'VERIFIED (republication)', 'D Coverage rows 20–22: 94.5 / 97.1 / 98.9, breaching 100 in 2028 (Carrier Management, 6 Jan 2026)'),
       ('Uninsured-motorist rate 2017 / 2023', "='D Coverage'!D8", '%', 'VERIFIED endpoints', 'IRC release 20 Feb 2025; 2023 = 15.4% (D Coverage J8)'),
       ('Physical-damage coverage index 2017 (2025 = 1.000; the 2017–23 change is the measured coverage decline)', "='E2 Claims & Totals'!D107", 'x', 'MEASURED', 'E2 row 107; collision share 76–77% flat 2021–23, so the decline is the uninsured leg'),
       ('Share of insured drivers with collision coverage, 2021 / 2022 / 2023', "='D Coverage'!H9", '%', 'VERIFIED (republication)', 'III via Wayback snapshots 2024 and 2025 plus the live page: 76% / 77% / 77%'),
       ('Two-point coverage response to premium burden (ε)', "='E2 Claims & Totals'!D110", 'x', 'UNVERIFIED', 'E2 D110; n = 2'),
-      ('Street-implied FY27 coverage recovery r (reverse-solved to JPM)', "='E2 Claims & Totals'!D124", '%', 'MEASURED', 'E2 D124: what the Street number needs'),
+      ('Street-implied FY27 coverage recovery r (reverse-solved to JPM)', "='E2 Claims & Totals'!D126", '%', 'MEASURED', 'E2 D124: what the Street number needs'),
       ('Coverage ratio FQ1 FY27: sticky / premium-response / recovery', "='E2 Claims & Totals'!H116", 'x', 'paths', 'E2 rows 116–118 (H117, H118 for the other paths)'),
       ('CCC total claim volume y/y, 2024 / 2025', "='D Coverage'!K10", '%', 'VERIFIED', 'D Coverage K10 / L10 (2025 = −3.3%)')]),
      ('Thesis 2 — aftermarket substitution (E4)', [
