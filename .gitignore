@@ -38,3 +38,4 @@ __pycache__/
 .DS_Store
 model/CPRT_Model_v2_recalc.xlsx
 model/CPRT_Model_v2_prebuild.xlsx
+model/backups/
