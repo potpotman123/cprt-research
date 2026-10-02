@@ -22,6 +22,7 @@ def build(wb, ctx):
     put(ws, f'B{5+len(B)+1}', SRC, 'note'); ctx['barclays_rows'] = rows
     # ---------------- Rebuild the owner's 'Reverse DCF' tab in place (owner's 2 Oct shape: two-year explicit period, FY28E exit multiple)
     rd = wb['Reverse DCF']
+    for rng in list(rd.merged_cells.ranges): rd.unmerge_cells(str(rng))
     for row in rd.iter_rows(min_row=3, max_row=max(rd.max_row, 80)):
         for c in row: c.value = None; c.font = font(); c.fill = PatternFill(); c.border = Border()
     NOTES_COL['Reverse DCF'] = 'P'
