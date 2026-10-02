@@ -22,6 +22,7 @@ def build(wb, ctx):
     rows.append(('Thesis 1: case 0 (Street-implied) FY27 legacy service equals JPM $4,061m (reverse-solved identity)', f"=Scenarios!D{ctx['summary_row0']+1}", f"={ctx['jpm_cell']}", 1, F_MONEY))
     rows.append(('Thesis 1: physical-damage coverage index normalises to 1 in 2025', "='E2 Claims & Totals'!L107", 1, 1e-6, '0.0000'))
     rows.append(('DCF still reads RPM: DCF revenue FY27E equals RPM total revenue FY27E', '=DCF!I6', '=RPM!I6', 0.001, F_MONEY))
+    rows.extend(ctx.get('extra_checks', []))
     r = 5
     for lab, model, target, tol, fmt in rows:
         label(ws, r, lab); put(ws, f'D{r}', model, 'link', fmt); put(ws, f'E{r}', target, 'link' if isinstance(target, str) else 'input', fmt); put(ws, f'F{r}', f'=D{r}-E{r}', fmt=fmt)

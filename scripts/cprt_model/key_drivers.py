@@ -58,6 +58,14 @@ def build(wb, ctx):
       ('All three FY27 / Δ vs JPM', f"=Scenarios!D{s0+6}", '$M', 'model', f'Scenarios G{s0+6}'),
       ('Selected case on the RPM (cell D3) and its FY27 service revenue', "=RPM!D3", 'case', 'selector', 'RPM D3; I10 holds the revenue'),
       ('Selected case Δ to JPM', "=RPM!D50", '$M', 'model', 'RPM D50 (E50 in %)')])]
+    if 'tsm_rows' in ctx:
+        T = ctx['tsm_rows']; blocks.append(('Three-statement model (3SM) vs Barclays, FY2027E', [
+          ('3SM revenue FY27E', f"='3SM'!I{T['rev']}", '$M', 'model', f"3SM row {T['rev']}; Δ to Barclays in row {T['d_rev']}"),
+          ('3SM adjusted EBITDA FY27E', f"='3SM'!I{T['ebitda']}", '$M', 'model', f"3SM row {T['ebitda']}; Barclays 1,916; Δ in row {T['d_ebitda']}"),
+          ('3SM diluted EPS FY27E', f"='3SM'!I{T['eps']}", '$', 'model', f"3SM row {T['eps']}; Barclays $1.56 in row {T['b_eps']}"),
+          ('3SM free cash flow FY27E (CFO + capex)', f"='3SM'!I{T['fcf']}", '$M', 'model', f"3SM row {T['fcf']}"),
+          ('3SM cash & HTM FY27E', f"='3SM'!I{T['cashhtm']}", '$M', 'model', f"3SM row {T['cashhtm']}; Barclays 5,656; Δ in row {T['d_cash']}"),
+          ('ΔNWC method on the 3SM (1 = days schedule, 2 = Barclays)', f"='3SM'!D{T['nwc_sel']}", 'case', 'selector', f"3SM D{T['nwc_sel']}")]))
     r = 5
     for name, items in blocks:
         group(ws, r, name); r += 1

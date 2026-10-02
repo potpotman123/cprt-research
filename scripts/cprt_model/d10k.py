@@ -2,17 +2,18 @@
 import re, html
 from .common import *
 PATH = 'raw/sec/10k/cprt_2026-07-31.htm'
-def text():
-    h = open(ROOT / PATH, encoding='utf-8', errors='replace').read(); h = re.sub(r'(?is)<(script|style)[^>]*>.*?</\1>', '', h)
+def text(path=PATH):
+    h = open(ROOT / path, encoding='utf-8', errors='replace').read(); h = re.sub(r'(?is)<(script|style)[^>]*>.*?</\1>', '', h)
     h = re.sub(r'(?i)<br\s*/?>|</(p|div|tr|li|h\d|table)>', '\n', h); h = re.sub(r'(?i)</t[dh]>', ' | ', h); h = re.sub(r'<[^>]+>', '', h)
     t = html.unescape(h).replace('\xa0', ' '); t = re.sub(r'[ \t]+', ' ', t); return re.sub(r'\n\s*\n+', '\n', t)
 def nums_after(t, anchor, k=3, span=400, start=0):
     m = re.search(anchor, t[start:], re.I)
     if m: m = type('M', (), {'end': lambda self, _e=m.end() + start: _e})()
     if not m: return [None] * k, 'NOT FOUND'
-    seg = t[m.end(): m.end() + span]; vals = re.findall(r'\(?\d[\d,]*\.?\d*\)?', seg)
+    seg = t[m.end(): m.end() + span]; vals = re.findall(r'\(?\d[\d,]*\.?\d*\)?|—', seg)
     out = []
     for v in vals:
+        if v == '—': out.append(0.0); continue
         neg = v.startswith('('); v = v.strip('()').replace(',', '')
         try: out.append(-float(v) if neg else float(v))
         except ValueError: pass
@@ -42,9 +43,26 @@ def build(wb, ctx):
     add('Effective tax rate FY2026 / FY2025', [0.193, 0.183, None], '%', 'MD&A Income Taxes: "19.3% and 18.3%"')
     add('Tax reconciliation FY2026 ($m): FDII benefit / excess stock-option benefit / state taxes', [-46.7, -6.6, 21.5], '$m', 'MD&A Income Taxes paragraph (statutory rate 21.0%)')
     add('Revolving credit facility: capacity ($m) / maturity', [1250, None, None], '$m', 'Risk factors: "2026 Credit Agreement … up to $1,250 million maturing on January 23, 2031"')
+    isx = t.find('CONSOLIDATED STATEMENTS OF INCOME'); cfx = t.find('CONSOLIDATED STATEMENTS OF CASH FLOWS')
+    IS = (('Service revenues', r'\n ?Service revenues\s*(?:\n|\|)'), ('Vehicle sales', r'\n ?Vehicle sales\s*(?:\n|\|)'), ('Facility operations', r'\n ?(?:Facility|Yard) operations\s*(?:\n|\|)'), ('Cost of vehicle sales', r'\n ?Cost of vehicle sales\s*(?:\n|\|)'),
+          ('General and administrative', r'\n ?General and administrative\s*(?:\n|\|)'), ('Operating income', r'\n ?Operating income\s*(?:\n|\|)'), ('Income before income taxes', r'\n ?Income before income taxes\s*(?:\n|\|)'), ('Income tax expense', r'\n ?Income tax expense\s*(?:\n|\|)'),
+          ('Net income (consolidated)', r'\n ?Net income\s*(?:\n|\|)'), ('Net income attributable to Copart', r'\n ?Net income attributable to Copart, Inc\.\s*(?:\n|\|)'))
+    for lab, anc in IS:
+        v, a = nums_after(t, anc, 3, 500, isx); add(f'{lab} ($m), FY2026 / FY2025 / FY2024', v, '$m', f'Consolidated statements of income: "{lab}"' + ('' if v[0] is not None else ' — NOT FOUND'), 1000)
+    v, a = nums_after(t, r'\n ?Diluted net income per common share\s*(?:\n|\|)', 3, 500, isx); add('Diluted net income per share ($), FY2026 / FY2025 / FY2024', v, 'mixed', 'Consolidated statements of income: "Diluted net income per common share"')
+    v, a = nums_after(t, r'\n ?Diluted weighted average common shares outstanding\s*(?:\n|\|)', 3, 500, isx); add('Diluted weighted-average shares (mn), FY2026 / FY2025 / FY2024', v, '$m', 'Consolidated statements of income: "Diluted weighted average common shares outstanding"', 1000)
+    for lab, anc in (('Depreciation and amortization, incl. debt cost (cash flow)', r'\n ?Depreciation and amortization, including debt cost\s*(?:\n|\|)'), ('Stock-based compensation (cash flow)', r'\n ?Stock-based compensation\s*(?:\n|\|)'),
+                     ('Purchases of property and equipment', r'\n ?Purchases of property and equipment\s*(?:\n|\|)'), ('Repurchases of common stock', r'\n ?Repurchases of common stock\s*(?:\n|\|)')):
+        v, a = nums_after(t, anc, 3, 500, cfx); add(f'{lab} ($m), FY2026 / FY2025 / FY2024', v, '$m', f'Consolidated statements of cash flows: "{lab}"' + ('' if v[0] is not None else ' — NOT FOUND'), 1000)
+    rows.append(('From the FY2024 Form 10-K on disk (raw/sec/10k/cprt_2024-07-31.htm): columns read FY2024 / FY2023 / FY2022', None, '', ''))
+    t24 = text('raw/sec/10k/cprt_2024-07-31.htm'); isx24 = t24.find('CONSOLIDATED STATEMENTS OF INCOME')
+    for lab, anc in IS[:5]:
+        v, a = nums_after(t24, anc, 3, 500, isx24); add(f'{lab} ($m), FY2024 / FY2023 / FY2022', v, '$m', f'FY2024 10-K, consolidated statements of income: "{lab}"' + ('' if v[0] is not None else ' — NOT FOUND'), 1000)
     for i, (lab, vals, unit, anchor) in enumerate(rows):
-        r = 5 + i; put(ws, f'B{r}', lab, 'label')
+        r = 5 + i
+        if vals is None: group(ws, r, lab); continue
+        put(ws, f'B{r}', lab, 'label')
         for j, v in enumerate(vals[:3]):
             if v is not None: put(ws, f'{L(3+j)}{r}', v, 'input', F_PCT if unit == '%' else '0.00' if unit == 'mixed' else F_MONEY)
         put(ws, f'F{r}', unit, 'label', i=True); put(ws, f'I{r}', anchor[:200], 'note')
-    ctx['d10k_rows'] = {lab: 5 + i for i, (lab, *_) in enumerate(rows)}; ws.freeze_panes = 'C5'
+    ctx['d10k_rows'] = {lab: 5 + i for i, (lab, vals, *_) in enumerate(rows) if vals is not None}; ws.freeze_panes = 'C5'
