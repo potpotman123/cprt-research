@@ -5,7 +5,7 @@ import sys, pathlib, importlib, openpyxl
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from cprt_model.common import *
 SRC = pathlib.Path('/Users/kwu/Downloads/CPRT_Model_v1.xlsx'); OUT = ROOT / 'model/CPRT_Model_v2.xlsx'
-STEPS = ['data_tabs', 'facts', 'e1_fleet', 'e2_claims', 'e3_carriers', 'e4_aftermarket', 'e5_fees', 'e6_branches', 'coverage', 'scenarios', 'rpm', 'street', 'key_drivers', 'reverse_dcf', 'sources', 'checks']
+STEPS = ['data_tabs', 'facts', 'e1_fleet', 'e2_claims', 'e3_carriers', 'e4_aftermarket', 'e5_fees', 'e6_branches', 'coverage', 'scenarios', 'rpm', 'street', 'key_drivers', 'sources', 'checks']
 def cover(wb):
     ws = wb.create_sheet('Cover', 0); tab_color(ws, NAVY); setup(ws, label_w=44, ncols=6, notes_col='H')
     title(ws, 'Copart, Inc. (NASDAQ: CPRT) — revenue architecture, DCF and reverse DCF', 'Fiscal year ends 31 July. $ millions unless stated. Built by scripts/build_cprt_model.py from the repository data; see docs/workbook_plan_2026-10-01.')
