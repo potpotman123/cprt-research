@@ -11,10 +11,10 @@ def build(wb, ctx):
         put(rd, f'R{r}', text, 'label', b=True)
         for c in 'RSTUVWX': rd[f'{c}{r}'].fill = fill(BLUE); rd[f'{c}{r}'].font = font(C_WHITE, b=True)
     bar(4, 'WACC build (bottom-up; feeds DCF!H88)'); put(rd, 'S4', 'Value', 'label', b=True); put(rd, 'T4', 'Label', 'label', b=True)
-    lab(5, 'Current share price (26 Sep 2026)', note='DCF tab'); put(rd, 'S5', '=DCF!H118', 'link', F_USD + '.00')
-    lab(6, 'Shares outstanding, mn (31 Jul 2026)', note='10-K Note 12'); put(rd, 'S6', f"='D 10-K FY26'!C{d['Common shares issued and outstanding, 31 Jul 2026']}", 'link', '0.0')
-    lab(7, 'Market value of equity ($m)', b=True); put(rd, 'S7', '=S5*S6', fmt=F_INT, b=True)
-    lab(8, 'Debt: finance leases ($m); no funded debt', note='PitchBook / 10-K: total debt 88.4 = finance leases; revolver undrawn'); put(rd, 'S8', '=-DCF!H108', 'link', F_INT)
+    lab(5, 'Current share price (Cover key statistics, D6)', note='Cover D6 — the one typed price in the workbook'); put(rd, 'S5', '=Cover!$D$6', 'link', F_USD + '.00')
+    lab(6, 'Fully diluted shares, mn (Cover key statistics, D15)', note='Cover D15: basic + treasury-method options + RSUs (10-K Note 12)'); put(rd, 'S6', '=Cover!$D$15', 'link', '0.0')
+    lab(7, 'Market value of equity ($m) (Cover D10)', b=True); put(rd, 'S7', '=Cover!$D$10', 'link', F_INT, b=True)
+    lab(8, 'Debt: lease liabilities ($m), no funded debt (Cover D13)', note='Cover D13 ← 3SM balance sheet; revolver undrawn'); put(rd, 'S8', '=Cover!$D$13', 'link', F_INT)
     lab(9, 'Weight of equity / weight of debt'); put(rd, 'S9', '=S7/(S7+S8)', fmt=F_PCT2); put(rd, 'T9', '=S8/(S7+S8)', fmt=F_PCT2)
     lab(11, 'Risk-free rate: 10-year US Treasury par yield, 1 Oct 2026', note='VERIFIED — US Treasury daily par yield curve, raw/discovery_2026-10-02/ust_yield_curve_2026.csv (row 10/01/2026, 10 Yr)'); put(rd, 'S11', 0.0524, 'input', F_PCT2); put(rd, 'T11', 'VERIFIED', 'note')
     lab(12, 'Equity risk premium: United States, Damodaran, January 2026', note='VERIFIED — Damodaran country risk premiums table (Aa1; mature-market 4.23% + 0.23% CRP), raw/discovery_2026-10-02/damodaran_ctryprem.html'); put(rd, 'S12', 0.0446, 'input', F_PCT2); put(rd, 'T12', 'VERIFIED', 'note')
@@ -49,3 +49,10 @@ def build(wb, ctx):
     put(dcf, 'H88', "='Reverse DCF'!S25", 'link', F_PCT2, b=True); put(dcf, 'P88', 'Link to the WACC build (Reverse DCF R–X)', 'note')
     for c in 'IJKLM': put(dcf, f'{c}38', "='Reverse DCF'!$S$33", 'link', F_PCT)
     put(dcf, 'P38', 'FY27+ = structural effective rate from the tax build (Reverse DCF R28–R36)', 'note')
+
+    relink = {'H45': ('=DCF!H107', '=Cover!D12'), 'H46': ('=DCF!H108', '=-Cover!D13'), 'H47': ('=DCF!H109', '=-Cover!D14'), 'H50': ('=DCF!H112', '=Cover!D15'), 'H52': ('=DCF!H118', '=Cover!D6')}
+    for ref, (old, new) in relink.items():
+        if rd[ref].value == old: put(rd, ref, new, 'link')
+    v = rd['H61'].value
+    if isinstance(v, str) and 'DCF!H118' in v:
+        rd['H61'].value = v.replace('DCF!H118', 'Cover!D6').replace('DCF!H112', 'Cover!D15').replace('DCF!H107', 'Cover!D12').replace('-DCF!H108', '+Cover!D13').replace('-DCF!H109', '+Cover!D14'); WRITTEN.add(('Reverse DCF', 'H61'))

@@ -32,6 +32,10 @@ def main():
     shutil.copy(SRC, BACKUP)
     wb = openpyxl.load_workbook(SRC); ctx = {}
     before = list(wb.sheetnames); positions = {n: i for i, n in enumerate(before)}
+    pres = {}
+    if 'Cover' in wb.sheetnames and isinstance(wb['Cover']['D6'].value, (int, float)): pres = {'price': wb['Cover']['D6'].value, 'price_label': wb['Cover']['B6'].value}
+    elif isinstance(wb['DCF']['H118'].value, (int, float)): pres = {'price': wb['DCF']['H118'].value, 'price_label': wb['DCF']['B118'].value}
+    ctx['preserve'] = pres
     for n in GENERATED:
         if n in wb.sheetnames: wb.remove(wb[n])
     for s in STEPS: importlib.import_module(f'cprt_model.{s}').build(wb, ctx)
@@ -46,6 +50,7 @@ def main():
     have = {ws.title: ws for ws in wb.worksheets}; wb._sheets = [have[n] for n in order]
     rc = recolor(wb, [n for n in GENERATED if n in wb.sheetnames], OWNER_EDITED); print('recoloured by content:', rc)
     print('toggle dropdowns attached:', toggle_lists(wb, [n for n in GENERATED if n in wb.sheetnames]))
+    print('dashes in empty data cells:', fill_dashes(wb, {**{n: (4, 18) for n in ['E1 Fleet', 'E2 Claims & Totals', 'E3 Carriers', 'E4 Aftermarket', 'E5 Prices & Fees', 'E6 Other Branches', 'Scenarios']}, '3SM': (4, 13), 'Summary': (4, 9), 'D 10-K FY26': (3, 5)}))
     for n in HIDE:
         if n in have: have[n].sheet_state = 'hidden'
     wb.active = 0; wb.save(OUT); print('saved', OUT, 'sheets', len(wb.worksheets), '| order preserved from owner file; backup at', BACKUP.name)

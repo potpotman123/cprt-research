@@ -138,6 +138,7 @@ def recolor(wb, full_sheets, owner_sheets=()):
     return out
 
 from openpyxl.worksheet.datavalidation import DataValidation
+from openpyxl.cell.cell import MergedCell
 def dropdown(ws, cell, options, index_cell=None, default_index=1, list_col='U', list_row=4, title='Selector options (list source; do not edit)'):
     """Clickable data-validation list on `cell` (red, bold). The option texts live in `list_col` below `list_row` on the same tab and the list
     points at that range; `index_cell` gets =MATCH(cell, range, 0) so dependent formulas keep a 1..n index."""
@@ -163,3 +164,22 @@ def toggle_lists(wb, sheets):
         for dv in (dv01, dv123):
             if str(dv.sqref): dv.showErrorMessage = True; dv.error = 'Choose 0 or 1' if dv is dv01 else 'Choose 1, 2 or 3'; ws.add_data_validation(dv)
     return n
+
+DASH = '–'
+def fill_dashes(wb, spec):
+    """Write a grey en dash into empty cells of the data columns (spec = {sheet: (first_col, last_col)}) on rows that carry a label in
+    column B and at least one value in those columns; section/group bars (filled B cell) are skipped. Returns counts by sheet."""
+    out = {}
+    for name, (c0, c1) in spec.items():
+        if name not in wb.sheetnames: continue
+        ws = wb[name]; n = 0
+        for r in range(5, ws.max_row + 1):
+            b = ws.cell(r, 2)
+            if b.value is None or (b.fill is not None and b.fill.fill_type == 'solid'): continue
+            cells = [ws.cell(r, c) for c in range(c0, c1 + 1)]
+            if not any(c.value is not None for c in cells): continue
+            for c in cells:
+                if c.value is None and not isinstance(c, MergedCell):
+                    c.value = DASH; c.font = font(C_NOTE, i=True, sz=10); c.alignment = Alignment(horizontal='center'); n += 1
+        if n: out[name] = n
+    return out

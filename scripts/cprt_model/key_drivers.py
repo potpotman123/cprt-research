@@ -2,7 +2,7 @@
 from .common import *
 def build(wb, ctx):
     ws = wb.create_sheet('Key Drivers'); tab_color(ws, NAVY); setup(ws, label_w=70, ncols=4, notes_col='H')
-    title(ws, 'Key Drivers — the numbers the three theses turn on (all cells link to the engines; labels and sources travel with them)', 'Green = link. Change an input on its engine tab, not here. FQ4 FY26 is the last reported quarter; FQ1 FY27 is the first forecast quarter.')
+    title(ws, 'Key Drivers (all cells link to the engines; labels and sources travel with them)', 'Green = link. Change an input on its engine tab, not here. FQ4 FY26 is the last reported quarter; FQ1 FY27 is the first forecast quarter.')
     for j, h in enumerate(['Value', 'Unit', 'Label']): put(ws, f'{L(4+j)}4', h, 'label', b=True); put(ws, 'H4', 'Source / where it lives', 'note')
     s0 = ctx['summary_row0']; P0 = 100
     blocks = [

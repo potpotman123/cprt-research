@@ -18,7 +18,7 @@ def build(wb, ctx):
     B = lambda pre, fy: f"'D Barclays'!{BC[fy]}{b[bk(pre)]}"
     D10 = lambda pre, col: f"'D 10-K FY26'!{col}{d[dk(pre)]}"
     PB = lambda tab, row, fy: f"'PB {tab} (Annual)'!{PBC[fy]}{row}/1000"
-    R = {}; cur = [3]; cells = []
+    R = {}; cur = [4]; cells = []
     def nxt(n=1): cur[0] += n; return cur[0]
     def line(key, text, units='', hist=None, proj=None, fmt=F_MONEY, note='', bold=False, ital=False, indent=0, hk='link', pk='formula'):
         r = nxt(); R[key] = r; label(ws, r, text, units, b=bold, i=ital, indent=indent, note=note)
@@ -30,8 +30,8 @@ def build(wb, ctx):
             if isinstance(v, tuple): v, kind = v
             cells.append((f'{c}{r}', v, kind, fmt, bold))
         return r
-    def sec(text): r = nxt(2); section(ws, r, text, [f'FY{y}{"A" if y <= 2026 else "E"}' for y in YEARS]); return r
-    def grp(text): r = nxt(2); group(ws, r, text); return r
+    def sec(text): r = nxt(); section(ws, r, text, [f'FY{y}{"A" if y <= 2026 else "E"}' for y in YEARS]); return r
+    def grp(text): r = nxt(); group(ws, r, text); return r
     def memo(key, text, value, kind='link', fmt=F_PCT2, note=''):
         r = nxt(); R[key] = r; label(ws, r, text, note=note); cells.append((f'D{r}', value, kind, fmt, False)); return r
     pct = lambda num, den: (lambda fy, c, p: f'=IF({c}{{{den}}}=0,0,{c}{{{num}}}/{c}{{{den}}})')
@@ -197,8 +197,8 @@ def build(wb, ctx):
     line('bb_s', 'Share repurchases ($, input)', '$M', lambda fy, c, p: f'=-{c}{{bb_cf}}', (0, 'input'), hk='formula',
          note='ASSUMED 0: Barclays\' flat 933m diluted share count implies no repurchases after FY26. Enter dollars to test; the owner\'s DCF cash roll carries $600m a year (DCF row 73) as an alternative')
     line('bb_px', 'Average repurchase price', '$', lambda fy, c, p: f"={D10('FY2026 share repurchases', 'D')}" if fy == 2026 else None, lambda fy, c, p: f'=DCF!{c}74', F_USD, note='FY26: $37.63 (10-K). Projection: owner\'s DCF row 74')
-    line('bb_sh', 'Shares repurchased', 'M', lambda fy, c, p: f"={D10('FY2026 share repurchases', 'C')}" if fy == 2026 else None, lambda fy, c, p: f'=IF({c}{{bb_px}}=0,0,{c}{{bb_s}}/{c}{{bb_px}})', '0.00', note='FY26: 43.4m (10-K)')
-    line('iss', 'Net shares issued (options, RSUs, ESPP)', 'M', lambda fy, c, p: f'={c}{{sh_end}}-{p}{{sh_end}}+{c}{{bb_sh}}' if p else None, held26('iss'), '0.00', hk='formula', note='History: change in year-end shares + repurchased shares. Projection: FY2026 actual (1.8m) held')
+    line('bb_sh', 'Shares repurchased', 'M', lambda fy, c, p: f"={D10('FY2026 share repurchases', 'C')}" if fy == 2026 else f'=IF(N({c}{{bb_px}})=0,0,{c}{{bb_s}}/N({c}{{bb_px}}))', lambda fy, c, p: f'=IF({c}{{bb_px}}=0,0,{c}{{bb_s}}/{c}{{bb_px}})', '0.00', note='FY26: 43.4m (10-K)')
+    line('iss', 'Net shares issued (options, RSUs, ESPP)', 'M', lambda fy, c, p: f'={c}{{sh_end}}-{p}{{sh_end}}+N({c}{{bb_sh}})' if p else None, held26('iss'), '0.00', hk='formula', note='History: change in year-end shares + repurchased shares. Projection: FY2026 actual (1.8m) held')
     line('sh_end', 'Basic shares outstanding, year-end', 'M', lambda fy, c, p: f"='PB BS (Annual)'!{PBC[fy]}152/1000000", lambda fy, c, p: f'={p}{{sh_end}}+{c}{{iss}}-{c}{{bb_sh}}', '0.0', note='History: PitchBook common shares outstanding (FY26 925.8m; the 10-K cover count 926.3m is a later date)')
     line('sh_avg', 'Basic weighted-average shares', 'M', lambda fy, c, p: f"='PB IS (Annual)'!{PBC[fy]}67/1000000", lambda fy, c, p: f'=({p}{{sh_end}}+{c}{{sh_end}})/2', '0.0')
     line('dil', 'Dilutive securities (options, RSUs; treasury method)', 'M', lambda fy, c, p: f'={c}{{dsh}}-{c}{{sh_avg}}', held26('dil'), '0.00', hk='formula', note='History: diluted − basic weighted-average shares. Projection: FY2026 actual (7.2m) held — matches Barclays\' 933m (925.8 + 7.2)')
