@@ -93,12 +93,12 @@ def build(wb, ctx):
               (92, 'm(2024): drift multiplier', 1.194, 'FITTED', 'docs/AGE_CURVES.md §2.4 — fitted to the two 2024 anchors below; anchors themselves need sourcing'),
               (93, 'exposure(age 0): fraction of a claim-year for current-year vehicles', 0.5, 'ASSUMED', 'data/csv/age_curves.csv header; looks low versus CCC age-0 claim share (5.5% vs 4.0%)'),
               (94, 'Claims decay per year beyond age 6 (R(a) = exposure × e^(−decay·max(a−6,0)))', 0.09027, 'FITTED', 'scripts/age_curves.py — fitted jointly with P(a) to eight CCC 2024 statistics'),
-              (95, 'Vehicles in operation, 2024 (thousands)', 292000, 'UNVERIFIED', 'Experian figure on disk per PROVENANCE (file to be cited); the recalled S&P 289M is retired'),
-              (96, 'Share aged 7+, 2024', 0.66, 'UNVERIFIED', 'recalled S&P Global Mobility release; not on disk'),
+              (95, 'Vehicles in operation, 2024 (thousands)', ctx['F']('experian_vio_2024'), 'UNVERIFIED', 'Experian figure on disk per PROVENANCE (file to be cited); the recalled S&P 289M is retired'),
+              (96, 'Share aged 7+, 2024', ctx['F']('sp_fleet_share_7plus_2024'), 'UNVERIFIED', 'recalled S&P Global Mobility release; not on disk'),
               (97, 'Body factor: Car (claims per vehicle vs common curve)', 1.110, 'CALIBRATED', 'scripts/fleet_vs_ccc_backtest.py — fitted to 2025 CCC cells only; 2020–24 are the test'),
               (98, 'Body factor: Utility vehicle (SUV)', 0.917, 'CALIBRATED', 'same'), (99, 'Body factor: Pickup', 1.028, 'CALIBRATED', 'same'), (100, 'Body factor: Van / minivan', 0.923, 'CALIBRATED', 'same')]
     for row, lab, val, kind, src in inputs:
-        label(ws, row, lab, note=src); put(ws, f'D{row}', val, 'input', F_X if isinstance(val, float) and val < 10 else F_INT); put(ws, f'E{row}', kind, 'note')
+        label(ws, row, lab, note=src); put(ws, f'D{row}', val, 'link' if isinstance(val, str) else 'input', F_X if isinstance(val, float) and val < 10 else (F_PCT if row == 96 else F_INT)); put(ws, f'E{row}', kind, 'note')
     ws.freeze_panes = 'D6'
     # ---------------- E1a roll
     wr = wb.create_sheet('E1a Fleet (roll)'); tab_color(wr, '7030A0'); wr.sheet_view.showGridLines = False; wr.sheet_view.zoomScale = 85

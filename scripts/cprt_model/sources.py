@@ -24,4 +24,6 @@ def build(wb, ctx):
                     if not note: missing.append(f'{name}!{c.coordinate}')
                     r += 1
     ctx['sources_missing'] = len(missing); ctx['sources_missing_list'] = missing
+    typed_data = [f'{ws[f"B{i}"].value}!{ws[f"C{i}"].value}' for i in range(5, r) if str(ws[f'F{i}'].value or '').upper().startswith(('VERIFIED', 'MEASURED', 'ENGINE'))]
+    ctx['typed_data'] = typed_data; put(ws, f'B{r+2}', f'{len(typed_data)} typed cells carry a VERIFIED/MEASURED/ENGINE label but are not links to a data tab (should be 0): ' + '; '.join(typed_data)[:300], 'label')
     put(ws, f'B{r+1}', f'{r-5} typed inputs; {len(missing)} without a source note.', 'label', b=True); ws.freeze_panes = 'B5'

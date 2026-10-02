@@ -50,7 +50,7 @@ def build(wb, ctx):
     for k, name, a, b, g, cov in CASES:
         r = P0 + k; label(ws, r, name); put(ws, f'D{r}', a, 'toggle', '0'); put(ws, f'E{r}', b, 'toggle', '0'); put(ws, f'F{r}', g, 'link' if isinstance(g, str) else 'input', F_PCT); put(ws, f'G{r}', 'TOGGLE / ASSUMED', 'note'); put(ws, f'H{r}', cov, 'toggle', '0')
     put(ws, f'I{P0}', '1 sticky · 2 premium-response · 3 Street-implied recovery (E2 rows 116–118)', 'note')
-    label(ws, P0 + 8, 'JPMorgan FY27 service revenue, 11 Sep 2026 (ex-ACV)', '$M', note='VERIFIED, licensed report held locally, Table 3 lines 275–278'); put(ws, f'D{P0+8}', 4061, 'input', F_MONEY)
+    label(ws, P0 + 8, 'JPMorgan FY27 service revenue, 11 Sep 2026 (ex-ACV)', '$M', note='VERIFIED, licensed report held locally, Table 3 lines 275–278'); put(ws, f'D{P0+8}', ctx['F']('jpm_fy27_service'), 'link', F_MONEY)
     S0 = P0 + 11; group(ws, S0, 'Summary — FY27 legacy service revenue by case; quote every delta, never only the larger one')
     for j, h in enumerate(['FY27E', 'Δ vs case 1 (known facts)', 'Δ vs case 0 (Street-implied)', 'Δ vs JPM $4,061m', 'Δ vs JPM %', 'FY28E']): put(ws, f'{L(4+j)}{S0}', h, 'label', b=True)
     for k, name, *_ in CASES:

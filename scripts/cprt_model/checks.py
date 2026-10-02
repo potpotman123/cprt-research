@@ -37,6 +37,7 @@ def build(wb, ctx):
                 if isinstance(c.value, (int, float)) and not isinstance(c.value, bool) and c.font and c.font.color is not None and c.font.color.rgb in (f'00{C_INPUT}', f'FF{C_INPUT}', C_INPUT):
                     typed.append(f'{name}!{c.coordinate}={c.value}')
     r += 1; label(ws, r, 'Typed numbers inside calculation blocks (should be reference rows only)', b=True); put(ws, f'D{r}', len(typed), 'formula', '0'); put(ws, f'E{r}', '; '.join(typed)[:400], 'note')
+    r += 1; label(ws, r, 'Verified / measured / engine data typed on engine tabs instead of linked to a data tab (must be 0)', b=True); put(ws, f'D{r}', len(ctx.get('typed_data', [])), 'formula', '0'); put(ws, f'E{r}', '; '.join(ctx.get('typed_data', []))[:400], 'note')
     r += 1; label(ws, r, 'Inputs without a source note (from the Sources tab; must be 0)', b=True); put(ws, f'D{r}', ctx.get('sources_missing', 'n/a'), 'formula', '0'); put(ws, f'E{r}', '; '.join(ctx.get('sources_missing_list', []))[:400], 'note')
     r += 2; put(ws, f'B{r}', 'Not checked here: the economic coefficients (every ASSUMED input). See docs/source_trace_2026-10-01/README.md for the 21 numbers with no source.', 'note')
     ws.freeze_panes = 'D5'

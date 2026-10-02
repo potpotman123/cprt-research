@@ -22,7 +22,7 @@ def build(wb, ctx):
         c = QCOL[(fy, q)]
         if fy == 2026: put(ws, f'{c}15', '=$D$45', 'link', F_USD)
         else: put(ws, f'{c}15', f'={QCOL[(fy-1,q)]}15*(1+$D$44)', fmt=F_USD, b=True); put(ws, f'{c}16', f'={c}15/{QCOL[(fy-1,q)]}15-1', fmt=F_PCT, i=True)
-    put(ws, f'{QCOL[(2026,4)]}17', 0.037, 'input', F_PCT)
+    put(ws, f'{QCOL[(2026,4)]}17', ctx['F']('cprt_us_ins_asp_yoy_fq4fy26'), 'link', F_PCT); put(ws, f'{QCOL[(2026,3)]}17', ctx['F']('manheim_yoy_fq4fy26'), 'link', F_PCT); put(ws, f'{QCOL[(2026,2)]}17', 'Manheim →', 'note')
     group(ws, 19, 'C. Fee economics per sold insurance vehicle (posted grid summarised by an elasticity; grid itself on D Fees)')
     label(ws, 20, 'Buyer variable fee  β × (ASP ÷ ASP₀)^ε_b', '$', note='β and ε_b derived from the engine\'s 1,024-node fee integration (Inputs rows 46–51)')
     label(ws, 21, 'Seller commission  (rate from E3, base)', '$'); label(ws, 22, 'Fixed buyer fees (gate, environmental)', '$', note='ASSUMED $110 inherited; posted fixed fees on D Fees show gate $79/$95 — to be reconciled')
@@ -38,10 +38,10 @@ def build(wb, ctx):
              (40, 'Title service: adoption (share of sales)', 0.50, 'input', 'ASSUMED', 'Undisclosed'), (41, 'Title service: charge per job', 50, 'input', 'ASSUMED', 'Inherited with the adoption rate above; product price undisclosed'),
              (42, 'Delivery service: adoption', 0.10, 'input', 'ASSUMED', 'Undisclosed; gross/net unknown'), (43, 'Delivery service: charge per job', 300, 'input', 'ASSUMED', 'Inherited; gross charge per delivered vehicle, product price undisclosed'),
              (44, 'US insurance ASP growth, FY27+ (continuation)', 0.037, 'input', 'ASSUMED', 'FQ4 FY26 disclosed +3.7% continued; not guidance (6% alternative)'),
-             (45, 'ASP₀: modeled selected-vehicle price at the FY26 anchor', 3040.99, 'input', 'ENGINE', 'age_constrained_engine_results.json baseline_core.ASP'),
-             (46, 'Core RPU at the anchor (buyer fees + seller commission + fixed fees)', 851.51, 'input', 'ENGINE', 'baseline_core.core_RPU'),
+             (45, 'ASP₀: modeled selected-vehicle price at the FY26 anchor', ctx['F']('engine_asp0'), 'link', 'ENGINE', 'age_constrained_engine_results.json baseline_core.ASP'),
+             (46, 'Core RPU at the anchor (buyer fees + seller commission + fixed fees)', ctx['F']('engine_core_rpu0'), 'link', 'ENGINE', 'baseline_core.core_RPU'),
              (47, 'Seller commission rate embedded in the anchor', 0.04, 'input', 'ASSUMED', 'driver_register buyer_and_seller_fees'), (48, 'Fixed buyer fees embedded in the anchor', 110, 'input', 'ASSUMED', 'Inherited; contradicts posted $79/$95 gate fee — flagged in source trace'),
-             (49, 'Core-RPU elasticity to ASP from the engine\'s +5% value test  (ln(1.017859) ÷ ln(1.040402))', '=LN(1+0.017859212)/LN(1+0.040401548)', 'formula', 'ENGINE', 'age_constrained_engine_results.json scenario_changes value_plus_5pct'),
+             (49, 'Core-RPU elasticity to ASP from the engine\'s +5% value test  (ln(1 + ΔRPU) ÷ ln(1 + ΔASP))', '=LN(1+' + ctx['F']('engine_value_plus5_rpu')[1:] + ')/LN(1+' + ctx['F']('engine_value_plus5_asp')[1:] + ')', 'formula', 'ENGINE', 'age_constrained_engine_results.json scenario_changes value_plus_5pct'),
              (50, 'β: buyer variable fee at the anchor  (core − seller − fixed)', '=D46-D47*D45-D48', 'formula', 'ENGINE', 'Identity'),
              (51, 'ε_b: buyer-fee elasticity to ASP  ((ε_core × core − seller$) ÷ β)', '=(D49*D46-D47*D45)/D50', 'formula', 'ENGINE', 'Identity; the stepwise grid is summarised by one elasticity between ±5% of the anchor')]
     for row, lab, val, kind, lbl, src in items:
