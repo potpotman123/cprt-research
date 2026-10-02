@@ -23,7 +23,9 @@ def build(wb, ctx):
      ('Thesis 2 — aftermarket substitution (E4)', [
       ('Aftermarket share of replacement-part dollars, 2025', "='E4 Aftermarket'!D47", '%', 'VERIFIED', 'CCC Crash Course 2026 (21.0% in 2024)'),
       ('Recycled share of replacement-part dollars, 2025', "='E4 Aftermarket'!D48", '%', 'VERIFIED', 'CCC (10.7% in 2024)'),
-      ('Aftermarket price relative to OEM', "='E4 Aftermarket'!D50", 'x', 'VERIFIED (historical)', 'Mitchell 2016 discounts, mean 27%'),
+      ('Aftermarket price relative to OEM at the anchor', "='E4 Aftermarket'!D50", 'x', 'VERIFIED (historical)', 'Mitchell 2016 discounts, mean 27%; recycled set equal at the anchor'),
+      ('Aftermarket relative-price drift per year (PartsTrader: OEM +4.3%, aftermarket <1%)', "='E4 Aftermarket'!D68", '%', 'VERIFIED (trend, one year)', 'E4 D68'),
+      ('Aftermarket price relative to OEM by FQ4 FY28 (recycled stays at 0.73)', "='E4 Aftermarket'!O9", 'x', 'derived', 'E4 row 9'),
       ('Sourcing path selector (1 observed trend, 2 memo stress)', "='E4 Aftermarket'!D64", '', 'TOGGLE', 'E4 D64'),
       ('Cumulative aftermarket share shift at FQ4 FY27 (selected path)', "='E4 Aftermarket'!K7", 'pts', 'path', 'E4 row 7'),
       ('Complete repair-bill change at FQ4 FY27', "='E4 Aftermarket'!K14", '%', 'derived', 'E4 row 14'),
