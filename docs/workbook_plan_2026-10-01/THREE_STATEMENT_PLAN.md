@@ -54,3 +54,18 @@ Capital structure: market cap, debt including finance leases, cash. Cost of debt
 4. **Horizon**: 3SM to FY2031E (DCF horizon), with FY30–31 at Barclays' FY29 ratios, or stop at FY29?
 5. **Gross margin**: volume-driven via facility cost per unit (recommended) or Barclays' implied margin held?
 6. **Peer set for beta**: RB Global, OPENLANE, ACV, Carvana, plus Copart's own, or your list?
+
+## 6. Status — 2 October 2026 (evening)
+
+Done, in the owner's workbook (`model/CPRT_Model_v2.xlsx`, built by `scripts/build_cprt_model.py` from the current file; owner tabs untouched except the listed one-cell links):
+
+- **§0 mechanics**: the build takes the current workbook as base; Volume Build and RPU Build hidden; Sheet1 untouched.
+- **§3 WACC and tax build** on Reverse DCF R–X (WACC 8.63%; structural tax 19.63%); DCF H88 and I38:M38 link to it; the DCF's old WACC rows are retired.
+- **Cover** (Via-style): price, DCF implied price (DCF H113), upside, key statistics, fully diluted shares (10-K share and option counts; RSU count still to come from Note 12).
+- **D 10-K FY26**: balance-sheet, income-statement and cash-flow lines read from the FY2026 filing, plus FY2022–23 income-statement lines from the FY2024 filing on disk.
+- **§2 3SM**: income statement, balance sheet and cash flow FY2022A–FY2031E with nine schedules (facility cost per unit, PP&E/capex/D&A, cash and interest, SBC, shares and buybacks, working-capital days with a Barclays-ΔNWC selector, tax links, ACV gate, DCF memo); Barclays parity rows under each statement; balance and cash checks pass in every projected year. FY2031 is carried only because the owner's DCF ends there; FY2030–31 run at Barclays' FY2029 ratios.
+- **DCF links**: D&A (row 29), SBC (57), capex (59) and ΔNWC (61) now read the 3SM for FY27–31; rows 30/58/60/62 show the implied percentages. The DCF's EBIT remains its own build (3SM schedule 9 shows the gap; one link per year would unify them).
+- **Summary** (Solstice-style): headline financials, Barclays and consensus with % Δ, broker revenue range, component delta to Street (T1/T2/T3/interaction) and the FY27E EBITDA bridge to Barclays.
+- **Key Drivers** gains a 3SM block; **Checks** gains ten 3SM/DCF rows (all pass).
+
+Open: peer betas on Reverse DCF row 19 (owner's terminal); RSU count (Note 12); the default ΔNWC method is Barclays (selector 3SM, schedule 6) — switch to 1 for the days schedule; buybacks default to zero (Barclays' flat share count), with the owner's $600m/yr case left on DCF row 73.
